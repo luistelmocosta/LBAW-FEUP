@@ -27,24 +27,25 @@ AskMe has the purpose of creating a platform of mutual aid and cooperation, wher
 
 ### User Stories
 
-#Utilizador 
-| ID | Nome | Descrição | Prioridade
-| -- | ---- | --------- | ---------- |
-| US001 | Navegação | Como *Utilizador* quero poder ver o conteúdo da plataforma para ter conhecimento do que se trata e dos proveitos que posso tirar. | Alta
+# Utilizador
+
+| ID        | Nome  | User Stories (US)           |  Prioridade   | 
+| ------------- | ------------- | ------------- | ----------- |
+| US001 | Navegação | Como *Utilizador* quero poder ver o conteúdo da plataforma para ter conhecimento do que se trata e dos proveitos que posso tirar. | Alta |
 | US002 | Pesquisa | Como *Utilizador* quero consultar o conteúdo para poder desfrutar dos serviços da plataforma e encontrar aqueles que mais me interessam. | Alta |
 | US003 | Estatísticas |Como *Utilizador* quero consultar estatísticas de utilização (por exemplo perguntas / respostas mais votadas) para que possa ter acesso ao conteúdo mais importante e pertinente. | Média |
 
-#Visitante
+# Visitante
 
-| ID | Nome | Descrição | Prioridade
-| -- | ---- | --------- | ---------- |
+| ID        | Nome  | User Stories (US)           |  Prioridade   | 
+| ------------- | ------------- | ------------- | ----------- |
 | US101 | Registar | Como *Visitante* quero poder registar-me para ficar cadastrado na plataforma e, consequentemente, poder autenticar-me | Alta
 | US102 | Autenticar | Como *Visitante* quero poder autenticar-me de maneira a poder fazer perguntas, votar, responder a conteúdo e ver perguntas anteriormente feitas por mim | Alta
 
 #Utilizador Autenticado 
 
-| ID | Nome | Descrição | Prioridade
-| -- | ---- | --------- | ---------- |
+| ID        | Nome  | User Stories (US)           |  Prioridade   | 
+| ------------- | ------------- | ------------- | ----------- |
 | US201 | Adicionar Pergunta | Como *Utilizador Autenticado* pretendo adicionar uma pergunta de forma a enriquecer o conteúdo da plataforma e ser ajudado pela comunidade | Alta
 | US202 | Adicionar Resposta | Como *Utilizador Autenticado* pretendo adicionar uma resposta de forma a cooperar numa resposta a uma pergunta e enriquecer o tópico | Alta
 | US203 | Votar | Como *Utilizador Autenticado* pretendo votar em perguntas e questões de maneira a realçar bom e mau conteúdo | Alta
@@ -53,5 +54,5 @@ AskMe has the purpose of creating a platform of mutual aid and cooperation, wher
 
 #Utilizador Autor Pergunta
 
-| ID | Nome | Descrição | Prioridade
-| -- | ---- | --------- | ---------- |
+| ID        | Nome  | User Stories (US)           |  Prioridade   | 
+| ------------- | ------------- | ------------- | ----------- |
