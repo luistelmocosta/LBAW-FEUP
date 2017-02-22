@@ -42,7 +42,7 @@ AskMe has the purpose of creating a platform of mutual aid and cooperation, wher
 | US101 | Registar | Como *Visitante* quero poder registar-me para ficar cadastrado na plataforma e, consequentemente, poder autenticar-me | Alta
 | US102 | Autenticar | Como *Visitante* quero poder autenticar-me de maneira a poder fazer perguntas, votar, responder a conteúdo e ver perguntas anteriormente feitas por mim | Alta
 
-#Utilizador Autenticado 
+# Utilizador Autenticado 
 
 | ID        | Nome  | User Stories (US)           |  Prioridade   | 
 | ------------- | ------------- | ------------- | ----------- |
@@ -52,7 +52,30 @@ AskMe has the purpose of creating a platform of mutual aid and cooperation, wher
 | US204 | Adicionar comentário | Como *Utilizador Autenticado* pretendo adicionar comentários a perguntas e respostas de forma a debater informação e/ou pedir mais detalhes sobre o assunto. | Média 
 | US205 | Ver minhas perguntas | Como *Utilizador Autenticado* pretendo consultar as minhas perguntas previamente feitas de maneira a acompanhar o tópico ou rever o seu conteúdo. | Média
 
-#Utilizador Autor Pergunta
+# Utilizador Autor Pergunta
 
 | ID        | Nome  | User Stories (US)           |  Prioridade   | 
 | ------------- | ------------- | ------------- | ----------- |
+| US301 | Editar Pergunta | Como *Utilizador Autor Pergunta* pretendo editar a pergunta para que possa modificar o conteúdo. | Média
+| US302 | Apagar Pergunta | Como *Utilizador Autor Pergunta* pretendo apagar a pergunta quando quiser que o conteúdo não apareça mais na plataforma | Média
+| US303 | Validar Resposta | Como *Utilizador Autor Pergunta* pretendo validar uma resposta que resolva o problema especificado na pergunta. | Média
+
+# Editor
+
+| ID        | Nome  | User Stories (US)           |  Prioridade   | 
+| ------------- | ------------- | ------------- | ----------- |
+| US401 | Remover Pergunta | Como *Editor* pretendo remover uma pergunta se achar que o conteúdo/estrutura é inadequado. | Média
+| US402 | Remover Resposta | Como *Editor* pretendo remover uma resposta se achar que o conteúdo é inadequado. | Média
+| US403 | Remover Comentário | Como *Editor* pretendo remover um comentário se achar que o conteúdo é inadequado. | Média
+
+# Admin
+
+| ID        | Nome  | User Stories (US)           |  Prioridade   | 
+| ------------- | ------------- | ------------- | ----------- |
+| US501 | Remover Utilizador | Como *Admininstrador* pretendo remover utilizadores com conduta errada. | Média
+| US502 | Promover Utilizador | Como *Admininistrador* pretendo promover utilizadores a *roles* mais altos para que possam adquirir novas permissões.
+| US503 | Despromover Utilizador | Como *Admininstrador* pretendo despromover utilizadores a *roles* mais baixos para que as suas permissões sejam limitadas.
+| US504 | Adicionar Categoria de Pergunta | Como *Administrador* pretendo criar novas categorias que os utilizadores utilizarão para etiquetarem as suas perguntas.
+
+
+
