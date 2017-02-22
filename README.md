@@ -1,5 +1,5 @@
 # LBAW-FEUP
-## Project Specification
+## Artifact 1 - Project Specification
 
 This project is aimed at the specification, development and promotion of an information platform available through the Web for the management of a community of collaborative questions and answers.
 
@@ -11,7 +11,7 @@ There should be a back office system privileging some users with administrator r
 
 AskMe has the purpose of creating a platform of mutual aid and cooperation, where the community can interact, sharing knowledge, through questions and answers.
 
-## Actors and User Stories
+## Artifact 2 - Actors and User Stories
 ### Actors diagram
 [![ActorDiagram.png](https://s2.postimg.org/r5mr6l9qh/Actor_Diagram.png)](https://postimg.org/image/6lhx83tz9/)
 
@@ -24,3 +24,34 @@ AskMe has the purpose of creating a platform of mutual aid and cooperation, wher
 | **Utilizador Autor Pergunta** | Utilizador que coloca uma pergunta. Pode marcar resposta de outros utilizadores como correcta |
 | **Editor** | Utilizador com privilégios de operação como editar e remover perguntas/respostas. 
 | **Admin** | Utilizador com privilégios de operação e gestão de utilizadores. Pode adicionar, remover ou editar informação pertencente aos utilizadores. |
+
+### User Stories
+
+#Utilizador 
+| ID | Nome | Descrição | Prioridade
+| -- | ---- | --------- | ---------- |
+| US001 | Navegação | Como *Utilizador* quero poder ver o conteúdo da plataforma para ter conhecimento do que se trata e dos proveitos que posso tirar. | Alta
+| US002 | Pesquisa | Como *Utilizador* quero consultar o conteúdo para poder desfrutar dos serviços da plataforma e encontrar aqueles que mais me interessam. | Alta |
+| US003 | Estatísticas |Como *Utilizador* quero consultar estatísticas de utilização (por exemplo perguntas / respostas mais votadas) para que possa ter acesso ao conteúdo mais importante e pertinente. | Média |
+
+#Visitante
+
+| ID | Nome | Descrição | Prioridade
+| -- | ---- | --------- | ---------- |
+| US101 | Registar | Como *Visitante* quero poder registar-me para ficar cadastrado na plataforma e, consequentemente, poder autenticar-me | Alta
+| US102 | Autenticar | Como *Visitante* quero poder autenticar-me de maneira a poder fazer perguntas, votar, responder a conteúdo e ver perguntas anteriormente feitas por mim | Alta
+
+#Utilizador Autenticado 
+
+| ID | Nome | Descrição | Prioridade
+| -- | ---- | --------- | ---------- |
+| US201 | Adicionar Pergunta | Como *Utilizador Autenticado* pretendo adicionar uma pergunta de forma a enriquecer o conteúdo da plataforma e ser ajudado pela comunidade | Alta
+| US202 | Adicionar Resposta | Como *Utilizador Autenticado* pretendo adicionar uma resposta de forma a cooperar numa resposta a uma pergunta e enriquecer o tópico | Alta
+| US203 | Votar | Como *Utilizador Autenticado* pretendo votar em perguntas e questões de maneira a realçar bom e mau conteúdo | Alta
+| US204 | Adicionar comentário | Como *Utilizador Autenticado* pretendo adicionar comentários a perguntas e respostas de forma a debater informação e/ou pedir mais detalhes sobre o assunto. | Média 
+| US205 | Ver minhas perguntas | Como *Utilizador Autenticado* pretendo consultar as minhas perguntas previamente feitas de maneira a acompanhar o tópico ou rever o seu conteúdo. | Média
+
+#Utilizador Autor Pergunta
+
+| ID | Nome | Descrição | Prioridade
+| -- | ---- | --------- | ---------- |
