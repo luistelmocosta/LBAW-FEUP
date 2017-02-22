@@ -10,3 +10,16 @@ The platform should allow user registration as well as account cancellation if t
 There should be a back office system privileging some users with administrator roles. Administrators have operating privileges, information entry on the platform, and profile editing for non-administrator users.
 
 AskMe has the purpose of creating a platform of mutual aid and cooperation, where the community can interact, sharing knowledge, through questions and answers.
+
+## Actors and User Stories
+### Actors diagram
+<insert diagram picture here>
+
+| Actor | Descrição
+| ------- | ----------- |
+| **Utilizador** | Utilizador genérico; pode navegar na plataforma e tem acesso a conteúdo público |
+| **Visitante** | Utilizador não autenticado e/ou registado na plataforma. Pode ler conteúdo e entrar e/ou registrar-se. |
+| **Utilizador Autenticado** | Utilizador com permissões para colocar questões, respostas e votar |
+| **Utilizador Autor Pergunta** | Utilizador que coloca uma pergunta. Pode marcar resposta de outros utilizadores como correcta |
+| **Editor** | Utilizador com privilégios de operação como editar e remover perguntas/respostas. 
+| **Admin** | Utilizador com privilégios de operação e gestão de utilizadores. Pode adicionar, remover ou editar informação pertencente aos utilizadores. |
