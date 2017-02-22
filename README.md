@@ -13,7 +13,7 @@ AskMe has the purpose of creating a platform of mutual aid and cooperation, wher
 
 ## Actors and User Stories
 ### Actors diagram
-<insert diagram picture here>
+![](http://imgur.com/HIY77bW)
 
 | Actor | Descrição
 | ------- | ----------- |
