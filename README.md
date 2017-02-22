@@ -73,9 +73,6 @@ AskMe has the purpose of creating a platform of mutual aid and cooperation, wher
 | ID        | Nome  | User Stories (US)           |  Prioridade   | 
 | ------------- | ------------- | ------------- | ----------- |
 | US501 | Remover Utilizador | Como *Admininstrador* pretendo remover utilizadores com conduta errada. | Média
-| US502 | Promover Utilizador | Como *Admininistrador* pretendo promover utilizadores a *roles* mais altos para que possam adquirir novas permissões.
-| US503 | Despromover Utilizador | Como *Admininstrador* pretendo despromover utilizadores a *roles* mais baixos para que as suas permissões sejam limitadas.
-| US504 | Adicionar Categoria de Pergunta | Como *Administrador* pretendo criar novas categorias que os utilizadores utilizarão para etiquetarem as suas perguntas.
-
-
-
+| US502 | Promover Utilizador | Como *Admininistrador* pretendo promover utilizadores a *roles* mais altos para que possam adquirir novas permissões. | Média
+| US503 | Despromover Utilizador | Como *Admininstrador* pretendo despromover utilizadores a *roles* mais baixos para que as suas permissões sejam limitadas. | Média
+| US504 | Adicionar Categoria de Pergunta | Como *Administrador* pretendo criar novas categorias que os utilizadores utilizarão para etiquetarem as suas perguntas. | Média
