@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-02-22 01:09:48
+<?php /* Smarty version Smarty-3.1.15, created on 2017-02-23 21:27:17
          compiled from "/home/luiscosta/PhpstormProjects/LBAW-FEUP/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18993846358acd24d519cf7-21928353%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e1dcbffe67d1b08bdd1ad640c7e3886e1024d389' => 
     array (
       0 => '/home/luiscosta/PhpstormProjects/LBAW-FEUP/common/header.tpl',
-      1 => 1487722173,
+      1 => 1487881615,
       2 => 'file',
     ),
   ),
@@ -17,68 +17,94 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.15',
   'unifunc' => 'content_58acd24d5a8ff0_57499743',
-  'variables' => 
-  array (
-    'BASE_URL' => 0,
-  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58acd24d5a8ff0_57499743')) {function content_58acd24d5a8ff0_57499743($_smarty_tpl) {?><!DOCTYPE html>
-<html>
+<?php if ($_valid && !is_callable('content_58acd24d5a8ff0_57499743')) {function content_58acd24d5a8ff0_57499743($_smarty_tpl) {?><!doctype html>
+<html lang="en">
 <head>
-    <title>LBAW - AskMe</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link href="../css/styles/bootstrap.css" rel="stylesheet" />
 
-    <meta charset = "UTF-8">
+    <link href="../css/styles/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="../css/styles/ct-navbar.css" rel="stylesheet" />
+    <link href="../css/styles/demo.css" rel="stylesheet" />
 
-    <link rel = "stylesheet" type = "text/css" href = "//fonts.googleapis.com/css?family=Open+Sans"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--     Font Awesome     -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
-
-
-
+    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 </head>
+
 <body>
-<nav class = "navbar navbar-default">
-    <div class = "container">
-        <div class = "container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class = "navbar-header">
-                <button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#bs-example-navbar-collapse-1" aria-expanded = "false">
-                    <span class = "sr-only">Toggle navigation</span>
-                    <span class = "icon-bar"></span>
-                    <span class = "icon-bar"></span>
-                    <span class = "icon-bar"></span>
-                </button>
-                <a class = "navbar-brand" href = "/" style = "padding: 2px 0">
+<div id="navbar-full">
+    <div id="navbar">
+        <!--
+         navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange
+         -->
+        <nav class="navbar navbar-ct-blue navbar-fixed-top navbar-transparent" role="navigation">
 
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
-                <ul class = "nav navbar-nav navbar-right">
-
-
-
-                    <form class = "navbar-form navbar-left" role = "search" method = "post" action = "<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-pages/questions/search.php">
-                        <div class = "form-group">
-                            <input type = "text" class = "form-control navbar-search" placeholder = "Search" name = "search_query">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand navbar-brand-logo" href="#">
+                        <div class="logo">
+                            <img src="https://s3.amazonaws.com/creativetim_bucket/new_logo.png">
                         </div>
-
-                        <a>
-                            <button type = "submit" class = "search-submit">
-                                <span class = "glyphicon glyphicon-search"></span>
-                            </button>
-                        </a>
+                        <div class="brand"> AskMe </div>
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="search" class="hidden-xs">
+                                <i class="pe-7s-search"></i>
+                                <p>Search</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="pe-7s-mail">
+                                    <span class="label">23</span>
+                                </i>
+                                <p>Messages</p>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="pe-7s-user"></i>
+                                <p>Account</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right navbar-search-form" role="search">
+                        <div class="form-group">
+                            <input type="text" value="" class="form-control" placeholder="Search...">
+                        </div>
                     </form>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </div>
-</nav><?php }} ?>
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="blurred-container">
+            <div class="img-src" style="background-image: url('../css/img/askme.jpg')"></div>
+        </div>
+    </div><!--  end navbar -->
+</div> <!-- end menu-dropdown --><?php }} ?>
