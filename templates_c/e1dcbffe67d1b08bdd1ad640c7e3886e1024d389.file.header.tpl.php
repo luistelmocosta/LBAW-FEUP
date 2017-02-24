@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-02-23 21:27:17
+<?php /* Smarty version Smarty-3.1.15, created on 2017-02-24 00:56:30
          compiled from "/home/luiscosta/PhpstormProjects/LBAW-FEUP/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18993846358acd24d519cf7-21928353%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e1dcbffe67d1b08bdd1ad640c7e3886e1024d389' => 
     array (
       0 => '/home/luiscosta/PhpstormProjects/LBAW-FEUP/common/header.tpl',
-      1 => 1487881615,
+      1 => 1487894176,
       2 => 'file',
     ),
   ),
@@ -29,12 +29,30 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <link href="../css/styles/pe-icon-7-stroke.css" rel="stylesheet" />
     <link href="../css/styles/ct-navbar.css" rel="stylesheet" />
     <link href="../css/styles/demo.css" rel="stylesheet" />
-
+    <link href="../css/styles/voting.css" rel="stylesheet" />
     <!--     Font Awesome     -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <script src="//rawgithub.com/ashleydw/lightbox/master/dist/ekko-lightbox.js"></script>
+    <script>
+        (document).ready(function() {
+            $('i.glyphicon-thumbs-up, i.glyphicon-thumbs-down').click(function(){
+                var $this = $(this),
+                    c = $this.data('count');
+                if (!c) c = 0;
+                c++;
+                $this.data('count',c);
+                $('#'+this.id+'-bs3').html(c);
+            });
+            $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+        });
+    </script>
+
 </head>
 
 <body>
