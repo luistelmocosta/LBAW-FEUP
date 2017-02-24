@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-02-23 11:03:13
+<?php /* Smarty version Smarty-3.1.15, created on 2017-02-23 21:38:56
          compiled from "../templates/signin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:165340039858ae9cabdbaa15-80728773%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0270357f065f83bac2a2d0bac18bf9d84e2568bf' => 
     array (
       0 => '../templates/signin.tpl',
-      1 => 1487844190,
+      1 => 1487882333,
       2 => 'file',
     ),
   ),
@@ -57,6 +57,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </div>
     </div>
 </div>
+<br>
+<br>
+<?php echo $_smarty_tpl->getSubTemplate ('../common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 
 </body>
 

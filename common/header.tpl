@@ -7,12 +7,31 @@
 
     <link href="../css/styles/pe-icon-7-stroke.css" rel="stylesheet" />
     <link href="../css/styles/ct-navbar.css" rel="stylesheet" />
-
+    <link href="../css/styles/demo.css" rel="stylesheet" />
+    <link href="../css/styles/voting.css" rel="stylesheet" />
     <!--     Font Awesome     -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <script src="//rawgithub.com/ashleydw/lightbox/master/dist/ekko-lightbox.js"></script>
+    <script>
+        (document).ready(function() {
+            $('i.glyphicon-thumbs-up, i.glyphicon-thumbs-down').click(function(){
+                var $this = $(this),
+                    c = $this.data('count');
+                if (!c) c = 0;
+                c++;
+                $this.data('count',c);
+                $('#'+this.id+'-bs3').html(c);
+            });
+            $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -82,7 +101,7 @@
             </div><!-- /.container-fluid -->
         </nav>
         <div class="blurred-container">
-            <div class="img-src" style="background-image: url('../css/img/feup.jpg')"></div>
+            <div class="img-src" style="background-image: url('../css/img/askme.jpg')"></div>
         </div>
     </div><!--  end navbar -->
 </div> <!-- end menu-dropdown -->

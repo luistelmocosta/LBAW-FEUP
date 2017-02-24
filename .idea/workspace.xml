@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9bfea24-c718-4d56-87a6-a5dd602ee491" name="Default" comment="">
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+=======
+<<<<<<< HEAD
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/navbar.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/signin.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/signup.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/signin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/signup.php" />
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
+>>>>>>> 7a36962647436076aa933ed4d42bd0ff42f85eef
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,6 +29,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="header.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/header.tpl">
           <provider selected="true" editor-type-id="text-editor">
@@ -34,6 +46,40 @@
             <state relative-caret-position="0">
               <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding />
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1952">
+              <caret line="127" column="30" lean-forward="false" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
+              <folding>
+                <element signature="e#6#102#0#PHP" expanded="true" />
+                <marker date="1487632480680" expanded="true" signature="3504:3764" ph="..." />
+                <marker date="1487632480680" expanded="true" signature="3948:4008" ph="SELECT `user... ${MLS_PREFIX}banned" />
+                <marker date="1487632480680" expanded="true" signature="4096:4150" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/header.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+=======
+      <file leaf-file-name="header.tpl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common/header.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
+>>>>>>> 7a36962647436076aa933ed4d42bd0ff42f85eef
             </state>
           </provider>
         </entry>
@@ -48,18 +94,57 @@
       <file leaf-file-name="signin.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/signin.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="41" column="16" lean-forward="false" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+<<<<<<< HEAD
+            <state relative-caret-position="32">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+=======
+            <state relative-caret-position="656">
+              <caret line="41" column="16" lean-forward="false" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+<<<<<<< HEAD
+              <folding />
+=======
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+>>>>>>> 7a36962647436076aa933ed4d42bd0ff42f85eef
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="sign.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/sign.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1216">
+              <caret line="76" column="48" lean-forward="true" selection-start-line="76" selection-start-column="48" selection-end-line="76" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sign.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/sign.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+=======
       <file leaf-file-name="signin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/signin.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="48">
               <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
               <folding />
             </state>
           </provider>
@@ -130,8 +215,16 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="Scope" />
       <pane id="Scratches" />
+=======
+<<<<<<< HEAD
+      <pane id="Scope" />
+      <pane id="Scratches" />
+=======
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
+>>>>>>> 7a36962647436076aa933ed4d42bd0ff42f85eef
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -220,6 +313,14 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      <pane id="Scratches" />
+      <pane id="Scope" />
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
+>>>>>>> 7a36962647436076aa933ed4d42bd0ff42f85eef
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -318,15 +419,38 @@
       <option name="presentableId" value="Default" />
       <updated>1487632893432</updated>
       <workItem from="1487632895182" duration="312000" />
+<<<<<<< HEAD
+      <workItem from="1487701311325" duration="9985000" />
+      <workItem from="1487870579336" duration="397000" />
+=======
       <workItem from="1487701311325" duration="9774000" />
       <workItem from="1487790075474" duration="741000" />
+<<<<<<< HEAD
       <workItem from="1487838117911" duration="6558000" />
       <workItem from="1487937621873" duration="234000" />
+=======
+      <workItem from="1487838117911" duration="5911000" />
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
+>>>>>>> 7a36962647436076aa933ed4d42bd0ff42f85eef
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="17619000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="10694000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="10" y="20" width="1340" height="703" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25776398" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+=======
+    <option name="totallyTimeSpent" value="16738000" />
+>>>>>>> 7a36962647436076aa933ed4d42bd0ff42f85eef
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="20" width="1280" height="780" extended-state="6" />
@@ -334,11 +458,24 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26580226" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+=======
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
+>>>>>>> 7a36962647436076aa933ed4d42bd0ff42f85eef
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+<<<<<<< HEAD
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
+>>>>>>> 7a36962647436076aa933ed4d42bd0ff42f85eef
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -394,13 +531,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/header.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#102#0#PHP" expanded="true" />
+            <marker date="1487632480680" expanded="true" signature="3504:3764" ph="..." />
+            <marker date="1487632480680" expanded="true" signature="3948:4008" ph="SELECT `user... ${MLS_PREFIX}banned" />
+            <marker date="1487632480680" expanded="true" signature="4096:4150" ph="DELETE FROM " />
+=======
         <state relative-caret-position="2286">
           <caret line="127" column="30" lean-forward="false" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
+<<<<<<< HEAD
+=======
+          <folding>
+            <element signature="e#6#102#0#PHP" expanded="false" />
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
+          </folding>
+>>>>>>> 7a36962647436076aa933ed4d42bd0ff42f85eef
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/header.tpl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="64">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+=======
         <state relative-caret-position="72">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
@@ -411,21 +568,71 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="37" />
+<<<<<<< HEAD
+=======
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
+          <folding />
+>>>>>>> 7a36962647436076aa933ed4d42bd0ff42f85eef
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/templates/index.tpl">
+=======
+    <entry file="file://$PROJECT_DIR$/views/index.php">
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="32">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/config.php">
+<<<<<<< HEAD
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/sign.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1216">
+          <caret line="76" column="48" lean-forward="true" selection-start-line="76" selection-start-column="48" selection-end-line="76" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init.php" />
+    <entry file="file://$PROJECT_DIR$/index.php" />
+    <entry file="file://$PROJECT_DIR$/teste.php" />
+    <entry file="file://$PROJECT_DIR$/js/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1952">
+          <caret line="127" column="30" lean-forward="false" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
+=======
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+<<<<<<< HEAD
+=======
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="false" />
+          </folding>
+>>>>>>> 7a36962647436076aa933ed4d42bd0ff42f85eef
         </state>
       </provider>
     </entry>
@@ -438,14 +645,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/sign.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="-1409">
+          <caret line="665" column="41" lean-forward="true" selection-start-line="665" selection-start-column="41" selection-end-line="665" selection-end-column="41" />
+=======
         <state relative-caret-position="36">
           <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
           <folding />
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/header.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="-1363">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
         <state relative-caret-position="2196">
           <caret line="127" column="30" lean-forward="false" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
         </state>
@@ -471,12 +687,18 @@
         <state relative-caret-position="36">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="38" />
           <folding />
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/sign.php" />
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="112">
+=======
         <state relative-caret-position="126">
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
           <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
         </state>
       </provider>
@@ -490,6 +712,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/sign.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="64">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+=======
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -503,6 +730,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="127" column="30" lean-forward="false" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
+<<<<<<< HEAD
+=======
+          <folding>
+            <element signature="e#6#102#0#PHP" expanded="false" />
+          </folding>
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
+>>>>>>> 7a36962647436076aa933ed4d42bd0ff42f85eef
         </state>
       </provider>
     </entry>
@@ -537,8 +771,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="1216">
+          <caret line="76" column="48" lean-forward="true" selection-start-line="76" selection-start-column="48" selection-end-line="76" selection-end-column="48" />
+=======
         <state relative-caret-position="-9">
           <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+>>>>>>> 05f6112c9882cc0b8491548e6f31e643c87ddf1b
           <folding />
         </state>
       </provider>
@@ -546,7 +785,7 @@
     <entry file="file://$PROJECT_DIR$/views/sign.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
           <folding />
         </state>
       </provider>
