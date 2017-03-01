@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-02-22 20:02:02
+<?php /* Smarty version Smarty-3.1.15, created on 2017-03-01 16:50:20
          compiled from "../templates/sign.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:105340444758acdbdcf064d1-38950047%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3c6458ac7a06a97808d337ad90598b3b97ef9b3f' => 
     array (
       0 => '../templates/sign.tpl',
-      1 => 1487790060,
+      1 => 1488383419,
       2 => 'file',
     ),
   ),
@@ -22,94 +22,65 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_58acdbdd6756f4_71463523')) {function content_58acdbdd6756f4_71463523($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('../common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
-<div class = "container">
+<div id="site-body" class="container">
 
-    <div class = "col-sm-8 col-sm-offset-2">
 
-        <!-- TABS START -->
-        <ul class = "nav nav-tabs">
-            <li class = "active">
-                <a href = "#login" aria-controls = "login" role = "tab" data-toggle = "tab">Log In</a>
-            </li>
-            <li class = "active">
-                <a href = "#register" aria-controls = "register" role = "tab" data-toggle = "tab">Sign Up</a>
-            </li>
-        </ul>
-        <!-- END TABS -->
+    <!-- Modal -->
+    <div class="modal fade in" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: block;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <h3>Login or Register</h3>
+                    <p class="login-desc">Get access to your account and question</p>
+                    <div class="social-logins">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <form id="loginform" role="form" action="./login?to=" method="post">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="icon-user"></i></span>
+                                    <input type="text" class="form-control" id="qa-userid" name="emailhandle" placeholder="Email or Username">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="icon-key"></i></span>
+                                    <input type="password" class="form-control" id="qa-password" name="password" placeholder="Password">
+                                </div>
 
-        <!-- TAB CONTENT -->
-        <div class = "tab-content">
+                                <label class="inline">
+                                    <input type="checkbox" name="remember" id="qa-rememberme" value="1"> Remember									</label>
+                                <input type="hidden" name="code" value="0-1488378160-d5818bc4a4b4343aa3884610ea210f32bc31a999">
+                                <input type="submit" value="Login" id="qa-login" name="dologin" class="btn btn-primary btn-large btn-block">
+                            </form>
+                        </div>
+                        <div class="col-sm-6">
+                            <form id="loginform" role="form" action="./register?to=" method="post">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="icon-user"></i></span>
+                                    <input type="text" class="form-control" id="qa-userid" name="handle" placeholder="Username">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="icon-key"></i></span>
+                                    <input type="password" class="form-control" id="qa-password" name="password" placeholder="Password">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="icon-envelope"></i></span>
+                                    <input type="text" id="email" class="form-control" name="email" placeholder="Email">
+                                </div>
 
-            <!-- LOGIN TAB PANEL -->
-            <div id = "login" role = "tabpanel" class = "tab-pane container-white active">
-                <form class = "form-horizontal" action = "" method = "post">
-                    <div class = "form-group">
-                        <label for = "username" class = "col-sm-3 control-label">Username</label>
-                        <div class = "col-sm-8">
-                            <input type = "text" name = "username" class = "form-control" placeholder = "Username" required = "" autofocus = "" autocomplete = "off">
+                                <input type="hidden" name="code" value="0-1488378160-e9852b18ab3772505029c4d272cecc67cd9531af">
+                                <input type="submit" value="Register" id="qa-register" name="doregister" class="btn btn-primary btn-block">
+                            </form>
                         </div>
                     </div>
-
-                    <div class = "form-group">
-                        <label for = "password" class = "col-sm-3 control-label">Password</label>
-                        <div class = "col-sm-8">
-                            <input type = "password" name = "password" class = "form-control" placeholder = "Password" required = "" autocomplete = "off">
-                        </div>
-                    </div>
-
-                    <div class = "form-group">
-                        <div class = "col-sm-3 col-sm-offset-3">
-                            <input type = "submit" class = "btn btn-primary" value = "Log In"></button>
-                        </div>
-                        <div class = "col-sm-5 text-right">
-                            <a href = "" class = "small" data-toggle = "modal" data-target = "#forgotPassword"> Forgot Password?</a>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
-            <!-- END LOGIN TAB PANEL -->
-
-            <!-- REGISTER TAB PANEL -->
-            <div role = "tabpanel" class = "tab-pane container-white active" id = "register">
-                <form class = "form-horizontal" action = "" method = "post" enctype = "multipart/form-data">
-
-                    <div class = "form-group">
-                        <label for = "username" class = "col-sm-3 control-label">Username</label>
-                        <div class = "col-sm-8">
-                            <input type = "text" name = "username" class = "form-control" placeholder = "Username" required = "" autofocus = "" autocomplete = "off" value = "">
-                        </div>
-                    </div>
-
-                    <div class = "form-group">
-                        <label for = "email" class = "col-sm-3 control-label">Email</label>
-                        <div class = "col-sm-8">
-                            <input type = "email" name = "email" class = "form-control" placeholder = "Email address" required = "" autofocus = "" autocomplete = "off" value = "">
-                        </div>
-                    </div>
-
-                    <div class = "form-group">
-                        <label for = "password" class = "col-sm-3 control-label">Password</label>
-                        <div class = "col-sm-8">
-                            <input type = "password" name = "password" class = "form-control" placeholder = "Password" required = "" autocomplete = "off" value = "">
-                        </div>
-                    </div>
-
-                    <div class = "form-group">
-                        <label for = "verify_password" class = "col-sm-3 control-label">Confirm Password</label>
-                        <div class = "col-sm-8">
-                            <input type = "password" name = "verify_password" class = "form-control" placeholder = "Confirm Password" required = "" autocomplete = "off" value = "">
-                        </div>
-                    </div>
-
-                    <div class = "form-group">
-                        <div class = "col-sm-3 col-sm-offset-3">
-                            <input type = "submit" class = "btn btn-primary" value = "Register"></button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <!-- END REGISTER TAB PANEL -->
         </div>
-        <!-- END TAB CONTENT -->
     </div>
-</div><?php }} ?>
+</div>
+
+<?php echo $_smarty_tpl->getSubTemplate ('../common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<?php }} ?>

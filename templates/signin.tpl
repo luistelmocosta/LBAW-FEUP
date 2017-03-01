@@ -2,7 +2,7 @@
 
 
 <div class="main">
-    <div class="container tim-container" style="max-width:800px; padding-top:100px">
+    <div class="container tim-container" style="max-width:500px; ">
         <h1 class="text-center">Entrar<br><small class="subtitle"> <br>Insira as suas credenciais</small>
         </h1>
         <div id = "login" role = "tabpanel" class = "tab-pane container-white active">
