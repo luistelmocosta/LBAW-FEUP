@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-03-01 21:07:02
+<?php /* Smarty version Smarty-3.1.15, created on 2017-03-01 23:55:00
          compiled from "../templates/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:22224402058acd174c42d21-75873706%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '16598974be41913e67d6e2462715a26137b17224' => 
     array (
       0 => '../templates/index.tpl',
-      1 => 1488398819,
+      1 => 1488408897,
       2 => 'file',
     ),
   ),
@@ -20,45 +20,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_58acd175620014_21257800')) {function content_58acd175620014_21257800($_smarty_tpl) {?>
-
-<html lang=""><head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>CleanStrap Demo</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="./qa-theme/cleanstrap/qa-styles.css?1.6.3">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<?php echo $_smarty_tpl->getSubTemplate ('../common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lte IE 9]>
-    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/ie.css">
-    <script src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/html5shiv.js"></script>
-    <script src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/respond.min.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" href="../qa-theme/cleanstrap/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../qa-theme/cleanstrap/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/font.css">
-    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/main.css">
-    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/wide.css">
-    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/responsive.css">
-    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/theme-green.css">
-    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/dynamic.css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
-    <link rel="alternate" type="application/rss+xml" href="./feed/qa.rss" title="Recent questions and answers">
-    <link rel="search" type="application/opensearchdescription+xml" title="CleanStrap Demo" href="./opensearch.xml">
-    <script> theme_url = "http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap";</script>
-    <script type="text/javascript">
-        var qa_root='.\/';
-        var qa_request='';
-    </script>
-    <script src="./qa-content/jquery-1.7.2.min.js" type="text/javascript"></script>
-    <script src="./qa-content/qa-page.js?1.6.3" type="text/javascript"></script>
-    <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/bootstrap.js"></script>
-    <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery.sparkline.min.js"></script>
-    <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/theme.js"></script>
-    <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
 <body id="nav-top" class="qa-template-qa qa-body-js-on">
 <script type="text/javascript">
     var b=document.getElementsByTagName('body')[0];
@@ -490,27 +454,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             </div>
                         </div>
                     </div>
-                    <div class="qa-suggest-next">
-                        To see more, click for the <a href="./questions">full list of questions</a> or <a href="./tags">popular tags</a>.
-                    </div>
+                    
                 </div>
             </div>
         </div>
-        <footer id="site-footer" class="clearfix">
-            <div class="qa-nav-footer">
-                <ul class="qa-nav-footer-list">
-                    <li class="qa-nav-footer-item qa-nav-footer-feedback">
-                        <a href="./feedback" class=" qa-nav-footer-link">Send feedback</a>
-                    </li>
-                </ul>
-                <div class="qa-nav-footer-clear">
-                </div>
-            </div>
-            <div class="qa-attribution-right">
-                Copyright © 2014
-                <p class="developer">Powered by Q2A and <a href="http://qa-themes.com/themes/cleanstrap">CleanStrap Theme</a></p>
-            </div>
-        </footer>
+        <?php echo $_smarty_tpl->getSubTemplate ('../common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+
         <!-- Modal -->
         <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">

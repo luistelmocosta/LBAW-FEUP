@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-03-01 16:11:33
+<?php /* Smarty version Smarty-3.1.15, created on 2017-03-02 00:28:44
          compiled from "/home/luiscosta/PhpstormProjects/LBAW-FEUP/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18993846358acd24d519cf7-21928353%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e1dcbffe67d1b08bdd1ad640c7e3886e1024d389' => 
     array (
       0 => '/home/luiscosta/PhpstormProjects/LBAW-FEUP/common/header.tpl',
-      1 => 1488381018,
+      1 => 1488410897,
       2 => 'file',
     ),
   ),
@@ -19,60 +19,62 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_58acd24d5a8ff0_57499743',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58acd24d5a8ff0_57499743')) {function content_58acd24d5a8ff0_57499743($_smarty_tpl) {?><!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link href="../css/styles/bootstrap.css" rel="stylesheet" />
+<?php if ($_valid && !is_callable('content_58acd24d5a8ff0_57499743')) {function content_58acd24d5a8ff0_57499743($_smarty_tpl) {?><html lang=""><head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>CleanStrap Demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="./qa-theme/cleanstrap/qa-styles.css?1.6.3">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link href="../css/styles/ie.css" rel="stylesheet" />
-    <link href="../css/styles/font.css" rel="stylesheet" />
-    <link href="../css/styles/dynamic.css" rel="stylesheet" />
-    <link href="../css/styles/admin.css" rel="stylesheet" />
-    <link href="../css/styles/main.css" rel="stylesheet" />
-    <link href="../css/styles/responsive.css" rel="stylesheet" />
-    <link href="../css/styles/rtl.css" rel="stylesheet" />
-    <link href="../css/styles/spectrum.css" rel="stylesheet" />
-    <link href="../css/styles/wide.css" rel="stylesheet" />
-    <link href="../css/styles/theme-green.css" rel="stylesheet" />
-    <!--     Font Awesome     -->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-    <script src="//rawgithub.com/ashleydw/lightbox/master/dist/ekko-lightbox.js"></script>
-    <script>
-        (document).ready(function() {
-            $('i.glyphicon-thumbs-up, i.glyphicon-thumbs-down').click(function(){
-                var $this = $(this),
-                    c = $this.data('count');
-                if (!c) c = 0;
-                c++;
-                $this.data('count',c);
-                $('#'+this.id+'-bs3').html(c);
-            });
-            $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-                event.preventDefault();
-                $(this).ekkoLightbox();
-            });
-        });
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/ie.css">
+    <script src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/html5shiv.js"></script>
+    <script src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../qa-theme/cleanstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../qa-theme/cleanstrap/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/font.css">
+    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/main.css">
+    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/wide.css">
+    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/theme-green.css">
+    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/dynamic.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+    <link rel="alternate" type="application/rss+xml" href="./feed/qa.rss" title="Recent questions and answers">
+    <link rel="search" type="application/opensearchdescription+xml" title="CleanStrap Demo" href="./opensearch.xml">
+    <script> theme_url = "http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap";</script>
+    <script type="text/javascript">
+        var qa_root='.\/';
+        var qa_request='';
     </script>
-
-</head>
+    <script src="./qa-content/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="./qa-content/qa-page.js?1.6.3" type="text/javascript"></script>
+    <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/theme.js"></script>
+    <script src="../qa-theme/cleanstrap/js/ckeditor.js"></script>
+<body id="nav-top" class="qa-template-qa qa-body-js-on">
+<script type="text/javascript">
+    var b=document.getElementsByTagName('body')[0];
+    b.className=b.className.replace('qa-body-js-off', 'qa-body-js-on');
+</script>
 <header id="site-header" class="clearfix">
     <div class="qa-navbar navbar-default navbar-fixed-top " role="navigation">
         <a href="#" class="slide-mobile-menu icon-list"></a>
         <div class="site-logo">
             <a class="navbar-brand" title="CleanStrap Demo" href="http://demo.qa-themes.com/cleanstrap/">
-                <img class="navbar-site-logo" src="../css/img/askme.png">
+                <img class="navbar-site-logo" src="../qa-theme/cleanstrap/images/logo.png">
             </a>
         </div>
-        <a id="nav-ask-btn" href="./ask" class="btn btn-sm">Ask Question</a>
-        <a id="nav-ask-btn" href="./ask" class="btn btn-sm header-ask-button icon-question-sign"></a>
+        <a id="nav-ask-btn" href="" class="btn btn-sm">Ask Question</a>
+        <a id="nav-ask-btn" href="" class="btn btn-sm header-ask-button fa fa-folder"></a>
         <ul class="nav navbar-nav category-nav pull-left">
             <li class="dropdown pull-left">
-                <a data-toggle="dropdown" href="#" class="category-toggle icon-folder-close">Categories</a>
+                <a data-toggle="dropdown" href="#" class="category-toggle fa fa-folder">Categories</a>
                 <ul class="category-list-drop dropdown-menu">
                     <li class="qa-nav-cat-item">
                         <a href="./categories" class=" qa-nav-cat-link qa-nav-cat-selected">All categories</a>
@@ -91,31 +93,34 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </ul>
 
         <div class="qa-nav-main">
-            <ul class="qa-nav-main-list">
+            <ul class="qa-nav-main-list" style="padding-top: 6px">
                 <li class="qa-nav-main-item qa-nav-main-questions">
-                    <a href="./questions" class="icon-question-sign qa-nav-main-link">Questions</a>
+                    <a href="./questions" class="fa fa-question qa-nav-main-link" >Questions</a>
                 </li>
                 <li class="qa-nav-main-item qa-nav-main-unanswered">
-                    <a href="./unanswered" class="icon-sad qa-nav-main-link">Unanswered</a>
+                    <a href="./unanswered" class="fa fa-frown-o" >Unanswered</a>
                 </li>
                 <li class="qa-nav-main-item qa-nav-main-tag">
-                    <a href="./tags" class="icon-tags2 qa-nav-main-link">Tags</a>
+                    <a href="./tags" class="fa fa-tags qa-nav-main-link" >Tags</a>
                 </li>
                 <li class="qa-nav-main-item qa-nav-main-user">
-                    <a href="./users" class="icon-users qa-nav-main-link">Users</a>
+                    <a href="./users" class="fa fa-user-o qa-nav-main-link">Users</a>
                 </li>
             </ul>
             <div class="qa-nav-main-clear">
             </div>
         </div>
 
-        <a class="btn login-register icon-login" href="#" data-toggle="modal" data-target="#login-modal" title="Login or Register"></a>
 
-        <form method="get" action="./search" class="navbar-form navbar-right form-search" role="search">
+        <a class="btn login-register fa fa-sign-in" href="#" data-toggle="modal" data-target="#login-modal" title="Login or Register"></a>
 
-            <span class="icon-search"></span>
+        <form method="get" action="" class="navbar-form navbar-right form-search" role="search">
+
+            <span class="fa fa-search" style="position: fixed;padding-top: 8px;padding-left: 10px;"></span>
             <input type="text" name="q" value="" class="form-control search-query" placeholder="Search" autocomplete="off">
 
         </form>
     </div>
-</header><?php }} ?>
+</header>
+
+</head><?php }} ?>
