@@ -48,11 +48,11 @@
         <a href="#" class="slide-mobile-menu icon-list"></a>
         <div class="site-logo">
             <a class="navbar-brand" title="CleanStrap Demo" href="http://demo.qa-themes.com/cleanstrap/">
-                <img class="navbar-site-logo" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/images/logo.png">
+                <img class="navbar-site-logo" src="../qa-theme/cleanstrap/images/logo.png">
             </a>
         </div>
-        <a id="nav-ask-btn" href="./ask" class="btn btn-sm">Ask Question</a>
-        <a id="nav-ask-btn" href="./ask" class="btn btn-sm header-ask-button icon-question-sign"></a>
+        <a id="nav-ask-btn" href="" class="btn btn-sm">Ask Question</a>
+        <a id="nav-ask-btn" href="" class="btn btn-sm header-ask-button fa fa-folder"></a>
         <ul class="nav navbar-nav category-nav pull-left">
             <li class="dropdown pull-left">
                 <a data-toggle="dropdown" href="#" class="category-toggle fa fa-folder">Categories</a>
@@ -74,29 +74,30 @@
         </ul>
 
         <div class="qa-nav-main">
-            <ul class="qa-nav-main-list">
+            <ul class="qa-nav-main-list" style="padding-top: 6px">
                 <li class="qa-nav-main-item qa-nav-main-questions">
-                    <a href="./questions" class="icon-question-sign qa-nav-main-link">Questions</a>
+                    <a href="./questions" class="fa fa-question qa-nav-main-link" >Questions</a>
                 </li>
                 <li class="qa-nav-main-item qa-nav-main-unanswered">
-                    <a href="./unanswered" class="icon-sad qa-nav-main-link">Unanswered</a>
+                    <a href="./unanswered" class="fa fa-frown-o" >Unanswered</a>
                 </li>
                 <li class="qa-nav-main-item qa-nav-main-tag">
-                    <a href="./tags" class="icon-tags2 qa-nav-main-link">Tags</a>
+                    <a href="./tags" class="fa fa-tags qa-nav-main-link" >Tags</a>
                 </li>
                 <li class="qa-nav-main-item qa-nav-main-user">
-                    <a href="./users" class="icon-users qa-nav-main-link">Users</a>
+                    <a href="./users" class="fa fa-user-o qa-nav-main-link">Users</a>
                 </li>
             </ul>
             <div class="qa-nav-main-clear">
             </div>
         </div>
 
-        <a class="btn login-register icon-login" href="#" data-toggle="modal" data-target="#login-modal" title="Login or Register"></a>
 
-        <form method="get" action="./search" class="navbar-form navbar-right form-search" role="search">
+        <a class="btn login-register fa fa-sign-in" href="#" data-toggle="modal" data-target="#login-modal" title="Login or Register"></a>
 
-            <span class="icon-search"></span>
+        <form method="get" action="" class="navbar-form navbar-right form-search" role="search">
+
+            <span class="fa fa-search" style="position: fixed;padding-top: 8px;padding-left: 10px;"></span>
             <input type="text" name="q" value="" class="form-control search-query" placeholder="Search" autocomplete="off">
 
         </form>

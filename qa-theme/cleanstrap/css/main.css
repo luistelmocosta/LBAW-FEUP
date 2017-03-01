@@ -4498,6 +4498,7 @@ input[type=checkbox].on-off-checkbox {
 #nav-top #site-header .qa-nav-main .qa-nav-main-list li a {
     font-size: 13px;
     font-weight: 600;
+    padding-top: 20px;
 }
 #nav-top #site-header .qa-nav-main .qa-nav-main-list li a:hover , #nav-top #site-header .qa-nav-main .qa-nav-main-list li a.qa-nav-main-selected {
    background:#fafafa;
