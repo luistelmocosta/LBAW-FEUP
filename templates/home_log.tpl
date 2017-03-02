@@ -24,26 +24,6 @@
                     </div>
                 </div>
                 <div class="home-left-inner">
-                    <div id="home-slide-position">
-                        <div class="widget cs_featured_questions">															<div class="ra-featured-widget">
-
-
-                                <div id="featured-slider" class="carousel slide">
-                                    <!-- Carousel items -->
-                                    <div class="carousel-inner">
-                                        <div class="item next left"><div class="row"></div></div>
-                                    </div>
-                                    <a class="left carousel-control icon-angle-left" href="#featured-slider" data-slide="prev"></a><a class="right carousel-control icon-angle-right" href="#featured-slider" data-slide="next"></a>
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <div class="widget cs_new_users">															<div class="ra-new-users-widget">
-                                <ul class="users-list clearfix"><li class="user"><a href="./user/Johnny+Bravo"><div class="avatar" data-handle="Johnny Bravo" data-id="2798"><img src="./?qa=image&amp;qa_blobid=1374837135362443170&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/vhajar"><div class="avatar" data-handle="vhajar" data-id="692"><img src="./?qa=image&amp;qa_blobid=1784253194510990262&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/mierogul"><div class="avatar" data-handle="mierogul" data-id="63"><img src="./?qa=image&amp;qa_blobid=2891334074122364079&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/%C3%87a%C4%9Fda%C5%9F"><div class="avatar" data-handle="Çağdaş" data-id="42"><img src="./?qa=image&amp;qa_blobid=17929431163554368986&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/Digimasterbr"><div class="avatar" data-handle="Digimasterbr" data-id="29"><img src="./?qa=image&amp;qa_blobid=14920158235955498907&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/mepatrol"><div class="avatar" data-handle="mepatrol" data-id="26"><img src="./?qa=image&amp;qa_blobid=8504551254871977870&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/cleverlight"><div class="avatar" data-handle="cleverlight" data-id="19"><img src="./?qa=image&amp;qa_blobid=2514880126918943069&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/Defne"><div class="avatar" data-handle="Defne" data-id="16"><img src="./?qa=image&amp;qa_blobid=3479559703205594205&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/Cooper"><div class="avatar" data-handle="Cooper" data-id="15"><img src="./?qa=image&amp;qa_blobid=5560478939050730107&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/FUser"><div class="avatar" data-handle="FUser" data-id="14"><img src="./?qa=image&amp;qa_blobid=12717242325063059418&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/DUser"><div class="avatar" data-handle="DUser" data-id="13"><img src="./?qa=image&amp;qa_blobid=9007975701695053649&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/CGrl"><div class="avatar" data-handle="CGrl" data-id="12"><img src="./?qa=image&amp;qa_blobid=9016646767967832171&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/TheBlacky"><div class="avatar" data-handle="TheBlacky" data-id="11"><img src="./?qa=image&amp;qa_blobid=14707567393723620727&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/DaftPunk"><div class="avatar" data-handle="DaftPunk" data-id="10"><img src="./?qa=image&amp;qa_blobid=15052989196028273390&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/Blue"><div class="avatar" data-handle="Blue" data-id="9"><img src="./?qa=image&amp;qa_blobid=1558733682409721265&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/Robot"><div class="avatar" data-handle="Robot" data-id="8"><img src="./?qa=image&amp;qa_blobid=2986170866122609386&amp;qa_size=60"></div></a></li></ul>
-                            </div>
-                        </div>
-                    </div>
                     <div class="row home-pos-one">
                         <div class="col-md-8">
                             <div class="row">

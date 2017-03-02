@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-03-02 16:46:11
+<?php /* Smarty version Smarty-3.1.15, created on 2017-03-02 20:57:48
          compiled from "../templates/create_question.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:74147825258af6112b9bd90-74860748%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1a1358ab074009698947fbcd5d8013885ed4b07b' => 
     array (
       0 => '../templates/create_question.tpl',
-      1 => 1488469496,
+      1 => 1488484666,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_58af6112d67862_37257117',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58af6112d67862_37257117')) {function content_58af6112d67862_37257117($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('../common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_58af6112d67862_37257117')) {function content_58af6112d67862_37257117($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('../common/header_log.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
 <div id="ajax-item">

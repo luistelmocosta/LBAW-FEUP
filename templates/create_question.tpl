@@ -1,4 +1,4 @@
-{include file='../common/header.tpl'}
+{include file='../common/header_log.tpl'}
 
 <div id="ajax-item">
     <div id="site-body" class="container">
