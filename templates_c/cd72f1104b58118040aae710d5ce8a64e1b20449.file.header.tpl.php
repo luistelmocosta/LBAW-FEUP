@@ -1,4 +1,25 @@
-<html lang=""><head>
+<?php /* Smarty version Smarty-3.1.15, created on 2017-03-02 08:58:06
+         compiled from "C:\Users\Vinicius\PhpstormProjects\LBAW-FEUP\common\header.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:156128823758b7d67f8c08e8-70394022%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'cd72f1104b58118040aae710d5ce8a64e1b20449' => 
+    array (
+      0 => 'C:\\Users\\Vinicius\\PhpstormProjects\\LBAW-FEUP\\common\\header.tpl',
+      1 => 1488445049,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '156128823758b7d67f8c08e8-70394022',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_58b7d67f8f2f76_11368700',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_58b7d67f8f2f76_11368700')) {function content_58b7d67f8f2f76_11368700($_smarty_tpl) {?><html lang=""><head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>AskMe</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -102,4 +123,4 @@
     </div>
 </header>
 
-</head>
+</head><?php }} ?>
