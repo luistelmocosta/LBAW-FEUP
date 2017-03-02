@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-03-02 21:14:29
-         compiled from "/home/luiscosta/PhpstormProjects/LBAW-FEUP/common/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18993846358acd24d519cf7-21928353%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.15, created on 2017-03-02 20:43:29
+         compiled from "/home/alexandre/GitHub/LBAW-FEUP/common/header_log.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:3952851258b84c31c3e692-55513016%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'e1dcbffe67d1b08bdd1ad640c7e3886e1024d389' => 
+    '1ba8d40af31e49e94a3293ceff3dad7fb8d330b2' => 
     array (
-      0 => '/home/luiscosta/PhpstormProjects/LBAW-FEUP/common/header.tpl',
-      1 => 1488485634,
+      0 => '/home/alexandre/GitHub/LBAW-FEUP/common/header_log.tpl',
+      1 => 1488483807,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '18993846358acd24d519cf7-21928353',
+  'nocache_hash' => '3952851258b84c31c3e692-55513016',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_58acd24d5a8ff0_57499743',
+  'unifunc' => 'content_58b84c31c3ed93_67314578',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58acd24d5a8ff0_57499743')) {function content_58acd24d5a8ff0_57499743($_smarty_tpl) {?><html lang="en-US">
+<?php if ($_valid && !is_callable('content_58b84c31c3ed93_67314578')) {function content_58b84c31c3ed93_67314578($_smarty_tpl) {?><html lang="en-US">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>AskMe</title>
@@ -59,7 +59,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/theme.js"></script>
     <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 </head>
-
 <body id="nav-top" class="qa-template-qa qa-body-js-on">
 <script type="text/javascript">
     var b=document.getElementsByTagName('body')[0];
@@ -69,10 +68,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <div class="qa-navbar navbar-default navbar-fixed-top " role="navigation">
         <a href="#" class="slide-mobile-menu icon-list"></a>
         <div class="site-logo">
-            <a class="navbar-brand" title="AskMe" href="../views/index.php">
+            <a class="navbar-brand" title="AskMe" href="../views/home_log.php">
                 <img class="navbar-site-logo" src="../css/img/logo.png">
             </a>
         </div>
+        <a id="nav-ask-btn" href="" class="btn btn-sm">Ask Question</a>
+        <a id="nav-ask-btn" href="" class="btn btn-sm header-ask-button fa fa-folder"></a>
         <ul class="nav navbar-nav category-nav pull-left">
             <li class="dropdown pull-left">
                 <a data-toggle="dropdown" href="#" class="category-toggle fa fa-folder">Categories</a>
@@ -119,8 +120,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </div>
         </div>
 
+        <ul class="nav navbar-nav navbar-avatar pull-right">
+            <li class="dropdown pull-right" id="menuLogin">
+                <a id="profile-link" data-toggle="dropdown" href="#" class="avatar">
+                    <img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=30">						</a>
+                <ul class="user-nav dropdown-menu">
 
-        <a class="btn login-register fa fa-sign-in" href="../views/sign.php" data-toggle="modal" data-target="#login-modal" title="Login or Register"></a>
+                    <li class="user-nav-profile"><a class="icon-vcard" href="./user/lbaw1641" title="Profile">Profile</a></li><li class="user-nav-updates"><a class="icon-signal" href="./updates" title="My Updates">My Updates</a></li><li class="user-nav-account"><a class="icon-cog" href="./account" title="Account">Account</a></li><li class="user-nav-favorites"><a class="icon-heart" href="./favorites" title="Favorites">Favorites</a></li><li class="user-nav-wall"><a class="icon-edit" href="./user/lbaw1641/wall" title="Wall">Wall</a></li><li class="user-nav-recent_activity"><a class="icon-time" href="./user/lbaw1641/activity" title="Recent Activity">Recent Activity</a></li><li class="user-nav-all_questions"><a class="icon-question" href="./user/lbaw1641/questions" title="All questions">All questions</a></li><li class="user-nav-all_answers"><a class="icon-answer" href="./user/lbaw1641/answers" title="All answers">All answers</a></li><li><a class="icon-switch" href="http://demo.qa-themes.com/cleanstrap/logout"> Logout </a></li>						</ul>
+            </li>
+        </ul>
 
         <form method="get" action="" class="navbar-form navbar-right form-search" role="search">
 

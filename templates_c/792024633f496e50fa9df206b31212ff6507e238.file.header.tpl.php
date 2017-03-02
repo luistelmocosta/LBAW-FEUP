@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-03-02 21:14:29
-         compiled from "/home/luiscosta/PhpstormProjects/LBAW-FEUP/common/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18993846358acd24d519cf7-21928353%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.15, created on 2017-03-02 21:03:01
+         compiled from "/home/alexandre/GitHub/LBAW-FEUP/common/header.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:56568416158b83e4348b723-58926279%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'e1dcbffe67d1b08bdd1ad640c7e3886e1024d389' => 
+    '792024633f496e50fa9df206b31212ff6507e238' => 
     array (
-      0 => '/home/luiscosta/PhpstormProjects/LBAW-FEUP/common/header.tpl',
-      1 => 1488485634,
+      0 => '/home/alexandre/GitHub/LBAW-FEUP/common/header.tpl',
+      1 => 1488484978,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '18993846358acd24d519cf7-21928353',
+  'nocache_hash' => '56568416158b83e4348b723-58926279',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_58acd24d5a8ff0_57499743',
+  'unifunc' => 'content_58b83e4348be19_01552433',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58acd24d5a8ff0_57499743')) {function content_58acd24d5a8ff0_57499743($_smarty_tpl) {?><html lang="en-US">
+<?php if ($_valid && !is_callable('content_58b83e4348be19_01552433')) {function content_58b83e4348be19_01552433($_smarty_tpl) {?><html lang="en-US">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>AskMe</title>

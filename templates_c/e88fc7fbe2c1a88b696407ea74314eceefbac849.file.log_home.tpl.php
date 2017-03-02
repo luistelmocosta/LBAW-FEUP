@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-03-02 21:26:02
-         compiled from "../templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:22224402058acd174c42d21-75873706%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.15, created on 2017-03-02 17:37:07
+         compiled from "../templates/log_home.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:175324215658b84a3325b636-50057953%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '16598974be41913e67d6e2462715a26137b17224' => 
+    'e88fc7fbe2c1a88b696407ea74314eceefbac849' => 
     array (
-      0 => '../templates/index.tpl',
-      1 => 1488486352,
+      0 => '../templates/log_home.tpl',
+      1 => 1488472522,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '22224402058acd174c42d21-75873706',
+  'nocache_hash' => '175324215658b84a3325b636-50057953',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_58acd175620014_21257800',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_58b84a3325de19_75226665',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58acd175620014_21257800')) {function content_58acd175620014_21257800($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('../common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_58b84a3325de19_75226665')) {function content_58b84a3325de19_75226665($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('../common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
 <div id="ajax-item">
@@ -46,7 +46,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     </div>
                 </div>
                 <div class="home-left-inner">
+                    <div id="home-slide-position">
+                        <div class="widget cs_featured_questions">															<div class="ra-featured-widget">
 
+
+                                <div id="featured-slider" class="carousel slide">
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="item next left"><div class="row"></div></div>
+                                    </div>
+                                    <a class="left carousel-control icon-angle-left" href="#featured-slider" data-slide="prev"></a><a class="right carousel-control icon-angle-right" href="#featured-slider" data-slide="next"></a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="widget cs_new_users">															<div class="ra-new-users-widget">
+                                <ul class="users-list clearfix"><li class="user"><a href="./user/Johnny+Bravo"><div class="avatar" data-handle="Johnny Bravo" data-id="2798"><img src="./?qa=image&amp;qa_blobid=1374837135362443170&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/vhajar"><div class="avatar" data-handle="vhajar" data-id="692"><img src="./?qa=image&amp;qa_blobid=1784253194510990262&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/mierogul"><div class="avatar" data-handle="mierogul" data-id="63"><img src="./?qa=image&amp;qa_blobid=2891334074122364079&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/%C3%87a%C4%9Fda%C5%9F"><div class="avatar" data-handle="Çağdaş" data-id="42"><img src="./?qa=image&amp;qa_blobid=17929431163554368986&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/Digimasterbr"><div class="avatar" data-handle="Digimasterbr" data-id="29"><img src="./?qa=image&amp;qa_blobid=14920158235955498907&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/mepatrol"><div class="avatar" data-handle="mepatrol" data-id="26"><img src="./?qa=image&amp;qa_blobid=8504551254871977870&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/cleverlight"><div class="avatar" data-handle="cleverlight" data-id="19"><img src="./?qa=image&amp;qa_blobid=2514880126918943069&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/Defne"><div class="avatar" data-handle="Defne" data-id="16"><img src="./?qa=image&amp;qa_blobid=3479559703205594205&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/Cooper"><div class="avatar" data-handle="Cooper" data-id="15"><img src="./?qa=image&amp;qa_blobid=5560478939050730107&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/FUser"><div class="avatar" data-handle="FUser" data-id="14"><img src="./?qa=image&amp;qa_blobid=12717242325063059418&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/DUser"><div class="avatar" data-handle="DUser" data-id="13"><img src="./?qa=image&amp;qa_blobid=9007975701695053649&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/CGrl"><div class="avatar" data-handle="CGrl" data-id="12"><img src="./?qa=image&amp;qa_blobid=9016646767967832171&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/TheBlacky"><div class="avatar" data-handle="TheBlacky" data-id="11"><img src="./?qa=image&amp;qa_blobid=14707567393723620727&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/DaftPunk"><div class="avatar" data-handle="DaftPunk" data-id="10"><img src="./?qa=image&amp;qa_blobid=15052989196028273390&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/Blue"><div class="avatar" data-handle="Blue" data-id="9"><img src="./?qa=image&amp;qa_blobid=1558733682409721265&amp;qa_size=60"></div></a></li><li class="user"><a href="./user/Robot"><div class="avatar" data-handle="Robot" data-id="8"><img src="./?qa=image&amp;qa_blobid=2986170866122609386&amp;qa_size=60"></div></a></li></ul>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row home-pos-one">
                         <div class="col-md-8">
                             <div class="row">
@@ -59,6 +78,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                 <div class="qa-part-q-list">
                                     <form method="post" action="./">
                                         <div class="qa-q-list clean">
+
+                                            <div class="qa-q-list-item clearfix" id="q3551">
+                                                <div class="qa-q-item-main">
+                                                    <div class="q-item-head">
+                                                        <div class="count-time"><span class="time">5 hours ago</span>
+                                                            <span class="ans-count total-0">0</span></div>
+                                                        <div class="avatar" data-id="" data-handle=""><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></div>
+                                                        <span class="status-c"><span class="post-status open">Open</span></span>
+                                                        <div class="qa-q-item-title">
+                                                            <a href="./3551/jghjhk-htrjuirtf-yhre-eryrey-ryer-yrtre-ertyer-erygre-erre">jghjhk htrjuirtf yhre y eryrey ryer er yrtre ertyer erygre erre</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> <!-- END question list item -->
 
                                             <div class="qa-q-list-item clearfix" id="q3550">
                                                 <div class="qa-q-item-main">
@@ -326,24 +359,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                                 </div>
                                             </div> <!-- END question list item -->
 
-                                            <div class="qa-q-list-item clearfix" id="q28">
-                                                <div class="qa-q-item-main">
-                                                    <div class="q-item-head">
-                                                        <div class="count-time"><span class="time">Jan 5, 2015</span>
-                                                            <span class="ans-count total-1">1</span></div>
-                                                        <div class="avatar" data-id="" data-handle=""><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></div>
-                                                        <span class="status-c"><span class="post-status open">Open</span></span>
-                                                        <div class="qa-q-item-title">
-                                                            <a href="./28/why-is-qa-themes-allways-the-best">Why is Qa Themes allways the best ?</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> <!-- END question list item -->
-
                                         </div> <!-- END qa-q-list -->
 
                                         <div class="qa-q-list-form">
-                                            <input type="hidden" name="code" value="0-1488389910-b24df8b078606c3e5fe808b62b4a32532c3cdde9">
+                                            <input type="hidden" name="code" value="1-1488472293-e4209f90109e3792b1b8175a33125078178cf16b">
                                         </div>
                                     </form>
                                 </div>
@@ -364,17 +383,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                 </div>
                                 <div class="widget cs_site_status">																						<h3 class="widget-title">Site Status</h3>
                                     <div class="ra-site-status-widget">
-                                        <div class="site-status-inner clearfix"><div class="bar-float" style="float: none; width: 100%;"><div class="sparkline" data-type="bar" data-bar-color="#E45840" data-bar-width="30" data-height="80"><canvas width="158" height="80" style="display: inline-block; width: 158px; height: 80px; vertical-align: top;"></canvas></div>
+                                        <div class="site-status-inner clearfix"><div class="bar-float"><div class="sparkline" data-type="bar" data-bar-color="#E45840" data-bar-width="30" data-height="80"><canvas width="158" height="80" style="display: inline-block; width: 158px; height: 80px; vertical-align: top;"></canvas></div>
                                                 <ul class="list-inline text-muted axis">
                                                     <li style="width: 30px; margin-right: 2px;">Que</li><li style="width: 30px; margin-right: 2px;">Ans</li><li style="width: 30px; margin-right: 2px;">Com</li><li style="width: 30px; margin-right: 2px;">UA</li><li style="width: 30px; margin-right: 2px;">US</li>
                                                 </ul></div>
-                                            <div class="acti-indicators" style="float: none; width: 100%;">
+                                            <div class="acti-indicators">
                                                 <ul>
-                                                    <li><i class="fa fa-circle text-info" style="color:#233445"></i> Questions <span>39</span></li>
+                                                    <li><i class="fa fa-circle text-info" style="color:#233445"></i> Questions <span>40</span></li>
                                                     <li><i class="fa fa-circle text-info" style="color:#3fcf7f"></i> Answers <span>242</span></li>
                                                     <li><i class="fa fa-circle text-info" style="color:#FF5F5F"></i> Comments <span>14</span></li>
-                                                    <li><i class="fa fa-circle text-info" style="color:#13C4A5"></i> Unanswered <span>7</span></li>
-                                                    <li><i class="fa fa-circle text-info" style="color:#F4C414"></i> Unselected <span>37</span></li>
+                                                    <li><i class="fa fa-circle text-info" style="color:#13C4A5"></i> Unanswered <span>8</span></li>
+                                                    <li><i class="fa fa-circle text-info" style="color:#F4C414"></i> Unselected <span>38</span></li>
                                                 </ul>
                                             </div></div>
                                     </div>
@@ -388,100 +407,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             </div>
                         </div>
                     </div>
-
+                    <div class="qa-suggest-next">
+                        To see more, click for the <a href="./questions">full list of questions</a> or <a href="./tags">popular tags</a>.
+                    </div>
                 </div>
             </div>
         </div>
         <?php echo $_smarty_tpl->getSubTemplate ('../common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-
-        <!-- Modal -->
-        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    </div>
-                    <div class="modal-body">
-                        <h3>Login or Register</h3>
-                        <p class="login-desc">Get access to your account and question</p>
-                        <div class="social-logins">
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <form id="loginform" role="form" action="./login?to=" method="post">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="icon-user"></i></span>
-                                        <input type="text" class="form-control" id="qa-userid" name="emailhandle" placeholder="Email or Username">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="icon-key"></i></span>
-                                        <input type="password" class="form-control" id="qa-password" name="password" placeholder="Password">
-                                    </div>
-
-                                    <label class="inline">
-                                        <input type="checkbox" name="remember" id="qa-rememberme" value="1"> Remember									</label>
-                                    <input type="hidden" name="code" value="0-1488389910-12176c2d47df62e5028b3f77e0b2dbca3030d164">
-                                    <input type="submit" value="Login" id="qa-login" name="dologin" class="btn btn-primary btn-large btn-block">
-                                </form>
-                            </div>
-                            <div class="col-sm-6">
-                                <form id="loginform" role="form" action="./register?to=" method="post">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="icon-user"></i></span>
-                                        <input type="text" class="form-control" id="qa-userid" name="handle" placeholder="Username">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="icon-key"></i></span>
-                                        <input type="password" class="form-control" id="qa-password" name="password" placeholder="Password">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="icon-envelope"></i></span>
-                                        <input type="text" id="email" class="form-control" name="email" placeholder="Email">
-                                    </div>
-
-                                    <input type="hidden" name="code" value="0-1488389910-35266b352239ea4307aa01d47e8d28d68675feb5">
-                                    <input type="submit" value="Register" id="qa-register" name="doregister" class="btn btn-primary btn-block">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-</div>
-<div style="position:absolute; left:-9999px; top:-9999px;">
-    <span id="qa-waiting-template" class="qa-waiting">...</span>
-</div>
-
-
-
-
-
-<!--
-It's no big deal, but your HTML could not be indented properly. To fix, please:
-1. Use this->output() to output all HTML.
-2. Balance all paired tags like <td>...</td> or <div>...</div>.
-3. Use a slash at the end of unpaired tags like <img/> or <input/>.
-Thanks!
--->
-<div id="8_popover" class="user-popover" style="top: 364px; left: 959px; display: none;">
-    <div class="counts clearfix">
-        <div class="points">
-            <span>120</span>Points				</div>
-        <div class="qcount">
-            <span>1</span>Questions				</div>
-        <div class="acount">
-            <span>0</span>Answers				</div>
-        <div class="ccount">
-            <span>0</span>Comments				</div>
-    </div>
-    <div class="bottom">
-        <div class="avatar pull-left"><a href="./user/Robot"><img src="./?qa=image&amp;qa_blobid=2986170866122609386&amp;qa_size=30"></a></div>
-        <span class="name">Robot</span>
-        <span class="level">Registered user</span>
-    </div>
-</div>
-</body></html>
-<?php }} ?>
+</div><?php }} ?>

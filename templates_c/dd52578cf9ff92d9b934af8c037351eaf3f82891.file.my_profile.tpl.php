@@ -1,4 +1,26 @@
-{include file='../common/header_log.tpl'}
+<?php /* Smarty version Smarty-3.1.15, created on 2017-03-02 20:59:22
+         compiled from "../templates/my_profile.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:159783394558b845f4c62048-61339356%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'dd52578cf9ff92d9b934af8c037351eaf3f82891' => 
+    array (
+      0 => '../templates/my_profile.tpl',
+      1 => 1488484757,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '159783394558b845f4c62048-61339356',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_58b845f4c661f5_47381153',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_58b845f4c661f5_47381153')) {function content_58b845f4c661f5_47381153($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('../common/header_log.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 
 <div id="ajax-item">
     <div id="site-body" class="container">
@@ -9,10 +31,10 @@
                     <div class="user-header">
                         <div class="user-header-inner clearfix">
                             <div class="user-thumb">
-                                <a href="../user/Digimasterbr"><img src="../?qa=image&amp;qa_blobid=14920158235955498907&amp;qa_size=150"></a>
+                                <a href="../user/lbaw1641"><img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=150"></a>
                             </div>
                             <div class="user-name-detail">
-                                <h3>Digimasterbr<small class="block m-t-mini">Registered user</small>
+                                <h3>lbaw1641<small class="block m-t-mini">Registered user</small>
                                 </h3>
 
 
@@ -22,19 +44,25 @@
                             <div class="qa-nav-sub">
                                 <ul class="qa-nav-sub-list">
                                     <li class="qa-nav-sub-item qa-nav-sub-profile">
-                                        <a href="../user/Digimasterbr" class=" qa-nav-sub-link qa-nav-sub-selected">User Digimasterbr</a>
+                                        <a href="../user/lbaw1641" class=" qa-nav-sub-link qa-nav-sub-selected">User lbaw1641</a>
+                                    </li>
+                                    <li class="qa-nav-sub-item qa-nav-sub-account">
+                                        <a href="../account" class=" qa-nav-sub-link">My account</a>
+                                    </li>
+                                    <li class="qa-nav-sub-item qa-nav-sub-favorites">
+                                        <a href="../favorites" class=" qa-nav-sub-link">My favorites</a>
                                     </li>
                                     <li class="qa-nav-sub-item qa-nav-sub-wall">
-                                        <a href="../user/Digimasterbr/wall" class=" qa-nav-sub-link">Wall</a>
+                                        <a href="../user/lbaw1641/wall" class=" qa-nav-sub-link">Wall</a>
                                     </li>
                                     <li class="qa-nav-sub-item qa-nav-sub-activity">
-                                        <a href="../user/Digimasterbr/activity" class=" qa-nav-sub-link">Recent activity</a>
+                                        <a href="../user/lbaw1641/activity" class=" qa-nav-sub-link">Recent activity</a>
                                     </li>
                                     <li class="qa-nav-sub-item qa-nav-sub-questions">
-                                        <a href="../user/Digimasterbr/questions" class=" qa-nav-sub-link">All questions</a>
+                                        <a href="../user/lbaw1641/questions" class=" qa-nav-sub-link">All questions</a>
                                     </li>
                                     <li class="qa-nav-sub-item qa-nav-sub-answers">
-                                        <a href="../user/Digimasterbr/answers" class=" qa-nav-sub-link">All answers</a>
+                                        <a href="../user/lbaw1641/answers" class=" qa-nav-sub-link">All answers</a>
                                     </li>
                                 </ul>
                                 <div class="qa-nav-sub-clear">
@@ -43,13 +71,9 @@
                         </div>
                     </div>
                     <div class="user-cols-right">
-                        <div class="about-me widget">
-                            <h3 class="widget-title">About Me</h3>
-                            Webmaster
-                        </div>
                         <div class="user-activity-count clearfix">
                             <div class="points">
-                                120
+                                100
                                 <span>points</span>
                             </div>
                             <div class="counts">
@@ -75,12 +99,12 @@
                         </div>
                         <div class="about-me widget">
                             <h3 class="widget-title">User Profile</h3>
-                            <form method="post" action="../user/Digimasterbr">
+                            <form method="post" action="../user/lbaw1641">
                                 <table class="qa-form-wide-table">
                                     <tbody id="avatar">
                                     <tr>
                                         <td class="qa-form-tall-data" colspan="3">
-                                            <div class="qa-form-tall-image"><a href="../user/Digimasterbr" class="qa-avatar-link"><img src="../?qa=image&amp;qa_blobid=14920158235955498907&amp;qa_size=200" width="159" height="200" class="qa-avatar-image" alt=""></a></div>
+                                            <div class="qa-form-tall-image"><a href="../user/lbaw1641" class="qa-avatar-link"><img src="../?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=200" width="128" height="128" class="qa-avatar-image" alt=""></a></div>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -89,7 +113,7 @@
                                             Member for:
                                         </td>
                                         <td class="qa-form-wide-data">
-                                            <span class="qa-form-wide-static">1 year</span>
+                                            <span class="qa-form-wide-static">18 hours</span>
                                         </td>
                                     </tr>
                                     <tr id="level">
@@ -113,7 +137,7 @@
                                             Location:
                                         </td>
                                         <td class="qa-form-wide-data">
-                                            <span class="qa-form-wide-static">Brazil</span>
+                                            <span class="qa-form-wide-static"></span>
                                         </td>
                                     </tr>
                                     <tr id="userfield-3">
@@ -121,7 +145,7 @@
                                             Website:
                                         </td>
                                         <td class="qa-form-wide-data">
-                                            <span class="qa-form-wide-static"><a href="http://www.suicidios.org" rel="nofollow">http://www.suicidios.org</a></span>
+                                            <span class="qa-form-wide-static"></span>
                                         </td>
                                     </tr>
                                     <tr id="userfield-4">
@@ -129,7 +153,12 @@
                                             About:
                                         </td>
                                         <td class="qa-form-wide-data">
-                                            <span class="qa-form-wide-static">Webmaster</span>
+                                            <span class="qa-form-wide-static"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" class="qa-form-wide-buttons">
+                                            <input name="doaccount" value="Edit my Profile" title="" type="submit" class="qa-form-wide-button qa-form-wide-button-account">
                                         </td>
                                     </tr>
                                     </tbody></table>
@@ -137,22 +166,22 @@
                         </div>
                         <div class="user-qac-list">
                             <div id="user-content-position">
-                                <div class="widget cs_user_activity">												<h3 class="widget-title">Digimasterbr's activities</h3>
+                                <div class="widget cs_user_activity">												<h3 class="widget-title">lbaw1641's activities</h3>
                                     <div class="ra-ua-widget">
                                         <div class="user-activities"><ul><li>No activity yet!</li></ul></div>
                                     </div>
                                 </div>
-                                <div class="widget cs_user_posts">												<h3 class="widget-title user-post-title">Digimasterbr's Questions<a class="see-all" href="../user/Digimasterbr/questions">Show all</a></h3>
+                                <div class="widget cs_user_posts">												<h3 class="widget-title user-post-title">lbaw1641's Questions<a class="see-all" href="../user/lbaw1641/questions">Show all</a></h3>
                                     <div class="ra-ua-widget">
                                         <ul class="question-list users-post-widget post-type-Q"><li class="no-post-found">No Questions posted yet! </li></ul>
                                     </div>
                                 </div>
-                                <div class="widget cs_user_posts">												<h3 class="widget-title user-post-title">Digimasterbr's Answers<a class="see-all" href="../user/Digimasterbr/answers">Show all</a></h3>
+                                <div class="widget cs_user_posts">												<h3 class="widget-title user-post-title">lbaw1641's Answers<a class="see-all" href="../user/lbaw1641/answers">Show all</a></h3>
                                     <div class="ra-ua-widget">
                                         <ul class="question-list users-post-widget post-type-A"><li class="no-post-found">No Answers posted yet! </li></ul>
                                     </div>
                                 </div>
-                                <div class="widget cs_user_posts">												<h3 class="widget-title user-post-title">Digimasterbr's Comments</h3>
+                                <div class="widget cs_user_posts">												<h3 class="widget-title user-post-title">lbaw1641's Comments</h3>
                                     <div class="ra-ua-widget">
                                         <ul class="question-list users-post-widget post-type-C"><li class="no-post-found">No Comments posted yet! </li></ul>
                                     </div>
@@ -202,8 +231,7 @@
 
             </div>
         </div>
-
-        {include file='../common/footer.tpl'}
+        <?php echo $_smarty_tpl->getSubTemplate ('../common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
     </div>
-</div>
+</div><?php }} ?>

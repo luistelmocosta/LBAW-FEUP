@@ -1,4 +1,26 @@
-{include file="../common/header.tpl"}
+<?php /* Smarty version Smarty-3.1.15, created on 2017-03-02 21:19:56
+         compiled from "../templates/recent_questions.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:6879258858b83f229672d2-50711643%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '5136d7faf2ddb0bd3d36c9fa2d56b721716eb398' => 
+    array (
+      0 => '../templates/recent_questions.tpl',
+      1 => 1488485966,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '6879258858b83f229672d2-50711643',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_58b83f2296a8f0_59215476',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_58b83f2296a8f0_59215476')) {function content_58b83f2296a8f0_59215476($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("../common/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 
 <div id="ajax-item">
     <div id="site-body" class="container">
@@ -427,7 +449,8 @@
 
             </div>
         </div>
-        {include file="../common/footer.tpl"}
+        <?php echo $_smarty_tpl->getSubTemplate ("../common/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
         
     </div>
-</div>
+</div><?php }} ?>
