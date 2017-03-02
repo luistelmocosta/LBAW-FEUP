@@ -1,4 +1,5 @@
-<html lang=""><head>
+<html lang="">
+<head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>AskMe</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,6 +37,7 @@
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/theme.js"></script>
     <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+</head>
 <body id="nav-top" class="qa-template-qa qa-body-js-on">
 <script type="text/javascript">
     var b=document.getElementsByTagName('body')[0];
@@ -70,6 +72,13 @@
                 </ul>
             </li>
         </ul>
+        <script>
+            $(document).ready(function(){
+                $("a").click(function(){
+                    $(this).next().toggle();
+                });
+            });
+        </script>
 
         <div class="qa-nav-main">
             <ul class="qa-nav-main-list" style="padding-top: 6px">
@@ -92,7 +101,7 @@
 
         <ul class="nav navbar-nav navbar-avatar pull-right">
             <li class="dropdown pull-right" id="menuLogin">
-                <a id="profile-link" data-toggle="dropdown" href="./user/lbaw1641" class="avatar">
+                <a id="profile-link" data-toggle="dropdown" href="#" class="avatar">
                     <img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=30">						</a>
                 <ul class="user-nav dropdown-menu">
 
@@ -109,4 +118,4 @@
     </div>
 </header>
 
-</head>
+</body>
