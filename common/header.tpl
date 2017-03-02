@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../css/fonts/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/font.css">
     <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles/main.css">
     <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/wide.css">
     <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/responsive.css">
     <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/theme-green.css">
@@ -54,7 +54,7 @@
         </div>
         <ul class="nav navbar-nav category-nav pull-left">
             <li class="dropdown pull-left">
-                <a data-toggle="dropdown" href="#" class="category-toggle fa fa-folder">Categories</a>
+                <a data-toggle="dropdown"  href="#" class="category-toggle fa fa-folder">Categories</a>
                 <ul class="category-list-drop dropdown-menu">
                     <li class="qa-nav-cat-item">
                         <a href="./categories" class=" qa-nav-cat-link qa-nav-cat-selected">All categories</a>

@@ -2033,7 +2033,7 @@ input.qa-form-wide-number{
 }
 
 #ajax-blocks .ajax-loading {
-    background: url("../images/loading-1.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    background: url("../img/loading.png") no-repeat scroll center center rgba(0, 0, 0, 0);
     display: block;
     height: 80px;
 }
@@ -2654,7 +2654,7 @@ input[type=checkbox].on-off-checkbox {
 }
 
 .header-position-c {
-    background: url("../images/bg.jpg") no-repeat scroll 0 0 / cover #F9F9F9;
+    background: url("../img/bgs.png") no-repeat scroll 0 0 / cover #F9F9F9;
     border-bottom: 1px solid #EEEEEE;
     margin: -15px -15px 20px;
     padding: 30px 0;
@@ -3851,7 +3851,7 @@ input[type=checkbox].on-off-checkbox {
 }
 
 .qa-waiting {
-    background: url("../images/spinner.gif") no-repeat scroll center center rgba(0, 0, 0, 0);
+    background: url("../img/spinner.gif") no-repeat scroll center center rgba(0, 0, 0, 0);
     display: inline-block;
     font-size: 0;
     height: 16px;
@@ -4498,7 +4498,7 @@ input[type=checkbox].on-off-checkbox {
 #nav-top #site-header .qa-nav-main .qa-nav-main-list li a {
     font-size: 13px;
     font-weight: 600;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 #nav-top #site-header .qa-nav-main .qa-nav-main-list li a:hover , #nav-top #site-header .qa-nav-main .qa-nav-main-list li a.qa-nav-main-selected {
    background:#fafafa;
