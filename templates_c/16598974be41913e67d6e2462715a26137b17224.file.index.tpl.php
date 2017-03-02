@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-03-01 23:55:00
+<?php /* Smarty version Smarty-3.1.15, created on 2017-03-02 18:01:27
          compiled from "../templates/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:22224402058acd174c42d21-75873706%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '16598974be41913e67d6e2462715a26137b17224' => 
     array (
       0 => '../templates/index.tpl',
-      1 => 1488408897,
+      1 => 1488473966,
       2 => 'file',
     ),
   ),
@@ -19,75 +19,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_58acd175620014_21257800',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58acd175620014_21257800')) {function content_58acd175620014_21257800($_smarty_tpl) {?>
-<?php echo $_smarty_tpl->getSubTemplate ('../common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_58acd175620014_21257800')) {function content_58acd175620014_21257800($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('../common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
-<body id="nav-top" class="qa-template-qa qa-body-js-on">
-<script type="text/javascript">
-    var b=document.getElementsByTagName('body')[0];
-    b.className=b.className.replace('qa-body-js-off', 'qa-body-js-on');
-</script>
-<header id="site-header" class="clearfix">
-    <div class="qa-navbar navbar-default navbar-fixed-top " role="navigation">
-        <a href="#" class="slide-mobile-menu icon-list"></a>
-        <div class="site-logo">
-            <a class="navbar-brand" title="CleanStrap Demo" href="http://demo.qa-themes.com/cleanstrap/">
-                <img class="navbar-site-logo" src="../qa-theme/cleanstrap/images/logo.png">
-            </a>
-        </div>
-        <a id="nav-ask-btn" href="" class="btn btn-sm">Ask Question</a>
-        <a id="nav-ask-btn" href="" class="btn btn-sm header-ask-button fa fa-folder"></a>
-        <ul class="nav navbar-nav category-nav pull-left">
-            <li class="dropdown pull-left">
-                <a data-toggle="dropdown" href="#" class="category-toggle fa fa-folder">Categories</a>
-                <ul class="category-list-drop dropdown-menu">
-                    <li class="qa-nav-cat-item">
-                        <a href="./categories" class=" qa-nav-cat-link qa-nav-cat-selected">All categories</a>
-                    </li>
-                    <li class="qa-nav-cat-item">
-                        <a href="./cleanstrap" class=" qa-nav-cat-link" title="CleanStrap Theme">CleanStrap<span class="qa-nav-cat-note">33</span></a>
-                    </li>
-                    <li class="qa-nav-cat-item">
-                        <a href="./widgets" class=" qa-nav-cat-link" title="CleanStrap widgets and drag &amp; drop builder">Widgets<span class="qa-nav-cat-note">3</span></a>
-                    </li>
-                    <li class="qa-nav-cat-item">
-                        <a href="./Question2Answer" class=" qa-nav-cat-link" title="Questions about Question2Answer">Q2A platform<span class="qa-nav-cat-note">3</span></a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-
-        <div class="qa-nav-main">
-            <ul class="qa-nav-main-list" style="padding-top: 6px">
-                <li class="qa-nav-main-item qa-nav-main-questions">
-                    <a href="./questions" class="fa fa-question qa-nav-main-link" >Questions</a>
-                </li>
-                <li class="qa-nav-main-item qa-nav-main-unanswered">
-                    <a href="./unanswered" class="fa fa-frown-o" >Unanswered</a>
-                </li>
-                <li class="qa-nav-main-item qa-nav-main-tag">
-                    <a href="./tags" class="fa fa-tags qa-nav-main-link" >Tags</a>
-                </li>
-                <li class="qa-nav-main-item qa-nav-main-user">
-                    <a href="./users" class="fa fa-user-o qa-nav-main-link">Users</a>
-                </li>
-            </ul>
-            <div class="qa-nav-main-clear">
-            </div>
-        </div>
-
-
-        <a class="btn login-register fa fa-sign-in" href="#" data-toggle="modal" data-target="#login-modal" title="Login or Register"></a>
-
-        <form method="get" action="" class="navbar-form navbar-right form-search" role="search">
-
-            <span class="fa fa-search" style="position: fixed;padding-top: 8px;padding-left: 10px;"></span>
-            <input type="text" name="q" value="" class="form-control search-query" placeholder="Search" autocomplete="off">
-
-        </form>
-    </div>
-</header>
 <div id="ajax-item">
     <div id="site-body" class="container">
         <div class="clearfix qa-main">
@@ -454,7 +388,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
