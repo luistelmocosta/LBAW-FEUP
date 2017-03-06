@@ -1,6 +1,5 @@
 <div id="site-body" class="container">
 
-
     <!-- Modal -->
     <div class="modal fade in" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: block;">
         <div class="modal-dialog">

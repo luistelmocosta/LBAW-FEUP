@@ -157,7 +157,7 @@
                                 <div class="widget cs_related_questions">													<h3 class="widget-title">Related questions</h3>
                                     <div class="ra-rq-widget">
                                         <ul>
-                                            <li><div class="avatar" data-id="4" data-handle="Smith"><a href="../user/Smith" class="qa-avatar-link"><img src="../?qa=image&amp;qa_blobid=15431216663650197802&amp;qa_size=30" width="30" height="30" class="qa-avatar-image" alt=""></a></div>
+                                            <li><div class="avatar" data-id="4" data-handle="Smith"><a href="../user/Smith" class="qa-avatar-link"><img src="../css/img/users.jpg" width="30" height="30" class="qa-avatar-image" alt=""></a></div>
                                                 <div class="post-content">
                                                     <a class="title" href="../7/how-to-report-problems-or-bugs-in-this-theme">How to report problems or bugs in this theme?</a>
                                                     <div class="meta">
@@ -167,7 +167,7 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li><div class="avatar" data-id="30" data-handle="Multi"><a href="../user/Multi" class="qa-avatar-link"><img src="../?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=30" width="30" height="30" class="qa-avatar-image" alt=""></a></div>
+                                            <li><div class="avatar" data-id="30" data-handle="Multi"><a href="../user/Multi" class="qa-avatar-link"><img src="../css/img/users.jpg" width="30" height="30" class="qa-avatar-image" alt=""></a></div>
                                                 <div class="post-content">
                                                     <a class="title" href="../136/how-can-i-support-the-developer">How can I support the developer?</a>
                                                     <div class="meta">
@@ -177,7 +177,7 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li><div class="avatar" data-id="7" data-handle="Inspector"><a href="../user/Inspector" class="qa-avatar-link"><img src="../?qa=image&amp;qa_blobid=12729651199567246656&amp;qa_size=30" width="30" height="30" class="qa-avatar-image" alt=""></a></div>
+                                            <li><div class="avatar" data-id="7" data-handle="Inspector"><a href="../user/Inspector" class="qa-avatar-link"><img src="../css/img/users.jpg" width="30" height="30" class="qa-avatar-image" alt=""></a></div>
                                                 <div class="post-content">
                                                     <a class="title" href="../101/will-this-theme-be-updated-for-q2a-1-7">Will this theme be updated for Q2A 1.7?</a>
                                                     <div class="meta">

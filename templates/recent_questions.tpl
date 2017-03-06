@@ -38,7 +38,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">2 minutes ago</span>
                                             <span class="ans-count total-0">0</span></div>
-                                        <div class="avatar" data-id="" data-handle=""><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></div>
+                                        <div class="avatar" data-id="" data-handle=""><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./3551/jghjhk-htrjuirtf-yhre-eryrey-ryer-yrtre-ertyer-erygre-erre">jghjhk htrjuirtf yhre y eryrey ryer er yrtre ertyer erygre erre</a>
@@ -52,7 +52,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Feb 22</span>
                                             <span class="ans-count total-0">0</span></div>
-                                        <div class="avatar" data-id="" data-handle=""><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></div>
+                                        <div class="avatar" data-id="" data-handle=""><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./3550/davetsiz-hayat-siteme-soru-cevap-kurulumu">Davetsiz Hayat Siteme Soru Cevap Kurulumu</a>
@@ -66,7 +66,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Feb 22</span>
                                             <span class="ans-count total-0">0</span></div>
-                                        <div class="avatar" data-id="2803" data-handle="Dr-Hack"><a href="./user/Dr-Hack" class="qa-avatar-link"><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
+                                        <div class="avatar" data-id="2803" data-handle="Dr-Hack"><a href="./user/Dr-Hack" class="qa-avatar-link"><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./3549/using-advertisement-option-position-questions-break-theme">Using Advertisement option add in X position in questions break the theme</a>
@@ -80,7 +80,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Feb 22</span>
                                             <span class="ans-count total-0">0</span></div>
-                                        <div class="avatar" data-id="" data-handle=""><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></div>
+                                        <div class="avatar" data-id="" data-handle=""><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./3548/css-editing-working">css editing working?</a>
@@ -94,7 +94,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Jun 9, 2016</span>
                                             <span class="ans-count total-0">0</span></div>
-                                        <div class="avatar" data-id="" data-handle=""><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></div>
+                                        <div class="avatar" data-id="" data-handle=""><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./263/is-this-a-responsive-theme">is this a responsive theme ?</a>
@@ -108,7 +108,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Jun 6, 2016</span>
                                             <span class="ans-count total-1">1</span></div>
-                                        <div class="avatar" data-id="701" data-handle="cusatxpress"><a href="./user/cusatxpress" class="qa-avatar-link"><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
+                                        <div class="avatar" data-id="701" data-handle="cusatxpress"><a href="./user/cusatxpress" class="qa-avatar-link"><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./259/answer-votes-are-out-of-propotions">Answer Votes are out of propotions</a>
@@ -122,7 +122,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Jan 10, 2016</span>
                                             <span class="ans-count total-1">1</span></div>
-                                        <div class="avatar" data-id="416" data-handle="Warren"><a href="./user/Warren" class="qa-avatar-link"><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
+                                        <div class="avatar" data-id="416" data-handle="Warren"><a href="./user/Warren" class="qa-avatar-link"><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./208/how-did-you-add-the-wheat-image-with-the-ask-bar-under-the-menu">How did you add the Wheat Image with the Ask bar under the menu?</a>
@@ -136,7 +136,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Aug 14, 2015</span>
                                             <span class="ans-count total-2">2</span></div>
-                                        <div class="avatar" data-id="" data-handle=""><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></div>
+                                        <div class="avatar" data-id="" data-handle=""><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./184/how-to-install-this-theme">how to install this theme?</a>
@@ -150,7 +150,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Aug 12, 2015</span>
                                             <span class="ans-count total-1">1</span></div>
-                                        <div class="avatar" data-id="" data-handle=""><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></div>
+                                        <div class="avatar" data-id="" data-handle=""><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./183/i-am-not-able-to-upload-other-logos-than-cleanstrap-ones">I am not able to upload other logos than CleanStrap ones</a>
@@ -164,7 +164,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">May 15, 2015</span>
                                             <span class="ans-count total-1">1</span></div>
-                                        <div class="avatar" data-id="" data-handle=""><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></div>
+                                        <div class="avatar" data-id="" data-handle=""><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./148/how-can-i-ask-without-login">how can i ask without login</a>
@@ -178,7 +178,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Apr 12, 2015</span>
                                             <span class="ans-count total-1">1</span></div>
-                                        <div class="avatar" data-id="30" data-handle="Multi"><a href="./user/Multi" class="qa-avatar-link"><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
+                                        <div class="avatar" data-id="30" data-handle="Multi"><a href="./user/Multi" class="qa-avatar-link"><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./136/how-can-i-support-the-developer">How can I support the developer?</a>
@@ -192,7 +192,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Mar 7, 2015</span>
                                             <span class="ans-count total-1">1</span></div>
-                                        <div class="avatar" data-id="24" data-handle="Chrissssss"><a href="./user/Chrissssss" class="qa-avatar-link"><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
+                                        <div class="avatar" data-id="24" data-handle="Chrissssss"><a href="./user/Chrissssss" class="qa-avatar-link"><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./120/want-know-you-can-grant-different-privileges-different-users">I want to know if you can grant different privileges to different users?</a>
@@ -206,7 +206,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Mar 7, 2015</span>
                                             <span class="ans-count total-1">1</span></div>
-                                        <div class="avatar" data-id="" data-handle=""><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></div>
+                                        <div class="avatar" data-id="" data-handle=""><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./119/how-do-you-moderate-a-q%26a-community-forum-properly">How do you moderate a Q&amp;A Community forum properly?</a>
@@ -220,7 +220,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Feb 25, 2015</span>
                                             <span class="ans-count total-0">0</span></div>
-                                        <div class="avatar" data-id="21" data-handle="gurjyottheman"><a href="./user/gurjyottheman" class="qa-avatar-link"><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
+                                        <div class="avatar" data-id="21" data-handle="gurjyottheman"><a href="./user/gurjyottheman" class="qa-avatar-link"><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
                                         <span class="status-c"><span class="post-status closed">Closed</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./115/is-the-total-number-for-question-on-homepage-fixed">Is the total number for question on homepage fixed??</a>
@@ -234,7 +234,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Feb 20, 2015</span>
                                             <span class="ans-count total-2">2</span></div>
-                                        <div class="avatar" data-id="" data-handle=""><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></div>
+                                        <div class="avatar" data-id="" data-handle=""><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./110/why-i-can-t-add-widgets">why I can"t add Widgets?</a>
@@ -248,7 +248,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Feb 19, 2015</span>
                                             <span class="ans-count total-0">0</span></div>
-                                        <div class="avatar" data-id="21" data-handle="gurjyottheman"><a href="./user/gurjyottheman" class="qa-avatar-link"><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
+                                        <div class="avatar" data-id="21" data-handle="gurjyottheman"><a href="./user/gurjyottheman" class="qa-avatar-link"><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./109/why-my-gravatar-is-showing-when-by-default-avatar-is-selected">Why my gravatar is showing when by default avatar is selected</a>
@@ -262,7 +262,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Feb 17, 2015</span>
                                             <span class="ans-count total-1">1</span></div>
-                                        <div class="avatar" data-id="" data-handle=""><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></div>
+                                        <div class="avatar" data-id="" data-handle=""><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./107/where-can-i-find-the-link-of-cleanstrap-themes-options">where can I find the link of cleanstrap theme's Options?</a>
@@ -276,7 +276,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Feb 16, 2015</span>
                                             <span class="ans-count total-1">1</span></div>
-                                        <div class="avatar" data-id="21" data-handle="gurjyottheman"><a href="./user/gurjyottheman" class="qa-avatar-link"><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
+                                        <div class="avatar" data-id="21" data-handle="gurjyottheman"><a href="./user/gurjyottheman" class="qa-avatar-link"><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
                                         <span class="status-c"><span class="post-status closed">Closed</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./104/how-to-change-word-answers-to-replies">How to change word "Answers" to "Replies"??</a>
@@ -290,7 +290,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Feb 12, 2015</span>
                                             <span class="ans-count total-1">1</span></div>
-                                        <div class="avatar" data-id="7" data-handle="Inspector"><a href="./user/Inspector" class="qa-avatar-link"><img src="./?qa=image&amp;qa_blobid=12729651199567246656&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
+                                        <div class="avatar" data-id="7" data-handle="Inspector"><a href="./user/Inspector" class="qa-avatar-link"><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./101/will-this-theme-be-updated-for-q2a-1-7">Will this theme be updated for Q2A 1.7?</a>
@@ -304,7 +304,7 @@
                                     <div class="q-item-head">
                                         <div class="count-time"><span class="time">Jan 5, 2015</span>
                                             <span class="ans-count total-1">1</span></div>
-                                        <div class="avatar" data-id="" data-handle=""><img src="./?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></div>
+                                        <div class="avatar" data-id="" data-handle=""><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></div>
                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                         <div class="qa-q-item-title">
                                             <a href="./28/why-is-qa-themes-allways-the-best">Why is Qa Themes allways the best ?</a>

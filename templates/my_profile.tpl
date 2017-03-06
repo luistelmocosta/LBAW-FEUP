@@ -9,7 +9,7 @@
                     <div class="user-header">
                         <div class="user-header-inner clearfix">
                             <div class="user-thumb">
-                                <a href="../user/lbaw1641"><img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=150"></a>
+                                <a href="../user/lbaw1641"><img src="../css/img/person-flat.png"></a>
                             </div>
                             <div class="user-name-detail">
                                 <h3>lbaw1641<small class="block m-t-mini">Registered user</small>
@@ -82,7 +82,7 @@
                                     <tbody id="avatar">
                                     <tr>
                                         <td class="qa-form-tall-data" colspan="3">
-                                            <div class="qa-form-tall-image"><a href="../user/lbaw1641" class="qa-avatar-link"><img src="../?qa=image&amp;qa_blobid=11054542722540118350&amp;qa_size=200" width="128" height="128" class="qa-avatar-image" alt=""></a></div>
+                                            <div class="qa-form-tall-image"><a href="../user/lbaw1641" class="qa-avatar-link"><img src="../css/img/person-flat.png" width="128" height="128" class="qa-avatar-image" alt=""></a></div>
                                         </td>
                                     </tr>
                                     </tbody>

@@ -9,7 +9,7 @@
                     <div class="user-header">
                         <div class="user-header-inner clearfix">
                             <div class="user-thumb">
-                                <a href="../user/lbaw1641"><img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=150"></a>
+                                <a href="../user/lbaw1641"><img src="../css/img/person-flat.png"></a>
                             </div>
                             <div class="user-name-detail">
                                 <h3>lbaw1641<small class="block m-t-mini">Registered user</small>
@@ -92,7 +92,6 @@
                                 <th>Warn</th>
 
 
-
                                 <tr id="1">
                                     <td>lbaw1641</td>
                                     <td>Admin</td>
@@ -105,7 +104,6 @@
                                         </span></a>
                                     </td>
 
-
                                     <td>
                                         <a <button class="fa fa-ban" onClick="loadMoreInfoModal(1)" data-toggle="modal" data-target="#moreInfo">
 
@@ -116,7 +114,6 @@
 
                                         </button></a>
                                     </td>
-
 
                                 </tr>
 
@@ -135,11 +132,7 @@
                                 </li>
                             </ul>
 
-
-
-
                         </div>
-
 
                     </div>
                 </div>
@@ -187,7 +180,6 @@
             </div>
 
         </div>
-
 
     </div>
 

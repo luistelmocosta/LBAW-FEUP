@@ -9,7 +9,7 @@
                     <div class="user-header">
                         <div class="user-header-inner clearfix">
                             <div class="user-thumb">
-                                <a href="../user/Digimasterbr"><img src="../?qa=image&amp;qa_blobid=14920158235955498907&amp;qa_size=150"></a>
+                                <a href="../user/Digimasterbr"><img src="../css/img/person-flat.png"></a>
                             </div>
                             <div class="user-name-detail">
                                 <h3>Digimasterbr<small class="block m-t-mini">Registered user</small>
@@ -80,7 +80,7 @@
                                     <tbody id="avatar">
                                     <tr>
                                         <td class="qa-form-tall-data" colspan="3">
-                                            <div class="qa-form-tall-image"><a href="../user/Digimasterbr" class="qa-avatar-link"><img src="../?qa=image&amp;qa_blobid=14920158235955498907&amp;qa_size=200" width="159" height="200" class="qa-avatar-image" alt=""></a></div>
+                                            <div class="qa-form-tall-image"><a href="../user/Digimasterbr" class="qa-avatar-link"><img src="../css/img/person-flat.png" width="159" height="200" class="qa-avatar-image" alt=""></a></div>
                                         </td>
                                     </tr>
                                     </tbody>
