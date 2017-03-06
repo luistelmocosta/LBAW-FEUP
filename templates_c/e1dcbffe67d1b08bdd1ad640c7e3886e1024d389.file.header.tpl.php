@@ -1,4 +1,25 @@
-<html lang="en-US">
+<?php /* Smarty version Smarty-3.1.15, created on 2017-03-06 16:57:22
+         compiled from "/home/luiscosta/PhpstormProjects/LBAW-FEUP/common/header.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:134547721858bd86e253cb46-81816213%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'e1dcbffe67d1b08bdd1ad640c7e3886e1024d389' => 
+    array (
+      0 => '/home/luiscosta/PhpstormProjects/LBAW-FEUP/common/header.tpl',
+      1 => 1488815077,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '134547721858bd86e253cb46-81816213',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_58bd86e2545d70_85849640',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_58bd86e2545d70_85849640')) {function content_58bd86e2545d70_85849640($_smarty_tpl) {?><html lang="en-US">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>AskMe</title>
@@ -24,7 +45,6 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="../js/qa-page.js" type="text/javascript"></script>
-    <script src="../js/manageUsers.js" type="text/javascript"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery.sparkline.min.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery-ui.min.js"></script>
@@ -103,4 +123,4 @@
     </div>
 </header>
 
-</body>
+</body><?php }} ?>

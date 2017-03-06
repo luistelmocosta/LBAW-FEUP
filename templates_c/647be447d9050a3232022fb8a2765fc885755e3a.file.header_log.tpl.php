@@ -1,4 +1,25 @@
-<html lang="en-US">
+<?php /* Smarty version Smarty-3.1.15, created on 2017-03-06 17:32:49
+         compiled from "/home/luiscosta/PhpstormProjects/LBAW-FEUP/common/header_log.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:143341084258bd86e14a6608-60860768%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '647be447d9050a3232022fb8a2765fc885755e3a' => 
+    array (
+      0 => '/home/luiscosta/PhpstormProjects/LBAW-FEUP/common/header_log.tpl',
+      1 => 1488817914,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '143341084258bd86e14a6608-60860768',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_58bd86e14af571_97118560',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_58bd86e14af571_97118560')) {function content_58bd86e14af571_97118560($_smarty_tpl) {?><html lang="en-US">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>AskMe</title>
@@ -14,7 +35,11 @@
     <link rel="stylesheet" type="text/css" href="../css/styles/responsive.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/theme-green.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/dynamic.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles/manageUsers.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles/warnModal.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles/overview.css">
 
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
     <link rel="alternate" type="application/rss+xml" href="./feed/qa.rss" title="Recent questions and answers">
     <link rel="search" type="application/opensearchdescription+xml" title="AskMe" href="./opensearch.xml">
     <script> theme_url = "http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap";</script>
@@ -41,13 +66,15 @@
     <div class="qa-navbar navbar-default navbar-fixed-top " role="navigation">
         <a href="#" class="slide-mobile-menu icon-list"></a>
         <div class="site-logo">
-            <a class="navbar-brand" title="AskMe" href="../views/index.php">
+            <a class="navbar-brand" title="AskMe" href="../views/home_log.php">
                 <img class="navbar-site-logo" src="../css/img/logo.png">
             </a>
         </div>
+        <a id="nav-ask-btn" href="" class="btn btn-sm">Ask Question</a>
+        <a id="nav-ask-btn" href="" class="btn btn-sm header-ask-button fa fa-folder"></a>
         <ul class="nav navbar-nav category-nav pull-left">
             <li class="dropdown pull-left">
-                <a data-toggle="dropdown"  href="#" class="category-toggle fa fa-folder">Categories</a>
+                <a data-toggle="dropdown" href="#" class="category-toggle fa fa-folder">Categories</a>
                 <ul class="category-list-drop dropdown-menu">
                     <li class="qa-nav-cat-item">
                         <a href="./categories" class=" qa-nav-cat-link qa-nav-cat-selected">All categories</a>
@@ -91,8 +118,15 @@
             </div>
         </div>
 
+        <ul class="nav navbar-nav navbar-avatar pull-right">
+            <li class="dropdown pull-right" id="menuLogin">
+                <a id="profile-link" data-toggle="dropdown" href="#" class="avatar">
+                    <img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=30">						</a>
+                <ul class="user-nav dropdown-menu">
 
-        <a class="btn login-register fa fa-sign-in" href="../views/sign.php" data-toggle="modal" data-target="#login-modal" title="Login or Register"></a>
+                    <li class="user-nav-profile"><a class="icon-vcard" href="./user/lbaw1641" title="Profile">Profile</a></li><li class="user-nav-updates"><a class="icon-signal" href="./updates" title="My Updates">My Updates</a></li><li class="user-nav-account"><a class="icon-cog" href="./account" title="Account">Account</a></li><li class="user-nav-favorites"><a class="icon-heart" href="./favorites" title="Favorites">Favorites</a></li><li class="user-nav-wall"><a class="icon-edit" href="./user/lbaw1641/wall" title="Wall">Wall</a></li><li class="user-nav-recent_activity"><a class="icon-time" href="./user/lbaw1641/activity" title="Recent Activity">Recent Activity</a></li><li class="user-nav-all_questions"><a class="icon-question" href="./user/lbaw1641/questions" title="All questions">All questions</a></li><li class="user-nav-all_answers"><a class="icon-answer" href="./user/lbaw1641/answers" title="All answers">All answers</a></li><li><a class="icon-switch" href="http://demo.qa-themes.com/cleanstrap/logout"> Logout </a></li>						</ul>
+            </li>
+        </ul>
 
         <form method="get" action="" class="navbar-form navbar-right form-search" role="search">
 
@@ -103,4 +137,4 @@
     </div>
 </header>
 
-</body>
+</body><?php }} ?>

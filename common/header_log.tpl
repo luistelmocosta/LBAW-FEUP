@@ -14,6 +14,9 @@
     <link rel="stylesheet" type="text/css" href="../css/styles/responsive.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/theme-green.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/dynamic.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles/manageUsers.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles/warnModal.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles/overview.css">
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
     <link rel="alternate" type="application/rss+xml" href="./feed/qa.rss" title="Recent questions and answers">
@@ -25,6 +28,7 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="../js/qa-page.js" type="text/javascript"></script>
+    <script src="../js/manageUsers.js" type="text/javascript"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery.sparkline.min.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery-ui.min.js"></script>
