@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../css/styles/responsive.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/theme-green.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/dynamic.css">
-    
+
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
     <link rel="alternate" type="application/rss+xml" href="./feed/qa.rss" title="Recent questions and answers">
     <link rel="search" type="application/opensearchdescription+xml" title="AskMe" href="./opensearch.xml">
