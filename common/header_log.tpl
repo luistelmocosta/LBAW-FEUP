@@ -6,22 +6,15 @@
     <link rel="stylesheet" type="text/css" href="../qa-styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lte IE 9]>
-    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/ie.css">
-    <script src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/html5shiv.js"></script>
-    <script src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/respond.min.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/fonts/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/font.css">
-    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/main.css">
-    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/wide.css">
-    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/responsive.css">
-    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/theme-green.css">
-    <link rel="stylesheet" type="text/css" href="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/css/dynamic.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles/wide.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles/theme-green.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles/dynamic.css">
+    
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
     <link rel="alternate" type="application/rss+xml" href="./feed/qa.rss" title="Recent questions and answers">
     <link rel="search" type="application/opensearchdescription+xml" title="AskMe" href="./opensearch.xml">
