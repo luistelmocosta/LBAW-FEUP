@@ -9,3 +9,5 @@
         <p class="developer">LBAW@FEUP</p>
     </div>
 </footer>
+</div>
+</div>

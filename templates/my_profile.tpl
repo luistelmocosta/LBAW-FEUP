@@ -1,5 +1,3 @@
-{include file='../common/header_log.tpl'}
-
 <div id="ajax-item">
     <div id="site-body" class="container">
         <div class="clearfix qa-main">
@@ -209,6 +207,3 @@
 
             </div>
         </div>
-        {include file='../common/footer.tpl'}
-    </div>
-</div>

@@ -75,7 +75,7 @@
         <div class="qa-nav-main">
             <ul class="qa-nav-main-list" style="padding-top: 6px">
                 <li class="qa-nav-main-item qa-nav-main-questions">
-                    <a href="./questions" class="fa fa-question qa-nav-main-link" >Questions</a>
+                    <a href="./recent_questions.php" class="fa fa-question qa-nav-main-link" >Questions</a>
                 </li>
                 <li class="qa-nav-main-item qa-nav-main-unanswered">
                     <a href="./unanswered" class="fa fa-frown-o" >Unanswered</a>

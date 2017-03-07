@@ -1,5 +1,3 @@
-{include file='../common/header_log.tpl'}
-
 <div id="ajax-item">
     <div id="site-body" class="container">
         <div class="clearfix qa-main">
@@ -8,11 +6,11 @@
                     Ask a question
                 </h1>
                 <div class="qa-part-form">
-                    <form name="ask" method="post" action="./ask">
+                    <form name="ask" method="post" action="">
                         <table class="qa-form-tall-table">
                             <tbody><tr>
                                 <td class="qa-form-tall-label">
-                                    The question in one sentence:
+                                    Title:
                                 </td>
                             </tr>
                             <tr>
@@ -41,7 +39,7 @@
                             </tr>
                             <tr>
                                 <td class="qa-form-tall-label">
-                                    More information for the question:
+                                    Description:
                                 </td>
                             </tr>
                             <tr>
@@ -103,8 +101,3 @@
                 </div>
             </div>
         </div>
-
-        {include file='../common/footer.tpl'}
-
-    </div>
-</div>

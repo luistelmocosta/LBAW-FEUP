@@ -1,5 +1,3 @@
-{include file="../common/header.tpl"}
-
 <div id="ajax-item">
     <div id="site-body" class="container">
         <div class="clearfix qa-main">
@@ -333,59 +331,6 @@
                 </ul>
             </div>
 
-            <div class="modal fade in" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: block;">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        </div>
-                        <div class="modal-body">
-                            <h3>Login or Register</h3>
-                            <p class="login-desc">Get access to your account and question</p>
-                            <div class="social-logins">
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <form id="loginform" role="form" action="./login?to=unanswered" method="post">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="icon-user"></i></span>
-                                            <input type="text" class="form-control" id="qa-userid" name="emailhandle" placeholder="Email or Username">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="icon-key"></i></span>
-                                            <input type="password" class="form-control" id="qa-password" name="password" placeholder="Password">
-                                        </div>
-
-                                        <label class="inline">
-                                            <input type="checkbox" name="remember" id="qa-rememberme" value="1"> Remember									</label>
-                                        <input type="hidden" name="code" value="0-1488485843-3fe5091655b0c814414ca66e83b9947303220b23">
-                                        <input type="submit" value="Login" id="qa-login" name="dologin" class="btn btn-primary btn-large btn-block">
-                                    </form>
-                                </div>
-                                <div class="col-sm-6">
-                                    <form id="loginform" role="form" action="./register?to=unanswered" method="post">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="icon-user"></i></span>
-                                            <input type="text" class="form-control" id="qa-userid" name="handle" placeholder="Username">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="icon-key"></i></span>
-                                            <input type="password" class="form-control" id="qa-password" name="password" placeholder="Password">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="icon-envelope"></i></span>
-                                            <input type="text" id="email" class="form-control" name="email" placeholder="Email">
-                                        </div>
-
-                                        <input type="hidden" name="code" value="0-1488485843-26157137960db847df866873aaa34041bbfcdee0">
-                                        <input type="submit" value="Register" id="qa-register" name="doregister" class="btn btn-primary btn-block">
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="col-sm-4 side-c">
                 <div class="qa-sidepanel">
@@ -427,7 +372,3 @@
 
             </div>
         </div>
-        {include file="../common/footer.tpl"}
-        
-    </div>
-</div>

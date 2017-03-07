@@ -1,4 +1,4 @@
-{include file='../common/header_log.tpl'}
+
 
 <div id="ajax-item">
     <div id="site-body" class="container">
@@ -357,6 +357,3 @@
                 </div>
             </div>
         </div>
-        {include file='../common/footer.tpl'}
-    </div>
-</div>
