@@ -65,7 +65,7 @@
                         <a href="./widgets" class=" qa-nav-cat-link" title="CleanStrap widgets and drag &amp; drop builder">Widgets<span class="qa-nav-cat-note">3</span></a>
                     </li>
                     <li class="qa-nav-cat-item">
-                        <a href="./Question2Answer" class=" qa-nav-cat-link" title="Questions about Question2Answer">Q2A platform<span class="qa-nav-cat-note">3</span></a>
+                        <a href="../views/recent_questions.php" class=" qa-nav-cat-link" title="">Q2A platform<span class="qa-nav-cat-note">3</span></a>
                     </li>
                 </ul>
             </li>
@@ -81,10 +81,10 @@
         <div class="qa-nav-main">
             <ul class="qa-nav-main-list" style="padding-top: 6px">
                 <li class="qa-nav-main-item qa-nav-main-questions">
-                    <a href="./questions" class="fa fa-question qa-nav-main-link" >Questions</a>
+                    <a href="../views/recent_questions.php" class="fa fa-question qa-nav-main-link" >Questions</a>
                 </li>
                 <li class="qa-nav-main-item qa-nav-main-unanswered">
-                    <a href="./unanswered" class="fa fa-frown-o" >Unanswered</a>
+                    <a href="../views/unanswered_questions.php" class="fa fa-frown-o" >Unanswered</a>
                 </li>
                 <li class="qa-nav-main-item qa-nav-main-tag">
                     <a href="./tags" class="fa fa-tags qa-nav-main-link" >Tags</a>

@@ -25,7 +25,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="../js/qa-page.js" type="text/javascript"></script>
     <script src="../js/manageUsers.js" type="text/javascript"></script>
-    <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery.sparkline.min.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/theme.js"></script>
@@ -75,13 +74,13 @@
         <div class="qa-nav-main">
             <ul class="qa-nav-main-list" style="padding-top: 6px">
                 <li class="qa-nav-main-item qa-nav-main-questions">
-                    <a href="./recent_questions.php" class="fa fa-question qa-nav-main-link" >Questions</a>
+                    <a href="../views/recent_questions.php" class="fa fa-question qa-nav-main-link" >Questions</a>
                 </li>
                 <li class="qa-nav-main-item qa-nav-main-unanswered">
-                    <a href="./unanswered" class="fa fa-frown-o" >Unanswered</a>
+                    <a href="../views/unanswered_questions.php" class="fa fa-frown-o" >Unanswered</a>
                 </li>
                 <li class="qa-nav-main-item qa-nav-main-tag">
-                    <a href="./tags" class="fa fa-tags qa-nav-main-link" >Tags</a>
+                    <a href="../views/categorias.php"" class="fa fa-tags qa-nav-main-link" >Tags</a>
                 </li>
                 <li class="qa-nav-main-item qa-nav-main-user">
                     <a href="./users" class="fa fa-users qa-nav-main-link">Users</a>

@@ -63,8 +63,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="post-button clearfix">
-                                                            <button name="q_doflag" onclick="qa_show_waiting_after(this, false);" class="btn fa fa-flag-o" title="Flag this question as spam or inappropriate" type="submit">flag</button>
-                                                            <button name="q_doanswer" id="q_doanswer" onclick="return qa_toggle_element('anew')" class="btn fa fa-comment-o" title="Answer this question" type="submit">answer</button>
+                                                            <button name="q_doedit" class="btn fa-edit" title="Edit this question" type="submit">edit</button>
+                                                            <button name="q_doclose" class="fa fa-close" title="Close this question to any new answers" type="submit">close</button>
+                                                            <button name="q_dohide" onclick="qa_show_waiting_after(this, false);" class="btn fa-eye" title="Hide this question" type="submit">hide</button>
+                                                            <button name="q_doanswer" id="q_doanswer" onclick="return qa_toggle_element('anew')" class="btn fa-question" title="Answer this question" type="submit">answer</button>
                                                         </div>
                                                     </div>
 

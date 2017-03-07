@@ -2100,8 +2100,23 @@ input.qa-form-wide-number{
     display: block;
     padding: 8px 10px;
 }
+.qa-tag-link {
 
-.qa-template-tags .qa-part-ranking .list-group-item span {
+    background: #e45840;
+    border-radius: 2px;
+    color: #FFFFFF;
+    float: right;
+    font-size: 11px;
+    line-height: 15px;
+    margin-right: 10px;
+    margin-top: 11px;
+    padding: 1px 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9;
+}
+.qa-top-tags .qa-part-ranking .list-group-item span {
     border-radius: 2px;
     color: #FFFFFF;
     float: right;

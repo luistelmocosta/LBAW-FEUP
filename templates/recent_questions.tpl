@@ -6,27 +6,6 @@
                     Recent questions
                     <a href="./feed/questions.rss" class="feed-link icon-rss" title="Recent questions"></a>
                 </h1>
-                <div class="qa-nav-sub">
-                    <ul class="qa-nav-sub-list">
-                        <li class="qa-nav-sub-item qa-nav-sub-recent">
-                            <a href="./questions" class=" qa-nav-sub-link qa-nav-sub-selected">Recent</a>
-                        </li>
-                        <li class="qa-nav-sub-item qa-nav-sub-hot">
-                            <a href="./questions?sort=hot" class=" qa-nav-sub-link">Hot!</a>
-                        </li>
-                        <li class="qa-nav-sub-item qa-nav-sub-votes">
-                            <a href="./questions?sort=votes" class=" qa-nav-sub-link">Most votes</a>
-                        </li>
-                        <li class="qa-nav-sub-item qa-nav-sub-answers">
-                            <a href="./questions?sort=answers" class=" qa-nav-sub-link">Most answers</a>
-                        </li>
-                        <li class="qa-nav-sub-item qa-nav-sub-views">
-                            <a href="./questions?sort=views" class=" qa-nav-sub-link">Most views</a>
-                        </li>
-                    </ul>
-                    <div class="qa-nav-sub-clear">
-                    </div>
-                </div>
                 <div class="qa-part-q-list">
                     <form method="post" action="./questions">
                         <div class="qa-q-list clean">
