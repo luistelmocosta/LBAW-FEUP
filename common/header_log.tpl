@@ -46,7 +46,7 @@
         <a href="#" class="slide-mobile-menu icon-list"></a>
         <div class="site-logo">
             <a class="navbar-brand" title="AskMe" href="../views/home_log.php">
-                <img class="navbar-site-logo" src="../css/img/logo3.png">
+                <img class="navbar-site-logo" src="../css/img/logo.png">
             </a>
         </div>
         <a id="nav-ask-btn" href="../views/create_question.php" class="btn btn-sm">Ask Question</a>
@@ -102,11 +102,10 @@
                 <a id="profile-link" data-toggle="dropdown" href="#" class="avatar">
                     <img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=30">						</a>
                 <ul class="user-nav dropdown-menu">
-
-                    <li class="user-nav-profile"><a class="fa fa-id-card" href="./user/lbaw1641" title="Profile">Profile</a></li>
-                    <li class="user-nav-account"><a class="fa fa-cog" href="" title="Account">Account</a></li>
-                    <li class="user-nav-favorites"><a class="fa fa-user-md" href="." title="Admin Panel">Admin CP</a></li>
-                    <li><a class="fa fa-power-off" href="http://demo.qa-themes.com/cleanstrap/logout"> Logout </a></li>
+                    <li class="user-nav-profile"><a class="fa fa-id-card" href="../views/my_profile.php" title="Profile">Profile</a></li>
+                    <li class="user-nav-account"><a class="fa fa-cog" href="../views/account.php" title="Account">Account</a></li>
+                    <li class="user-nav-favorites"><a class="fa fa-user-md" href="../views/admin.php" title="Admin Panel">Admin CP</a></li>
+                    <li><a class="fa fa-power-off" href="../views/index.php"> Logout </a></li>
                 </ul>
             </li>
         </ul>
