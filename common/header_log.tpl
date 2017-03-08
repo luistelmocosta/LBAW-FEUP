@@ -46,7 +46,7 @@
         <a href="#" class="slide-mobile-menu icon-list"></a>
         <div class="site-logo">
             <a class="navbar-brand" title="AskMe" href="../views/home_log.php">
-                <img class="navbar-site-logo" src="../css/img/logo.png">
+                <img class="navbar-site-logo" src="../css/img/logo3.png">
             </a>
         </div>
         <a id="nav-ask-btn" href="../views/create_question.php" class="btn btn-sm">Ask Question</a>

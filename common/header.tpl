@@ -44,7 +44,7 @@
         <a href="#" class="slide-mobile-menu icon-list"></a>
         <div class="site-logo">
             <a class="navbar-brand" title="AskMe" href="../views/index.php">
-                <img class="navbar-site-logo" src="../css/img/logo.png">
+                <img class="navbar-site-logo" src="../css/img/logo3.png">
             </a>
         </div>
         <ul class="nav navbar-nav category-nav pull-left">

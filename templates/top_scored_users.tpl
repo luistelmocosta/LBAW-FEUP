@@ -37,7 +37,8 @@
 
                                     <div class="f1_card">
                                         <div class="front face">
-                                            <img class="avatar" height="150" src="./?qa=image&amp;qa_blobid=16432779645274934519&amp;qa_size=150">
+                                            <img class="avatar" height="150"
+                                                 src="../css/img/avatar3.png">
                                         </div>
                                         <div class="back face center">
                                             <span class="activity q"><i>3</i>Questions </span>
@@ -60,7 +61,8 @@
 
                                     <div class="f1_card">
                                         <div class="front face">
-                                            <img class="avatar" height="150" src="./?qa=image&amp;qa_blobid=3739632510436113197&amp;qa_size=150">
+                                            <img class="avatar" height="150"
+                                                 src="../css/img/avatar4.png">
                                         </div>
                                         <div class="back face center">
                                             <span class="activity q"><i>3</i>Questions </span>
@@ -106,7 +108,7 @@
 
                                     <div class="f1_card">
                                         <div class="front face">
-                                            <img class="avatar" height="150" src="./?qa=image&amp;qa_blobid=12729651199567246656&amp;qa_size=150">
+                                            <img class="avatar" height="150" src="../css/img/avatar5.jpg">
                                         </div>
                                         <div class="back face center">
                                             <span class="activity q"><i>2</i>Questions </span>
@@ -129,7 +131,7 @@
 
                                     <div class="f1_card">
                                         <div class="front face">
-                                            <img class="avatar" height="150" src="./?qa=image&amp;qa_blobid=1558733682409721265&amp;qa_size=150">
+                                            <img class="avatar" height="150" src="http://www.gravatar.com/avatar/749c4890a11d9b00cbf422115e057dd3?s=150">
                                         </div>
                                         <div class="back face center">
                                             <span class="activity q"><i>1</i>Questions </span>
@@ -198,7 +200,8 @@
 
                                     <div class="f1_card">
                                         <div class="front face">
-                                            <img class="avatar" height="150" src="./?qa=image&amp;qa_blobid=8504551254871977870&amp;qa_size=150">
+                                            <img class="avatar" height="150"
+                                                 src="http://www.gravatar.com/avatar/749c4890a11d9b00cbf422115e057dd3?s=150">
                                         </div>
                                         <div class="back face center">
                                             <span class="activity q"><i>0</i>Questions </span>
@@ -221,7 +224,8 @@
 
                                     <div class="f1_card">
                                         <div class="front face">
-                                            <img class="avatar" height="150" src="./?qa=image&amp;qa_blobid=15431216663650197802&amp;qa_size=150">
+                                            <img class="avatar" height="150"
+                                                 src="http://www.gravatar.com/avatar/749c4890a11d9b00cbf422115e057dd3?s=150">
                                         </div>
                                         <div class="back face center">
                                             <span class="activity q"><i>2</i>Questions </span>
@@ -359,7 +363,8 @@
 
                                     <div class="f1_card">
                                         <div class="front face">
-                                            <img class="avatar" height="150" src="./?qa=image&amp;qa_blobid=14707567393723620727&amp;qa_size=150">
+                                            <img class="avatar" height="150"
+                                                 src="http://www.gravatar.com/avatar/749c4890a11d9b00cbf422115e057dd3?s=150">
                                         </div>
                                         <div class="back face center">
                                             <span class="activity q"><i>1</i>Questions </span>
@@ -382,7 +387,8 @@
 
                                     <div class="f1_card">
                                         <div class="front face">
-                                            <img class="avatar" height="150" src="./?qa=image&amp;qa_blobid=15052989196028273390&amp;qa_size=150">
+                                            <img class="avatar" height="150"
+                                                 src="http://www.gravatar.com/avatar/749c4890a11d9b00cbf422115e057dd3?s=150">
                                         </div>
                                         <div class="back face center">
                                             <span class="activity q"><i>1</i>Questions </span>
@@ -405,7 +411,7 @@
 
                                     <div class="f1_card">
                                         <div class="front face">
-                                            <img class="avatar" height="150" src="./?qa=image&amp;qa_blobid=5563269269393537808&amp;qa_size=150">
+                                            <img class="avatar" height="150" src="http://www.gravatar.com/avatar/749c4890a11d9b00cbf422115e057dd3?s=150">
                                         </div>
                                         <div class="back face center">
                                             <span class="activity q"><i>1</i>Questions </span>
@@ -428,7 +434,8 @@
 
                                     <div class="f1_card">
                                         <div class="front face">
-                                            <img class="avatar" height="150" src="./?qa=image&amp;qa_blobid=16523062097587794875&amp;qa_size=150">
+                                            <img class="avatar" height="150"
+                                                 src="http://www.gravatar.com/avatar/749c4890a11d9b00cbf422115e057dd3?s=150">
                                         </div>
                                         <div class="back face center">
                                             <span class="activity q"><i>1</i>Questions </span>
