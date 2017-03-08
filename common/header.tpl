@@ -91,7 +91,8 @@
         </div>
 
 
-        <a class="btn login-register fa fa-sign-in" href="../views/sign.php" data-toggle="modal" data-target="#login-modal" title="Login or Register"></a>
+        <a class="btn login-register fa fa-sign-in" data-toggle="modal" data-target="#login-modal"
+           title="Login or Register"></a>
 
         <form method="get" action="" class="navbar-form navbar-right form-search" role="search">
 
@@ -99,7 +100,14 @@
             <input type="text" name="q" value="" class="form-control search-query" placeholder="Search" autocomplete="off">
 
         </form>
-    </div>
-</header>
 
-</body>
+
+
+
+
+
+    </div>
+
+
+
+</header>
