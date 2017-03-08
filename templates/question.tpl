@@ -6,78 +6,79 @@
                     <div class="row">
                         <div class="col-md-8 question-c-l">
                             <div class="qa-part-q-view">
-                                <div class="qa-q-view  hentry question" id="q3550">
+                                <div class="qa-q-view  hentry question" id="q259">
                                     <div class="question-head">
-                                        <div class="big-s-avatar avatar"></div>
+                                        <div class="big-s-avatar avatar"><a href="../user/cusatxpress"><img src="http://www.gravatar.com/avatar/86017f9989f66cb2e36be0714634acaa?s=70"></a></div>
                                         <div class="no-overflow">
                                             <h2 class="question-title">
-                                                <div class="enabled voting clearfix voting-vertical qa-voting-net" id="voting_3550">
-                                                    <a title="" data-id="vote_3550_1_q3550" href="#" data-code="0-1488446559-7ad36a1daeac49e8e7a62d0ac04771b6e617866e" class=" fa fa-thumbs-o-up enabled vote-up enabled" data-original-title="Click to vote up"></a>
-                                                    <span class="count">0</span>
-                                                    <a title="" data-id="vote_3550_-1_q3550" href="#" data-code="0-1488446559-7ad36a1daeac49e8e7a62d0ac04771b6e617866e" class=" fa fa-thumbs-o-down enabled vote-down enabled" data-original-title="Click to vote down"></a>
+                                                <div class="fav-parent">
+                                                    <a href="#" title="" data-id="favorite_Q_259_1" data-code="1-1488986566-20e547b238d2ddefbcbff2f7583215119aa21ee5" class="fav-btn icon-heart" data-original-title="Add this question to my favorites"><span></span></a>
                                                 </div>
-                                                Davetsiz Hayat Siteme Soru Cevap Kurulumu
+                                                <div class="enabled voting clearfix voting-vertical qa-voting-net" id="voting_259">
+                                                    <a title="" data-id="vote_259_1_q259" href="#" data-code="1-1488986566-e086cb19399263f42ba08aea1b69e29e8023464e" class=" icon-thumbs-up2 enabled vote-up enabled" data-original-title="Click to vote up"></a>
+                                                    <span class="count">0</span>
+                                                    <a title="" data-id="vote_259_-1_q259" href="#" data-code="1-1488986566-e086cb19399263f42ba08aea1b69e29e8023464e" class=" icon-thumbs-down2 enabled vote-down enabled" data-original-title="Click to vote down"></a>
+                                                </div>
+                                                Answer Votes are out of propotions
                                             </h2>
                                             <div class="question-meta">
                                                 <span class="post-status open">Open</span>
 
-                                                <span class="q-view-a-count">0 Answers</span>
-                                                <span class="fa fa-eye q-view-v-count">16 Views</span>
-                                                <a class="cat-in fa fa-folder-o" href="">AskMe platform</a>
+                                                <span class="q-view-a-count">1 Answers</span>
+                                                <span class="icon-eye-open q-view-v-count">131 Views</span>
+                                                <a class="cat-in fa fa-folder" href="">AskMe</a>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="qa-q-view-main">
-                                        <form method="post" action="../3550/davetsiz-hayat-siteme-soru-cevap-kurulumu">
+                                        <form method="post" action="../259/answer-votes-are-out-of-propotions">
                                             <div class="q-cont-right">
                                                 <div class="qa-q-view-wrap">
                                                     <div class="qa-q-view-inner">
                                                         <div class="clearfix">
                                                             <div class="qa-q-view-content">
-                                                                <a name="3550"></a><div class="entry-content"><p>Merhaba&nbsp;</p>
-
-                                                                    <p>Kurulum Sırasında sorunlar yaşıyorum nasıl kurabiliriz. Açık bir döküman &nbsp;var mıdır ?Sitem <a rel="nofollow" href="http://www.davetsizhayat.com/">&nbsp;bu&nbsp;</a></p></div>
+                                                                <a name="259"></a><div class="entry-content">My vote buttons are a little out of propotion. it is creatinga &nbsp;huge visual difference, can u help ?</div>
                                                             </div>
                                                         </div>
                                                         <div class="qa-post-meta">
 																				<span class="qa-q-item-meta">
-																					<a href="../3550/davetsiz-hayat-siteme-soru-cevap-kurulumu" class="qa-q-item-what">asked</a>
+																					<a href="../259/answer-votes-are-out-of-propotions" class="qa-q-item-what">asked</a>
 																					<span class="qa-q-item-when">
-																						<span class="qa-q-item-when-data"><span class="published"><span class="value-title" title="2017-02-22T12:36:39+0000"></span>Feb 22</span></span>
+																						<span class="qa-q-item-when-data"><span class="published"><span class="value-title" title="2016-06-06T11:13:09+0000"></span>Jun 6, 2016</span></span>
 																					</span>
 																					<span class="qa-q-item-where">
-																						<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="../Question2Answer" class="qa-category-link">Q2A platform</a></span>
+																						<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="../cleanstrap" class="qa-category-link">CleanStrap</a></span>
 																					</span>
 																					<span class="qa-q-item-who">
 																						<span class="qa-q-item-who-pad">by </span>
-																						<span class="qa-q-item-who-data">Davetsiz Hayat</span>
+																						<span class="qa-q-item-who-data"><span class="vcard author"><a href="../user/cusatxpress" class="qa-user-link url nickname">cusatxpress</a></span></span>
+																						<span class="qa-q-item-who-points">
+																							<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">120</span><span class="qa-q-item-who-points-pad"> points)</span>
+																						</span>
 																					</span>
 																				</span>
                                                             <div class="question-tags">
                                                                 <h3 class="tags-label">Tags</h3>
                                                                 <ul class="tags-tag-list">
-                                                                    <li class="tags-tag-item"><a href="../tag/instsall" rel="tag" class="qa-tag-link">install</a></li>
-                                                                    <li class="tags-tag-item"><a href="../tag/problems" rel="tag" class="qa-tag-link">problems</a></li>
+                                                                    <li class="tags-tag-item"><a href="../tag/votes" rel="tag" class="qa-tag-link">votes</a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                         <div class="post-button clearfix">
-                                                            <button name="q_doedit" class="btn fa-edit" title="Edit this question" type="submit">edit</button>
-                                                            <button name="q_doclose" class="fa fa-close" title="Close this question to any new answers" type="submit">close</button>
-                                                            <button name="q_dohide" onclick="qa_show_waiting_after(this, false);" class="btn fa-eye" title="Hide this question" type="submit">hide</button>
-                                                            <button name="q_doanswer" id="q_doanswer" onclick="return qa_toggle_element('anew')" class="btn fa-question" title="Answer this question" type="submit">answer</button>
+                                                            <button name="q_doflag" onclick="qa_show_waiting_after(this, false);" class="btn icon-flag" title="Flag this question as spam or inappropriate" type="submit">flag</button>
+                                                            <button name="q_doanswer" id="q_doanswer" onclick="return qa_toggle_element('anew')" class="btn icon-answer" title="Answer this question" type="submit">answer</button>
                                                         </div>
                                                     </div>
 
-                                                    <div class="qa-q-view-c-list" style="display:none;" id="c3550_list">
+                                                    <div class="qa-q-view-c-list" style="display:none;" id="c259_list">
                                                         <div class="comment-count icon-comments">0<span>Comments</span></div>
                                                         <div class="comment-items">
                                                         </div>
                                                     </div> <!-- END qa-c-list -->
 
                                                 </div>
-                                                <input type="hidden" name="code" value="0-1488446559-5462bf71ca7f2e04ef8704bf34e8e513e51c9a8f">
+                                                <input type="hidden" name="code" value="1-1488986566-e500c50394cd8787e093378af896abae86692d30">
                                                 <input type="hidden" name="qa_click" value="">
 
                                             </div></form>
@@ -87,57 +88,37 @@
 
                             </div>
                             <div class="qa-part-a-form">
-                                <div class="qa-a-form" id="anew">
+                                <div class="qa-a-form" id="anew" style="display:none;">
                                     <div class="answer-form">
-                                        <div class="big-s-avatar avatar"></div>
+                                        <div class="big-s-avatar avatar"><a href="../user/lbaw1641"><img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=40"></a></div>
                                         <div class="q-cont-right">
                                             <h3 class="your-answer">Your answer</h3>
                                             <div class="answer-f-wrap">
-                                                <form method="post" action="../3550/davetsiz-hayat-siteme-soru-cevap-kurulumu" name="a_form">
+                                                <form method="post" action="../259/answer-votes-are-out-of-propotions" name="a_form">
                                                     <table class="qa-form-tall-table">
                                                         <tbody><tr>
                                                             <td class="qa-form-tall-data">
-                                                                <textarea name="editor1"></textarea>
-                                                                <script>
-                                                                    CKEDITOR.replace( 'editor1' );
-                                                                </script>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="qa-form-tall-label">
-                                                                Your name to display (optional):
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="qa-form-tall-data">
-                                                                <input name="a_name" type="text" value="" class="qa-form-tall-text">
+                                                                <textarea name="a_content" rows="12" cols="40" class="qa-form-tall-text"></textarea>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td class="qa-form-tall-label">
                                                                 <label>
-                                                                    <input name="a_notify" id="a_notify" onclick="if (document.getElementById('a_notify').checked) document.getElementById('a_email').focus();" type="checkbox" value="1" checked="" class="qa-form-tall-checkbox">
-                                                                    <span id="a_email_shown">Email me at this address if my answer is selected or commented on:</span><span id="a_email_hidden" style="display:none;">Email me if my answer is selected or commented on</span>
+                                                                    <input name="a_notify" type="checkbox" value="1" checked="" class="qa-form-tall-checkbox">
+                                                                    Email me (luistelmocosta@gmail.com) if my answer is selected or commented on
                                                                 </label>
                                                             </td>
                                                         </tr>
-                                                        </tbody><tbody id="a_email_display">
                                                         <tr>
-                                                            <td class="qa-form-tall-data">
-                                                                <input name="a_email" id="a_email" type="text" value="" class="qa-form-tall-text">
-                                                                <div class="qa-form-tall-note">Privacy: Your email address will only be used for sending these notifications.</div>
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                        <tbody><tr>
                                                             <td colspan="1" class="qa-form-tall-buttons">
-                                                                <input onclick="qa_ckeditor4_a_content.updateElement(); return qa_submit_answer(3550, this);" value="Add answer" title="" type="submit" class="qa-form-tall-button qa-form-tall-button-answer">
+                                                                <input onclick="qa_ckeditor4_a_content.updateElement(); return qa_submit_answer(259, this);" value="Add answer" title="" type="submit" class="qa-form-tall-button qa-form-tall-button-answer">
+                                                                <input name="docancel" onclick="return qa_toggle_element();" value="Cancel" title="" type="submit" class="qa-form-tall-button qa-form-tall-button-cancel">
                                                             </td>
                                                         </tr>
                                                         </tbody></table>
                                                     <input type="hidden" name="a_editor" value="CKEditor4">
                                                     <input type="hidden" name="a_doadd" value="1">
-                                                    <input type="hidden" name="code" value="0-1488446559-8db12612497e3d88291e8d985447bec36e0bd6e2">
+                                                    <input type="hidden" name="code" value="1-1488986566-a7780b70f4acd291c89029ef480c6a4df5e0bb50">
                                                 </form>
                                             </div>
                                         </div>
@@ -146,7 +127,79 @@
 
                             </div>
                             <div class="qa-part-a-list">
+                                <h3 class="answers-label icon-answer">1 Answer</h3>
                                 <div class="qa-a-list" id="a_list">
+
+                                    <div class="qa-a-list-item  hentry answer" id="a3517">
+                                        <div class="qa-a-item-main">
+                                            <div class="asker-detail clearfix">
+                                                <div class="asker-avatar avatar"><a href="../user/admin"><img src="../?qa=image&amp;qa_blobid=12969573649422191767&amp;qa_size=40"></a></div>
+
+                                                <div class="user-info no-overflow">
+                                                    <h3 class="asker-name">admin</h3>
+                                                    <p class="asker-point"> 520  points <span class="title">Super Administrator</span></p>
+                                                </div>
+                                                <div class="enabled voting clearfix voting-vertical qa-voting-net" id="voting_3517">
+                                                    <a title="" data-id="vote_3517_1_a3517" href="#" data-code="1-1488986566-e086cb19399263f42ba08aea1b69e29e8023464e" class=" fa fa-thumbs-o-up enabled vote-up enabled" data-original-title="Click to vote up"></a>
+                                                    <span class="count">0</span>
+                                                    <a title="" data-id="vote_3517_-1_a3517" href="#" data-code="1-1488986566-e086cb19399263f42ba08aea1b69e29e8023464e" class=" fa fa-thumbs-o-down enabled vote-down enabled" data-original-title="Click to vote down"></a>
+                                                </div>
+                                                <form method="post" action="../259/answer-votes-are-out-of-propotions">
+                                                    <div class="qa-a-selection">
+                                                    </div>
+                                                    <input type="hidden" name="code" value="1-1488986566-b213d2f936c26fc089d9235b89c121679af611a2">
+                                                    <input type="hidden" name="qa_click" value="">
+                                                </form>
+                                            </div>
+                                            <div class="a-item-inner-wrap">
+                                                <form method="post" action="../259/answer-votes-are-out-of-propotions">
+                                                    <div class="a-item-wrap">
+                                                        <div class="qa-a-item-content">
+                                                            <a name="3517"></a><div class="entry-content">Where did you set up this theme, can you send the URL?</div>
+                                                        </div>
+                                                        <span class="qa-a-item-meta">
+																				<a href="../259/answer-votes-are-out-of-propotions?show=3517#a3517" class="qa-a-item-what">answered</a>
+																				<span class="qa-a-item-when">
+																					<span class="qa-a-item-when-data"><span class="published"><span class="value-title" title="2016-12-28T11:26:54+0000"></span>Dec 28, 2016</span></span>
+																				</span>
+																				<span class="qa-a-item-who">
+																					<span class="qa-a-item-who-pad">by </span>
+																					<span class="qa-a-item-who-data"><span class="vcard author"><a href="../user/admin" class="qa-user-link url nickname">admin</a></span></span>
+																					<span class="qa-a-item-who-points">
+																						<span class="qa-a-item-who-points-pad">(</span><span class="qa-a-item-who-points-data">520</span><span class="qa-a-item-who-points-pad"> points)</span>
+																					</span>
+																				</span>
+																			</span>
+                                                        <div class="post-button clearfix">
+
+                                                            <button name="a3517_docomment" onclick="return qa_toggle_element('c3517')" class="fa fa-comment-o" title="Add a comment on this answer" type="submit">comment</button>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="qa-a-item-c-list" style="display:none;" id="c3517_list">
+                                                        <div class="comment-count icon-comments">0<span>Comments</span></div>
+                                                        <div class="comment-items">
+                                                        </div>
+                                                    </div> <!-- END qa-c-list -->
+
+                                                    <input type="hidden" name="code" value="1-1488986566-b213d2f936c26fc089d9235b89c121679af611a2">
+                                                    <input type="hidden" name="qa_click" value="">
+                                                </form>
+                                                <div class="qa-c-form" id="c3517" style="overflow: hidden;">
+                                                    <div class="asker-avatar no-radius">
+                                                        <a href="../user/lbaw1641"><img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=30"></a>
+                                                    </div>
+                                                    <div class="comment-f-wrap">
+                                                        <h3>
+                                                            Please <a href="../confirm">confirm your email address</a> to add a comment.
+                                                        </h3>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div> <!-- END qa-a-item-main -->
+                                    </div> <!-- END qa-a-list-item -->
 
                                 </div> <!-- END qa-a-list -->
 
@@ -154,7 +207,8 @@
                         </div>
                         <div class="col-md-4 question-sidebar">
                             <div id="question-right-position">
-                                <div class="widget cs_related_questions">													<h3 class="widget-title">Related questions</h3>
+                                <div class="widget cs_related_questions">
+                                    <h3 class="widget-title">Related questions</h3>
                                     <div class="ra-rq-widget">
                                         <ul>
                                             <li><div class="avatar" data-id="4" data-handle="Smith"><a href="../user/Smith" class="qa-avatar-link"><img src="../css/img/users.jpg" width="30" height="30" class="qa-avatar-image" alt=""></a></div>

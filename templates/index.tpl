@@ -54,7 +54,8 @@
                                                     <div class="q-item-head">
                                                         <div class="count-time"><span class="time">Feb 22</span>
                                                             <span class="ans-count total-0">0</span></div>
-                                                        <div class="avatar" data-id="2803" data-handle="Dr-Hack"><a href="./user/Dr-Hack" class="qa-avatar-link"><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
+                                                        <div class="avatar" data-id="2803" data-handle="Dr-Hack"><a href="./user/Dr-Hack" class="qa-avatar-link">
+                                                                <img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
                                                         <span class="status-c"><span class="post-status open">Open</span></span>
                                                         <div class="qa-q-item-title">
                                                             <a href="./3549/using-advertisement-option-position-questions-break-theme">Using Advertisement option add in X position in questions break the theme</a>
