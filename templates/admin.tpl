@@ -20,10 +20,10 @@
                             <div class="qa-nav-sub">
                                 <ul class="qa-nav-sub-list">
                                     <li class="qa-nav-sub-item qa-nav-sub-profile">
-                                        <a href="" class=" qa-nav-sub-link ">User lbaw1641</a>
+                                        <a href="../views/my_profile.php" class=" qa-nav-sub-link ">User lbaw1641</a>
                                     </li>
                                     <li class="qa-nav-sub-item qa-nav-sub-account">
-                                        <a href="" class=" qa-nav-sub-link">My account</a>
+                                        <a href="../views/account.php.php" class=" qa-nav-sub-link">My account</a>
                                     </li>
                                     <li class="qa-nav-sub-item qa-nav-sub-favorites">
                                         <a href="" class=" qa-nav-sub-link qa-nav-sub-selected">Admin CP</a>

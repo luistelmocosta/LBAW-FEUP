@@ -103,7 +103,11 @@
                     <img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=30">						</a>
                 <ul class="user-nav dropdown-menu">
 
-                    <li class="user-nav-profile"><a class="icon-vcard" href="./user/lbaw1641" title="Profile">Profile</a></li><li class="user-nav-updates"><a class="icon-signal" href="./updates" title="My Updates">My Updates</a></li><li class="user-nav-account"><a class="icon-cog" href="./account" title="Account">Account</a></li><li class="user-nav-favorites"><a class="icon-heart" href="./favorites" title="Favorites">Favorites</a></li><li class="user-nav-wall"><a class="icon-edit" href="./user/lbaw1641/wall" title="Wall">Wall</a></li><li class="user-nav-recent_activity"><a class="icon-time" href="./user/lbaw1641/activity" title="Recent Activity">Recent Activity</a></li><li class="user-nav-all_questions"><a class="icon-question" href="./user/lbaw1641/questions" title="All questions">All questions</a></li><li class="user-nav-all_answers"><a class="icon-answer" href="./user/lbaw1641/answers" title="All answers">All answers</a></li><li><a class="icon-switch" href="http://demo.qa-themes.com/cleanstrap/logout"> Logout </a></li>						</ul>
+                    <li class="user-nav-profile"><a class="fa fa-id-card" href="./user/lbaw1641" title="Profile">Profile</a></li>
+                    <li class="user-nav-account"><a class="fa fa-cog" href="" title="Account">Account</a></li>
+                    <li class="user-nav-favorites"><a class="fa fa-user-md" href="." title="Admin Panel">Admin CP</a></li>
+                    <li><a class="fa fa-power-off" href="http://demo.qa-themes.com/cleanstrap/logout"> Logout </a></li>
+                </ul>
             </li>
         </ul>
 

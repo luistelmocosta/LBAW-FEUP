@@ -28,21 +28,6 @@
                                     <li class="qa-nav-sub-item qa-nav-sub-account">
                                         <a href="./account" class=" qa-nav-sub-link qa-nav-sub-selected">My account</a>
                                     </li>
-                                    <li class="qa-nav-sub-item qa-nav-sub-favorites">
-                                        <a href="./favorites" class=" qa-nav-sub-link">My favorites</a>
-                                    </li>
-                                    <li class="qa-nav-sub-item qa-nav-sub-wall">
-                                        <a href="./user/lbaw1641/wall" class=" qa-nav-sub-link">Wall</a>
-                                    </li>
-                                    <li class="qa-nav-sub-item qa-nav-sub-activity">
-                                        <a href="./user/lbaw1641/activity" class=" qa-nav-sub-link">Recent activity</a>
-                                    </li>
-                                    <li class="qa-nav-sub-item qa-nav-sub-questions">
-                                        <a href="./user/lbaw1641/questions" class=" qa-nav-sub-link">All questions</a>
-                                    </li>
-                                    <li class="qa-nav-sub-item qa-nav-sub-answers">
-                                        <a href="./user/lbaw1641/answers" class=" qa-nav-sub-link">All answers</a>
-                                    </li>
                                 </ul>
                                 <div class="qa-nav-sub-clear">
                                 </div>
