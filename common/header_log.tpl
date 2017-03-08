@@ -29,14 +29,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="../js/qa-page.js" type="text/javascript"></script>
     <script src="../js/manageUsers.js" type="text/javascript"></script>
-    <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/bootstrap.js"></script>
-    <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/jquery.sparkline.min.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/theme.js"></script>
     <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+
 </head>
 
-<body id="nav-top" class="qa-template-qa qa-body-js-on">
+<body id="nav-top" class="qa-template-qa qa-body-js-on"></body>
 <script type="text/javascript">
     var b=document.getElementsByTagName('body')[0];
     b.className=b.className.replace('qa-body-js-off', 'qa-body-js-on');
@@ -56,13 +57,13 @@
                 <a data-toggle="dropdown" href="#" class="category-toggle fa fa-folder">Categories</a>
                 <ul class="category-list-drop dropdown-menu">
                     <li class="qa-nav-cat-item">
-                        <a href="./categories" class=" qa-nav-cat-link qa-nav-cat-selected">All categories</a>
+                        <a href="#" class=" qa-nav-cat-link qa-nav-cat-selected">All categories</a>
                     </li>
                     <li class="qa-nav-cat-item">
-                        <a href="./cleanstrap" class=" qa-nav-cat-link" title="CleanStrap Theme">CleanStrap<span class="qa-nav-cat-note">33</span></a>
+                        <a href="#" class=" qa-nav-cat-link" title="CleanStrap Theme">CleanStrap<span class="qa-nav-cat-note">33</span></a>
                     </li>
                     <li class="qa-nav-cat-item">
-                        <a href="./widgets" class=" qa-nav-cat-link" title="CleanStrap widgets and drag &amp; drop builder">Widgets<span class="qa-nav-cat-note">3</span></a>
+                        <a href="#" class=" qa-nav-cat-link" title="CleanStrap widgets and drag &amp; drop builder">Widgets<span class="qa-nav-cat-note">3</span></a>
                     </li>
                     <li class="qa-nav-cat-item">
                         <a href="../views/recent_questions.php" class=" qa-nav-cat-link" title="">Q2A platform<span class="qa-nav-cat-note">3</span></a>
@@ -111,12 +112,10 @@
         </ul>
 
         <form method="get" action="../views/search_results.php" class="navbar-form navbar-right form-search" role="search">
-
             <span class="fa fa-search" style="position: fixed;padding-top: 8px;padding-left: 10px;"></span>
             <input type="text" name="q" value="" class="form-control search-query" placeholder="Search" autocomplete="off">
-
         </form>
-    </div>
-</header>
 
-</body>
+    </div>
+
+</header>
