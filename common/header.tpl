@@ -25,6 +25,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="../js/qa-page.js" type="text/javascript"></script>
     <script src="../js/manageUsers.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery.sparkline.min.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/theme.js"></script>
@@ -85,7 +86,7 @@
                     <a href="../views/categorias.php"" class="fa fa-tags qa-nav-main-link" >Tags</a>
                 </li>
                 <li class="qa-nav-main-item qa-nav-main-user">
-                    <a href="./users" class="fa fa-users qa-nav-main-link">Users</a>
+                    <a href="../views/top_scored_users.php" class="fa fa-users qa-nav-main-link">Users</a>
                 </li>
             </ul>
             <div class="qa-nav-main-clear">
@@ -95,7 +96,7 @@
         <a class="btn login-register fa fa-sign-in" data-toggle="modal" data-target="#login-modal"
            title="Login or Register"></a>
 
-        <form method="get" action="" class="navbar-form navbar-right form-search" role="search">
+        <form method="get" action="../views/search_results.php" class="navbar-form navbar-right form-search" role="search">
 
             <span class="fa fa-search" style="position: fixed;padding-top: 8px;padding-left: 10px;"></span>
             <input type="text" name="q" value="" class="form-control search-query" placeholder="Search" autocomplete="off">

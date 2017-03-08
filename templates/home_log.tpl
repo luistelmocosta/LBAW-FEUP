@@ -9,7 +9,7 @@
                     <div class="col-md-12">
                         <div id="header-position">
                             <div class="widget cs_ajax_ask">												<div class="ra-ask-widget">
-                                    <form action="./ask?cat=" method="post">
+                                    <form action="../views/create_question.php" method="post">
                                         <div class="input-group">
                                             <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" name="title" class="form-control ui-autocomplete-input" id="ra-ask-search" placeholder="Your question in one sentence" autocomplete="off">
                                             <span class="input-group-btn">
@@ -352,7 +352,7 @@
                         </div>
                     </div>
                     <div class="qa-suggest-next">
-                        To see more, click for the <a href="./questions">full list of questions</a> or <a href="./tags">popular tags</a>.
+                        To see more, click for the <a href="#">full list of questions</a> or <a href="#">popular tags</a>.
                     </div>
                 </div>
             </div>

@@ -49,7 +49,7 @@
                 <img class="navbar-site-logo" src="../css/img/logo.png">
             </a>
         </div>
-        <a id="nav-ask-btn" href="" class="btn btn-sm">Ask Question</a>
+        <a id="nav-ask-btn" href="../views/create_question.php" class="btn btn-sm">Ask Question</a>
         <a id="nav-ask-btn" href="" class="btn btn-sm header-ask-button fa fa-folder"></a>
         <ul class="nav navbar-nav category-nav pull-left">
             <li class="dropdown pull-left">
@@ -87,10 +87,10 @@
                     <a href="../views/unanswered_questions.php" class="fa fa-frown-o" >Unanswered</a>
                 </li>
                 <li class="qa-nav-main-item qa-nav-main-tag">
-                    <a href="./tags" class="fa fa-tags qa-nav-main-link" >Tags</a>
+                    <a href="../views/categorias.php" class="fa fa-tags qa-nav-main-link" >Tags</a>
                 </li>
                 <li class="qa-nav-main-item qa-nav-main-user">
-                    <a href="./users" class="fa fa-users qa-nav-main-link">Users</a>
+                    <a href="../views/top_scored_users.php" class="fa fa-users qa-nav-main-link">Users</a>
                 </li>
             </ul>
             <div class="qa-nav-main-clear">
@@ -111,7 +111,7 @@
             </li>
         </ul>
 
-        <form method="get" action="" class="navbar-form navbar-right form-search" role="search">
+        <form method="get" action="../views/search_results.php" class="navbar-form navbar-right form-search" role="search">
 
             <span class="fa fa-search" style="position: fixed;padding-top: 8px;padding-left: 10px;"></span>
             <input type="text" name="q" value="" class="form-control search-query" placeholder="Search" autocomplete="off">

@@ -11,8 +11,8 @@
                                         <div class="input-group">
                                             <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" name="title" class="form-control ui-autocomplete-input" id="ra-ask-search" placeholder="Your question in one sentence" autocomplete="off">
                                             <span class="input-group-btn">
-							<button class="icon-question btn" type="submit">Ask</button>
-						  </span>
+							                <button class="icon-question btn" type="submit" data-toggle="modal" data-target="#login-modal">Ask</button>
+						                    </span>
                                         </div>
                                         <input type="hidden" value="1" name="doask1">
                                     </form>
@@ -351,7 +351,7 @@
                         </div>
                     </div>
                     <div class="qa-suggest-next">
-                        To see more, click for the <a href="./questions">full list of questions</a> or <a href="./tags">popular tags</a>.
+                        To see more, click for the <a href="#">full list of questions</a> or <a href="#">popular tags</a>.
                     </div>
                 </div>
             </div>
