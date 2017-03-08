@@ -22,7 +22,7 @@ if(!$user->islg()) // if it's not logged in we hide the user menu
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="<?php echo $set->url; ?>/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $set->url; ?>/public_html/css/bootstrap.min.css">
     <!-- join the dark side :) -->
     <!-- <link rel="stylesheet" href="<?php echo $set->url; ?>/css/darkstrap.min.css">-->
     <style>
@@ -31,8 +31,8 @@ if(!$user->islg()) // if it's not logged in we hide the user menu
             padding-bottom: 40px;
         }
     </style>
-    <link rel="stylesheet" href="<?php echo $set->url; ?>/css/bootstrap-responsive.min.css">
-    <link rel="stylesheet" href="<?php echo $set->url; ?>/css/main.css">
+    <link rel="stylesheet" href="<?php echo $set->url; ?>/public_html/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="<?php echo $set->url; ?>/public_html/css/main.css">
 
     <script src="<?php echo $set->url; ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
