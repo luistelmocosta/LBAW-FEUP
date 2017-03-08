@@ -29,9 +29,11 @@
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/theme.js"></script>
     <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+
+
 </head>
 
-<body id="nav-top" class="qa-template-qa qa-body-js-on">
+<body id="nav-top" class="qa-template-qa qa-body-js-on"> </body>
 <script type="text/javascript">
     var b=document.getElementsByTagName('body')[0];
     b.className=b.className.replace('qa-body-js-off', 'qa-body-js-on');
@@ -90,7 +92,6 @@
             </div>
         </div>
 
-
         <a class="btn login-register fa fa-sign-in" data-toggle="modal" data-target="#login-modal"
            title="Login or Register"></a>
 
@@ -101,13 +102,7 @@
 
         </form>
 
-
-
-
-
-
     </div>
-
 
 
 </header>
