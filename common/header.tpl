@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../css/styles/responsive.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/theme-green.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/dynamic.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles/landing-page.css">
 
     <link rel="alternate" type="application/rss+xml" href="./feed/qa.rss" title="Recent questions and answers">
     <link rel="search" type="application/opensearchdescription+xml" title="AskMe" href="./opensearch.xml">
@@ -33,73 +34,46 @@
 
 </head>
 
-<body id="nav-top" class="qa-template-qa qa-body-js-on"> </body>
+<body>
 <script type="text/javascript">
     var b=document.getElementsByTagName('body')[0];
     b.className=b.className.replace('qa-body-js-off', 'qa-body-js-on');
 </script>
-<header id="site-header" class="clearfix">
-    <div class="qa-navbar navbar-default navbar-fixed-top " role="navigation">
-        <a href="#" class="slide-mobile-menu icon-list"></a>
-        <div class="site-logo">
-            <a class="navbar-brand" title="AskMe" href="../views/index.php">
-                <img class="navbar-site-logo" src="../css/img/logo3.png">
-            </a>
-        </div>
-        <ul class="nav navbar-nav category-nav pull-left">
-            <li class="dropdown pull-left">
-                <a data-toggle="dropdown"  href="#" class="category-toggle fa fa-folder">Categories</a>
-                <ul class="category-list-drop dropdown-menu">
-                    <li class="qa-nav-cat-item">
-                        <a href="#" class=" qa-nav-cat-link qa-nav-cat-selected">All categories</a>
-                    </li>
-                    <li class="qa-nav-cat-item">
-                        <a href="#" class=" qa-nav-cat-link" title="CleanStrap Theme">CleanStrap<span class="qa-nav-cat-note">33</span></a>
-                    </li>
-                    <li class="qa-nav-cat-item">
-                        <a href="#" class=" qa-nav-cat-link" title="CleanStrap widgets and drag &amp; drop builder">Widgets<span class="qa-nav-cat-note">3</span></a>
-                    </li>
-                    <li class="qa-nav-cat-item">
-                        <a href="#" class=" qa-nav-cat-link" title="Questions about Question2Answer">Q2A platform<span class="qa-nav-cat-note">3</span></a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <script>
-            $(document).ready(function(){
-                $("a").click(function(){
-                    $(this).next().toggle();
-                });
-            });
-        </script>
-
-        <div class="qa-nav-main">
-            <ul class="qa-nav-main-list" style="padding-top: 6px">
-                <li class="qa-nav-main-item qa-nav-main-questions">
-                    <a href="../views/recent_questions.php" class="fa fa-question qa-nav-main-link" >Questions</a>
-                </li>
-                <li class="qa-nav-main-item qa-nav-main-unanswered">
-                    <a href="../views/unanswered_questions.php" class="fa fa-frown-o" >Unanswered</a>
-                </li>
-                <li class="qa-nav-main-item qa-nav-main-tag">
-                    <a href="../views/categorias.php"" class="fa fa-tags qa-nav-main-link" >Tags</a>
-                </li>
-                <li class="qa-nav-main-item qa-nav-main-user">
-                    <a href="../views/top_scored_users.php" class="fa fa-users qa-nav-main-link">Users</a>
-                </li>
-            </ul>
-            <div class="qa-nav-main-clear">
+<nav class = "navbar navbar-default">
+    <div class = "container">
+        <div class = "container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class = "navbar-header">
+                <button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#bs-example-navbar-collapse-1" aria-expanded = "false">
+                    <span class = "sr-only">Toggle navigation</span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                </button>
+                <a class = "navbar-brand" href = "" style = "padding: 2px 0">
+                    <img src = "../css/img/logo3.png" alt="logo" height = "45">
+                </a>
             </div>
-        </div>
 
-        <a class="btn login-register fa fa-sign-in" data-toggle="modal" data-target="#login-modal"
-           title="Login or Register"></a>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
+                <ul class = "nav navbar-nav navbar-right">
 
-        <form method="get" action="../views/search_results.php" class="navbar-form navbar-right form-search" role="search">
-            <span class="fa fa-search" style="position: fixed;padding-top: 8px;padding-left: 10px;"></span>
-            <input type="text" name="q" value="" class="form-control search-query" placeholder="Search" autocomplete="off">
-        </form>
+                    <li class="cl-effect-21"><a href="">Questions</a></li>
+                    <li class="cl-effect-21"><a href="">About Us</a></li>
+                    <li class="cl-effect-21 active"><a href="">Join us</a></li>
 
+                    <form class = "navbar-form navbar-left" role = "search" method = "post" action = "">
+                        <div class = "form-group">
+                            <input type = "text" class = "form-control navbar-search" placeholder = "Search" name = "search_query">
+                        </div>
+
+                        <button type = "submit" class = "search-submit">
+                            <a><span class = "glyphicon glyphicon-search"></span></a>
+                        </button>
+                    </form>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
     </div>
-
-</header>
+</nav>

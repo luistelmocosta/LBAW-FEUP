@@ -16,7 +16,7 @@ $smarty->template_dir = '../templates';
 $smarty->compile_dir = '../templates_c';
 $smarty->assign('BASE_URL', $BASE_URL);
 
-try {
+/*try {
 
 
     $dbuser = 'luiscosta';
@@ -40,7 +40,7 @@ if (!$conn) {
     echo "Error : Unable to open database\n";
 } else {
     echo "Opened database successfully\n";
-}
+}*/
 
 
 

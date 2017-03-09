@@ -2,21 +2,31 @@
     <div id="site-body" class="container">
         <div class="clearfix qa-main">
             <div class="col-sm-12 list-c">
-                <div class="header-position-c clearfix">
-                    <h1 class="intro-title"> Do you have questions ? We got the answers!</h1>
-                    <div class="col-md-12">
-                        <div id="header-position">
-                            <div class="widget cs_ajax_ask">												<div class="ra-ask-widget">
-                                    <form action="./ask?cat=" method="post">
-                                        <div class="input-group">
-                                            <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" name="title" class="form-control ui-autocomplete-input" id="ra-ask-search" placeholder="Your question in one sentence" autocomplete="off">
-                                            <span class="input-group-btn">
-							                <button class="icon-question btn" type="submit" data-toggle="modal" data-target="#login-modal">Ask</button>
-						                    </span>
-                                        </div>
-                                        <input type="hidden" value="1" name="doask1">
-                                    </form>
-                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul></div>
+                <div class = "intro-header">
+                    <div class = "row" style = "margin: 0 auto">
+                        <div class = "col-lg-12">
+                            <div class = "overlay"></div>
+                            <div class = "intro-message">
+                                <h1>AskMe</h1>
+                                <p>Ask Us Anything</p>
+                                <hr class = "intro-divider">
+                                <ul class = "list-inline intro-social-buttons">
+                                    <li>
+                                        <a href = "" class = "btn btn-warning btn-lg">
+                                            <span class = "network-name">About Us</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href = "" class = "btn btn-success btn-lg">
+                                            <span class = "network-name">Join Us</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href = "http://fe.up.pt" class = "btn btn-danger btn-lg" target = "_blank">
+                                            <i class = "fa fa-twitter fa-fw"></i>
+                                            <span class = "network-name">@FEUP</span></a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
