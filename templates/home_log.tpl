@@ -8,10 +8,16 @@
                     <h1 class="intro-title"> Do you have questions ? We got the answers!</h1>
                     <div class="col-md-12">
                         <div id="header-position">
-                            <div class="widget cs_ajax_ask">												<div class="ra-ask-widget">
+                            <div class="widget cs_ajax_ask">
+                                <div class="ra-ask-widget">
                                     <form action="../views/create_question.php" method="post">
                                         <div class="input-group">
-                                            <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" name="title" class="form-control ui-autocomplete-input" id="ra-ask-search" placeholder="Your question in one sentence" autocomplete="off">
+                                            <span role="status" aria-live="polite"
+                                                  class="ui-helper-hidden-accessible">
+
+                                            </span>
+                                            <input type="text" name="title" class="form-control ui-autocomplete-input"
+                                                   id="ra-ask-search" placeholder="Your question in one sentence" autocomplete="off">
                                             <span class="input-group-btn">
 							<button class="icon-question btn" type="submit">Ask</button>
 						  </span>
@@ -318,38 +324,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div id="home-right-position">
-                                <div class="widget cs_top_contributors">																	<h3 class="widget-title">Your question in one sentence</h3>
-                                    <div class="ra-tags-widget">
-                                        <ul class="top-users-list clearfix"><li class="top-user clearfix"><div class="avatar" data-id="1" data-handle="admin"><a href="./user/admin" class="qa-avatar-link"><img src="../css/img/admin_icon.jpg" width="30" height="30" class="qa-avatar-image" alt=""></a></div><div class="top-user-data"><span class="points">520 points</span><a href="./user/admin" class="name">admin</a><p class="counts"><span>3 questions</span> <span>7 answers</span><span>1 comments</span></p></div></li><li class="top-user clearfix"><div class="avatar" data-id="2" data-handle="Towhid"><a href="./user/Towhid" class="qa-avatar-link"><img src="../css/img/users.jpg" width="30" height="30" class="qa-avatar-image" alt=""></a></div><div class="top-user-data"><span class="points">510 points</span><a href="./user/Towhid" class="name">Towhid</a><p class="counts"><span>3 questions</span> <span>8 answers</span><span>0 comments</span></p></div></li><li class="top-user clearfix"><div class="avatar" data-id="3" data-handle="HappyFace"><a href="./user/HappyFace" class="qa-avatar-link"><img src="../css/img/users.jpg" width="30" height="30" class="qa-avatar-image" alt=""></a></div><div class="top-user-data"><span class="points">350 points</span><a href="./user/HappyFace" class="name">HappyFace</a><p class="counts"><span>3 questions</span> <span>3 answers</span><span>1 comments</span></p></div></li><li class="top-user clearfix"><div class="avatar" data-id="21" data-handle="gurjyottheman"><a href="./user/gurjyottheman" class="qa-avatar-link"><img src="../css/img/users.jpg" width="30" height="30" class="qa-avatar-image" alt=""></a></div><div class="top-user-data"><span class="points">340 points</span><a href="./user/gurjyottheman" class="name">gurjyottheman</a><p class="counts"><span>3 questions</span> <span>4 answers</span><span>0 comments</span></p></div></li><li class="top-user clearfix"><div class="avatar" data-id="7" data-handle="Inspector"><a href="./user/Inspector" class="qa-avatar-link"><img src="../css/img/users.jpg" width="30" height="30" class="qa-avatar-image" alt=""></a></div><div class="top-user-data"><span class="points">240 points</span><a href="./user/Inspector" class="name">Inspector</a><p class="counts"><span>2 questions</span> <span>2 answers</span><span>0 comments</span></p></div></li></ul>
-                                    </div>
-                                </div>
-                                <div class="widget cs_site_status">																						<h3 class="widget-title">Site Status</h3>
-                                    <div class="ra-site-status-widget">
-                                        <div class="site-status-inner clearfix"><div class="bar-float"><div class="sparkline" data-type="bar" data-bar-color="#E45840" data-bar-width="30" data-height="80"><canvas width="158" height="80" style="display: inline-block; width: 158px; height: 80px; vertical-align: top;"></canvas></div>
-                                                <ul class="list-inline text-muted axis">
-                                                    <li style="width: 30px; margin-right: 2px;">Que</li><li style="width: 30px; margin-right: 2px;">Ans</li><li style="width: 30px; margin-right: 2px;">Com</li><li style="width: 30px; margin-right: 2px;">UA</li><li style="width: 30px; margin-right: 2px;">US</li>
-                                                </ul></div>
-                                            <div class="acti-indicators">
-                                                <ul>
-                                                    <li><i class="fa fa-circle text-info" style="color:#233445"></i> Questions <span>40</span></li>
-                                                    <li><i class="fa fa-circle text-info" style="color:#3fcf7f"></i> Answers <span>242</span></li>
-                                                    <li><i class="fa fa-circle text-info" style="color:#FF5F5F"></i> Comments <span>14</span></li>
-                                                    <li><i class="fa fa-circle text-info" style="color:#13C4A5"></i> Unanswered <span>8</span></li>
-                                                    <li><i class="fa fa-circle text-info" style="color:#F4C414"></i> Unselected <span>38</span></li>
-                                                </ul>
-                                            </div></div>
-                                    </div>
-                                </div>
-                                <div class="widget cs_site_activity"></div>
-                                <div class="widget cs_posts">																						<h3 class="widget-title">Recent Questions</h3>
-                                    <div class="ra-post-list-widget">
-                                        <ul class="posts-list"><li><div class="avatar" data-id="2803" data-handle="Dr-Hack"><a href="./user/Dr-Hack" class="qa-avatar-link"><img src="../css/img/users.jpg" width="30" height="30" class="qa-avatar-image" alt=""></a></div><div class="post-content"><a class="title question" href="./3549/using-advertisement-option-position-questions-break-theme" title="Using Advertisement option add in X position in questions break the theme">Using Advertisement option add in X position in questions break the theme</a><div class="meta"><span>0 answers</span><span class="time icon-time">Feb 22</span><span class="vote-count icon-thumbs-up2">0 votes</span></div></div></li><li><div class="avatar" data-id="701" data-handle="cusatxpress"><a href="./user/cusatxpress" class="qa-avatar-link"><img src="../css/img/users.jpg" width="30" height="30" class="qa-avatar-image" alt=""></a></div><div class="post-content"><a class="title question" href="./259/answer-votes-are-out-of-propotions" title="Answer Votes are out of propotions">Answer Votes are out of propotions</a><div class="meta"><span>1 answers</span><span class="time icon-time">Jun 6, 2016</span><span class="vote-count icon-thumbs-up2">0 votes</span></div></div></li><li><div class="avatar" data-id="416" data-handle="Warren"><a href="./user/Warren" class="qa-avatar-link"><img src="../css/img/users.jpg" width="30" height="30" class="qa-avatar-image" alt=""></a></div><div class="post-content"><a class="title question" href="./208/how-did-you-add-the-wheat-image-with-the-ask-bar-under-the-menu" title="How did you add the Wheat Image with the Ask bar under the menu?">How did you add the Wheat Image with the Ask bar under the menu?</a><div class="meta"><span>1 answers</span><span class="time icon-time">Jan 10, 2016</span><span class="vote-count icon-thumbs-up2">0 votes</span></div></div></li><li><div class="avatar" data-id="30" data-handle="Multi"><a href="./user/Multi" class="qa-avatar-link"><img src="../css/img/users.jpg" width="30" height="30" class="qa-avatar-image" alt=""></a></div><div class="post-content"><a class="title question" href="./136/how-can-i-support-the-developer" title="How can I support the developer?">How can I support the developer?</a><div class="meta"><span>1 answers</span><span class="time icon-time">Apr 12, 2015</span><span class="vote-count icon-thumbs-up2">1 votes</span></div></div></li><li><div class="avatar" data-id="24" data-handle="Chrissssss"><a href="./user/Chrissssss" class="qa-avatar-link"><img src="../css/img/users.jpg" width="30" height="30" class="qa-avatar-image" alt=""></a></div><div class="post-content"><a class="title question" href="./120/want-know-you-can-grant-different-privileges-different-users" title="I want to know if you can grant different privileges to different users?">I want to know if you can grant different privileges to different users?</a><div class="meta"><span>1 answers</span><span class="time icon-time">Mar 7, 2015</span><span class="vote-count icon-thumbs-up2">0 votes</span></div></div></li></ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="qa-suggest-next">
                         To see more, click for the <a href="#">full list of questions</a> or <a href="#">popular tags</a>.

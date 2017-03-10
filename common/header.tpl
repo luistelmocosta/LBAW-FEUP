@@ -15,6 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../css/styles/theme-green.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/dynamic.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/landing-page.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles/loadmore.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles/voting.css">
 
     <link rel="alternate" type="application/rss+xml" href="./feed/qa.rss" title="Recent questions and answers">
     <link rel="search" type="application/opensearchdescription+xml" title="AskMe" href="./opensearch.xml">
@@ -28,6 +30,7 @@
     <script src="../js/manageUsers.js" type="text/javascript"></script>
     <script type="text/javascript" src="../js/vendor/bootstrap.js"></script>
     <script type="text/javascript" src="../js/jquery.sparkline.js"></script>
+    <script type="text/javascript" src="../js/loadmore.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/theme.js"></script>
     <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
