@@ -1052,6 +1052,15 @@ ul.qa-nav-cat-list-4  > li.qa-nav-cat-item:first-child {
     text-transform: uppercase;
 }
 
+.bottom-notice {
+    margin-top: 15px;
+    padding-top: 10px;
+    font-weight: normal;
+    padding: 0 10px 0 0;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
 .widget .widget-title a {
     color: #AAAAAA;
     float: right;

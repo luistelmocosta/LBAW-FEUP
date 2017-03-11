@@ -50,7 +50,7 @@
                 <img class="navbar-site-logo" src="../css/img/logo.png">
             </a>
         </div>
-        <a id="nav-ask-btn" href="../views/create_question.php" class="btn btn-sm">Ask Question</a>
+
         <a id="nav-ask-btn" href="" class="btn btn-sm header-ask-button fa fa-folder"></a>
         <ul class="nav navbar-nav category-nav pull-left">
             <li class="dropdown pull-left">
@@ -81,12 +81,6 @@
 
         <div class="qa-nav-main">
             <ul class="qa-nav-main-list" style="padding-top: 6px">
-                <li class="qa-nav-main-item qa-nav-main-questions">
-                    <a href="../views/recent_questions.php" class="fa fa-question qa-nav-main-link" >Questions</a>
-                </li>
-                <li class="qa-nav-main-item qa-nav-main-unanswered">
-                    <a href="../views/unanswered_questions.php" class="fa fa-frown-o" >Unanswered</a>
-                </li>
                 <li class="qa-nav-main-item qa-nav-main-tag">
                     <a href="../views/categorias.php" class="fa fa-tags qa-nav-main-link" >Tags</a>
                 </li>
