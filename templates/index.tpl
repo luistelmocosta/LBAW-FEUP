@@ -5,7 +5,21 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
                     <h1>AskMe</h1>
-                    <hr class="small">
+                    <br>
+
+                    <div id="custom-search-input">
+                        <div class="input-group col-lg-12">
+                            <input type="text" class="form-control input-lg" placeholder="Search for a question..." />
+                            <span class="input-group-btn">
+                        <button class="btn btn-info" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                        </div>
+                    </div>
+
+                    <br><br>
+
                     <ul class = "list-inline intro-social-buttons">
                         <li>
                             <a href = "" class = "btn btn-warning btn-md">
@@ -14,7 +28,7 @@
                         </li>
                         <li>
                             <a href = "" class = "btn btn-success btn-md">
-                                <span class = "network-name">Join Us</span>
+                                <span class = "network-name">Ask Now!</span>
                             </a>
                         </li>
                         <li>
@@ -548,10 +562,6 @@
 </div>
 
 </body>
-
-
-
-
 
 
 

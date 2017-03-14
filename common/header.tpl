@@ -1,4 +1,4 @@
-<html lang="en-US">
+<html lang="en-US" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>AskMe</title>
@@ -32,6 +32,7 @@
     <script type="text/javascript" src="../js/jquery.sparkline.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/theme.js"></script>
+    <script type="text/javascript" src="../js/search.js"</script>
     <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 
 </head>
@@ -59,15 +60,19 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html">Questions</a>
+                <li>
+                <li>
+                <a href="index.html">Questions</a>
+                <li>
+
                 </li>
                 <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
-                    <a href="post.html">Make a Question</a>
+                    <a href="post.html">My Account</a>
                 </li>
                 <li>
                     <a href="contact.html">Login</a>
@@ -77,4 +82,9 @@
         <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
+
+
+
 </nav>
+
+
