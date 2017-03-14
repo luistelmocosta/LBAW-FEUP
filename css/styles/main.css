@@ -1387,7 +1387,7 @@ a.feed-link {
     margin: 0;
 }
 .question-head{
-    border-top: 3px solid #E45840;
+    border-top: 3px solid #2d2727;
     margin: -10px -10px 0;
     padding: 20px;
 }
@@ -1456,7 +1456,8 @@ a.feed-link {
     display: inline-block;
     margin-bottom: 10px;
 }
-.question-tags .tags-tag-list li a{
+
+.question-tags .tags-tag-list li a {
     border-color: #777777;
     border-image: none;
     border-style: none none none solid;
@@ -1466,6 +1467,7 @@ a.feed-link {
     margin-right: 10px;
     padding: 5px 12px;
 }
+
 .question-tags .tags-tag-list li a:hover{
 
 }

@@ -48,15 +48,12 @@
 <div id="site-body" class="container">
     <div class="clearfix qa-main">
 
-
-
-
-
         <div class="col-sm-8 list-c" style="padding-top: 20px; padding-left: 40px">
             <h1 class="page-title">
                 Recent questions without answers
-                <a href="./feed/unanswered.rss" class="feed-link icon-rss" title="Recent questions without answers"></a>
+                <a href="" class="feed-link icon-rss" title="Recent questions without answers"></a>
             </h1>
+            <br><br>
             <div class="qa-nav-sub">
                 <ul class="qa-nav-sub-list">
                     <li class="qa-nav-sub-item qa-nav-sub-by-answers">

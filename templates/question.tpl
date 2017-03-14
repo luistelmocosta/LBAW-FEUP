@@ -1,5 +1,6 @@
+<body>
 <div id="ajax-item">
-    <div id="site-body" class="container">
+    <div id="site-body" class="container-fluid">
         <div class="clearfix qa-main">
             <div class="col-sm-12 list-c">
                 <div class="question-main">
@@ -61,7 +62,9 @@
                                                             <div class="question-tags">
                                                                 <h3 class="tags-label">Tags</h3>
                                                                 <ul class="tags-tag-list">
-                                                                    <li class="tags-tag-item"><a href="../tag/votes" rel="tag" class="qa-tag-link">votes</a></li>
+                                                                    <li><a href="./tag/cleanstrap" class="widget-tag">cleanstrap<span>20</span></a></li>
+                                                                    <li><a href="./tag/cleanstrap" class="widget-tag">bootstrap<span>3</span></a></li>
+                                                                    <li><a href="./tag/cleanstrap" class="widget-tag">feup<span>5</span></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -185,17 +188,6 @@
                                                     <input type="hidden" name="code" value="1-1488986566-b213d2f936c26fc089d9235b89c121679af611a2">
                                                     <input type="hidden" name="qa_click" value="">
                                                 </form>
-                                                <div class="qa-c-form" id="c3517" style="overflow: hidden;">
-                                                    <div class="asker-avatar no-radius">
-                                                        <a href="../user/lbaw1641"><img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=30"></a>
-                                                    </div>
-                                                    <div class="comment-f-wrap">
-                                                        <h3>
-                                                            Please <a href="../confirm">confirm your email address</a> to add a comment.
-                                                        </h3>
-                                                    </div>
-
-                                                </div>
 
                                             </div>
                                         </div> <!-- END qa-a-item-main -->
@@ -204,6 +196,28 @@
                                 </div> <!-- END qa-a-list -->
 
                             </div>
+
+                            <div class="qa-part-form">
+                                <form name="ask" method="post" action="">
+                                    <table class="qa-form-tall-table">
+                                        <tbody>
+                                        <tr>
+                                            <td class="qa-form-tall-label">
+                                                Description:
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="qa-form-tall-data">
+                                                <textarea name="editor1"></textarea>
+                                                <script>
+                                                    CKEDITOR.replace( 'editor1' );
+                                                </script>
+
+                                            </td>
+                                        </tr>
+                                </form>
+                            </div>
+
                         </div>
                         <div class="col-md-4 question-sidebar">
                             <div id="question-right-position">
@@ -250,3 +264,9 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+
+
+</body>
