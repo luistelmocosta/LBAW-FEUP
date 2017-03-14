@@ -18,6 +18,7 @@
     <!-- Theme CSS -->
     <link href="../css/styles/clean-blog.min.css" rel="stylesheet">
 
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
     <link rel="alternate" type="application/rss+xml" href="./feed/qa.rss" title="Recent questions and answers">
     <link rel="search" type="application/opensearchdescription+xml" title="AskMe" href="./opensearch.xml">
     <script> theme_url = "http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap";</script>
@@ -29,10 +30,9 @@
     <script src="../js/qa-page.js" type="text/javascript"></script>
     <script src="../js/manageUsers.js" type="text/javascript"></script>
     <script type="text/javascript" src="../js/vendor/bootstrap.js"></script>
-    <script type="text/javascript" src="../js/jquery.sparkline.js"></script>
+    <script type="text/javascript" src="../js/jquery.sparkline.min.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/theme.js"></script>
-    <script type="text/javascript" src="../js/search.js"</script>
     <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 
 </head>
