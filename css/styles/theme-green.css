@@ -5,15 +5,8 @@ a:hover{
 	color:#7AAA40;
 }
 
-.btn{
-    background: #222222;
-    color: #FFFFFF;
-	border:none;
-}
-.btn:hover{
-    background: #d6313a;
-    color: #FFFFFF;
-}
+
+
 .question-list .question-item .big-ans-count.icon-chat{
 	background:#7AAA40;
 	color:#fff;
