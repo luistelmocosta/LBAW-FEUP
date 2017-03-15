@@ -1,4 +1,4 @@
-<html lang="en-US">
+<html lang="en-US" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>AskMe</title>
@@ -12,11 +12,9 @@
     <link rel="stylesheet" type="text/css" href="../css/styles/main.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/wide.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/responsive.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles/theme-green.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles/dynamic.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles/manageUsers.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles/warnModal.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles/overview.css">
+
+    <!-- Theme CSS -->
+    <link href="../css/styles/clean-blog.min.css" rel="stylesheet">
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
     <link rel="alternate" type="application/rss+xml" href="./feed/qa.rss" title="Recent questions and answers">
@@ -37,79 +35,72 @@
 
 </head>
 
-<body id="nav-top" class="qa-template-qa qa-body-js-on"></body>
+<body id="nav-top" class="qa-template-qa qa-body-js-on"> </body>
 <script type="text/javascript">
     var b=document.getElementsByTagName('body')[0];
     b.className=b.className.replace('qa-body-js-off', 'qa-body-js-on');
 </script>
-<header id="site-header" class="clearfix">
-    <div class="qa-navbar navbar-default navbar-fixed-top " role="navigation">
-        <a href="#" class="slide-mobile-menu icon-list"></a>
-        <div class="site-logo">
-            <a class="navbar-brand" title="AskMe" href="../views/home_log.php">
-                <img class="navbar-site-logo" src="../css/img/logo.png">
-            </a>
-        </div>
 
-        <a id="nav-ask-btn" href="" class="btn btn-sm header-ask-button fa fa-folder"></a>
-        <ul class="nav navbar-nav category-nav pull-left">
-            <li class="dropdown pull-left">
-                <a data-toggle="dropdown" href="#" class="category-toggle fa fa-folder">Categories</a>
-                <ul class="category-list-drop dropdown-menu">
-                    <li class="qa-nav-cat-item">
-                        <a href="#" class=" qa-nav-cat-link qa-nav-cat-selected">All categories</a>
-                    </li>
-                    <li class="qa-nav-cat-item">
-                        <a href="#" class=" qa-nav-cat-link" title="CleanStrap Theme">CleanStrap<span class="qa-nav-cat-note">33</span></a>
-                    </li>
-                    <li class="qa-nav-cat-item">
-                        <a href="#" class=" qa-nav-cat-link" title="CleanStrap widgets and drag &amp; drop builder">Widgets<span class="qa-nav-cat-note">3</span></a>
-                    </li>
-                    <li class="qa-nav-cat-item">
-                        <a href="../views/recent_questions.php" class=" qa-nav-cat-link" title="">Q2A platform<span class="qa-nav-cat-note">3</span></a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <script>
-            $(document).ready(function(){
-                $("a").click(function(){
-                    $(this).next().toggle();
-                });
-            });
-        </script>
-
-        <div class="qa-nav-main">
-            <ul class="qa-nav-main-list" style="padding-top: 6px">
-                <li class="qa-nav-main-item qa-nav-main-tag">
-                    <a href="../views/categorias.php" class="fa fa-tags qa-nav-main-link" >Tags</a>
-                </li>
-                <li class="qa-nav-main-item qa-nav-main-user">
-                    <a href="../views/top_scored_users.php" class="fa fa-users qa-nav-main-link">Users</a>
-                </li>
-            </ul>
-            <div class="qa-nav-main-clear">
+<script>
+    $(document).ready(function(){
+        $("a").click(function(){
+            $(this).next().toggle();
+        });
+    });
+</script>
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top" style="background: #2d2727;">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                Menu <i class="fa fa-bars"></i>
+            </button>
+            <div class="site-logo">
+                <a class="navbar-brand" title="AskMe" href="../views/index.php">
+                    <img class="navbar-site-logo" src="../css/img/logo3.png">
+                </a>
             </div>
         </div>
 
-        <ul class="nav navbar-nav navbar-avatar pull-right">
-            <li class="dropdown pull-right" id="menuLogin">
-                <a id="profile-link" data-toggle="dropdown" href="#" class="avatar">
-                    <img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=30">						</a>
-                <ul class="user-nav dropdown-menu">
-                    <li class="user-nav-profile"><a class="fa fa-id-card" href="../views/my_profile.php" title="Profile">Profile</a></li>
-                    <li class="user-nav-account"><a class="fa fa-cog" href="../views/account.php" title="Account">Account</a></li>
-                    <li class="user-nav-favorites"><a class="fa fa-user-md" href="../views/admin.php" title="Admin Panel">Admin CP</a></li>
-                    <li><a class="fa fa-power-off" href="../views/index.php"> Logout </a></li>
-                </ul>
-            </li>
-        </ul>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-        <form method="get" action="../views/search_results.php" class="navbar-form navbar-right form-search" role="search">
-            <span class="fa fa-search" style="position: fixed;padding-top: 8px;padding-left: 10px;"></span>
-            <input type="text" name="q" value="" class="form-control search-query" placeholder="Search" autocomplete="off">
-        </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="index.html">Questions</a>
+                <li>
+                <li>
+                    <a href="index.html">Top Users</a>
+                <li>
+
+                </li>
+                <li>
+                    <a href="post.html">My Account</a>
+                </li>
+
+                <ul class="nav navbar-nav navbar-avatar pull-right">
+                    <li class="dropdown pull-right" id="menuLogin">
+                        <div class="log_menu" style="padding: 7px">
+                        <a id="profile-link" data-toggle="dropdown" href="#" class="avatar">
+                            <img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=30">						</a>
+                        <ul class="user-nav dropdown-menu">
+                            <li class="user-nav-profile"><a class="fa fa-id-card" href="../views/my_profile.php" title="Profile">Profile</a></li>
+                            <li class="user-nav-account"><a class="fa fa-cog" href="../views/account.php" title="Account">Account</a></li>
+                            <li class="user-nav-favorites"><a class="fa fa-user-md" href="../views/admin.php" title="Admin Panel">Admin CP</a></li>
+                            <li><a class="fa fa-power-off" href="../views/index.php"> Logout </a></li>
+                        </ul>
+                        </div>
+                    </li>
+                </ul>
+
+            </ul>
+        </div>
 
     </div>
 
-</header>
+</nav>
+<br>
+<br>
