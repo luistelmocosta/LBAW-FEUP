@@ -2339,7 +2339,6 @@ table.page-users-list {
 
 .ra-tags-widget .widget-tag {
     border-radius: 2px;
-    color: #FFFFFF;
     display: block;
     float: left;
     font-size: 12px;
@@ -2351,7 +2350,6 @@ table.page-users-list {
 .ra-tags-widget .widget-tag span {
     background: rgba(0, 0, 0, 0.1);
     border-radius: 2px;
-    color: #FFFFFF;
     display: inline-block;
     font-size: 10px;
     line-height: 14px;
@@ -3395,9 +3393,6 @@ table.page-users-list {
 }
 .pagination > li:last-child > a, .pagination > li:last-child > span{
     margin-right: 0;
-}
-.pagination > li > .qa-page-selected , .pagination > li:hover > a{
-
 }
 
 #left-position .widget-title{

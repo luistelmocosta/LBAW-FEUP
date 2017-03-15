@@ -6,6 +6,18 @@
     <link rel="stylesheet" type="text/css" href="../qa-styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $( function() {
+            $( "#tabs" ).tabs();
+        } );
+    </script>
+
+
     <link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/bootstrap.css">
@@ -16,7 +28,6 @@
     <!-- Theme CSS -->
     <link href="../css/styles/clean-blog.min.css" rel="stylesheet">
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
     <link rel="alternate" type="application/rss+xml" href="./feed/qa.rss" title="Recent questions and answers">
     <link rel="search" type="application/opensearchdescription+xml" title="AskMe" href="./opensearch.xml">
     <script> theme_url = "http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap";</script>
@@ -24,13 +35,14 @@
         var qa_root='.\/';
         var qa_request='';
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <script src="../js/qa-page.js" type="text/javascript"></script>
     <script src="../js/manageUsers.js" type="text/javascript"></script>
     <script type="text/javascript" src="../js/vendor/bootstrap.js"></script>
-    <script type="text/javascript" src="../js/jquery.sparkline.min.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="http://demo.qa-themes.com/cleanstrap/qa-theme/cleanstrap/js/theme.js"></script>
+    <script type="text/javascript" src="../js/search.js"</script>
+    <script type="text/javascript" src="../js/index_tab.js"</script>
     <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 
 </head>
