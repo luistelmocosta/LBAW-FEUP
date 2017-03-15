@@ -1,9 +1,8 @@
 <div id="site-body" class="container">
     <div class="clearfix qa-main">
         <div class="col-sm-12 list-c">
-            <h2 class="page-title">
-                Ask a question
-            </h2>
+            <h1>Create Question</h1>
+            <br>
             <div class="qa-part-form">
                 <form name="ask" method="post" action="">
                     <table class="qa-form-tall-table">
