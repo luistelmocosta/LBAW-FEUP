@@ -42,7 +42,6 @@
     </div>
 </header>
 
-
 <body style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;">
 
 <div id="site-body" class="container">
@@ -54,374 +53,33 @@
                 <a href="" class="feed-link icon-rss" title="Recent questions without answers"></a>
             </h1>
             <br><br>
-            <div class="qa-nav-sub">
-                <ul class="qa-nav-sub-list">
-                    <li class="qa-nav-sub-item qa-nav-sub-by-answers">
-                        <a href="./unanswered" class=" qa-nav-sub-link qa-nav-sub-selected">No answer</a>
-                    </li>
-                    <li class="qa-nav-sub-item qa-nav-sub-by-selected">
-                        <a href="./unanswered?by=selected" class=" qa-nav-sub-link">No selected answer</a>
-                    </li>
-                    <li class="qa-nav-sub-item qa-nav-sub-by-upvotes">
-                        <a href="./unanswered?by=upvotes" class=" qa-nav-sub-link">No upvoted answer</a>
-                    </li>
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">Recent Questions</a></li>
+                    <li><a href="#tabs-2">Unanswered Questions</a></li>
+                    <li><a href="#tabs-3">Top Scored Questions</a></li>
                 </ul>
-                <div class="qa-nav-sub-clear">
+                <div id="tabs-1">
+                    {include file="recent_questions.tpl"}
                 </div>
-            </div>
-            <div class="qa-part-q-list">
-
-                    <div class="qa-q-list clean">
-
-                        <div class="question-summary narrow" id="question-summary-42479456">
-
-                            <div class="votes">
-                                <div class="mini-counts"><span title="7 votes">7</span></div>
-                                <div>votes</div>
-                            </div>
-                            <div class="status answered-accepted" title="one of the answers was accepted as the correct answer">
-                                <div class="mini-counts"><span title="1 answer">1</span></div>
-                                <div>answer</div>
-                            </div>
-                            <div class="views">
-                                <div class="mini-counts"><span title="140 views">140</span></div>
-                                <div>views</div>
-                            </div>
-
-                            <div class="summary">
-                                <h3>
-                                    <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                        How do I implement a class in C++?
-
-                                    </a>
-                                </h3>
-                            </div>
-                            <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">10 min ago</span>
-                            </span>
-                                <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">1</span>
-                            </span>
-                            </div>
-                        </div>
-
-
-                        <div class="question-summary narrow" id="question-summary-42479456">
-
-                            <div class="votes">
-                                <div class="mini-counts"><span title="7 votes">7</span></div>
-                                <div>votes</div>
-                            </div>
-                            <div class="status answered-accepted" title="one of the answers was accepted as the correct answer">
-                                <div class="mini-counts"><span title="1 answer">1</span></div>
-                                <div>answer</div>
-                            </div>
-                            <div class="views">
-                                <div class="mini-counts"><span title="140 views">140</span></div>
-                                <div>views</div>
-                            </div>
-
-                            <div class="summary">
-                                <h3>
-                                    <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                        How do I implement a class in C++?
-
-                                    </a>
-                                </h3>
-                            </div>
-                            <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">10 min ago</span>
-                            </span>
-                                <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">1</span>
-                            </span>
-                            </div>
-                        </div>
-
-
-                        <div class="question-summary narrow" id="question-summary-42479456">
-
-                            <div class="votes">
-                                <div class="mini-counts"><span title="7 votes">7</span></div>
-                                <div>votes</div>
-                            </div>
-                            <div class="status answered-accepted" title="one of the answers was accepted as the correct answer">
-                                <div class="mini-counts"><span title="1 answer">1</span></div>
-                                <div>answer</div>
-                            </div>
-                            <div class="views">
-                                <div class="mini-counts"><span title="140 views">140</span></div>
-                                <div>views</div>
-                            </div>
-
-                            <div class="summary">
-                                <h3>
-                                    <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                        How do I implement a class in C++?
-
-                                    </a>
-                                </h3>
-                            </div>
-                            <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">10 min ago</span>
-                            </span>
-                                <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">1</span>
-                            </span>
-                            </div>
-                        </div>
-
-
-                        <div class="question-summary narrow" id="question-summary-42479456">
-
-                            <div class="votes">
-                                <div class="mini-counts"><span title="7 votes">7</span></div>
-                                <div>votes</div>
-                            </div>
-                            <div class="status answered-accepted" title="one of the answers was accepted as the correct answer">
-                                <div class="mini-counts"><span title="1 answer">1</span></div>
-                                <div>answer</div>
-                            </div>
-                            <div class="views">
-                                <div class="mini-counts"><span title="140 views">140</span></div>
-                                <div>views</div>
-                            </div>
-
-                            <div class="summary">
-                                <h3>
-                                    <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                        How do I implement a class in C++?
-
-                                    </a>
-                                </h3>
-                            </div>
-                            <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">10 min ago</span>
-                            </span>
-                                <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">1</span>
-                            </span>
-                            </div>
-                        </div>
-
-
-                        <div class="question-summary narrow" id="question-summary-42479456">
-
-                            <div class="votes">
-                                <div class="mini-counts"><span title="7 votes">7</span></div>
-                                <div>votes</div>
-                            </div>
-                            <div class="status answered-accepted" title="one of the answers was accepted as the correct answer">
-                                <div class="mini-counts"><span title="1 answer">1</span></div>
-                                <div>answer</div>
-                            </div>
-                            <div class="views">
-                                <div class="mini-counts"><span title="140 views">140</span></div>
-                                <div>views</div>
-                            </div>
-
-                            <div class="summary">
-                                <h3>
-                                    <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                        How do I implement a class in C++?
-
-                                    </a>
-                                </h3>
-                            </div>
-                            <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">10 min ago</span>
-                            </span>
-                                <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">1</span>
-                            </span>
-                            </div>
-                        </div>
-
-
-
-                        <div class="question-summary narrow" id="question-summary-42479456">
-
-                            <div class="votes">
-                                <div class="mini-counts"><span title="7 votes">7</span></div>
-                                <div>votes</div>
-                            </div>
-                            <div class="status answered-accepted" title="one of the answers was accepted as the correct answer">
-                                <div class="mini-counts"><span title="1 answer">1</span></div>
-                                <div>answer</div>
-                            </div>
-                            <div class="views">
-                                <div class="mini-counts"><span title="140 views">140</span></div>
-                                <div>views</div>
-                            </div>
-
-                            <div class="summary">
-                                <h3>
-                                    <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                        How do I implement a class in C++?
-
-                                    </a>
-                                </h3>
-                            </div>
-                            <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">10 min ago</span>
-                            </span>
-                                <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">1</span>
-                            </span>
-                            </div>
-                        </div>
-
-                        <div class="question-summary narrow" id="question-summary-42479456">
-
-                            <div class="votes">
-                                <div class="mini-counts"><span title="7 votes">7</span></div>
-                                <div>votes</div>
-                            </div>
-                            <div class="status answered-accepted" title="one of the answers was accepted as the correct answer">
-                                <div class="mini-counts"><span title="1 answer">1</span></div>
-                                <div>answer</div>
-                            </div>
-                            <div class="views">
-                                <div class="mini-counts"><span title="140 views">140</span></div>
-                                <div>views</div>
-                            </div>
-
-                            <div class="summary">
-                                <h3>
-                                    <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                        How do I implement a class in C++?
-
-                                    </a>
-                                </h3>
-                            </div>
-                            <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">10 min ago</span>
-                            </span>
-                                <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">1</span>
-                            </span>
-                            </div>
-                        </div>
-
-                        <div class="question-summary narrow" id="question-summary-42479456">
-
-                            <div class="votes">
-                                <div class="mini-counts"><span title="7 votes">7</span></div>
-                                <div>votes</div>
-                            </div>
-                            <div class="status answered-accepted" title="one of the answers was accepted as the correct answer">
-                                <div class="mini-counts"><span title="1 answer">1</span></div>
-                                <div>answer</div>
-                            </div>
-                            <div class="views">
-                                <div class="mini-counts"><span title="140 views">140</span></div>
-                                <div>views</div>
-                            </div>
-
-                            <div class="summary">
-                                <h3>
-                                    <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                        Create a database in postgreSQL
-
-                                    </a>
-                                </h3>
-                            </div>
-                            <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">1 hour ago</span>
-                            </span>
-                                <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">1</span>
-                            </span>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="question-summary narrow" id="question-summary-42479456">
-
-                            <div class="votes">
-                                <div class="mini-counts"><span title="7 votes">1</span></div>
-                                <div>votes</div>
-                            </div>
-                            <div class="status answered" title="one of the answers was accepted as the correct answer">
-                                <div class="mini-counts"><span title="1 answer">1</span></div>
-                                <div>answer</div>
-                            </div>
-                            <div class="views">
-                                <div class="mini-counts"><span title="140 views">5</span></div>
-                                <div>views</div>
-                            </div>
-
-                            <div class="summary">
-                                <h3>
-                                    <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                        This is a random question.
-
-                                    </a>
-                                </h3>
-                            </div>
-                            <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">1 min ago</span>
-                            </span>
-                                <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">2</span>
-                            </span>
-                            </div>
-                        </div>
-
-
-                        <!-- END question list item -->
-
-
-                    </div>
-
-
+                <div id="tabs-2">
+                    {include file="recent_questions.tpl"}
+                </div>
+                <div id="tabs-3">
+                    {include file="recent_questions.tpl"}
+                </div>
             </div>
 
             <div class="col-lg-12" style="padding-top: 50px">
-            <h3 class="bottom-notice" style="color: #185a66;">Looking for more? Browse the
-                <a href="/questions">complete list of questions</a>, or
-                <a href="/tags">popular tags</a>. Help us answer
-                <a href="/unanswered">unanswered questions</a>.
-            </h3>
-            <!-- END qa-q-list -->
-        </div>
+                <h3 class="bottom-notice" style="color: #185a66;">Looking for more? Browse the
+                    <a href="/questions">complete list of questions</a>, or
+                    <a href="/tags">popular tags</a>. Help us answer
+                    <a href="/unanswered">unanswered questions</a>.
+                </h3>
+                <!-- END qa-q-list -->
+            </div>
 
         </div>
-
-
-
-
-
-
 
 
         <div class="col-md-4" style="padding-top: 20px;">
@@ -527,38 +185,48 @@
             </div>
         </div>
     </div>
+</div>
 
-    <footer>
 
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    <li>
-                        <a href="#">
+
+
+
+
+
+
+
+<footer>
+
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <ul class="list-inline text-center">
+                <li>
+                    <a href="#">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-info fa-stack-1x fa-inverse" style="background: #96221f;"></i>
                                 </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                                 </span>
-                        </a>
-                    </li>
-                </ul>
-                <p class="copyright text-muted">Copyright &copy; LBAW FEUP 2016/2017</p>
-            </div>
+                    </a>
+                </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; LBAW FEUP 2016/2017</p>
         </div>
+    </div>
 
-    </footer>
+</footer>
 
 </div>
 
 </body>
+</html>
 
 
 

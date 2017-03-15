@@ -1,4 +1,4 @@
-<div class="question-summary narrow" id="question-summary-42479456">
+<div class="question-summary narrow" id="unanswered">
 
     <div class="votes">
         <div class="mini-counts"><span title="7 votes">7</span></div>
