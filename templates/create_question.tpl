@@ -2,9 +2,9 @@
     <div id="site-body" class="container">
         <div class="clearfix qa-main">
             <div class="col-sm-12 list-c">
-                <h1 class="page-title">
+                <h2 class="page-title">
                     Ask a question
-                </h1>
+                </h2>
                 <div class="qa-part-form">
                     <form name="ask" method="post" action="">
                         <table class="qa-form-tall-table">
@@ -62,31 +62,15 @@
                                     <div class="qa-form-tall-note"><span id="tag_examples_title" style="display:none;">Example tags: </span><span id="tag_complete_title" style="display:none;">Matching tags: </span><span id="tag_hints"></span></div>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="qa-form-tall-label">
-                                    Your name to display (optional):
-                                </td>
-                            </tr>
+
                             <tr>
                                 <td class="qa-form-tall-data">
                                     <input name="name" type="text" value="" class="qa-form-tall-text">
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="qa-form-tall-label">
-                                    <label>
-                                        <input name="notify" id="notify" onclick="if (document.getElementById('notify').checked) document.getElementById('email').focus();" type="checkbox" value="1" checked="" class="qa-form-tall-checkbox">
-                                        <span id="email_shown">Email me at this address if my question is answered or commented on:</span><span id="email_hidden" style="display:none;">Email me if my question is answered or commented on</span>
-                                    </label>
-                                </td>
-                            </tr>
+
                             </tbody><tbody id="email_display">
-                            <tr>
-                                <td class="qa-form-tall-data">
-                                    <input name="email" id="email" type="text" value="" class="qa-form-tall-text">
-                                    <div class="qa-form-tall-note">Privacy: Your email address will only be used for sending these notifications.</div>
-                                </td>
-                            </tr>
+
                             </tbody>
                             <tbody><tr>
                                 <td colspan="1" class="qa-form-tall-buttons">
