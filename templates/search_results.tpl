@@ -3,77 +3,10 @@
         <div class="clearfix qa-main">
             <div class="col-sm-8 list-c">
                 <h1 class="page-title">
-                    Search results for php
+                    Search results for <b>"C++"</b>
                 </h1>
                 <div class="qa-part-q-list">
-                    <form method="post" action="./search?q=php">
-                        <div class="qa-q-list clean">
-
-                            <div class="qa-q-list-item clearfix" id="q3552">
-                                <div class="qa-q-item-main">
-                                    <div class="q-item-head">
-                                        <div class="count-time"><span class="time">17 hours ago</span>
-                                            <span class="ans-count total-0">0</span></div>
-                                        <div class="avatar" data-id="2804" data-handle="lbaw1641"><a href="./user/lbaw1641" class="qa-avatar-link">
-                                                <img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
-                                        <span class="status-c"><span class="post-status open">Open</span></span>
-                                        <div class="qa-q-item-title">
-                                            <a href="./3552/create-class-in-php?show=3552#q3552">Create class in php</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> <!-- END question list item -->
-
-                            <div class="qa-q-list-item clearfix" id="q110">
-                                <div class="qa-q-item-main">
-                                    <div class="q-item-head">
-                                        <div class="count-time"><span class="time">Feb 20, 2015</span>
-                                            <span class="ans-count total-2">2</span></div>
-                                        <div class="avatar" data-id="" data-handle=""><img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></div>
-                                        <span class="status-c"><span class="post-status open">Open</span></span>
-                                        <div class="qa-q-item-title">
-                                            <a href="./110/why-i-can-t-add-widgets?show=262#a262">why I can"t add Widgets?</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> <!-- END question list item -->
-
-                            <div class="qa-q-list-item qa-q-closed clearfix" id="q104">
-                                <div class="qa-q-item-main">
-                                    <div class="q-item-head">
-                                        <div class="count-time"><span class="time">Feb 16, 2015</span>
-                                            <span class="ans-count total-1">1</span></div>
-                                        <div class="avatar" data-id="21" data-handle="gurjyottheman"><a href="./user/gurjyottheman" class="qa-avatar-link">
-                                                <img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
-                                        <span class="status-c"><span class="post-status closed">Closed</span></span>
-                                        <div class="qa-q-item-title">
-                                            <a href="./104/how-to-change-word-answers-to-replies?show=105#a105">How to change word "Answers" to "Replies"??</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> <!-- END question list item -->
-
-                            <div class="qa-q-list-item clearfix" id="q17">
-                                <div class="qa-q-item-main">
-                                    <div class="q-item-head">
-                                        <div class="count-time"><span class="time">Dec 26, 2014</span>
-                                            <span class="ans-count total-1">1</span></div>
-                                        <div class="avatar" data-id="10" data-handle="DaftPunk"><a href="./user/DaftPunk" class="qa-avatar-link">
-                                                <img src="../css/img/users.jpg" width="20" height="20" class="qa-avatar-image" alt=""></a></div>
-                                        <span class="status-c"><span class="post-status open">Open</span></span>
-                                        <div class="qa-q-item-title">
-                                            <a href="./17/translating-cleanstrap?show=49#a49">Translating CleanStrap</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> <!-- END question list item -->
-
-                        </div> <!-- END qa-q-list -->
-
-                        <div class="qa-q-list-form">
-                            <input type="hidden" name="code" value="1-1488982375-c0ac710d5a3fde49332de655d1af7507a0ab2b84">
-                        </div>
-                    </form>
+                    {include file="recent_questions.tpl"}
                 </div>
             </div>
             <div class="col-sm-4 side-c">
