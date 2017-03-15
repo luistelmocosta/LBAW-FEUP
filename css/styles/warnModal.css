@@ -3,9 +3,3 @@
     text-align:left;
 }
 
-.modal-textarea {
-    overflow: scroll;
-    resize: vertical;
-    width: 90%;
-
-}

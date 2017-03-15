@@ -3,10 +3,12 @@
     padding-bottom: 20px;
 }
 
+/*noinspection CssUnusedSymbol*/
 .form-button-sticky-footer {
     height: 46px;
 }
 
+/*noinspection CssUnusedSymbol*/
 .form-button-holder {
     background-color: #EEEEEE;
     border-radius: 0 0 5px 5px;
@@ -25,6 +27,7 @@
     border-color: #CCCCCC;
 }
 
+/*noinspection CssUnusedSymbol,CssUnusedSymbol,CssUnusedSymbol*/
 .chosen-container, .chosen-container-single .chosen-default, .chosen-single {
     height: 34px !important;
     line-height: 34px !important;
@@ -39,6 +42,7 @@
     top: 11px !important;
 }
 
+/*noinspection CssUnusedSymbol*/
 .font-demo {
     border: 1px dashed #CCCCCC;
     clear: both;
@@ -47,6 +51,7 @@
     padding: 5px;
 }
 /* Chosen v1.1.0 | (c) 2011-2013 by Harvest | MIT License, https://github.com/harvesthq/chosen/blob/master/LICENSE.md */
+/*noinspection CssUnusedSymbol*/
 .chosen-container {
     position: relative;
     display: inline-block;
@@ -59,6 +64,7 @@
     user-select: none;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container .chosen-drop {
     position: absolute;
     top: 100%;
@@ -74,6 +80,7 @@
     box-shadow: 0 4px 5px rgba(0,0,0,.15);
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container.chosen-with-drop .chosen-drop {
     left: 0;
 }
@@ -82,6 +89,7 @@
     cursor: pointer;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-single .chosen-single {
     position: relative;
     display: block;
@@ -104,6 +112,7 @@
     line-height: 24px;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-single .chosen-default {
     color: #999;
 }
@@ -155,6 +164,7 @@
     background: url(chosen-sprite.png) no-repeat 0 2px;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-single .chosen-search {
     position: relative;
     z-index: 1010;
@@ -181,17 +191,20 @@
     border-radius: 0;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-single .chosen-drop {
     margin-top: -1px;
     border-radius: 0 0 4px 4px;
     background-clip: padding-box;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-single.chosen-container-single-nosearch .chosen-search {
     position: absolute;
     left: -9999px;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container .chosen-results {
     position: relative;
     overflow-x: hidden;
@@ -211,17 +224,20 @@
     -webkit-touch-callout: none;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container .chosen-results li.active-result {
     display: list-item;
     cursor: pointer;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container .chosen-results li.disabled-result {
     display: list-item;
     color: #ccc;
     cursor: default;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container .chosen-results li.highlighted {
     background-color: #3875d7;
     background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(20%,#3875d7),color-stop(90%,#2a62bc));
@@ -232,11 +248,13 @@
     color: #fff;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container .chosen-results li.no-results {
     display: list-item;
     background: #f4f4f4;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container .chosen-results li.group-result {
     display: list-item;
     font-weight: 700;
@@ -252,6 +270,7 @@
     text-decoration: underline;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-multi .chosen-choices {
     position: relative;
     overflow: hidden;
@@ -278,6 +297,7 @@
     list-style: none;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-multi .chosen-choices li.search-field {
     margin: 0;
     padding: 0;
@@ -303,6 +323,7 @@
     color: #999;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-multi .chosen-choices li.search-choice {
     position: relative;
     margin: 3px 0 3px 5px;
@@ -322,6 +343,7 @@
     cursor: default;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
     position: absolute;
     top: 4px;
@@ -333,10 +355,12 @@
     font-size: 1px;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-multi .chosen-choices li.search-choice .search-choice-close:hover {
     background-position: -42px -10px;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-multi .chosen-choices li.search-choice-disabled {
     padding-right: 5px;
     border: 1px solid #ccc;
@@ -349,30 +373,36 @@
     color: #666;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-multi .chosen-choices li.search-choice-focus {
     background: #d4d4d4;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-multi .chosen-choices li.search-choice-focus .search-choice-close {
     background-position: -42px -10px;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-multi .chosen-results {
     margin: 0;
     padding: 0;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-multi .chosen-drop .result-selected {
     display: list-item;
     color: #ccc;
     cursor: default;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-active .chosen-single {
     border: 1px solid #5897fb;
     box-shadow: 0 0 5px rgba(0,0,0,.3);
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-active.chosen-with-drop .chosen-single {
     border: 1px solid #aaa;
     -moz-border-radius-bottomright: 0;
@@ -396,6 +426,7 @@
     background-position: -18px 2px;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-container-active .chosen-choices {
     border: 1px solid #5897fb;
     box-shadow: 0 0 5px rgba(0,0,0,.3);
@@ -405,23 +436,28 @@
     color: #111!important;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-disabled {
     opacity: .5!important;
     cursor: default;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-disabled .chosen-single {
     cursor: default;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-disabled .chosen-choices .search-choice .search-choice-close {
     cursor: default;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-rtl {
     text-align: right;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-rtl .chosen-single {
     overflow: visible;
     padding: 0 8px 0 0;
@@ -455,20 +491,24 @@
     direction: rtl;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-rtl .chosen-choices li.search-choice {
     margin: 3px 5px 3px 0;
     padding: 3px 5px 3px 19px;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-rtl .chosen-choices li.search-choice .search-choice-close {
     right: auto;
     left: 4px;
 }
 
+/*noinspection CssUnusedSymbol,CssUnusedSymbol*/
 .chosen-rtl.chosen-container-single-nosearch .chosen-search,.chosen-rtl .chosen-drop {
     left: 9999px;
 }
 
+/*noinspection CssUnusedSymbol*/
 .chosen-rtl.chosen-container-single .chosen-results {
     margin: 0 0 4px 4px;
     padding: 0 4px 0 0;
@@ -499,12 +539,15 @@
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio:2),only screen and (min-resolution:144dpi) {
+    /*noinspection CssUnusedSymbol*/
     .chosen-rtl .chosen-search input[type=text],.chosen-container-single .chosen-single abbr,.chosen-container-single .chosen-single div b,.chosen-container-single .chosen-search input[type=text],.chosen-container-multi .chosen-choices .search-choice .search-choice-close,.chosen-container .chosen-results-scroll-down span,.chosen-container .chosen-results-scroll-up span {
         background-image: url(chosen-sprite@2x.png)!important;
         background-size: 52px 37px!important;
         background-repeat: no-repeat!important;
     }
 }
+
+/*noinspection CssUnusedSymbol*/
 .qa-template-themeoptions .sp-replacer{
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     border: 1px solid #EEEEEE;
@@ -514,9 +557,13 @@
     padding: 0;
     vertical-align: middle;
 }
+
+/*noinspection CssUnusedSymbol*/
 .qa-template-themeoptions .sp-replacer .sp-dd {
 	display:none;
 }
+
+/*noinspection CssUnusedSymbol*/
 .qa-template-themeoptions .sp-replacer .sp-preview {
     border: medium none;
     border-radius: 50%;
@@ -525,6 +572,8 @@
     padding: 10px;
     width: 15px;
 }
+
+/*noinspection CssUnusedSymbol*/
 .qa-template-themeoptions .sp-container {
     background-color: #FFFFFF;
     border: 1px solid #DDDDDD;
@@ -532,10 +581,14 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     padding: 0;
 }
+
+/*noinspection CssUnusedSymbol,CssUnusedSymbol,CssUnusedSymbol*/
 .qa-template-themeoptions .sp-color, .qa-template-themeoptions .sp-hue, .qa-template-themeoptions .sp-clear {
     border: medium none;
 	border-radius:3px;
 }
+
+/*noinspection CssUnusedSymbol,CssUnusedSymbol*/
 .qa-template-themeoptions .sp-picker-container, .qa-template-themeoptions .sp-palette-container {
     float: left;
     margin-bottom: -290px;
