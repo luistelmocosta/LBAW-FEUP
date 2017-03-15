@@ -1764,7 +1764,7 @@ table.page-users-list {
 
 .qa-part-form-profile .qa-form-wide-label, .qa-part-form-password .qa-form-wide-label {
     font-weight: 600;
-    padding-bottom: 10px;
+    padding: 10px;
     width: 200px;
 }
 

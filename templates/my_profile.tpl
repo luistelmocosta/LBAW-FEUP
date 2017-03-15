@@ -21,6 +21,10 @@
                         <hr>
                         <h3><strong>Birthday</strong></h3>
                         <p>January 01 1901</p>
+
+                        <td colspan="3" class="qa-form-wide-buttons">
+                            <input name="doaccount" value="Edit my Profile" title="" type="submit" class="qa-form-wide-button qa-form-wide-button-account">
+                        </td>
                     </div>
                 </div>
             </div>
