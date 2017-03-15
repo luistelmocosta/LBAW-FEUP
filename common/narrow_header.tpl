@@ -67,7 +67,7 @@
                     <a href="index.html">Questions</a>
                 <li>
                 <li>
-                    <a href="index.html">Questions</a>
+                    <a href="index.html">Top Users</a>
                 <li>
 
                 </li>
