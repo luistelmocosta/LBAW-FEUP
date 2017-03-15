@@ -10,7 +10,7 @@ html body {
 
 .narrow .views {
     display: inline-block;
-    height: 38px;
+    height: auto;
     min-width: 40px;
     margin: 0 7px 0 0;
     font-size: 11px;
@@ -134,7 +134,7 @@ html body {
 .question-summary {
     overflow: hidden;
     padding: 15px 0;
-    width: 728px;
+    width: auto;
     border-bottom: 1px solid #eff0f1;
 }
 
