@@ -3396,9 +3396,7 @@ table.page-users-list {
 .pagination > li:last-child > a, .pagination > li:last-child > span{
     margin-right: 0;
 }
-.pagination > li > .qa-page-selected , .pagination > li:hover > a{
-    color: #FFFFFF;
-}
+
 
 #left-position .widget-title{
 
