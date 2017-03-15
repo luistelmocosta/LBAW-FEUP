@@ -67,37 +67,6 @@
                                     </td>
                                     <td class="qa-form-wide-data">
                                         <input name="email" type="text" value="luistelmocosta@gmail.com" class="qa-form-wide-text">
-                                        <span class="qa-form-wide-error">Please <a href="./confirm">confirm</a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="qa-form-wide-label">
-                                        Private messages:
-                                    </td>
-                                    <td class="qa-form-wide-data">
-                                        <input name="messages" type="checkbox" value="1" checked="" class="qa-form-wide-checkbox">
-                                        <span class="qa-form-wide-note">Allow users to email you (without seeing your address)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="qa-form-wide-label">
-                                        Wall posts:
-                                    </td>
-                                    <td class="qa-form-wide-data">
-                                        <input name="wall" type="checkbox" value="1" checked="" class="qa-form-wide-checkbox">
-                                        <span class="qa-form-wide-note">Allow users to post on your wall (you will also be emailed)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="qa-form-wide-label" style="vertical-align:top;">
-                                        Avatar:
-                                    </td>
-                                    <td class="qa-form-wide-data">
-                                        <input name="avatar" type="radio" value="" checked="" class="qa-form-wide-radio"> <span style="margin:2px 0; display:inline-block;"><img src="../css/img/person-flat.png" width="32" height="32" class="qa-avatar-image" alt=""></span> Default
-                                        <br>
-                                        <input name="avatar" type="radio" value="gravatar" class="qa-form-wide-radio"> <span style="margin:2px 0; display:inline-block;"><img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=32" width="32" height="32" class="qa-avatar-image" alt=""> Show my <a href="http://www.gravatar.com/" target="_blank">Gravatar</a></span>
-                                        <br>
-                                        <input name="avatar" type="radio" value="uploaded" class="qa-form-wide-radio"> <input name="file" type="file">
                                     </td>
                                 </tr>
                                 <tr>

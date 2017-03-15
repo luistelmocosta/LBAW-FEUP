@@ -42,369 +42,149 @@
     </div>
 </header>
 
-<body style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;">
 
 <body id="site-body" class="container">
 <div class="clearfix qa-main">
+    <div class="home-left-inner">
 
-    <div class="col-sm-8 list-c" style="padding-top: 20px; padding-left: 40px">
-        <h1 class="page-title">
-            Recent questions without answers
-            <a href="" class="feed-link icon-rss" title="Recent questions without answers"></a>
-        </h1>
-        <br><br>
-        <div id="tabs">
-            <ul>
-                <li><a href="#tabs-1">Recent Questions</a></li>
-                <li><a href="#tabs-2">Unanswered Questions</a></li>
-                <li><a href="#tabs-3">Top Scored Questions</a></li>
-            </ul>
-            <div id="tabs-1">
-                {include file="recent_questions.tpl"}
+
+        <div class="col-md-8"">
+
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">Recent Questions</a></li>
+                    <li><a href="#tabs-2">Unanswered Questions</a></li>
+                    <li><a href="#tabs-3">Top Scored Questions</a></li>
+                </ul>
+                <div id="tabs-1">
+                    {include file="recent_questions.tpl"}
+
+                </div>
+                <div id="tabs-2">
+                    {include file="unanswered_questions.tpl"}
+                </div>
+                <div id="tabs-3">
+                    {include file="top_scored_questions.tpl"}
+                </div>
+
             </div>
-            <div id="tabs-2">
-                {include file="recent_questions.tpl"}
-            </div>
-            <div id="tabs-3">
-                {include file="recent_questions.tpl"}
-            </div>
+
+
+
 
         </div>
-        <div class="qa-part-q-list">
-
-            <div class="qa-q-list clean">
-
-                <div class="question-summary narrow" id="question-summary-42479456">
-
-                    <div class="votes">
-                        <div class="mini-counts"><span title="7 votes">7</span></div>
-                        <div>votes</div>
-                    </div>
-                    <div class="status answered-accepted" title="one of the answers was accepted as the correct answer">
-                        <div class="mini-counts"><span title="1 answer">1</span></div>
-                        <div>answer</div>
-                    </div>
-                    <div class="views">
-                        <div class="mini-counts"><span title="140 views">140</span></div>
-                        <div>views</div>
-                    </div>
-
-                    <div class="summary">
-                        <h3>
-                            <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                How do I implement a class in C++?
-
-                            </a>
-                        </h3>
-                    </div>
-                    <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">10 min ago</span>
-                            </span>
-                        <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">1</span>
-                            </span>
-                    </div>
-                </div>
 
 
-                <div class="question-summary narrow" id="question-summary-42479456">
 
-                    <div class="votes">
-                        <div class="mini-counts"><span title="7 votes">7</span></div>
-                        <div>votes</div>
-                    </div>
-                    <div class="status answered-accepted" title="one of the answers was accepted as the correct answer">
-                        <div class="mini-counts"><span title="1 answer">1</span></div>
-                        <div>answer</div>
-                    </div>
-                    <div class="views">
-                        <div class="mini-counts"><span title="140 views">140</span></div>
-                        <div>views</div>
-                    </div>
-
-                    <div class="summary">
-                        <h3>
-                            <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                How do I implement a class in C++?
-
-                            </a>
-                        </h3>
-                    </div>
-                    <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">10 min ago</span>
-                            </span>
-                        <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">1</span>
-                            </span>
-                    </div>
-                </div>
-
-
-                <div class="question-summary narrow" id="question-summary-42479456">
-
-                    <div class="votes">
-                        <div class="mini-counts"><span title="7 votes">7</span></div>
-                        <div>votes</div>
-                    </div>
-                    <div class="status answered-accepted" title="one of the answers was accepted as the correct answer">
-                        <div class="mini-counts"><span title="1 answer">1</span></div>
-                        <div>answer</div>
-                    </div>
-                    <div class="views">
-                        <div class="mini-counts"><span title="140 views">140</span></div>
-                        <div>views</div>
-                    </div>
-
-                    <div class="summary">
-                        <h3>
-                            <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                How do I implement a class in C++?
-
-                            </a>
-                        </h3>
-                    </div>
-                    <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">10 min ago</span>
-                            </span>
-                        <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">1</span>
-                            </span>
+        <div class="col-md-4 pull-right">
+            <div id="home-right-position">
+                <div class="widget cs_top_contributors">
+                    <h3 class="widget-title">Top Scored Users</h3>
+                    <div class="ra-tags-widget">
+                        <ul class="top-users-list clearfix"><li class="top-user clearfix">
+                                <div class="avatar" data-id="1" data-handle="admin">
+                                    <a href="./user/admin" class="qa-avatar-link">
+                                        <img src="../css/img/admin_icon.jpg" width="30"
+                                             height="30" class="qa-avatar-image" alt=""></a></div><div class="top-user-data">
+                                    <span class="points">520 points</span><a href="./user/admin" class="name">admin</a><p class="counts">
+                                        <span>3 questions
+                                        </span>
+                                        <span>7 answers</span>
+                                        <span>1 comments</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="top-user clearfix">
+                                <div class="avatar" data-id="2" data-handle="Towhid"><a href="./user/Towhid" class="qa-avatar-link">
+                                        <img src="../css/img/users.jpg" width="30" height="30"
+                                             class="qa-avatar-image" alt="">
+                                    </a>
+                                </div>
+                                <div class="top-user-data">
+                                    <span class="points">510 points</span>
+                                    <a href="./user/Towhid" class="name">Towhid</a>
+                                    <p class="counts"><span>3 questions</span>
+                                        <span>8 answers</span>
+                                        <span>0 comments</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="top-user clearfix">
+                                <div class="avatar" data-id="3" data-handle="HappyFace"><a href="./user/HappyFace" class="qa-avatar-link">
+                                        <img src="../css/img/users.jpg"" width="30"
+                                        height="30" class="qa-avatar-image" alt=""></a>
+                                </div>
+                                <div class="top-user-data">
+                                    <span class="points">350 points</span>
+                                    <a href="./user/HappyFace" class="name">HappyFace</a>
+                                    <p class="counts"><span>3 questions</span>
+                                        <span>3 answers</span>
+                                        <span>1 comments</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="top-user clearfix">
+                                <div class="avatar" data-id="21" data-handle="gurjyottheman">
+                                    <a href="./user/gurjyottheman" class="qa-avatar-link">
+                                        <img src="../css/img/users.jpg" width="30"
+                                             height="30" class="qa-avatar-image" alt=""></a>
+                                </div>
+                                <div class="top-user-data"><span class="points">340 points</span>
+                                    <a href="./user/gurjyottheman" class="name">gurjyottheman</a>
+                                    <p class="counts"><span>3 questions</span>
+                                        <span>4 answers</span>
+                                        <span>0 comments</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="top-user clearfix">
+                                <div class="avatar" data-id="7" data-handle="Inspector">
+                                    <a href="./user/Inspector" class="qa-avatar-link">
+                                        <img src="../css/img/users.jpg" width="30"
+                                             height="30" class="qa-avatar-image" alt="">
+                                    </a>
+                                </div>
+                                <div class="top-user-data">
+                                    <span class="points">240 points</span>
+                                    <a href="./user/Inspector" class="name">Inspector</a>
+                                    <p class="counts">
+                                        <span>2 questions</span>
+                                        <span>2 answers</span>
+                                        <span>0 comments</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-
-
-                <div class="question-summary narrow" id="question-summary-42479456">
-
-                    <div class="votes">
-                        <div class="mini-counts"><span title="7 votes">7</span></div>
-                        <div>votes</div>
-                    </div>
-                    <div class="status answered-accepted" title="one of the answers was accepted as the correct answer">
-                        <div class="mini-counts"><span title="1 answer">1</span></div>
-                        <div>answer</div>
-                    </div>
-                    <div class="views">
-                        <div class="mini-counts"><span title="140 views">140</span></div>
-                        <div>views</div>
-                    </div>
-
-                    <div class="summary">
-                        <h3>
-                            <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                How do I implement a class in C++?
-
-                            </a>
-                        </h3>
-                    </div>
-                    <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">10 min ago</span>
-                            </span>
-                        <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">1</span>
-                            </span>
+                <div class="widget cs_site_status">																						<h3 class="widget-title">Site Status</h3>
+                    <div class="ra-site-status-widget">
+                        <div class="site-status-inner clearfix"><div class="bar-float" style="float: none; width: 100%;"><div class="sparkline" data-type="bar" data-bar-color="#E45840" data-bar-width="30" data-height="80"><canvas width="158" height="80" style="display: inline-block; width: 158px; height: 80px; vertical-align: top;"></canvas></div>
+                                <ul class="list-inline text-muted axis">
+                                    <li style="width: 30px; margin-right: 2px;">Que</li><li style="width: 30px; margin-right: 2px;">Ans</li><li style="width: 30px; margin-right: 2px;">Com</li><li style="width: 30px; margin-right: 2px;">UA</li><li style="width: 30px; margin-right: 2px;">US</li>
+                                </ul></div>
+                            <div class="acti-indicators" style="float: none; width: 100%;">
+                                <ul>
+                                    <li><i class="fa fa-circle text-info" style="color:#233445"></i> Questions <span>41</span></li>
+                                    <li><i class="fa fa-circle text-info" style="color:#3fcf7f"></i> Answers <span>242</span></li>
+                                    <li><i class="fa fa-circle text-info" style="color:#FF5F5F"></i> Comments <span>14</span></li>
+                                    <li><i class="fa fa-circle text-info" style="color:#13C4A5"></i> Unanswered <span>9</span></li>
+                                    <li><i class="fa fa-circle text-info" style="color:#F4C414"></i> Unselected <span>39</span></li>
+                                </ul>
+                            </div></div>
                     </div>
                 </div>
+                <div class="widget cs_site_activity"></div>
 
-
-                <div class="question-summary narrow" id="question-summary-42479456">
-
-                    <div class="votes">
-                        <div class="mini-counts"><span title="7 votes">7</span></div>
-                        <div>votes</div>
-                    </div>
-                    <div class="status answered-accepted" title="one of the answers was accepted as the correct answer">
-                        <div class="mini-counts"><span title="1 answer">1</span></div>
-                        <div>answer</div>
-                    </div>
-                    <div class="views">
-                        <div class="mini-counts"><span title="140 views">140</span></div>
-                        <div>views</div>
-                    </div>
-
-                    <div class="summary">
-                        <h3>
-                            <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                How do I implement a class in C++?
-
-                            </a>
-                        </h3>
-                    </div>
-                    <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">10 min ago</span>
-                            </span>
-                        <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">1</span>
-                            </span>
-                    </div>
-                </div>
-
-
-
-                <div class="question-summary narrow" id="question-summary-42479456">
-
-                    <div class="votes">
-                        <div class="mini-counts"><span title="7 votes">7</span></div>
-                        <div>votes</div>
-                    </div>
-                    <div class="status answered-accepted" title="one of the answers was accepted as the correct answer">
-                        <div class="mini-counts"><span title="1 answer">1</span></div>
-                        <div>answer</div>
-                    </div>
-                    <div class="views">
-                        <div class="mini-counts"><span title="140 views">140</span></div>
-                        <div>views</div>
-                    </div>
-
-                    <div class="summary">
-                        <h3>
-                            <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                How do I implement a class in C++?
-
-                            </a>
-                        </h3>
-                    </div>
-                    <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">10 min ago</span>
-                            </span>
-                        <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">1</span>
-                            </span>
-                    </div>
-                </div>
-
-                <div class="question-summary narrow" id="question-summary-42479456">
-
-                    <div class="votes">
-                        <div class="mini-counts"><span title="7 votes">7</span></div>
-                        <div>votes</div>
-                    </div>
-                    <div class="status answered-accepted" title="one of the answers was accepted as the correct answer">
-                        <div class="mini-counts"><span title="1 answer">1</span></div>
-                        <div>answer</div>
-                    </div>
-                    <div class="views">
-                        <div class="mini-counts"><span title="140 views">140</span></div>
-                        <div>views</div>
-                    </div>
-
-                    <div class="summary">
-                        <h3>
-                            <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                How do I implement a class in C++?
-
-                            </a>
-                        </h3>
-                    </div>
-                    <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">10 min ago</span>
-                            </span>
-                        <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">1</span>
-                            </span>
-                    </div>
-                </div>
-
-                <div class="question-summary narrow" id="question-summary-42479456">
-
-                    <div class="votes">
-                        <div class="mini-counts"><span title="7 votes">7</span></div>
-                        <div>votes</div>
-                    </div>
-                    <div class="status answered-accepted" title="one of the answers was accepted as the correct answer">
-                        <div class="mini-counts"><span title="1 answer">1</span></div>
-                        <div>answer</div>
-                    </div>
-                    <div class="views">
-                        <div class="mini-counts"><span title="140 views">140</span></div>
-                        <div>views</div>
-                    </div>
-
-                    <div class="summary">
-                        <h3>
-                            <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                Create a database in postgreSQL
-
-                            </a>
-                        </h3>
-                    </div>
-                    <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">1 hour ago</span>
-                            </span>
-                        <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">1</span>
-                            </span>
-                    </div>
-                </div>
-
-
-
-
-                <div class="question-summary narrow" id="question-summary-42479456">
-
-                    <div class="votes">
-                        <div class="mini-counts"><span title="7 votes">1</span></div>
-                        <div>votes</div>
-                    </div>
-                    <div class="status answered" title="one of the answers was accepted as the correct answer">
-                        <div class="mini-counts"><span title="1 answer">1</span></div>
-                        <div>answer</div>
-                    </div>
-                    <div class="views">
-                        <div class="mini-counts"><span title="140 views">5</span></div>
-                        <div>views</div>
-                    </div>
-
-                    <div class="summary">
-                        <h3>
-                            <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                This is a random question.
-
-                            </a>
-                        </h3>
-                    </div>
-                    <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-                            <span>
-                                <i class = "glyphicon glyphicon-time"></i>
-                                <span class="question-updated-at">1 min ago</span>
-                            </span>
-                        <span>
-                                <i class = "glyphicon glyphicon-comment"></i>
-                                <span class="question-answers">2</span>
-                            </span>
-                    </div>
-                </div>
-
-
-                <!-- END question list item -->
 
 
             </div>
 
+
+
+
         </div>
+
 
         <div class="col-lg-12" style="padding-top: 50px">
             <h3 class="bottom-notice" style="color: #185a66;">Looking for more? Browse the
@@ -414,127 +194,14 @@
             </h3>
             <!-- END qa-q-list -->
         </div>
-
     </div>
 
-
-    <div class="col-md-4" style="padding-top: 20px;">
-        <div id="home-right-position">
-            <div class="widget cs_top_contributors">
-                <h3 class="widget-title">Top Scored Users</h3>
-                <div class="ra-tags-widget">
-                    <ul class="top-users-list clearfix"><li class="top-user clearfix">
-                            <div class="avatar" data-id="1" data-handle="admin">
-                                <a href="./user/admin" class="qa-avatar-link">
-                                    <img src="../css/img/admin_icon.jpg" width="30"
-                                         height="30" class="qa-avatar-image" alt=""></a></div><div class="top-user-data">
-                                <span class="points">520 points</span><a href="./user/admin" class="name">admin</a><p class="counts">
-                                        <span>3 questions
-                                        </span>
-                                    <span>7 answers</span>
-                                    <span>1 comments</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="top-user clearfix">
-                            <div class="avatar" data-id="2" data-handle="Towhid"><a href="./user/Towhid" class="qa-avatar-link">
-                                    <img src="../css/img/users.jpg" width="30" height="30"
-                                         class="qa-avatar-image" alt="">
-                                </a>
-                            </div>
-                            <div class="top-user-data">
-                                <span class="points">510 points</span>
-                                <a href="./user/Towhid" class="name">Towhid</a>
-                                <p class="counts"><span>3 questions</span>
-                                    <span>8 answers</span>
-                                    <span>0 comments</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="top-user clearfix">
-                            <div class="avatar" data-id="3" data-handle="HappyFace"><a href="./user/HappyFace" class="qa-avatar-link">
-                                    <img src="../css/img/users.jpg"" width="30"
-                                    height="30" class="qa-avatar-image" alt=""></a>
-                            </div>
-                            <div class="top-user-data">
-                                <span class="points">350 points</span>
-                                <a href="./user/HappyFace" class="name">HappyFace</a>
-                                <p class="counts"><span>3 questions</span>
-                                    <span>3 answers</span>
-                                    <span>1 comments</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="top-user clearfix">
-                            <div class="avatar" data-id="21" data-handle="gurjyottheman">
-                                <a href="./user/gurjyottheman" class="qa-avatar-link">
-                                    <img src="../css/img/users.jpg" width="30"
-                                         height="30" class="qa-avatar-image" alt=""></a>
-                            </div>
-                            <div class="top-user-data"><span class="points">340 points</span>
-                                <a href="./user/gurjyottheman" class="name">gurjyottheman</a>
-                                <p class="counts"><span>3 questions</span>
-                                    <span>4 answers</span>
-                                    <span>0 comments</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="top-user clearfix">
-                            <div class="avatar" data-id="7" data-handle="Inspector">
-                                <a href="./user/Inspector" class="qa-avatar-link">
-                                    <img src="../css/img/users.jpg" width="30"
-                                         height="30" class="qa-avatar-image" alt="">
-                                </a>
-                            </div>
-                            <div class="top-user-data">
-                                <span class="points">240 points</span>
-                                <a href="./user/Inspector" class="name">Inspector</a>
-                                <p class="counts">
-                                    <span>2 questions</span>
-                                    <span>2 answers</span>
-                                    <span>0 comments</span>
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="widget cs_site_status">																						<h3 class="widget-title">Site Status</h3>
-                <div class="ra-site-status-widget">
-                    <div class="site-status-inner clearfix"><div class="bar-float" style="float: none; width: 100%;"><div class="sparkline" data-type="bar" data-bar-color="#E45840" data-bar-width="30" data-height="80"><canvas width="158" height="80" style="display: inline-block; width: 158px; height: 80px; vertical-align: top;"></canvas></div>
-                            <ul class="list-inline text-muted axis">
-                                <li style="width: 30px; margin-right: 2px;">Que</li><li style="width: 30px; margin-right: 2px;">Ans</li><li style="width: 30px; margin-right: 2px;">Com</li><li style="width: 30px; margin-right: 2px;">UA</li><li style="width: 30px; margin-right: 2px;">US</li>
-                            </ul></div>
-                        <div class="acti-indicators" style="float: none; width: 100%;">
-                            <ul>
-                                <li><i class="fa fa-circle text-info" style="color:#233445"></i> Questions <span>41</span></li>
-                                <li><i class="fa fa-circle text-info" style="color:#3fcf7f"></i> Answers <span>242</span></li>
-                                <li><i class="fa fa-circle text-info" style="color:#FF5F5F"></i> Comments <span>14</span></li>
-                                <li><i class="fa fa-circle text-info" style="color:#13C4A5"></i> Unanswered <span>9</span></li>
-                                <li><i class="fa fa-circle text-info" style="color:#F4C414"></i> Unselected <span>39</span></li>
-                            </ul>
-                        </div></div>
-                </div>
-            </div>
-            <div class="widget cs_site_activity"></div>
-
-        </div>
     </div>
-
-</div>
-</div>
-
-
-</body>
-
 
 </div>
 
 </body>
 </html>
-
-
-
 
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
@@ -591,4 +258,7 @@
 </div>
 
 
+
+</footer>
+</div>
 

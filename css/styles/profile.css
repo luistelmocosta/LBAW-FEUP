@@ -18,10 +18,6 @@
     overflow:scroll;
 }
 
-.panel-height {
-  height: 400px;
-}
-
 tr {
     max-width: 80%;
 }
