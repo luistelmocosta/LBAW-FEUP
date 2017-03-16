@@ -6,16 +6,12 @@
  * Time: 11:09 PM
  */
 
-include_once('../lib/smarty/Smarty.class.php');
+session_start();
 
 
 $BASE_DIR = '/home/luiscosta/PhpstormProjects/LBAW-FEUP/';
-echo $BASE_DIR;
-$BASE_URL = '/';
-$smarty = new Smarty();
-$smarty->template_dir = '../templates';
-$smarty->compile_dir = '../templates_c';
-$smarty->assign('BASE_URL', $BASE_URL);
+$BASE_URL = '/LBAW-FEUP/';
+
 
 try {
 
@@ -37,14 +33,13 @@ $conn->exec('SET SCHEMA \'public\'');
 $sql = 'SELECT * FROM User';
 
 
-if (!$conn) {
-    //echo "Error : Unable to open database\n";
+/*if (!$conn) {
+    echo "Error : Unable to open database\n";
 } else {
 
-    echo '<script language="javascript">';
-    echo 'alert("Database successfully connected!")';
-    echo '</script>';
-}
+    echo "DATABASE OPENED!";
+
+}*/
 
 include($BASE_DIR . 'config/lib.php');
 

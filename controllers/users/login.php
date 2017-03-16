@@ -1,5 +1,6 @@
 <?php
 
+
 /**
  * Created by PhpStorm.
  * User: luiscosta
@@ -23,6 +24,11 @@ if (!$_POST['username'] || !$_POST['password']) {
 }
 
 $username = $_POST['username'];
+
+echo '<script language="javascript">';
+echo 'console.log("Database successfully connected!")';
+echo '</script>';
+
 $password = $_POST['password'];
 
 try {
