@@ -8,6 +8,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    {include file="./log_modal.tpl"}
+
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -18,26 +20,23 @@
         } );
     </script>
 
-    {include file="./log_modal.tpl"}
-
-
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/main.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles/clean-blog.min.css">
 
-    <!-- Theme CSS -->
-    <link href="../css/styles/clean-blog.min.css" rel="stylesheet">
-
+    <!-- JS -->
     <script type="text/javascript" src="../js/vendor/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/Chart.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
     <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
 
 </head>
 
-<!-- Navigation -->
+
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
