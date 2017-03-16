@@ -69,12 +69,7 @@
 
         </div>
 
-
-
-
     </div>
-
-
 
     <div class="col-md-4 pull-right">
         <div id="home-right-position">
