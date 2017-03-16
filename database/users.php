@@ -41,3 +41,12 @@ function correctAuth($username, $password)
         return false;
     }
 }
+
+function getUserByUsername($username) {
+    global $conn;
+    $query = $conn->prepare("SELECT userid, username, fullname, email, signdate 
+FROM User WHERE username = ?");
+    $query->execute(array($username));
+
+    return $query->fetchAll();
+}

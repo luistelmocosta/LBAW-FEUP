@@ -14,7 +14,7 @@
                         <form id="loginform" role="form" action="{$BASE_URL}controllers/users/login.php" method="post">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                <input type="text" class="form-control" id="qa-userid" name="emailhandle" placeholder="Email or Username">
+                                <input type="text" class="form-control" id="qa-userid" name="username" placeholder="Email or Username">
                             </div>
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-key"></i></span>
