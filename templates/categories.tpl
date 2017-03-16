@@ -1,5 +1,4 @@
-<div id="ajax-item">
-    <div id="site-body" class="container">
+<div id="site-body" class="container">
         <div class="clearfix qa-main">
             <div class="col-sm-8 list-c">
                 <h1 class="page-title">
@@ -88,7 +87,7 @@
                         </div>
                         <div class="widget cs_tags">
                             <h3 class="widget-title">Tags
-                                <a href="../views/categorias.php">View all</a></h3>
+                                <a href="../views/categories.php">View all</a></h3>
                             <div class="ra-tags-widget clearfix">
                                 <a href="" class="widget-tag">cleanstrap<span>23</span></a>
                                 <a href="" class="widget-tag">cleanstrap theme<span>14</span></a>
@@ -106,4 +105,3 @@
                 </div>
 
             </div>
-        </div>
