@@ -153,23 +153,10 @@
                 </div>
             </div>
             <div class="widget cs_site_status">																						<h3 class="widget-title">Site Status</h3>
-                <div class="ra-site-status-widget">
-                    <div class="site-status-inner clearfix"><div class="bar-float" style="float: none; width: 100%;"><div class="sparkline" data-type="bar" data-bar-color="#E45840" data-bar-width="30" data-height="80"><canvas width="158" height="80" style="display: inline-block; width: 158px; height: 80px; vertical-align: top;"></canvas></div>
-                            <ul class="list-inline text-muted axis">
-                                <li style="width: 30px; margin-right: 2px;">Que</li><li style="width: 30px; margin-right: 2px;">Ans</li><li style="width: 30px; margin-right: 2px;">Com</li><li style="width: 30px; margin-right: 2px;">UA</li><li style="width: 30px; margin-right: 2px;">US</li>
-                            </ul></div>
-                        <div class="acti-indicators" style="float: none; width: 100%;">
-                            <ul>
-                                <li><i class="fa fa-circle text-info" style="color:#233445"></i> Questions <span>41</span></li>
-                                <li><i class="fa fa-circle text-info" style="color:#3fcf7f"></i> Answers <span>242</span></li>
-                                <li><i class="fa fa-circle text-info" style="color:#FF5F5F"></i> Comments <span>14</span></li>
-                                <li><i class="fa fa-circle text-info" style="color:#13C4A5"></i> Unanswered <span>9</span></li>
-                                <li><i class="fa fa-circle text-info" style="color:#F4C414"></i> Unselected <span>39</span></li>
-                            </ul>
-                        </div></div>
-                </div>
+                <canvas id="siteStatus" width="300" height="300">
+
+                </canvas>
             </div>
-            <div class="widget cs_site_activity"></div>
 
         </div>
 

@@ -31,7 +31,9 @@
     <link href="../css/styles/clean-blog.min.css" rel="stylesheet">
 
     <script type="text/javascript" src="../js/vendor/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
     <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
 
 </head>
 
