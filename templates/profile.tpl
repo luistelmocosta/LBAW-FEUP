@@ -71,7 +71,7 @@
         <div class="panel panel-default">
             <div class="user-qac-list">
                 <div id="user-content-position">
-                    <div class="widget cs_user_posts">												<h3 style="padding-left: 10px" class="widget-title user-post-title">John Doe's Questions<a class="see-all" href="../user/Digimasterbr/questions">Show all</a></h3>
+                    <div class="widget cs_user_posts">												<h3 style="padding-left: 10px" class="widget-title user-post-title">John Doe's Questions<a class="see-all" href="#">Show all</a></h3>
                         <div class="ra-ua-widget">
 
                             <div class="question-summary narrow">
@@ -158,12 +158,12 @@
 
                         </div>
                     </div>
-                    <div class="widget cs_user_posts">												<h3 style="padding-left: 10px" class="widget-title user-post-title">John Doe's Answers<a class="see-all" href="../user/Digimasterbr/answers">Show all</a></h3>
+                    <div class="widget cs_user_posts">												<h3 style="padding-left: 10px" class="widget-title user-post-title">John Doe's Answers<a class="see-all" href="#">Show all</a></h3>
                         <div class="ra-ua-widget">
                             <ul class="question-list users-post-widget post-type-A"><li class="no-post-found">No Answers posted yet! </li></ul>
                         </div>
                     </div>
-                    <div class="widget cs_user_posts">												<h3 style="padding-left: 10px" class="widget-title user-post-title">John Doe's Comments<a class="see-all" href="../user/Digimasterbr/answers">Show all</a></h3>
+                    <div class="widget cs_user_posts">												<h3 style="padding-left: 10px" class="widget-title user-post-title">John Doe's Comments<a class="see-all" href="#">Show all</a></h3>
                         <div class="ra-ua-widget">
                             <ul class="question-list users-post-widget post-type-C"><li class="no-post-found">No Comments posted yet! </li></ul>
                         </div>
