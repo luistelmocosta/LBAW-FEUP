@@ -6,8 +6,8 @@
 
 
         <div class="col-md-8"">
-        <h1>
-            All Questions
+        <h1 class="page-title">
+            All questions
         </h1>
 
         <br>

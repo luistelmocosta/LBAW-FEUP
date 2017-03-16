@@ -9,14 +9,15 @@
 include_once('../lib/smarty/Smarty.class.php');
 
 
+$BASE_DIR = '/home/luiscosta/PhpstormProjects/LBAW-FEUP/';
+echo $BASE_DIR;
 $BASE_URL = '/';
-$LBAW_DIR = '../';
 $smarty = new Smarty();
 $smarty->template_dir = '../templates';
 $smarty->compile_dir = '../templates_c';
 $smarty->assign('BASE_URL', $BASE_URL);
 
-/*try {
+try {
 
 
     $dbuser = 'luiscosta';
@@ -39,8 +40,12 @@ $sql = 'SELECT * FROM User';
 if (!$conn) {
     echo "Error : Unable to open database\n";
 } else {
-    echo "Opened database successfully\n";
-}*/
+    echo '<script language="javascript">';
+    echo 'alert("Database successfully connected!")';
+    echo '</script>';
+}
+
+include($BASE_DIR . 'config/lib.php');
 
 
 
