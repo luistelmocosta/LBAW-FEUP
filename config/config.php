@@ -16,10 +16,10 @@ $smarty->template_dir = '../templates';
 $smarty->compile_dir = '../templates_c';
 $smarty->assign('BASE_URL', $BASE_URL);
 
-/*try {
+try {
 
 
-    $dbuser = 'luiscosta';
+    $dbuser = 'alexandre';
     $dbpass = '123';
     $host = 'localhost';
     $dbname = 'lbaw';
@@ -37,10 +37,10 @@ $sql = 'SELECT * FROM User';
 
 
 if (!$conn) {
-    echo "Error : Unable to open database\n";
+    //echo "Error : Unable to open database\n";
 } else {
-    echo "Opened database successfully\n";
-}*/
+    //echo "Opened database successfully\n";
+}
 
 
 

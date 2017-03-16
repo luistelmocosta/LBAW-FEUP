@@ -70,15 +70,10 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="index.html">Questions</a>
-                <li>
-                <li>
-                    <a href="index.html">Top Users</a>
-                <li>
-
+                    <a href="../views/questions.php">Questions</a>
                 </li>
                 <li>
-                    <a href="post.html">My Account</a>
+                    <a href="../views/top_scored_users.php">Top Users</a>
                 </li>
 
                 <ul class="nav navbar-nav navbar-avatar pull-right">
@@ -87,7 +82,7 @@
                         <a id="profile-link" data-toggle="dropdown" href="#" class="avatar">
                             <img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=30">						</a>
                         <ul class="user-nav dropdown-menu">
-                            <li class="user-nav-profile"><a class="fa fa-id-card" href="../views/my_profile.php" title="Profile">Profile</a></li>
+                            <li class="user-nav-profile"><a class="fa fa-id-card" href="../views/profile.php" title="Profile">Profile</a></li>
                             <li class="user-nav-account"><a class="fa fa-cog" href="../views/account.php" title="Account">Account</a></li>
                             <li class="user-nav-favorites"><a class="fa fa-user-md" href="../views/admin.php" title="Admin Panel">Admin CP</a></li>
                             <li><a class="fa fa-power-off" href="../views/index.php"> Logout </a></li>

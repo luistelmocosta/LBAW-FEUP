@@ -17,6 +17,8 @@
         } );
     </script>
 
+    {include file="./log_modal.tpl"}
+
 
     <link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome.css">
@@ -74,27 +76,23 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="index.html">Questions</a>
-                <li>
-                <li>
-                <a href="index.html">Top Users</a>
-                <li>
+                    <a href="../views/questions.php">Questions</a>
+                </li>
 
-                </li>
                 <li>
-                    <a href="post.html">My Account</a>
+                <a href="../views/top_scored_users.php">Top Users</a>
                 </li>
+
                 <li>
-                    <a href="contact.html">Login</a>
+                    <a class="fa fa-sign-in" data-toggle="modal" data-target="#login-modal"
+                       title="Login or Register"></a>
                 </li>
             </ul>
         </div>
+
         <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
 
-
-
 </nav>
-
 
