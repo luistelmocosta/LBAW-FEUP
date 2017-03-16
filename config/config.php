@@ -20,7 +20,7 @@ $smarty->assign('BASE_URL', $BASE_URL);
 try {
 
 
-    $dbuser = 'luiscosta';
+    $dbuser = 'alexandre';
     $dbpass = '123';
     $host = 'localhost';
     $dbname = 'lbaw';
@@ -38,14 +38,19 @@ $sql = 'SELECT * FROM User';
 
 
 if (!$conn) {
-    echo "Error : Unable to open database\n";
+    //echo "Error : Unable to open database\n";
 } else {
+<<<<<<< HEAD
     echo '<script language="javascript">';
     echo 'alert("Database successfully connected!")';
     echo '</script>';
 }
 
 include($BASE_DIR . 'config/lib.php');
+=======
+    //echo "Opened database successfully\n";
+}
+>>>>>>> master
 
 
 
