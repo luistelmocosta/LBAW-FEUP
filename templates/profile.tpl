@@ -23,7 +23,9 @@
                         <p>January 01 1901</p>
 
                         <td colspan="3" class="qa-form-wide-buttons">
+                            <a href="../views/edit_profile.php">
                             <input name="doaccount" value="Edit my Profile" title="" type="submit" class="qa-form-wide-button qa-form-wide-button-account">
+                            </a>
                         </td>
                     </div>
                 </div>

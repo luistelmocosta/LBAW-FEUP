@@ -25,9 +25,7 @@
     <link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/main.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles/wide.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/responsive.css">
-    <link rel="stylesheet" type="text/css" href="../qa-styles.css">
 
     <!-- Theme CSS -->
     <link href="../css/styles/clean-blog.min.css" rel="stylesheet">
@@ -48,7 +46,7 @@
             </button>
             <div class="site-logo">
                 <a class="navbar-brand" title="AskMe" href="../views/index.php">
-                    <img class="navbar-site-logo" src="../css/img/logo3.png">
+                    <img class="navbar-site-log" src="../css/img/logo3.png">
                 </a>
             </div>
         </div>
@@ -67,8 +65,7 @@
                 </li>
 
                 <li>
-                    <a class="fa fa-sign-in" data-toggle="modal" data-target="#login-modal"
-                       title="Login or Register"></a>
+                    <a href="#" class="fa fa-sign-in" data-toggle="modal" data-target="#login-modal" title="Login or Register"></a>
                 </li>
             </ul>
         </div>

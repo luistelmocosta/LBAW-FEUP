@@ -23,9 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/main.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles/wide.css">
     <link rel="stylesheet" type="text/css" href="../css/styles/responsive.css">
-    <link rel="stylesheet" type="text/css" href="../qa-styles.css">
 
     <!-- Theme CSS -->
     <link href="../css/styles/clean-blog.min.css" rel="stylesheet">

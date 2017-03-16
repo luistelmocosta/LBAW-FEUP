@@ -9,7 +9,7 @@
 
                     <div id="custom-search-input">
                         <div class="input-group col-lg-12">
-                            <input type="text" class="form-control input-lg" placeholder="Search for a question..." />
+                            <input type="text" class="form-control input-lg" placeholder="Search for a question..."/>
                             <span class="input-group-btn">
                                 <a class="btn btn-info" href="../views/search_results.php">
                                     <i class="glyphicon glyphicon-search"></i>
