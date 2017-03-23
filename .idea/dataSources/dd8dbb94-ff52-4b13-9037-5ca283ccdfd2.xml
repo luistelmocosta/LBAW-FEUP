@@ -9,8 +9,7 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-03-16.08:29:46.028</IntrospectionTimestamp>
-      <IntrospectionStateNumber>5365</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-03-22.19:24:51.097</IntrospectionTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -29,91 +28,5 @@
     <schema id="8" parent="2" name="information_schema">
       <ObjectId>11520</ObjectId>
     </schema>
-    <sequence id="9" parent="3" name="User_userid_seq">
-      <ObjectId>83037</ObjectId>
-      <StateNumber>5363</StateNumber>
-      <SequenceIdentity>1</SequenceIdentity>
-    </sequence>
-    <table id="10" parent="3" name="User">
-      <ObjectId>83039</ObjectId>
-      <StateNumber>5363</StateNumber>
-    </table>
-    <column id="11" parent="10" name="userid">
-      <Position>1</Position>
-      <DataType>integer|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>5363</StateNumber>
-      <DefaultExpression>nextval(&apos;&quot;User_userid_seq&quot;&apos;::regclass)</DefaultExpression>
-    </column>
-    <column id="12" parent="10" name="username">
-      <Position>2</Position>
-      <DataType>varchar(100)|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>5363</StateNumber>
-    </column>
-    <column id="13" parent="10" name="fullname">
-      <Position>3</Position>
-      <DataType>varchar(250)|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>5363</StateNumber>
-    </column>
-    <column id="14" parent="10" name="location">
-      <Position>4</Position>
-      <DataType>varchar(50)|0</DataType>
-      <StateNumber>5363</StateNumber>
-    </column>
-    <column id="15" parent="10" name="password">
-      <Position>5</Position>
-      <DataType>varchar(50)|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>5363</StateNumber>
-    </column>
-    <column id="16" parent="10" name="email">
-      <Position>6</Position>
-      <DataType>varchar(100)|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>5363</StateNumber>
-    </column>
-    <column id="17" parent="10" name="website">
-      <Position>7</Position>
-      <DataType>varchar(150)|0</DataType>
-      <StateNumber>5363</StateNumber>
-    </column>
-    <column id="18" parent="10" name="about">
-      <Position>8</Position>
-      <DataType>varchar(300)|0</DataType>
-      <StateNumber>5363</StateNumber>
-    </column>
-    <column id="19" parent="10" name="signdate">
-      <Position>9</Position>
-      <DataType>date|0</DataType>
-      <StateNumber>5363</StateNumber>
-    </column>
-    <column id="20" parent="10" name="lastlogin">
-      <Position>10</Position>
-      <DataType>timestamp|0</DataType>
-      <StateNumber>5363</StateNumber>
-    </column>
-    <index id="21" parent="10" name="User_pkey">
-      <ObjectId>83046</ObjectId>
-      <ColNames>userid</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <index id="22" parent="10" name="User_userid_uindex">
-      <ObjectId>83049</ObjectId>
-      <ColNames>userid</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <index id="23" parent="10" name="User_username_uindex">
-      <ObjectId>83048</ObjectId>
-      <ColNames>username</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="24" parent="10" name="User_pkey">
-      <ObjectId>83047</ObjectId>
-      <ColNames>userid</ColNames>
-      <UnderlyingIndexName>User_pkey</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
   </database-model>
 </dataSource>
