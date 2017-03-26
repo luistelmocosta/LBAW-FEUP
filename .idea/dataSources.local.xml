@@ -8,7 +8,9 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>luiscosta</user-name>
+      <introspection-schemas>lbaw:public</introspection-schemas>
       <resolve-scope>lbaw:luiscosta,public</resolve-scope>
+      <unqualified-resolve-schemas>lbaw:luiscosta,public</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>

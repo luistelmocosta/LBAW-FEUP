@@ -24,15 +24,35 @@ function registerUser($username, $email, $password) {
 }
 
 function correctAuth($username, $password)
-{
-    global $conn;
-    $query = $conn->prepare("SELECT * FROM User WHERE username = ?");
-    $query->execute(array($username));
 
-    $users = $query->fetchAll();
+
+{
+
+    echo '<script language="javascript">';
+    echo 'console.log("Incorrect auth2!")';
+    echo '</script>';
+
+    global $conn;
+    $stmt = $conn->prepare("SELECT * 
+                            FROM User 
+                            WHERE username = ?");
+
+    echo '<script language="javascript">';
+    echo 'console.log("Incorrect auth3!")';
+    echo '</script>';
+    $stmt->execute(array($username));
+
+    echo '<script language="javascript">';
+    echo 'console.log("Incorrect auth4!")';
+    echo '</script>';
+    $users = $stmt->fetchAll();
+
+    echo '<script language="javascript">';
+    echo 'console.log("Incorrect auth5!")';
+    echo '</script>';
 
     if (sizeof($users) != 1) {
-        return -1;
+        return false;
     }
 
     if (password_verify($password, $users[0]['password'])) {
