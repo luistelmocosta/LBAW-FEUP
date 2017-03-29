@@ -31,12 +31,15 @@ INSERT INTO users (username, email, password, locationid, roleid)
 VALUES ('luistelmocosta', 'luistelmocosta@gmail.com', '12345678', 4, 2);
 INSERT INTO users (username, email, password, locationid, roleid)
 VALUES ('admin', 'admin@admin.pt', '12345678', 4, 2);
+INSERT INTO users (username, email, password, locationid, roleid)
+VALUES ('member', 'member@member.pt', '12345678', 3, 1);
+INSERT INTO users (username, email, password, locationid, roleid)
+VALUES ('ronaldo7', 'ronaldo@ronaldo.pt', '12345678', 3, 1);
 
-
-INSERT INTO modregisters(reason, userid_author, userid_target) VALUES ('Offensive Speech', 4, 5);
-INSERT INTO modregisters(reason, userid_author, userid_target) VALUES ('Wrong question structure', 4, 5);
-INSERT INTO modregisters(reason, userid_author, userid_target) VALUES ('Bad username', 4, 5);
-INSERT INTO modregisters(reason, userid_author, userid_target) VALUES ('Third Warning', 4, 5);
+INSERT INTO modregisters(reason, userid_author, userid_target) VALUES ('Offensive Speech', 3, 4);
+INSERT INTO modregisters(reason, userid_author, userid_target) VALUES ('Wrong question structure', 3, 4);
+INSERT INTO modregisters(reason, userid_author, userid_target) VALUES ('Bad username', 3, 4);
+INSERT INTO modregisters(reason, userid_author, userid_target) VALUES ('Third Warning', 4, 4);
 
 INSERT INTO warnings(warningid) VALUES (2);
 INSERT INTO warnings(warningid) VALUES (3);
@@ -44,29 +47,31 @@ INSERT INTO warnings(warningid) VALUES (3);
 INSERT INTO bans(banid, end_date) VALUES (2, '2018-03-29 01:05:00');
 INSERT INTO bans(banid, end_date) VALUES (4, '2018-04-04 01:05:00');
 
-INSERT INTO publications(body, userid) VALUES ('When is the next full moon?', 4);
-INSERT INTO publications(body, userid) VALUES ('What is the cheapest way to go to London?',4);
-INSERT INTO publications(body, userid) VALUES ('Do I get pregnant from sitting in public toilets?', 4);
-INSERT INTO publications(body, userid) VALUES ('Whos the best football player in the world?', 4);
-INSERT INTO publications(body, userid) VALUES ('The next full moon will be on 22nd June 2017', 5);
-INSERT INTO publications(body, userid) VALUES ('You should explore Ryanair/EasyJet flight promotions', 5);
-INSERT INTO publications(body, userid) VALUES ('Please tell me youre not serious, mate', 5);
-INSERT INTO publications(body, userid) VALUES ('That question has no rational answer. Both players are great! Enjoy them while you can!', 5);
+INSERT INTO publications(body, userid) VALUES ('When is the next full moon?', 3);
+INSERT INTO publications(body, userid) VALUES ('What is the cheapest way to go to London?',3);
+INSERT INTO publications(body, userid) VALUES ('Do I get pregnant from sitting in public toilets?', 3);
+INSERT INTO publications(body, userid) VALUES ('Whos the best football player in the world?', 3);
+INSERT INTO publications(body, userid) VALUES ('The next full moon will be on 22nd June 2017', 4);
+INSERT INTO publications(body, userid) VALUES ('You should explore Ryanair/EasyJet flight promotions', 4);
+INSERT INTO publications(body, userid) VALUES ('Please tell me youre not serious, mate', 4);
+INSERT INTO publications(body, userid) VALUES ('That question has no rational answer. Both players are great! Enjoy them while you can!', 4);
+INSERT INTO publications(body, userid) VALUES ('Cristiano Ronaldo only thinks about himself', 5);
+INSERT INTO publications(body, userid) VALUES ('Cristiano Ronaldo carries his National Team', 6);
 
-INSERT INTO questions(questionid ,title, categoryid) VALUES (2,'Full Moon', 6);
-INSERT INTO questions(questionid, title, categoryid) VALUES (3, 'Fly to London', 7);
-INSERT INTO questions(questionid, title, categoryid) VALUES (4,'Pregnancy Alarm', 8);
-INSERT INTO questions(questionid, title, categoryid) VALUES (5,'Best FootballPlayer', 1);
+INSERT INTO questions(publicationid ,title, categoryid) VALUES (1,'Full Moon', 6);
+INSERT INTO questions(publicationid, title, categoryid) VALUES (2, 'Fly to London', 7);
+INSERT INTO questions(publicationid, title, categoryid) VALUES (3,'Pregnancy Alarm', 8);
+INSERT INTO questions(publicationid, title, categoryid) VALUES (4,'Best FootballPlayer', 1);
 
 
-INSERT INTO comments(commentid) VALUES (5);
+INSERT INTO comments(publicationid) VALUES (9);
+INSERT INTO comments(publicationid) VALUES (10);
 
-INSERT INTO questioncomments(commentid, questionid) VALUES (5, 5);
+INSERT INTO questioncomments(commentid, questionid) VALUES (4, 4);
 
+INSERT INTO answers(answerid, questionid) VALUES (5, 1);
 INSERT INTO answers(answerid, questionid) VALUES (6, 2);
 INSERT INTO answers(answerid, questionid) VALUES (7, 3);
-INSERT INTO answers(answerid, questionid) VALUES (8, 4);
-
 
 
 

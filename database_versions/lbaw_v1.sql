@@ -101,7 +101,7 @@ CREATE TABLE publications
 
 CREATE TABLE questions
 (
-    questionid SERIAL PRIMARY KEY,
+    publicationid SERIAL PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
     categoryid INTEGER NOT NULL,
     solved_date TIMESTAMP,
@@ -109,14 +109,14 @@ CREATE TABLE questions
     CONSTRAINT "FK_Question_Category"
         FOREIGN KEY ("categoryid") REFERENCES categories ("categoryid") ON DELETE SET NULL ON UPDATE CASCADE,
     CONSTRAINT "FK_Question_Publication"
-        FOREIGN KEY ("questionid") REFERENCES publications ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
+        FOREIGN KEY ("publicationid") REFERENCES publications ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE comments
 (
-    commentid SERIAL PRIMARY KEY,
+    publicationid SERIAL PRIMARY KEY,
     CONSTRAINT "FK_Comment_Publication"
-        FOREIGN KEY ("commentid") REFERENCES publications ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
+        FOREIGN KEY ("publicationid") REFERENCES publications ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE questioncomments
@@ -124,9 +124,9 @@ CREATE TABLE questioncomments
     commentid SERIAL PRIMARY KEY,
     questionid INTEGER NOT NULL,
     CONSTRAINT "FK_questioncomments_comments"
-        FOREIGN KEY ("commentid") REFERENCES comments ("commentid") ON DELETE CASCADE ON UPDATE CASCADE,
+        FOREIGN KEY ("commentid") REFERENCES comments ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT "FK_questioncomments_questions"
-        FOREIGN KEY ("questionid") REFERENCES questions ("questionid") ON DELETE CASCADE ON UPDATE CASCADE
+        FOREIGN KEY ("questionid") REFERENCES questions ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
@@ -134,13 +134,13 @@ CREATE TABLE questioncomments
 
 CREATE TABLE answers
 (
-    answerid SERIAL PRIMARY KEY,
+    publicationid SERIAL PRIMARY KEY,
     questionid INTEGER NOT NULL,
     solved_date TIMESTAMP,
     CONSTRAINT "FK_answers_questions"
-        FOREIGN KEY ("questionid") REFERENCES questions ("questionid") ON DELETE CASCADE ON UPDATE CASCADE,
+        FOREIGN KEY ("questionid") REFERENCES questions ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT "FK_answers_publications"
-        FOREIGN KEY ("answerid") REFERENCES publications ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
+        FOREIGN KEY ("publicationid") REFERENCES publications ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE answercomments
@@ -148,9 +148,9 @@ CREATE TABLE answercomments
     commentid SERIAL PRIMARY KEY,
     answerid INTEGER NOT NULL,
     CONSTRAINT "FK_answercomments_comments"
-        FOREIGN KEY ("commentid") REFERENCES comments ("commentid") ON DELETE CASCADE ON UPDATE CASCADE,
+        FOREIGN KEY ("commentid") REFERENCES comments ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT "FK_answercomments_answers"
-        FOREIGN KEY ("answerid") REFERENCES answers ("answerid") ON DELETE CASCADE ON UPDATE CASCADE
+        FOREIGN KEY ("answerid") REFERENCES answers ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE tags
@@ -184,7 +184,7 @@ CREATE TABLE questiontags (
     CONSTRAINT "Tag"
         FOREIGN KEY ("tagid") REFERENCES tags ("tagid") ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT "Question"
-        FOREIGN KEY ("questionid") REFERENCES questions ("questionid") ON DELETE CASCADE ON UPDATE CASCADE
+        FOREIGN KEY ("questionid") REFERENCES questions ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE userbadges (
