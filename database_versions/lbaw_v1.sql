@@ -3,8 +3,9 @@
 CREATE TABLE badges
 (
     badgeid SERIAL PRIMARY KEY,
+    name VARCHAR(50),
     description VARCHAR(100) NOT NULL,
-    CONSTRAINT badge_description CHECK(CHAR_LENGTH(description) >= 10 AND CHAR_LENGTH(description) <= 100)
+    CONSTRAINT badge_description CHECK(CHAR_LENGTH(description) >= 2 AND CHAR_LENGTH(description) <= 100)
 );
 
 
@@ -42,8 +43,8 @@ CREATE TABLE users
     website VARCHAR(150),
     signup_date DATE DEFAULT CURRENT_DATE NOT NULL,
     last_login TIMESTAMP,
-    locationid INTEGER NOT NULL,
-    roleid INTEGER NOT NULL,
+    locationid INTEGER,
+    roleid INTEGER,
     CONSTRAINT valid_date CHECK(last_login > signup_date),
     CONSTRAINT valid_password CHECK(CHAR_LENGTH(password) >= 8 AND CHAR_LENGTH(password) < 50),
     CONSTRAINT valid_username CHECK(CHAR_LENGTH(username) >= 1 AND CHAR_LENGTH(username) < 20),

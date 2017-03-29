@@ -9,7 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-03-29.00:31:12.896</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2017-03-29.01:34:23.894</IntrospectionTimestamp>
+      <IntrospectionStateNumber>8799</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -28,5 +29,994 @@
     <schema id="8" parent="2" name="information_schema">
       <ObjectId>11520</ObjectId>
     </schema>
+    <sequence id="9" parent="3" name="answercomments_commentid_seq">
+      <ObjectId>109616</ObjectId>
+      <StateNumber>8688</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="10" parent="3" name="answers_answerid_seq">
+      <ObjectId>109598</ObjectId>
+      <StateNumber>8687</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="11" parent="3" name="badges_badgeid_seq">
+      <ObjectId>109423</ObjectId>
+      <StateNumber>8675</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="12" parent="3" name="bans_banid_seq">
+      <ObjectId>109517</ObjectId>
+      <StateNumber>8682</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="13" parent="3" name="categories_categoryid_seq">
+      <ObjectId>109432</ObjectId>
+      <StateNumber>8676</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="14" parent="3" name="comments_commentid_seq">
+      <ObjectId>109567</ObjectId>
+      <StateNumber>8685</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="15" parent="3" name="locations_locationid_seq">
+      <ObjectId>109450</ObjectId>
+      <StateNumber>8678</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="16" parent="3" name="modregisters_modregisterid_seq">
+      <ObjectId>109485</ObjectId>
+      <StateNumber>8680</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="17" parent="3" name="publications_publicationid_seq">
+      <ObjectId>109530</ObjectId>
+      <StateNumber>8683</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="18" parent="3" name="questioncomments_commentid_seq">
+      <ObjectId>109580</ObjectId>
+      <StateNumber>8686</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="19" parent="3" name="questions_questionid_seq">
+      <ObjectId>109548</ObjectId>
+      <StateNumber>8684</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="20" parent="3" name="tags_tagid_seq">
+      <ObjectId>109634</ObjectId>
+      <StateNumber>8689</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="21" parent="3" name="userroles_roleid_seq">
+      <ObjectId>109441</ObjectId>
+      <StateNumber>8677</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="22" parent="3" name="users_userid_seq">
+      <ObjectId>109458</ObjectId>
+      <StateNumber>8679</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="23" parent="3" name="votes_voteid_seq">
+      <ObjectId>109643</ObjectId>
+      <StateNumber>8690</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="24" parent="3" name="warnings_warningid_seq">
+      <ObjectId>109504</ObjectId>
+      <StateNumber>8681</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="25" parent="3" name="answercomments">
+      <ObjectId>109618</ObjectId>
+      <StateNumber>8688</StateNumber>
+    </table>
+    <table id="26" parent="3" name="answers">
+      <ObjectId>109600</ObjectId>
+      <StateNumber>8688</StateNumber>
+    </table>
+    <table id="27" parent="3" name="badges">
+      <ObjectId>109425</ObjectId>
+      <StateNumber>8692</StateNumber>
+    </table>
+    <table id="28" parent="3" name="bans">
+      <ObjectId>109519</ObjectId>
+      <StateNumber>8682</StateNumber>
+    </table>
+    <table id="29" parent="3" name="categories">
+      <ObjectId>109434</ObjectId>
+      <StateNumber>8684</StateNumber>
+    </table>
+    <table id="30" parent="3" name="comments">
+      <ObjectId>109569</ObjectId>
+      <StateNumber>8688</StateNumber>
+    </table>
+    <table id="31" parent="3" name="locations">
+      <ObjectId>109452</ObjectId>
+      <StateNumber>8679</StateNumber>
+    </table>
+    <table id="32" parent="3" name="modregisters">
+      <ObjectId>109487</ObjectId>
+      <StateNumber>8682</StateNumber>
+    </table>
+    <table id="33" parent="3" name="publications">
+      <ObjectId>109532</ObjectId>
+      <StateNumber>8690</StateNumber>
+    </table>
+    <table id="34" parent="3" name="questioncomments">
+      <ObjectId>109582</ObjectId>
+      <StateNumber>8686</StateNumber>
+    </table>
+    <table id="35" parent="3" name="questions">
+      <ObjectId>109550</ObjectId>
+      <StateNumber>8691</StateNumber>
+    </table>
+    <table id="36" parent="3" name="questiontags">
+      <ObjectId>109663</ObjectId>
+      <StateNumber>8691</StateNumber>
+    </table>
+    <table id="37" parent="3" name="tags">
+      <ObjectId>109636</ObjectId>
+      <StateNumber>8691</StateNumber>
+    </table>
+    <table id="38" parent="3" name="userbadges">
+      <ObjectId>109678</ObjectId>
+      <StateNumber>8692</StateNumber>
+    </table>
+    <table id="39" parent="3" name="userroles">
+      <ObjectId>109443</ObjectId>
+      <StateNumber>8679</StateNumber>
+    </table>
+    <table id="40" parent="3" name="users">
+      <ObjectId>109460</ObjectId>
+      <StateNumber>8692</StateNumber>
+    </table>
+    <table id="41" parent="3" name="votes">
+      <ObjectId>109645</ObjectId>
+      <StateNumber>8690</StateNumber>
+    </table>
+    <table id="42" parent="3" name="warnings">
+      <ObjectId>109506</ObjectId>
+      <StateNumber>8681</StateNumber>
+    </table>
+    <routine id="43" parent="3" name="trigger_auto_ban_on_warning_limit">
+      <ObjectId>109421</ObjectId>
+      <StateNumber>8622</StateNumber>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+    </routine>
+    <column id="44" parent="25" name="commentid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8688</StateNumber>
+      <SequenceName>answercomments_commentid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;answercomments_commentid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="45" parent="25" name="answerid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8688</StateNumber>
+    </column>
+    <index id="46" parent="25" name="answercomments_pkey">
+      <ObjectId>109622</ObjectId>
+      <ColNames>commentid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="47" parent="25" name="answercomments_pkey">
+      <ObjectId>109623</ObjectId>
+      <ColNames>commentid</ColNames>
+      <UnderlyingIndexName>answercomments_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="48" parent="25" name="FK_answercomments_comments">
+      <ObjectId>109624</ObjectId>
+      <ColNames>commentid</ColNames>
+      <RefTableName>comments</RefTableName>
+      <RefKeyName>comments_pkey</RefKeyName>
+      <RefColNames>commentid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="49" parent="25" name="FK_answercomments_answers">
+      <ObjectId>109629</ObjectId>
+      <ColNames>answerid</ColNames>
+      <RefTableName>answers</RefTableName>
+      <RefKeyName>answers_pkey</RefKeyName>
+      <RefColNames>answerid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="50" parent="26" name="answerid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8687</StateNumber>
+      <SequenceName>answers_answerid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;answers_answerid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="51" parent="26" name="questionid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8687</StateNumber>
+    </column>
+    <column id="52" parent="26" name="solved_date">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>8687</StateNumber>
+    </column>
+    <index id="53" parent="26" name="answers_pkey">
+      <ObjectId>109604</ObjectId>
+      <ColNames>answerid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="54" parent="26" name="answers_pkey">
+      <ObjectId>109605</ObjectId>
+      <ColNames>answerid</ColNames>
+      <UnderlyingIndexName>answers_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="55" parent="26" name="FK_answers_publications">
+      <ObjectId>109611</ObjectId>
+      <ColNames>answerid</ColNames>
+      <RefTableName>publications</RefTableName>
+      <RefKeyName>publications_pkey</RefKeyName>
+      <RefColNames>publicationid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="56" parent="26" name="FK_answers_questions">
+      <ObjectId>109606</ObjectId>
+      <ColNames>questionid</ColNames>
+      <RefTableName>questions</RefTableName>
+      <RefKeyName>questions_pkey</RefKeyName>
+      <RefColNames>questionid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="57" parent="27" name="badgeid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8675</StateNumber>
+      <SequenceName>badges_badgeid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;badges_badgeid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="58" parent="27" name="name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <StateNumber>8675</StateNumber>
+    </column>
+    <column id="59" parent="27" name="description">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8675</StateNumber>
+    </column>
+    <index id="60" parent="27" name="badges_pkey">
+      <ObjectId>109430</ObjectId>
+      <ColNames>badgeid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="61" parent="27" name="badges_pkey">
+      <ObjectId>109431</ObjectId>
+      <ColNames>badgeid</ColNames>
+      <UnderlyingIndexName>badges_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <check id="62" parent="27" name="badge_description">
+      <ObjectId>109429</ObjectId>
+      <ColNames>description</ColNames>
+      <Predicate>(char_length((description)::text) &gt;= 2) AND (char_length((description)::text) &lt;= 100)</Predicate>
+    </check>
+    <column id="63" parent="28" name="banid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8682</StateNumber>
+      <SequenceName>bans_banid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;bans_banid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="64" parent="28" name="end_date">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>8682</StateNumber>
+    </column>
+    <index id="65" parent="28" name="bans_pkey">
+      <ObjectId>109523</ObjectId>
+      <ColNames>banid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="66" parent="28" name="bans_pkey">
+      <ObjectId>109524</ObjectId>
+      <ColNames>banid</ColNames>
+      <UnderlyingIndexName>bans_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="67" parent="28" name="FK_Ban_ModRegister">
+      <ObjectId>109525</ObjectId>
+      <ColNames>banid</ColNames>
+      <RefTableName>modregisters</RefTableName>
+      <RefKeyName>modregisters_pkey</RefKeyName>
+      <RefColNames>modregisterid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="68" parent="29" name="categoryid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8676</StateNumber>
+      <SequenceName>categories_categoryid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;categories_categoryid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="69" parent="29" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8676</StateNumber>
+    </column>
+    <index id="70" parent="29" name="categories_pkey">
+      <ObjectId>109439</ObjectId>
+      <ColNames>categoryid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="71" parent="29" name="categories_pkey">
+      <ObjectId>109440</ObjectId>
+      <ColNames>categoryid</ColNames>
+      <UnderlyingIndexName>categories_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <check id="72" parent="29" name="valid_category">
+      <ObjectId>109438</ObjectId>
+      <ColNames>name</ColNames>
+      <Predicate>(char_length((name)::text) &gt;= 3) AND (char_length((name)::text) &lt;= 50)</Predicate>
+    </check>
+    <column id="73" parent="30" name="commentid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8685</StateNumber>
+      <SequenceName>comments_commentid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;comments_commentid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <index id="74" parent="30" name="comments_pkey">
+      <ObjectId>109573</ObjectId>
+      <ColNames>commentid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="75" parent="30" name="comments_pkey">
+      <ObjectId>109574</ObjectId>
+      <ColNames>commentid</ColNames>
+      <UnderlyingIndexName>comments_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="76" parent="30" name="FK_Comment_Publication">
+      <ObjectId>109575</ObjectId>
+      <ColNames>commentid</ColNames>
+      <RefTableName>publications</RefTableName>
+      <RefKeyName>publications_pkey</RefKeyName>
+      <RefColNames>publicationid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="77" parent="31" name="locationid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8678</StateNumber>
+      <SequenceName>locations_locationid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;locations_locationid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="78" parent="31" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8678</StateNumber>
+    </column>
+    <index id="79" parent="31" name="locations_pkey">
+      <ObjectId>109456</ObjectId>
+      <ColNames>locationid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="80" parent="31" name="locations_pkey">
+      <ObjectId>109457</ObjectId>
+      <ColNames>locationid</ColNames>
+      <UnderlyingIndexName>locations_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="81" parent="32" name="modregisterid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8680</StateNumber>
+      <SequenceName>modregisters_modregisterid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;modregisters_modregisterid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="82" parent="32" name="date_creation">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8680</StateNumber>
+      <DefaultExpression>now()</DefaultExpression>
+    </column>
+    <column id="83" parent="32" name="reason">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8680</StateNumber>
+    </column>
+    <column id="84" parent="32" name="userid_author">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8680</StateNumber>
+    </column>
+    <column id="85" parent="32" name="userid_target">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8680</StateNumber>
+    </column>
+    <index id="86" parent="32" name="modregisters_pkey">
+      <ObjectId>109492</ObjectId>
+      <ColNames>modregisterid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="87" parent="32" name="modregisters_pkey">
+      <ObjectId>109493</ObjectId>
+      <ColNames>modregisterid</ColNames>
+      <UnderlyingIndexName>modregisters_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="88" parent="32" name="author">
+      <ObjectId>109494</ObjectId>
+      <ColNames>userid_author</ColNames>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>userid</RefColNames>
+      <OnDelete>set-null</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="89" parent="32" name="target">
+      <ObjectId>109499</ObjectId>
+      <ColNames>userid_target</ColNames>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>userid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="90" parent="33" name="publicationid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8799</StateNumber>
+      <SequenceName>publications_publicationid_seq</SequenceName>
+    </column>
+    <column id="91" parent="33" name="body">
+      <Position>2</Position>
+      <DataType>varchar(1000)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8683</StateNumber>
+    </column>
+    <column id="92" parent="33" name="creation_date">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8683</StateNumber>
+      <DefaultExpression>now()</DefaultExpression>
+    </column>
+    <column id="93" parent="33" name="userid">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8683</StateNumber>
+    </column>
+    <index id="94" parent="33" name="publications_pkey">
+      <ObjectId>109541</ObjectId>
+      <ColNames>publicationid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="95" parent="33" name="publications_pkey">
+      <ObjectId>109542</ObjectId>
+      <ColNames>publicationid</ColNames>
+      <UnderlyingIndexName>publications_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="96" parent="33" name="FK_publications_users">
+      <ObjectId>109543</ObjectId>
+      <ColNames>userid</ColNames>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>userid</RefColNames>
+      <OnDelete>set-null</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <check id="97" parent="33" name="body_length">
+      <ObjectId>109537</ObjectId>
+      <ColNames>body</ColNames>
+      <Predicate>(char_length((body)::text) &gt;= 10) AND (char_length((body)::text) &lt;= 1000)</Predicate>
+    </check>
+    <column id="98" parent="34" name="commentid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8686</StateNumber>
+      <SequenceName>questioncomments_commentid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;questioncomments_commentid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="99" parent="34" name="questionid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8686</StateNumber>
+    </column>
+    <index id="100" parent="34" name="questioncomments_pkey">
+      <ObjectId>109586</ObjectId>
+      <ColNames>commentid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="101" parent="34" name="questioncomments_pkey">
+      <ObjectId>109587</ObjectId>
+      <ColNames>commentid</ColNames>
+      <UnderlyingIndexName>questioncomments_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="102" parent="34" name="FK_questioncomments_comments">
+      <ObjectId>109588</ObjectId>
+      <ColNames>commentid</ColNames>
+      <RefTableName>comments</RefTableName>
+      <RefKeyName>comments_pkey</RefKeyName>
+      <RefColNames>commentid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="103" parent="34" name="FK_questioncomments_questions">
+      <ObjectId>109593</ObjectId>
+      <ColNames>questionid</ColNames>
+      <RefTableName>questions</RefTableName>
+      <RefKeyName>questions_pkey</RefKeyName>
+      <RefColNames>questionid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="104" parent="35" name="questionid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8684</StateNumber>
+      <SequenceName>questions_questionid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;questions_questionid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="105" parent="35" name="title">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8684</StateNumber>
+    </column>
+    <column id="106" parent="35" name="categoryid">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8684</StateNumber>
+    </column>
+    <column id="107" parent="35" name="solved_date">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>8684</StateNumber>
+    </column>
+    <index id="108" parent="35" name="questions_pkey">
+      <ObjectId>109555</ObjectId>
+      <ColNames>questionid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="109" parent="35" name="questions_pkey">
+      <ObjectId>109556</ObjectId>
+      <ColNames>questionid</ColNames>
+      <UnderlyingIndexName>questions_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="110" parent="35" name="FK_Question_Publication">
+      <ObjectId>109562</ObjectId>
+      <ColNames>questionid</ColNames>
+      <RefTableName>publications</RefTableName>
+      <RefKeyName>publications_pkey</RefKeyName>
+      <RefColNames>publicationid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="111" parent="35" name="FK_Question_Category">
+      <ObjectId>109557</ObjectId>
+      <ColNames>categoryid</ColNames>
+      <RefTableName>categories</RefTableName>
+      <RefKeyName>categories_pkey</RefKeyName>
+      <RefColNames>categoryid</RefColNames>
+      <OnDelete>set-null</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <check id="112" parent="35" name="title_length">
+      <ObjectId>109554</ObjectId>
+      <ColNames>title</ColNames>
+      <Predicate>(char_length((title)::text) &gt;= 3) AND (char_length((title)::text) &lt;= 50)</Predicate>
+    </check>
+    <column id="113" parent="36" name="questionid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8691</StateNumber>
+    </column>
+    <column id="114" parent="36" name="tagid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8691</StateNumber>
+    </column>
+    <index id="115" parent="36" name="questiontags_pkey">
+      <ObjectId>109666</ObjectId>
+      <ColNames>questionid
+tagid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="116" parent="36" name="questiontags_pkey">
+      <ObjectId>109667</ObjectId>
+      <ColNames>questionid
+tagid</ColNames>
+      <UnderlyingIndexName>questiontags_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="117" parent="36" name="Question">
+      <ObjectId>109673</ObjectId>
+      <ColNames>questionid</ColNames>
+      <RefTableName>questions</RefTableName>
+      <RefKeyName>questions_pkey</RefKeyName>
+      <RefColNames>questionid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="118" parent="36" name="Tag">
+      <ObjectId>109668</ObjectId>
+      <ColNames>tagid</ColNames>
+      <RefTableName>tags</RefTableName>
+      <RefKeyName>tags_pkey</RefKeyName>
+      <RefColNames>tagid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="119" parent="37" name="tagid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8689</StateNumber>
+      <SequenceName>tags_tagid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;tags_tagid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="120" parent="37" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8689</StateNumber>
+    </column>
+    <index id="121" parent="37" name="tags_pkey">
+      <ObjectId>109641</ObjectId>
+      <ColNames>tagid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="122" parent="37" name="tags_pkey">
+      <ObjectId>109642</ObjectId>
+      <ColNames>tagid</ColNames>
+      <UnderlyingIndexName>tags_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <check id="123" parent="37" name="valid_tag">
+      <ObjectId>109640</ObjectId>
+      <ColNames>name</ColNames>
+      <Predicate>(char_length((name)::text) &gt;= 3) AND (char_length((name)::text) &lt;= 20)</Predicate>
+    </check>
+    <column id="124" parent="38" name="userid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8692</StateNumber>
+    </column>
+    <column id="125" parent="38" name="badgeid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8692</StateNumber>
+    </column>
+    <index id="126" parent="38" name="userbadges_pkey">
+      <ObjectId>109681</ObjectId>
+      <ColNames>userid
+badgeid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="127" parent="38" name="userbadges_pkey">
+      <ObjectId>109682</ObjectId>
+      <ColNames>userid
+badgeid</ColNames>
+      <UnderlyingIndexName>userbadges_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="128" parent="38" name="User">
+      <ObjectId>109688</ObjectId>
+      <ColNames>userid</ColNames>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>userid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="129" parent="38" name="Badge">
+      <ObjectId>109683</ObjectId>
+      <ColNames>badgeid</ColNames>
+      <RefTableName>badges</RefTableName>
+      <RefKeyName>badges_pkey</RefKeyName>
+      <RefColNames>badgeid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="130" parent="39" name="roleid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8677</StateNumber>
+      <SequenceName>userroles_roleid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;userroles_roleid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="131" parent="39" name="name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8677</StateNumber>
+    </column>
+    <index id="132" parent="39" name="userroles_pkey">
+      <ObjectId>109448</ObjectId>
+      <ColNames>roleid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="133" parent="39" name="userroles_pkey">
+      <ObjectId>109449</ObjectId>
+      <ColNames>roleid</ColNames>
+      <UnderlyingIndexName>userroles_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <check id="134" parent="39" name="user_role">
+      <ObjectId>109447</ObjectId>
+      <ColNames>name</ColNames>
+      <Predicate>(name)::text = ANY ((ARRAY[&apos;Admin&apos;::character varying, &apos;Editor&apos;::character varying, &apos;Authenticated&apos;::character varying])::text[])</Predicate>
+    </check>
+    <column id="135" parent="40" name="userid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8679</StateNumber>
+      <SequenceName>users_userid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;users_userid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="136" parent="40" name="username">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8679</StateNumber>
+    </column>
+    <column id="137" parent="40" name="email">
+      <Position>3</Position>
+      <DataType>varchar(70)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8679</StateNumber>
+    </column>
+    <column id="138" parent="40" name="password">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8679</StateNumber>
+    </column>
+    <column id="139" parent="40" name="fullname">
+      <Position>5</Position>
+      <DataType>varchar(200)|0</DataType>
+      <StateNumber>8679</StateNumber>
+    </column>
+    <column id="140" parent="40" name="about">
+      <Position>6</Position>
+      <DataType>varchar(500)|0</DataType>
+      <StateNumber>8679</StateNumber>
+    </column>
+    <column id="141" parent="40" name="website">
+      <Position>7</Position>
+      <DataType>varchar(150)|0</DataType>
+      <StateNumber>8679</StateNumber>
+    </column>
+    <column id="142" parent="40" name="signup_date">
+      <Position>8</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8679</StateNumber>
+      <DefaultExpression>(&apos;now&apos;::text)::date</DefaultExpression>
+    </column>
+    <column id="143" parent="40" name="last_login">
+      <Position>9</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>8679</StateNumber>
+    </column>
+    <column id="144" parent="40" name="locationid">
+      <Position>10</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>8679</StateNumber>
+    </column>
+    <column id="145" parent="40" name="roleid">
+      <Position>11</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>8679</StateNumber>
+    </column>
+    <index id="146" parent="40" name="users_pkey">
+      <ObjectId>109473</ObjectId>
+      <ColNames>userid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="147" parent="40" name="users_pkey">
+      <ObjectId>109474</ObjectId>
+      <ColNames>userid</ColNames>
+      <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="148" parent="40" name="FK_User_Location">
+      <ObjectId>109475</ObjectId>
+      <ColNames>locationid</ColNames>
+      <RefTableName>locations</RefTableName>
+      <RefKeyName>locations_pkey</RefKeyName>
+      <RefColNames>locationid</RefColNames>
+      <OnDelete>set-null</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="149" parent="40" name="FK_User_UserRole">
+      <ObjectId>109480</ObjectId>
+      <ColNames>roleid</ColNames>
+      <RefTableName>userroles</RefTableName>
+      <RefKeyName>userroles_pkey</RefKeyName>
+      <RefColNames>roleid</RefColNames>
+      <OnDelete>set-null</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <check id="150" parent="40" name="valid_username">
+      <ObjectId>109467</ObjectId>
+      <ColNames>username</ColNames>
+      <Predicate>(char_length((username)::text) &gt;= 1) AND (char_length((username)::text) &lt; 20)</Predicate>
+    </check>
+    <check id="151" parent="40" name="valid_email">
+      <ObjectId>109469</ObjectId>
+      <ColNames>email</ColNames>
+      <Predicate>(char_length((email)::text) &gt;= 6) AND (char_length((email)::text) &lt;= 50)</Predicate>
+    </check>
+    <check id="152" parent="40" name="valid_password">
+      <ObjectId>109466</ObjectId>
+      <ColNames>password</ColNames>
+      <Predicate>(char_length((password)::text) &gt;= 8) AND (char_length((password)::text) &lt; 50)</Predicate>
+    </check>
+    <check id="153" parent="40" name="valid_fullname">
+      <ObjectId>109468</ObjectId>
+      <ColNames>fullname</ColNames>
+      <Predicate>(char_length((fullname)::text) &gt;= 6) AND (char_length((fullname)::text) &lt;= 50)</Predicate>
+    </check>
+    <check id="154" parent="40" name="valid_date">
+      <ObjectId>109465</ObjectId>
+      <ColNames>last_login
+signup_date</ColNames>
+      <Predicate>last_login &gt; signup_date</Predicate>
+    </check>
+    <column id="155" parent="41" name="voteid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8690</StateNumber>
+      <SequenceName>votes_voteid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;votes_voteid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="156" parent="41" name="value">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8690</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="157" parent="41" name="publicationid">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8690</StateNumber>
+    </column>
+    <column id="158" parent="41" name="userid">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8690</StateNumber>
+    </column>
+    <index id="159" parent="41" name="votes_pkey">
+      <ObjectId>109651</ObjectId>
+      <ColNames>voteid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="160" parent="41" name="votes_pkey">
+      <ObjectId>109652</ObjectId>
+      <ColNames>voteid</ColNames>
+      <UnderlyingIndexName>votes_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="161" parent="41" name="FK_Vote_Publication">
+      <ObjectId>109653</ObjectId>
+      <ColNames>publicationid</ColNames>
+      <RefTableName>publications</RefTableName>
+      <RefKeyName>publications_pkey</RefKeyName>
+      <RefColNames>publicationid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="162" parent="41" name="FK_Vote_User">
+      <ObjectId>109658</ObjectId>
+      <ColNames>userid</ColNames>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>userid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <check id="163" parent="41" name="vote_values">
+      <ObjectId>109650</ObjectId>
+      <ColNames>value</ColNames>
+      <Predicate>((value = 0) OR (value = 1)) OR (value = (-1))</Predicate>
+    </check>
+    <column id="164" parent="42" name="warningid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8681</StateNumber>
+      <SequenceName>warnings_warningid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;warnings_warningid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <index id="165" parent="42" name="warnings_pkey">
+      <ObjectId>109510</ObjectId>
+      <ColNames>warningid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="166" parent="42" name="warnings_pkey">
+      <ObjectId>109511</ObjectId>
+      <ColNames>warningid</ColNames>
+      <UnderlyingIndexName>warnings_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="167" parent="42" name="FK_warnings_modregisters">
+      <ObjectId>109512</ObjectId>
+      <ColNames>warningid</ColNames>
+      <RefTableName>modregisters</RefTableName>
+      <RefKeyName>modregisters_pkey</RefKeyName>
+      <RefColNames>modregisterid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <argument id="168" parent="43">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0</DataType>
+    </argument>
   </database-model>
 </dataSource>
