@@ -67,11 +67,51 @@ INSERT INTO questions(publicationid, title, categoryid) VALUES (4,'Best Football
 INSERT INTO comments(publicationid) VALUES (9);
 INSERT INTO comments(publicationid) VALUES (10);
 
-INSERT INTO questioncomments(commentid, questionid) VALUES (4, 4);
+INSERT INTO questioncomments(commentid, questionid) VALUES (9, 4);
 
-INSERT INTO answers(answerid, questionid) VALUES (5, 1);
-INSERT INTO answers(answerid, questionid) VALUES (6, 2);
-INSERT INTO answers(answerid, questionid) VALUES (7, 3);
+INSERT INTO answers(publicationid, questionid) VALUES (5, 1);
+INSERT INTO answers(publicationid, questionid) VALUES (6, 2);
+INSERT INTO answers(publicationid, questionid) VALUES (7, 3);
+
+
+INSERT INTO answercomments(commentid, answerid) VALUES (10, 5);
+
+INSERT INTO tags(name) VALUES ('real madrid');
+INSERT INTO tags(name) VALUES ('moon');
+INSERT INTO tags(name) VALUES ('flights');
+INSERT INTO tags(name) VALUES ('pregnancy');
+INSERT INTO tags(name) VALUES ('health');
+INSERT INTO tags(name) VALUES ('football');
+
+INSERT INTO votes("value", publicationid, userid) VALUES (1, 1, 1);
+INSERT INTO votes("value", publicationid, userid) VALUES (0, 1, 2);
+INSERT INTO votes("value", publicationid, userid) VALUES (-1, 2, 2);
+INSERT INTO votes("value", publicationid, userid) VALUES (1, 2, 3);
+INSERT INTO votes("value", publicationid, userid) VALUES (1, 3, 3);
+
+
+INSERT INTO questiontags(questionid, tagid) VALUES (1, 2);
+INSERT INTO questiontags(questionid, tagid) VALUES (2, 3);
+INSERT INTO questiontags(questionid, tagid) VALUES (3, 4);
+INSERT INTO questiontags(questionid, tagid) VALUES (3, 5);
+INSERT INTO questiontags(questionid, tagid) VALUES (4, 1);
+INSERT INTO questiontags(questionid, tagid) VALUES (4, 6);
+
+
+INSERT INTO userbadges(userid, badgeid) VALUES (1, 1);
+INSERT INTO userbadges(userid, badgeid) VALUES (1, 2);
+INSERT INTO userbadges(userid, badgeid) VALUES (1, 3);
+INSERT INTO userbadges(userid, badgeid) VALUES (1, 4);
+INSERT INTO userbadges(userid, badgeid) VALUES (1, 5);
+INSERT INTO userbadges(userid, badgeid) VALUES (2, 1);
+INSERT INTO userbadges(userid, badgeid) VALUES (3, 1);
+INSERT INTO userbadges(userid, badgeid) VALUES (3, 2);
+INSERT INTO userbadges(userid, badgeid) VALUES (4, 1);
+INSERT INTO userbadges(userid, badgeid) VALUES (4, 2);
+INSERT INTO userbadges(userid, badgeid) VALUES (4, 3);
+INSERT INTO userbadges(userid, badgeid) VALUES (4, 5);
+
+
 
 
 

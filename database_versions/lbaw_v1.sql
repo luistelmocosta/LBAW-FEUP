@@ -94,6 +94,7 @@ CREATE TABLE publications
     body VARCHAR(1000) NOT NULL ,
     creation_date TIMESTAMP DEFAULT now() NOT NULL,
     userid INTEGER NOT NULL,
+    last_edit_date TIMESTAMP,
     CONSTRAINT body_length CHECK (CHAR_LENGTH(body) >= 10 AND CHAR_LENGTH(body) <= 1000),
     CONSTRAINT "FK_publications_users"
         FOREIGN KEY ("userid") REFERENCES users ("userid") ON DELETE SET NULL ON UPDATE CASCADE
@@ -167,7 +168,7 @@ CREATE TABLE tags
 CREATE TABLE votes
 (
     voteid SERIAL PRIMARY KEY,
-    VALUE INTEGER DEFAULT 0 NOT NULL,
+    values INTEGER DEFAULT 0 NOT NULL,
     publicationid INTEGER NOT NULL,
     userid INTEGER NOT NULL,
     CONSTRAINT vote_values CHECK(VALUE = 0 OR VALUE = 1 OR VALUE = -1),

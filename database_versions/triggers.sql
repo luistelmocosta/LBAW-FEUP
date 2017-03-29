@@ -14,11 +14,11 @@ FOR EACH ROW EXECUTE PROCEDURE trigger_auto_ban_on_warning_limit();
 CREATE FUNCTION trigger_update_question_timestamp()
   RETURNS "trigger" AS $func$
 BEGIN
-	UPDATE Question SET solved_date = now() WHERE id = NEW.question_id;
+	UPDATE publications SET last_edit_date = now() WHERE id = NEW.publicationid;
 	RETURN NULL;
 END;
 $func$  LANGUAGE plpgsql;
 
-CREATE TRIGGER answer_update_question_timestamp AFTER INSERT OR UPDATE ON answers
+CREATE TRIGGER answer_update_question_timestamp AFTER INSERT OR UPDATE ON publications
    FOR EACH ROW EXECUTE PROCEDURE trigger_update_question_timestamp();
 
