@@ -46,7 +46,7 @@ CREATE TABLE users
     locationid INTEGER,
     roleid INTEGER,
     CONSTRAINT valid_date CHECK(last_login > signup_date),
-    CONSTRAINT valid_password CHECK(CHAR_LENGTH(password) >= 8 AND CHAR_LENGTH(password) < 50),
+    CONSTRAINT valid_password CHECK(CHAR_LENGTH(password) >= 6 AND CHAR_LENGTH(password) < 50),
     CONSTRAINT valid_username CHECK(CHAR_LENGTH(username) >= 1 AND CHAR_LENGTH(username) < 20),
     CONSTRAINT valid_fullname CHECK(CHAR_LENGTH(fullname) >= 6 AND CHAR_LENGTH(fullname) <= 50),
     CONSTRAINT valid_email CHECK(CHAR_LENGTH(email) >= 6 AND CHAR_LENGTH(email) <= 50),
@@ -158,7 +158,7 @@ CREATE TABLE tags
 (
     tagid SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
-    CONSTRAINT valid_tag CHECK(CHAR_LENGTH(name) >= 3 AND CHAR_LENGTH(name) <= 20)
+    CONSTRAINT valid_tag CHECK(CHAR_LENGTH(name) >= 3 AND CHAR_LENGTH(name) <= 30)
 );
 
 
@@ -171,7 +171,7 @@ CREATE TABLE votes
     values INTEGER DEFAULT 0 NOT NULL,
     publicationid INTEGER NOT NULL,
     userid INTEGER NOT NULL,
-    CONSTRAINT vote_values CHECK(VALUE = 0 OR VALUE = 1 OR VALUE = -1),
+    CONSTRAINT vote_values CHECK(values = 0 OR values = 1 OR values = -1),
     CONSTRAINT "FK_Vote_Publication"
         FOREIGN KEY ("publicationid") REFERENCES publications ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT "FK_Vote_User"

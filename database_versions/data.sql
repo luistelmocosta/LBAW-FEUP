@@ -83,11 +83,11 @@ INSERT INTO tags(name) VALUES ('pregnancy');
 INSERT INTO tags(name) VALUES ('health');
 INSERT INTO tags(name) VALUES ('football');
 
-INSERT INTO votes("value", publicationid, userid) VALUES (1, 1, 1);
-INSERT INTO votes("value", publicationid, userid) VALUES (0, 1, 2);
-INSERT INTO votes("value", publicationid, userid) VALUES (-1, 2, 2);
-INSERT INTO votes("value", publicationid, userid) VALUES (1, 2, 3);
-INSERT INTO votes("value", publicationid, userid) VALUES (1, 3, 3);
+INSERT INTO votes(values, publicationid, userid) VALUES (1, 1, 1);
+INSERT INTO votes(values, publicationid, userid) VALUES (0, 1, 2);
+INSERT INTO votes(values, publicationid, userid) VALUES (-1, 2, 2);
+INSERT INTO votes(values, publicationid, userid) VALUES (1, 2, 3);
+INSERT INTO votes(values, publicationid, userid) VALUES (1, 3, 3);
 
 
 INSERT INTO questiontags(questionid, tagid) VALUES (1, 2);
