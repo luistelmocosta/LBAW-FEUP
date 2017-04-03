@@ -1,18 +1,21 @@
-DROP TRIGGER IF EXISTS answer_update_question_timestamp ON public.publications;
+--CREATE VIEW users_with_solved_questions AS
+  --SELECT * from questions INNER JOIN publications ON questions.publicationid = publications.publicationid
+  --WHERE solved_date IS NOT NULL;
 
-CREATE OR REPLACE FUNCTION trigger_update_question_timestamp()
-  RETURNS TRIGGER AS $func$
+
+CREATE OR REPLACE FUNCTION solved_questions_user()
+  RETURNS TABLE (userid INTEGER) AS $func$
 BEGIN
-  UPDATE publications SET new.last_edit_date = now();
+  RETURN QUERY
+  SELECT COUNT(*) FROM questions INNER JOIN publications ON questions.publicationid = publications.publicationid
+  WHERE solved_date IS NOT NULL AND publications.userid=4;
 END;
+
 $func$  LANGUAGE plpgsql;
 
-CREATE TRIGGER answer_update_question_timestamp BEFORE INSERT OR UPDATE ON publications
-FOR EACH ROW EXECUTE PROCEDURE trigger_update_question_timestamp();
 
-CREATE OR REPLACE FUNCTION check_correct_generalization()
-  RETURNS TRIGGER AS $func$
-  BEGIN
-  UPDATE
-$func$
+
+SELECT COUNT(*) FROM answers INNER JOIN publications ON answers.publicationid = publications.publicationid
+WHERE solved_date IS NOT NULL AND userid=4;
+
 
