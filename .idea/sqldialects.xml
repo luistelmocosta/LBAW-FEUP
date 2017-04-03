@@ -3,6 +3,7 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/database_versions/autoban.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/database_versions/bigdata.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/database_versions/checkpublication.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/database_versions/getusernamefromquestion.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/database_versions/lbaw_v1.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/database_versions/search.sql" dialect="PostgreSQL" />
