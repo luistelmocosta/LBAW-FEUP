@@ -367,3 +367,72 @@ CREATE TRIGGER own_content_vote_trigger AFTER INSERT OR UPDATE ON votes
 
 
 
+--------------------------------------------------------------------
+
+---- This function adds a user to the ban table when he exceeds the warning limit (3)
+
+DROP TRIGGER IF EXISTS auto_ban_on_warning_limit ON public.warnings;
+
+
+CREATE OR REPLACE FUNCTION trigger_auto_ban_on_warning_limit()
+    RETURNS "trigger" AS $func$
+BEGIN
+    IF (SELECT COUNT(*)
+        FROM modregisters INNER JOIN users ON modregisters.userid_author = users.userid
+            INNER JOIN warnings ON modregisters.modregisterid = warnings.warningid
+        GROUP BY userid_target) = 3 THEN
+        INSERT INTO bans(banid) VALUES(NEW.warningid);
+    END IF;
+    RETURN NULL;
+END;
+$func$  LANGUAGE plpgsql;
+
+CREATE TRIGGER auto_ban_on_warning_limit AFTER INSERT ON warnings
+FOR EACH ROW EXECUTE PROCEDURE trigger_auto_ban_on_warning_limit();
+
+--- This function updates the column last_edit_date with the current timestamp everytime there is an update on the table
+
+DROP TRIGGER IF EXISTS answer_update_question_timestamp ON public.publications;
+
+CREATE OR REPLACE FUNCTION trigger_update_question_timestamp()
+    RETURNS TRIGGER AS $func$
+BEGIN
+    new.last_edit_date := now();
+    RETURN NEW;
+END;
+$func$  LANGUAGE plpgsql;
+
+CREATE TRIGGER answer_update_question_timestamp BEFORE INSERT OR UPDATE ON publications
+FOR EACH ROW EXECUTE PROCEDURE trigger_update_question_timestamp();
+
+
+---- This function returns the username of the user of a given question
+
+CREATE OR REPLACE FUNCTION getusernamefromquestion(questionid integer)
+    RETURNS VARCHAR AS $$
+BEGIN
+    SELECT users.username
+    FROM publications
+        INNER JOIN questions on publications.publicationid = questions.publicationid
+        INNER JOIN users on publications.userid = users.userid
+    where questions.publicationid = $1;
+END;
+
+$$ LANGUAGE plpgsql;
+
+---- This is the Full text search function
+
+CREATE OR REPLACE FUNCTION search_questions(psearch text)
+    RETURNS TABLE (questionid INTEGER) AS $func$
+BEGIN
+    return QUERY
+    SELECT DISTINCT publications.publicationid
+    FROM questions, publications
+    WHERE to_tsvector(coalesce(questions.title,'') || ' ' || coalesce(publications.body,'')) @@ to_tsquery(psearch)
+          OR questions.publicationid IN (
+        SELECT DISTINCT(answers.questionid) FROM answers INNER JOIN publications ON answers.publicationid = publications.publicationid
+        WHERE to_tsvector(coalesce(publications.body)) @@ to_tsquery(psearch)
+    )
+    ;
+END
+$func$  LANGUAGE plpgsql;
