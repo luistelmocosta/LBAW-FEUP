@@ -8,7 +8,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    {include file="./log_modal.tpl"}
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -20,38 +19,18 @@
         } );
     </script>
 
-<<<<<<< HEAD:common/narrow_header.tpl
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles/main.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles/responsive.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles/clean-blog.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/fonts/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/fonts/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/styles/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/styles/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/styles/clean-blog.min.css">
 
     <!-- JS -->
-    <script type="text/javascript" src="../js/vendor/bootstrap.js"></script>
-    <script type="text/javascript" src="../js/Chart.js"></script>
-    <script type="text/javascript" src="../js/main.js"></script>
-=======
-    {include file="./log_modal.tpl"}
-
-
-    {HTML::style('styles/bootstrap.css')}
-    {HTML::style('styles/font-awesome.min.css')}
-    {HTML::style('styles/font-awesome.css')}
-
-    <link	rel="stylesheet"	href="{$BASE_URL}/css/styles/bootstrap.css">
-    <link	rel="stylesheet"	href="{$BASE_URL}/css/fonts/font-awesome.min.css">
-    <link	rel="stylesheet"	href="{$BASE_URL}/css/fonts/font-awesome.css">
-    <link	rel="stylesheet"	href="{$BASE_URL}/css/styles/main.css">
-    <link	rel="stylesheet"	href="{$BASE_URL}/css/styles/responsive.css">
-    <link	rel="stylesheet"	href="{$BASE_URL}/css/styles/clean-blog.css">
-
-
-    <script type="text/javascript" src="{$BASE_URL}/javascript/vendor/bootstrap.js"></script>
-    <script type="text/javascript" src="{$BASE_URL}/javascript/main.js"></script>
->>>>>>> Setup:view/templates/common/narrow_header.tpl
+    <script type="text/javascript" src="../../../javascript/vendor/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../javascript/Chart.js"></script>
+    <script type="text/javascript" src="../../../javascript/main.js"></script>
     <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
 
@@ -68,7 +47,7 @@
             </button>
             <div class="site-logo">
                 <a class="navbar-brand" title="AskMe" href="../index.php">
-                    <img class="navbar-site-logo" src="../images/logo3.png">
+                    <img class="navbar-site-logo" src="../../../images/logo3.png">
                 </a>
             </div>
         </div>

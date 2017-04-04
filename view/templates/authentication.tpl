@@ -1,14 +1,9 @@
-
+{include file= 'common/narrow_header.tpl'}
 
 <body id="site-body" class="container">
 <div class="clearfix qa-main">
-
     <div class = "container">
-
-
-
         <div class = "col-sm-8 col-sm-offset-2">
-
             <!-- TABS START -->
             <ul class = "nav nav-tabs">
                 <li class = "active">
@@ -19,10 +14,8 @@
                 </li>
             </ul>
             <!-- END TABS -->
-
             <!-- TAB CONTENT -->
             <div class = "tab-content">
-
                 <!-- LOGIN TAB PANEL -->
                 <div id = "login" role = "tabpanel" class = "tab-pane container-white active">
                     <form class = "form-horizontal" action = "" method = "POST">
@@ -32,7 +25,6 @@
                                 <input type = "text" name = "username" class = "form-control" placeholder = "Username" required = "" autofocus = "" autocomplete = "off">
                             </div>
                         </div>
-
                         <div class = "form-group">
                             <label for = "password" class = "col-sm-3 control-label">Password</label>
                             <div class = "col-sm-8">

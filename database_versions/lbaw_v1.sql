@@ -291,6 +291,7 @@ CREATE OR REPLACE FUNCTION user_profile(puser_id int)
         username character varying(50),
         email character varying(100),
         type character varying(10),
+        badge character varying(50),
         created_at date,
         count_votes_rating_received INT,
         count_questions BIGINT,

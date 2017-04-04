@@ -41,8 +41,8 @@ $conn->exec('SET SCHEMA \'public\'');
 include_once($BASE_DIR	.	'lib/smarty/Smarty.class.php');
 
 $smarty	=	new	Smarty;
-$smarty->template_dir	=	$BASE_DIR	.	'view/templates/';
-$smarty->compile_dir	=	$BASE_DIR	.	'view/templates_c/';
+$smarty->setTemplateDir($BASE_DIR	.	'view/templates/');
+$smarty->setCompileDir($BASE_DIR	.	'view/templates_c/');
 
 
 // Send some common variables to Smarty.

@@ -6,5 +6,5 @@
  * Time: 9:32 PM
  */
 
-include_once('config/init.php');
-$smarty->display($BASE_DIR . 'view/template/authentication.tpl');
+include_once('../../../config/init.php');
+$smarty->display('authentication.tpl');
