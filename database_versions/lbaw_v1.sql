@@ -15,9 +15,6 @@ CREATE TABLE categories
     CONSTRAINT valid_category CHECK(CHAR_LENGTH(name) >= 3 AND CHAR_LENGTH(name) <= 50)
 );
 
-
-
-
 CREATE TABLE userroles
 (
     roleid SERIAL PRIMARY KEY,
@@ -50,10 +47,13 @@ CREATE TABLE users
     CONSTRAINT valid_fullname CHECK(CHAR_LENGTH(fullname) >= 6 AND CHAR_LENGTH(fullname) <= 50),
     CONSTRAINT valid_email CHECK(CHAR_LENGTH(email) >= 6 AND CHAR_LENGTH(email) <= 50),
     CONSTRAINT "FK_User_Location"
-        FOREIGN KEY ("locationid") REFERENCES locations ("locationid") ON DELETE SET NULL ON UPDATE CASCADE,
+    FOREIGN KEY ("locationid") REFERENCES locations ("locationid") ON DELETE SET NULL ON UPDATE CASCADE,
     CONSTRAINT "FK_User_UserRole"
-        FOREIGN KEY ("roleid") REFERENCES userroles ("roleid") ON DELETE SET NULL ON UPDATE CASCADE
+    FOREIGN KEY ("roleid") REFERENCES userroles ("roleid") ON DELETE SET NULL ON UPDATE CASCADE
 );
+
+CREATE INDEX users_username ON users USING hash(username);
+CREATE INDEX users_email ON users USING hash(email);
 
 CREATE TABLE modregisters
 (
@@ -63,41 +63,44 @@ CREATE TABLE modregisters
     userid_author INTEGER NOT NULL,
     userid_target INTEGER NOT NULL,
     CONSTRAINT author
-        FOREIGN KEY ("userid_author") REFERENCES users ("userid") ON DELETE SET NULL ON UPDATE CASCADE,
+    FOREIGN KEY ("userid_author") REFERENCES users ("userid") ON DELETE SET NULL ON UPDATE CASCADE,
     CONSTRAINT target
-        FOREIGN KEY ("userid_target") REFERENCES users ("userid") ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY ("userid_target") REFERENCES users ("userid") ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+CREATE INDEX ixfk_modregister_target_user ON modregisters USING btree (userid_target);
+CREATE INDEX ixfk_modregister_author_user ON modregisters USING btree (userid_author);
 
 CREATE TABLE warnings
 (
     warningid SERIAL PRIMARY KEY,
     CONSTRAINT "FK_warnings_modregisters"
-        FOREIGN KEY ("warningid") REFERENCES modregisters ("modregisterid") ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY ("warningid") REFERENCES modregisters ("modregisterid") ON DELETE CASCADE ON UPDATE CASCADE
 );
-
 
 CREATE TABLE bans
 (
     banid SERIAL PRIMARY KEY,
     end_date TIMESTAMP,
     CONSTRAINT "FK_Ban_ModRegister"
-       FOREIGN KEY ("banid") REFERENCES modregisters ("modregisterid") ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY ("banid") REFERENCES modregisters ("modregisterid") ON DELETE CASCADE ON UPDATE CASCADE
 );
-
-
-
 
 CREATE TABLE publications
 (
     publicationid SERIAL PRIMARY KEY,
-    body VARCHAR(1000) NOT NULL ,
+    body text NOT NULL ,
     creation_date TIMESTAMP DEFAULT now() NOT NULL,
     userid INTEGER NOT NULL,
     last_edit_date TIMESTAMP,
     CONSTRAINT body_length CHECK (CHAR_LENGTH(body) >= 10 AND CHAR_LENGTH(body) <= 1000),
     CONSTRAINT "FK_publications_users"
-        FOREIGN KEY ("userid") REFERENCES users ("userid") ON DELETE SET NULL ON UPDATE CASCADE
+    FOREIGN KEY ("userid") REFERENCES users ("userid") ON DELETE SET NULL ON UPDATE CASCADE
 );
+
+CREATE INDEX publications_search_idx ON publications USING gin(to_tsvector('english', body));
+CREATE INDEX questions_updated_at ON publications USING btree(last_edit_date);
+CREATE INDEX ixfk_publications_users ON publications USING btree (userid);
 
 CREATE TABLE questions
 (
@@ -107,16 +110,18 @@ CREATE TABLE questions
     solved_date TIMESTAMP,
     CONSTRAINT title_length CHECK (CHAR_LENGTH(title) >= 3 AND CHAR_LENGTH(title) <= 50),
     CONSTRAINT "FK_Question_Category"
-        FOREIGN KEY ("categoryid") REFERENCES categories ("categoryid") ON DELETE SET NULL ON UPDATE CASCADE,
+    FOREIGN KEY ("categoryid") REFERENCES categories ("categoryid") ON DELETE SET NULL ON UPDATE CASCADE,
     CONSTRAINT "FK_Question_Publication"
-        FOREIGN KEY ("publicationid") REFERENCES publications ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY ("publicationid") REFERENCES publications ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+CREATE INDEX questions_question_search_idx ON questions USING gin(to_tsvector('english', coalesce(title)));
 
 CREATE TABLE comments
 (
     publicationid SERIAL PRIMARY KEY,
     CONSTRAINT "FK_Comment_Publication"
-        FOREIGN KEY ("publicationid") REFERENCES publications ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY ("publicationid") REFERENCES publications ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE questioncomments
@@ -124,9 +129,9 @@ CREATE TABLE questioncomments
     commentid SERIAL PRIMARY KEY,
     questionid INTEGER NOT NULL,
     CONSTRAINT "FK_questioncomments_comments"
-        FOREIGN KEY ("commentid") REFERENCES comments ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY ("commentid") REFERENCES comments ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT "FK_questioncomments_questions"
-        FOREIGN KEY ("questionid") REFERENCES questions ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY ("questionid") REFERENCES questions ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
@@ -138,19 +143,21 @@ CREATE TABLE answers
     questionid INTEGER NOT NULL,
     solved_date TIMESTAMP,
     CONSTRAINT "FK_answers_questions"
-        FOREIGN KEY ("questionid") REFERENCES questions ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY ("questionid") REFERENCES questions ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT "FK_answers_publications"
-        FOREIGN KEY ("publicationid") REFERENCES publications ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY ("publicationid") REFERENCES publications ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+CREATE INDEX ixfk_answers_questions ON answers USING btree (questionid);
 
 CREATE TABLE answercomments
 (
     commentid SERIAL PRIMARY KEY,
     answerid INTEGER NOT NULL,
     CONSTRAINT "FK_answercomments_comments"
-        FOREIGN KEY ("commentid") REFERENCES comments ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY ("commentid") REFERENCES comments ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT "FK_answercomments_answers"
-        FOREIGN KEY ("answerid") REFERENCES answers ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY ("answerid") REFERENCES answers ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE tags
@@ -160,39 +167,181 @@ CREATE TABLE tags
     CONSTRAINT valid_tag CHECK(CHAR_LENGTH(name) >= 3 AND CHAR_LENGTH(name) <= 30)
 );
 
-
-
-
-
 CREATE TABLE votes
 (
     voteid SERIAL PRIMARY KEY,
     values INTEGER DEFAULT 0 NOT NULL,
     publicationid INTEGER NOT NULL,
-    userid INTEGER NOT NULL,
+    userid INTEGER NOT NULL, -- user that voted
     CONSTRAINT vote_values CHECK(values = 0 OR values = 1 OR values = -1),
     CONSTRAINT "FK_Vote_Publication"
-        FOREIGN KEY ("publicationid") REFERENCES publications ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY ("publicationid") REFERENCES publications ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT "FK_Vote_User"
-        FOREIGN KEY ("userid") REFERENCES users ("userid") ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY ("userid") REFERENCES users ("userid") ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+CREATE INDEX ixfk_user_votes ON votes USING btree (userid);
 
 CREATE TABLE questiontags (
     questionid INTEGER NOT NULL,
     tagid INTEGER NOT NULL,
     PRIMARY KEY(questionid,tagid),
     CONSTRAINT "Tag"
-        FOREIGN KEY ("tagid") REFERENCES tags ("tagid") ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY ("tagid") REFERENCES tags ("tagid") ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT "Question"
-        FOREIGN KEY ("questionid") REFERENCES questions ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY ("questionid") REFERENCES questions ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+CREATE INDEX ixfk_questions_tags_tags ON questiontags USING btree (tagid);
 
 CREATE TABLE userbadges (
     userid INTEGER NOT NULL,
     badgeid INTEGER NOT NULL,
     PRIMARY KEY(userid,badgeid),
     CONSTRAINT "Badge"
-        FOREIGN KEY ("badgeid") REFERENCES badges ("badgeid") ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY ("badgeid") REFERENCES badges ("badgeid") ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT "User"
-        FOREIGN KEY ("userid") REFERENCES users ("userid") ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY ("userid") REFERENCES users ("userid") ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+
+CREATE INDEX ixfk_user_badges ON userbadges USING btree (badgeid);
+
+--------------------------FUNCTIONS----------------------------------------
+
+---- Function that returns the tags of a question
+
+CREATE OR REPLACE FUNCTION question_tags(pquestion_id int)
+    RETURNS TABLE (tag character varying(10)) AS $func$
+BEGIN
+    return QUERY
+    SELECT tags.name
+    FROM tags INNER JOIN questiontags ON tags.tagid = questiontags.tagid
+    WHERE questiontags.questionid = pquestion_id;
+END
+$func$  LANGUAGE plpgsql;
+
+
+---- Function that returns the answers of a question and aditional / optional info
+
+CREATE OR REPLACE FUNCTION question_answers(pquestion_id int)
+    RETURNS TABLE (
+        id INTEGER,
+        user_id INTEGER,
+        username character varying(50),
+        body TEXT,
+        created_at timestamp
+    ) AS $func$
+BEGIN
+    RETURN QUERY
+    SELECT answers.publicationid, users.userid, users.username, publications.body, publications.creation_date
+    FROM answers INNER JOIN publications ON answers.publicationid = publications.publicationid
+        RIGHT JOIN users ON publications.userid = users.userid
+    WHERE answers.questionid = pquestion_id;
+END
+$func$  LANGUAGE plpgsql;
+
+
+---- Function that returns the questions of a user
+
+CREATE OR REPLACE FUNCTION user_questions(puser_id int)
+    RETURNS TABLE (
+        publicationid INTEGER,
+        title character varying(100),
+        body TEXT,
+        solved_date TIMESTAMP,
+        creation_date timestamp,
+        last_edit_date timestamp,
+        count_answers BIGINT
+
+    ) AS $func$
+BEGIN
+    RETURN QUERY
+    SELECT questions.publicationid, questions.title, publications.body, questions.solved_date, publications.creation_date,
+        publications.last_edit_date, (SELECT COUNT(*) FROM answers WHERE questionid = questions.publicationid)
+    FROM questions INNER JOIN publications ON questions.publicationid = publications.publicationid
+    WHERE publications.userid = puser_id;
+END
+$func$  LANGUAGE plpgsql;
+
+
+---- Function that counts the votes one user received
+
+CREATE OR REPLACE FUNCTION count_vote_rating_received_user(puser_id int)
+    RETURNS INTEGER AS $func$
+DECLARE publicationvotecount INTEGER;
+BEGIN
+    SELECT COUNT(*) FROM votes INNER JOIN publications ON votes.publicationid = publications.publicationid
+        RIGHT JOIN users ON publications.userid = users.userid WHERE users.userid = puser_id
+    INTO publicationvotecount;
+
+    IF publicationvotecount is null THEN
+        publicationvotecount := 0;
+    END IF;
+
+    return publicationvotecount;
+END
+$func$  LANGUAGE plpgsql;
+
+
+---- Function that returns important info about one user puser_id
+
+CREATE OR REPLACE FUNCTION user_profile(puser_id int)
+    RETURNS TABLE (
+        username character varying(50),
+        email character varying(100),
+        type character varying(10),
+        created_at date,
+        count_votes_rating_received INT,
+        count_questions BIGINT,
+        count_answers BIGINT,
+        count_votes_made BIGINT
+    ) AS $func$
+BEGIN
+    RETURN QUERY
+    SELECT users.username, users.email,
+        (SELECT name FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE userid = puser_id),
+        users.signup_date,
+        count_vote_rating_received_user(puser_id),
+        (SELECT COUNT(*) FROM publications INNER JOIN questions ON questions.publicationid = publications.publicationid
+            RIGHT JOIN users ON publications.userid = users.userid WHERE users.userid = puser_id),
+        (SELECT COUNT(*) FROM publications INNER JOIN answers ON answers.publicationid = publications.publicationid
+            RIGHT JOIN users ON publications.userid = users.userid WHERE users.userid = puser_id),
+        (SELECT COUNT(*) FROM votes WHERE votes.userid = puser_id)
+    FROM users
+    WHERE users.userid = puser_id;
+END
+$func$  LANGUAGE plpgsql;
+
+
+---- Function that creates a new register on User Badges table associating the User total points to the badge he deserves
+
+CREATE OR REPLACE FUNCTION user_badges_ranking()
+    RETURNS TRIGGER as $func$
+DECLARE points INTEGER;
+BEGIN
+    IF count_vote_rating_received_user(NEW.userid) = 1 THEN
+        INSERT INTO userbadges(userid, badgeid) VALUES (NEW.userid, 1);
+    END IF;
+    IF count_vote_rating_received_user(NEW.userid) = 3 THEN
+        INSERT INTO userbadges(userid, badgeid) VALUES (NEW.userid, 2);
+    END IF;
+    IF count_vote_rating_received_user(NEW.userid) = 15 THEN
+        INSERT INTO userbadges(userid, badgeid) VALUES (NEW.userid, 3);
+    END IF;
+    IF count_vote_rating_received_user(NEW.userid) = 30 THEN
+        INSERT INTO userbadges(userid, badgeid) VALUES (NEW.userid, 4);
+    END IF;
+    IF count_vote_rating_received_user(NEW.userid) = 50 THEN
+        INSERT INTO userbadges(userid, badgeid) VALUES (NEW.userid, 5);
+    END IF;
+    RETURN NULL;
+END
+$func$ LANGUAGE plpgsql;
+
+---- Trigger that updates ranking
+
+CREATE TRIGGER auto_rank_up AFTER INSERT OR UPDATE ON votes
+FOR EACH ROW EXECUTE PROCEDURE user_badges_ranking();
+
+
