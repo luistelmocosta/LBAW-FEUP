@@ -135,8 +135,6 @@ CREATE TABLE questioncomments
 );
 
 
-
-
 CREATE TABLE answers
 (
     publicationid SERIAL PRIMARY KEY,
@@ -206,6 +204,8 @@ CREATE TABLE userbadges (
 
 
 CREATE INDEX ixfk_user_badges ON userbadges USING btree (badgeid);
+
+
 
 --------------------------FUNCTIONS----------------------------------------
 
@@ -318,22 +318,24 @@ $func$  LANGUAGE plpgsql;
 
 CREATE OR REPLACE FUNCTION user_badges_ranking()
     RETURNS TRIGGER as $func$
-DECLARE points INTEGER;
+DECLARE target_user INTEGER;
 BEGIN
-    IF count_vote_rating_received_user(NEW.userid) = 1 THEN
-        INSERT INTO userbadges(userid, badgeid) VALUES (NEW.userid, 1);
+    SELECT publications.userid FROM publications INNER JOIN votes ON publications.publicationid = votes.publicationid
+    WHERE publications.publicationid = NEW.publicationid INTO target_user;
+    IF count_vote_rating_received_user(target_user) = 1 THEN
+        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 1);
     END IF;
-    IF count_vote_rating_received_user(NEW.userid) = 3 THEN
-        INSERT INTO userbadges(userid, badgeid) VALUES (NEW.userid, 2);
+    IF count_vote_rating_received_user(target_user) = 3 THEN
+        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 2);
     END IF;
-    IF count_vote_rating_received_user(NEW.userid) = 15 THEN
-        INSERT INTO userbadges(userid, badgeid) VALUES (NEW.userid, 3);
+    IF count_vote_rating_received_user(target_user) = 15 THEN
+        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 3);
     END IF;
-    IF count_vote_rating_received_user(NEW.userid) = 30 THEN
-        INSERT INTO userbadges(userid, badgeid) VALUES (NEW.userid, 4);
+    IF count_vote_rating_received_user(target_user) = 30 THEN
+        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 4);
     END IF;
-    IF count_vote_rating_received_user(NEW.userid) = 50 THEN
-        INSERT INTO userbadges(userid, badgeid) VALUES (NEW.userid, 5);
+    IF count_vote_rating_received_user(target_user) = 50 THEN
+        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 5);
     END IF;
     RETURN NULL;
 END
@@ -343,5 +345,25 @@ $func$ LANGUAGE plpgsql;
 
 CREATE TRIGGER auto_rank_up AFTER INSERT OR UPDATE ON votes
 FOR EACH ROW EXECUTE PROCEDURE user_badges_ranking();
+
+
+---- Function that checks if the user is voting in his own content
+
+CREATE OR REPLACE FUNCTION own_content_vote()
+    RETURNS TRIGGER as $func$
+DECLARE target_user INTEGER;
+BEGIN
+    SELECT publications.userid FROM publications INNER JOIN votes ON publications.publicationid = votes.publicationid
+    WHERE publications.publicationid = NEW.publicationid INTO target_user;
+    IF target_user = NEW.userid THEN
+        RAISE EXCEPTION 'You cant vote on your own publications';
+    END IF;
+    RETURN NULL;
+END
+$func$  LANGUAGE plpgsql;
+
+CREATE TRIGGER own_content_vote_trigger AFTER INSERT OR UPDATE ON votes
+    FOR EACH ROW EXECUTE PROCEDURE own_content_vote();
+
 
 

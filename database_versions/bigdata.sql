@@ -717,7 +717,9 @@ INSERT INTO questiontags(questionid, tagid) VALUES (4, 1);
 INSERT INTO questiontags(questionid, tagid) VALUES (4, 6);
 
 
-INSERT INTO userbadges(userid, badgeid) VALUES (1, 1);
+---- This inserts are commented because they are generated automatically by the trigger user_badge_ranking()
+
+/*INSERT INTO userbadges(userid, badgeid) VALUES (1, 1);
 INSERT INTO userbadges(userid, badgeid) VALUES (1, 2);
 INSERT INTO userbadges(userid, badgeid) VALUES (1, 3);
 INSERT INTO userbadges(userid, badgeid) VALUES (1, 4);
@@ -728,7 +730,7 @@ INSERT INTO userbadges(userid, badgeid) VALUES (3, 2);
 INSERT INTO userbadges(userid, badgeid) VALUES (4, 1);
 INSERT INTO userbadges(userid, badgeid) VALUES (4, 2);
 INSERT INTO userbadges(userid, badgeid) VALUES (4, 3);
-INSERT INTO userbadges(userid, badgeid) VALUES (4, 5);
+INSERT INTO userbadges(userid, badgeid) VALUES (4, 5);*/
 
 
 
