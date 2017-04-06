@@ -8,7 +8,6 @@
 
 include_once('../../../config/init.php');
 include_once($BASE_DIR . 'database/users.php');
-var_dump($_POST);
 
 /**
  * Verifies if username or password is empty. If so, redirects to the register page

@@ -11,7 +11,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
-                        <form class = "form-horizontal" action = "{$BASE_URL}/controller/pages/users/login.php" method = "post">
+                        <form class = "form-horizontal" action = "{$BASE_URL}/controller/pages/users/signin.php" method = "post">
                             <div class = "form-group">
                                 <label for = "username" class = "col-sm-3 control-label">Username</label>
                                 <div class = "col-sm-8">

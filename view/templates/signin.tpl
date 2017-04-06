@@ -4,21 +4,12 @@
 <div class="clearfix qa-main">
     <div class = "container">
         <div class = "col-sm-8 col-sm-offset-2">
-            <!-- TABS START -->
-            <ul class = "nav nav-tabs">
-                <li class = "active">
-                    <a href = "#login" aria-controls = "login" role = "tab" data-toggle = "tab">Log In</a>
-                </li>
-                <li class = "active">
-                    <a href = "#register" aria-controls = "register" role = "tab" data-toggle = "tab">Sign Up</a>
-                </li>
-            </ul>
-            <!-- END TABS -->
             <!-- TAB CONTENT -->
+            <h1>Enter your credentials</h1>
             <div class = "tab-content">
                 <!-- LOGIN TAB PANEL -->
                 <div id = "login" role = "tabpanel" class = "tab-pane container-white active">
-                    <form class = "form-horizontal" action = "" method = "POST">
+                    <form class = "form-horizontal" action = "../../actions/users/signin.php" method = "POST">
                         <div class = "form-group">
                             <label for = "username" class = "col-sm-3 control-label">Username</label>
                             <div class = "col-sm-8">
