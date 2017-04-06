@@ -17,12 +17,22 @@ function getUsers() {
     return $query->fetchAll();
 }
 
+/**
+ * @param $username
+ * @param $email
+ * @param $password
+ */
 function registerUser($username, $email, $password) {
     global $conn;
-    $query = $conn->prepare("INSERT INTO User(username, email, password) VALUES (?, ?, ?)");
+    $query = $conn->prepare("INSERT INTO users(username, email, password) VALUES (?, ?, ?)");
     $query->execute(array($username, $email, password_hash($password, PASSWORD_BCRYPT)));
 }
 
+/**
+ * @param $username
+ * @param $password
+ * @return bool
+ */
 function correctAuth($username, $password)
 
 
@@ -34,7 +44,7 @@ function correctAuth($username, $password)
 
     global $conn;
     $stmt = $conn->prepare("SELECT * 
-                            FROM User 
+                            FROM users 
                             WHERE username = ?");
 
     echo '<script language="javascript">';
@@ -65,7 +75,7 @@ function correctAuth($username, $password)
 function getUserByUsername($username) {
     global $conn;
     $query = $conn->prepare("SELECT userid, username, fullname, email, signdate 
-FROM User WHERE username = ?");
+FROM users WHERE username = ?");
     $query->execute(array($username));
 
     return $query->fetchAll();
