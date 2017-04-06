@@ -28,7 +28,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href = "../view/create_question.php" class = "btn btn-success btn-md">
+                            <a href = "../../controller/pages/questions/create_question.php" class = "btn btn-success btn-md">
                                 <span class = "network-name">Ask Now!</span>
                             </a>
                         </li>

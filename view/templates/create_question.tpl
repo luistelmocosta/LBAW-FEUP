@@ -4,7 +4,7 @@
             <h1>Create Question</h1>
             <br>
             <div class="qa-part-form">
-                <form name="ask" method="post" action="">
+                <form name="ask" method="post" action="/../../controller/actions/questions/create_question.php">
                     <table class="qa-form-tall-table">
                         <tbody><tr>
                             <td class="qa-form-tall-label">
@@ -21,7 +21,7 @@
                             <td class="qa-form-tall-label">
                                 Category
                                 &nbsp;
-                                <select name="category_0" id="category_0" onchange="" class="qa-form-tall-select" style="display: none;">
+                                <select name="category" id="category_0" onchange="" class="qa-form-tall-select" style="display: none;">
                                     <option value=""></option>
                                 </select><span id="category_0_sub"> <select name="category_1" id="category_1" onchange="" class="qa-form-tall-select"><option value="" selected=""></option><option value="1">CleanStrap</option><option value="2">Widgets</option><option value="3">Q2A platform</option></select></span>
                             </td>
@@ -62,7 +62,8 @@
                                 <input onclick="qa_show_waiting_after(this, false);" value="Ask Question" title="" type="submit" class="qa-form-tall-button qa-form-tall-button-ask">
                             </td>
                         </tr>
-                        </tbody></table>
+                        </tbody>
+                    </table>
 
                 </form>
             </div>
