@@ -9,7 +9,15 @@
 function create_question($question) {
 
     global $conn;
-    $query=$conn->prepare("INSERT INTO publications(userid, body) VALUES (:userid, :body)");
-    $query->execute($question);
+    $query_publications=$conn->prepare("INSERT INTO publications(userid, body) VALUES (:userid, :body);
+");
+    $query_publications->execute($question);
+
+    /*$query_questions=$conn->prepare("INSERT INTO questions(title, categoryid) VALUES (:title, 1);
+");
+
+    $query_questions->execute($query_questions);*/
+
+
 
 }
