@@ -54,10 +54,6 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-
-
-
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="../controller/pages/questions.php">Questions</a>
@@ -69,7 +65,7 @@
                 </li>
 
                 <li>
-                    <a href="#" class="fa fa-sign-in" data-toggle="modal" data-target="#login-modal" title="Login or Register"></a>
+                    <a href="../../../controller/pages/users/signin.php" class="fa fa-sign-in" title="Login or Register"></a>
                 </li>
             </ul>
         </div>
