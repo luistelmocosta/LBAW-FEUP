@@ -71,8 +71,6 @@
             </div>
 
         </div>
-
-<<<<<<< HEAD:templates/index.tpl
         <div class="col-md-4 pull-right">
             <div id="home-right-position">
                 <div class="widget cs_top_contributors">
@@ -162,11 +160,8 @@
                         </canvas>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
             <div class="col-lg-12" style="padding-top: 10px">
                 <h3 class="bottom-notice" style="color: #185a66;">Looking for more? Browse the
                     <a href="/questions">complete list of questions</a>, or

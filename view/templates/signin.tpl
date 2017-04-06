@@ -30,6 +30,9 @@
                             <div class = "col-sm-5 text-right">
                                 <a href = "" class = "small" data-toggle = "modal" data-target = "#forgotPassword"> Forgot Password?</a>
                             </div>
+                            <div class = "col-sm-5 text-right">
+                                <a href = "/../../controller/pages/users/signup.php" class = "small"> New User? Click here!</a>
+                            </div>
                         </div>
                     </form>
                 </div>

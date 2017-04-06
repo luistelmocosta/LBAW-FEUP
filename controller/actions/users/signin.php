@@ -34,14 +34,14 @@ try {
     }
 
     $_SESSION['username'] = $username;
-    $_SESSION['logged_in'] = 'true';
+    $_SESSION['logged_in'] = true;
     $_SESSION['success_messages'][] = 'Login Successful!';
 
-    header("Location: $BASE_URL" . 'controller/pages/index.php');
+    redirect();
 
 } catch (PDOException $e) {
 
-    header("Location: $BASE_URL" . 'controller/pages/users/signin.php');
+    redirect('controllers/pages/users/signin.php');
 }
 
 
