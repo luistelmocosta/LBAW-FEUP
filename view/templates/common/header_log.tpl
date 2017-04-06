@@ -8,6 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -19,36 +20,21 @@
     </script>
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles/main.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles/responsive.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles/clean-blog.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/fonts/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/fonts/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/styles/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/styles/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/styles/clean-blog.min.css">
 
-<<<<<<< HEAD:common/header_log.tpl
     <!-- JS -->
-    <script type="text/javascript" src="../js/vendor/bootstrap.js"></script>
-    <script type="text/javascript" src="../js/Chart.js"></script>
-    <script type="text/javascript" src="../js/main.js"></script>
-=======
-    <!-- Theme CSS -->
-    <link href="../css/styles/clean-blog.min.css" rel="stylesheet">
-
-    <script type="text/javascript" src="../javascript/vendor/bootstrap.js"></script>
->>>>>>> Setup:view/templates/common/header_log.tpl
+    <script type="text/javascript" src="../../../javascript/vendor/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../javascript/Chart.js"></script>
+    <script type="text/javascript" src="../../../javascript/main.js"></script>
     <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
 
 </head>
-
-
-<script>
-    $(document).ready(function(){
-        $("a").click(function(){
-            $(this).next().toggle();
-        });
-    });
-</script>
 
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top" style="background: #2d2727;">
     <div class="container-fluid">
@@ -60,7 +46,7 @@
             </button>
             <div class="site-logo">
                 <a class="navbar-brand" title="AskMe" href="../index.php">
-                    <img class="navbar-site-logo" src="../images/logo3.png">
+                    <img class="navbar-site-logo" src="../../images/logo3.png">
                 </a>
             </div>
         </div>
@@ -86,7 +72,7 @@
                             <li class="user-nav-profile"><a class="fa fa-id-card" href="../controller/pages/profile.php" title="Profile">Profile</a></li>
                             <li class="user-nav-account"><a class="fa fa-cog" href="../view/account.php" title="Account">Account</a></li>
                             <li class="user-nav-favorites"><a class="fa fa-user-md" href="../controller/pages/admin.php" title="Admin Panel">Admin CP</a></li>
-                            <li><a class="fa fa-power-off" href="../index.php"> Logout </a></li>
+                            <li><a class="fa fa-power-off" href="{$BASE_URL}controller/actions/users/logout.php"> Logout </a></li>
                         </ul>
                         </div>
                     </li>

@@ -13,13 +13,13 @@ session_set_cookie_params(3600, '/~lbaw1641/proto/');
 session_start();
 
 
-$BASE_DIR = '/home/luiscosta/PhpstormProjects/LBAW-FEUP/';
+$BASE_DIR = '/home/luiscosta/PhpstormProjects/LBAW-FEUP/'; //CHANGE WITH YOURS
 $BASE_URL = '/';
 
 //Connect to the database
 
 try {
-    $dbuser = 'luiscosta';
+    $dbuser = 'luiscosta'; //CHANGE WITH YOUR INFO
     $dbpass = '123';
     $host = 'localhost';
     $dbname = 'lbaw';
@@ -53,3 +53,6 @@ $smarty->assign('FIELD_ERRORS',	$_SESSION['field_errors']);
 $smarty->assign('SUCCESS_MESSAGES',	$_SESSION['success_messages']);
 $smarty->assign('FORM_VALUES',	$_SESSION['form_values']);
 $smarty->assign('USERNAME',	$_SESSION['username']);
+
+$_SESSION['logged_in'] = isset($_SESSION['logged_in']) ? $_SESSION['logged_in'] : false;
+$smarty->assign('LOGGED_IN', $_SESSION['logged_in']);
