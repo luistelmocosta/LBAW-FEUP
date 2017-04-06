@@ -1,5 +1,7 @@
 <?php
-include_once('../config/config.php');
-$smarty->display('../common/narrow_header.tpl');
-$smarty->display('top_scored_users.tpl');
-$smarty->display('../common/footer.tpl');
+
+include_once('../../../config/init.php');
+
+$smarty->display('../../../view/templates/common/narrow_header.tpl');
+$smarty->display('../../../view/templates/top_scored_users.tpl');
+$smarty->display('../../../view/templates/common/footer.tpl');

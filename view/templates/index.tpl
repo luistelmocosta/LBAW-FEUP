@@ -12,7 +12,7 @@
                         <div class="input-group col-lg-12">
                             <input type="text" class="form-control input-lg" placeholder="Search for a question..."/>
                             <span class="input-group-btn">
-                                <a class="btn btn-info" href="../view/search_results.php">
+                                <a class="btn btn-info" href="{$BASE_URL}controller/pages/questions/search_results.php">
                                     <i class="glyphicon glyphicon-search"></i>
                                 </a>
                             </span>
@@ -23,12 +23,12 @@
 
                     <ul class = "list-inline intro-social-buttons">
                         <li>
-                            <a href = "../view/about.php" class = "btn btn-warning btn-md">
+                            <a href = "{$BASE_URL}controller/pages/about.php" class = "btn btn-warning btn-md">
                                 <span class = "network-name">About Us</span>
                             </a>
                         </li>
                         <li>
-                            <a href = "../view/create_question.php" class = "btn btn-success btn-md">
+                            <a href = "{$BASE_URL}controller/pages/questions/create_question.php" class = "btn btn-success btn-md">
                                 <span class = "network-name">Ask Now!</span>
                             </a>
                         </li>
@@ -59,7 +59,6 @@
                 </ul>
                 <div id="tabs-1">
                     {include file="recent_questions.tpl"}
-
                 </div>
                 <div id="tabs-2">
                     {include file="unanswered_questions.tpl"}
@@ -78,10 +77,10 @@
                     <div class="ra-tags-widget">
                         <ul class="top-users-list clearfix"><li class="top-user clearfix">
                                 <div class="avatar" data-id="1" data-handle="admin">
-                                    <a href="./user/admin" class="qa-avatar-link">
-                                        <img src="../css/img/admin_icon.jpg" width="30"
+                                    <a href="#" class="qa-avatar-link">
+                                        <img src="{$BASE_URL}images/admin_icon.jpg" width="30"
                                              height="30" class="qa-avatar-image" alt=""></a></div><div class="top-user-data">
-                                    <span class="points">520 points</span><a href="./user/admin" class="name">admin</a><p class="counts">
+                                    <span class="points">520 points</span><a href="#" class="name">admin</a><p class="counts">
                                         <span>3 questions
                                         </span>
                                         <span>7 answers</span>
@@ -90,14 +89,14 @@
                                 </div>
                             </li>
                             <li class="top-user clearfix">
-                                <div class="avatar" data-id="2" data-handle="Towhid"><a href="./user/Towhid" class="qa-avatar-link">
-                                        <img src="../css/img/users.jpg" width="30" height="30"
+                                <div class="avatar" data-id="2" data-handle="Towhid"><a href="#" class="qa-avatar-link">
+                                        <img src="{$BASE_URL}images/users.jpg" width="30" height="30"
                                              class="qa-avatar-image" alt="">
                                     </a>
                                 </div>
                                 <div class="top-user-data">
                                     <span class="points">510 points</span>
-                                    <a href="./user/Towhid" class="name">Towhid</a>
+                                    <a href="#" class="name">Towhid</a>
                                     <p class="counts"><span>3 questions</span>
                                         <span>8 answers</span>
                                         <span>0 comments</span>
@@ -105,13 +104,13 @@
                                 </div>
                             </li>
                             <li class="top-user clearfix">
-                                <div class="avatar" data-id="3" data-handle="HappyFace"><a href="./user/HappyFace" class="qa-avatar-link">
-                                        <img src="../css/img/users.jpg"" width="30"
+                                <div class="avatar" data-id="3" data-handle="HappyFace"><a href="#" class="qa-avatar-link">
+                                        <img src="{$BASE_URL}images/users.jpg"" width="30"
                                         height="30" class="qa-avatar-image" alt=""></a>
                                 </div>
                                 <div class="top-user-data">
                                     <span class="points">350 points</span>
-                                    <a href="./user/HappyFace" class="name">HappyFace</a>
+                                    <a href="#" class="name">HappyFace</a>
                                     <p class="counts"><span>3 questions</span>
                                         <span>3 answers</span>
                                         <span>1 comments</span>
@@ -120,12 +119,12 @@
                             </li>
                             <li class="top-user clearfix">
                                 <div class="avatar" data-id="21" data-handle="gurjyottheman">
-                                    <a href="./user/gurjyottheman" class="qa-avatar-link">
-                                        <img src="../css/img/users.jpg" width="30"
+                                    <a href="#" class="qa-avatar-link">
+                                        <img src="{$BASE_URL}images/users.jpg" width="30"
                                              height="30" class="qa-avatar-image" alt=""></a>
                                 </div>
                                 <div class="top-user-data"><span class="points">340 points</span>
-                                    <a href="./user/gurjyottheman" class="name">gurjyottheman</a>
+                                    <a href="#" class="name">gurjyottheman</a>
                                     <p class="counts"><span>3 questions</span>
                                         <span>4 answers</span>
                                         <span>0 comments</span>
@@ -134,14 +133,14 @@
                             </li>
                             <li class="top-user clearfix">
                                 <div class="avatar" data-id="7" data-handle="Inspector">
-                                    <a href="./user/Inspector" class="qa-avatar-link">
-                                        <img src="../css/img/users.jpg" width="30"
+                                    <a href="#" class="qa-avatar-link">
+                                        <img src="{$BASE_URL}images/users.jpg" width="30"
                                              height="30" class="qa-avatar-image" alt="">
                                     </a>
                                 </div>
                                 <div class="top-user-data">
                                     <span class="points">240 points</span>
-                                    <a href="./user/Inspector" class="name">Inspector</a>
+                                    <a href="#" class="name">Inspector</a>
                                     <p class="counts">
                                         <span>2 questions</span>
                                         <span>2 answers</span>
@@ -164,9 +163,9 @@
         </div>
             <div class="col-lg-12" style="padding-top: 10px">
                 <h3 class="bottom-notice" style="color: #185a66;">Looking for more? Browse the
-                    <a href="/questions">complete list of questions</a>, or
-                    <a href="/tags">popular tags</a>. Help us answer
-                    <a href="/unanswered">unanswered questions</a>.
+                    <a href="{$BASE_URL}controller/pages/questions/questions.php">complete list of questions</a>, or
+                    <a href="#">popular tags</a>. Help us answer
+                    <a href="#">unanswered questions</a>.
                 </h3>
             </div>
 
