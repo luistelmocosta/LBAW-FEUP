@@ -20,15 +20,19 @@
                         <tr>
                             <td class="qa-form-tall-label">
                                 Category
-                                &nbsp;
-                                <select name="category" id="category_0" onchange="" class="qa-form-tall-select" style="display: none;">
-                                    <option value=""></option>
-                                </select><span id="category_0_sub"> <select name="category_1" id="category_1" onchange="" class="qa-form-tall-select"><option value="" selected=""></option><option value="1">CleanStrap</option><option value="2">Widgets</option><option value="3">Q2A platform</option></select></span>
+                                <span id="category_0_sub">
+                                    <select name="category" id="category_1" onchange="" class="qa-form-tall-select">
+                                        {foreach old('categories', $categories) as $category }
+                                            <option value="{$category}" selected>{$category}</option>
+                                        {/foreach}
+                                    </select>
+                                </span>
                             </td>
                         </tr>
                         <tr>
                             <td class="qa-form-tall-data">
-                                <div class="qa-form-tall-note"><div id="category_note"></div></div>
+                                <div class="qa-form-tall-note">
+                                    <div id="category_note"></div></div>
                             </td>
                         </tr>
                         <tr>
@@ -52,7 +56,8 @@
                         </tr>
                         <tr>
                             <td class="qa-form-tall-data">
-                                <input name="tags" id="tags" autocomplete="off" onkeyup="" onmouseup="" type="text" value="" class="qa-form-tall-text">
+                                <input name="tags" id="tags" autocomplete="off" onkeyup="" onmouseup="" type="text" value=""
+                                       class="qa-form-tall-text">
                             </td>
                         </tr>
 

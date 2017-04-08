@@ -11,7 +11,7 @@ CREATE TABLE badges
 CREATE TABLE categories
 (
     categoryid SERIAL PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL UNIQUE,
     CONSTRAINT valid_category CHECK(CHAR_LENGTH(name) >= 3 AND CHAR_LENGTH(name) <= 50)
 );
 
@@ -462,3 +462,15 @@ begin
 
     insert into questions(publicationid ,title, categoryid) VALUES (result, title, categoryid);
 end $$;
+
+--- Get tags from a given question id
+
+CREATE OR REPLACE FUNCTION question_tags(pquestion_id int)
+    RETURNS TABLE (tag character varying(10)) AS $func$
+BEGIN
+    return QUERY
+    SELECT tags.name
+    FROM tags INNER JOIN questiontags ON tags.tagid = questiontags.tagid
+    WHERE questiontags.questionid = pquestion_id;
+END
+$func$  LANGUAGE plpgsql;

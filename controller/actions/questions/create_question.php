@@ -6,15 +6,16 @@ PagePermissions::create('auth')->check();
 
 
 
+$category = get_categoryID_by_name($_POST['category']);
+
 $question = [
-    ':userid' => auth_user('userid'),
+    'userid' => auth_user('userid'),
     'body' => $_POST['editor1'],
-    'title' => $_POST['title']
+    'title' => $_POST['title'],
+    'categoryid' => $category
 ];
 
 create_question($question);
-
-
 
 if(!$_POST['title'] || !$_POST['editor1']) {
     $_SESSION['error_messages'][] = 'Title and body are required';
