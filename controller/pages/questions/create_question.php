@@ -7,6 +7,7 @@ if($_SESSION['logged_in']) {
     $smarty->display('common/narrow_header.tpl');
 }
 
+
 $categories = get_categories();
 $size = sizeof($categories);
 $categories_select = [];

@@ -6,13 +6,14 @@
  * Time: 10:26 PM
  */
 
-function create_question($question) {
+function create_question($question, $tags) {
 
     global $conn;
     $query_publications=$conn->prepare("SELECT * FROM insert_into_questions(:body, :userid, :title, :categoryid);
 ");
     $query_publications->execute($question);
 
+    
     /*$query_questions=$conn->prepare("INSERT INTO questions(title, categoryid) VALUES (:title, 1);
 ");
 

@@ -4,7 +4,9 @@ include_once($BASE_DIR . 'database/questions.php');
 
 PagePermissions::create('auth')->check();
 
-
+$tags = explode(',', $_POST['tags']);
+print_r($myArray);
+die();
 
 $category = get_categoryID_by_name($_POST['category']);
 
@@ -15,7 +17,7 @@ $question = [
     'categoryid' => $category
 ];
 
-create_question($question);
+create_question($question, $tags);
 
 if(!$_POST['title'] || !$_POST['editor1']) {
     $_SESSION['error_messages'][] = 'Title and body are required';
