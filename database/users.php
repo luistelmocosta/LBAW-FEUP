@@ -67,5 +67,14 @@ function getUserByUsername($username) {
 FROM users WHERE username = ?");
     $query->execute(array($username));
 
+    return $query->fetch();
+}
+
+function getUserIDByUsername($username) {
+    global $conn;
+    $query = $conn->prepare("SELECT userid 
+FROM users WHERE username = ?");
+    $query->execute(array($username));
+
     return $query->fetchAll();
 }

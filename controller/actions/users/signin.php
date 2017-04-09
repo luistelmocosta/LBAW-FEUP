@@ -15,7 +15,7 @@ include_once($BASE_DIR . 'database/users.php');
 
 $username = $_POST['username'];
 $password = $_POST['password'];
-$user = getUserByUsername($username);
+
 
 if(!$_POST['username'] || !$_POST['password']) {
     $_SESSION['error_messages'][] = 'Some of the fields are missing';
@@ -32,10 +32,13 @@ try {
         header("Location: $BASE_URL" . 'controller/pages/users/signin.php');
         exit;
     }
+    $user = getUserByUsername($username);
 
     $_SESSION['username'] = $username;
     $_SESSION['logged_in'] = true;
+    $_SESSION['user'] = $user;
     $_SESSION['success_messages'][] = 'Login Successful!';
+
 
     redirect();
 
