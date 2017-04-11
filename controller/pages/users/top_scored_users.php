@@ -2,6 +2,11 @@
 
 include_once('../../../config/init.php');
 
-$smarty->display('../../../view/templates/common/narrow_header.tpl');
-$smarty->display('../../../view/templates/top_scored_users.tpl');
-$smarty->display('../../../view/templates/common/footer.tpl');
+if($_SESSION['logged_in']) {
+    $smarty->display('common/header_log.tpl');
+} else {
+    $smarty->display('common/narrow_header.tpl');
+}
+
+$smarty->display('top_scored_users.tpl');
+$smarty->display('common/footer.tpl');

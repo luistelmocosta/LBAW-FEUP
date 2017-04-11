@@ -1,12 +1,13 @@
 <?php
+
 include_once('../../../config/init.php');
 include_once('../../../database/questions.php');
+
 if($_SESSION['logged_in']) {
     $smarty->display('common/header_log.tpl');
 } else {
     $smarty->display('common/narrow_header.tpl');
 }
-
 
 $categories = get_categories();
 $size = sizeof($categories);
@@ -14,7 +15,6 @@ $categories_select = [];
 foreach ($categories as $category) {
     $categories_select[] = $category['name'];
 }
-
 
 $smarty->assign('categories', $categories_select);
 $smarty->display('create_question.tpl');

@@ -8,5 +8,5 @@ if($_SESSION['logged_in']) {
     $smarty->display('common/narrow_header.tpl');
 }
 
-$smarty->display('./questions.tpl');
+$smarty->display('questions.tpl');
 $smarty->display('common/footer.tpl');
