@@ -1,7 +1,7 @@
 <?php
 
 include_once('../../../config/init.php');
-include_once('../../../database/questions.php');
+include_once($BASE_DIR . 'database/questions.php');
 
 if($_SESSION['logged_in']) {
     $smarty->display('common/header_log.tpl');

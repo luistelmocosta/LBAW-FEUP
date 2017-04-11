@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: luiscosta
- * Date: 4/6/17
- * Time: 10:26 PM
- */
+
 
 function create_question($question, $tags) {
 

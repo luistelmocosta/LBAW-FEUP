@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: luiscosta
- * Date: 3/16/17
- * Time: 9:26 AM
- */
-
 
 include_once($BASE_DIR . 'lib/helpers/functions.php');
 include_once($BASE_DIR . 'lib/helpers/Html.class.php');
