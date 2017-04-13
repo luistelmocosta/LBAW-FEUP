@@ -1,13 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: luiscosta
- * Date: 3/16/17
- * Time: 9:47 AM
- */
-
-
-
 
 function getUsers() {
     global $conn;

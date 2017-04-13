@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: luiscosta
- * Date: 3/23/17
- * Time: 8:35 AM
- */
 
 //This file is included in every .php file
 session_start();

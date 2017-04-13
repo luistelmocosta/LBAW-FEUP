@@ -1,4 +1,5 @@
 <?php
+
 include_once('../../../config/init.php');
 
 if($_SESSION['logged_in']) {
@@ -7,5 +8,5 @@ if($_SESSION['logged_in']) {
     $smarty->display('common/narrow_header.tpl');
 }
 
-$smarty->display('./search_results.tpl');
+$smarty->display('search_results.tpl');
 $smarty->display('common/footer.tpl');
