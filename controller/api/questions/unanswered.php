@@ -1,5 +1,7 @@
 <?php
-include_once('../config/config.php');
-$smarty->display('../common/header.tpl');
+
+include_once('../../../config/init.php');
+
+$smarty->display('common/narrow_header.tpl');
 $smarty->display('unanswered_questions.tpl');
-$smarty->display('../common/footer.tpl');
+$smarty->display('common/footer.tpl');
