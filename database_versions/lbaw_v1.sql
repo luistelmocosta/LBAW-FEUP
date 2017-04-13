@@ -504,3 +504,31 @@ BEGIN
     OFFSET skip;
 END
 $func$  LANGUAGE plpgsql;
+
+---- This function returns a table with all the data needed to print a question details
+
+CREATE OR REPLACE FUNCTION question_details_from_id (pubid INTEGER)
+    RETURNS TABLE (
+        publicationid INTEGER,
+        title VARCHAR(100),
+        body TEXT,
+        creation_date TIMESTAMP,
+        solved_date TIMESTAMP,
+        username VARCHAR(10),
+        userid INTEGER,
+        answers_count BIGINT,
+        upvotes BIGINT)
+AS $func$
+BEGIN
+    RETURN QUERY
+    SELECT questions.publicationid,  questions.title, publications.body,
+        publications.creation_date, questions.solved_date, users.username,users.userid,
+        (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
+        (SELECT COUNT (*) FROM votes WHERE questions.publicationid = pubid) AS upvotes
+    FROM questions
+        INNER JOIN publications
+            ON questions.publicationid = publications.publicationid
+        LEFT JOIN users ON publications.userid = users.userid
+    WHERE questions.publicationid = pubid;
+END
+$func$  LANGUAGE plpgsql;

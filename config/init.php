@@ -4,13 +4,14 @@
 session_start();
 
 
-$BASE_DIR = '/home/alexandre/GitHub/LBAW-FEUP/'; //CHANGE WITH YOURS
+$BASE_DIR = '/home/luiscosta/PhpstormProjects/LBAW-FEUP/'; //CHANGE WITH YOURS
 $BASE_URL = '/';
+
 
 //Connect to the database
 
 try {
-    $dbuser = 'alexandre'; //CHANGE WITH YOUR INFO
+    $dbuser = 'luiscosta'; //CHANGE WITH YOUR INFO
     $dbpass = '123';
     $host = 'localhost';
     $dbname = 'lbaw';

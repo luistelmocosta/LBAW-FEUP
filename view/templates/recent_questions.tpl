@@ -19,7 +19,7 @@
 
         <div class="summary">
             <h3>
-                <a href="" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
+                <a href="{questionUrl($question['publicationid'])}" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
                     {$question['title']}
                 </a>
             </h3>

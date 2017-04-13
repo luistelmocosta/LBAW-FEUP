@@ -113,3 +113,16 @@ function recent_questions($page = 0)
 
     return $rows;
 }
+
+function get_questions_from_id($publicationid) {
+
+    global $conn;
+
+    $stmt = $conn->prepare("SELECT * FROM question_details_from_id(:publicationid)");
+    $stmt->execute(['publicationid' => $publicationid]);
+
+    $rows = $stmt->fetchAll();
+
+    return $rows;
+
+}
