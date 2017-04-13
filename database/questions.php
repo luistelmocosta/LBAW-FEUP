@@ -100,3 +100,16 @@ function delete_tag_from_question($tagid, $questionid) {
     $query = $conn->prepare("DELETE FROM questiontags WHERE questionid = :question AND tagid = :tag");
     $query->execute(['question' => $questionid, 'tag' => $tagid]);
 }
+
+function recent_questions($page = 0)
+{
+    global $conn;
+    $limit = 4;
+    $skip = $limit * $page;
+    $stmt = $conn->prepare("SELECT * FROM recent_questions(:skip, :limit)");
+    $stmt->execute(['limit' => $limit, 'skip' => $skip]);
+    $rows = $stmt->fetchAll();
+    //$rows = addQuestionsComputedFields($rows);
+
+    return $rows;
+}
