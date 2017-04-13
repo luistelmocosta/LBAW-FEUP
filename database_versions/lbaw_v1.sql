@@ -364,7 +364,7 @@ END
 $func$  LANGUAGE plpgsql;
 
 CREATE TRIGGER own_content_vote_trigger AFTER INSERT OR UPDATE ON votes
-    FOR EACH ROW EXECUTE PROCEDURE own_content_vote();
+FOR EACH ROW EXECUTE PROCEDURE own_content_vote();
 
 
 
@@ -475,4 +475,32 @@ BEGIN
 END
 $func$  LANGUAGE plpgsql;
 
-----
+---- This function returns a table with all the data needed to print a list of questions
+
+CREATE OR REPLACE FUNCTION recent_questions(skip INTEGER, limitNumber INTEGER)
+    RETURNS TABLE (
+        publicationid INTEGER,
+        title VARCHAR(100),
+        body TEXT,
+        creation_date TIMESTAMP,
+        solved_date TIMESTAMP,
+        username VARCHAR(10),
+        userid INTEGER,
+        answers_count BIGINT,
+        upvotes BIGINT)
+AS $func$
+BEGIN
+    RETURN QUERY
+    SELECT questions.publicationid, questions.title, publications.body,
+        publications.creation_date, questions.solved_date, users.username, users.userid,
+        (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
+        (SELECT COUNT (*) FROM votes WHERE votes.values = 1 AND votes.publicationid = 1) AS upvotes
+    FROM questions
+        INNER JOIN publications
+            ON questions.publicationid = publications.publicationid
+        LEFT JOIN users ON publications.userid = users.userid
+    ORDER BY creation_date DESC
+    LIMIT limitNumber
+    OFFSET skip;
+END
+$func$  LANGUAGE plpgsql;

@@ -58,7 +58,10 @@
                     <li><a href="#tabs-3">Top Scored Questions</a></li>
                 </ul>
                 <div id="tabs-1">
-                    {include file="recent_questions.tpl"}
+                    {foreach $recent_questions as $question}
+                        {include file="recent_questions.tpl"}
+                    {/foreach}
+
                 </div>
                 <div id="tabs-2">
                     {include file="unanswered_questions.tpl"}
@@ -75,6 +78,7 @@
                 <div class="widget cs_top_contributors">
                     <h3 class="widget-title">Top Scored Users</h3>
                     <div class="ra-tags-widget">
+
                         <ul class="top-users-list clearfix"><li class="top-user clearfix">
                                 <div class="avatar" data-id="1" data-handle="admin">
                                     <a href="#" class="qa-avatar-link">
