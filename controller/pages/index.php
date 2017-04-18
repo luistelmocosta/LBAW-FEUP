@@ -10,8 +10,13 @@ if($_SESSION['logged_in']) {
     $smarty->display('common/header.tpl');
 }
 
-$questions = recent_questions();
+$recent_questions = recent_questions();
+$unanswered_questions = unanswered_questions();
+$top_scored_questions = top_scored_questions();
 
-$smarty->assign('recent_questions', $questions);
+
+$smarty->assign('recent_questions', $recent_questions);
+$smarty->assign('unanswered_questions', $unanswered_questions);
+$smarty->assign('top_scored_questions', $top_scored_questions);
 $smarty->display('index.tpl');
 $smarty->display('common/footer.tpl');

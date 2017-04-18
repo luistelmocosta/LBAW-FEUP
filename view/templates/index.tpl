@@ -64,10 +64,15 @@
 
                 </div>
                 <div id="tabs-2">
-                    {include file="unanswered_questions.tpl"}
+                    {foreach $unanswered_questions as $question}
+                        {include file="unanswered_questions.tpl"}
+                    {/foreach}
                 </div>
                 <div id="tabs-3">
-                    {include file="top_scored_questions.tpl"}
+                    {foreach $top_scored_questions as $question}
+                        {include file="top_scored_questions.tpl"}
+                    {/foreach}
+
                 </div>
 
             </div>
@@ -165,14 +170,15 @@
                 </div>
             </div>
         </div>
-            <div class="col-lg-12" style="padding-top: 10px">
-                <h3 class="bottom-notice" style="color: #185a66;">Looking for more? Browse the
-                    <a href="{$BASE_URL}controller/pages/questions/questions.php">complete list of questions</a>, or
-                    <a href="#">popular tags</a>. Help us answer
-                    <a href="#">unanswered questions</a>.
-                </h3>
-            </div>
+        <div class="col-lg-12" style="padding-top: 10px">
+            <h3 class="bottom-notice" style="color: #185a66;">Looking for more? Browse the
+                <a href="{$BASE_URL}controller/pages/questions/questions.php">complete list of questions</a>, or
+                <a href="#">popular tags</a>. Help us answer
+                <a href="#">unanswered questions</a>.
+            </h3>
+        </div>
 
     </div>
+</div>
 
 

@@ -20,7 +20,7 @@
                                     <span class="count">0</span>
                                     <a title="" class=" fa fa-thumbs-down enabled vote-down enabled" data-original-title="Click to vote down"></a>
                                 </div>
-                                Answer Votes are out of propotions
+                                {$question['title']}
                             </h2>
                             <div class="question-meta">
                                 <span class="post-status open">Open</span>
@@ -38,7 +38,7 @@
                                         <div class="qa-q-view-inner">
                                             <div class="clearfix">
                                                 <div class="qa-q-view-content">
-                                                    <div class="entry-content">My vote buttons are a little out of propotion. it is creatinga &nbsp;huge visual difference, can u help ?</div>
+                                                    <div class="entry-content">{$question['body']}</div>
                                                 </div>
                                             </div>
 
@@ -48,7 +48,7 @@
                                             <span class="qa-q-item-meta">
                                                 <a href="" class="qa-q-item-what">asked</a>
                                                 <span class="qa-q-item-when">
-                                                    <span class="qa-q-item-when-data"><span class="published"><span class="value-title" title="2016-06-06T11:13:09+0000"></span>Jun 6, 2016</span></span>
+                                                    <span class="qa-q-item-when-data"><span class="published"><span class="value-title" title="2016-06-06T11:13:09+0000"></span>{$question['creation_date']}</span></span>
                                                 </span>
                                                 <span class="qa-q-item-who">
                                                     <span class="qa-q-item-who-pad">by </span>
@@ -65,7 +65,7 @@
                                                 </div>
                                             </div>
 
-                                            <h3 class="answers-label">2 Answers</h3>
+                                            <h3 class="answers-label">{$question['answers_count']} Answers</h3>
 
                                             <div class="qa-a-list-item  hentry answer">
                                                 <div class="qa-a-item-main">

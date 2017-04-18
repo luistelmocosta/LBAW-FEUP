@@ -487,14 +487,16 @@ CREATE OR REPLACE FUNCTION recent_questions(skip INTEGER, limitNumber INTEGER)
         username VARCHAR(10),
         userid INTEGER,
         answers_count BIGINT,
-        upvotes BIGINT)
+        upvotes BIGINT,
+        votes_count BIGINT)
 AS $func$
 BEGIN
     RETURN QUERY
     SELECT questions.publicationid, questions.title, publications.body,
         publications.creation_date, questions.solved_date, users.username, users.userid,
         (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
-        (SELECT COUNT (*) FROM votes WHERE votes.values = 1 AND votes.publicationid = 1) AS upvotes
+        (SELECT COUNT (*) FROM votes WHERE votes.values = 1 AND votes.publicationid = 1) AS upvotes,
+        (SELECT SUM(votes.values) FROM votes WHERE votes.publicationid = questions.publicationid)
     FROM questions
         INNER JOIN publications
             ON questions.publicationid = publications.publicationid
@@ -502,5 +504,52 @@ BEGIN
     ORDER BY creation_date DESC
     LIMIT limitNumber
     OFFSET skip;
+END
+$func$  LANGUAGE plpgsql;
+
+create or replace function unanswered_questions(skip integer, limitnumber integer) returns TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    RETURN QUERY
+    SELECT questions.publicationid, questions.title, publications.body,
+        publications.creation_date, questions.solved_date, users.username, users.userid,
+        (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
+        (SELECT COUNT (*) FROM votes WHERE votes.values = 1 AND votes.publicationid = 1) AS upvotes,
+        (SELECT SUM(votes.values) FROM votes WHERE votes.publicationid = questions.publicationid) AS votes_count
+    FROM questions
+        INNER JOIN publications
+            ON questions.publicationid = publications.publicationid
+        LEFT JOIN users ON publications.userid = users.userid
+    LIMIT limitNumber
+    OFFSET skip;
+END
+$$;
+
+---- This function returns a table with all the data needed to print a question details
+
+CREATE OR REPLACE FUNCTION question_details_from_id (pubid INTEGER)
+    RETURNS TABLE (
+        publicationid INTEGER,
+        title VARCHAR(100),
+        body TEXT,
+        creation_date TIMESTAMP,
+        solved_date TIMESTAMP,
+        username VARCHAR(10),
+        userid INTEGER,
+        answers_count BIGINT,
+        upvotes BIGINT)
+AS $func$
+BEGIN
+    RETURN QUERY
+    SELECT questions.publicationid,  questions.title, publications.body,
+        publications.creation_date, questions.solved_date, users.username,users.userid,
+        (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
+        (SELECT COUNT (*) FROM votes WHERE questions.publicationid = pubid) AS upvotes
+    FROM questions
+        INNER JOIN publications
+            ON questions.publicationid = publications.publicationid
+        LEFT JOIN users ON publications.userid = users.userid
+    WHERE questions.publicationid = pubid;
 END
 $func$  LANGUAGE plpgsql;
