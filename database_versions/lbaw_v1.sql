@@ -487,14 +487,16 @@ CREATE OR REPLACE FUNCTION recent_questions(skip INTEGER, limitNumber INTEGER)
         username VARCHAR(10),
         userid INTEGER,
         answers_count BIGINT,
-        upvotes BIGINT)
+        upvotes BIGINT,
+        votes_count BIGINT)
 AS $func$
 BEGIN
     RETURN QUERY
     SELECT questions.publicationid, questions.title, publications.body,
         publications.creation_date, questions.solved_date, users.username, users.userid,
         (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
-        (SELECT COUNT (*) FROM votes WHERE votes.values = 1 AND votes.publicationid = 1) AS upvotes
+        (SELECT COUNT (*) FROM votes WHERE votes.values = 1 AND votes.publicationid = 1) AS upvotes,
+        (SELECT SUM(votes.values) FROM votes WHERE votes.publicationid = questions.publicationid)
     FROM questions
         INNER JOIN publications
             ON questions.publicationid = publications.publicationid
@@ -504,3 +506,23 @@ BEGIN
     OFFSET skip;
 END
 $func$  LANGUAGE plpgsql;
+
+create or replace function unanswered_questions(skip integer, limitnumber integer) returns TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    RETURN QUERY
+    SELECT questions.publicationid, questions.title, publications.body,
+        publications.creation_date, questions.solved_date, users.username, users.userid,
+        (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
+        (SELECT COUNT (*) FROM votes WHERE votes.values = 1 AND votes.publicationid = 1) AS upvotes,
+        (SELECT SUM(votes.values) FROM votes WHERE votes.publicationid = questions.publicationid) AS votes_count
+    FROM questions
+        INNER JOIN publications
+            ON questions.publicationid = publications.publicationid
+        LEFT JOIN users ON publications.userid = users.userid
+    LIMIT limitNumber
+    OFFSET skip;
+END
+$$;
+

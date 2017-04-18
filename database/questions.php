@@ -113,3 +113,34 @@ function recent_questions($page = 0)
 
     return $rows;
 }
+
+function unanswered_questions($page = 0) {
+
+    global $conn;
+    $limit = 4;
+    $skip = $limit * $page;
+    $stmt = $conn->prepare("SELECT * FROM unanswered_questions(:skip, :limit) WHERE answers_count = 0");
+    $stmt->execute(['limit' => $limit, 'skip' => $skip]);
+    $rows = $stmt->fetchAll();
+    //$rows = addQuestionsComputedFields($rows);
+
+    return $rows;
+
+
+}
+
+
+function top_scored_questions($page = 0) {
+
+    global $conn;
+    $limit = 4;
+    $skip = $limit * $page;
+    $stmt = $conn->prepare("SELECT * FROM top_scored_questions(:skip, :limit)");
+    $stmt->execute(['limit' => $limit, 'skip' => $skip]);
+    $rows = $stmt->fetchAll();
+    //$rows = addQuestionsComputedFields($rows);
+
+    return $rows;
+
+
+}

@@ -1,14 +1,23 @@
-
-
 <div class="question-summary narrow">
 
     <div class="col-md-12">
 
         <div class="votes">
-            <div class="mini-counts"><span title="7 votes">{$question['upvotes']}</span></div>
+            <div class="mini-counts"><span title="7 votes">
+                    {if $question['votes_count']}
+                        {$question['votes_count']}
+                    {else}
+                        0
+                    {/if}
+                    </span></div>
             <div>votes</div>
         </div>
-        <div class="status answered-accepted" title="one of the answers was accepted as the correct answer">
+        <div {if $question['solved_date']}
+            class="status answered-accepted"
+        {else}
+            class="status answer-selected"
+        {/if}
+                title="one of the answers was accepted as the correct answer">
             <div class="mini-counts"><span title="1 answer">{$question['answers_count']}</span></div>
             <div>answer</div>
         </div>
