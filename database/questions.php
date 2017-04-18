@@ -152,3 +152,5 @@ function get_questions_from_id($publicationid) {
     $rows = $stmt->fetchAll();
     return $rows;
 }
+
+

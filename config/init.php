@@ -7,6 +7,7 @@ session_start();
 $BASE_DIR = '/home/luiscosta/PhpstormProjects/LBAW-FEUP/'; //CHANGE WITH YOURS
 $BASE_URL = '/';
 
+
 //Connect to the database
 
 try {

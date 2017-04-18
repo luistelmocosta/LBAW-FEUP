@@ -507,6 +507,7 @@ BEGIN
 END
 $func$  LANGUAGE plpgsql;
 
+
 create or replace function unanswered_questions(skip integer, limitnumber integer) returns TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint)
 LANGUAGE plpgsql
 AS $$
@@ -525,6 +526,7 @@ BEGIN
     OFFSET skip;
 END
 $$;
+
 
 ---- This function returns a table with all the data needed to print a question details
 
