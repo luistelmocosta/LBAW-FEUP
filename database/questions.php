@@ -144,3 +144,11 @@ function top_scored_questions($page = 0) {
 
 
 }
+
+function get_questions_from_id($publicationid) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM question_details_from_id(:publicationid)");
+    $stmt->execute(['publicationid' => $publicationid]);
+    $rows = $stmt->fetchAll();
+    return $rows;
+}

@@ -37,9 +37,9 @@ function url($uri = '', $params = [])
     return $BASE_URL . $uri;
 }
 
-function questionUrl($question_id)
+function questionUrl($publicationid)
 {
-    return url('pages/questions/details', ['question' => $question_id]);
+    return url('controller/pages/questions/question', ['question' => $publicationid]);
 }
 
 function editQuestionUrl($question_id)
