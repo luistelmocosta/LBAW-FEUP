@@ -17,10 +17,9 @@
             <div>answer</div>
         </div>
         <div class="views">
-            <div class="mini-counts"><span title="140 views">140</span></div>
+            <div class="mini-counts"><span title="140 views">{$question['views_counter']}</span></div>
             <div>views</div>
         </div>
-
         <div class="summary">
             <h3>
                 <a href="{questionUrl($question['publicationid'])}" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">

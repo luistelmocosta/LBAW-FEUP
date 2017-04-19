@@ -52,7 +52,7 @@
                                                 </span>
                                                 <span class="qa-q-item-who">
                                                     <span class="qa-q-item-who-pad">by </span>
-                                                    <span class="qa-q-item-who-data"><span class="vcard author"><a href="../user/cusatxpress" class="qa-user-link url nickname">cusatxpress</a></span></span>
+                                                    <span class="qa-q-item-who-data"><span class="vcard author"><a href="../user/cusatxpress" class="qa-user-link url nickname">{$question['username']}</a></span></span>
                                                 </span>
                                             </span>
                                                 <div class="question-tags">

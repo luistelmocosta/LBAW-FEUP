@@ -108,6 +108,7 @@ CREATE TABLE questions
     title VARCHAR(100) NOT NULL,
     categoryid INTEGER NOT NULL,
     solved_date TIMESTAMP,
+    views_counter BIGINT DEFAULT 0 NOT NULL,
     CONSTRAINT title_length CHECK (CHAR_LENGTH(title) >= 3 AND CHAR_LENGTH(title) <= 50),
     CONSTRAINT "FK_Question_Category"
     FOREIGN KEY ("categoryid") REFERENCES categories ("categoryid") ON DELETE SET NULL ON UPDATE CASCADE,
@@ -475,40 +476,23 @@ BEGIN
 END
 $func$  LANGUAGE plpgsql;
 
----- This function returns a table with all the data needed to print a list of questions
+---- This function returns a table with all the data needed to print a list of TOP SCORED QUESTIONS
 
-CREATE OR REPLACE FUNCTION recent_questions(skip INTEGER, limitNumber INTEGER)
-    RETURNS TABLE (
-        publicationid INTEGER,
-        title VARCHAR(100),
-        body TEXT,
-        creation_date TIMESTAMP,
-        solved_date TIMESTAMP,
-        username VARCHAR(10),
-        userid INTEGER,
-        answers_count BIGINT,
-        upvotes BIGINT,
-        votes_count BIGINT)
-AS $func$
-BEGIN
-    RETURN QUERY
-    SELECT questions.publicationid, questions.title, publications.body,
-        publications.creation_date, questions.solved_date, users.username, users.userid,
-        (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
-        (SELECT COUNT (*) FROM votes WHERE votes.values = 1 AND votes.publicationid = 1) AS upvotes,
-        (SELECT SUM(votes.values) FROM votes WHERE votes.publicationid = questions.publicationid)
-    FROM questions
-        INNER JOIN publications
-            ON questions.publicationid = publications.publicationid
-        LEFT JOIN users ON publications.userid = users.userid
-    ORDER BY creation_date DESC
-    LIMIT limitNumber
-    OFFSET skip;
-END
-$func$  LANGUAGE plpgsql;
-
-
-create or replace function unanswered_questions(skip integer, limitnumber integer) returns TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint)
+create or replace function top_scored_questions(skip integer, limitnumber integer)
+    returns
+        TABLE
+        (
+            publicationid integer,
+            title character varying,
+            body text,
+            creation_date timestamp without time zone,
+            solved_date timestamp without time zone,
+            username character varying,
+            userid integer,
+            answers_count bigint,
+            upvotes bigint,
+            votes_count BIGINT,
+            views_counter BIGINT)
 LANGUAGE plpgsql
 AS $$
 BEGIN
@@ -517,18 +501,20 @@ BEGIN
         publications.creation_date, questions.solved_date, users.username, users.userid,
         (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
         (SELECT COUNT (*) FROM votes WHERE votes.values = 1 AND votes.publicationid = 1) AS upvotes,
-        (SELECT SUM(votes.values) FROM votes WHERE votes.publicationid = questions.publicationid) AS votes_count
+        (SELECT COALESCE(SUM(votes.values), 0) FROM votes WHERE votes.publicationid = questions.publicationid) AS votes_count,
+        questions.views_counter
     FROM questions
         INNER JOIN publications
             ON questions.publicationid = publications.publicationid
         LEFT JOIN users ON publications.userid = users.userid
+    ORDER BY votes_count DESC
     LIMIT limitNumber
     OFFSET skip;
 END
 $$;
 
+---- This function returns a table with all the data needed to print a one question
 
----- This function returns a table with all the data needed to print a question details
 
 CREATE OR REPLACE FUNCTION question_details_from_id (pubid INTEGER)
     RETURNS TABLE (
@@ -555,3 +541,75 @@ BEGIN
     WHERE questions.publicationid = pubid;
 END
 $func$  LANGUAGE plpgsql;
+
+
+---- This function returns a table with all the data needed to print a list of RECENT QUESTIONS
+
+
+CREATE OR REPLACE FUNCTION recent_questions(skip INTEGER, limitNumber INTEGER)
+    RETURNS TABLE (
+        publicationid INTEGER,
+        title VARCHAR(100),
+        body TEXT,
+        creation_date TIMESTAMP,
+        solved_date TIMESTAMP,
+        username VARCHAR(10),
+        userid INTEGER,
+        answers_count BIGINT,
+        upvotes BIGINT,
+        votes_count BIGINT,
+        views_counter BIGINT)
+AS $func$
+BEGIN
+    RETURN QUERY
+    SELECT questions.publicationid, questions.title, publications.body,
+        publications.creation_date, questions.solved_date, users.username, users.userid,
+        (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
+        (SELECT COUNT (*) FROM votes WHERE votes.values = 1 AND votes.publicationid = 1) AS upvotes,
+        (SELECT SUM(votes.values) FROM votes WHERE votes.publicationid = questions.publicationid),
+        questions.views_counter
+    FROM questions
+        INNER JOIN publications
+            ON questions.publicationid = publications.publicationid
+        LEFT JOIN users ON publications.userid = users.userid
+    ORDER BY creation_date DESC
+    LIMIT limitNumber
+    OFFSET skip;
+END
+$func$  LANGUAGE plpgsql;
+
+---- This function returns a table with all the data needed to print a list of UNANSWERED QUESTIONS
+
+
+create or replace function unanswered_questions(skip integer, limitnumber integer)
+    returns TABLE
+    (
+        publicationid integer,
+        title character varying,
+        body text,
+        creation_date timestamp without time zone,
+        solved_date timestamp without time zone,
+        username character varying,
+        userid integer,
+        answers_count bigint,
+        upvotes bigint,
+        votes_count BIGINT,
+        views_counter BIGINT)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    RETURN QUERY
+    SELECT questions.publicationid, questions.title, publications.body,
+        publications.creation_date, questions.solved_date, users.username, users.userid,
+        (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
+        (SELECT COUNT (*) FROM votes WHERE votes.values = 1 AND votes.publicationid = 1) AS upvotes,
+        (SELECT SUM(votes.values) FROM votes WHERE votes.publicationid = questions.publicationid) AS votes_count,
+        questions.views_counter
+    FROM questions
+        INNER JOIN publications
+            ON questions.publicationid = publications.publicationid
+        LEFT JOIN users ON publications.userid = users.userid
+    LIMIT limitNumber
+    OFFSET skip;
+END
+$$;

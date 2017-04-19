@@ -153,4 +153,8 @@ function get_questions_from_id($publicationid) {
     return $rows;
 }
 
-
+function increment_views_counter($questionid) {
+    global $conn;
+    $stmt = $conn->prepare("UPDATE questions SET views_counter=views_counter+1 WHERE publicationid = :questionid");
+    $stmt->execute(['questionid' => $questionid]);
+}
