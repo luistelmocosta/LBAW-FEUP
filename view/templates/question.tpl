@@ -30,7 +30,7 @@
                                     <span class="post-status open">Solved</span>
                                 {else}
                                     <span class="post-status closed">Not Solved</span>
-                                    {/if}
+                                {/if}
 
 
                                 <span class="q-view-a-count">{$question['answers_count']} Answers</span>
@@ -66,9 +66,9 @@
                                                 <div class="question-tags">
                                                     <h3 class="tags-label">Tags</h3>
                                                     <ul class="tags-tag-list">
-                                                        <li><a href="" class="widget-tag">cleanstrap<span>20</span></a></li>
-                                                        <li><a href="" class="widget-tag">bootstrap<span>3</span></a></li>
-                                                        <li><a href="" class="widget-tag">feup<span>5</span></a></li>
+                                                        {foreach $tags as $tag}
+                                                            <li><a href="" class="widget-tag">{$tag['name']}</a></li>
+                                                        {/foreach}
                                                     </ul>
                                                 </div>
                                             </div>
@@ -76,72 +76,10 @@
                                             <h3 class="answers-label">{$question['answers_count']} Answers</h3>
 
                                             <div class="qa-a-list-item  hentry answer">
-                                                <div class="qa-a-item-main">
-                                                    <div class="asker-detail clearfix">
-                                                        <div class="asker-avatar avatar"></div>
-
-                                                        <div class="user-info no-overflow">
-                                                            <h3 class="asker-name"></h3>
-                                                            <p class="asker-point"> <span class="title"></span></p>
-                                                        </div>
-                                                        <div class="enabled voting clearfix voting-vertical qa-voting-net" id="voting_187">
-                                                            <a title="" class=" fa fa-thumbs-up enabled vote-up enabled" data-original-title="Click to vote up"></a>
-                                                            <span class="count">0</span>
-                                                            <a title="" class=" fa fa-thumbs-down enabled vote-down enabled" data-original-title="Click to vote down"></a>
-                                                        </div>
-                                                        <form method="post" action="">
-                                                            <div class="qa-a-selection">
-                                                            </div>
-                                                            <input name="code" type="hidden">
-                                                            <input name="qa_click" value="" type="hidden">
-                                                        </form>
-                                                    </div>
-                                                    <div class="a-item-inner-wrap">
-                                                        <form method="post" action="">
-                                                            <div class="a-item-wrap">
-                                                                <div class="qa-a-item-content">
-                                                                    <a name="187"></a><div class="entry-content">How you install other themes. Unzip the content to the qa-theme folder and you are good to go!</div>
-                                                                </div>
-                                                                <span class="qa-a-item-meta">
-																				<a href="../184/how-to-install-this-theme?show=187#a187" class="qa-a-item-what">answered</a>
-																				<span class="qa-a-item-when">
-																					<span class="qa-a-item-when-data"><span class="published"><span class="value-title" title=""></span>Sep 13, 2015</span></span>
-																				</span>
-																				<span class="qa-a-item-who">
-																					<span class="qa-a-item-who-pad">by </span>
-																					<span class="qa-a-item-who-data">Juam</span>
-																				</span>
-																			</span>
-                                                                <div class="post-button clearfix">
-                                                                    <button name="a187_doflag" onclick="return qa_answer_click(187, 184, this);" class="btn icon-flag" title="Flag this answer as spam or inappropriate" type="submit">flag</button>
-                                                                    <button name="a187_dofollow" class="btn icon-add-answer" title="Ask a new question relating to this answer" type="submit">ask related question</button>
-                                                                    <button name="a187_docomment" onclick="return qa_toggle_element('c187')" class="btn icon-chat" title="Add a comment on this answer" type="submit">comment</button>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="qa-a-item-c-list" style="display:none;" id="">
-                                                                <div class="comment-count icon-comments">0<span>Comments</span></div>
-                                                                <div class="comment-items">
-                                                                </div>
-                                                            </div> <!-- END qa-c-list -->
-
-                                                            <input name="code" value="0-1489600293-0c8505c3a885e0a52578dc109fb02255a05018b6" type="hidden">
-                                                            <input name="qa_click" value="" type="hidden">
-                                                        </form>
-                                                        <div class="qa-c-form" id="c187" style="display:none;">
-                                                            <div class="asker-avatar no-radius">
-
-                                                            </div>
-                                                            <div class="comment-f-wrap">
-                                                                <h3>
-                                                                    Please <a href="">log in</a> or <a href="../register?to=184%2Fhow-to-install-this-theme">register</a> to add a comment.
-                                                                </h3>
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-                                                </div> <!-- END qa-a-item-main -->
+                                                {foreach $answers as $answer}
+                                                    {include file="answers.tpl"}
+                                                {/foreach}
+                                                <!-- END qa-a-item-main -->
                                             </div>
 
                                             <div class="answer-form">
@@ -149,11 +87,35 @@
 
 
                                                 <div class="qa-part-form">
-                                                    <textarea name="editor1"></textarea>
-                                                    <script>
-                                                        CKEDITOR.replace( 'editor1' );
-                                                    </script>
+                                                    <form name="ask" method="post" action="/../../controller/actions/answers/create_answer.php">
+                                                        <table class="qa-form-tall-table">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td class="qa-form-tall-data">
+                                                                    <textarea name="editor1"></textarea>
+                                                                    <script>
+                                                                        CKEDITOR.replace( 'editor1' );
+                                                                    </script>
+
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                            <tbody><tr>
+                                                                <td colspan="1" class="qa-form-tall-buttons">
+                                                                    <input onclick="qa_show_waiting_after(this, false);" value="Answer" title="" type="submit" class="qa-form-tall-button qa-form-tall-button-answer">
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <div class = "form-group ">
+                                                            <input type="hidden" name = "questionid" value="{$question['publicationid']}">
+                                                        </div>
+
+                                                    </form>
                                                 </div>
+
+
                                             </div>
 
                                         </div>

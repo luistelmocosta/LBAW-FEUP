@@ -56,7 +56,7 @@
                         </tr>
                         <tr>
                             <td class="qa-form-tall-data">
-                                <input name="tags" id="tags" autocomplete="off" onkeyup="" onmouseup="" type="text" value=""
+                                <input name="tags" id="tags" autocomplete="off" type="text" value=""
                                        class="qa-form-tall-text">
                             </td>
                         </tr>
@@ -74,4 +74,5 @@
             </div>
         </div>
     </div>
+</div>
 

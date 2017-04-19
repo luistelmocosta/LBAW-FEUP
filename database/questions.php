@@ -158,3 +158,13 @@ function increment_views_counter($questionid) {
     $stmt = $conn->prepare("UPDATE questions SET views_counter=views_counter+1 WHERE publicationid = :questionid");
     $stmt->execute(['questionid' => $questionid]);
 }
+
+function get_answers_from_questionid($questionid) {
+
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM answers_from_questionid(:questionid)");
+    $stmt->execute(['questionid' => $questionid]);
+    $rows = $stmt->fetchAll();
+    return $rows;
+
+}
