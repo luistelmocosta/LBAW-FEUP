@@ -4,7 +4,7 @@
             <h1>Create Question</h1>
             <br>
             <div class="qa-part-form">
-                <form name="ask" method="post" action="/../../controller/actions/questions/create_question.php">
+                <form name="ask" method="post" action= "{$BASE_URL}controller/actions/questions/create_question.php">
                     <table class="qa-form-tall-table">
                         <tbody><tr>
                             <td class="qa-form-tall-label">

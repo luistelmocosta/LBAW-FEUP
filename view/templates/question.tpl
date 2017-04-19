@@ -87,7 +87,7 @@
 
 
                                                 <div class="qa-part-form">
-                                                    <form name="ask" method="post" action="/../../controller/actions/answers/create_answer.php">
+                                                    <form name="ask" method="post" action="{$BASE_URL}controller/actions/answers/create_answer.php">
                                                         <table class="qa-form-tall-table">
                                                             <tbody>
                                                             <tr>

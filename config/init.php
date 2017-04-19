@@ -9,7 +9,7 @@ session_start();
 
 //GNOME
 $BASE_DIR = '/opt/lbaw/lbaw1641/public_html/proto/'; //FIXME
-$BASE_URL = '/~lbaw1616/proto/'; //FIXME
+$BASE_URL = '/~lbaw1641/proto/'; //FIXME
 //Connect to the database
 try {
     $dbuser = 'lbaw1641'; //CHANGE WITH YOUR INFO
