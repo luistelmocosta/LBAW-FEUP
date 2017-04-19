@@ -633,3 +633,35 @@ BEGIN
     OFFSET skip;
 END
 $$;
+
+create or replace function insert_into_answers(userid INTEGER, questionid INTEGER, body text)
+    returns void language plpgsql as $$
+DECLARE result INTEGER;
+begin
+    insert into publications(body, userid)
+    VALUES (body, userid)
+    returning publications.publicationid AS publicationid INTO result;
+
+    insert into answers(publicationid , questionid) VALUES (result, questionid);
+end $$;
+
+CREATE OR REPLACE FUNCTION answers_from_questionid(qid INTEGER)
+    RETURNS TABLE (
+        answerid INTEGER,
+        body TEXT,
+        solved_date TIMESTAMP,
+        creation_date TIMESTAMP,
+        userid INTEGER,
+        username VARCHAR(50)
+
+    )
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    RETURN QUERY
+    SELECT answers.publicationid, publications.body, answers.solved_date, publications.creation_date, users.userid, users.username
+    FROM publications INNER JOIN answers ON publications.publicationid = answers.publicationid
+        LEFT JOIN users ON publications.userid = users.userid
+    WHERE answers.questionid = qid;
+END
+$$;
