@@ -62,6 +62,15 @@
                         {include file="recent_questions.tpl"}
                     {/foreach}
 
+                    <div class = "load-more col-sm-12 space-top text-center"
+                         data-next-page = "1"
+                         data-url = "{url('controller/api/questions/load_more_questions.php')}"
+                         data-tab = "tabs-1">
+                        <button type = "button" class = "btn btn-lg btn-primary col-sm-6 col-sm-offset-3 col-xs-12">
+                            Load More...
+                        </button>
+                    </div>
+
                 </div>
                 <div id="tabs-2">
                     {foreach $unanswered_questions as $question}
@@ -180,5 +189,7 @@
 
     </div>
 </div>
+
+{HTML::script('askme/index.js')}
 
 

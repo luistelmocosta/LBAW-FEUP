@@ -17,17 +17,25 @@
                                 </div>
                                 <div class="enabled voting clearfix voting-vertical qa-voting-net" id="voting_187">
                                     <a title="" class=" fa fa-thumbs-up enabled vote-up enabled" data-original-title="Click to vote up"></a>
-                                    <span class="count">0</span>
+                                    <span class="count">{$question['upvotes']}</span>
                                     <a title="" class=" fa fa-thumbs-down enabled vote-down enabled" data-original-title="Click to vote down"></a>
+                                    <span class="count">{$question['down_votes']}</span>
                                 </div>
                                 {$question['title']}
                             </h2>
-                            <div class="question-meta">
-                                <span class="post-status open">Open</span>
 
-                                <span class="q-view-a-count">1 Answers</span>
-                                <span class="icon-eye-open q-view-v-count">131 Views</span>
-                                <a class="cat-in fa fa-folder" href="">AskMe</a>
+
+                            <div class="question-meta">
+                                {if $question['solved_date']}
+                                    <span class="post-status open">Solved</span>
+                                {else}
+                                    <span class="post-status closed">Not Solved</span>
+                                    {/if}
+
+
+                                <span class="q-view-a-count">{$question['answers_count']} Answers</span>
+                                <span class="icon-eye-open q-view-v-count">{$question['views_counter']} Views</span>
+                                <a class="cat-in fa fa-folder" href="">{$question['category']}</a>
                             </div>
                         </div>
 

@@ -1,7 +1,7 @@
 <?php
 
 
-function create_question($question, $tags) {
+function create_question($question) {
 
     global $conn;
     $query_publications=$conn->prepare("SELECT * FROM insert_into_questions(:body, :userid, :title, :categoryid);

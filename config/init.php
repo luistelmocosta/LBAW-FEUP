@@ -39,7 +39,7 @@ include_once($BASE_DIR . 'lib/permissions/AuthUser.class.php');
 include_once($BASE_DIR . 'lib/permissions/AdminUser.class.php');
 include_once($BASE_DIR . 'lib/permissions/ModUser.class.php');
 include_once($BASE_DIR . 'lib/permissions/ResourcePermission.class.php');
-
+include_once($BASE_DIR . 'lib/helpers/Html.class.php');
 
 $smarty	=	new	Smarty;
 $smarty->setTemplateDir($BASE_DIR	.	'view/templates/');

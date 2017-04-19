@@ -526,17 +526,24 @@ CREATE OR REPLACE FUNCTION question_details_from_id (pubid INTEGER)
         username VARCHAR(10),
         userid INTEGER,
         answers_count BIGINT,
-        upvotes BIGINT)
+        upvotes BIGINT,
+        down_votes BIGINT,
+        views_counter BIGINT,
+        category VARCHAR(100))
 AS $func$
 BEGIN
     RETURN QUERY
     SELECT questions.publicationid,  questions.title, publications.body,
         publications.creation_date, questions.solved_date, users.username,users.userid,
         (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
-        (SELECT COUNT (*) FROM votes WHERE questions.publicationid = pubid) AS upvotes
+        (SELECT COUNT (*) FROM votes WHERE votes.publicationid = pubid AND votes.values = 1) AS upvotes,
+        (SELECT COUNT (*) FROM votes WHERE votes.publicationid = pubid AND votes.values = -1) AS down_votes,
+        questions.views_counter,
+        categories.name
     FROM questions
         INNER JOIN publications
             ON questions.publicationid = publications.publicationid
+        INNER JOIN categories ON questions.categoryid = categories.categoryid
         LEFT JOIN users ON publications.userid = users.userid
     WHERE questions.publicationid = pubid;
 END

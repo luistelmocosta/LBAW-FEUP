@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-04-19.01:22:16.560</IntrospectionTimestamp>
-      <IntrospectionStateNumber>43812</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-04-19.17:01:09.397</IntrospectionTimestamp>
+      <IntrospectionStateNumber>43864</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -31,12 +31,12 @@
     </schema>
     <schema id="9" parent="2" name="production">
       <ObjectId>125422</ObjectId>
-      <IntrospectionTimestamp>2017-04-19.01:22:16.560</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2017-04-19.17:01:09.397</IntrospectionTimestamp>
       <Visible>1</Visible>
     </schema>
     <schema id="10" parent="2" name="development">
       <ObjectId>125423</ObjectId>
-      <IntrospectionTimestamp>2017-04-19.01:22:16.560</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2017-04-19.17:01:09.397</IntrospectionTimestamp>
       <Visible>1</Visible>
     </schema>
     <sequence id="11" parent="3" name="answercomments_commentid_seq">
@@ -285,10 +285,10 @@
       <ReturnsSet>1</ReturnsSet>
     </routine>
     <routine id="55" parent="3" name="question_details_from_id">
-      <ObjectId>155356</ObjectId>
-      <StateNumber>43810</StateNumber>
+      <ObjectId>155368</ObjectId>
+      <StateNumber>43862</StateNumber>
       <ArgumentsDefinition>pubid integer</ArgumentsDefinition>
-      <ResultsDefinition>TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint)</ResultsDefinition>
+      <ResultsDefinition>TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint, down_votes bigint, views_counter bigint, category character varying)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
       <ReturnsSet>1</ReturnsSet>
@@ -304,7 +304,7 @@
     </routine>
     <routine id="57" parent="3" name="recent_questions">
       <ObjectId>155364</ObjectId>
-      <StateNumber>43811</StateNumber>
+      <StateNumber>43863</StateNumber>
       <ArgumentsDefinition>skip integer, limitnumber integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint, votes_count bigint, views_counter bigint)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
@@ -330,7 +330,7 @@
     </routine>
     <routine id="60" parent="3" name="top_scored_questions">
       <ObjectId>155363</ObjectId>
-      <StateNumber>43809</StateNumber>
+      <StateNumber>43861</StateNumber>
       <ArgumentsDefinition>skip integer, limitnumber integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint, votes_count bigint, views_counter bigint)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
@@ -353,7 +353,7 @@
     </routine>
     <routine id="63" parent="3" name="unanswered_questions">
       <ObjectId>155365</ObjectId>
-      <StateNumber>43812</StateNumber>
+      <StateNumber>43864</StateNumber>
       <ArgumentsDefinition>skip integer, limitnumber integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint, votes_count bigint, views_counter bigint)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
@@ -1396,7 +1396,7 @@ signup_date</ColNames>
     </argument>
     <argument id="233" parent="55">
       <ArgumentDirection>T</ArgumentDirection>
-      <DataType>table(publicationid integer, title varchar, body text, creation_date timestamp, solved_date timestamp, username varchar, userid integer, answers_count bigint, upvotes bigint)|0</DataType>
+      <DataType>table(publicationid integer, title varchar, body text, creation_date timestamp, solved_date timestamp, username varchar, userid integer, answers_count bigint, upvotes bigint, down_votes bigint, views_counter bigint, category varchar)|0</DataType>
     </argument>
     <argument id="234" parent="56" name="pquestion_id">
       <Position>1</Position>

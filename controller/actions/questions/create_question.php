@@ -23,17 +23,18 @@ $question = [
 try {
 
     $conn->beginTransaction();
-    $questionid = create_question($question, $tags);
+    $questionid = create_question($question);
     update_tags($questionid, $tags);
 
 
     $conn->commit();
 
+    redirect('controller/pages/questions/question.php?question=' . $questionid);
+
 
 } catch (PDOException $e) {
     dd($e->getMessage());
     $_SESSION['error_messages'][] = "Your input is incorrect";
-    $question = create_question($question, $tags);
 
 }
 
