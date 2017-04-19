@@ -439,18 +439,6 @@ BEGIN
 END
 $func$  LANGUAGE plpgsql;
 
-create or replace function insert_into_questions(body text, userid integer, title varchar, categoryid integer)
-    returns void language plpgsql as $$
-declare
-    inserted_id integer;
-begin
-    insert into publications(body, userid)
-    VALUES (body, userid);
-
-    insert into questions(title, categoryid) VALUES (title, categoryid);
-end $$;
-
-
 --- This function adds does two inserts : - INSERT INTO Questions and Publications
 
 create or replace function insert_into_questions(body text, userid integer, title varchar, categoryid integer)
