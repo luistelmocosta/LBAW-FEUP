@@ -4,21 +4,29 @@
 session_start();
 
 //LOCAL
-//$BASE_DIR = '/home/luiscosta/PhpstormProjects/LBAW-FEUP/'; //CHANGE WITH YOURS
-//$BASE_URL = '/';
+$BASE_DIR = '/home/luiscosta/PhpstormProjects/LBAW-FEUP/'; //CHANGE WITH YOURS
+$BASE_URL = '/';
 
 //GNOME
-$BASE_DIR = '/opt/lbaw/lbaw1641/public_html/proto/'; //FIXME
-$BASE_URL = '/~lbaw1616/proto/'; //FIXME
-
-
+//$BASE_DIR = '/opt/lbaw/lbaw1641/public_html/proto/'; //FIXME
+//$BASE_URL = '/~lbaw1616/proto/'; //FIXME
 //Connect to the database
-
-try {
+/*try {
     $dbuser = 'lbaw1641'; //CHANGE WITH YOUR INFO
     $dbpass = 'zl50rg14';
     $host = 'dbm.fe.up.pt';
     $dbname = 'lbaw1641';
+    $conn = new PDO("pgsql:host=$host;dbname=$dbname", $dbuser, $dbpass);
+}catch (PDOException $e) {
+    echo "Error : " . $e->getMessage() . "<br/>";
+    die();
+}*/
+
+try {
+    $dbuser = 'luiscosta'; //CHANGE WITH YOUR INFO
+    $dbpass = '123';
+    $host = 'localhost';
+    $dbname = 'lbaw';
     $conn = new PDO("pgsql:host=$host;dbname=$dbname", $dbuser, $dbpass);
 }catch (PDOException $e) {
     echo "Error : " . $e->getMessage() . "<br/>";

@@ -5,13 +5,14 @@ include_once($BASE_DIR . 'database/answers.php');
 
 PagePermissions::create('auth')->check();
 
-validateInput();
+
 
 $answer = [
     'userid' => auth_user('userid'),
     'questionid' => intval($_POST['questionid']),
     'body' => $_POST['editor1']
 ];
+
 
 try {
     $conn->beginTransaction();

@@ -464,19 +464,6 @@ begin
     insert into questions(publicationid ,title, categoryid) VALUES (result, title, categoryid);
 end $$;
 
---- This function adds does two inserts : - INSERT INTO Questions and Publications
-
-create or replace function insert_into_answers(body text, userid integer, questionid INTEGER)
-    returns void language plpgsql as $$
-DECLARE result INTEGER;
-begin
-    insert into publications(body, userid)
-    VALUES (body, userid)
-    returning publications.publicationid AS publicationid INTO result;
-
-    insert into answers(publicationid , questionid) VALUES (result, questionid);
-end $$;
-
 --- Get tags from a given question id
 
 CREATE OR REPLACE FUNCTION question_tags(pquestion_id int)
