@@ -40,7 +40,6 @@
                         </div>
 
                         <div class="qa-q-view-main">
-                            <form method="post" action="../259/answer-votes-are-out-of-propotions">
                                 <div class="q-cont-right">
                                     <div class="qa-q-view-wrap">
                                         <div class="qa-q-view-inner">
