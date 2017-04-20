@@ -34,7 +34,7 @@
     <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 
 </head>
-
+<body>
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top" style="background: #2d2727;">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -65,14 +65,14 @@
                 <ul class="nav navbar-nav navbar-avatar pull-right">
                     <li class="dropdown pull-right" id="menuLogin">
                         <div class="log_menu" style="padding: 7px">
-                        <a id="profile-link" data-toggle="dropdown" href="#" class="avatar">
-                            <img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=30">						</a>
-                        <ul class="user-nav dropdown-menu">
-                            <li class="user-nav-profile"><a class="fa fa-id-card" href="{$BASE_URL}controller/pages/users/profile.php" title="Profile">Profile</a></li>
-                            <li class="user-nav-account"><a class="fa fa-cog" href="{$BASE_URL}controller/pages/users/edit_profile.php" title="Account">Account</a></li>
-                            <li class="user-nav-favorites"><a class="fa fa-user-md" href="{$BASE_URL}controller/pages/admin/admin.php" title="Admin Panel">Admin CP</a></li>
-                            <li><a class="fa fa-power-off" href="{$BASE_URL}controller/actions/users/logout.php"> Logout </a></li>
-                        </ul>
+                            <a id="profile-link" data-toggle="dropdown" href="#" class="avatar">
+                                <img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=30">						</a>
+                            <ul class="user-nav dropdown-menu">
+                                <li class="user-nav-profile"><a class="fa fa-id-card" href="{$BASE_URL}controller/pages/users/profile.php" title="Profile">Profile</a></li>
+                                <li class="user-nav-account"><a class="fa fa-cog" href="{$BASE_URL}controller/pages/users/edit_profile.php" title="Account">Account</a></li>
+                                <li class="user-nav-favorites"><a class="fa fa-user-md" href="{$BASE_URL}controller/pages/admin/admin.php" title="Admin Panel">Admin CP</a></li>
+                                <li><a class="fa fa-power-off" href="{$BASE_URL}controller/actions/users/logout.php"> Logout </a></li>
+                            </ul>
                         </div>
                     </li>
                 </ul>
@@ -83,5 +83,5 @@
     </div>
 
 </nav>
-<br>
+<br class="clearfix">
 <br>

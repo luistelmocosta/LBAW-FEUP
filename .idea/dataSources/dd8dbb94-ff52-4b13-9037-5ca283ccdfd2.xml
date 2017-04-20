@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-04-19.22:12:54.503</IntrospectionTimestamp>
-      <IntrospectionStateNumber>44791</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-04-20.12:50:40.746</IntrospectionTimestamp>
+      <IntrospectionStateNumber>44994</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -31,185 +31,185 @@
     </schema>
     <schema id="9" parent="2" name="production">
       <ObjectId>125422</ObjectId>
-      <IntrospectionTimestamp>2017-04-19.21:14:35.476</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2017-04-20.12:50:40.746</IntrospectionTimestamp>
       <Visible>1</Visible>
     </schema>
     <schema id="10" parent="2" name="development">
       <ObjectId>125423</ObjectId>
-      <IntrospectionTimestamp>2017-04-19.21:14:35.476</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2017-04-20.12:50:40.746</IntrospectionTimestamp>
       <Visible>1</Visible>
     </schema>
     <sequence id="11" parent="3" name="answercomments_commentid_seq">
-      <ObjectId>155579</ObjectId>
-      <StateNumber>44044</StateNumber>
+      <ObjectId>156168</ObjectId>
+      <StateNumber>44964</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="12" parent="3" name="answers_publicationid_seq">
-      <ObjectId>155560</ObjectId>
-      <StateNumber>44042</StateNumber>
+      <ObjectId>156149</ObjectId>
+      <StateNumber>44962</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="13" parent="3" name="badges_badgeid_seq">
-      <ObjectId>155374</ObjectId>
-      <StateNumber>44022</StateNumber>
+      <ObjectId>155963</ObjectId>
+      <StateNumber>44942</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="14" parent="3" name="bans_banid_seq">
-      <ObjectId>155474</ObjectId>
-      <StateNumber>44033</StateNumber>
+      <ObjectId>156063</ObjectId>
+      <StateNumber>44953</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="15" parent="3" name="categories_categoryid_seq">
-      <ObjectId>155383</ObjectId>
-      <StateNumber>44023</StateNumber>
+      <ObjectId>155972</ObjectId>
+      <StateNumber>44943</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="16" parent="3" name="comments_publicationid_seq">
-      <ObjectId>155529</ObjectId>
-      <StateNumber>44040</StateNumber>
+      <ObjectId>156118</ObjectId>
+      <StateNumber>44960</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="17" parent="3" name="locations_locationid_seq">
-      <ObjectId>155403</ObjectId>
-      <StateNumber>44025</StateNumber>
+      <ObjectId>155992</ObjectId>
+      <StateNumber>44945</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="18" parent="3" name="modregisters_modregisterid_seq">
-      <ObjectId>155440</ObjectId>
-      <StateNumber>44029</StateNumber>
+      <ObjectId>156029</ObjectId>
+      <StateNumber>44949</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="19" parent="3" name="publications_publicationid_seq">
-      <ObjectId>155487</ObjectId>
-      <StateNumber>44034</StateNumber>
+      <ObjectId>156076</ObjectId>
+      <StateNumber>44954</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="20" parent="3" name="questioncomments_commentid_seq">
-      <ObjectId>155542</ObjectId>
-      <StateNumber>44041</StateNumber>
+      <ObjectId>156131</ObjectId>
+      <StateNumber>44961</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="21" parent="3" name="questions_publicationid_seq">
-      <ObjectId>155508</ObjectId>
-      <StateNumber>44038</StateNumber>
+      <ObjectId>156097</ObjectId>
+      <StateNumber>44958</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="22" parent="3" name="tags_tagid_seq">
-      <ObjectId>155597</ObjectId>
-      <StateNumber>44045</StateNumber>
+      <ObjectId>156186</ObjectId>
+      <StateNumber>44965</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="23" parent="3" name="userroles_roleid_seq">
-      <ObjectId>155394</ObjectId>
-      <StateNumber>44024</StateNumber>
+      <ObjectId>155983</ObjectId>
+      <StateNumber>44944</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="24" parent="3" name="users_userid_seq">
-      <ObjectId>155411</ObjectId>
-      <StateNumber>44026</StateNumber>
+      <ObjectId>156000</ObjectId>
+      <StateNumber>44946</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="25" parent="3" name="votes_voteid_seq">
-      <ObjectId>155606</ObjectId>
-      <StateNumber>44046</StateNumber>
+      <ObjectId>156195</ObjectId>
+      <StateNumber>44966</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="26" parent="3" name="warnings_warningid_seq">
-      <ObjectId>155461</ObjectId>
-      <StateNumber>44032</StateNumber>
+      <ObjectId>156050</ObjectId>
+      <StateNumber>44952</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <table id="27" parent="3" name="answercomments">
-      <ObjectId>155581</ObjectId>
-      <StateNumber>44044</StateNumber>
+      <ObjectId>156170</ObjectId>
+      <StateNumber>44964</StateNumber>
     </table>
     <table id="28" parent="3" name="answers">
-      <ObjectId>155562</ObjectId>
-      <StateNumber>44044</StateNumber>
+      <ObjectId>156151</ObjectId>
+      <StateNumber>44964</StateNumber>
     </table>
     <table id="29" parent="3" name="badges">
-      <ObjectId>155376</ObjectId>
-      <StateNumber>44050</StateNumber>
+      <ObjectId>155965</ObjectId>
+      <StateNumber>44970</StateNumber>
     </table>
     <table id="30" parent="3" name="bans">
-      <ObjectId>155476</ObjectId>
-      <StateNumber>44033</StateNumber>
+      <ObjectId>156065</ObjectId>
+      <StateNumber>44953</StateNumber>
     </table>
     <table id="31" parent="3" name="categories">
-      <ObjectId>155385</ObjectId>
-      <StateNumber>44038</StateNumber>
+      <ObjectId>155974</ObjectId>
+      <StateNumber>44958</StateNumber>
     </table>
     <table id="32" parent="3" name="comments">
-      <ObjectId>155531</ObjectId>
-      <StateNumber>44044</StateNumber>
+      <ObjectId>156120</ObjectId>
+      <StateNumber>44964</StateNumber>
     </table>
     <table id="33" parent="3" name="locations">
-      <ObjectId>155405</ObjectId>
-      <StateNumber>44026</StateNumber>
+      <ObjectId>155994</ObjectId>
+      <StateNumber>44946</StateNumber>
     </table>
     <table id="34" parent="3" name="modregisters">
-      <ObjectId>155442</ObjectId>
-      <StateNumber>44033</StateNumber>
+      <ObjectId>156031</ObjectId>
+      <StateNumber>44953</StateNumber>
     </table>
     <table id="35" parent="3" name="publications">
-      <ObjectId>155489</ObjectId>
-      <StateNumber>44063</StateNumber>
+      <ObjectId>156078</ObjectId>
+      <StateNumber>44984</StateNumber>
     </table>
     <table id="36" parent="3" name="questioncomments">
-      <ObjectId>155544</ObjectId>
-      <StateNumber>44041</StateNumber>
+      <ObjectId>156133</ObjectId>
+      <StateNumber>44961</StateNumber>
     </table>
     <table id="37" parent="3" name="questions">
-      <ObjectId>155510</ObjectId>
-      <StateNumber>44048</StateNumber>
+      <ObjectId>156099</ObjectId>
+      <StateNumber>44968</StateNumber>
     </table>
     <table id="38" parent="3" name="questiontags">
-      <ObjectId>155627</ObjectId>
-      <StateNumber>44048</StateNumber>
+      <ObjectId>156216</ObjectId>
+      <StateNumber>44968</StateNumber>
     </table>
     <table id="39" parent="3" name="tags">
-      <ObjectId>155599</ObjectId>
-      <StateNumber>44048</StateNumber>
+      <ObjectId>156188</ObjectId>
+      <StateNumber>44968</StateNumber>
     </table>
     <table id="40" parent="3" name="userbadges">
-      <ObjectId>155643</ObjectId>
-      <StateNumber>44050</StateNumber>
+      <ObjectId>156232</ObjectId>
+      <StateNumber>44970</StateNumber>
     </table>
     <table id="41" parent="3" name="userroles">
-      <ObjectId>155396</ObjectId>
-      <StateNumber>44026</StateNumber>
+      <ObjectId>155985</ObjectId>
+      <StateNumber>44946</StateNumber>
     </table>
     <table id="42" parent="3" name="users">
-      <ObjectId>155413</ObjectId>
-      <StateNumber>44050</StateNumber>
+      <ObjectId>156002</ObjectId>
+      <StateNumber>44970</StateNumber>
     </table>
     <table id="43" parent="3" name="votes">
-      <ObjectId>155608</ObjectId>
-      <StateNumber>44059</StateNumber>
+      <ObjectId>156197</ObjectId>
+      <StateNumber>44980</StateNumber>
     </table>
     <table id="44" parent="3" name="warnings">
-      <ObjectId>155463</ObjectId>
-      <StateNumber>44061</StateNumber>
+      <ObjectId>156052</ObjectId>
+      <StateNumber>44982</StateNumber>
     </table>
     <routine id="45" parent="3" name="answers_from_questionid">
       <ObjectId>155370</ObjectId>
-      <StateNumber>44075</StateNumber>
+      <StateNumber>44994</StateNumber>
       <ArgumentsDefinition>qid integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(answerid integer, body text, solved_date timestamp without time zone, creation_date timestamp without time zone, userid integer, username character varying)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
@@ -246,7 +246,7 @@
     </routine>
     <routine id="50" parent="3" name="count_vote_rating_received_user">
       <ObjectId>140375</ObjectId>
-      <StateNumber>44055</StateNumber>
+      <StateNumber>44975</StateNumber>
       <ArgumentsDefinition>puser_id integer</ArgumentsDefinition>
       <ResultsDefinition>integer</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
@@ -254,7 +254,7 @@
     </routine>
     <routine id="51" parent="3" name="getusernamefromquestion">
       <ObjectId>133598</ObjectId>
-      <StateNumber>44064</StateNumber>
+      <StateNumber>44985</StateNumber>
       <ArgumentsDefinition>questionid integer</ArgumentsDefinition>
       <ResultsDefinition>character varying</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
@@ -271,7 +271,7 @@
     </routine>
     <routine id="53" parent="3" name="insert_into_answers">
       <ObjectId>155373</ObjectId>
-      <StateNumber>44791</StateNumber>
+      <StateNumber>44993</StateNumber>
       <ArgumentsDefinition>userid integer, questionid integer, body text</ArgumentsDefinition>
       <ResultsDefinition>void</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
@@ -279,7 +279,7 @@
     </routine>
     <routine id="54" parent="3" name="insert_into_questions">
       <ObjectId>154476</ObjectId>
-      <StateNumber>44067</StateNumber>
+      <StateNumber>44987</StateNumber>
       <ArgumentsDefinition>body text, userid integer, title character varying, categoryid integer</ArgumentsDefinition>
       <ResultsDefinition>void</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
@@ -287,14 +287,14 @@
     </routine>
     <routine id="55" parent="3" name="own_content_vote">
       <ObjectId>143896</ObjectId>
-      <StateNumber>44058</StateNumber>
+      <StateNumber>44979</StateNumber>
       <ResultsDefinition>trigger</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
     <routine id="56" parent="3" name="question_answers">
       <ObjectId>139202</ObjectId>
-      <StateNumber>44053</StateNumber>
+      <StateNumber>44973</StateNumber>
       <ArgumentsDefinition>pquestion_id integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(id integer, user_id integer, username character varying, body text, created_at timestamp without time zone)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
@@ -303,7 +303,7 @@
     </routine>
     <routine id="57" parent="3" name="question_details_from_id">
       <ObjectId>155368</ObjectId>
-      <StateNumber>44071</StateNumber>
+      <StateNumber>44990</StateNumber>
       <ArgumentsDefinition>pubid integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint, down_votes bigint, views_counter bigint, category character varying)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
@@ -312,7 +312,7 @@
     </routine>
     <routine id="58" parent="3" name="question_tags">
       <ObjectId>139201</ObjectId>
-      <StateNumber>44069</StateNumber>
+      <StateNumber>44988</StateNumber>
       <ArgumentsDefinition>pquestion_id integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(tag character varying)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
@@ -321,7 +321,7 @@
     </routine>
     <routine id="59" parent="3" name="recent_questions">
       <ObjectId>155364</ObjectId>
-      <StateNumber>44072</StateNumber>
+      <StateNumber>44991</StateNumber>
       <ArgumentsDefinition>skip integer, limitnumber integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint, votes_count bigint, views_counter bigint)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
@@ -330,7 +330,7 @@
     </routine>
     <routine id="60" parent="3" name="search_questions">
       <ObjectId>125404</ObjectId>
-      <StateNumber>44065</StateNumber>
+      <StateNumber>44986</StateNumber>
       <ArgumentsDefinition>psearch text</ArgumentsDefinition>
       <ResultsDefinition>TABLE(questionid integer)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
@@ -347,7 +347,7 @@
     </routine>
     <routine id="62" parent="3" name="top_scored_questions">
       <ObjectId>155363</ObjectId>
-      <StateNumber>44070</StateNumber>
+      <StateNumber>44989</StateNumber>
       <ArgumentsDefinition>skip integer, limitnumber integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint, votes_count bigint, views_counter bigint)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
@@ -356,21 +356,21 @@
     </routine>
     <routine id="63" parent="3" name="trigger_auto_ban_on_warning_limit">
       <ObjectId>133599</ObjectId>
-      <StateNumber>44060</StateNumber>
+      <StateNumber>44981</StateNumber>
       <ResultsDefinition>trigger</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
     <routine id="64" parent="3" name="trigger_update_question_timestamp">
       <ObjectId>125408</ObjectId>
-      <StateNumber>44062</StateNumber>
+      <StateNumber>44983</StateNumber>
       <ResultsDefinition>trigger</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
     <routine id="65" parent="3" name="unanswered_questions">
       <ObjectId>155365</ObjectId>
-      <StateNumber>44073</StateNumber>
+      <StateNumber>44992</StateNumber>
       <ArgumentsDefinition>skip integer, limitnumber integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint, votes_count bigint, views_counter bigint)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
@@ -379,7 +379,7 @@
     </routine>
     <routine id="66" parent="3" name="user_badges_ranking">
       <ObjectId>141898</ObjectId>
-      <StateNumber>44056</StateNumber>
+      <StateNumber>44977</StateNumber>
       <ResultsDefinition>trigger</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
@@ -393,17 +393,17 @@
       <RoutineKind>function</RoutineKind>
     </routine>
     <routine id="68" parent="3" name="user_profile">
-      <ObjectId>141263</ObjectId>
-      <StateNumber>40517</StateNumber>
+      <ObjectId>155958</ObjectId>
+      <StateNumber>44976</StateNumber>
       <ArgumentsDefinition>puser_id integer</ArgumentsDefinition>
-      <ResultsDefinition>TABLE(username character varying, email character varying, type character varying, created_at date, count_votes_rating_received integer, count_questions bigint, count_answers bigint, count_votes_made bigint)</ResultsDefinition>
+      <ResultsDefinition>TABLE(username character varying, email character varying, type character varying, badge character varying, created_at date, count_votes_rating_received integer, count_questions bigint, count_answers bigint, count_votes_made bigint)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
       <ReturnsSet>1</ReturnsSet>
     </routine>
     <routine id="69" parent="3" name="user_questions">
       <ObjectId>140658</ObjectId>
-      <StateNumber>44054</StateNumber>
+      <StateNumber>44974</StateNumber>
       <ArgumentsDefinition>puser_id integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(publicationid integer, title character varying, body text, solved_date timestamp without time zone, creation_date timestamp without time zone, last_edit_date timestamp without time zone, count_answers bigint)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
@@ -414,7 +414,7 @@
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44044</StateNumber>
+      <StateNumber>44964</StateNumber>
       <SequenceName>answercomments_commentid_seq</SequenceName>
       <DefaultExpression>nextval(&apos;answercomments_commentid_seq&apos;::regclass)</DefaultExpression>
     </column>
@@ -422,21 +422,21 @@
       <Position>2</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44044</StateNumber>
+      <StateNumber>44964</StateNumber>
     </column>
     <index id="72" parent="27" name="answercomments_pkey">
-      <ObjectId>155585</ObjectId>
+      <ObjectId>156174</ObjectId>
       <ColNames>commentid</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="73" parent="27" name="answercomments_pkey">
-      <ObjectId>155586</ObjectId>
+      <ObjectId>156175</ObjectId>
       <ColNames>commentid</ColNames>
       <UnderlyingIndexName>answercomments_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="74" parent="27" name="FK_answercomments_comments">
-      <ObjectId>155587</ObjectId>
+      <ObjectId>156176</ObjectId>
       <ColNames>commentid</ColNames>
       <RefTableName>comments</RefTableName>
       <RefKeyName>comments_pkey</RefKeyName>
@@ -445,7 +445,7 @@
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <foreign-key id="75" parent="27" name="FK_answercomments_answers">
-      <ObjectId>155592</ObjectId>
+      <ObjectId>156181</ObjectId>
       <ColNames>answerid</ColNames>
       <RefTableName>answers</RefTableName>
       <RefKeyName>answers_pkey</RefKeyName>
@@ -457,7 +457,7 @@
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44042</StateNumber>
+      <StateNumber>44962</StateNumber>
       <SequenceName>answers_publicationid_seq</SequenceName>
       <DefaultExpression>nextval(&apos;answers_publicationid_seq&apos;::regclass)</DefaultExpression>
     </column>
@@ -465,30 +465,30 @@
       <Position>2</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44042</StateNumber>
+      <StateNumber>44962</StateNumber>
     </column>
     <column id="78" parent="28" name="solved_date">
       <Position>3</Position>
       <DataType>timestamp|0</DataType>
-      <StateNumber>44042</StateNumber>
+      <StateNumber>44962</StateNumber>
     </column>
     <index id="79" parent="28" name="answers_pkey">
-      <ObjectId>155566</ObjectId>
+      <ObjectId>156155</ObjectId>
       <ColNames>publicationid</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="80" parent="28" name="ixfk_answers_questions">
-      <ObjectId>155578</ObjectId>
+      <ObjectId>156167</ObjectId>
       <ColNames>questionid</ColNames>
     </index>
     <key id="81" parent="28" name="answers_pkey">
-      <ObjectId>155567</ObjectId>
+      <ObjectId>156156</ObjectId>
       <ColNames>publicationid</ColNames>
       <UnderlyingIndexName>answers_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="82" parent="28" name="FK_answers_publications">
-      <ObjectId>155573</ObjectId>
+      <ObjectId>156162</ObjectId>
       <ColNames>publicationid</ColNames>
       <RefTableName>publications</RefTableName>
       <RefKeyName>publications_pkey</RefKeyName>
@@ -497,7 +497,7 @@
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <foreign-key id="83" parent="28" name="FK_answers_questions">
-      <ObjectId>155568</ObjectId>
+      <ObjectId>156157</ObjectId>
       <ColNames>questionid</ColNames>
       <RefTableName>questions</RefTableName>
       <RefKeyName>questions_pkey</RefKeyName>
@@ -509,34 +509,34 @@
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44022</StateNumber>
+      <StateNumber>44942</StateNumber>
       <SequenceName>badges_badgeid_seq</SequenceName>
       <DefaultExpression>nextval(&apos;badges_badgeid_seq&apos;::regclass)</DefaultExpression>
     </column>
     <column id="85" parent="29" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
-      <StateNumber>44022</StateNumber>
+      <StateNumber>44942</StateNumber>
     </column>
     <column id="86" parent="29" name="description">
       <Position>3</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44022</StateNumber>
+      <StateNumber>44942</StateNumber>
     </column>
     <index id="87" parent="29" name="badges_pkey">
-      <ObjectId>155381</ObjectId>
+      <ObjectId>155970</ObjectId>
       <ColNames>badgeid</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="88" parent="29" name="badges_pkey">
-      <ObjectId>155382</ObjectId>
+      <ObjectId>155971</ObjectId>
       <ColNames>badgeid</ColNames>
       <UnderlyingIndexName>badges_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <check id="89" parent="29" name="badge_description">
-      <ObjectId>155380</ObjectId>
+      <ObjectId>155969</ObjectId>
       <ColNames>description</ColNames>
       <Predicate>(char_length((description)::text) &gt;= 2) AND (char_length((description)::text) &lt;= 100)</Predicate>
     </check>
@@ -544,28 +544,28 @@
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44033</StateNumber>
+      <StateNumber>44953</StateNumber>
       <SequenceName>bans_banid_seq</SequenceName>
       <DefaultExpression>nextval(&apos;bans_banid_seq&apos;::regclass)</DefaultExpression>
     </column>
     <column id="91" parent="30" name="end_date">
       <Position>2</Position>
       <DataType>timestamp|0</DataType>
-      <StateNumber>44033</StateNumber>
+      <StateNumber>44953</StateNumber>
     </column>
     <index id="92" parent="30" name="bans_pkey">
-      <ObjectId>155480</ObjectId>
+      <ObjectId>156069</ObjectId>
       <ColNames>banid</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="93" parent="30" name="bans_pkey">
-      <ObjectId>155481</ObjectId>
+      <ObjectId>156070</ObjectId>
       <ColNames>banid</ColNames>
       <UnderlyingIndexName>bans_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="94" parent="30" name="FK_Ban_ModRegister">
-      <ObjectId>155482</ObjectId>
+      <ObjectId>156071</ObjectId>
       <ColNames>banid</ColNames>
       <RefTableName>modregisters</RefTableName>
       <RefKeyName>modregisters_pkey</RefKeyName>
@@ -577,7 +577,7 @@
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44023</StateNumber>
+      <StateNumber>44943</StateNumber>
       <SequenceName>categories_categoryid_seq</SequenceName>
       <DefaultExpression>nextval(&apos;categories_categoryid_seq&apos;::regclass)</DefaultExpression>
     </column>
@@ -585,31 +585,31 @@
       <Position>2</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44023</StateNumber>
+      <StateNumber>44943</StateNumber>
     </column>
     <index id="97" parent="31" name="categories_pkey">
-      <ObjectId>155390</ObjectId>
+      <ObjectId>155979</ObjectId>
       <ColNames>categoryid</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="98" parent="31" name="categories_name_key">
-      <ObjectId>155392</ObjectId>
+      <ObjectId>155981</ObjectId>
       <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="99" parent="31" name="categories_pkey">
-      <ObjectId>155391</ObjectId>
+      <ObjectId>155980</ObjectId>
       <ColNames>categoryid</ColNames>
       <UnderlyingIndexName>categories_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <key id="100" parent="31" name="categories_name_key">
-      <ObjectId>155393</ObjectId>
+      <ObjectId>155982</ObjectId>
       <ColNames>name</ColNames>
       <UnderlyingIndexName>categories_name_key</UnderlyingIndexName>
     </key>
     <check id="101" parent="31" name="valid_category">
-      <ObjectId>155389</ObjectId>
+      <ObjectId>155978</ObjectId>
       <ColNames>name</ColNames>
       <Predicate>(char_length((name)::text) &gt;= 3) AND (char_length((name)::text) &lt;= 50)</Predicate>
     </check>
@@ -617,23 +617,23 @@
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44040</StateNumber>
+      <StateNumber>44960</StateNumber>
       <SequenceName>comments_publicationid_seq</SequenceName>
       <DefaultExpression>nextval(&apos;comments_publicationid_seq&apos;::regclass)</DefaultExpression>
     </column>
     <index id="103" parent="32" name="comments_pkey">
-      <ObjectId>155535</ObjectId>
+      <ObjectId>156124</ObjectId>
       <ColNames>publicationid</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="104" parent="32" name="comments_pkey">
-      <ObjectId>155536</ObjectId>
+      <ObjectId>156125</ObjectId>
       <ColNames>publicationid</ColNames>
       <UnderlyingIndexName>comments_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="105" parent="32" name="FK_Comment_Publication">
-      <ObjectId>155537</ObjectId>
+      <ObjectId>156126</ObjectId>
       <ColNames>publicationid</ColNames>
       <RefTableName>publications</RefTableName>
       <RefKeyName>publications_pkey</RefKeyName>
@@ -645,7 +645,7 @@
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44025</StateNumber>
+      <StateNumber>44945</StateNumber>
       <SequenceName>locations_locationid_seq</SequenceName>
       <DefaultExpression>nextval(&apos;locations_locationid_seq&apos;::regclass)</DefaultExpression>
     </column>
@@ -653,15 +653,15 @@
       <Position>2</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44025</StateNumber>
+      <StateNumber>44945</StateNumber>
     </column>
     <index id="108" parent="33" name="locations_pkey">
-      <ObjectId>155409</ObjectId>
+      <ObjectId>155998</ObjectId>
       <ColNames>locationid</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="109" parent="33" name="locations_pkey">
-      <ObjectId>155410</ObjectId>
+      <ObjectId>155999</ObjectId>
       <ColNames>locationid</ColNames>
       <UnderlyingIndexName>locations_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
@@ -670,7 +670,7 @@
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44029</StateNumber>
+      <StateNumber>44949</StateNumber>
       <SequenceName>modregisters_modregisterid_seq</SequenceName>
       <DefaultExpression>nextval(&apos;modregisters_modregisterid_seq&apos;::regclass)</DefaultExpression>
     </column>
@@ -678,48 +678,48 @@
       <Position>2</Position>
       <DataType>timestamp|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44029</StateNumber>
+      <StateNumber>44949</StateNumber>
       <DefaultExpression>now()</DefaultExpression>
     </column>
     <column id="112" parent="34" name="reason">
       <Position>3</Position>
       <DataType>varchar(200)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44029</StateNumber>
+      <StateNumber>44949</StateNumber>
     </column>
     <column id="113" parent="34" name="userid_author">
       <Position>4</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44029</StateNumber>
+      <StateNumber>44949</StateNumber>
     </column>
     <column id="114" parent="34" name="userid_target">
       <Position>5</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44029</StateNumber>
+      <StateNumber>44949</StateNumber>
     </column>
     <index id="115" parent="34" name="modregisters_pkey">
-      <ObjectId>155447</ObjectId>
+      <ObjectId>156036</ObjectId>
       <ColNames>modregisterid</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="116" parent="34" name="ixfk_modregister_author_user">
-      <ObjectId>155460</ObjectId>
+      <ObjectId>156049</ObjectId>
       <ColNames>userid_author</ColNames>
     </index>
     <index id="117" parent="34" name="ixfk_modregister_target_user">
-      <ObjectId>155459</ObjectId>
+      <ObjectId>156048</ObjectId>
       <ColNames>userid_target</ColNames>
     </index>
     <key id="118" parent="34" name="modregisters_pkey">
-      <ObjectId>155448</ObjectId>
+      <ObjectId>156037</ObjectId>
       <ColNames>modregisterid</ColNames>
       <UnderlyingIndexName>modregisters_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="119" parent="34" name="author">
-      <ObjectId>155449</ObjectId>
+      <ObjectId>156038</ObjectId>
       <ColNames>userid_author</ColNames>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
@@ -728,7 +728,7 @@
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <foreign-key id="120" parent="34" name="target">
-      <ObjectId>155454</ObjectId>
+      <ObjectId>156043</ObjectId>
       <ColNames>userid_target</ColNames>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
@@ -740,7 +740,7 @@
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44034</StateNumber>
+      <StateNumber>44954</StateNumber>
       <SequenceName>publications_publicationid_seq</SequenceName>
       <DefaultExpression>nextval(&apos;publications_publicationid_seq&apos;::regclass)</DefaultExpression>
     </column>
@@ -748,52 +748,52 @@
       <Position>2</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44034</StateNumber>
+      <StateNumber>44954</StateNumber>
     </column>
     <column id="123" parent="35" name="creation_date">
       <Position>3</Position>
       <DataType>timestamp|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44034</StateNumber>
+      <StateNumber>44954</StateNumber>
       <DefaultExpression>now()</DefaultExpression>
     </column>
     <column id="124" parent="35" name="userid">
       <Position>4</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44034</StateNumber>
+      <StateNumber>44954</StateNumber>
     </column>
     <column id="125" parent="35" name="last_edit_date">
       <Position>5</Position>
       <DataType>timestamp|0</DataType>
-      <StateNumber>44034</StateNumber>
+      <StateNumber>44954</StateNumber>
     </column>
     <index id="126" parent="35" name="publications_pkey">
-      <ObjectId>155498</ObjectId>
+      <ObjectId>156087</ObjectId>
       <ColNames>publicationid</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="127" parent="35" name="publications_search_idx">
-      <ObjectId>155505</ObjectId>
+      <ObjectId>156094</ObjectId>
       <ColNames>&#x1b;to_tsvector(&apos;english&apos;::regconfig, body)</ColNames>
       <FunctionBased>1</FunctionBased>
     </index>
     <index id="128" parent="35" name="ixfk_publications_users">
-      <ObjectId>155507</ObjectId>
+      <ObjectId>156096</ObjectId>
       <ColNames>userid</ColNames>
     </index>
     <index id="129" parent="35" name="questions_updated_at">
-      <ObjectId>155506</ObjectId>
+      <ObjectId>156095</ObjectId>
       <ColNames>last_edit_date</ColNames>
     </index>
     <key id="130" parent="35" name="publications_pkey">
-      <ObjectId>155499</ObjectId>
+      <ObjectId>156088</ObjectId>
       <ColNames>publicationid</ColNames>
       <UnderlyingIndexName>publications_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="131" parent="35" name="FK_publications_users">
-      <ObjectId>155500</ObjectId>
+      <ObjectId>156089</ObjectId>
       <ColNames>userid</ColNames>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
@@ -802,13 +802,13 @@
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <check id="132" parent="35" name="body_length">
-      <ObjectId>155494</ObjectId>
+      <ObjectId>156083</ObjectId>
       <ColNames>body</ColNames>
       <Predicate>(char_length(body) &gt;= 10) AND (char_length(body) &lt;= 1000)</Predicate>
     </check>
     <trigger id="133" parent="35" name="answer_update_question_timestamp">
-      <ObjectId>155662</ObjectId>
-      <StateNumber>44063</StateNumber>
+      <ObjectId>156251</ObjectId>
+      <StateNumber>44984</StateNumber>
       <Turn>before-row</Turn>
       <Events>IU</Events>
       <FireMode>origin</FireMode>
@@ -818,7 +818,7 @@
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44041</StateNumber>
+      <StateNumber>44961</StateNumber>
       <SequenceName>questioncomments_commentid_seq</SequenceName>
       <DefaultExpression>nextval(&apos;questioncomments_commentid_seq&apos;::regclass)</DefaultExpression>
     </column>
@@ -826,21 +826,21 @@
       <Position>2</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44041</StateNumber>
+      <StateNumber>44961</StateNumber>
     </column>
     <index id="136" parent="36" name="questioncomments_pkey">
-      <ObjectId>155548</ObjectId>
+      <ObjectId>156137</ObjectId>
       <ColNames>commentid</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="137" parent="36" name="questioncomments_pkey">
-      <ObjectId>155549</ObjectId>
+      <ObjectId>156138</ObjectId>
       <ColNames>commentid</ColNames>
       <UnderlyingIndexName>questioncomments_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="138" parent="36" name="FK_questioncomments_comments">
-      <ObjectId>155550</ObjectId>
+      <ObjectId>156139</ObjectId>
       <ColNames>commentid</ColNames>
       <RefTableName>comments</RefTableName>
       <RefKeyName>comments_pkey</RefKeyName>
@@ -849,7 +849,7 @@
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <foreign-key id="139" parent="36" name="FK_questioncomments_questions">
-      <ObjectId>155555</ObjectId>
+      <ObjectId>156144</ObjectId>
       <ColNames>questionid</ColNames>
       <RefTableName>questions</RefTableName>
       <RefKeyName>questions_pkey</RefKeyName>
@@ -861,7 +861,7 @@
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44038</StateNumber>
+      <StateNumber>44958</StateNumber>
       <SequenceName>questions_publicationid_seq</SequenceName>
       <DefaultExpression>nextval(&apos;questions_publicationid_seq&apos;::regclass)</DefaultExpression>
     </column>
@@ -869,44 +869,44 @@
       <Position>2</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44038</StateNumber>
+      <StateNumber>44958</StateNumber>
     </column>
     <column id="142" parent="37" name="categoryid">
       <Position>3</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44038</StateNumber>
+      <StateNumber>44958</StateNumber>
     </column>
     <column id="143" parent="37" name="solved_date">
       <Position>4</Position>
       <DataType>timestamp|0</DataType>
-      <StateNumber>44038</StateNumber>
+      <StateNumber>44958</StateNumber>
     </column>
     <column id="144" parent="37" name="views_counter">
       <Position>5</Position>
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44038</StateNumber>
+      <StateNumber>44958</StateNumber>
       <DefaultExpression>0</DefaultExpression>
     </column>
     <index id="145" parent="37" name="questions_pkey">
-      <ObjectId>155516</ObjectId>
+      <ObjectId>156105</ObjectId>
       <ColNames>publicationid</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="146" parent="37" name="questions_question_search_idx">
-      <ObjectId>155528</ObjectId>
+      <ObjectId>156117</ObjectId>
       <ColNames>&#x1b;to_tsvector(&apos;english&apos;::regconfig, COALESCE(title)::text)</ColNames>
       <FunctionBased>1</FunctionBased>
     </index>
     <key id="147" parent="37" name="questions_pkey">
-      <ObjectId>155517</ObjectId>
+      <ObjectId>156106</ObjectId>
       <ColNames>publicationid</ColNames>
       <UnderlyingIndexName>questions_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="148" parent="37" name="FK_Question_Publication">
-      <ObjectId>155523</ObjectId>
+      <ObjectId>156112</ObjectId>
       <ColNames>publicationid</ColNames>
       <RefTableName>publications</RefTableName>
       <RefKeyName>publications_pkey</RefKeyName>
@@ -915,7 +915,7 @@
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <foreign-key id="149" parent="37" name="FK_Question_Category">
-      <ObjectId>155518</ObjectId>
+      <ObjectId>156107</ObjectId>
       <ColNames>categoryid</ColNames>
       <RefTableName>categories</RefTableName>
       <RefKeyName>categories_pkey</RefKeyName>
@@ -924,7 +924,7 @@
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <check id="150" parent="37" name="title_length">
-      <ObjectId>155515</ObjectId>
+      <ObjectId>156104</ObjectId>
       <ColNames>title</ColNames>
       <Predicate>(char_length((title)::text) &gt;= 3) AND (char_length((title)::text) &lt;= 50)</Predicate>
     </check>
@@ -932,33 +932,33 @@
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44048</StateNumber>
+      <StateNumber>44968</StateNumber>
     </column>
     <column id="152" parent="38" name="tagid">
       <Position>2</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44048</StateNumber>
+      <StateNumber>44968</StateNumber>
     </column>
     <index id="153" parent="38" name="questiontags_pkey">
-      <ObjectId>155630</ObjectId>
+      <ObjectId>156219</ObjectId>
       <ColNames>questionid
 tagid</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="154" parent="38" name="ixfk_questions_tags_tags">
-      <ObjectId>155642</ObjectId>
+      <ObjectId>156231</ObjectId>
       <ColNames>tagid</ColNames>
     </index>
     <key id="155" parent="38" name="questiontags_pkey">
-      <ObjectId>155631</ObjectId>
+      <ObjectId>156220</ObjectId>
       <ColNames>questionid
 tagid</ColNames>
       <UnderlyingIndexName>questiontags_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="156" parent="38" name="Question">
-      <ObjectId>155637</ObjectId>
+      <ObjectId>156226</ObjectId>
       <ColNames>questionid</ColNames>
       <RefTableName>questions</RefTableName>
       <RefKeyName>questions_pkey</RefKeyName>
@@ -967,7 +967,7 @@ tagid</ColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <foreign-key id="157" parent="38" name="Tag">
-      <ObjectId>155632</ObjectId>
+      <ObjectId>156221</ObjectId>
       <ColNames>tagid</ColNames>
       <RefTableName>tags</RefTableName>
       <RefKeyName>tags_pkey</RefKeyName>
@@ -979,7 +979,7 @@ tagid</ColNames>
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44045</StateNumber>
+      <StateNumber>44965</StateNumber>
       <SequenceName>tags_tagid_seq</SequenceName>
       <DefaultExpression>nextval(&apos;tags_tagid_seq&apos;::regclass)</DefaultExpression>
     </column>
@@ -987,21 +987,21 @@ tagid</ColNames>
       <Position>2</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44045</StateNumber>
+      <StateNumber>44965</StateNumber>
     </column>
     <index id="160" parent="39" name="tags_pkey">
-      <ObjectId>155604</ObjectId>
+      <ObjectId>156193</ObjectId>
       <ColNames>tagid</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="161" parent="39" name="tags_pkey">
-      <ObjectId>155605</ObjectId>
+      <ObjectId>156194</ObjectId>
       <ColNames>tagid</ColNames>
       <UnderlyingIndexName>tags_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <check id="162" parent="39" name="valid_tag">
-      <ObjectId>155603</ObjectId>
+      <ObjectId>156192</ObjectId>
       <ColNames>name</ColNames>
       <Predicate>(char_length((name)::text) &gt;= 3) AND (char_length((name)::text) &lt;= 30)</Predicate>
     </check>
@@ -1009,33 +1009,33 @@ tagid</ColNames>
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44050</StateNumber>
+      <StateNumber>44970</StateNumber>
     </column>
     <column id="164" parent="40" name="badgeid">
       <Position>2</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44050</StateNumber>
+      <StateNumber>44970</StateNumber>
     </column>
     <index id="165" parent="40" name="userbadges_pkey">
-      <ObjectId>155646</ObjectId>
+      <ObjectId>156235</ObjectId>
       <ColNames>userid
 badgeid</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="166" parent="40" name="ixfk_user_badges">
-      <ObjectId>155658</ObjectId>
+      <ObjectId>156247</ObjectId>
       <ColNames>badgeid</ColNames>
     </index>
     <key id="167" parent="40" name="userbadges_pkey">
-      <ObjectId>155647</ObjectId>
+      <ObjectId>156236</ObjectId>
       <ColNames>userid
 badgeid</ColNames>
       <UnderlyingIndexName>userbadges_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="168" parent="40" name="User">
-      <ObjectId>155653</ObjectId>
+      <ObjectId>156242</ObjectId>
       <ColNames>userid</ColNames>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
@@ -1044,7 +1044,7 @@ badgeid</ColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <foreign-key id="169" parent="40" name="Badge">
-      <ObjectId>155648</ObjectId>
+      <ObjectId>156237</ObjectId>
       <ColNames>badgeid</ColNames>
       <RefTableName>badges</RefTableName>
       <RefKeyName>badges_pkey</RefKeyName>
@@ -1056,7 +1056,7 @@ badgeid</ColNames>
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44024</StateNumber>
+      <StateNumber>44944</StateNumber>
       <SequenceName>userroles_roleid_seq</SequenceName>
       <DefaultExpression>nextval(&apos;userroles_roleid_seq&apos;::regclass)</DefaultExpression>
     </column>
@@ -1064,21 +1064,21 @@ badgeid</ColNames>
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44024</StateNumber>
+      <StateNumber>44944</StateNumber>
     </column>
     <index id="172" parent="41" name="userroles_pkey">
-      <ObjectId>155401</ObjectId>
+      <ObjectId>155990</ObjectId>
       <ColNames>roleid</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="173" parent="41" name="userroles_pkey">
-      <ObjectId>155402</ObjectId>
+      <ObjectId>155991</ObjectId>
       <ColNames>roleid</ColNames>
       <UnderlyingIndexName>userroles_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <check id="174" parent="41" name="user_role">
-      <ObjectId>155400</ObjectId>
+      <ObjectId>155989</ObjectId>
       <ColNames>name</ColNames>
       <Predicate>(name)::text = ANY ((ARRAY[&apos;Admin&apos;::character varying, &apos;Editor&apos;::character varying, &apos;Authenticated&apos;::character varying])::text[])</Predicate>
     </check>
@@ -1086,7 +1086,7 @@ badgeid</ColNames>
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44026</StateNumber>
+      <StateNumber>44946</StateNumber>
       <SequenceName>users_userid_seq</SequenceName>
       <DefaultExpression>nextval(&apos;users_userid_seq&apos;::regclass)</DefaultExpression>
     </column>
@@ -1094,78 +1094,78 @@ badgeid</ColNames>
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44026</StateNumber>
+      <StateNumber>44946</StateNumber>
     </column>
     <column id="177" parent="42" name="email">
       <Position>3</Position>
       <DataType>varchar(70)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44026</StateNumber>
+      <StateNumber>44946</StateNumber>
     </column>
     <column id="178" parent="42" name="password">
       <Position>4</Position>
       <DataType>varchar(256)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44026</StateNumber>
+      <StateNumber>44946</StateNumber>
     </column>
     <column id="179" parent="42" name="fullname">
       <Position>5</Position>
       <DataType>varchar(200)|0</DataType>
-      <StateNumber>44026</StateNumber>
+      <StateNumber>44946</StateNumber>
     </column>
     <column id="180" parent="42" name="about">
       <Position>6</Position>
       <DataType>varchar(500)|0</DataType>
-      <StateNumber>44026</StateNumber>
+      <StateNumber>44946</StateNumber>
     </column>
     <column id="181" parent="42" name="website">
       <Position>7</Position>
       <DataType>varchar(150)|0</DataType>
-      <StateNumber>44026</StateNumber>
+      <StateNumber>44946</StateNumber>
     </column>
     <column id="182" parent="42" name="signup_date">
       <Position>8</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44026</StateNumber>
+      <StateNumber>44946</StateNumber>
       <DefaultExpression>(&apos;now&apos;::text)::date</DefaultExpression>
     </column>
     <column id="183" parent="42" name="last_login">
       <Position>9</Position>
       <DataType>timestamp|0</DataType>
-      <StateNumber>44026</StateNumber>
+      <StateNumber>44946</StateNumber>
     </column>
     <column id="184" parent="42" name="locationid">
       <Position>10</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>44026</StateNumber>
+      <StateNumber>44946</StateNumber>
     </column>
     <column id="185" parent="42" name="roleid">
       <Position>11</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>44026</StateNumber>
+      <StateNumber>44946</StateNumber>
     </column>
     <index id="186" parent="42" name="users_pkey">
-      <ObjectId>155426</ObjectId>
+      <ObjectId>156015</ObjectId>
       <ColNames>userid</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="187" parent="42" name="users_username">
-      <ObjectId>155438</ObjectId>
+      <ObjectId>156027</ObjectId>
       <ColNames>username</ColNames>
     </index>
     <index id="188" parent="42" name="users_email">
-      <ObjectId>155439</ObjectId>
+      <ObjectId>156028</ObjectId>
       <ColNames>email</ColNames>
     </index>
     <key id="189" parent="42" name="users_pkey">
-      <ObjectId>155427</ObjectId>
+      <ObjectId>156016</ObjectId>
       <ColNames>userid</ColNames>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="190" parent="42" name="FK_User_Location">
-      <ObjectId>155428</ObjectId>
+      <ObjectId>156017</ObjectId>
       <ColNames>locationid</ColNames>
       <RefTableName>locations</RefTableName>
       <RefKeyName>locations_pkey</RefKeyName>
@@ -1174,7 +1174,7 @@ badgeid</ColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <foreign-key id="191" parent="42" name="FK_User_UserRole">
-      <ObjectId>155433</ObjectId>
+      <ObjectId>156022</ObjectId>
       <ColNames>roleid</ColNames>
       <RefTableName>userroles</RefTableName>
       <RefKeyName>userroles_pkey</RefKeyName>
@@ -1183,27 +1183,27 @@ badgeid</ColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <check id="192" parent="42" name="valid_username">
-      <ObjectId>155420</ObjectId>
+      <ObjectId>156009</ObjectId>
       <ColNames>username</ColNames>
       <Predicate>(char_length((username)::text) &gt;= 1) AND (char_length((username)::text) &lt; 20)</Predicate>
     </check>
     <check id="193" parent="42" name="valid_email">
-      <ObjectId>155422</ObjectId>
+      <ObjectId>156011</ObjectId>
       <ColNames>email</ColNames>
       <Predicate>(char_length((email)::text) &gt;= 6) AND (char_length((email)::text) &lt;= 50)</Predicate>
     </check>
     <check id="194" parent="42" name="valid_password">
-      <ObjectId>155419</ObjectId>
+      <ObjectId>156008</ObjectId>
       <ColNames>password</ColNames>
       <Predicate>(char_length((password)::text) &gt;= 6) AND (char_length((password)::text) &lt; 256)</Predicate>
     </check>
     <check id="195" parent="42" name="valid_fullname">
-      <ObjectId>155421</ObjectId>
+      <ObjectId>156010</ObjectId>
       <ColNames>fullname</ColNames>
       <Predicate>(char_length((fullname)::text) &gt;= 6) AND (char_length((fullname)::text) &lt;= 50)</Predicate>
     </check>
     <check id="196" parent="42" name="valid_date">
-      <ObjectId>155418</ObjectId>
+      <ObjectId>156007</ObjectId>
       <ColNames>last_login
 signup_date</ColNames>
       <Predicate>last_login &gt; signup_date</Predicate>
@@ -1212,7 +1212,7 @@ signup_date</ColNames>
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44046</StateNumber>
+      <StateNumber>44966</StateNumber>
       <SequenceName>votes_voteid_seq</SequenceName>
       <DefaultExpression>nextval(&apos;votes_voteid_seq&apos;::regclass)</DefaultExpression>
     </column>
@@ -1220,38 +1220,38 @@ signup_date</ColNames>
       <Position>2</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44046</StateNumber>
+      <StateNumber>44966</StateNumber>
       <DefaultExpression>0</DefaultExpression>
     </column>
     <column id="199" parent="43" name="publicationid">
       <Position>3</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44046</StateNumber>
+      <StateNumber>44966</StateNumber>
     </column>
     <column id="200" parent="43" name="userid">
       <Position>4</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44046</StateNumber>
+      <StateNumber>44966</StateNumber>
     </column>
     <index id="201" parent="43" name="votes_pkey">
-      <ObjectId>155614</ObjectId>
+      <ObjectId>156203</ObjectId>
       <ColNames>voteid</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="202" parent="43" name="ixfk_user_votes">
-      <ObjectId>155626</ObjectId>
+      <ObjectId>156215</ObjectId>
       <ColNames>userid</ColNames>
     </index>
     <key id="203" parent="43" name="votes_pkey">
-      <ObjectId>155615</ObjectId>
+      <ObjectId>156204</ObjectId>
       <ColNames>voteid</ColNames>
       <UnderlyingIndexName>votes_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="204" parent="43" name="FK_Vote_Publication">
-      <ObjectId>155616</ObjectId>
+      <ObjectId>156205</ObjectId>
       <ColNames>publicationid</ColNames>
       <RefTableName>publications</RefTableName>
       <RefKeyName>publications_pkey</RefKeyName>
@@ -1260,7 +1260,7 @@ signup_date</ColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <foreign-key id="205" parent="43" name="FK_Vote_User">
-      <ObjectId>155621</ObjectId>
+      <ObjectId>156210</ObjectId>
       <ColNames>userid</ColNames>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
@@ -1269,21 +1269,21 @@ signup_date</ColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <check id="206" parent="43" name="vote_values">
-      <ObjectId>155613</ObjectId>
+      <ObjectId>156202</ObjectId>
       <ColNames>values</ColNames>
       <Predicate>((&quot;values&quot; = 0) OR (&quot;values&quot; = 1)) OR (&quot;values&quot; = (-1))</Predicate>
     </check>
     <trigger id="207" parent="43" name="auto_rank_up">
-      <ObjectId>155659</ObjectId>
-      <StateNumber>44057</StateNumber>
+      <ObjectId>156248</ObjectId>
+      <StateNumber>44978</StateNumber>
       <Turn>after-row</Turn>
       <Events>IU</Events>
       <FireMode>origin</FireMode>
       <CallRoutineId>141898</CallRoutineId>
     </trigger>
     <trigger id="208" parent="43" name="own_content_vote_trigger">
-      <ObjectId>155660</ObjectId>
-      <StateNumber>44059</StateNumber>
+      <ObjectId>156249</ObjectId>
+      <StateNumber>44980</StateNumber>
       <Turn>after-row</Turn>
       <Events>IU</Events>
       <FireMode>origin</FireMode>
@@ -1293,23 +1293,23 @@ signup_date</ColNames>
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>44032</StateNumber>
+      <StateNumber>44952</StateNumber>
       <SequenceName>warnings_warningid_seq</SequenceName>
       <DefaultExpression>nextval(&apos;warnings_warningid_seq&apos;::regclass)</DefaultExpression>
     </column>
     <index id="210" parent="44" name="warnings_pkey">
-      <ObjectId>155467</ObjectId>
+      <ObjectId>156056</ObjectId>
       <ColNames>warningid</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="211" parent="44" name="warnings_pkey">
-      <ObjectId>155468</ObjectId>
+      <ObjectId>156057</ObjectId>
       <ColNames>warningid</ColNames>
       <UnderlyingIndexName>warnings_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="212" parent="44" name="FK_warnings_modregisters">
-      <ObjectId>155469</ObjectId>
+      <ObjectId>156058</ObjectId>
       <ColNames>warningid</ColNames>
       <RefTableName>modregisters</RefTableName>
       <RefKeyName>modregisters_pkey</RefKeyName>
@@ -1318,8 +1318,8 @@ signup_date</ColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <trigger id="213" parent="44" name="auto_ban_on_warning_limit">
-      <ObjectId>155661</ObjectId>
-      <StateNumber>44061</StateNumber>
+      <ObjectId>156250</ObjectId>
+      <StateNumber>44982</StateNumber>
       <Turn>after-row</Turn>
       <Events>I</Events>
       <FireMode>origin</FireMode>
@@ -1511,7 +1511,7 @@ signup_date</ColNames>
     </argument>
     <argument id="260" parent="68">
       <ArgumentDirection>T</ArgumentDirection>
-      <DataType>table(username varchar, email varchar, type varchar, created_at date, count_votes_rating_received integer, count_questions bigint, count_answers bigint, count_votes_made bigint)|0</DataType>
+      <DataType>table(username varchar, email varchar, type varchar, badge varchar, created_at date, count_votes_rating_received integer, count_questions bigint, count_answers bigint, count_votes_made bigint)|0</DataType>
     </argument>
     <argument id="261" parent="69" name="puser_id">
       <Position>1</Position>

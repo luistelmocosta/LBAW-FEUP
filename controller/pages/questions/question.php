@@ -15,6 +15,7 @@ $tags = get_tags_from_question($_GET['question']);
 $question = $questions[0];
 $answers = get_answers_from_questionid($_GET['question']);
 
+
 $smarty->assign('tags', $tags);
 $smarty->assign('answers', $answers);
 $smarty->assign('question', $question);

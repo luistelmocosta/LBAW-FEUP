@@ -34,7 +34,7 @@
 
 </head>
 
-
+<body>
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -59,7 +59,7 @@
                 </li>
 
                 <li>
-                <a href="{$BASE_URL}controller/pages/users/top_scored_users.php">Top Users</a>
+                    <a href="{$BASE_URL}controller/pages/users/top_scored_users.php">Top Users</a>
                 </li>
 
                 <li>

@@ -707,7 +707,24 @@ INSERT INTO votes(VALUES, publicationid, userid) VALUES (0, 1, 2);
 INSERT INTO votes(VALUES, publicationid, userid) VALUES (-1, 2, 2);
 INSERT INTO votes(VALUES, publicationid, userid) VALUES (1, 2, 3);
 INSERT INTO votes(VALUES, publicationid, userid) VALUES (1, 3, 3);
-
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (1, 13, 3);
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (1, 23, 3);
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (1, 21, 3);
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (1, 21, 2);
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (1, 21, 1);
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (1, 31, 3);
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (1, 32, 3);
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (1, 33, 2);
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (1, 39, 1);
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (1, 39, 2);
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (1, 39, 3);
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (1, 39, 4);
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (-1, 39, 5);
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (-1, 39, 6);
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (-1, 21, 7);
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (-1, 23, 7);
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (-1, 23, 8);
+INSERT INTO votes(VALUES, publicationid, userid) VALUES (-1, 21, 8);
 
 INSERT INTO questiontags(questionid, tagid) VALUES (1, 2);
 INSERT INTO questiontags(questionid, tagid) VALUES (2, 3);

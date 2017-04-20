@@ -42,9 +42,10 @@ function questionUrl($publicationid)
     return url('controller/pages/questions/question', ['question' => $publicationid]);
 }
 
-function editQuestionUrl($question_id)
+function editQuestionUrl($questionid)
+
 {
-    return url('pages/questions/edit', ['question' => $question_id]);
+    return url('controller/pages/questions/edit_question', ['question' => $questionid]);
 }
 
 function editAnswerUrl($answer_id)
