@@ -168,3 +168,11 @@ function get_answers_from_questionid($questionid) {
     return $rows;
 
 }
+
+function question_is_mine($question)
+{
+    if (!$_SESSION['logged_in']) {
+        return false;
+    }
+    return $question['userid'] == auth_user('userid');
+}

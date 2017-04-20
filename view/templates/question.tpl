@@ -13,7 +13,7 @@
 
 
                             <div class = "options pull-right " style = "margin-bottom:5px;">
-                                <a href="{editQuestionUrl($question['publicationid'])}" class = "btn edit-question">Edit</a>
+                                <a href="{editQuestionUrl($question['publicationid'])}" class = "btn edit-question {if !$isMine}hidden{/if}">Edit</a>
                                 <br class="clearfix">
                                 <div class="enabled voting clearfix voting-vertical qa-voting-net" id="voting_187">
                                     <a title="" class=" fa fa-thumbs-up enabled vote-up enabled" data-original-title="Click to vote up"></a>
