@@ -69,3 +69,12 @@ FROM users WHERE username = ?");
 
     return $query->fetchAll();
 }
+
+function userProfile($userid) {
+
+    global $conn;
+    $query = $conn->prepare("SELECT * FROM user_profile(:userid)");
+    $query->execute(['userid' => $userid]);
+
+    return $query->fetchAll();
+}
