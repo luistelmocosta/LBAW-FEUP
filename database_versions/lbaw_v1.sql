@@ -638,3 +638,20 @@ BEGIN
     WHERE answers.questionid = qid;
 END
 $$;
+
+
+--- This function updates questions -> edit_question
+
+create or replace function update_question(body_edited text, questionid integer, title_edited varchar, categoryid_edited integer)
+    returns void language plpgsql as $$
+DECLARE result INTEGER;
+begin
+    UPDATE publications
+    SET body = body_edited
+    WHERE publications.publicationid = questionid
+    returning publications.publicationid AS publicationid INTO result;
+
+    UPDATE questions
+    SET title = title_edited, categoryid = categoryid_edited
+    WHERE questions.publicationid = questionid;
+end $$;
