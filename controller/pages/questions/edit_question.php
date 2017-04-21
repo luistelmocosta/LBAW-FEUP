@@ -12,19 +12,12 @@ if($_SESSION['logged_in']) {
 }
 
 
-
-
 $categories = get_categories();
 $questions = get_questions_from_id($_GET['question']);
 $tags = get_tags_from_question($_GET['question']);
 
 $question = $questions[0];
 
-
-if (!ResourcePermission::isMine($question['userid'])) {
-    $_SESSION['error_messages'][] = 'You don\'t have access to this resource';
-    redirect();
-}
 
 $categories_select = [];
 foreach ($categories as $category) {

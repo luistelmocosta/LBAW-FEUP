@@ -8,13 +8,14 @@ $tags = explode(',', $_POST['tags']);
 $tags_strimmed = array_map('trim', $tags);
 
 
+
 $category = get_categoryID_by_name($_POST['category']);
 
-
+$questionid = $_POST['questionid'];
 
 
 $question = [
-    'userid' => auth_user('userid'),
+    'questionid' => $questionid,
     'body' => $_POST['editor1'],
     'title' => $_POST['title'],
     'categoryid' => $category
@@ -23,13 +24,13 @@ $question = [
 try {
 
     $conn->beginTransaction();
-    $questionid = create_question($question);
+    update_question($question);
     update_tags($questionid, $tags);
 
 
     $conn->commit();
 
-    redirect('controller/pages/questions/question.php?question=' . $questionid);
+    redirect('controller/pages/questions/question.php?question=' .  $questionid);
 
 
 } catch (PDOException $e) {

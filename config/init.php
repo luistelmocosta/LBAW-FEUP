@@ -11,7 +11,7 @@ error_reporting(E_ERROR | E_WARNING);
 //$BASE_DIR = '/opt/lbaw/lbaw1641/public_html/proto/'; //FIXME
 //$BASE_URL = '/~lbaw1641/proto/'; //FIXME
 //Connect to the database
-try {
+/*try {
     $dbuser = 'lbaw1641'; //CHANGE WITH YOUR INFO
     $dbpass = 'zl50rg14';
     $host = 'dbm.fe.up.pt';
@@ -20,14 +20,14 @@ try {
 }catch (PDOException $e) {
     echo "Error : " . $e->getMessage() . "<br/>";
     die();
-}
+}*/
 
 
 //LOCAL
 $BASE_DIR = '/home/luiscosta/PhpstormProjects/LBAW-FEUP/'; //CHANGE WITH YOURS
 $BASE_URL = '/';
 
-/*try {
+try {
     $dbuser = 'luiscosta'; //CHANGE WITH YOUR INFO
     $dbpass = '123';
     $host = 'localhost';
@@ -36,7 +36,7 @@ $BASE_URL = '/';
 }catch (PDOException $e) {
     echo "Error : " . $e->getMessage() . "<br/>";
     die();
-}*/
+}
 
 $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

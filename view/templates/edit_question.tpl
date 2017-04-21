@@ -4,7 +4,7 @@
             <h1>Edit Question</h1>
             <br>
             <div class="qa-part-form">
-                <form name="ask" method="post" action= "{$BASE_URL}controller/actions/questions/create_question.php">
+                <form name="ask" method="post" action= "{$BASE_URL}controller/actions/questions/edit_question.php">
                     <table class="qa-form-tall-table">
                         <tbody>
                         <tr>
@@ -12,10 +12,12 @@
                                 Title
                             </td>
                         </tr>
+                        <input type = "hidden" name = "questionid" value = "{$question['publicationid']}">
                         <tr>
                             <td class="qa-form-tall-data">
                                 <input name="title" id="title" autocomplete="off" onchange="" type="text" value="{old('title', $question['title'])}" class="qa-form-tall-text">
                             </td>
+
                         </tr>
 
                         <tr>

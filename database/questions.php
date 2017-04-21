@@ -22,6 +22,13 @@ function create_question($question) {
 
 }
 
+function update_question($question) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM update_question(:body, :questionid, :title, :categoryid)");
+    $stmt->execute($question);
+    return true;
+}
+
 function get_categories() {
     global $conn;
     $query=$conn->prepare("SELECT categories.name FROM categories");
