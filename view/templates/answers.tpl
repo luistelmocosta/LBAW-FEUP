@@ -51,6 +51,7 @@
                     });
                 </script>
             </div>
+            {include file="comment.tpl"}
         </div>
 
         <div class="qa-a-item-c-list" style="display:none;" id="">
