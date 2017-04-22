@@ -1,4 +1,4 @@
-<div id="site-body" class="container">
+x<div id="site-body" class="container">
         <div class="clearfix qa-main">
             <div class="col-sm-8 list-c">
                 <h1 class="page-title">
@@ -8,16 +8,9 @@
                     <div class="row qa-top-tags">
                         <div class="col-lg-4">
                             <ul>
-                                <li class="list-group-item"><a href="#">cleanstrap</a><span class="qa-tag-link">24</span></li>
-                                <li class="list-group-item"><a href="#">cleanstrap theme</a><span class="qa-tag-link">14</span></li>
-                                <li class="list-group-item"><a href="#">question2answer theme</a><span class="qa-tag-link">10</span></li>
-                                <li class="list-group-item"><a href="#" >q2a theme</a><span class="qa-tag-link">9</span></li>
-                                <li class="list-group-item"><a href="#" >cleanstrap options</a><span class="qa-tag-link">5</span></li>
-                                <li class="list-group-item"><a href="#" >cleanstrap widgets</a><span class="qa-tag-link">4</span></li>
-                                <li class="list-group-item"><a href="#" >development</a><span class="qa-tag-link">3</span></li>
-                                <li class="list-group-item"><a href="#" >widgets</a><span class="qa-tag-link">3</span></li>
-                                <li class="list-group-item"><a href="#" >install</a><span class="qa-tag-link">2</span></li>
-                                <li class="list-group-item"><a href="#" ">votes</a><span class="qa-tag-link">2</span></li>
+                                {foreach old('categories', $categories) as $category }
+                                    <li class="list-group-item"><a href="#">{$category['name']}</a><span class="qa-tag-link">24</span></li>
+                                {/foreach}
                             </ul>
                         </div>
                         <div class="col-lg-4">
