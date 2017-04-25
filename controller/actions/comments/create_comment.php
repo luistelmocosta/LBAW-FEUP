@@ -14,8 +14,9 @@ $comment = [
 
 
 try {
+    $questionid = $_POST['questionid'];
     $conn->beginTransaction();
-    $questionid = create_comment($comment);
+    create_comment($comment);
     $conn->commit();
     redirect('controller/pages/questions/question.php?question=' . $questionid);
 } catch (PDOexception $e) {

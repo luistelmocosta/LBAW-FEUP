@@ -437,7 +437,7 @@ BEGIN
 END
 $func$  LANGUAGE plpgsql;
 
---- This function adds does two inserts : - INSERT INTO Questions and Publications
+--- This function adds does two inserts : - INSERT INTO Questions and Publications //FIXME THIS SOULD BE A TRANSACTION
 
 create or replace function insert_into_questions(body text, userid integer, title varchar, categoryid integer)
     returns void language plpgsql as $$
@@ -655,3 +655,19 @@ begin
     SET title = title_edited, categoryid = categoryid_edited
     WHERE questions.publicationid = questionid;
 end $$;
+
+--- This function creates a new comment //FIXME this should be a transaction!
+
+create or replace function insert_into_answercomments(userid INTEGER, answerid INTEGER, body text)
+    returns void language plpgsql as $$
+DECLARE result INTEGER;
+begin
+    insert into publications(body, userid)
+    VALUES (body, userid)
+    returning publications.publicationid AS publicationid INTO result;
+
+    insert into comments(publicationid) VALUES (result);
+
+    insert into answercomments(commentid, answerid) VALUES (result, answerid);
+end $$;
+

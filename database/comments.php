@@ -8,3 +8,15 @@ function create_comment($data)
     $stmt->execute(array($data['userid'], $data['answerid'], $data['body']));
     return intval($data['answerid']);
 }
+
+function get_answer_comments($answerid){
+
+
+    global $conn;
+
+    $query=$conn->prepare("SELECT * FROM get_answer_comments(:answerid)");
+    $query->execute(['answerid' => $answerid]);
+
+    return $query->fetchAll();
+
+}
