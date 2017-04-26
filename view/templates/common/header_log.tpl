@@ -24,6 +24,7 @@
     <link rel="stylesheet" type="text/css" href="{$BASE_URL}css/styles/main.css">
     <link rel="stylesheet" type="text/css" href="{$BASE_URL}css/styles/responsive.css">
     <link rel="stylesheet" type="text/css" href="{$BASE_URL}css/styles/clean-blog.min.css">
+    <link rel="stylesheet" type="text/css" href="{$BASE_URL}css/styles/vote.css">
 
     <!-- JS -->
     <script type="text/javascript" src="{$BASE_URL}javascript/vendor/bootstrap.js"></script>

@@ -5,11 +5,21 @@
             <h3 class="asker-name"></h3>
             <p class="asker-point"> <span class="title"></span></p>
         </div>
+<<<<<<< HEAD
+        {include file="question_partials/vote_panel.tpl"}
+        <form method="post" action="">
+            <div class="qa-a-selection">
+            </div>
+            <input name="code" type="hidden">
+            <input name="qa_click" value="" type="hidden">
+        </form>
+=======
         <div class="enabled voting clearfix voting-vertical qa-voting-net" id="voting_187">
             <a title="" class=" fa fa-thumbs-up enabled vote-up enabled" data-original-title="Click to vote up"></a>
             <span class="count">0</span>
             <a title="" class=" fa fa-thumbs-down enabled vote-down enabled" data-original-title="Click to vote down"></a>
         </div>
+>>>>>>> master
     </div>
     <div class="a-item-inner-wrap">
         <div class="a-item-wrap">

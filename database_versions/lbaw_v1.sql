@@ -289,6 +289,36 @@ $func$  LANGUAGE plpgsql;
 
 
 CREATE OR REPLACE FUNCTION user_profile(puser_id int)
+<<<<<<< HEAD
+  RETURNS TABLE (
+    fullname character varying(200),
+    username character varying(50),
+    email character varying(70),
+    about character varying(200),
+    location character varying(100),
+    role character varying(10),
+  --badge character varying(50),
+    created_at date,
+    count_votes_rating_received INT,
+    count_questions BIGINT,
+    count_answers BIGINT,
+    count_votes_made BIGINT
+  ) AS $func$
+BEGIN
+  RETURN QUERY
+  SELECT users.fullname, users.username, users.email, users.about,
+    (SELECT locations.name FROM locations WHERE users.locationid = locations.locationid),
+    (SELECT name FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE userid = puser_id),
+    users.signup_date,
+    count_vote_rating_received_user(puser_id),
+    (SELECT COUNT(*) FROM publications INNER JOIN questions ON questions.publicationid = publications.publicationid
+      RIGHT JOIN users ON publications.userid = users.userid WHERE users.userid = puser_id),
+    (SELECT COUNT(*) FROM publications INNER JOIN answers ON answers.publicationid = publications.publicationid
+      RIGHT JOIN users ON publications.userid = users.userid WHERE users.userid = puser_id),
+    (SELECT COUNT(*) FROM votes WHERE votes.userid = puser_id)
+  FROM users
+  WHERE users.userid = puser_id;
+=======
     RETURNS TABLE (
         fullname character varying(200),
         username character varying(50),
@@ -317,6 +347,7 @@ BEGIN
         (SELECT COUNT(*) FROM votes WHERE votes.userid = puser_id)
     FROM users
     WHERE users.userid = puser_id;
+>>>>>>> master
 END
 $func$  LANGUAGE plpgsql;
 

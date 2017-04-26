@@ -31,7 +31,11 @@ function update_question($question) {
 
 function get_categories() {
     global $conn;
-    $query=$conn->prepare("SELECT categories.name FROM categories");
+    $query=$conn->prepare("SELECT categories.name, COUNT(*) as total FROM questions 
+INNER JOIN categories 
+ON questions.categoryid = categories.categoryid 
+GROUP BY name 
+ORDER BY total DESC; ");
     $query->execute();
     return $query->fetchAll();
 }
@@ -196,3 +200,14 @@ function question_is_mine($question)
     return $question['userid'] == auth_user('userid');
 }
 
+<<<<<<< HEAD
+function question_voted_by_me($question)
+{
+    if (!$_SESSION['logged_in']) {
+        return false;
+    }
+    return $question['userid'] == auth_user('userid');
+}
+
+=======
+>>>>>>> master
