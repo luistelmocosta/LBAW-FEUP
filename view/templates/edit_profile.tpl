@@ -108,12 +108,10 @@
                         </tr>
                         <tr>
                             <td colspan="3" class="qa-form-wide-buttons">
-                                <input onclick="qa_show_waiting_after(this, false);" value="save" title="" type="submit" class="qa-form-wide-button qa-form-wide-button-save">
+                                <input value="save" title="" type="submit" class="qa-form-wide-button qa-form-wide-button-save">
                             </td>
                         </tr>
                         </tbody></table>
-                    <input type="hidden" name="dosaveprofile" value="1">
-                    <input type="hidden" name="code" value="1-1489607116-aaa1b326f97b55790326ff31ee4288b478fcf6e9">
                 </form>
             </div>
         </div>
@@ -152,9 +150,7 @@
                             </td>
                         </tr>
                         </tbody></table>
-                    <input type="hidden" name="dochangepassword" value="1">
-                    <input type="hidden" name="code" value="1-1489606843-ffc685c24609fa23f087f8ed030411a30e18486c">
-                </form>
+                    </form>
             </div>
 
         </div>
