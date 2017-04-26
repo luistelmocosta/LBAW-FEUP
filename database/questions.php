@@ -153,7 +153,6 @@ function top_scored_questions($page = 0) {
 
     return $rows;
 
-
 }
 
 function get_questions_from_id($publicationid) {
@@ -201,6 +200,7 @@ function question_is_mine($question)
     return $question['userid'] == auth_user('userid');
 }
 
+<<<<<<< HEAD
 function question_voted_by_me($question)
 {
     if (!$_SESSION['logged_in']) {
@@ -209,3 +209,5 @@ function question_voted_by_me($question)
     return $question['userid'] == auth_user('userid');
 }
 
+=======
+>>>>>>> master

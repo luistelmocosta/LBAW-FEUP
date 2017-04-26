@@ -4,7 +4,6 @@ include_once('../../../config/init.php');
 include_once($BASE_DIR . 'database/users.php');
 include_once($BASE_DIR . 'database/questions.php');
 
-
 PagePermissions::create('auth')->check();
 
 if($_SESSION['logged_in']) {

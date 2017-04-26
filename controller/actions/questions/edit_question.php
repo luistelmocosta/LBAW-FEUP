@@ -25,7 +25,7 @@ try {
 
     $conn->beginTransaction();
     update_question($question);
-    update_tags($questionid, $tags);
+    update_tags($questionid, $tags_strimmed);
 
 
     $conn->commit();

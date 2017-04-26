@@ -1,3 +1,4 @@
+<title>{$user['username']}'s Profile</title>
 <div style="padding-top:30px;"> </div>
 <div id="site-body" class="container">
     <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
@@ -23,8 +24,8 @@
                         <p>{$user['created_at']}</p>
 
                         <td colspan="3" class="qa-form-wide-buttons">
-                            <a href="../view/edit_profile.php">
-                            <input name="doaccount" value="Edit my Profile" title="" type="submit" class="qa-form-wide-button qa-form-wide-button-account">
+                            <a href="{$BASE_URL}controller/pages/users/edit_profile.php">
+                            <input name="doaccount" value="Edit Profile" title="" type="submit" class="qa-form-wide-button qa-form-wide-button-account">
                             </a>
                         </td>
                     </div>
@@ -42,7 +43,7 @@
                 <br><br>
                 <div class="user-activity-count clearfix">
                     <div class="points">
-                        120
+                        {$user['count_votes_rating_received']}
                         <span>points</span>
                     </div>
                     <div class="counts">

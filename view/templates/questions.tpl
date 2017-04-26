@@ -1,9 +1,7 @@
+<title>Questions</title>
 <body id="site-body" class="container">
 <div class="clearfix qa-main">
     <div class="home-left-inner">
-
-
-
 
         <div class="col-md-8"">
         <h1 class="page-title">
