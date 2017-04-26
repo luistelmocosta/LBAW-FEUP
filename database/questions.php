@@ -176,6 +176,19 @@ function get_answers_from_questionid($questionid) {
 
 }
 
+<<<<<<< HEAD
+function get_questions_by_user_id($userid, $page = 0) {
+
+    global $conn;
+    $limit = 4;
+    $skip = $limit * $page;
+    $stmt = $conn->prepare("SELECT * FROM get_questions_by_user_id(:userid, :skip, :limit)");
+    $stmt->execute(['userid' => $userid, 'limit' => $limit, 'skip' => $skip]);
+    $rows = $stmt->fetchAll();
+
+    return $rows;
+}
+=======
 function question_is_mine($question)
 {
     if (!$_SESSION['logged_in']) {
@@ -183,3 +196,4 @@ function question_is_mine($question)
     }
     return $question['userid'] == auth_user('userid');
 }
+>>>>>>> master
