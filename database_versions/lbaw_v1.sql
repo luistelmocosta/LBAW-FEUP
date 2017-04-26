@@ -663,6 +663,7 @@ begin
     WHERE questions.publicationid = questionid;
 end $$;
 
+<<<<<<< HEAD
 --- This function creates a new comment //FIXME this should be a transaction!
 
 create or replace function insert_into_answercomments(userid INTEGER, answerid INTEGER, body text)
@@ -679,6 +680,9 @@ begin
 end $$;
 
 -- This function returns the question details from a given user id
+=======
+---- This functions returns the question details from a given user id
+>>>>>>> master
 
 CREATE OR REPLACE FUNCTION get_questions_by_user_id (uid INTEGER, skip integer, limitnumber integer)
     RETURNS TABLE (
@@ -713,4 +717,14 @@ BEGIN
 END
 $func$;
 
+<<<<<<< HEAD
 
+=======
+create or replace function update_user_profile(uid integer, full_name varchar, e_mail varchar, location varchar, about_user text)
+  returns void language plpgsql as $$
+begin
+  UPDATE users
+  SET fullname = full_name, email = e_mail, about = about_user
+  WHERE users.userid = uid;
+end $$;
+>>>>>>> master

@@ -1,3 +1,4 @@
+<title>{$question['title']}</title>
 <div class="clearfix qa-main">
     <div class="home-left-inner">
         <div class="col-md-8">

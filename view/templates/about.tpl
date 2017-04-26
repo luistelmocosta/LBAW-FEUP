@@ -1,4 +1,4 @@
-<body>
+<title>About</title>
 
 <div class="container">
 
@@ -40,5 +40,3 @@
     </div>
 
 </div>
-
-</body>

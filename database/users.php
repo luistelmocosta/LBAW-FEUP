@@ -69,3 +69,21 @@ FROM users WHERE username = ?");
 
     return $query->fetchAll();
 }
+
+function userProfile($userid) {
+
+    global $conn;
+    $query = $conn->prepare("SELECT * FROM user_profile(:userid)");
+    $query->execute(['userid' => $userid]);
+
+    return $query->fetchAll();
+}
+
+function update_user_profile($update_user) {
+
+    global $conn;
+    $query = $conn->prepare("SELECT * FROM update_user_profile(:userid, :fullname, :email, :location, :about)");
+    $query->execute($update_user);
+
+    return true;
+}
