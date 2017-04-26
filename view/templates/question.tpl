@@ -15,12 +15,48 @@
                             <div class = "options pull-right " style = "margin-bottom:5px;">
                                 <a href="{editQuestionUrl($question['publicationid'])}" class = "btn edit-question {if !$isMine}hidden{/if}">Edit</a>
                                 <br class="clearfix">
-                                <div class="enabled voting clearfix voting-vertical qa-voting-net" id="voting_187">
-                                    <a title="" class=" fa fa-thumbs-up enabled vote-up enabled" data-original-title="Click to vote up"></a>
-                                    <span class="count">{$question['upvotes']}</span>
-                                    <a title="" class=" fa fa-thumbs-down enabled vote-down enabled" data-original-title="Click to vote down"></a>
-                                    <span class="count">{$question['down_votes']}</span>
-                                </div>
+                                <blockquote class="vote-up-down text-right">
+                                    <div class="vote chev" data-type="q" data-id="{$question['publicationid']}" data-url="{url('controller/api/votes/vote')}">
+                                        <div class="increment up{if $question['voted'] == 1} active{/if}"></div>
+                                        <div class="increment down{if $question['voted'] == -1} active{/if}"></div>
+
+                                        <div class="count vote-count value" data-url="{url('api/votes/refresh')}">
+                                            {$question['votes']}
+                                        </div>
+                                    </div>
+                                </blockquote>
+                                <script>
+
+                                    $(".increment.up").on('click', function (e) {
+                                        e.stopPropagation();
+                                        console.log("voting up");
+                                        var parent = $(this).parent();
+                                        var voteId = parent.data('id');
+                                        console.log(voteId);
+                                        var url = parent.data('url');
+                                        console.log(url);
+                                        $.get(url + '?id=' + voteId + '&value=1', function (data) {
+                                            data = JSON.parse(data);
+                                            setVotingStatus(parent, data.result);
+                                        });
+
+
+                                    });
+
+                                    $(".increment.down").on('click', function (e) {
+                                        e.stopPropagation();
+                                        console.log("voting down");
+                                        var parent = $(this).parent();
+                                        var voteType = parent.data('type');
+                                        var voteId = parent.data('id');
+                                        var url = parent.data('url');
+
+                                        $.get(url + '?type=' + voteType + '&id=' + voteId + '&value=-1', function (data) {
+                                            data = JSON.parse(data);
+                                            setVotingStatus(parent, data.result);
+                                        });
+                                    });
+                                </script>
                             </div>
                             <h2 class="question-title">
                                 {$question['title']}
@@ -177,3 +213,5 @@
 
     </div>
 </div>
+
+{HTML::script('askme/vote.js')}

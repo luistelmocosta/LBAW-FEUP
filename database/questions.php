@@ -31,7 +31,11 @@ function update_question($question) {
 
 function get_categories() {
     global $conn;
-    $query=$conn->prepare("SELECT categories.name FROM categories");
+    $query=$conn->prepare("SELECT categories.name, COUNT(*) as total FROM questions 
+INNER JOIN categories 
+ON questions.categoryid = categories.categoryid 
+GROUP BY name 
+ORDER BY total DESC; ");
     $query->execute();
     return $query->fetchAll();
 }
@@ -176,7 +180,7 @@ function get_answers_from_questionid($questionid) {
 
 }
 
-<<<<<<< HEAD
+
 function get_questions_by_user_id($userid, $page = 0) {
 
     global $conn;
@@ -188,7 +192,7 @@ function get_questions_by_user_id($userid, $page = 0) {
 
     return $rows;
 }
-=======
+
 function question_is_mine($question)
 {
     if (!$_SESSION['logged_in']) {
@@ -196,4 +200,4 @@ function question_is_mine($question)
     }
     return $question['userid'] == auth_user('userid');
 }
->>>>>>> master
+
