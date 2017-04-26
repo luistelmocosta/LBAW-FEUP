@@ -200,7 +200,7 @@ function question_is_mine($question)
     return $question['userid'] == auth_user('userid');
 }
 
-<<<<<<< HEAD
+
 function question_voted_by_me($question)
 {
     if (!$_SESSION['logged_in']) {
@@ -209,5 +209,3 @@ function question_voted_by_me($question)
     return $question['userid'] == auth_user('userid');
 }
 
-=======
->>>>>>> master
