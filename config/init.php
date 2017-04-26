@@ -5,14 +5,21 @@ session_start();
 
 error_reporting(E_ERROR | E_WARNING);
 
+<<<<<<< HEAD
 //LOCAL
 $BASE_DIR = '/home/alexandre/GitHub/LBAW-FEUP/'; //CHANGE WITH YOURS
 $BASE_URL = '/';
+=======
+
+>>>>>>> master
 
 //GNOME
 //$BASE_DIR = '/opt/lbaw/lbaw1641/public_html/proto/'; //FIXME
 //$BASE_URL = '/~lbaw1641/proto/'; //FIXME
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 //Connect to the database
 /*try {
     $dbuser = 'lbaw1641'; //CHANGE WITH YOUR INFO
@@ -26,8 +33,17 @@ $BASE_URL = '/';
 }*/
 
 
+<<<<<<< HEAD
 try {
     $dbuser = 'alexandre'; //CHANGE WITH YOUR INFO
+=======
+//LOCAL
+$BASE_DIR = '/home/luiscosta/PhpstormProjects/LBAW-FEUP/'; //CHANGE WITH YOURS
+$BASE_URL = '/';
+
+try {
+    $dbuser = 'luiscosta'; //CHANGE WITH YOUR INFO
+>>>>>>> master
     $dbpass = '123';
     $host = 'localhost';
     $dbname = 'lbaw';

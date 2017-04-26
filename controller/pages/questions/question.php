@@ -13,8 +13,10 @@ if($_SESSION['logged_in']) {
 $questions = get_questions_from_id($_GET['question']);
 $tags = get_tags_from_question($_GET['question']);
 $question = $questions[0];
+$question['isMine'] = question_is_mine($question);
 $answers = get_answers_from_questionid($_GET['question']);
 
+$smarty->assign('isMine', $question['isMine']);
 $smarty->assign('tags', $tags);
 $smarty->assign('answers', $answers);
 $smarty->assign('question', $question);

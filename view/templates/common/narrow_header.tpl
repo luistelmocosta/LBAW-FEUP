@@ -34,7 +34,7 @@
     <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 
 </head>
-
+<body>
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top" style="background: #2d2727;">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->

@@ -1,45 +1,53 @@
-
 <div id="site-body" class="container">
     <div class="clearfix qa-main">
         <div class="col-sm-12 list-c">
-
-
-            <h1>Edit your Question</h1>
+            <h1>Edit Question</h1>
             <br>
-            <div class="qa-part-form-q-edit">
-                <form method="post" action="">
+            <div class="qa-part-form">
+                <form name="ask" method="post" action= "{$BASE_URL}controller/actions/questions/edit_question.php">
                     <table class="qa-form-tall-table">
-                        <tbody><tr>
-                            <td class="qa-form-tall-label" style="padding-bottom: 20px">
+                        <tbody>
+                        <tr>
+                            <td class="qa-form-tall-label">
                                 Title
                             </td>
                         </tr>
+                        <input type = "hidden" name = "questionid" value = "{$question['publicationid']}">
                         <tr>
-                            <td class="qa-form-tall-data" style="padding-bottom: 20px">
-                                <input name="q_title" type="text" value="Create class in php" class="qa-form-tall-text">
+                            <td class="qa-form-tall-data">
+                                <input name="title" id="title" autocomplete="off" onchange="" type="text" value="{old('title', $question['title'])}" class="qa-form-tall-text">
                             </td>
-                        </tr>
-                        <tr>
-                            <td class="qa-form-tall-label">
-                                Category:
-                                &nbsp;
-                                <select name="q_category_0" id="q_category_0" onchange="qa_category_select('q_category');" class="qa-form-tall-select" style="display: none;">
-                                    <option value="3" selected="">Sports</option>
-                                </select><span id="q_category_0_sub"> <select name="q_category_1" id="q_category_1" onchange="qa_category_select('q_category');" class="qa-form-tall-select">
-                                                        <option value="1">Technology</option><option value="2">Widgets</option>
-                                                        <option value="3">Politics</option>
-                                                    </select></span>
-                            </td>
+
                         </tr>
 
                         <tr>
-                            <td class="qa-form-tall-label" style="padding-bottom: 30px; padding-top: 20px">
-                                <b>Edit question info:</b>
+                            <td class="qa-form-tall-label">
+                                Category
+                                <span id="category_0_sub">
+                                    <select name="category" id="category_1" onchange="" class="qa-form-tall-select">
+                                        {foreach $categories as $category }
+                                            <option value="{old('category', $question['category'])}" selected>{old('category', $category)}</option>
+                                        {/foreach}
+
+                                    </select>
+                                </span>
                             </td>
                         </tr>
                         <tr>
                             <td class="qa-form-tall-data">
-                                <textarea name="editor1"></textarea>
+                                <div class="qa-form-tall-note">
+                                    <div id="category_note"></div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="qa-form-tall-label">
+                                Description:
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="qa-form-tall-data">
+                                <textarea name="editor1">{old('body', $question['body'])}</textarea>
                                 <script>
                                     CKEDITOR.replace( 'editor1' );
                                 </script>
@@ -48,35 +56,28 @@
                         </tr>
                         <tr>
                             <td class="qa-form-tall-label">
-                                Tags - use comma (,) as a separator:
+                                Tags - use comma (,) as a separator
                             </td>
                         </tr>
                         <tr>
                             <td class="qa-form-tall-data">
-                                <input name="q_tags" id="tags" autocomplete="off" onkeyup="qa_tag_hints();" onmouseup="qa_tag_hints();" type="text" value="php" class="qa-form-tall-text">
-                                <div class="qa-form-tall-note"><span id="tag_examples_title" style="display:none;">Example tags: </span><span id="tag_complete_title" style="display:none;">Matching tags: </span><span id="tag_hints"></span></div>
+                                <input name="tags" id="tags" autocomplete="off" type="text" value="{$tags}"
+                                       class="qa-form-tall-text">
                             </td>
                         </tr>
-                        <tr>
+
+                        </tbody>
+                        <tbody><tr>
                             <td colspan="1" class="qa-form-tall-buttons">
-                                <input onclick="qa_show_waiting_after(this, false); qa_ckeditor4_q_content.updateElement();" value="Save Changes" title="" type="submit" class="qa-form-tall-button qa-form-tall-button-save">
-                                <input name="docancel" value="Cancel" title="" type="submit" class="qa-form-tall-button qa-form-tall-button-cancel">
+                                <input onclick="qa_show_waiting_after(this, false);" value="Ask Question" title="" type="submit" class="qa-form-tall-button qa-form-tall-button-ask">
                             </td>
                         </tr>
-                        </tbody></table>
-                    <input type="hidden" name="q_dosave" value="1">
-                    <input type="hidden" name="code" value="1-1488980392-c4f8b713d85c5c46c4e0c0c1964a0ea1aaa838a8">
-                    <input type="hidden" name="q_editor" value="CKEditor4">
+                        </tbody>
+                    </table>
+
                 </form>
             </div>
-            <div class="qa-part-a-list">
-                <div class="qa-a-list" id="a_list">
-
-                </div> <!-- END qa-a-list -->
-
-            </div>
-
-
         </div>
     </div>
 </div>
+
