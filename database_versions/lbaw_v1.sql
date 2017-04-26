@@ -285,12 +285,18 @@ $func$  LANGUAGE plpgsql;
 
 ---- Function that returns important info about one user puser_id
 
+
+
+
 CREATE OR REPLACE FUNCTION user_profile(puser_id int)
     RETURNS TABLE (
+        fullname character varying(200),
         username character varying(50),
-        email character varying(100),
-        type character varying(10),
-        badge character varying(50),
+        email character varying(70),
+        about character varying(200),
+        location character varying(100),
+        role character varying(10),
+    --badge character varying(50),
         created_at date,
         count_votes_rating_received INT,
         count_questions BIGINT,
@@ -299,7 +305,8 @@ CREATE OR REPLACE FUNCTION user_profile(puser_id int)
     ) AS $func$
 BEGIN
     RETURN QUERY
-    SELECT users.username, users.email,
+    SELECT users.fullname, users.username, users.email, users.about,
+        (SELECT locations.name FROM locations WHERE users.locationid = locations.locationid),
         (SELECT name FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE userid = puser_id),
         users.signup_date,
         count_vote_rating_received_user(puser_id),
@@ -670,4 +677,40 @@ begin
 
     insert into answercomments(commentid, answerid) VALUES (result, answerid);
 end $$;
+
+-- This function returns the question details from a given user id
+
+CREATE OR REPLACE FUNCTION get_questions_by_user_id (uid INTEGER, skip integer, limitnumber integer)
+    RETURNS TABLE (
+        publicationid INTEGER,
+        title VARCHAR(100),
+        body TEXT,
+        creation_date TIMESTAMP,
+        solved_date TIMESTAMP,
+        username VARCHAR(10),
+        userid INTEGER,
+        answers_count BIGINT,
+        upvotes BIGINT,
+        votes_count BIGINT,
+        views_counter BIGINT)
+LANGUAGE plpgsql
+AS $func$
+BEGIN
+    RETURN QUERY
+    SELECT questions.publicationid, questions.title, publications.body,
+        publications.creation_date, questions.solved_date, users.username, users.userid,
+        (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
+        (SELECT COUNT (*) FROM votes WHERE votes.values = 1 AND votes.publicationid = 1) AS upvotes,
+        (SELECT SUM(votes.values) FROM votes WHERE votes.publicationid = questions.publicationid) AS votes_count,
+        questions.views_counter
+    FROM questions
+        INNER JOIN publications
+            ON questions.publicationid = publications.publicationid
+        LEFT JOIN users ON publications.userid = users.userid
+    WHERE users.userid = uid
+    LIMIT limitNumber
+    OFFSET skip;
+END
+$func$;
+
 
