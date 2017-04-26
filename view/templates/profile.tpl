@@ -38,7 +38,6 @@
             <div class="panel-body">
                     <span>
                         <h1 class="panel-title pull-left" style="font-size:30px;"> {$user['username']} <small>{$user['role']}</small> <i class="fa fa-check text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="John Doe is sharing with you"></i></h1>
-
                     </span>
                 <br><br>
                 <div class="user-activity-count clearfix">
@@ -47,13 +46,13 @@
                         <span>points</span>
                     </div>
                     <div class="counts">
-                        <div class="a-counts">
-                            <span>{$user['count_answers']}</span>
-                            Answers
-                        </div>
                         <div class="q-counts">
                             <span>{$user['count_questions']}</span>
                             Questions
+                        </div>
+                        <div class="a-counts">
+                            <span>{$user['count_answers']}</span>
+                            Answers
                         </div>
                         <div class="c-counts">
                             <span>0</span>
@@ -73,16 +72,6 @@
                                 {include file="user_profile_questions.tpl"}
                             {/foreach}
 
-                        </div>
-                    </div>
-                    <div class="widget cs_user_posts">												<h3 style="padding-left: 10px" class="widget-title user-post-title">{$user['username']}'s Answers<a class="see-all" href="#">Show all</a></h3>
-                        <div class="ra-ua-widget">
-                            <ul class="question-list users-post-widget post-type-A"><li class="no-post-found">No Answers posted yet! </li></ul>
-                        </div>
-                    </div>
-                    <div class="widget cs_user_posts">												<h3 style="padding-left: 10px" class="widget-title user-post-title">{$user['username']}'s Comments<a class="see-all" href="#">Show all</a></h3>
-                        <div class="ra-ua-widget">
-                            <ul class="question-list users-post-widget post-type-C"><li class="no-post-found">No Comments posted yet! </li></ul>
                         </div>
                     </div>
                 </div>
