@@ -8,6 +8,19 @@ html body {
     -moz-box-sizing: border-box;
 }
 
+#comments {
+    display: none;
+    background-color: #B8ECEF;
+    text-align: center;
+    padding: 10px;
+    color: #333;
+}
+
+#comments a{
+    color: blue;
+    text-decoration: none;
+}
+
 .narrow .views {
     display: inline-block;
     height: auto;

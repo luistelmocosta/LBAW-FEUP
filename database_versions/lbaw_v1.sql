@@ -285,12 +285,18 @@ $func$  LANGUAGE plpgsql;
 
 ---- Function that returns important info about one user puser_id
 
+
+
+
 CREATE OR REPLACE FUNCTION user_profile(puser_id int)
     RETURNS TABLE (
+        fullname character varying(200),
         username character varying(50),
-        email character varying(100),
-        type character varying(10),
-        badge character varying(50),
+        email character varying(70),
+        about character varying(200),
+        location character varying(100),
+        role character varying(10),
+    --badge character varying(50),
         created_at date,
         count_votes_rating_received INT,
         count_questions BIGINT,
@@ -299,7 +305,8 @@ CREATE OR REPLACE FUNCTION user_profile(puser_id int)
     ) AS $func$
 BEGIN
     RETURN QUERY
-    SELECT users.username, users.email,
+    SELECT users.fullname, users.username, users.email, users.about,
+        (SELECT locations.name FROM locations WHERE users.locationid = locations.locationid),
         (SELECT name FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE userid = puser_id),
         users.signup_date,
         count_vote_rating_received_user(puser_id),
@@ -437,7 +444,7 @@ BEGIN
 END
 $func$  LANGUAGE plpgsql;
 
---- This function adds does two inserts : - INSERT INTO Questions and Publications
+--- This function adds does two inserts : - INSERT INTO Questions and Publications //FIXME THIS SOULD BE A TRANSACTION
 
 create or replace function insert_into_questions(body text, userid integer, title varchar, categoryid integer)
     returns void language plpgsql as $$
@@ -656,7 +663,26 @@ begin
     WHERE questions.publicationid = questionid;
 end $$;
 
+<<<<<<< HEAD
+--- This function creates a new comment //FIXME this should be a transaction!
+
+create or replace function insert_into_answercomments(userid INTEGER, answerid INTEGER, body text)
+    returns void language plpgsql as $$
+DECLARE result INTEGER;
+begin
+    insert into publications(body, userid)
+    VALUES (body, userid)
+    returning publications.publicationid AS publicationid INTO result;
+
+    insert into comments(publicationid) VALUES (result);
+
+    insert into answercomments(commentid, answerid) VALUES (result, answerid);
+end $$;
+
+-- This function returns the question details from a given user id
+=======
 ---- This functions returns the question details from a given user id
+>>>>>>> master
 
 CREATE OR REPLACE FUNCTION get_questions_by_user_id (uid INTEGER, skip integer, limitnumber integer)
     RETURNS TABLE (
@@ -691,6 +717,9 @@ BEGIN
 END
 $func$;
 
+<<<<<<< HEAD
+
+=======
 create or replace function update_user_profile(uid integer, full_name varchar, e_mail varchar, location varchar, about_user text)
   returns void language plpgsql as $$
 begin
@@ -698,3 +727,4 @@ begin
   SET fullname = full_name, email = e_mail, about = about_user
   WHERE users.userid = uid;
 end $$;
+>>>>>>> master
