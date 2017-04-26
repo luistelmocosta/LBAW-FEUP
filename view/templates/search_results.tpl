@@ -4,9 +4,7 @@
             <h1 class="page-title">
                 Search results for <b>"C++"</b>
             </h1>
-            <div class="qa-part-q-list">
-                {include file="recent_questions.tpl"}
-            </div>
+
         </div>
         <div class="col-sm-4 side-c">
             <div class="qa-sidepanel">
