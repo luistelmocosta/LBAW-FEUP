@@ -690,3 +690,11 @@ BEGIN
     OFFSET skip;
 END
 $func$;
+
+create or replace function update_user_profile(uid integer, full_name varchar, e_mail varchar, location varchar, about_user text)
+  returns void language plpgsql as $$
+begin
+  UPDATE users
+  SET fullname = full_name, email = e_mail, about = about_user
+  WHERE users.userid = uid;
+end $$;

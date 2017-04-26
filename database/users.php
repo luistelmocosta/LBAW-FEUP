@@ -78,3 +78,12 @@ function userProfile($userid) {
 
     return $query->fetchAll();
 }
+
+function update_user_profile($update_user) {
+
+    global $conn;
+    $query = $conn->prepare("SELECT * FROM update_user_profile(:userid, :fullname, :email, :location, :about)");
+    $query->execute($update_user);
+
+    return true;
+}
