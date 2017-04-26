@@ -201,3 +201,11 @@ function question_is_mine($question)
     return $question['userid'] == auth_user('userid');
 }
 
+function question_voted_by_me($question)
+{
+    if (!$_SESSION['logged_in']) {
+        return false;
+    }
+    return $question['userid'] == auth_user('userid');
+}
+

@@ -15,16 +15,11 @@
                             <div class = "options pull-right " style = "margin-bottom:5px;">
                                 <a href="{editQuestionUrl($question['publicationid'])}" class = "btn edit-question {if !$isMine}hidden{/if}">Edit</a>
                                 <br class="clearfix">
-                                <blockquote class="vote-up-down text-right">
-                                    <div class="vote chev" data-type="q" data-id="{$question['publicationid']}" data-url="{url('controller/api/votes/vote')}">
-                                        <div class="increment up{if $question['voted'] == 1} active{/if}"></div>
-                                        <div class="increment down{if $question['voted'] == -1} active{/if}"></div>
 
-                                        <div class="count vote-count value" data-url="{url('api/votes/refresh')}">
-                                            {$question['votes']}
-                                        </div>
-                                    </div>
-                                </blockquote>
+                                {include file="question_partials/vote_panel.tpl"}
+
+
+
                                 <script>
 
                                     $(".increment.up").on('click', function (e) {
@@ -60,7 +55,6 @@
                             </div>
                             <h2 class="question-title">
                                 {$question['title']}
-                                {$question['publicationid']}
                             </h2>
 
 
