@@ -1,5 +1,5 @@
 {include file= 'common/narrow_header.tpl'}
-
+<title>SignUp</title>
 <body id="site-body" class="container">
 <div class="clearfix qa-main">
     <h1>Create a new account</h1>

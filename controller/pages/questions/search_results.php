@@ -13,8 +13,6 @@ if($_SESSION['logged_in']) {
 
 $userid = auth_user('userid');
 
-$search_res = searchQuestions($)
-
 
 $smarty->display('search_results.tpl');
 $smarty->display('common/footer.tpl');

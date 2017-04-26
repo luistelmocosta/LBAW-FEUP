@@ -1,4 +1,5 @@
 <!-- Set your background image for this header on the line below. -->
+<title>AskMe</title>
 <header class="intro-header" style="background-image: url('../../images/bg2.png')">
     <div class="container">
         <div class="row">

@@ -149,7 +149,6 @@ function top_scored_questions($page = 0) {
 
     return $rows;
 
-
 }
 
 function get_questions_from_id($publicationid) {
@@ -176,7 +175,7 @@ function get_answers_from_questionid($questionid) {
 
 }
 
-<<<<<<< HEAD
+
 function get_questions_by_user_id($userid, $page = 0) {
 
     global $conn;
@@ -188,7 +187,7 @@ function get_questions_by_user_id($userid, $page = 0) {
 
     return $rows;
 }
-=======
+
 function question_is_mine($question)
 {
     if (!$_SESSION['logged_in']) {
@@ -196,4 +195,4 @@ function question_is_mine($question)
     }
     return $question['userid'] == auth_user('userid');
 }
->>>>>>> master
+

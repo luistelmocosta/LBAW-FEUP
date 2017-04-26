@@ -5,61 +5,40 @@ session_start();
 
 error_reporting(E_ERROR | E_WARNING);
 
-<<<<<<< HEAD
 //LOCAL
 $BASE_DIR = '/home/alexandre/GitHub/LBAW-FEUP/'; //CHANGE WITH YOURS
 $BASE_URL = '/';
-=======
 
->>>>>>> master
-
-//GNOME
+//GNOMO
 //$BASE_DIR = '/opt/lbaw/lbaw1641/public_html/proto/'; //FIXME
 //$BASE_URL = '/~lbaw1641/proto/'; //FIXME
-<<<<<<< HEAD
 
-=======
->>>>>>> master
 //Connect to the database
-/*try {
-    $dbuser = 'lbaw1641'; //CHANGE WITH YOUR INFO
-    $dbpass = 'zl50rg14';
-    $host = 'dbm.fe.up.pt';
-    $dbname = 'lbaw1641';
-    $conn = new PDO("pgsql:host=$host;dbname=$dbname", $dbuser, $dbpass);
-}catch (PDOException $e) {
-    echo "Error : " . $e->getMessage() . "<br/>";
-    die();
-}*/
-
-
-<<<<<<< HEAD
 try {
     $dbuser = 'alexandre'; //CHANGE WITH YOUR INFO
-=======
-//LOCAL
-$BASE_DIR = '/home/luiscosta/PhpstormProjects/LBAW-FEUP/'; //CHANGE WITH YOURS
-$BASE_URL = '/';
-
-try {
-    $dbuser = 'luiscosta'; //CHANGE WITH YOUR INFO
->>>>>>> master
     $dbpass = '123';
     $host = 'localhost';
     $dbname = 'lbaw';
+
+    /* GNOMO
+    $dbuser = 'lbaw1641';
+    $dbpass = 'zl50rg14';
+    $host = 'dbm.fe.up.pt';
+    $dbname = 'lbaw1641';
+    */
+
     $conn = new PDO("pgsql:host=$host;dbname=$dbname", $dbuser, $dbpass);
 }catch (PDOException $e) {
     echo "Error : " . $e->getMessage() . "<br/>";
     die();
 }
 
+
 $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-
 // Set the schema for this connection.
 $conn->exec('SET SCHEMA \'public\'');
-
 
 // Include Smarty library.
 include_once($BASE_DIR	.	'lib/smarty/Smarty.class.php');
@@ -76,7 +55,6 @@ include_once($BASE_DIR . 'lib/helpers/Html.class.php');
 $smarty	=	new	Smarty;
 $smarty->setTemplateDir($BASE_DIR	.	'view/templates/');
 $smarty->setCompileDir($BASE_DIR	.	'view/templates_c/');
-
 
 // Send some common variables to Smarty.
 $smarty->assign('BASE_URL',	$BASE_URL);

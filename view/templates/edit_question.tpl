@@ -1,3 +1,4 @@
+<title>Edit Question</title>
 <div id="site-body" class="container">
     <div class="clearfix qa-main">
         <div class="col-sm-12 list-c">

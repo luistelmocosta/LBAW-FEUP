@@ -1,3 +1,4 @@
+<title>Edit {$user['username']}'s Profile</title>
 <div style="padding-top:30px;"> </div>
 <div id="site-body" class="container">
     <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
