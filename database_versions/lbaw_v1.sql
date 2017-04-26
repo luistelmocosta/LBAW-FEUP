@@ -722,3 +722,47 @@ begin
   SET fullname = full_name, email = e_mail, about = about_user
   WHERE users.userid = uid;
 end $$;
+
+---- This function returns the comments of a given answer
+
+CREATE OR REPLACE FUNCTION get_answer_comments (aid INTEGER)
+  RETURNS TABLE (
+    publicationid INTEGER,
+    body TEXT,
+    creation_date TIMESTAMP,
+    userid INTEGER,
+    username VARCHAR(50)
+
+  )
+LANGUAGE plpgsql
+AS $$
+BEGIN
+  RETURN QUERY
+  SELECT publications.publicationid, publications.body, publications.creation_date, users.userid, users.username
+  FROM answercomments INNER JOIN publications ON answercomments.commentid = publications.publicationid
+    LEFT JOIN users ON publications.userid = users.userid
+  WHERE answercomments.answerid = aid;
+END
+$$;
+
+---- This function returns the comments of a given question
+
+CREATE OR REPLACE FUNCTION get_question_comments (qid INTEGER)
+  RETURNS TABLE (
+    publicationid INTEGER,
+    body TEXT,
+    creation_date TIMESTAMP,
+    userid INTEGER,
+    username VARCHAR(50)
+
+  )
+LANGUAGE plpgsql
+AS $$
+BEGIN
+  RETURN QUERY
+  SELECT publications.publicationid, publications.body, publications.creation_date, users.userid, users.username
+  FROM questioncomments INNER JOIN publications ON questioncomments.commentid = publications.publicationid
+    LEFT JOIN users ON publications.userid = users.userid
+  WHERE questioncomments.questionid= qid;
+END
+$$;
