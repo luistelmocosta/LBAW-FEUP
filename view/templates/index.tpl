@@ -63,14 +63,14 @@
                         {include file="recent_questions.tpl"}
                     {/foreach}
 
-                   <div class = "load-more col-sm-12 space-top text-center"
+                   <!--<div class = "load-more col-sm-12 space-top text-center"
                          data-next-page = "1"
                          data-url = "{url('controller/api/questions/load_more_questions.php')}"
                          data-tab = "tabs-1">
                         <button type = "button" class = "btn btn-lg btn-primary col-sm-6 col-sm-offset-3 col-xs-12">
                             Load More...
                         </button>
-                    </div>
+                    </div>-->
 
                 </div>
                 <div id="tabs-2">
@@ -94,79 +94,11 @@
                     <h3 class="widget-title">Top Scored Users</h3>
                     <div class="ra-tags-widget">
 
-                        <ul class="top-users-list clearfix"><li class="top-user clearfix">
-                                <div class="avatar" data-id="1" data-handle="admin">
-                                    <a href="#" class="qa-avatar-link">
-                                        <img src="{$BASE_URL}images/admin_icon.jpg" width="30"
-                                             height="30" class="qa-avatar-image" alt=""></a></div><div class="top-user-data">
-                                    <span class="points">520 points</span><a href="#" class="name">admin</a><p class="counts">
-                                        <span>3 questions
-                                        </span>
-                                        <span>7 answers</span>
-                                        <span>1 comments</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="top-user clearfix">
-                                <div class="avatar" data-id="2" data-handle="Towhid"><a href="#" class="qa-avatar-link">
-                                        <img src="{$BASE_URL}images/users.jpg" width="30" height="30"
-                                             class="qa-avatar-image" alt="">
-                                    </a>
-                                </div>
-                                <div class="top-user-data">
-                                    <span class="points">510 points</span>
-                                    <a href="#" class="name">Towhid</a>
-                                    <p class="counts"><span>3 questions</span>
-                                        <span>8 answers</span>
-                                        <span>0 comments</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="top-user clearfix">
-                                <div class="avatar" data-id="3" data-handle="HappyFace"><a href="#" class="qa-avatar-link">
-                                        <img src="{$BASE_URL}images/users.jpg"" width="30"
-                                        height="30" class="qa-avatar-image" alt=""></a>
-                                </div>
-                                <div class="top-user-data">
-                                    <span class="points">350 points</span>
-                                    <a href="#" class="name">HappyFace</a>
-                                    <p class="counts"><span>3 questions</span>
-                                        <span>3 answers</span>
-                                        <span>1 comments</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="top-user clearfix">
-                                <div class="avatar" data-id="21" data-handle="gurjyottheman">
-                                    <a href="#" class="qa-avatar-link">
-                                        <img src="{$BASE_URL}images/users.jpg" width="30"
-                                             height="30" class="qa-avatar-image" alt=""></a>
-                                </div>
-                                <div class="top-user-data"><span class="points">340 points</span>
-                                    <a href="#" class="name">gurjyottheman</a>
-                                    <p class="counts"><span>3 questions</span>
-                                        <span>4 answers</span>
-                                        <span>0 comments</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="top-user clearfix">
-                                <div class="avatar" data-id="7" data-handle="Inspector">
-                                    <a href="#" class="qa-avatar-link">
-                                        <img src="{$BASE_URL}images/users.jpg" width="30"
-                                             height="30" class="qa-avatar-image" alt="">
-                                    </a>
-                                </div>
-                                <div class="top-user-data">
-                                    <span class="points">240 points</span>
-                                    <a href="#" class="name">Inspector</a>
-                                    <p class="counts">
-                                        <span>2 questions</span>
-                                        <span>2 answers</span>
-                                        <span>0 comments</span>
-                                    </p>
-                                </div>
-                            </li>
+                        <ul class="top-users-list clearfix">
+                            {foreach $top_scored_users as $user}
+                                {include file="sidebar_partials/top_scored_users.tpl"}
+
+                                {/foreach}
                         </ul>
                     </div>
                     <br>

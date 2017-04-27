@@ -87,3 +87,12 @@ function update_user_profile($update_user) {
 
     return true;
 }
+
+function top_scored_users() {
+
+    global $conn;
+    $query = $conn->prepare("SELECT * FROM top_scored_users()");
+    $query->execute();
+
+    return $query->fetchAll();
+}

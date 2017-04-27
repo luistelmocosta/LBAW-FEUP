@@ -266,12 +266,13 @@ $func$  LANGUAGE plpgsql;
 
 ---- Function that counts the votes one user received
 
-CREATE OR REPLACE FUNCTION count_vote_rating_received_user(puser_id int)
-    RETURNS INTEGER AS $func$
+create or replace function count_vote_rating_received_user(puser_id integer) returns integer
+LANGUAGE plpgsql
+AS $$
 DECLARE publicationvotecount INTEGER;
 BEGIN
-    SELECT COUNT(*) FROM votes INNER JOIN publications ON votes.publicationid = publications.publicationid
-        RIGHT JOIN users ON publications.userid = users.userid WHERE users.userid = puser_id
+    SELECT SUM(votes.values) FROM votes INNER JOIN publications ON votes.publicationid = publications.publicationid
+        INNER JOIN users ON publications.userid = users.userid WHERE publications.userid = puser_id
     INTO publicationvotecount;
 
     IF publicationvotecount is null THEN
@@ -280,7 +281,7 @@ BEGIN
 
     return publicationvotecount;
 END
-$func$  LANGUAGE plpgsql;
+$$;
 
 
 ---- Function that returns important info about one user puser_id
@@ -289,34 +290,38 @@ $func$  LANGUAGE plpgsql;
 
 
 CREATE OR REPLACE FUNCTION user_profile(puser_id int)
-  RETURNS TABLE (
-    fullname character varying(200),
-    username character varying(50),
-    email character varying(70),
-    about character varying(200),
-    location character varying(100),
-    role character varying(10),
-  --badge character varying(50),
-    created_at date,
-    count_votes_rating_received INT,
-    count_questions BIGINT,
-    count_answers BIGINT,
-    count_votes_made BIGINT
-  ) AS $func$
+    RETURNS TABLE (
+        fullname character varying(200),
+        username character varying(50),
+        email character varying(70),
+        about character varying(200),
+        location character varying(100),
+        role character varying(10),
+    --badge character varying(50),
+        created_at date,
+        count_votes_rating_received INT,
+        count_questions BIGINT,
+        count_answers BIGINT,
+        count_votes_made BIGINT
+    ) AS $func$
 BEGIN
-  RETURN QUERY
-  SELECT users.fullname, users.username, users.email, users.about,
-    (SELECT locations.name FROM locations WHERE users.locationid = locations.locationid),
-    (SELECT name FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE userid = puser_id),
-    users.signup_date,
-    count_vote_rating_received_user(puser_id),
-    (SELECT COUNT(*) FROM publications INNER JOIN questions ON questions.publicationid = publications.publicationid
-      RIGHT JOIN users ON publications.userid = users.userid WHERE users.userid = puser_id),
-    (SELECT COUNT(*) FROM publications INNER JOIN answers ON answers.publicationid = publications.publicationid
-      RIGHT JOIN users ON publications.userid = users.userid WHERE users.userid = puser_id),
-    (SELECT COUNT(*) FROM votes WHERE votes.userid = puser_id)
-  FROM users
-  WHERE users.userid = puser_id;
+    RETURN QUERY
+    SELECT users.fullname, users.username, users.email, users.about,
+        (SELECT locations.name FROM locations WHERE users.locationid = locations.locationid),
+        (SELECT name FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE userid = puser_id),
+        users.signup_date,
+        count_vote_rating_received_user(puser_id),
+        (SELECT COUNT(*) FROM questions
+            INNER JOIN publications
+                ON questions.publicationid = publications.publicationid
+        WHERE publications.userid = puser_id),
+        (SELECT COUNT(*) FROM answers
+            INNER JOIN publications
+                ON answers.publicationid = publications.publicationid
+        WHERE publications.userid = puser_id),
+        (SELECT COUNT(*) FROM votes WHERE votes.userid = puser_id)
+    FROM users
+    WHERE users.userid = puser_id;
 END
 $func$  LANGUAGE plpgsql;
 
@@ -446,7 +451,7 @@ $func$  LANGUAGE plpgsql;
 
 --- This function adds does two inserts : - INSERT INTO Questions and Publications //FIXME THIS SOULD BE A TRANSACTION
 
-create or replace function insert_into_questions(body text, userid integer, title varchar, categoryid integer)
+CREATE OR REPLACE FUNCTION insert_into_questions(body text, userid integer, title varchar, categoryid integer)
     returns void language plpgsql as $$
 DECLARE result INTEGER;
 begin
@@ -471,7 +476,7 @@ $func$  LANGUAGE plpgsql;
 
 ---- This function returns a table with all the data needed to print a list of TOP SCORED QUESTIONS
 
-create or replace function top_scored_questions(skip integer, limitnumber integer)
+CREATE OR REPLACE FUNCTION top_scored_questions(skip integer, limitnumber integer)
     returns
         TABLE
         (
@@ -581,7 +586,7 @@ $func$  LANGUAGE plpgsql;
 ---- This function returns a table with all the data needed to print a list of UNANSWERED QUESTIONS
 
 
-create or replace function unanswered_questions(skip integer, limitnumber integer)
+CREATE OR REPLACE FUNCTION unanswered_questions(skip integer, limitnumber integer)
     returns TABLE
     (
         publicationid integer,
@@ -614,7 +619,7 @@ BEGIN
 END
 $$;
 
-create or replace function insert_into_answers(userid INTEGER, questionid INTEGER, body text)
+CREATE OR REPLACE FUNCTION insert_into_answers(userid INTEGER, questionid INTEGER, body text)
     returns void language plpgsql as $$
 DECLARE result INTEGER;
 begin
@@ -649,7 +654,7 @@ $$;
 
 --- This function updates questions -> edit_question
 
-create or replace function update_question(body_edited text, questionid integer, title_edited varchar, categoryid_edited integer)
+CREATE OR REPLACE FUNCTION update_question(body_edited text, questionid integer, title_edited varchar, categoryid_edited integer)
     returns void language plpgsql as $$
 DECLARE result INTEGER;
 begin
@@ -666,7 +671,7 @@ end $$;
 
 --- This function creates a new comment //FIXME this should be a transaction!
 
-create or replace function insert_into_answercomments(userid INTEGER, answerid INTEGER, body text)
+CREATE OR REPLACE FUNCTION insert_into_answercomments(userid INTEGER, answerid INTEGER, body text)
     returns void language plpgsql as $$
 DECLARE result INTEGER;
 begin
@@ -715,7 +720,7 @@ BEGIN
 END
 $func$;
 
-create or replace function update_user_profile(uid integer, full_name varchar, e_mail varchar, location varchar, about_user text)
+CREATE OR REPLACE FUNCTION update_user_profile(uid integer, full_name varchar, e_mail varchar, location varchar, about_user text)
   returns void language plpgsql as $$
 begin
   UPDATE users

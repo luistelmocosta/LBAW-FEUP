@@ -4,6 +4,7 @@ $(".textarea, .textarea-ok").hide();
 
 $("body").on("click", ".showarea", function(){
     $(this).show();
+    $(this).stopPropagation();
 });
 
 $("body").on("click", ".textarea-ok, .cancel", function(){

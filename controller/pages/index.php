@@ -2,6 +2,7 @@
 
 include_once('../../config/init.php');
 include_once($BASE_DIR . 'database/questions.php');
+include_once($BASE_DIR . 'database/users.php');
 
 if($_SESSION['logged_in']) {
     $smarty->display('common/header_log.tpl');
@@ -12,8 +13,9 @@ if($_SESSION['logged_in']) {
 $recent_questions = recent_questions();
 $unanswered_questions = unanswered_questions();
 $top_scored_questions = top_scored_questions();
+$top_scored_users = top_scored_users();
 
-
+$smarty->assign('top_scored_users', $top_scored_users);
 $smarty->assign('recent_questions', $recent_questions);
 $smarty->assign('unanswered_questions', $unanswered_questions);
 $smarty->assign('top_scored_questions', $top_scored_questions);
