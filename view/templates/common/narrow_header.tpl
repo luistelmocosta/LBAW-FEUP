@@ -51,7 +51,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="{$BASE_URL}controller/pages/questions/questions.php">Questions</a>
+                    <a href="{$BASE_URL}controller/pages/questions/categories.php">Categories</a>
                 </li>
 
                 <li>

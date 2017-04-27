@@ -11,63 +11,35 @@
                         <ul>
 
                             <div class="list-group-item" style = "margin-bottom:15px;">
-
-                                <div class = "col-sm-3 categories-col">
-                                    {foreach old('categories', $categories) as $category }
+                                {foreach array_chunk($categories, 4) as $chunk_categories}
+                                    {foreach  $chunk_categories as $category }
+                                        <div class = "col-sm-3 categories-col">
                                         <li class="list-group-item"><a href="#">{$category['name']}</a>
                                             <span class="qa-tag-link">{$category['total']}</span></li>
                                     {/foreach}
+                                    </div>
+                                {/foreach}
+
+                                <div class="col-lg-4">
+                                    <ul>
+                                        <li class="list-group-item"><a href="#">cleanstrap</a><span class="qa-tag-link">24</span></li>
+                                        <li class="list-group-item"><a href="#">cleanstrap theme</a><span class="qa-tag-link">14</span></li>
+                                        <li class="list-group-item"><a href="#">question2answer theme</a><span class="qa-tag-link">10</span></li>
+                                        <li class="list-group-item"><a href="#">q2a theme</a><span class="qa-tag-link">9</span></li>
+                                        <li class="list-group-item"><a href="#">cleanstrap options</a><span class="qa-tag-link">5</span></li>
+                                        <li class="list-group-item"><a href="#">cleanstrap widgets</a><span class="qa-tag-link">4</span></li>
+                                        <li class="list-group-item"><a href="#">development</a><span class="qa-tag-link">3</span></li>
+                                        <li class="list-group-item"><a href="#">widgets</a><span class="qa-tag-link">3</span></li>
+                                        <li class="list-group-item"><a href="#">install</a><span class="qa-tag-link">2</span></li>
+                                        <li class="list-group-item"><a href="#" "="">votes</a><span class="qa-tag-link">2</span></li>
+                                    </ul>
                                 </div>
+
 
                                 <div class = "clearfix"></div>
                             </div>
 
                         </ul>
-=======
-x<div id="site-body" class="container">
-        <div class="clearfix qa-main">
-            <div class="col-sm-8 list-c">
-                <h1 class="page-title">
-                    Most popular tags
-                </h1>
-                <div class="qa-part-ranking">
-                    <div class="row qa-top-tags">
-                        <div class="col-lg-4">
-                            <ul>
-                                {foreach old('categories', $categories) as $category }
-                                    <li class="list-group-item"><a href="#">{$category['name']}</a><span class="qa-tag-link">24</span></li>
-                                {/foreach}
-                            </ul>
-                        </div>
-                        <div class="col-lg-4">
-                            <ul>
-                                <li class="list-group-item"><a href="#" >homepage</a><span class="qa-tag-link">2</span></li>
-                                <li class="list-group-item"><a href="#" >logo</a><span class="qa-tag-link">2</span></li>
-                                <li class="list-group-item"><a href="#" >questions</a><span class="qa-tag-link">2</span></li>
-                                <li class="list-group-item"><a href="#" >design</a><span class="qa-tag-link">2</span></li>
-                                <li class="list-group-item"><a href="#" >support</a><span class="qa-tag-link">2</span></li>
-                                <li class="list-group-item"><a href="#" >problems</a><span class="qa-tag-link">2</span></li>
-                                <li class="list-group-item"><a href="#" >styling</a><span class="qa-tag-link">2</span></li>
-                                <li class="list-group-item"><a href="#" >install</a><span class="qa-tag-link">1</span></li>
-                                <li class="list-group-item"><a href="#" >google adsense</a><span class="qa-tag-link">1</span></li>
-                                <li class="list-group-item"><a href="#" >bug</a><span class="qa-tag-link">1</span></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4">
-                            <ul>
-                                <li class="list-group-item"><a href="#" >css</a><span class="qa-tag-link">1</span></li>
-                                <li class="list-group-item"><a href="#" >header image</a><span class="qa-tag-link">1</span></li>
-                                <li class="list-group-item"><a href="#" >sample</a><span class="qa-tag-link">1</span></li>
-                                <li class="list-group-item"><a href="#" >login demo</a><span class="qa-tag-link">1</span></li>
-                                <li class="list-group-item"><a href="#" >moderation</a><span class="qa-tag-link">1</span></li>
-                                <li class="list-group-item"><a href="#" >gravatar</a><span class="qa-tag-link">1</span></li>
-                                <li class="list-group-item"><a href="#" >avatar</a><span class="qa-tag-link">1</span></li>
-                                <li class="list-group-item"><a href="#" >q2a 1.7</a><span class="qa-tag-link">1</span></li>
-                                <li class="list-group-item"><a href="#" >php</a><span class="qa-tag-link">1</span></li>
-                                <li class="list-group-item"><a href="#" >love</a><span class="qa-tag-link">1</span></li>
-                            </ul>
-                        </div>
->>>>>>> master
                     </div>
                 </div>
             </div>

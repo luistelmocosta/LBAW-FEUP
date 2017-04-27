@@ -771,3 +771,92 @@ BEGIN
   WHERE questioncomments.questionid= qid;
 END
 $$;
+
+
+CREATE OR REPLACE FUNCTION top_scored_users()
+    RETURNS TABLE (
+        username character varying(50),
+    --badge character varying(50),
+        count_votes_rating_received INT,
+        count_questions INT,
+        count_answers INT,
+        count_comments INT
+    ) AS $func$
+BEGIN
+    RETURN QUERY
+    SELECT users.username,
+        count_vote_rating_received_user(users.userid) as total_votes,
+        user_total_questions(users.userid) as total_questions,
+        user_total_answers(users.userid) as total_answers,
+        user_total_comments(users.userid) as total_comments
+    FROM votes
+        INNER JOIN publications
+            ON votes.publicationid = publications.publicationid
+        INNER JOIN users
+            ON publications.userid = users.userid
+    GROUP BY users.userid
+    ORDER BY total_votes
+    DESC LIMIT 5;
+END
+$func$  LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION user_total_questions(puser_id INT)
+    returns integer
+LANGUAGE plpgsql
+AS $$
+DECLARE questions_count INTEGER;
+BEGIN
+    SELECT COUNT(*) FROM questions
+        INNER JOIN publications
+            ON questions.publicationid = publications.publicationid
+    WHERE publications.userid = puser_id
+    INTO questions_count;
+
+    IF questions_count is null THEN
+        questions_count := 0;
+    END IF;
+
+    return questions_count;
+END
+$$;
+
+CREATE OR REPLACE FUNCTION user_total_answers(puser_id INT)
+    returns integer
+LANGUAGE plpgsql
+AS $$
+DECLARE questions_count INTEGER;
+BEGIN
+    SELECT COUNT(*) FROM answers
+        INNER JOIN publications
+            ON answers.publicationid = publications.publicationid
+    WHERE publications.userid = puser_id
+    INTO questions_count;
+
+    IF questions_count is null THEN
+        questions_count := 0;
+    END IF;
+
+    return questions_count;
+END
+$$;
+
+CREATE OR REPLACE FUNCTION user_total_comments(puser_id INT)
+    returns integer
+LANGUAGE plpgsql
+AS $$
+DECLARE questions_count INTEGER;
+BEGIN
+    SELECT COUNT(*) FROM comments
+        INNER JOIN publications
+            ON comments.publicationid = publications.publicationid
+    WHERE publications.userid = puser_id
+    INTO questions_count;
+
+    IF questions_count is null THEN
+        questions_count := 0;
+    END IF;
+
+    return questions_count;
+END
+$$;
+
