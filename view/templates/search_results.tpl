@@ -34,7 +34,7 @@
 
                     <div class="summary">
                         <h3>
-                            <a href="./question.php?question={$res['publicationid']}" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
+                            <a href={questionUrl($res['publicationid'])} class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
                                 {$res['title']}
                             </a>
                         </h3>
