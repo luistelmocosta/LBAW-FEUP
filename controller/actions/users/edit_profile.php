@@ -32,10 +32,7 @@ $update_user = [
 ];
 
 try {
-    $conn->beginTransaction();
     update_user_profile($update_user);
-
-    $conn->commit();
 
     redirect('controller/pages/users/profile.php');
 

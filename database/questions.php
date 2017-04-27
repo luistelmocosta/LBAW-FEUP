@@ -209,3 +209,11 @@ function question_voted_by_me($question)
     return $question['userid'] == auth_user('userid');
 }
 
+function search_questions($pstext){
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM questions WHERE questions.publicationid = (SELECT questionid FROM search_questions(:pstext) WHERE questions.publicationid = questionid)");
+    $stmt->execute(['pstext' => $pstext]);
+    $rows = $stmt->fetchAll();
+
+    return $rows;
+}

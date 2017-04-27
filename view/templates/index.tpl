@@ -9,16 +9,16 @@
                     <h1>AskMe</h1>
                     <br>
 
-                    <div id="custom-search-input">
-                        <div class="input-group col-lg-12">
-                            <input type="text" class="form-control input-lg" placeholder="Search for a question..."/>
-                            <span class="input-group-btn">
-                                <a class="btn btn-info" href="{$BASE_URL}controller/pages/questions/search_results.php">
-                                    <i class="glyphicon glyphicon-search"></i>
-                                </a>
-                            </span>
+                    <form name="search" method="post" action= "{$BASE_URL}controller/actions/questions/search_results.php">
+                        <div id="custom-search-input">
+                            <div class="input-group col-lg-12">
+                                <input type="text" name="psearch" class="form-control input-lg" placeholder="Search for a question..."/>
+                                <span class="input-group-btn">
+                                    <input value="search" title="" type="submit" class="qa-form-wide-button qa-form-wide-button-save">
+                                </span>
+                            </div>
                         </div>
-                    </div>
+                    </form>
 
                     <br><br>
 
@@ -63,7 +63,7 @@
                         {include file="recent_questions.tpl"}
                     {/foreach}
 
-                   <!--<div class = "load-more col-sm-12 space-top text-center"
+                    <!--<div class = "load-more col-sm-12 space-top text-center"
                          data-next-page = "1"
                          data-url = "{url('controller/api/questions/load_more_questions.php')}"
                          data-tab = "tabs-1">
@@ -98,7 +98,7 @@
                             {foreach $top_scored_users as $user}
                                 {include file="sidebar_partials/top_scored_users.tpl"}
 
-                                {/foreach}
+                            {/foreach}
                         </ul>
                     </div>
                     <br>

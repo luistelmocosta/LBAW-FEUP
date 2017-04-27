@@ -1,9 +1,0 @@
-{
-  "require-dev": {
-    "heroku/heroku-buildpack-php": "*"
-  },
-
-  "require": {
-    "smarty/smarty": "~3.1"
-  }
-}

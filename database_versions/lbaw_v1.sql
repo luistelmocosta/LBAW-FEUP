@@ -286,9 +286,6 @@ $$;
 
 ---- Function that returns important info about one user puser_id
 
-
-
-
 CREATE OR REPLACE FUNCTION user_profile(puser_id int)
     RETURNS TABLE (
         fullname character varying(200),
@@ -377,10 +374,6 @@ $func$  LANGUAGE plpgsql;
 CREATE TRIGGER own_content_vote_trigger AFTER INSERT OR UPDATE ON votes
 FOR EACH ROW EXECUTE PROCEDURE own_content_vote();
 
-
-
---------------------------------------------------------------------
-
 ---- This function adds a user to the ban table when he exceeds the warning limit (3)
 
 DROP TRIGGER IF EXISTS auto_ban_on_warning_limit ON public.warnings;
@@ -438,13 +431,13 @@ CREATE OR REPLACE FUNCTION search_questions(psearch text)
     RETURNS TABLE (questionid INTEGER) AS $func$
 BEGIN
     return QUERY
-    SELECT DISTINCT publications.publicationid
-    FROM questions, publications
-    WHERE to_tsvector(coalesce(questions.title,'') || ' ' || coalesce(publications.body,'')) @@ to_tsquery(psearch)
-          OR questions.publicationid IN (
-        SELECT DISTINCT(answers.questionid) FROM answers INNER JOIN publications ON answers.publicationid = publications.publicationid
-        WHERE to_tsvector(coalesce(publications.body)) @@ to_tsquery(psearch)
-    )
+    SELECT DISTINCT (questions.publicationid)
+    FROM questions
+    WHERE to_tsvector(coalesce(questions.title, '')) @@ to_tsquery(psearch)
+          OR
+          publicationid IN (
+              SELECT DISTINCT(publications.publicationid) FROM publications WHERE to_tsvector(coalesce(publications.body, '')) @@ to_tsquery(psearch)
+          )
     ;
 END
 $func$  LANGUAGE plpgsql;

@@ -1,46 +1,60 @@
-<title>Search results</title>
+<title>Search results for "{$pstext}"</title>
 <div id="site-body" class="container">
     <div class="clearfix qa-main">
         <div class="col-sm-8 list-c">
             <h1 class="page-title">
-                Search results for <b>"C++"</b>
+                Search results for "<b>{$pstext}</b>"
             </h1>
-
         </div>
-        <div class="col-sm-4 side-c">
-            <div class="qa-sidepanel">
-                <div id="right-position">
-                    <div class="widget cs_site_status">											<h3 class="widget-title">Site Status</h3>
-                        <div class="ra-site-status-widget">
-                            <div class="site-status-inner clearfix"><div class="bar-float"><div class="sparkline" data-type="bar" data-bar-color="#E45840" data-bar-width="30" data-height="80"><canvas width="158" height="80" style="display: inline-block; width: 158px; height: 80px; vertical-align: top;"></canvas></div>
-                                    <ul class="list-inline text-muted axis">
-                                        <li style="width: 30px; margin-right: 2px;">Que</li><li style="width: 30px; margin-right: 2px;">Ans</li><li style="width: 30px; margin-right: 2px;">Com</li><li style="width: 30px; margin-right: 2px;">UA</li><li style="width: 30px; margin-right: 2px;">US</li>
-                                    </ul></div>
-                                <div class="acti-indicators">
-                                    <ul>
-                                        <li><i class="fa fa-circle text-info" style="color:#233445"></i> Questions <span>41</span></li>
-                                        <li><i class="fa fa-circle text-info" style="color:#3fcf7f"></i> Answers <span>242</span></li>
-                                        <li><i class="fa fa-circle text-info" style="color:#FF5F5F"></i> Comments <span>14</span></li>
-                                        <li><i class="fa fa-circle text-info" style="color:#13C4A5"></i> Unanswered <span>9</span></li>
-                                        <li><i class="fa fa-circle text-info" style="color:#F4C414"></i> Unselected <span>39</span></li>
-                                    </ul>
-                                </div></div>
-                        </div>
+        <br>
+        <br>
+        <br>
+
+        {foreach $search_res as $res}
+
+            <div class="question-summary narrow">
+
+                <div class="col-md-12">
+
+                    <div class="votes" style="float: right">
+                        <div class="mini-counts"><span title="votes">
+                    {if $question['votes_count']}
+                        {$question['votes_count']}
+                    {else}
+                        0
+                    {/if}
+                    </span></div>
+                        <div>votes</div>
                     </div>
-                    <div class="widget cs_tags">											<h3 class="widget-title">Tags<a href="./tags">View all</a></h3>
-                        <div class="ra-tags-widget clearfix">
-                            <a href="./tag/cleanstrap" class="widget-tag">cleanstrap<span>23</span></a>
-                            <a href="./tag/cleanstrap+theme" class="widget-tag">cleanstrap theme<span>14</span></a>
-                            <a href="./tag/question2answer+theme" class="widget-tag">question2answer theme<span>10</span></a>
-                            <a href="./tag/q2a+theme" class="widget-tag">q2a theme<span>9</span></a>
-                            <a href="./tag/cleanstrap+options" class="widget-tag">cleanstrap options<span>5</span></a>
-                            <a href="./tag/cleanstrap+widgets" class="widget-tag">cleanstrap widgets<span>4</span></a>
-                            <a href="./tag/development" class="widget-tag">development<span>3</span></a>
-                            <a href="./tag/widgets" class="widget-tag">widgets<span>3</span></a>
-                            <a href="./tag/install" class="widget-tag">install<span>2</span></a>
-                            <a href="./tag/votes" class="widget-tag">votes<span>2</span></a>
-                        </div>
+
+                    <div class="views" style="float: right">
+                        <div class="mini-counts"><span title="views">{$res['views_counter']}</span></div>
+                        <div>views</div>
+                    </div>
+
+                    <div class="summary">
+                        <h3>
+                            <a href="./question.php?question={$res['publicationid']}" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
+                                {$res['title']}
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class = "statistics col-md-12 text-right" style="padding-top: 8px; padding-right: 50px">
+                        <span>
+                            <i class = "glyphicon glyphicon-time"></i>
+                            <span class="question-updated-at">10 min ago</span>
+                        </span>
+                                        <span>
+                            <i class = "glyphicon glyphicon-comment"></i>
+                            <span class="question-answers">1</span>
+                        </span>
                     </div>
                 </div>
+
             </div>
-        </div>
+
+        {/foreach}
+
+    </div>
+</div>

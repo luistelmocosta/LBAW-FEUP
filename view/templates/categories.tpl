@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div id="site-body" class="container">
     <div class="clearfix qa-main">
         <div class="col-sm-8 list-c">
