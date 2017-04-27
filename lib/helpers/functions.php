@@ -43,7 +43,6 @@ function questionUrl($publicationid)
 }
 
 function editQuestionUrl($questionid)
-
 {
     return url('controller/pages/questions/edit_question', ['question' => $questionid]);
 }
@@ -65,7 +64,7 @@ function answerUrl($answer_id)
 
 function profileUrl($user_id)
 {
-    return url('pages/users/profile', ['user' => $user_id]);
+    return url('controller/pages/users/profile', ['user' => $user_id]);
 }
 
 function old($name, $default = '')

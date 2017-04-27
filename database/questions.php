@@ -1,6 +1,5 @@
 <?php
 
-
 function create_question($question) {
 
     global $conn;
@@ -8,18 +7,7 @@ function create_question($question) {
 ");
     $query_publications->execute($question);
 
-
     return (int)$conn->lastInsertId();
-
-
-
-    /*$query_questions=$conn->prepare("INSERT INTO questions(title, categoryid) VALUES (:title, 1);
-");
-
-    $query_questions->execute($query_questions);*/
-
-
-
 }
 
 function update_question($question) {
@@ -213,6 +201,15 @@ function search_questions($pstext){
     global $conn;
     $stmt = $conn->prepare("SELECT * FROM questions WHERE questions.publicationid = (SELECT questionid FROM search_questions(:pstext) WHERE questions.publicationid = questionid)");
     $stmt->execute(['pstext' => $pstext]);
+    $rows = $stmt->fetchAll();
+
+    return $rows;
+}
+
+function get_questions_w_body(){
+    global $conn;
+    $stmt = $conn->prepare("select questions.*, publications.body from questions, publications where questions.publicationid = publications.publicationid");
+    $stmt->execute();
     $rows = $stmt->fetchAll();
 
     return $rows;
