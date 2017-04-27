@@ -433,10 +433,10 @@ BEGIN
     return QUERY
     SELECT DISTINCT (questions.publicationid)
     FROM questions
-    WHERE to_tsvector(coalesce(questions.title, '')) @@ to_tsquery(psearch)
+    WHERE to_tsvector(coalesce(questions.title, '')) @@ plainto_tsquery(psearch)
           OR
           publicationid IN (
-              SELECT DISTINCT(publications.publicationid) FROM publications WHERE to_tsvector(coalesce(publications.body, '')) @@ to_tsquery(psearch)
+              SELECT DISTINCT(publications.publicationid) FROM publications WHERE to_tsvector(coalesce(publications.body, '')) @@ plainto_tsquery(psearch)
           )
     ;
 END
