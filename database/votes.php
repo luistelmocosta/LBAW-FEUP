@@ -17,7 +17,7 @@ function publication_is_voted($publicationid) {
         return 0;
     }
     if ($votes['values']) {
-        return 1;
+        return $votes['values'];
     }
     return -1;
 }

@@ -50,41 +50,42 @@
         <div class="home-left-inner">
 
 
-            <div class="col-md-8"">
+            <div class="col-md-8">
 
-            <div id="tabs">
-                <ul>
-                    <li><a href="#tabs-1">Recent Questions</a></li>
-                    <li><a href="#tabs-2">Unanswered Questions</a></li>
-                    <li><a href="#tabs-3">Top Scored Questions</a></li>
-                </ul>
-                <div id="tabs-1">
-                    {foreach $recent_questions as $question}
-                        {include file="recent_questions.tpl"}
-                    {/foreach}
+                <div id="tabs" class="tab-content">
+                    <ul>
+                        <li><a href="#recent_questions">Recent Questions</a></li>
+                        <li><a href="#unanswered_questions">Unanswered Questions</a></li>
+                        <li><a href="#top">Top Scored Questions</a></li>
+                    </ul>
+                    <div id="recent_questions">
+                        {foreach $recent_questions as $question}
+                            {include file="recent_questions.tpl"}
+                        {/foreach}
 
-                    <!--<div class = "load-more col-sm-12 space-top text-center"
-                         data-next-page = "1"
-                         data-url = "{url('controller/api/questions/load_more_questions.php')}"
-                         data-tab = "tabs-1">
-                        <button type = "button" class = "btn btn-lg btn-primary col-sm-6 col-sm-offset-3 col-xs-12">
-                            Load More...
-                        </button>
-                    </div>-->
+                        <div class = "load-more col-sm-12 space-top text-center"
+                             data-next-page = "1"
+                             data-url = "{url('controller/api/questions/load_more_questions')}"
+                             data-tab = "recent_questions">
+                            <button type = "button" class = "btn btn-lg btn-primary col-sm-6 col-sm-offset-3 col-xs-12">
+                                Load More...
+                            </button>
+                        </div>
+
+                    </div>
+                    <div id="unanswered_questions">
+                        {foreach $unanswered_questions as $question}
+                            {include file="unanswered_questions.tpl"}
+                        {/foreach}
+                    </div>
+                    <div id="top">
+                        {foreach $top_scored_questions as $question}
+                            {include file="top_scored_questions.tpl"}
+                        {/foreach}
+
+                    </div>
 
                 </div>
-                <div id="tabs-2">
-                    {foreach $unanswered_questions as $question}
-                        {include file="unanswered_questions.tpl"}
-                    {/foreach}
-                </div>
-                <div id="tabs-3">
-                    {foreach $top_scored_questions as $question}
-                        {include file="top_scored_questions.tpl"}
-                    {/foreach}
-
-                </div>
-
             </div>
 
         </div>

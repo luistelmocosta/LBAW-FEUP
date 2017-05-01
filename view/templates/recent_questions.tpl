@@ -35,15 +35,15 @@
         </div>
 
 
-        <div class = "statistics col-sm-12 text-right" style="padding-top: 8px; padding-right: 70px">
-        <span>
-            <i class = "glyphicon glyphicon-time"></i>
-            <span class="question-updated-at">10 min ago</span>
-        </span>
+        <div class = "statistics col-sm-12 text-right" style="padding-top: 8px">
             <span>
-            <i class = "glyphicon glyphicon-comment"></i>
-            <span class="question-answers">1</span>
-        </span>
+                <i class = "glyphicon glyphicon-time"></i>
+                <span class="question-updated-at">{$question['creation_date']}</span>
+            </span>
+            <span>
+                <i class = "glyphicon glyphicon-comment"></i>
+                <span class="question-answers">{$question['answers_count']}</span>
+            </span>
         </div>
     </div>
 
