@@ -58,20 +58,18 @@
                         <li><a href="#unanswered_questions">Unanswered Questions</a></li>
                         <li><a href="#top">Top Scored Questions</a></li>
                     </ul>
-                    <div id="recent_questions">
+                    <div id="recent_questions" class="question-col">
                         {foreach $recent_questions as $question}
                             {include file="recent_questions.tpl"}
                         {/foreach}
-
-                        <div class = "load-more col-sm-12 space-top text-center"
-                             data-next-page = "1"
-                             data-url = "{url('controller/api/questions/load_more_questions')}"
-                             data-tab = "recent_questions">
-                            <button type = "button" class = "btn btn-lg btn-primary col-sm-6 col-sm-offset-3 col-xs-12">
-                                Load More...
-                            </button>
-                        </div>
-
+                    </div>
+                    <div class = "load-more col-sm-12 space-top text-center"
+                         data-next-page = "1"
+                         data-url = "{url('controller/api/questions/load_more_questions')}"
+                         data-tab = "recent_questions">
+                        <button type = "button" class = "btn btn-lg btn-primary col-sm-6 col-sm-offset-3 col-xs-12">
+                            Load More...
+                        </button>
                     </div>
                     <div id="unanswered_questions">
                         {foreach $unanswered_questions as $question}

@@ -1,9 +1,10 @@
 <div class="question-summary narrow">
 
-    <div class="col-md-12">
+    <div class="question-info col-md-12">
 
         <div class="votes">
-            <div class="mini-counts"><span title="7 votes">
+            <div class="mini-counts">
+                <span title="{$question['votes_count']} votes">
                     {if $question['votes_count']}
                         {$question['votes_count']}
                     {else}
@@ -18,18 +19,20 @@
             class="status answer-selected"
         {/if}
                 title="one of the answers was accepted as the correct answer">
-            <div class="mini-counts"><span title="1 answer">{$question['answers_count']}</span></div>
+            <div class="mini-counts"><span title="{$question['answers_count']} answer">{$question['answers_count']}</span></div>
             <div>answer</div>
         </div>
         <div class="views">
-            <div class="mini-counts"><span title="140 views">{$question['views_counter']}</span></div>
+            <div class="mini-counts"><span title="{$question['views_counter']} views">{$question['views_counter']}</span></div>
             <div>views</div>
         </div>
 
-        <div class="summary">
+        <div class="summary question-title">
             <h3>
-                <a href="{questionUrl($question['publicationid'])}" class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                    {$question['title']}
+                <a href="{questionUrl($question['publicationid'])}"
+                   data-base-question-url = "{questionUrl('')}
+                style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
+                {$question['title']}
                 </a>
             </h3>
         </div>
