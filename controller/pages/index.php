@@ -10,11 +10,18 @@ if($_SESSION['logged_in']) {
     $smarty->display('common/header.tpl');
 }
 
+$tabs = [
+    ['recent', 'Recent Questions'],
+    ['unanswered', 'Unanswered Questions'],
+    ['top', 'Top Scored Questions']
+];
+
 $recent_questions = recent_questions();
 $unanswered_questions = unanswered_questions();
 $top_scored_questions = top_scored_questions();
 $top_scored_users = top_scored_users();
 
+$smarty->assign('tabs', $tabs);
 $smarty->assign('top_scored_users', $top_scored_users);
 $smarty->assign('recent_questions', $recent_questions);
 $smarty->assign('unanswered_questions', $unanswered_questions);

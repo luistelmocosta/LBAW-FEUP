@@ -332,19 +332,19 @@ BEGIN
     SELECT publications.userid FROM publications INNER JOIN votes ON publications.publicationid = votes.publicationid
     WHERE publications.publicationid = NEW.publicationid INTO target_user;
     IF count_vote_rating_received_user(target_user) = 1 THEN
-        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 1);
+        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 1) ON CONFLICT DO NOTHING;
     END IF;
     IF count_vote_rating_received_user(target_user) = 3 THEN
-        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 2);
+        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 2) ON CONFLICT DO NOTHING;;
     END IF;
     IF count_vote_rating_received_user(target_user) = 15 THEN
-        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 3);
+        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 3) ON CONFLICT DO NOTHING;
     END IF;
     IF count_vote_rating_received_user(target_user) = 30 THEN
-        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 4);
+        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 4) ON CONFLICT DO NOTHING;
     END IF;
     IF count_vote_rating_received_user(target_user) = 50 THEN
-        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 5);
+        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 5) ON CONFLICT DO NOTHING;
     END IF;
     RETURN NULL;
 END

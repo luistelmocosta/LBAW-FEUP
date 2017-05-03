@@ -13,6 +13,11 @@ $_SESSION['pstext'] = $pstext;
 
 try {
 
+
+
+    $search_trimmed = preg_replace('/\s+/', '', $pstext);
+
+
     $search_res = search_questions($pstext);
 
     $_SESSION['search_res'] = $search_res;

@@ -20,7 +20,7 @@ if (!isset($_GET['value']) || !in_array($_GET['value'], $values)) {
 $publicationid = (int)$_GET['id'];
 $values = $_GET['value'];
 
-$result = publication_is_voted($publicationid);
+$result = publication_is_voted($publicationid); //is publication voted by me?
 $output = $values;
 
 // no vote
@@ -31,7 +31,7 @@ if ($result == 0) {
 if ($result == 1) {
     if($values == 1) {
         delete_vote($publicationid, $values);
-        $output = 0;
+        $output = 1;
     }
     if($values == -1) {
         update_vote($publicationid, $values);

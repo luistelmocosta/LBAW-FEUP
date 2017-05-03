@@ -37,6 +37,15 @@ function get_categoryID_by_name($category) {
     return ($query->fetch()['categoryid']);
 }
 
+function get_publication_rating($pubid) {
+    global $conn;
+    $query=$conn->prepare("SELECT * FROM get_publication_rating(:pubid)");
+    $query->execute(array($pubid));
+
+
+    return $query->fetch();
+}
+
 function get_tags_from_question($questionid) {
     global $conn;
 
