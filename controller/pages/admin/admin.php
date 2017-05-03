@@ -9,7 +9,7 @@ PagePermissions::create('auth')->check();
 $userid = auth_user('userid');
 $user = userProfile($userid)[0];
 
-$users = getUsers();
+$users = getUsersPag();
 $questions = recent_questions();
 
 $smarty->assign('user', $user);

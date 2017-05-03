@@ -209,4 +209,4 @@
     </div>
 </div>
 
-{HTML::script('askme/vote.js')}
+{HTML::script('vote.js')}

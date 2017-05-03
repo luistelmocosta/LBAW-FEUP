@@ -1,6 +1,6 @@
 <!-- Set your background image for this header on the line below. -->
 <title>AskMe</title>
-<header class="intro-header" style="background-image: url('../../images/bg2.png')">
+<header class="intro-header" style="background-image: url('../../images/background.png')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -48,7 +48,6 @@
 <div id="site-body" class="container">
     <div class="clearfix qa-main">
         <div class="home-left-inner">
-
 
             <div class="col-md-8"">
 
@@ -105,7 +104,7 @@
                     <br>
                     <div class="widget status" >
                         <h3 class="widget-title">Site Status</h3>
-                        <canvas id="siteStatus" width="350" height="300" style="padding-left: 10px">
+                        <canvas id="siteStats" width="350" height="300" style="padding-left: 10px">
 
                         </canvas>
                     </div>
@@ -123,6 +122,6 @@
     </div>
 </div>
 
-{HTML::script('askme/index.js')}
+{HTML::script('index.js')}
 
 

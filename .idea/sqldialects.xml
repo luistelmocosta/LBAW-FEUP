@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/database_versions/functions.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/database_versions/functions/getusernamefromquestion.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/database_versions/functions/search.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/database_versions/lbaw.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/database_versions/lbaw_v1.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/database_versions/triggers/autoban.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/database_versions/triggers/checkpublication.sql" dialect="PostgreSQL" />
