@@ -86,8 +86,8 @@
                     <th>Ban</th>
 
                     {foreach $users as $user}
-                        <tr id={$user['userid']}>
-                            <td>{$user['username']}</td>
+                        <tr id="userid">
+                            <td id="xixa">{$user['username']}</td>
                             <td>{$user['roleid']}</td>
                             <td>{$user['email']}</td>
 
@@ -153,7 +153,7 @@
                     {foreach $questions as $question}
                         <tr id={$question['publicationid']}>
                             <td>{$question['title']}</td>
-                            <td>Author</td>
+                            <td>{$question['username']}</td>
 
                             <td>
                                 <a <span class="fa fa-info" href={questionUrl($question['publicationid'])}></span></a>
@@ -161,7 +161,6 @@
                             <td>
                                 <a <button class="fa fa-ban"></button></a>
                             </td>
-
                         </tr>
                     {/foreach}
 
@@ -185,10 +184,11 @@
 
         <div class="panel panel-default">
             <h3 style="padding-left: 10px">Status</h3>
-            <canvas id="siteStatus" width="350" height="300" style="padding-left: 10px">
+            <canvas id="siteStats" width="350" height="300" style="padding-left: 10px; display: inline-block">
+            </canvas>
+            <canvas id="userStats" width="350" height="300" style="padding-left: 10px; display: inline-block">
             </canvas>
         </div>
-
 
     </div>
 </div>

@@ -26,7 +26,7 @@
 
     <!-- JS -->
     <script type="text/javascript" src="{$BASE_URL}javascript/vendor/bootstrap.js"></script>
-    <script type="text/javascript" src= "{$BASE_URL}javascript/Chart.js"></script>
+    <script type="text/javascript" src="{$BASE_URL}javascript/vendor/Chart.js"></script>
     <script type="text/javascript" src="{$BASE_URL}javascript/main.js"></script>
     <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 
@@ -42,7 +42,7 @@
             </button>
             <div class="site-logo">
                 <a class="navbar-brand" title="AskMe" href="{$BASE_URL}index.php">
-                    <img class="navbar-site-logo" src="{$BASE_URL}images/logo3.png">
+                    <img class="navbar-site-logo" src="{$BASE_URL}images/logo.png">
                 </a>
             </div>
         </div>

@@ -69,7 +69,7 @@
                                 Full name:
                             </td>
                             <td class="qa-form-wide-data">
-                                <input name="fullname" type="text" value="" class="qa-form-wide-text">
+                                <input name="fullname" type="text" value="{$user['fullname']}" class="qa-form-wide-text">
                             </td>
                         </tr>
                         <tr>
@@ -77,7 +77,7 @@
                                 Email:
                             </td>
                             <td class="qa-form-wide-data">
-                                <input name="email" type="text" value="" class="qa-form-wide-text">
+                                <input name="email" type="text" value="{$user['email']}" class="qa-form-wide-text">
                             </td>
                         </tr>
                         <tr>
@@ -85,7 +85,7 @@
                                 Location:
                             </td>
                             <td class="qa-form-wide-data">
-                                <input name="location" type="text" value="" class="qa-form-wide-text">
+                                <input name="location" type="text" value="{$user['location']}" class="qa-form-wide-text">
                             </td>
                         </tr>
                         <tr>
@@ -103,7 +103,7 @@
                                 About:
                             </td>
                             <td class="qa-form-wide-data">
-                                <textarea name="about" rows="8" cols="40" class="qa-form-wide-text"></textarea>
+                                <textarea name="about" rows="8" cols="40" class="qa-form-wide-text">{$user['about']}</textarea>
                             </td>
                         </tr>
                         <tr>
