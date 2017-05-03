@@ -1,6 +1,6 @@
 <!-- Set your background image for this header on the line below. -->
 <title>AskMe</title>
-<header class="intro-header" style="background-image: url('../../images/background.png')">
+<header class="intro-header" style="background-image: url('../../images/bg2.png')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -49,7 +49,6 @@
     <div class="clearfix qa-main">
         <div class="home-left-inner">
 
-<<<<<<< HEAD
 
             <div class="col-md-8">
 
@@ -64,30 +63,6 @@
                             {include file="recent_questions.tpl"}
                         {/foreach}
                     </div>
-                    <div class = "load-more col-sm-12 space-top text-center"
-=======
-            <div class="col-md-8"">
-
-            <div id="tabs">
-                <ul>
-                    <li><a href="#tabs-1">Recent Questions</a></li>
-                    <li><a href="#tabs-2">Unanswered Questions</a></li>
-                    <li><a href="#tabs-3">Top Scored Questions</a></li>
-                </ul>
-                <div id="tabs-1">
-                    {foreach $recent_questions as $question}
-                        {include file="recent_questions.tpl"}
-                    {/foreach}
-
-                    <!--<div class = "load-more col-sm-12 space-top text-center"
->>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
-                         data-next-page = "1"
-                         data-url = "{url('controller/api/questions/load_more_questions')}"
-                         data-tab = "recent_questions">
-                        <button type = "button" class = "btn btn-lg btn-primary col-sm-6 col-sm-offset-3 col-xs-12">
-                            Load More...
-                        </button>
-                    </div>
                     <div id="unanswered_questions">
                         {foreach $unanswered_questions as $question}
                             {include file="unanswered_questions.tpl"}
@@ -98,6 +73,14 @@
                             {include file="top_scored_questions.tpl"}
                         {/foreach}
 
+                    </div>
+                    <div class = "load-more col-sm-12 space-top text-center"
+                         data-next-page = "1"
+                         data-url = "{url('controller/api/questions/load_more_questions')}"
+                         data-tab = "recent_questions">
+                        <button type = "button" class = "btn btn-lg btn-primary col-sm-6 col-sm-offset-3 col-xs-12">
+                            Load More...
+                        </button>
                     </div>
 
                 </div>
@@ -121,7 +104,7 @@
                     <br>
                     <div class="widget status" >
                         <h3 class="widget-title">Site Status</h3>
-                        <canvas id="siteStats" width="350" height="300" style="padding-left: 10px">
+                        <canvas id="siteStatus" width="350" height="300" style="padding-left: 10px">
 
                         </canvas>
                     </div>
@@ -140,5 +123,3 @@
 </div>
 
 {HTML::script('index.js')}
-
-
