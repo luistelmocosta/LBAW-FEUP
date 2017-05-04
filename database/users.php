@@ -1,9 +1,15 @@
 <?php
 
-function getUsersPag($page = 0) {
+function getNumUsers(){
     global $conn;
-    $limit = 4;
-    $skip = $limit * $page;
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM users");
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
+function getUsersPag($skip, $limit) {
+    global $conn;
     $stmt = $conn->prepare("SELECT * FROM get_users_pag(:skip, :limit)");
     $stmt->execute(['limit' => $limit, 'skip' => $skip]);
     $rows = $stmt->fetchAll();

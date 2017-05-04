@@ -1,5 +1,3 @@
-
-
 $(".textarea, .textarea-ok").hide();
 
 $("body").on("click", ".showarea", function(){

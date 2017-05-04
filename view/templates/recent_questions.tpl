@@ -30,7 +30,7 @@
         <div class="summary question-title">
             <h3>
                 <a href="{questionUrl($question['publicationid'])}"
-                   data-base-question-url = "{questionUrl('')}
+                   data-base-question-url = "{questionUrl('')}"
                 style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
                 {$question['title']}
                 </a>

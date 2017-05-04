@@ -1,6 +1,6 @@
 <!-- Set your background image for this header on the line below. -->
 <title>AskMe</title>
-<header class="intro-header" style="background-image: url('../../images/bg2.png')">
+<header class="intro-header" style="background-image: url('../../images/background.png')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -58,11 +58,16 @@
                         <li><a href="#unanswered_questions">Unanswered Questions</a></li>
                         <li><a href="#top">Top Scored Questions</a></li>
                     </ul>
+                    {if empty($recent_questions)}
+                        <div class = "col-sm-12" style = "text-align: center"><strong>No questions to load!</strong></div>
+                    {/if}
+                    {if !empty($recent_questions)}
                     <div id="recent_questions" class="question-col">
                         {foreach $recent_questions as $question}
                             {include file="recent_questions.tpl"}
                         {/foreach}
                     </div>
+                    {/if}
                     <div id="unanswered_questions">
                         {foreach $unanswered_questions as $question}
                             {include file="unanswered_questions.tpl"}
@@ -74,15 +79,16 @@
                         {/foreach}
 
                     </div>
-                    <div class = "load-more col-sm-12 space-top text-center"
+                    <div class="clearfix"</div>
+
+                    <div class = "load-more"
                          data-next-page = "1"
                          data-url = "{url('controller/api/questions/load_more_questions')}"
                          data-tab = "recent_questions">
-                        <button type = "button" class = "btn btn-lg btn-primary col-sm-6 col-sm-offset-3 col-xs-12">
+                        <a id="loadMore">
                             Load More...
-                        </button>
+                        </a>
                     </div>
-
                 </div>
             </div>
 
@@ -111,15 +117,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-12" style="padding-top: 10px">
-            <h3 class="bottom-notice" style="color: #185a66;">Looking for more? Browse the
-                <a href="{$BASE_URL}controller/pages/questions/questions.php">complete list of questions</a>, or
-                <a href="#">popular tags</a>. Help us answer
-                <a href="#">unanswered questions</a>.
-            </h3>
-        </div>
-
     </div>
 </div>
 
 {HTML::script('index.js')}
+
+

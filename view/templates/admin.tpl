@@ -87,7 +87,7 @@
 
                     {foreach $users as $user}
                         <tr id="userid">
-                            <td id="xixa">{$user['username']}</td>
+                            <td id="usr">{$user['username']}</td>
                             <td>{$user['roleid']}</td>
                             <td>{$user['email']}</td>
 
@@ -111,16 +111,28 @@
 
                 <ul class="pagination clearfix">
                     <li class="qa-page-links-item">
+                        <a href="?page=1" class="qa-page-next">«« first</a>
+                    </li>
+                    <li class="qa-page-links-item">
+                        <a href="?page='"{($page-1)}'" class="qa-page-link">« back</a>
+                    </li>
+                    <li class="qa-page-links-item">
                         <span class="qa-page-selected">1</span>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="" class="qa-page-link">2</a>
+                        <a href="?page=2" class="qa-page-link">2</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="" class="qa-page-next">next »</a>
+                        <a href="?page=3" class="qa-page-link">3</a>
+                    </li>
+                    <li class="qa-page-links-item">
+                        <a href="?page={($page+1)}" class="qa-page-next">next »</a>
+                    </li>
+                    <li class="qa-page-links-item">
+
+                        <a href="?page='"{($pages)}'" class="qa-page-link">last »»</a>
                     </li>
                 </ul>
-
 
             </div>
         </div>
@@ -169,13 +181,26 @@
 
                 <ul class="pagination clearfix">
                     <li class="qa-page-links-item">
+                        <a href="?page=1" class="qa-page-next">«« first</a>
+                    </li>
+                    <li class="qa-page-links-item">
+                        <a href="?page='"{($page-1)}'" class="qa-page-link">« back</a>
+                    </li>
+                    <li class="qa-page-links-item">
                         <span class="qa-page-selected">1</span>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="" class="qa-page-link">2</a>
+                        <a href="?page=2" class="qa-page-link">2</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="" class="qa-page-next">next »</a>
+                        <a href="?page=3" class="qa-page-link">3</a>
+                    </li>
+                    <li class="qa-page-links-item">
+                        <a href="?page={($page+1)}" class="qa-page-next">next »</a>
+                    </li>
+                    <li class="qa-page-links-item">
+
+                        <a href="?page='"{($pages)}'" class="qa-page-link">last »»</a>
                     </li>
                 </ul>
             </div>
@@ -184,11 +209,13 @@
 
         <div class="panel panel-default">
             <h3 style="padding-left: 10px">Status</h3>
-            <canvas id="siteStats" width="350" height="300" style="padding-left: 10px; display: inline-block">
+            <canvas id="siteStatus" width="350" height="300" style="padding-left: 10px; display: inline-block">
             </canvas>
-            <canvas id="userStats" width="350" height="300" style="padding-left: 10px; display: inline-block">
+            <canvas id="usersStats" width="350" height="300" style="padding-left: 10px; display: inline-block">
             </canvas>
         </div>
 
     </div>
 </div>
+
+{HTML::script('admin.js')}

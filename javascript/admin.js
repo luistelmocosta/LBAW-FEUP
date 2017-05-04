@@ -1,18 +1,10 @@
-$(document).ready(function() {
-    siteStats();
+$(document).ready(function () {
+    siteStatus();
     usersStats();
-
-    $.get('/controller/pages/admin/admin.php')
-        .done(function(data) {
-            console.log(data);
-        })
-        .fail(function(data) {
-            console.log('Error: ' + data);
-        });
 });
 
-function siteStats() {
-    var ctx = document.getElementById("siteStats");
+function siteStatus() {
+    var ctx = document.getElementById("siteStatus");
 
     var myChart = new Chart(ctx, {
         type: 'bar',
@@ -62,7 +54,7 @@ function siteStats() {
 }
 
 function usersStats() {
-    var ctx = document.getElementById("userStats");
+    var ctx = document.getElementById("usersStats");
 
     var myChart = new Chart(ctx, {
         type: 'bar',
@@ -87,15 +79,15 @@ function usersStats() {
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero:true
+                        beginAtZero: true
                     },
                     gridLines: {
-                        display:false
+                        display: false
                     }
                 }],
                 xAxes: [{
                     gridLines: {
-                        display:false
+                        display: false
                     }
                 }]
 
@@ -106,5 +98,4 @@ function usersStats() {
             responsive: false
         }
     });
-
 }

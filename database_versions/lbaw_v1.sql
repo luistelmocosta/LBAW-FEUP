@@ -853,24 +853,3 @@ BEGIN
 END
 $$;
 
-CREATE OR REPLACE FUNCTION get_users_pag(skip INTEGER, limitNumber INTEGER)
-    RETURNS TABLE (
-        userid INTEGER,
-        roleid INTEGER,
-        username VARCHAR(25),
-        email VARCHAR(25)
-    )
-AS $func$
-BEGIN
-    RETURN QUERY
-    SELECT users.userid,
-        users.roleid,
-        users.username,
-        users.email
-    FROM users
-    ORDER BY userid ASC
-    LIMIT limitNumber
-    OFFSET skip;
-END
-$func$  LANGUAGE plpgsql;
-

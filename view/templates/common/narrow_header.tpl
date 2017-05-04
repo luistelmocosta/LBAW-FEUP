@@ -27,10 +27,10 @@
     <!-- JS -->
     <script type="text/javascript" src="{$BASE_URL}javascript/vendor/bootstrap.js"></script>
     <script type="text/javascript" src="{$BASE_URL}javascript/vendor/Chart.js"></script>
-    <script type="text/javascript" src="{$BASE_URL}javascript/main.js"></script>
     <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 
 </head>
+
 <body>
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top" style="background: #2d2727;">
     <div class="container-fluid">

@@ -27,7 +27,6 @@
     <!-- JS -->
     <script type="text/javascript" src="{$BASE_URL}javascript/vendor/bootstrap.js"></script>
     <script type="text/javascript" src="{$BASE_URL}javascript/vendor/Chart.js"></script>
-    <script type="text/javascript" src="{$BASE_URL}javascript/main.js"></script>
     <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 
 </head>
