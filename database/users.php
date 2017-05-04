@@ -8,6 +8,18 @@ function getNumUsers(){
     return $stmt->fetchAll();
 }
 
+function users_pag($page = 0)
+{
+    global $conn;
+    $limit = 4;
+    $skip = $limit * $page;
+    $stmt = $conn->prepare("SELECT * FROM get_users_pag(:skip, :limit)");
+    $stmt->execute(['limit' => $limit, 'skip' => $skip]);
+    $rows = $stmt->fetchAll();
+
+    return $rows;
+}
+
 function getUsersPag($skip, $limit) {
     global $conn;
     $stmt = $conn->prepare("SELECT * FROM get_users_pag(:skip, :limit)");

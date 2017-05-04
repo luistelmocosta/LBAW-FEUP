@@ -75,7 +75,7 @@
                     </div>
                 </form>
 
-                <table class="table table-bordered table-responsive table-compact table-collapsing">
+                <table class="table table-bordered table-responsive table-compact table-collapsing" id="usersPag">
                     <tbody>
                     <th>Username</th>
                     <th>Role</th>
@@ -111,26 +111,25 @@
 
                 <ul class="pagination clearfix">
                     <li class="qa-page-links-item">
-                        <a href="?page=1" class="qa-page-next">«« first</a>
+                        <a href="?upage=1" class="qa-page-next">«« first</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?page='"{($page-1)}'" class="qa-page-link">« back</a>
+                        <a href="?upage={$upage-1}" class="qa-page-link">« back</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <span class="qa-page-selected">1</span>
+                        <span class="qa-page-selected">{$upage}</span>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?page=2" class="qa-page-link">2</a>
+                        <a href="?upage={$upage+1}" class="qa-page-link">{$upage+1}</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?page=3" class="qa-page-link">3</a>
+                        <a href="?upage={$upage+2}" class="qa-page-link">{$upage+2}</a>
+                    </li>
+                    <li class="qa-page-links-item" >
+                        <a href="?upage={$upage+1}" class="qa-page-next">next »</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?page={($page+1)}" class="qa-page-next">next »</a>
-                    </li>
-                    <li class="qa-page-links-item">
-
-                        <a href="?page='"{($pages)}'" class="qa-page-link">last »»</a>
+                        <a href="?upage={$upages}" class="qa-page-link">last »»</a>
                     </li>
                 </ul>
 
@@ -181,26 +180,25 @@
 
                 <ul class="pagination clearfix">
                     <li class="qa-page-links-item">
-                        <a href="?page=1" class="qa-page-next">«« first</a>
+                        <a href="?qpage=1" class="qa-page-next">«« first</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?page='"{($page-1)}'" class="qa-page-link">« back</a>
+                        <a href="?qpage={$qpage-1}" class="qa-page-link">« back</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <span class="qa-page-selected">1</span>
+                        <span class="qa-page-selected">{$qpage}</span>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?page=2" class="qa-page-link">2</a>
+                        <a href="?qpage={$qpage+1}" class="qa-page-link">{$qpage+1}</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?page=3" class="qa-page-link">3</a>
+                        <a href="?qpage={$qpage+2}" class="qa-page-link">{$qpage+2}</a>
+                    </li>
+                    <li class="qa-page-links-item" >
+                        <a href="?qpage={$qpage+1}" class="qa-page-next">next »</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?page={($page+1)}" class="qa-page-next">next »</a>
-                    </li>
-                    <li class="qa-page-links-item">
-
-                        <a href="?page='"{($pages)}'" class="qa-page-link">last »»</a>
+                        <a href="?qpage={$qpages}" class="qa-page-link">last »»</a>
                     </li>
                 </ul>
             </div>

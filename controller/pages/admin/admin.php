@@ -10,44 +10,44 @@ $userid = auth_user('userid');
 $user = userProfile($userid)[0];
 
 $numUsers = getNumUsers()[0]['count'];
+$numQuest = getNumQuestions()[0]['count'];
 
+// How many info will be displayed per table
 $limit = 4;
 
 // How many pages will there be
-$pages = ceil($numUsers / $limit);
+$upages = ceil($numUsers / $limit);
+$qpages = ceil($numQuest / $limit);
 
 // What page are we currently on?
-$page = min($pages, filter_input(INPUT_GET, 'page', FILTER_VALIDATE_INT, array(
-    'options' => array(
-        'default'   => 1,
-        'min_range' => 1,
-    ),
-)));
+
+if(isset($_GET['upage']) && ($_GET['upage'] > 0 && $_GET['upage'] < ($upages + 1)))
+    $upage = $_GET['upage'];
+else $upage = 1;
+
+if(isset($_GET['qpage']) && ($_GET['qpage'] > 0 && $_GET['qpage'] < ($qpages + 1)))
+    $qpage = $_GET['qpage'];
+else $qpage = 0;
 
 // Calculate the offset for the query
-$offset = ($page - 1)  * $limit;
-
-// Some information to display to the user
-$start = $offset + 1;
-$end = min(($offset + $limit), $numUsers);
-
-// The "back" link
-$prevlink = ($page > 1) ? '<a href="?page=1" title="First page">&laquo;</a> <a href="?page=' . ($page - 1) . '" title="Previous page">&lsaquo;</a>'
-    : '<span class="disabled">&laquo;</span> <span class="disabled">&lsaquo;</span>';
-
-// The "forward" link
-$nextlink = ($page < $pages) ? '<a href="?page=' . ($page + 1) . '" title="Next page">&rsaquo;</a> <a href="?page=' . $pages . '" title="Last page">&raquo;</a>'
-    : '<span class="disabled">&rsaquo;</span> <span class="disabled">&raquo;</span>';
+$uoffset = ($upage - 1)  * $limit;
+$qoffset = ($qpage - 1)  * $limit;
 
 // Display the paging information
 
-
-$users = getUsersPag($offset, $limit);
-$questions = recent_questions();
+$users = getUsersPag($uoffset, $limit);
+$questions = recent_questions($qpage);
 
 $smarty->assign('user', $user);
 $smarty->assign('users', $users);
 $smarty->assign('questions', $questions);
+
+$smarty->assign('upage', $upage);
+$smarty->assign('upages', $upages);
+
+$smarty->assign('qpage', $upage);
+$smarty->assign('qpage', $upage);
+
 
 $smarty->display('common/header_log.tpl');
 $smarty->display('admin.tpl');

@@ -122,6 +122,16 @@ function recent_questions($page = 0)
     return $rows;
 }
 
+function getQuestionsPag($skip, $limit)
+{
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM recent_questions(:skip, :limit)");
+    $stmt->execute(['limit' => $limit, 'skip' => $skip]);
+    $rows = $stmt->fetchAll();
+
+    return $rows;
+}
+
 function unanswered_questions($page = 0) {
 
     global $conn;
@@ -222,4 +232,12 @@ function get_questions_w_body(){
     $rows = $stmt->fetchAll();
 
     return $rows;
+}
+
+function getNumQuestions(){
+    global $conn;
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM questions");
+    $stmt->execute();
+
+    return $stmt->fetchAll();
 }
