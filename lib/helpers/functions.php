@@ -113,3 +113,8 @@ function endsWith($haystack, $needle)
     return $needle === "" || (($temp = strlen($haystack) - strlen($needle)) >= 0 && strpos($haystack, $needle,
             $temp) !== false);
 }
+
+function category_questions_url ($category_id){
+
+    return url('controller/pages/questions/category_questions', ['category' => $category_id]);
+}

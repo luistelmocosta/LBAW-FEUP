@@ -19,10 +19,10 @@ function update_question($question) {
 
 function get_categories() {
     global $conn;
-    $query=$conn->prepare("SELECT categories.name, COUNT(*) as total FROM questions 
+    $query=$conn->prepare("SELECT categories.categoryid, categories.name, COUNT(*) as total FROM questions 
 INNER JOIN categories 
 ON questions.categoryid = categories.categoryid 
-GROUP BY name 
+GROUP BY categories.categoryid 
 ORDER BY total DESC; ");
     $query->execute();
     return $query->fetchAll();
@@ -44,6 +44,14 @@ function get_publication_rating($pubid) {
 
 
     return $query->fetch();
+}
+
+function get_alltags() {
+    global $conn;
+
+    $query=$conn->prepare("SELECT tags.name FROM tags LIMIT 15");
+    $query->execute();
+    return $query->fetchAll();
 }
 
 function get_tags_from_question($questionid) {
@@ -116,6 +124,19 @@ function recent_questions($page = 0)
     $skip = $limit * $page;
     $stmt = $conn->prepare("SELECT * FROM recent_questions(:skip, :limit)");
     $stmt->execute(['limit' => $limit, 'skip' => $skip]);
+    $rows = $stmt->fetchAll();
+    //$rows = addQuestionsComputedFields($rows);
+
+    return $rows;
+}
+
+function category_questions($cid, $page = 0)
+{
+    global $conn;
+    $limit = 4;
+    $skip = $limit * $page;
+    $stmt = $conn->prepare("SELECT * FROM category_questions(:skip, :limit, :cid)");
+    $stmt->execute(['limit' => $limit, 'skip' => $skip, 'cid' => $cid]);
     $rows = $stmt->fetchAll();
     //$rows = addQuestionsComputedFields($rows);
 

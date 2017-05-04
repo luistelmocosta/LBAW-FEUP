@@ -9,13 +9,10 @@ if($_SESSION['logged_in']) {
     $smarty->display('common/narrow_header.tpl');
 }
 
-$tags = get_alltags();
+$cid = $_GET['category'];
 
-$categories = get_categories();
-$size = sizeof($categories);
+$questions=category_questions($cid);
 
-
-$smarty->assign('categories', $categories);
-$smarty->assign('tags', $tags);
-$smarty->display('categories.tpl');
+$smarty->assign('category_questions', $questions);
+$smarty->display('category_questions.tpl');
 $smarty->display('common/footer.tpl');
