@@ -1,2 +1,7 @@
 #ignore compiled templates folder
 templates_c
+config/init.php
+.idea/inspectionProfiles/
+composer.phar
+controller/api/users/
+controller/pages/comments/
