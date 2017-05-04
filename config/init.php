@@ -6,7 +6,7 @@ session_start();
 error_reporting(E_ERROR | E_WARNING);
 
 //LOCAL
-$BASE_DIR = '/home/luiscosta/PhpstormProjects/LBAW-FEUP/'; //CHANGE WITH YOURS
+$BASE_DIR = './'; //CHANGE WITH YOURS
 $BASE_URL = '/';
 
 //GNOMO
