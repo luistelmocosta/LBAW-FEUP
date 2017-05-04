@@ -20,6 +20,8 @@ $server = $url["host"];
 $username = $url["user"];
 $password = $url["pass"];
 $db = substr($url["path"], 1);
+print_r($url);
+die();
 
 try {
     $dbuser = $username; //CHANGE WITH YOUR INFO
