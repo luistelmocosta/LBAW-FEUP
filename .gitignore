@@ -4,5 +4,4 @@ templates_c
 composer.phar
 controller/api/users/
 controller/pages/comments/
-vendor/
-.env
+/vendor/
