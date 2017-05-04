@@ -1,2 +1,7 @@
 #ignore compiled templates folder
 templates_c
+.idea/inspectionProfiles/
+composer.phar
+controller/api/users/
+controller/pages/comments/
+/vendor/

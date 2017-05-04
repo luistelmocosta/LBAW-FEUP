@@ -62,12 +62,13 @@
                         <div class = "col-sm-12" style = "text-align: center"><strong>No questions to load!</strong></div>
                     {/if}
                     {if !empty($recent_questions)}
-                    <div id="recent_questions" class="question-col">
-                        {foreach $recent_questions as $question}
-                            {include file="recent_questions.tpl"}
-                        {/foreach}
-                    </div>
+                        <div id="recent_questions" class="question-col">
+                            {foreach $recent_questions as $question}
+                                {include file="recent_questions.tpl"}
+                            {/foreach}
+                        </div>
                     {/if}
+
                     <div id="unanswered_questions">
                         {foreach $unanswered_questions as $question}
                             {include file="unanswered_questions.tpl"}
@@ -79,41 +80,44 @@
                         {/foreach}
 
                     </div>
+
                     <div class="clearfix"</div>
 
-                    <div class = "load-more"
-                         data-next-page = "1"
-                         data-url = "{url('controller/api/questions/load_more_questions')}"
-                         data-tab = "recent_questions">
-                        <a id="loadMore">
-                            Load More...
-                        </a>
-                    </div>
+
+
+                <div class = "load-more"
+                     data-next-page = "1"
+                     data-url = "{url('controller/api/questions/load_more_questions')}"
+                     data-tab = "recent_questions">
+                    <a id="loadMore">
+                        Load More...
+                    </a>
                 </div>
+
             </div>
-
         </div>
-        <div class="col-md-4 pull-right">
-            <div id="home-right-position">
-                <div class="widget cs_top_contributors">
-                    <h3 class="widget-title">Top Scored Users</h3>
-                    <div class="ra-tags-widget">
 
-                        <ul class="top-users-list clearfix">
-                            {foreach $top_scored_users as $user}
-                                {include file="sidebar_partials/top_scored_users.tpl"}
+    </div>
+    <div class="col-md-4 pull-right">
+        <div id="home-right-position">
+            <div class="widget cs_top_contributors">
+                <h3 class="widget-title">Top Scored Users</h3>
+                <div class="ra-tags-widget">
 
-                            {/foreach}
-                        </ul>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="widget status" >
-                        <h3 class="widget-title">Site Status</h3>
-                        <canvas id="siteStatus" width="350" height="300" style="padding-left: 10px">
+                    <ul class="top-users-list clearfix">
+                        {foreach $top_scored_users as $user}
+                            {include file="sidebar_partials/top_scored_users.tpl"}
 
-                        </canvas>
-                    </div>
+                        {/foreach}
+                    </ul>
+                </div>
+                <br>
+                <br>
+                <div class="widget status" >
+                    <h3 class="widget-title">Site Status</h3>
+                    <canvas id="siteStatus" width="350" height="300" style="padding-left: 10px">
+
+                    </canvas>
                 </div>
             </div>
         </div>

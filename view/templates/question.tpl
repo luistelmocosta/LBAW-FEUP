@@ -19,7 +19,8 @@
 
                                 {include file="question_partials/vote_panel.tpl"}
 
-
+                                <button class = "btn btn-success btn-xs question-solved{if $question['solved_date']} hidden{/if}"
+                                        data-url="{questionSolvedUrl('')}">Mark as solved</button>
 
                                 <script>
 
@@ -52,6 +53,24 @@
                                             setVotingStatus(parent, data.result);
                                         });
                                     });
+
+                                    $(".question-solved").on('click', function () {
+                                        console.log("Hello");
+                                        var url = $(this).data('url');
+                                        var parent = $(this).closest('.question-info-container');
+                                        var id = parent.data('id');
+                                        var current = $(this);
+
+                                        $.get(url + id, function (data) {
+                                            data = $.parseJSON(data);
+                                            console.log(data);
+                                            if (data.status) {
+                                                parent.find('.question-solved-status').removeClass('text-danger').addClass('text-success');
+                                                parent.find('.question-solved-status').find('span').html('Solved');
+                                                current.addClass('hidden');
+                                            }
+                                        });
+                                    });
                                 </script>
                             </div>
                             <h2 class="question-title">
@@ -61,9 +80,9 @@
 
                             <div class="question-meta">
                                 {if $question['solved_date']}
-                                    <span class="post-status open">Solved</span>
+                                    <button class="post-status open">Solved</button>
                                 {else}
-                                    <span class="post-status closed">Not Solved</span>
+                                    <button class="question-solved post-status closed">Not Solved</button>
                                 {/if}
 
 
@@ -209,4 +228,9 @@
     </div>
 </div>
 
+<<<<<<< HEAD
+{HTML::script('askme/vote.js')}
+{HTML::script('askme/question.js')}
+=======
 {HTML::script('vote.js')}
+>>>>>>> master

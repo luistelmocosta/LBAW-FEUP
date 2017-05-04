@@ -54,7 +54,8 @@ function editAnswerUrl($answer_id)
 
 function questionSolvedUrl($question_id)
 {
-    return url('api/questions/solved', ['question' => $question_id]);
+
+    return url('controller/api/questions/mark_as_solved', ['question' => $question_id]);
 }
 
 function answerUrl($answer_id)
