@@ -67,7 +67,10 @@
                             {include file="recent_questions.tpl"}
                         {/foreach}
                     </div>
+<<<<<<< HEAD
                     {/if}
+=======
+>>>>>>> master
                     <div id="unanswered_questions">
                         {foreach $unanswered_questions as $question}
                             {include file="unanswered_questions.tpl"}
@@ -79,7 +82,18 @@
                         {/foreach}
 
                     </div>
+<<<<<<< HEAD
                     <div class="clearfix"</div>
+=======
+                    <div class = "load-more col-sm-12 space-top text-center"
+                         data-next-page = "1"
+                         data-url = "{url('controller/api/questions/load_more_questions')}"
+                         data-tab = "recent_questions">
+                        <button type = "button" class = "btn btn-lg btn-primary col-sm-6 col-sm-offset-3 col-xs-12">
+                            Load More...
+                        </button>
+                    </div>
+>>>>>>> master
 
                     <div class = "load-more"
                          data-next-page = "1"
@@ -120,6 +134,4 @@
     </div>
 </div>
 
-{HTML::script('askme/index.js')}
-
-
+{HTML::script('index.js')}

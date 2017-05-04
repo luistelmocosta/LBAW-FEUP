@@ -51,4 +51,4 @@
     console.log(answerid);
 
 </script>
-{HTML::script('askme/comment.js')}
+{HTML::script('comment.js')}

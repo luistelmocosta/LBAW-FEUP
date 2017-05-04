@@ -3,14 +3,28 @@
   <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.2">
     <root id="1"/>
     <database id="2" parent="1" name="lbaw">
+<<<<<<< HEAD
       <ObjectId>16396</ObjectId>
+=======
+      <ObjectId>16385</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <Current>1</Current>
       <Visible>1</Visible>
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
+<<<<<<< HEAD
       <IntrospectionTimestamp>2017-05-04.14:30:25.078</IntrospectionTimestamp>
       <IntrospectionStateNumber>1668</IntrospectionStateNumber>
+=======
+<<<<<<< HEAD
+      <IntrospectionTimestamp>2017-05-01.22:34:41.351</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1542</IntrospectionStateNumber>
+=======
+      <IntrospectionTimestamp>2017-05-03.00:57:36.547</IntrospectionTimestamp>
+      <IntrospectionStateNumber>8271</IntrospectionStateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
+>>>>>>> master
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -21,6 +35,7 @@
       <ObjectId>99</ObjectId>
     </schema>
     <schema id="6" parent="2" name="pg_temp_1">
+<<<<<<< HEAD
       <ObjectId>11816</ObjectId>
     </schema>
     <schema id="7" parent="2" name="pg_toast_temp_1">
@@ -32,100 +47,189 @@
     <sequence id="9" parent="3" name="answercomments_commentid_seq">
       <ObjectId>16947</ObjectId>
       <StateNumber>759</StateNumber>
+=======
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12153</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="answercomments_commentid_seq">
+      <ObjectId>28342</ObjectId>
+      <StateNumber>8231</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="10" parent="3" name="answers_publicationid_seq">
+<<<<<<< HEAD
       <ObjectId>16928</ObjectId>
       <StateNumber>757</StateNumber>
+=======
+      <ObjectId>28323</ObjectId>
+      <StateNumber>8229</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="11" parent="3" name="badges_badgeid_seq">
+<<<<<<< HEAD
       <ObjectId>16742</ObjectId>
       <StateNumber>737</StateNumber>
+=======
+      <ObjectId>28137</ObjectId>
+      <StateNumber>8209</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="12" parent="3" name="bans_banid_seq">
+<<<<<<< HEAD
       <ObjectId>16842</ObjectId>
       <StateNumber>748</StateNumber>
+=======
+      <ObjectId>28237</ObjectId>
+      <StateNumber>8220</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="13" parent="3" name="categories_categoryid_seq">
+<<<<<<< HEAD
       <ObjectId>16751</ObjectId>
       <StateNumber>738</StateNumber>
+=======
+      <ObjectId>28146</ObjectId>
+      <StateNumber>8210</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="14" parent="3" name="comments_publicationid_seq">
+<<<<<<< HEAD
       <ObjectId>16897</ObjectId>
       <StateNumber>755</StateNumber>
+=======
+      <ObjectId>28292</ObjectId>
+      <StateNumber>8227</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="15" parent="3" name="locations_locationid_seq">
+<<<<<<< HEAD
       <ObjectId>16771</ObjectId>
       <StateNumber>740</StateNumber>
+=======
+      <ObjectId>28166</ObjectId>
+      <StateNumber>8212</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="16" parent="3" name="modregisters_modregisterid_seq">
+<<<<<<< HEAD
       <ObjectId>16808</ObjectId>
       <StateNumber>744</StateNumber>
+=======
+      <ObjectId>28203</ObjectId>
+      <StateNumber>8216</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="17" parent="3" name="publications_publicationid_seq">
+<<<<<<< HEAD
       <ObjectId>16855</ObjectId>
       <StateNumber>749</StateNumber>
+=======
+      <ObjectId>28250</ObjectId>
+      <StateNumber>8221</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="18" parent="3" name="questioncomments_commentid_seq">
+<<<<<<< HEAD
       <ObjectId>16910</ObjectId>
       <StateNumber>756</StateNumber>
+=======
+      <ObjectId>28305</ObjectId>
+      <StateNumber>8228</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="19" parent="3" name="questions_publicationid_seq">
+<<<<<<< HEAD
       <ObjectId>16876</ObjectId>
       <StateNumber>753</StateNumber>
+=======
+      <ObjectId>28271</ObjectId>
+      <StateNumber>8225</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="20" parent="3" name="tags_tagid_seq">
+<<<<<<< HEAD
       <ObjectId>16965</ObjectId>
       <StateNumber>760</StateNumber>
+=======
+      <ObjectId>28360</ObjectId>
+      <StateNumber>8232</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="21" parent="3" name="userroles_roleid_seq">
+<<<<<<< HEAD
       <ObjectId>16762</ObjectId>
       <StateNumber>739</StateNumber>
+=======
+      <ObjectId>28157</ObjectId>
+      <StateNumber>8211</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="22" parent="3" name="users_userid_seq">
+<<<<<<< HEAD
       <ObjectId>16779</ObjectId>
       <StateNumber>741</StateNumber>
+=======
+      <ObjectId>28174</ObjectId>
+      <StateNumber>8213</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="23" parent="3" name="votes_voteid_seq">
+<<<<<<< HEAD
       <ObjectId>16974</ObjectId>
       <StateNumber>761</StateNumber>
+=======
+      <ObjectId>28369</ObjectId>
+      <StateNumber>8233</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="24" parent="3" name="warnings_warningid_seq">
+<<<<<<< HEAD
       <ObjectId>16829</ObjectId>
       <StateNumber>747</StateNumber>
+=======
+      <ObjectId>28224</ObjectId>
+      <StateNumber>8219</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <table id="25" parent="3" name="answercomments">
+<<<<<<< HEAD
       <ObjectId>16949</ObjectId>
       <StateNumber>759</StateNumber>
     </table>
@@ -200,12 +304,89 @@
     <routine id="43" parent="3" name="answers_from_questionid">
       <ObjectId>17048</ObjectId>
       <StateNumber>790</StateNumber>
+=======
+      <ObjectId>28344</ObjectId>
+      <StateNumber>8231</StateNumber>
+    </table>
+    <table id="26" parent="3" name="answers">
+      <ObjectId>28325</ObjectId>
+      <StateNumber>8231</StateNumber>
+    </table>
+    <table id="27" parent="3" name="badges">
+      <ObjectId>28139</ObjectId>
+      <StateNumber>8237</StateNumber>
+    </table>
+    <table id="28" parent="3" name="bans">
+      <ObjectId>28239</ObjectId>
+      <StateNumber>8220</StateNumber>
+    </table>
+    <table id="29" parent="3" name="categories">
+      <ObjectId>28148</ObjectId>
+      <StateNumber>8225</StateNumber>
+    </table>
+    <table id="30" parent="3" name="comments">
+      <ObjectId>28294</ObjectId>
+      <StateNumber>8231</StateNumber>
+    </table>
+    <table id="31" parent="3" name="locations">
+      <ObjectId>28168</ObjectId>
+      <StateNumber>8213</StateNumber>
+    </table>
+    <table id="32" parent="3" name="modregisters">
+      <ObjectId>28205</ObjectId>
+      <StateNumber>8220</StateNumber>
+    </table>
+    <table id="33" parent="3" name="publications">
+      <ObjectId>28252</ObjectId>
+      <StateNumber>8251</StateNumber>
+    </table>
+    <table id="34" parent="3" name="questioncomments">
+      <ObjectId>28307</ObjectId>
+      <StateNumber>8228</StateNumber>
+    </table>
+    <table id="35" parent="3" name="questions">
+      <ObjectId>28273</ObjectId>
+      <StateNumber>8235</StateNumber>
+    </table>
+    <table id="36" parent="3" name="questiontags">
+      <ObjectId>28390</ObjectId>
+      <StateNumber>8235</StateNumber>
+    </table>
+    <table id="37" parent="3" name="tags">
+      <ObjectId>28362</ObjectId>
+      <StateNumber>8235</StateNumber>
+    </table>
+    <table id="38" parent="3" name="userbadges">
+      <ObjectId>28406</ObjectId>
+      <StateNumber>8237</StateNumber>
+    </table>
+    <table id="39" parent="3" name="userroles">
+      <ObjectId>28159</ObjectId>
+      <StateNumber>8213</StateNumber>
+    </table>
+    <table id="40" parent="3" name="users">
+      <ObjectId>28176</ObjectId>
+      <StateNumber>8237</StateNumber>
+    </table>
+    <table id="41" parent="3" name="votes">
+      <ObjectId>28371</ObjectId>
+      <StateNumber>8247</StateNumber>
+    </table>
+    <table id="42" parent="3" name="warnings">
+      <ObjectId>28226</ObjectId>
+      <StateNumber>8249</StateNumber>
+    </table>
+    <routine id="43" parent="3" name="answers_from_questionid">
+      <ObjectId>25189</ObjectId>
+      <StateNumber>8261</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>qid integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(answerid integer, body text, solved_date timestamp without time zone, creation_date timestamp without time zone, userid integer, username character varying)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
       <ReturnsSet>1</ReturnsSet>
     </routine>
+<<<<<<< HEAD
     <routine id="44" parent="3" name="category_questions">
       <ObjectId>17065</ObjectId>
       <StateNumber>1668</StateNumber>
@@ -216,23 +397,54 @@
       <ReturnsSet>1</ReturnsSet>
     </routine>
     <routine id="45" parent="3" name="count_vote_rating_received_user">
+=======
+<<<<<<< HEAD
+    <routine id="44" parent="3" name="count_vote_rating_received_user">
+>>>>>>> master
       <ObjectId>17030</ObjectId>
       <StateNumber>771</StateNumber>
+=======
+    <routine id="44" parent="3" name="check_question_is_solved">
+      <ObjectId>16675</ObjectId>
+      <StateNumber>1126</StateNumber>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+    </routine>
+    <routine id="45" parent="3" name="count_vote_rating_received_user">
+      <ObjectId>24881</ObjectId>
+      <StateNumber>8242</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>puser_id integer</ArgumentsDefinition>
       <ResultsDefinition>integer</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
+<<<<<<< HEAD
     <routine id="46" parent="3" name="get_answer_comments">
+=======
+<<<<<<< HEAD
+    <routine id="45" parent="3" name="get_answer_comments">
+>>>>>>> master
       <ObjectId>17053</ObjectId>
       <StateNumber>795</StateNumber>
+=======
+    <routine id="46" parent="3" name="get_answer_comments">
+      <ObjectId>26948</ObjectId>
+      <StateNumber>8266</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>aid integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(publicationid integer, body text, creation_date timestamp without time zone, userid integer, username character varying)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
       <ReturnsSet>1</ReturnsSet>
     </routine>
+<<<<<<< HEAD
     <routine id="47" parent="3" name="get_publication_rating">
+=======
+<<<<<<< HEAD
+    <routine id="46" parent="3" name="get_publication_rating">
+>>>>>>> master
       <ObjectId>17064</ObjectId>
       <StateNumber>1542</StateNumber>
       <ArgumentsDefinition>pid integer</ArgumentsDefinition>
@@ -243,211 +455,469 @@
     <routine id="48" parent="3" name="get_question_comments">
       <ObjectId>17054</ObjectId>
       <StateNumber>796</StateNumber>
+=======
+    <routine id="47" parent="3" name="get_question_comments">
+      <ObjectId>26949</ObjectId>
+      <StateNumber>8267</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>qid integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(publicationid integer, body text, creation_date timestamp without time zone, userid integer, username character varying)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
       <ReturnsSet>1</ReturnsSet>
     </routine>
+<<<<<<< HEAD
     <routine id="49" parent="3" name="get_questions_by_user_id">
+=======
+    <routine id="48" parent="3" name="get_questions_by_user_id">
+<<<<<<< HEAD
+>>>>>>> master
       <ObjectId>17051</ObjectId>
       <StateNumber>1535</StateNumber>
+=======
+      <ObjectId>26071</ObjectId>
+      <StateNumber>8264</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>uid integer, skip integer, limitnumber integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint, votes_count bigint, views_counter bigint)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
       <ReturnsSet>1</ReturnsSet>
     </routine>
+<<<<<<< HEAD
     <routine id="50" parent="3" name="getusernamefromquestion">
+=======
+<<<<<<< HEAD
+    <routine id="49" parent="3" name="getusernamefromquestion">
+>>>>>>> master
       <ObjectId>17040</ObjectId>
       <StateNumber>781</StateNumber>
+=======
+    <routine id="49" parent="3" name="get_users_pag">
+      <ObjectId>28136</ObjectId>
+      <StateNumber>8188</StateNumber>
+      <ArgumentsDefinition>skip integer, limitnumber integer</ArgumentsDefinition>
+      <ResultsDefinition>TABLE(userid integer, role character varying, username character varying, email character varying)</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ReturnsSet>1</ReturnsSet>
+    </routine>
+    <routine id="50" parent="3" name="getusernamefromquestion">
+      <ObjectId>24889</ObjectId>
+      <StateNumber>8252</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>questionid integer</ArgumentsDefinition>
       <ResultsDefinition>character varying</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
+<<<<<<< HEAD
     <routine id="51" parent="3" name="insert_into_answercomments">
+=======
+<<<<<<< HEAD
+    <routine id="50" parent="3" name="insert_into_answercomments">
+>>>>>>> master
       <ObjectId>17050</ObjectId>
       <StateNumber>792</StateNumber>
+=======
+    <routine id="51" parent="3" name="insert_into_answercomments">
+      <ObjectId>26944</ObjectId>
+      <StateNumber>8263</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>userid integer, answerid integer, body text</ArgumentsDefinition>
       <ResultsDefinition>void</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
+<<<<<<< HEAD
     <routine id="52" parent="3" name="insert_into_answers">
+=======
+<<<<<<< HEAD
+    <routine id="51" parent="3" name="insert_into_answers">
+>>>>>>> master
       <ObjectId>17047</ObjectId>
       <StateNumber>789</StateNumber>
+=======
+    <routine id="52" parent="3" name="insert_into_answers">
+      <ObjectId>25188</ObjectId>
+      <StateNumber>8260</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>userid integer, questionid integer, body text</ArgumentsDefinition>
       <ResultsDefinition>void</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
+<<<<<<< HEAD
     <routine id="53" parent="3" name="insert_into_questions">
+=======
+<<<<<<< HEAD
+    <routine id="52" parent="3" name="insert_into_questions">
+>>>>>>> master
       <ObjectId>17042</ObjectId>
       <StateNumber>783</StateNumber>
+=======
+    <routine id="53" parent="3" name="insert_into_questions">
+      <ObjectId>25183</ObjectId>
+      <StateNumber>8254</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>body text, userid integer, title character varying, categoryid integer</ArgumentsDefinition>
       <ResultsDefinition>void</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
+<<<<<<< HEAD
     <routine id="54" parent="3" name="own_content_vote">
+=======
+<<<<<<< HEAD
+    <routine id="53" parent="3" name="own_content_vote">
+>>>>>>> master
       <ObjectId>17034</ObjectId>
       <StateNumber>775</StateNumber>
+=======
+    <routine id="54" parent="3" name="own_content_vote">
+      <ObjectId>24885</ObjectId>
+      <StateNumber>8246</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ResultsDefinition>trigger</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
+<<<<<<< HEAD
     <routine id="55" parent="3" name="question_answers">
+=======
+<<<<<<< HEAD
+    <routine id="54" parent="3" name="question_answers">
+>>>>>>> master
       <ObjectId>17028</ObjectId>
       <StateNumber>769</StateNumber>
+=======
+    <routine id="55" parent="3" name="question_answers">
+      <ObjectId>24879</ObjectId>
+      <StateNumber>8240</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>pquestion_id integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(id integer, user_id integer, username character varying, body text, created_at timestamp without time zone)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
       <ReturnsSet>1</ReturnsSet>
     </routine>
+<<<<<<< HEAD
     <routine id="56" parent="3" name="question_details_from_id">
+=======
+<<<<<<< HEAD
+    <routine id="55" parent="3" name="question_details_from_id">
+>>>>>>> master
       <ObjectId>17044</ObjectId>
       <StateNumber>786</StateNumber>
+=======
+    <routine id="56" parent="3" name="question_details_from_id">
+      <ObjectId>25185</ObjectId>
+      <StateNumber>8257</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>pubid integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint, down_votes bigint, views_counter bigint, category character varying)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
       <ReturnsSet>1</ReturnsSet>
     </routine>
+<<<<<<< HEAD
     <routine id="57" parent="3" name="question_tags">
+=======
+<<<<<<< HEAD
+    <routine id="56" parent="3" name="question_tags">
+>>>>>>> master
       <ObjectId>17027</ObjectId>
       <StateNumber>784</StateNumber>
+=======
+    <routine id="57" parent="3" name="question_tags">
+      <ObjectId>24878</ObjectId>
+      <StateNumber>8255</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>pquestion_id integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(tag character varying)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
       <ReturnsSet>1</ReturnsSet>
     </routine>
+<<<<<<< HEAD
     <routine id="58" parent="3" name="recent_questions">
+=======
+<<<<<<< HEAD
+    <routine id="57" parent="3" name="recent_questions">
+>>>>>>> master
       <ObjectId>17045</ObjectId>
       <StateNumber>787</StateNumber>
+=======
+    <routine id="58" parent="3" name="recent_questions">
+      <ObjectId>25186</ObjectId>
+      <StateNumber>8258</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>skip integer, limitnumber integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint, votes_count bigint, views_counter bigint)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
       <ReturnsSet>1</ReturnsSet>
     </routine>
+<<<<<<< HEAD
     <routine id="59" parent="3" name="search_questions">
+=======
+<<<<<<< HEAD
+    <routine id="58" parent="3" name="search_questions">
+>>>>>>> master
       <ObjectId>17041</ObjectId>
       <StateNumber>782</StateNumber>
+=======
+    <routine id="59" parent="3" name="search_questions">
+      <ObjectId>24890</ObjectId>
+      <StateNumber>8253</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>psearch text</ArgumentsDefinition>
       <ResultsDefinition>TABLE(questionid integer)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
       <ReturnsSet>1</ReturnsSet>
     </routine>
+<<<<<<< HEAD
     <routine id="60" parent="3" name="top_scored_questions">
+=======
+<<<<<<< HEAD
+    <routine id="59" parent="3" name="top_scored_questions">
+>>>>>>> master
       <ObjectId>17043</ObjectId>
       <StateNumber>785</StateNumber>
+=======
+    <routine id="60" parent="3" name="top_scored_questions">
+      <ObjectId>25184</ObjectId>
+      <StateNumber>8256</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>skip integer, limitnumber integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint, votes_count bigint, views_counter bigint)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
       <ReturnsSet>1</ReturnsSet>
     </routine>
+<<<<<<< HEAD
     <routine id="61" parent="3" name="top_scored_users">
+=======
+<<<<<<< HEAD
+    <routine id="60" parent="3" name="top_scored_users">
+>>>>>>> master
       <ObjectId>17055</ObjectId>
       <StateNumber>797</StateNumber>
+=======
+    <routine id="61" parent="3" name="top_scored_users">
+      <ObjectId>27239</ObjectId>
+      <StateNumber>8268</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ResultsDefinition>TABLE(username character varying, count_votes_rating_received integer, count_questions integer, count_answers integer, count_comments integer)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
       <ReturnsSet>1</ReturnsSet>
     </routine>
+<<<<<<< HEAD
     <routine id="62" parent="3" name="trigger_auto_ban_on_warning_limit">
+=======
+<<<<<<< HEAD
+    <routine id="61" parent="3" name="trigger_auto_ban_on_warning_limit">
+>>>>>>> master
       <ObjectId>17036</ObjectId>
       <StateNumber>777</StateNumber>
+=======
+    <routine id="62" parent="3" name="trigger_auto_ban_on_warning_limit">
+      <ObjectId>16677</ObjectId>
+      <StateNumber>8248</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ResultsDefinition>trigger</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
+<<<<<<< HEAD
     <routine id="63" parent="3" name="trigger_update_question_timestamp">
+=======
+<<<<<<< HEAD
+    <routine id="62" parent="3" name="trigger_update_question_timestamp">
+>>>>>>> master
       <ObjectId>17038</ObjectId>
       <StateNumber>779</StateNumber>
+=======
+    <routine id="63" parent="3" name="trigger_update_question_timestamp">
+      <ObjectId>16679</ObjectId>
+      <StateNumber>8250</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ResultsDefinition>trigger</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
+<<<<<<< HEAD
     <routine id="64" parent="3" name="unanswered_questions">
+=======
+<<<<<<< HEAD
+    <routine id="63" parent="3" name="unanswered_questions">
+>>>>>>> master
       <ObjectId>17046</ObjectId>
       <StateNumber>788</StateNumber>
+=======
+    <routine id="64" parent="3" name="unanswered_questions">
+      <ObjectId>25187</ObjectId>
+      <StateNumber>8259</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>skip integer, limitnumber integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(publicationid integer, title character varying, body text, creation_date timestamp without time zone, solved_date timestamp without time zone, username character varying, userid integer, answers_count bigint, upvotes bigint, votes_count bigint, views_counter bigint)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
       <ReturnsSet>1</ReturnsSet>
     </routine>
+<<<<<<< HEAD
     <routine id="65" parent="3" name="update_question">
+=======
+<<<<<<< HEAD
+    <routine id="64" parent="3" name="update_question">
+>>>>>>> master
       <ObjectId>17049</ObjectId>
       <StateNumber>791</StateNumber>
+=======
+    <routine id="65" parent="3" name="update_question">
+      <ObjectId>26363</ObjectId>
+      <StateNumber>8262</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>body_edited text, questionid integer, title_edited character varying, categoryid_edited integer</ArgumentsDefinition>
       <ResultsDefinition>void</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
+<<<<<<< HEAD
     <routine id="66" parent="3" name="update_user_profile">
+=======
+<<<<<<< HEAD
+    <routine id="65" parent="3" name="update_user_profile">
+>>>>>>> master
       <ObjectId>17052</ObjectId>
       <StateNumber>794</StateNumber>
+=======
+    <routine id="66" parent="3" name="update_user_profile">
+      <ObjectId>26072</ObjectId>
+      <StateNumber>8265</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>uid integer, full_name character varying, e_mail character varying, location character varying, about_user text</ArgumentsDefinition>
       <ResultsDefinition>void</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
+<<<<<<< HEAD
     <routine id="67" parent="3" name="user_badges_ranking">
+=======
+<<<<<<< HEAD
+    <routine id="66" parent="3" name="user_badges_ranking">
+>>>>>>> master
       <ObjectId>17032</ObjectId>
       <StateNumber>1522</StateNumber>
+=======
+    <routine id="67" parent="3" name="user_badges_ranking">
+      <ObjectId>24883</ObjectId>
+      <StateNumber>8244</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ResultsDefinition>trigger</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
+<<<<<<< HEAD
     <routine id="68" parent="3" name="user_profile">
+=======
+<<<<<<< HEAD
+    <routine id="67" parent="3" name="user_profile">
+>>>>>>> master
       <ObjectId>17031</ObjectId>
       <StateNumber>772</StateNumber>
+=======
+    <routine id="68" parent="3" name="user_profile">
+      <ObjectId>25197</ObjectId>
+      <StateNumber>8243</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>puser_id integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(fullname character varying, username character varying, email character varying, about character varying, location character varying, role character varying, created_at date, count_votes_rating_received integer, count_questions bigint, count_answers bigint, count_votes_made bigint)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
       <ReturnsSet>1</ReturnsSet>
     </routine>
+<<<<<<< HEAD
     <routine id="69" parent="3" name="user_questions">
+=======
+<<<<<<< HEAD
+    <routine id="68" parent="3" name="user_questions">
+>>>>>>> master
       <ObjectId>17029</ObjectId>
       <StateNumber>770</StateNumber>
+=======
+    <routine id="69" parent="3" name="user_questions">
+      <ObjectId>24880</ObjectId>
+      <StateNumber>8241</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>puser_id integer</ArgumentsDefinition>
       <ResultsDefinition>TABLE(publicationid integer, title character varying, body text, solved_date timestamp without time zone, creation_date timestamp without time zone, last_edit_date timestamp without time zone, count_answers bigint)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
       <ReturnsSet>1</ReturnsSet>
     </routine>
+<<<<<<< HEAD
     <routine id="70" parent="3" name="user_total_answers">
+=======
+<<<<<<< HEAD
+    <routine id="69" parent="3" name="user_total_answers">
+>>>>>>> master
       <ObjectId>17057</ObjectId>
       <StateNumber>799</StateNumber>
+=======
+    <routine id="70" parent="3" name="user_total_answers">
+      <ObjectId>27241</ObjectId>
+      <StateNumber>8270</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>puser_id integer</ArgumentsDefinition>
       <ResultsDefinition>integer</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
+<<<<<<< HEAD
     <routine id="71" parent="3" name="user_total_comments">
+=======
+<<<<<<< HEAD
+    <routine id="70" parent="3" name="user_total_comments">
+>>>>>>> master
       <ObjectId>17058</ObjectId>
       <StateNumber>800</StateNumber>
+=======
+    <routine id="71" parent="3" name="user_total_comments">
+      <ObjectId>27242</ObjectId>
+      <StateNumber>8271</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>puser_id integer</ArgumentsDefinition>
       <ResultsDefinition>integer</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
+<<<<<<< HEAD
     <routine id="72" parent="3" name="user_total_questions">
+=======
+<<<<<<< HEAD
+    <routine id="71" parent="3" name="user_total_questions">
+>>>>>>> master
       <ObjectId>17056</ObjectId>
       <StateNumber>798</StateNumber>
+=======
+    <routine id="72" parent="3" name="user_total_questions">
+      <ObjectId>27240</ObjectId>
+      <StateNumber>8269</StateNumber>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ArgumentsDefinition>puser_id integer</ArgumentsDefinition>
       <ResultsDefinition>integer</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
     </routine>
+<<<<<<< HEAD
     <column id="73" parent="25" name="commentid">
+=======
+<<<<<<< HEAD
+    <column id="72" parent="25" name="commentid">
+>>>>>>> master
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
@@ -468,12 +938,44 @@
     </index>
     <key id="76" parent="25" name="answercomments_pkey">
       <ObjectId>16954</ObjectId>
+=======
+    <column id="73" parent="25" name="commentid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8231</StateNumber>
+      <SequenceName>answercomments_commentid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;answercomments_commentid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="74" parent="25" name="answerid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8231</StateNumber>
+    </column>
+    <index id="75" parent="25" name="answercomments_pkey">
+      <ObjectId>28348</ObjectId>
+      <ColNames>commentid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="76" parent="25" name="answercomments_pkey">
+      <ObjectId>28349</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>commentid</ColNames>
       <UnderlyingIndexName>answercomments_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <foreign-key id="77" parent="25" name="FK_answercomments_comments">
+=======
+<<<<<<< HEAD
+    <foreign-key id="76" parent="25" name="FK_answercomments_comments">
+>>>>>>> master
       <ObjectId>16955</ObjectId>
+=======
+    <foreign-key id="77" parent="25" name="FK_answercomments_comments">
+      <ObjectId>28350</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>commentid</ColNames>
       <RefTableName>comments</RefTableName>
       <RefKeyName>comments_pkey</RefKeyName>
@@ -481,8 +983,17 @@
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <foreign-key id="78" parent="25" name="FK_answercomments_answers">
+=======
+<<<<<<< HEAD
+    <foreign-key id="77" parent="25" name="FK_answercomments_answers">
+>>>>>>> master
       <ObjectId>16960</ObjectId>
+=======
+    <foreign-key id="78" parent="25" name="FK_answercomments_answers">
+      <ObjectId>28355</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>answerid</ColNames>
       <RefTableName>answers</RefTableName>
       <RefKeyName>answers_pkey</RefKeyName>
@@ -490,7 +1001,12 @@
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <column id="79" parent="26" name="publicationid">
+=======
+<<<<<<< HEAD
+    <column id="78" parent="26" name="publicationid">
+>>>>>>> master
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
@@ -520,12 +1036,53 @@
     </index>
     <key id="84" parent="26" name="answers_pkey">
       <ObjectId>16935</ObjectId>
+=======
+    <column id="79" parent="26" name="publicationid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8229</StateNumber>
+      <SequenceName>answers_publicationid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;answers_publicationid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="80" parent="26" name="questionid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8229</StateNumber>
+    </column>
+    <column id="81" parent="26" name="solved_date">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>8229</StateNumber>
+    </column>
+    <index id="82" parent="26" name="answers_pkey">
+      <ObjectId>28329</ObjectId>
+      <ColNames>publicationid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="83" parent="26" name="ixfk_answers_questions">
+      <ObjectId>28341</ObjectId>
+      <ColNames>questionid</ColNames>
+    </index>
+    <key id="84" parent="26" name="answers_pkey">
+      <ObjectId>28330</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>publicationid</ColNames>
       <UnderlyingIndexName>answers_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <foreign-key id="85" parent="26" name="FK_answers_publications">
+=======
+<<<<<<< HEAD
+    <foreign-key id="84" parent="26" name="FK_answers_publications">
+>>>>>>> master
       <ObjectId>16941</ObjectId>
+=======
+    <foreign-key id="85" parent="26" name="FK_answers_publications">
+      <ObjectId>28336</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>publicationid</ColNames>
       <RefTableName>publications</RefTableName>
       <RefKeyName>publications_pkey</RefKeyName>
@@ -533,8 +1090,17 @@
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <foreign-key id="86" parent="26" name="FK_answers_questions">
+=======
+<<<<<<< HEAD
+    <foreign-key id="85" parent="26" name="FK_answers_questions">
+>>>>>>> master
       <ObjectId>16936</ObjectId>
+=======
+    <foreign-key id="86" parent="26" name="FK_answers_questions">
+      <ObjectId>28331</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>questionid</ColNames>
       <RefTableName>questions</RefTableName>
       <RefKeyName>questions_pkey</RefKeyName>
@@ -542,7 +1108,12 @@
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <column id="87" parent="27" name="badgeid">
+=======
+<<<<<<< HEAD
+    <column id="86" parent="27" name="badgeid">
+>>>>>>> master
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
@@ -568,11 +1139,44 @@
     </index>
     <key id="91" parent="27" name="badges_pkey">
       <ObjectId>16750</ObjectId>
+=======
+    <column id="87" parent="27" name="badgeid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8209</StateNumber>
+      <SequenceName>badges_badgeid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;badges_badgeid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="88" parent="27" name="name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <StateNumber>8209</StateNumber>
+    </column>
+    <column id="89" parent="27" name="description">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8209</StateNumber>
+    </column>
+    <index id="90" parent="27" name="badges_pkey">
+      <ObjectId>28144</ObjectId>
+      <ColNames>badgeid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="91" parent="27" name="badges_pkey">
+      <ObjectId>28145</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>badgeid</ColNames>
       <UnderlyingIndexName>badges_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <check id="92" parent="27" name="badge_description">
+=======
+<<<<<<< HEAD
+    <check id="91" parent="27" name="badge_description">
+>>>>>>> master
       <ObjectId>16748</ObjectId>
       <ColNames>description</ColNames>
       <Predicate>(char_length((description)::text) &gt;= 2) AND (char_length((description)::text) &lt;= 100)</Predicate>
@@ -597,12 +1201,48 @@
     </index>
     <key id="96" parent="28" name="bans_pkey">
       <ObjectId>16849</ObjectId>
+=======
+    <check id="92" parent="27" name="badge_description">
+      <ObjectId>28143</ObjectId>
+      <ColNames>description</ColNames>
+      <Predicate>(char_length((description)::text) &gt;= 2) AND (char_length((description)::text) &lt;= 100)</Predicate>
+    </check>
+    <column id="93" parent="28" name="banid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8220</StateNumber>
+      <SequenceName>bans_banid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;bans_banid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="94" parent="28" name="end_date">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>8220</StateNumber>
+    </column>
+    <index id="95" parent="28" name="bans_pkey">
+      <ObjectId>28243</ObjectId>
+      <ColNames>banid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="96" parent="28" name="bans_pkey">
+      <ObjectId>28244</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>banid</ColNames>
       <UnderlyingIndexName>bans_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <foreign-key id="97" parent="28" name="FK_Ban_ModRegister">
+=======
+<<<<<<< HEAD
+    <foreign-key id="96" parent="28" name="FK_Ban_ModRegister">
+>>>>>>> master
       <ObjectId>16850</ObjectId>
+=======
+    <foreign-key id="97" parent="28" name="FK_Ban_ModRegister">
+      <ObjectId>28245</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>banid</ColNames>
       <RefTableName>modregisters</RefTableName>
       <RefKeyName>modregisters_pkey</RefKeyName>
@@ -610,7 +1250,12 @@
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <column id="98" parent="29" name="categoryid">
+=======
+<<<<<<< HEAD
+    <column id="97" parent="29" name="categoryid">
+>>>>>>> master
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
@@ -636,11 +1281,44 @@
     </index>
     <key id="102" parent="29" name="categories_pkey">
       <ObjectId>16759</ObjectId>
+=======
+    <column id="98" parent="29" name="categoryid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8210</StateNumber>
+      <SequenceName>categories_categoryid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;categories_categoryid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="99" parent="29" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8210</StateNumber>
+    </column>
+    <index id="100" parent="29" name="categories_pkey">
+      <ObjectId>28153</ObjectId>
+      <ColNames>categoryid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="101" parent="29" name="categories_name_key">
+      <ObjectId>28155</ObjectId>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="102" parent="29" name="categories_pkey">
+      <ObjectId>28154</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>categoryid</ColNames>
       <UnderlyingIndexName>categories_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <key id="103" parent="29" name="categories_name_key">
+=======
+<<<<<<< HEAD
+    <key id="102" parent="29" name="categories_name_key">
+>>>>>>> master
       <ObjectId>16761</ObjectId>
       <ColNames>name</ColNames>
       <UnderlyingIndexName>categories_name_key</UnderlyingIndexName>
@@ -665,12 +1343,48 @@
     </index>
     <key id="107" parent="30" name="comments_pkey">
       <ObjectId>16904</ObjectId>
+=======
+    <key id="103" parent="29" name="categories_name_key">
+      <ObjectId>28156</ObjectId>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>categories_name_key</UnderlyingIndexName>
+    </key>
+    <check id="104" parent="29" name="valid_category">
+      <ObjectId>28152</ObjectId>
+      <ColNames>name</ColNames>
+      <Predicate>(char_length((name)::text) &gt;= 3) AND (char_length((name)::text) &lt;= 50)</Predicate>
+    </check>
+    <column id="105" parent="30" name="publicationid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8227</StateNumber>
+      <SequenceName>comments_publicationid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;comments_publicationid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <index id="106" parent="30" name="comments_pkey">
+      <ObjectId>28298</ObjectId>
+      <ColNames>publicationid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="107" parent="30" name="comments_pkey">
+      <ObjectId>28299</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>publicationid</ColNames>
       <UnderlyingIndexName>comments_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <foreign-key id="108" parent="30" name="FK_Comment_Publication">
+=======
+<<<<<<< HEAD
+    <foreign-key id="107" parent="30" name="FK_Comment_Publication">
+>>>>>>> master
       <ObjectId>16905</ObjectId>
+=======
+    <foreign-key id="108" parent="30" name="FK_Comment_Publication">
+      <ObjectId>28300</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>publicationid</ColNames>
       <RefTableName>publications</RefTableName>
       <RefKeyName>publications_pkey</RefKeyName>
@@ -678,7 +1392,12 @@
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <column id="109" parent="31" name="locationid">
+=======
+<<<<<<< HEAD
+    <column id="108" parent="31" name="locationid">
+>>>>>>> master
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
@@ -699,11 +1418,39 @@
     </index>
     <key id="112" parent="31" name="locations_pkey">
       <ObjectId>16778</ObjectId>
+=======
+    <column id="109" parent="31" name="locationid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8212</StateNumber>
+      <SequenceName>locations_locationid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;locations_locationid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="110" parent="31" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8212</StateNumber>
+    </column>
+    <index id="111" parent="31" name="locations_pkey">
+      <ObjectId>28172</ObjectId>
+      <ColNames>locationid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="112" parent="31" name="locations_pkey">
+      <ObjectId>28173</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>locationid</ColNames>
       <UnderlyingIndexName>locations_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <column id="113" parent="32" name="modregisterid">
+=======
+<<<<<<< HEAD
+    <column id="112" parent="32" name="modregisterid">
+>>>>>>> master
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
@@ -751,12 +1498,71 @@
     </index>
     <key id="121" parent="32" name="modregisters_pkey">
       <ObjectId>16816</ObjectId>
+=======
+    <column id="113" parent="32" name="modregisterid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8216</StateNumber>
+      <SequenceName>modregisters_modregisterid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;modregisters_modregisterid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="114" parent="32" name="date_creation">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8216</StateNumber>
+      <DefaultExpression>now()</DefaultExpression>
+    </column>
+    <column id="115" parent="32" name="reason">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8216</StateNumber>
+    </column>
+    <column id="116" parent="32" name="userid_author">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8216</StateNumber>
+    </column>
+    <column id="117" parent="32" name="userid_target">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8216</StateNumber>
+    </column>
+    <index id="118" parent="32" name="modregisters_pkey">
+      <ObjectId>28210</ObjectId>
+      <ColNames>modregisterid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="119" parent="32" name="ixfk_modregister_author_user">
+      <ObjectId>28223</ObjectId>
+      <ColNames>userid_author</ColNames>
+    </index>
+    <index id="120" parent="32" name="ixfk_modregister_target_user">
+      <ObjectId>28222</ObjectId>
+      <ColNames>userid_target</ColNames>
+    </index>
+    <key id="121" parent="32" name="modregisters_pkey">
+      <ObjectId>28211</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>modregisterid</ColNames>
       <UnderlyingIndexName>modregisters_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <foreign-key id="122" parent="32" name="author">
+=======
+<<<<<<< HEAD
+    <foreign-key id="121" parent="32" name="author">
+>>>>>>> master
       <ObjectId>16817</ObjectId>
+=======
+    <foreign-key id="122" parent="32" name="author">
+      <ObjectId>28212</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>userid_author</ColNames>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
@@ -764,8 +1570,17 @@
       <OnDelete>set-null</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <foreign-key id="123" parent="32" name="target">
+=======
+<<<<<<< HEAD
+    <foreign-key id="122" parent="32" name="target">
+>>>>>>> master
       <ObjectId>16822</ObjectId>
+=======
+    <foreign-key id="123" parent="32" name="target">
+      <ObjectId>28217</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>userid_target</ColNames>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
@@ -773,7 +1588,12 @@
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <column id="124" parent="33" name="publicationid">
+=======
+<<<<<<< HEAD
+    <column id="123" parent="33" name="publicationid">
+>>>>>>> master
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
@@ -825,12 +1645,75 @@
     </index>
     <key id="133" parent="33" name="publications_pkey">
       <ObjectId>16867</ObjectId>
+=======
+    <column id="124" parent="33" name="publicationid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8221</StateNumber>
+      <SequenceName>publications_publicationid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;publications_publicationid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="125" parent="33" name="body">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8221</StateNumber>
+    </column>
+    <column id="126" parent="33" name="creation_date">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8221</StateNumber>
+      <DefaultExpression>now()</DefaultExpression>
+    </column>
+    <column id="127" parent="33" name="userid">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8221</StateNumber>
+    </column>
+    <column id="128" parent="33" name="last_edit_date">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>8221</StateNumber>
+    </column>
+    <index id="129" parent="33" name="publications_pkey">
+      <ObjectId>28261</ObjectId>
+      <ColNames>publicationid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="130" parent="33" name="publications_search_idx">
+      <ObjectId>28268</ObjectId>
+      <ColNames>&#x1b;to_tsvector(&apos;english&apos;::regconfig, body)</ColNames>
+      <FunctionBased>1</FunctionBased>
+    </index>
+    <index id="131" parent="33" name="ixfk_publications_users">
+      <ObjectId>28270</ObjectId>
+      <ColNames>userid</ColNames>
+    </index>
+    <index id="132" parent="33" name="questions_updated_at">
+      <ObjectId>28269</ObjectId>
+      <ColNames>last_edit_date</ColNames>
+    </index>
+    <key id="133" parent="33" name="publications_pkey">
+      <ObjectId>28262</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>publicationid</ColNames>
       <UnderlyingIndexName>publications_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <foreign-key id="134" parent="33" name="FK_publications_users">
+=======
+<<<<<<< HEAD
+    <foreign-key id="133" parent="33" name="FK_publications_users">
+>>>>>>> master
       <ObjectId>16868</ObjectId>
+=======
+    <foreign-key id="134" parent="33" name="FK_publications_users">
+      <ObjectId>28263</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>userid</ColNames>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
@@ -838,7 +1721,12 @@
       <OnDelete>set-null</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <check id="135" parent="33" name="body_length">
+=======
+<<<<<<< HEAD
+    <check id="134" parent="33" name="body_length">
+>>>>>>> master
       <ObjectId>16862</ObjectId>
       <ColNames>body</ColNames>
       <Predicate>(char_length(body) &gt;= 10) AND (char_length(body) &lt;= 1000)</Predicate>
@@ -872,12 +1760,57 @@
     </index>
     <key id="140" parent="34" name="questioncomments_pkey">
       <ObjectId>16917</ObjectId>
+=======
+    <check id="135" parent="33" name="body_length">
+      <ObjectId>28257</ObjectId>
+      <ColNames>body</ColNames>
+      <Predicate>(char_length(body) &gt;= 10) AND (char_length(body) &lt;= 1000)</Predicate>
+    </check>
+    <trigger id="136" parent="33" name="answer_update_question_timestamp">
+      <ObjectId>28425</ObjectId>
+      <StateNumber>8251</StateNumber>
+      <Turn>before-row</Turn>
+      <Events>IU</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16679</CallRoutineId>
+    </trigger>
+    <column id="137" parent="34" name="commentid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8228</StateNumber>
+      <SequenceName>questioncomments_commentid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;questioncomments_commentid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="138" parent="34" name="questionid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8228</StateNumber>
+    </column>
+    <index id="139" parent="34" name="questioncomments_pkey">
+      <ObjectId>28311</ObjectId>
+      <ColNames>commentid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="140" parent="34" name="questioncomments_pkey">
+      <ObjectId>28312</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>commentid</ColNames>
       <UnderlyingIndexName>questioncomments_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <foreign-key id="141" parent="34" name="FK_questioncomments_comments">
+=======
+<<<<<<< HEAD
+    <foreign-key id="140" parent="34" name="FK_questioncomments_comments">
+>>>>>>> master
       <ObjectId>16918</ObjectId>
+=======
+    <foreign-key id="141" parent="34" name="FK_questioncomments_comments">
+      <ObjectId>28313</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>commentid</ColNames>
       <RefTableName>comments</RefTableName>
       <RefKeyName>comments_pkey</RefKeyName>
@@ -885,8 +1818,17 @@
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <foreign-key id="142" parent="34" name="FK_questioncomments_questions">
+=======
+<<<<<<< HEAD
+    <foreign-key id="141" parent="34" name="FK_questioncomments_questions">
+>>>>>>> master
       <ObjectId>16923</ObjectId>
+=======
+    <foreign-key id="142" parent="34" name="FK_questioncomments_questions">
+      <ObjectId>28318</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>questionid</ColNames>
       <RefTableName>questions</RefTableName>
       <RefKeyName>questions_pkey</RefKeyName>
@@ -894,7 +1836,12 @@
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <column id="143" parent="35" name="publicationid">
+=======
+<<<<<<< HEAD
+    <column id="142" parent="35" name="publicationid">
+>>>>>>> master
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
@@ -938,12 +1885,71 @@
     </index>
     <key id="150" parent="35" name="questions_pkey">
       <ObjectId>16885</ObjectId>
+<<<<<<< HEAD
+=======
+=======
+    <column id="143" parent="35" name="publicationid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8225</StateNumber>
+      <SequenceName>questions_publicationid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;questions_publicationid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="144" parent="35" name="title">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8225</StateNumber>
+    </column>
+    <column id="145" parent="35" name="categoryid">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8225</StateNumber>
+    </column>
+    <column id="146" parent="35" name="solved_date">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>8225</StateNumber>
+    </column>
+    <column id="147" parent="35" name="views_counter">
+      <Position>5</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8225</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <index id="148" parent="35" name="questions_pkey">
+      <ObjectId>28279</ObjectId>
+      <ColNames>publicationid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="149" parent="35" name="questions_question_search_idx">
+      <ObjectId>28291</ObjectId>
+      <ColNames>&#x1b;to_tsvector(&apos;english&apos;::regconfig, COALESCE(title)::text)</ColNames>
+      <FunctionBased>1</FunctionBased>
+    </index>
+    <key id="150" parent="35" name="questions_pkey">
+      <ObjectId>28280</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
+>>>>>>> master
       <ColNames>publicationid</ColNames>
       <UnderlyingIndexName>questions_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <foreign-key id="151" parent="35" name="FK_Question_Publication">
       <ObjectId>16891</ObjectId>
+=======
+<<<<<<< HEAD
+    <foreign-key id="150" parent="35" name="FK_Question_Publication">
+      <ObjectId>16891</ObjectId>
+=======
+    <foreign-key id="151" parent="35" name="FK_Question_Publication">
+      <ObjectId>28286</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
+>>>>>>> master
       <ColNames>publicationid</ColNames>
       <RefTableName>publications</RefTableName>
       <RefKeyName>publications_pkey</RefKeyName>
@@ -951,8 +1957,18 @@
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <foreign-key id="152" parent="35" name="FK_Question_Category">
       <ObjectId>16886</ObjectId>
+=======
+<<<<<<< HEAD
+    <foreign-key id="151" parent="35" name="FK_Question_Category">
+      <ObjectId>16886</ObjectId>
+=======
+    <foreign-key id="152" parent="35" name="FK_Question_Category">
+      <ObjectId>28281</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
+>>>>>>> master
       <ColNames>categoryid</ColNames>
       <RefTableName>categories</RefTableName>
       <RefKeyName>categories_pkey</RefKeyName>
@@ -960,7 +1976,12 @@
       <OnDelete>set-null</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <check id="153" parent="35" name="title_length">
+=======
+<<<<<<< HEAD
+    <check id="152" parent="35" name="title_length">
+>>>>>>> master
       <ObjectId>16883</ObjectId>
       <ColNames>title</ColNames>
       <Predicate>(char_length((title)::text) &gt;= 3) AND (char_length((title)::text) &lt;= 50)</Predicate>
@@ -979,23 +2000,66 @@
     </column>
     <index id="156" parent="36" name="questiontags_pkey">
       <ObjectId>16998</ObjectId>
+=======
+    <check id="153" parent="35" name="title_length">
+      <ObjectId>28278</ObjectId>
+      <ColNames>title</ColNames>
+      <Predicate>(char_length((title)::text) &gt;= 3) AND (char_length((title)::text) &lt;= 50)</Predicate>
+    </check>
+    <column id="154" parent="36" name="questionid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8235</StateNumber>
+    </column>
+    <column id="155" parent="36" name="tagid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8235</StateNumber>
+    </column>
+    <index id="156" parent="36" name="questiontags_pkey">
+      <ObjectId>28393</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>questionid
 tagid</ColNames>
       <Unique>1</Unique>
     </index>
+<<<<<<< HEAD
     <index id="157" parent="36" name="ixfk_questions_tags_tags">
+=======
+<<<<<<< HEAD
+    <index id="156" parent="36" name="ixfk_questions_tags_tags">
+>>>>>>> master
       <ObjectId>17010</ObjectId>
       <ColNames>tagid</ColNames>
     </index>
     <key id="158" parent="36" name="questiontags_pkey">
       <ObjectId>16999</ObjectId>
+=======
+    <index id="157" parent="36" name="ixfk_questions_tags_tags">
+      <ObjectId>28405</ObjectId>
+      <ColNames>tagid</ColNames>
+    </index>
+    <key id="158" parent="36" name="questiontags_pkey">
+      <ObjectId>28394</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>questionid
 tagid</ColNames>
       <UnderlyingIndexName>questiontags_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <foreign-key id="159" parent="36" name="Question">
+=======
+<<<<<<< HEAD
+    <foreign-key id="158" parent="36" name="Question">
+>>>>>>> master
       <ObjectId>17005</ObjectId>
+=======
+    <foreign-key id="159" parent="36" name="Question">
+      <ObjectId>28400</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>questionid</ColNames>
       <RefTableName>questions</RefTableName>
       <RefKeyName>questions_pkey</RefKeyName>
@@ -1003,8 +2067,17 @@ tagid</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <foreign-key id="160" parent="36" name="Tag">
+=======
+<<<<<<< HEAD
+    <foreign-key id="159" parent="36" name="Tag">
+>>>>>>> master
       <ObjectId>17000</ObjectId>
+=======
+    <foreign-key id="160" parent="36" name="Tag">
+      <ObjectId>28395</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>tagid</ColNames>
       <RefTableName>tags</RefTableName>
       <RefKeyName>tags_pkey</RefKeyName>
@@ -1012,7 +2085,12 @@ tagid</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <column id="161" parent="37" name="tagid">
+=======
+<<<<<<< HEAD
+    <column id="160" parent="37" name="tagid">
+>>>>>>> master
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
@@ -1033,11 +2111,39 @@ tagid</ColNames>
     </index>
     <key id="164" parent="37" name="tags_pkey">
       <ObjectId>16973</ObjectId>
+=======
+    <column id="161" parent="37" name="tagid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8232</StateNumber>
+      <SequenceName>tags_tagid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;tags_tagid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="162" parent="37" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8232</StateNumber>
+    </column>
+    <index id="163" parent="37" name="tags_pkey">
+      <ObjectId>28367</ObjectId>
+      <ColNames>tagid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="164" parent="37" name="tags_pkey">
+      <ObjectId>28368</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>tagid</ColNames>
       <UnderlyingIndexName>tags_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <check id="165" parent="37" name="valid_tag">
+=======
+<<<<<<< HEAD
+    <check id="164" parent="37" name="valid_tag">
+>>>>>>> master
       <ObjectId>16971</ObjectId>
       <ColNames>name</ColNames>
       <Predicate>(char_length((name)::text) &gt;= 3) AND (char_length((name)::text) &lt;= 30)</Predicate>
@@ -1056,23 +2162,66 @@ tagid</ColNames>
     </column>
     <index id="168" parent="38" name="userbadges_pkey">
       <ObjectId>17014</ObjectId>
+=======
+    <check id="165" parent="37" name="valid_tag">
+      <ObjectId>28366</ObjectId>
+      <ColNames>name</ColNames>
+      <Predicate>(char_length((name)::text) &gt;= 3) AND (char_length((name)::text) &lt;= 30)</Predicate>
+    </check>
+    <column id="166" parent="38" name="userid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8237</StateNumber>
+    </column>
+    <column id="167" parent="38" name="badgeid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8237</StateNumber>
+    </column>
+    <index id="168" parent="38" name="userbadges_pkey">
+      <ObjectId>28409</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>userid
 badgeid</ColNames>
       <Unique>1</Unique>
     </index>
+<<<<<<< HEAD
     <index id="169" parent="38" name="ixfk_user_badges">
+=======
+<<<<<<< HEAD
+    <index id="168" parent="38" name="ixfk_user_badges">
+>>>>>>> master
       <ObjectId>17026</ObjectId>
       <ColNames>badgeid</ColNames>
     </index>
     <key id="170" parent="38" name="userbadges_pkey">
       <ObjectId>17015</ObjectId>
+=======
+    <index id="169" parent="38" name="ixfk_user_badges">
+      <ObjectId>28421</ObjectId>
+      <ColNames>badgeid</ColNames>
+    </index>
+    <key id="170" parent="38" name="userbadges_pkey">
+      <ObjectId>28410</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>userid
 badgeid</ColNames>
       <UnderlyingIndexName>userbadges_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <foreign-key id="171" parent="38" name="User">
+=======
+<<<<<<< HEAD
+    <foreign-key id="170" parent="38" name="User">
+>>>>>>> master
       <ObjectId>17021</ObjectId>
+=======
+    <foreign-key id="171" parent="38" name="User">
+      <ObjectId>28416</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>userid</ColNames>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
@@ -1080,8 +2229,17 @@ badgeid</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <foreign-key id="172" parent="38" name="Badge">
+=======
+<<<<<<< HEAD
+    <foreign-key id="171" parent="38" name="Badge">
+>>>>>>> master
       <ObjectId>17016</ObjectId>
+=======
+    <foreign-key id="172" parent="38" name="Badge">
+      <ObjectId>28411</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>badgeid</ColNames>
       <RefTableName>badges</RefTableName>
       <RefKeyName>badges_pkey</RefKeyName>
@@ -1089,7 +2247,12 @@ badgeid</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <column id="173" parent="39" name="roleid">
+=======
+<<<<<<< HEAD
+    <column id="172" parent="39" name="roleid">
+>>>>>>> master
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
@@ -1110,11 +2273,39 @@ badgeid</ColNames>
     </index>
     <key id="176" parent="39" name="userroles_pkey">
       <ObjectId>16770</ObjectId>
+=======
+    <column id="173" parent="39" name="roleid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8211</StateNumber>
+      <SequenceName>userroles_roleid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;userroles_roleid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="174" parent="39" name="name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8211</StateNumber>
+    </column>
+    <index id="175" parent="39" name="userroles_pkey">
+      <ObjectId>28164</ObjectId>
+      <ColNames>roleid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="176" parent="39" name="userroles_pkey">
+      <ObjectId>28165</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>roleid</ColNames>
       <UnderlyingIndexName>userroles_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <check id="177" parent="39" name="user_role">
+=======
+<<<<<<< HEAD
+    <check id="176" parent="39" name="user_role">
+>>>>>>> master
       <ObjectId>16768</ObjectId>
       <ColNames>name</ColNames>
       <Predicate>(name)::text = ANY ((ARRAY[&apos;Admin&apos;::character varying, &apos;Editor&apos;::character varying, &apos;Authenticated&apos;::character varying])::text[])</Predicate>
@@ -1197,12 +2388,106 @@ badgeid</ColNames>
     </index>
     <key id="192" parent="40" name="users_pkey">
       <ObjectId>16795</ObjectId>
+=======
+    <check id="177" parent="39" name="user_role">
+      <ObjectId>28163</ObjectId>
+      <ColNames>name</ColNames>
+      <Predicate>(name)::text = ANY ((ARRAY[&apos;Admin&apos;::character varying, &apos;Editor&apos;::character varying, &apos;Authenticated&apos;::character varying])::text[])</Predicate>
+    </check>
+    <column id="178" parent="40" name="userid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8213</StateNumber>
+      <SequenceName>users_userid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;users_userid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="179" parent="40" name="username">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8213</StateNumber>
+    </column>
+    <column id="180" parent="40" name="email">
+      <Position>3</Position>
+      <DataType>varchar(70)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8213</StateNumber>
+    </column>
+    <column id="181" parent="40" name="password">
+      <Position>4</Position>
+      <DataType>varchar(256)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8213</StateNumber>
+    </column>
+    <column id="182" parent="40" name="fullname">
+      <Position>5</Position>
+      <DataType>varchar(200)|0</DataType>
+      <StateNumber>8213</StateNumber>
+    </column>
+    <column id="183" parent="40" name="about">
+      <Position>6</Position>
+      <DataType>varchar(500)|0</DataType>
+      <StateNumber>8213</StateNumber>
+    </column>
+    <column id="184" parent="40" name="website">
+      <Position>7</Position>
+      <DataType>varchar(150)|0</DataType>
+      <StateNumber>8213</StateNumber>
+    </column>
+    <column id="185" parent="40" name="signup_date">
+      <Position>8</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8213</StateNumber>
+      <DefaultExpression>(&apos;now&apos;::text)::date</DefaultExpression>
+    </column>
+    <column id="186" parent="40" name="last_login">
+      <Position>9</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>8213</StateNumber>
+    </column>
+    <column id="187" parent="40" name="locationid">
+      <Position>10</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>8213</StateNumber>
+    </column>
+    <column id="188" parent="40" name="roleid">
+      <Position>11</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>8213</StateNumber>
+    </column>
+    <index id="189" parent="40" name="users_pkey">
+      <ObjectId>28189</ObjectId>
+      <ColNames>userid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="190" parent="40" name="users_username">
+      <ObjectId>28201</ObjectId>
+      <ColNames>username</ColNames>
+    </index>
+    <index id="191" parent="40" name="users_email">
+      <ObjectId>28202</ObjectId>
+      <ColNames>email</ColNames>
+    </index>
+    <key id="192" parent="40" name="users_pkey">
+      <ObjectId>28190</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>userid</ColNames>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <foreign-key id="193" parent="40" name="FK_User_Location">
+=======
+<<<<<<< HEAD
+    <foreign-key id="192" parent="40" name="FK_User_Location">
+>>>>>>> master
       <ObjectId>16796</ObjectId>
+=======
+    <foreign-key id="193" parent="40" name="FK_User_Location">
+      <ObjectId>28191</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>locationid</ColNames>
       <RefTableName>locations</RefTableName>
       <RefKeyName>locations_pkey</RefKeyName>
@@ -1210,8 +2495,17 @@ badgeid</ColNames>
       <OnDelete>set-null</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <foreign-key id="194" parent="40" name="FK_User_UserRole">
+=======
+<<<<<<< HEAD
+    <foreign-key id="193" parent="40" name="FK_User_UserRole">
+>>>>>>> master
       <ObjectId>16801</ObjectId>
+=======
+    <foreign-key id="194" parent="40" name="FK_User_UserRole">
+      <ObjectId>28196</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>roleid</ColNames>
       <RefTableName>userroles</RefTableName>
       <RefKeyName>userroles_pkey</RefKeyName>
@@ -1219,7 +2513,12 @@ badgeid</ColNames>
       <OnDelete>set-null</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <check id="195" parent="40" name="valid_username">
+=======
+<<<<<<< HEAD
+    <check id="194" parent="40" name="valid_username">
+>>>>>>> master
       <ObjectId>16788</ObjectId>
       <ColNames>username</ColNames>
       <Predicate>(char_length((username)::text) &gt;= 1) AND (char_length((username)::text) &lt; 20)</Predicate>
@@ -1241,11 +2540,40 @@ badgeid</ColNames>
     </check>
     <check id="199" parent="40" name="valid_date">
       <ObjectId>16786</ObjectId>
+=======
+    <check id="195" parent="40" name="valid_username">
+      <ObjectId>28183</ObjectId>
+      <ColNames>username</ColNames>
+      <Predicate>(char_length((username)::text) &gt;= 1) AND (char_length((username)::text) &lt; 20)</Predicate>
+    </check>
+    <check id="196" parent="40" name="valid_email">
+      <ObjectId>28185</ObjectId>
+      <ColNames>email</ColNames>
+      <Predicate>(char_length((email)::text) &gt;= 6) AND (char_length((email)::text) &lt;= 50)</Predicate>
+    </check>
+    <check id="197" parent="40" name="valid_password">
+      <ObjectId>28182</ObjectId>
+      <ColNames>password</ColNames>
+      <Predicate>(char_length((password)::text) &gt;= 6) AND (char_length((password)::text) &lt; 256)</Predicate>
+    </check>
+    <check id="198" parent="40" name="valid_fullname">
+      <ObjectId>28184</ObjectId>
+      <ColNames>fullname</ColNames>
+      <Predicate>(char_length((fullname)::text) &gt;= 6) AND (char_length((fullname)::text) &lt;= 50)</Predicate>
+    </check>
+    <check id="199" parent="40" name="valid_date">
+      <ObjectId>28181</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>last_login
 signup_date</ColNames>
       <Predicate>last_login &gt; signup_date</Predicate>
     </check>
+<<<<<<< HEAD
     <column id="200" parent="41" name="voteid">
+=======
+<<<<<<< HEAD
+    <column id="199" parent="41" name="voteid">
+>>>>>>> master
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
@@ -1283,12 +2611,61 @@ signup_date</ColNames>
     </index>
     <key id="206" parent="41" name="votes_pkey">
       <ObjectId>16983</ObjectId>
+=======
+    <column id="200" parent="41" name="voteid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8233</StateNumber>
+      <SequenceName>votes_voteid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;votes_voteid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="201" parent="41" name="values">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8233</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="202" parent="41" name="publicationid">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8233</StateNumber>
+    </column>
+    <column id="203" parent="41" name="userid">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8233</StateNumber>
+    </column>
+    <index id="204" parent="41" name="votes_pkey">
+      <ObjectId>28377</ObjectId>
+      <ColNames>voteid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="205" parent="41" name="ixfk_user_votes">
+      <ObjectId>28389</ObjectId>
+      <ColNames>userid</ColNames>
+    </index>
+    <key id="206" parent="41" name="votes_pkey">
+      <ObjectId>28378</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>voteid</ColNames>
       <UnderlyingIndexName>votes_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <foreign-key id="207" parent="41" name="FK_Vote_Publication">
+=======
+<<<<<<< HEAD
+    <foreign-key id="206" parent="41" name="FK_Vote_Publication">
+>>>>>>> master
       <ObjectId>16984</ObjectId>
+=======
+    <foreign-key id="207" parent="41" name="FK_Vote_Publication">
+      <ObjectId>28379</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>publicationid</ColNames>
       <RefTableName>publications</RefTableName>
       <RefKeyName>publications_pkey</RefKeyName>
@@ -1296,8 +2673,17 @@ signup_date</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <foreign-key id="208" parent="41" name="FK_Vote_User">
+=======
+<<<<<<< HEAD
+    <foreign-key id="207" parent="41" name="FK_Vote_User">
+>>>>>>> master
       <ObjectId>16989</ObjectId>
+=======
+    <foreign-key id="208" parent="41" name="FK_Vote_User">
+      <ObjectId>28384</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>userid</ColNames>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
@@ -1305,7 +2691,12 @@ signup_date</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <check id="209" parent="41" name="vote_values">
+=======
+<<<<<<< HEAD
+    <check id="208" parent="41" name="vote_values">
+>>>>>>> master
       <ObjectId>16981</ObjectId>
       <ColNames>values</ColNames>
       <Predicate>(&quot;values&quot; = 0) OR (&quot;values&quot; = 1) OR (&quot;values&quot; = &apos;-1&apos;::integer)</Predicate>
@@ -1341,12 +2732,59 @@ signup_date</ColNames>
     </index>
     <key id="214" parent="42" name="warnings_pkey">
       <ObjectId>16836</ObjectId>
+=======
+    <check id="209" parent="41" name="vote_values">
+      <ObjectId>28376</ObjectId>
+      <ColNames>values</ColNames>
+      <Predicate>(&quot;values&quot; = 0) OR (&quot;values&quot; = 1) OR (&quot;values&quot; = &apos;-1&apos;::integer)</Predicate>
+    </check>
+    <trigger id="210" parent="41" name="auto_rank_up">
+      <ObjectId>28422</ObjectId>
+      <StateNumber>8245</StateNumber>
+      <Turn>after-row</Turn>
+      <Events>IU</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>24883</CallRoutineId>
+    </trigger>
+    <trigger id="211" parent="41" name="own_content_vote_trigger">
+      <ObjectId>28423</ObjectId>
+      <StateNumber>8247</StateNumber>
+      <Turn>after-row</Turn>
+      <Events>IU</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>24885</CallRoutineId>
+    </trigger>
+    <column id="212" parent="42" name="warningid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>8219</StateNumber>
+      <SequenceName>warnings_warningid_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;warnings_warningid_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <index id="213" parent="42" name="warnings_pkey">
+      <ObjectId>28230</ObjectId>
+      <ColNames>warningid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="214" parent="42" name="warnings_pkey">
+      <ObjectId>28231</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>warningid</ColNames>
       <UnderlyingIndexName>warnings_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <foreign-key id="215" parent="42" name="FK_warnings_modregisters">
+=======
+<<<<<<< HEAD
+    <foreign-key id="214" parent="42" name="FK_warnings_modregisters">
+>>>>>>> master
       <ObjectId>16837</ObjectId>
+=======
+    <foreign-key id="215" parent="42" name="FK_warnings_modregisters">
+      <ObjectId>28232</ObjectId>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
       <ColNames>warningid</ColNames>
       <RefTableName>modregisters</RefTableName>
       <RefKeyName>modregisters_pkey</RefKeyName>
@@ -1354,7 +2792,12 @@ signup_date</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
+<<<<<<< HEAD
     <trigger id="216" parent="42" name="auto_ban_on_warning_limit">
+=======
+<<<<<<< HEAD
+    <trigger id="215" parent="42" name="auto_ban_on_warning_limit">
+>>>>>>> master
       <ObjectId>17037</ObjectId>
       <StateNumber>778</StateNumber>
       <Turn>after-row</Turn>
@@ -1414,7 +2857,53 @@ signup_date</ColNames>
       <Position>1</Position>
       <DataType>integer|0</DataType>
     </argument>
+<<<<<<< HEAD
     <argument id="230" parent="48">
+=======
+=======
+    <trigger id="216" parent="42" name="auto_ban_on_warning_limit">
+      <ObjectId>28424</ObjectId>
+      <StateNumber>8249</StateNumber>
+      <Turn>after-row</Turn>
+      <Events>I</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16677</CallRoutineId>
+    </trigger>
+    <argument id="217" parent="43" name="qid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="218" parent="43">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(answerid integer, body text, solved_date timestamp, creation_date timestamp, userid integer, username varchar)|0</DataType>
+    </argument>
+    <argument id="219" parent="44">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0</DataType>
+    </argument>
+    <argument id="220" parent="45" name="puser_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="221" parent="45">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="222" parent="46" name="aid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="223" parent="46">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(publicationid integer, body text, creation_date timestamp, userid integer, username varchar)|0</DataType>
+    </argument>
+    <argument id="224" parent="47" name="qid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
+    <argument id="225" parent="47">
+>>>>>>> master
       <ArgumentDirection>T</ArgumentDirection>
       <DataType>table(publicationid integer, body text, creation_date timestamp, userid integer, username varchar)|0</DataType>
     </argument>
@@ -1434,7 +2923,12 @@ signup_date</ColNames>
       <ArgumentDirection>T</ArgumentDirection>
       <DataType>table(publicationid integer, title varchar, body text, creation_date timestamp, solved_date timestamp, username varchar, userid integer, answers_count bigint, upvotes bigint, votes_count bigint, views_counter bigint)|0</DataType>
     </argument>
+<<<<<<< HEAD
     <argument id="235" parent="50" name="questionid">
+=======
+<<<<<<< HEAD
+    <argument id="230" parent="49" name="questionid">
+>>>>>>> master
       <Position>1</Position>
       <DataType>integer|0</DataType>
     </argument>
@@ -1662,7 +3156,254 @@ signup_date</ColNames>
       <Position>1</Position>
       <DataType>integer|0</DataType>
     </argument>
+<<<<<<< HEAD
     <argument id="292" parent="72">
+=======
+    <argument id="287" parent="71">
+=======
+    <argument id="230" parent="49" name="skip">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="231" parent="49" name="limitnumber">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="232" parent="49">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(userid integer, role varchar, username varchar, email varchar)|0</DataType>
+    </argument>
+    <argument id="233" parent="50" name="questionid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="234" parent="50">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>varchar|0</DataType>
+    </argument>
+    <argument id="235" parent="51" name="userid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="236" parent="51" name="answerid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="237" parent="51" name="body">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+    </argument>
+    <argument id="238" parent="51">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0</DataType>
+    </argument>
+    <argument id="239" parent="52" name="userid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="240" parent="52" name="questionid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="241" parent="52" name="body">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+    </argument>
+    <argument id="242" parent="52">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0</DataType>
+    </argument>
+    <argument id="243" parent="53" name="body">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+    </argument>
+    <argument id="244" parent="53" name="userid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="245" parent="53" name="title">
+      <Position>3</Position>
+      <DataType>varchar|0</DataType>
+    </argument>
+    <argument id="246" parent="53" name="categoryid">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="247" parent="53">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0</DataType>
+    </argument>
+    <argument id="248" parent="54">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0</DataType>
+    </argument>
+    <argument id="249" parent="55" name="pquestion_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="250" parent="55">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(id integer, user_id integer, username varchar, body text, created_at timestamp)|0</DataType>
+    </argument>
+    <argument id="251" parent="56" name="pubid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="252" parent="56">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(publicationid integer, title varchar, body text, creation_date timestamp, solved_date timestamp, username varchar, userid integer, answers_count bigint, upvotes bigint, down_votes bigint, views_counter bigint, category varchar)|0</DataType>
+    </argument>
+    <argument id="253" parent="57" name="pquestion_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="254" parent="57">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(tag varchar)|0</DataType>
+    </argument>
+    <argument id="255" parent="58" name="skip">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="256" parent="58" name="limitnumber">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="257" parent="58">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(publicationid integer, title varchar, body text, creation_date timestamp, solved_date timestamp, username varchar, userid integer, answers_count bigint, upvotes bigint, votes_count bigint, views_counter bigint)|0</DataType>
+    </argument>
+    <argument id="258" parent="59" name="psearch">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+    </argument>
+    <argument id="259" parent="59">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(questionid integer)|0</DataType>
+    </argument>
+    <argument id="260" parent="60" name="skip">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="261" parent="60" name="limitnumber">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="262" parent="60">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(publicationid integer, title varchar, body text, creation_date timestamp, solved_date timestamp, username varchar, userid integer, answers_count bigint, upvotes bigint, votes_count bigint, views_counter bigint)|0</DataType>
+    </argument>
+    <argument id="263" parent="61">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(username varchar, count_votes_rating_received integer, count_questions integer, count_answers integer, count_comments integer)|0</DataType>
+    </argument>
+    <argument id="264" parent="62">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0</DataType>
+    </argument>
+    <argument id="265" parent="63">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0</DataType>
+    </argument>
+    <argument id="266" parent="64" name="skip">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="267" parent="64" name="limitnumber">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="268" parent="64">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(publicationid integer, title varchar, body text, creation_date timestamp, solved_date timestamp, username varchar, userid integer, answers_count bigint, upvotes bigint, votes_count bigint, views_counter bigint)|0</DataType>
+    </argument>
+    <argument id="269" parent="65" name="body_edited">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+    </argument>
+    <argument id="270" parent="65" name="questionid">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="271" parent="65" name="title_edited">
+      <Position>3</Position>
+      <DataType>varchar|0</DataType>
+    </argument>
+    <argument id="272" parent="65" name="categoryid_edited">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="273" parent="65">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0</DataType>
+    </argument>
+    <argument id="274" parent="66" name="uid">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="275" parent="66" name="full_name">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+    </argument>
+    <argument id="276" parent="66" name="e_mail">
+      <Position>3</Position>
+      <DataType>varchar|0</DataType>
+    </argument>
+    <argument id="277" parent="66" name="location">
+      <Position>4</Position>
+      <DataType>varchar|0</DataType>
+    </argument>
+    <argument id="278" parent="66" name="about_user">
+      <Position>5</Position>
+      <DataType>text|0</DataType>
+    </argument>
+    <argument id="279" parent="66">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0</DataType>
+    </argument>
+    <argument id="280" parent="67">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0</DataType>
+    </argument>
+    <argument id="281" parent="68" name="puser_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="282" parent="68">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(fullname varchar, username varchar, email varchar, about varchar, location varchar, role varchar, created_at date, count_votes_rating_received integer, count_questions bigint, count_answers bigint, count_votes_made bigint)|0</DataType>
+    </argument>
+    <argument id="283" parent="69" name="puser_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="284" parent="69">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(publicationid integer, title varchar, body text, solved_date timestamp, creation_date timestamp, last_edit_date timestamp, count_answers bigint)|0</DataType>
+    </argument>
+    <argument id="285" parent="70" name="puser_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="286" parent="70">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="287" parent="71" name="puser_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="288" parent="71">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="289" parent="72" name="puser_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="290" parent="72">
+>>>>>>> 2a57e62f6a1391338ac98ad359d5daa915555a2b
+>>>>>>> master
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>integer|0</DataType>
     </argument>

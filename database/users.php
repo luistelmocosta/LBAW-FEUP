@@ -1,11 +1,14 @@
 <?php
 
-function getUsers() {
+function getUsersPag($page = 0) {
     global $conn;
-    $query = $conn->prepare("SELECT * FROM  users ORDER BY userid DESC");
-    $query->execute();
+    $limit = 4;
+    $skip = $limit * $page;
+    $stmt = $conn->prepare("SELECT * FROM get_users_pag(:skip, :limit)");
+    $stmt->execute(['limit' => $limit, 'skip' => $skip]);
+    $rows = $stmt->fetchAll();
 
-    return $query->fetchAll();
+    return $rows;
 }
 
 /**

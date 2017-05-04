@@ -6,7 +6,7 @@ session_start();
 error_reporting(E_ERROR | E_WARNING);
 
 //LOCAL
-$BASE_DIR = '/app/'; //CHANGE WITH YOURS
+$BASE_DIR = '/home/alexandre/GitHub/LBAW-FEUP/'; //CHANGE WITH YOURS
 $BASE_URL = '/';
 
 //GNOMO
@@ -14,19 +14,11 @@ $BASE_URL = '/';
 //$BASE_URL = '/~lbaw1641/proto/'; //FIXME
 
 //Connect to the database
-
-$url = parse_url(getenv("DATABASE_URL"));
-$server = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$db = substr($url["path"], 1);
-
-
 try {
-    $dbuser = 'gxcvigzpyhxwfs'; //CHANGE WITH YOUR INFO
-    $dbpass = '8cebb71c4d18585c1f9412dac4422321bdc46947b79ac6841ab2eb1382f087d1';
-    $host = 'ec2-23-21-169-238.compute-1.amazonaws.com';
-    $dbname = 'd3ckbumqouov21';
+    $dbuser = 'alexandre'; //CHANGE WITH YOUR INFO
+    $dbpass = '123';
+    $host = 'localhost';
+    $dbname = 'lbaw';
 
     /* GNOMO
     $dbuser = 'lbaw1641';

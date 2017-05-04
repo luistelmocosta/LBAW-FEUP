@@ -40,7 +40,7 @@
     <br class = "clearfix">
 
 
-    {HTML::script('askme/question.js')}
+    {HTML::script('question.js')}
 
     </body>
     </html>
