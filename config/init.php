@@ -23,10 +23,10 @@ $db = substr($url["path"], 1);
 
 
 try {
-    $dbuser = $username; //CHANGE WITH YOUR INFO
-    $dbpass = $password;
-    $host = $server;
-    $dbname = $db;
+    $dbuser = 'gxcvigzpyhxwfs'; //CHANGE WITH YOUR INFO
+    $dbpass = '8cebb71c4d18585c1f9412dac4422321bdc46947b79ac6841ab2eb1382f087d1';
+    $host = 'ec2-23-21-169-238.compute-1.amazonaws.com';
+    $dbname = 'd3ckbumqouov21';
 
     /* GNOMO
     $dbuser = 'lbaw1641';
