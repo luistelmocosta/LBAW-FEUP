@@ -1,6 +1,6 @@
 #ignore compiled templates folder
 templates_c
-.idea/inspectionProfiles/
+.idea
 composer.phar
 controller/api/users/
 controller/pages/comments/
