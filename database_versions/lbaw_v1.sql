@@ -335,7 +335,7 @@ BEGIN
         INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 1) ON CONFLICT DO NOTHING;
     END IF;
     IF count_vote_rating_received_user(target_user) = 3 THEN
-        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 2) ON CONFLICT DO NOTHING;;
+        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 2) ON CONFLICT DO NOTHING;
     END IF;
     IF count_vote_rating_received_user(target_user) = 15 THEN
         INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 3) ON CONFLICT DO NOTHING;
@@ -852,4 +852,6 @@ BEGIN
     return questions_count;
 END
 $$;
+
+
 

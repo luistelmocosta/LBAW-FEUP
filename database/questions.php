@@ -223,3 +223,9 @@ function get_questions_w_body(){
 
     return $rows;
 }
+
+function mark_question_as_solved($qid) {
+    global $conn;
+    $stmt = $conn->prepare("UPDATE questions SET solved_date= NOW() WHERE publicationid=:qid");
+    $stmt->execute(['qid' => $qid]);
+}
