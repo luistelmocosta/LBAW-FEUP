@@ -30,7 +30,7 @@ if ($result == 0) {
 // Already vote up
 if ($result == 1) {
     if($values == 1) {
-        delete_vote($publicationid);
+        delete_vote($publicationid, $values);
         $output = 1;
     }
     if($values == -1) {
@@ -40,7 +40,7 @@ if ($result == 1) {
 //Already vote up
 if ($result == -1) {
     if($values == -1) {
-        delete_vote($publicationid);
+        delete_vote($publicationid, $values);
         $output = 0;
     }
     if($values == 1) {

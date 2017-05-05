@@ -18,6 +18,7 @@ $(document).ready(function () {
         e.stopPropagation();
         console.log("voting up");
         var parent = $(this).parent();
+        var voteType = parent.data('type');
         var voteId = parent.data('id');
         console.log(voteId);
         var url = parent.data('url');

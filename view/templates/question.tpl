@@ -48,11 +48,23 @@
                                         var voteId = parent.data('id');
                                         var url = parent.data('url');
 
-                                        $.get(url + '?type=' + voteType + '&id=' + voteId + '&value=-1', function (data) {
+                                        $.get(url + '?id=' + voteId + '&value=-1', function (data) {
                                             data = JSON.parse(data);
                                             setVotingStatus(parent, data.result);
                                         });
                                     });
+
+                                    function setVotingStatus(object, result) {
+                                        object.find('.increment').removeClass('active');
+
+                                        if (result == 1) {
+                                            object.find('.increment.up').addClass('active');
+                                        }
+
+                                        if (result == -1) {
+                                            object.find('.increment.down').addClass('active');
+                                        }
+                                    }
 
                                     $(".question-solved").on('click', function () {
                                         console.log("Hello");
@@ -228,7 +240,4 @@
     </div>
 </div>
 
-
-{HTML::script('vote.js')}
 {HTML::script('question.js')}
-

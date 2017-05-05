@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-
-
     $(".question-solved").on('click', function () {
         console.log("Hello");
 
