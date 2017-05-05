@@ -6,7 +6,7 @@ session_start();
 error_reporting(E_ERROR | E_WARNING);
 
 //LOCAL
-$BASE_DIR = '/home/luiscosta/PhpstormProjects/LBAW-FEUP/'; //CHANGE WITH YOURS
+$BASE_DIR = '/app/'; //CHANGE WITH YOURS
 $BASE_URL = '/';
 
 //GNOMO
@@ -15,10 +15,10 @@ $BASE_URL = '/';
 
 //Connect to the database
 try {
-    $dbuser = 'luiscosta'; //CHANGE WITH YOUR INFO
-    $dbpass = '123';
-    $host = 'localhost';
-    $dbname = 'lbaw';
+    $dbuser = 'gxcvigzpyhxwfs'; //CHANGE WITH YOUR INFO
+    $dbpass = '8cebb71c4d18585c1f9412dac4422321bdc46947b79ac6841ab2eb1382f087d1';
+    $host = 'ec2-23-21-169-238.compute-1.amazonaws.com';
+    $dbname = 'd3ckbumqouov21';
 
     /* GNOMO
     $dbuser = 'lbaw1641';
