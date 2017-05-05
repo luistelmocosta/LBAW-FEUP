@@ -37,6 +37,8 @@ try {
     header("Location: $BASE_URL" . 'controller/pages/users/signup.php');
 }
 
+$user = getUserByUsername($username);
+
 $_SESSION['username'] = $username;
 $_SESSION['logged_in'] = true;
 $_SESSION['user'] = $user;
