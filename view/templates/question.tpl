@@ -1,4 +1,5 @@
 <title>{$question['title']}</title>
+<br>
 <div class="clearfix qa-main">
     <div class="home-left-inner">
         <div class="col-md-8">
@@ -14,57 +15,14 @@
 
 
                             <div class = "options pull-right " style = "margin-bottom:5px;">
-                                <a href="{editQuestionUrl($question['publicationid'])}" class = "btn edit-question {if !$isMine}hidden{/if}">Edit</a>
                                 <br class="clearfix">
 
                                 {include file="question_partials/vote_panel.tpl"}
 
-                                <button class = "btn btn-success btn-xs question-solved{if $question['solved_date']} hidden{/if}"
+                                <button class = "btn btn-success question-solved{if $question['solved_date'] || !$isMine} hidden{/if}"
                                         data-url="{questionSolvedUrl('')}">Mark as solved</button>
 
                                 <script>
-
-                                    $(".increment.up").on('click', function (e) {
-                                        e.stopPropagation();
-                                        console.log("voting up");
-                                        var parent = $(this).parent();
-                                        var voteId = parent.data('id');
-                                        console.log(voteId);
-                                        var url = parent.data('url');
-                                        console.log(url);
-                                        $.get(url + '?id=' + voteId + '&value=1', function (data) {
-                                            data = JSON.parse(data);
-                                            setVotingStatus(parent, data.result);
-                                        });
-
-
-                                    });
-
-                                    $(".increment.down").on('click', function (e) {
-                                        e.stopPropagation();
-                                        console.log("voting down");
-                                        var parent = $(this).parent();
-                                        var voteType = parent.data('type');
-                                        var voteId = parent.data('id');
-                                        var url = parent.data('url');
-
-                                        $.get(url + '?id=' + voteId + '&value=-1', function (data) {
-                                            data = JSON.parse(data);
-                                            setVotingStatus(parent, data.result);
-                                        });
-                                    });
-
-                                    function setVotingStatus(object, result) {
-                                        object.find('.increment').removeClass('active');
-
-                                        if (result == 1) {
-                                            object.find('.increment.up').addClass('active');
-                                        }
-
-                                        if (result == -1) {
-                                            object.find('.increment.down').addClass('active');
-                                        }
-                                    }
 
                                     $(".question-solved").on('click', function () {
                                         console.log("Hello");
@@ -91,13 +49,12 @@
 
 
                             <div class="question-meta">
+                                <a href="{editQuestionUrl($question['publicationid'])}" class = "btn {if !$isMine}hidden{/if}">Edit</a>
                                 {if $question['solved_date']}
                                     <button class="post-status open">Solved</button>
                                 {else}
                                     <button class="question-solved post-status closed">Not Solved</button>
                                 {/if}
-
-
                                 <span class="q-view-a-count">{$question['answers_count']} Answers</span>
                                 <span class="icon-eye-open q-view-v-count">{$question['views_counter']} Views</span>
                                 <a class="cat-in fa fa-folder" href="">{$question['category']}</a>
@@ -241,3 +198,4 @@
 </div>
 
 {HTML::script('question.js')}
+{HTML::script('vote.js')}
