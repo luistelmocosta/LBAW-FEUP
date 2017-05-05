@@ -22,7 +22,7 @@ $(document).ready(function () {
         console.log(voteId);
         var url = parent.data('url');
 
-        $.get(url + '?type=' + voteType + '&id=' + voteId + '&value=1', function (data) {
+        $.get(url + '?id=' + voteId + '&value=1', function (data) {
             data = JSON.parse(data);
             setVotingStatus(parent, data.result);
         });
@@ -36,7 +36,7 @@ $(document).ready(function () {
         var voteId = parent.data('id');
         var url = parent.data('url');
 
-        $.get(url + '?type=' + voteType + '&id=' + voteId + '&value=-1', function (data) {
+        $.get(url + '?id=' + voteId + '&value=-1', function (data) {
             data = JSON.parse(data);
             setVotingStatus(parent, data.result);
         });

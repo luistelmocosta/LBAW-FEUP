@@ -228,9 +228,7 @@
     </div>
 </div>
 
-<<<<<<< HEAD
-{HTML::script('askme/vote.js')}
-{HTML::script('askme/question.js')}
-=======
+
 {HTML::script('vote.js')}
->>>>>>> master
+{HTML::script('question.js')}
+
