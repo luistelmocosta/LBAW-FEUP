@@ -34,6 +34,7 @@ try {
     $_SESSION['success_messages'][] = 'Login Successful!';
 
 
+
     redirect();
 
 } catch (PDOException $e) {

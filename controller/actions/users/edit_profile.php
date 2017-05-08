@@ -6,6 +6,10 @@ PagePermissions::create('auth')->check();
 
 $userid = auth_user('userid');
 $user = userProfile($userid)[0];
+$photo = $_FILES['file'];
+$extension = end(explode(".", $photo["name"]));
+
+
 
 if(!$_POST['fullname'])
     $fullname = $user['fullname'];
@@ -33,6 +37,7 @@ $update_user = [
 
 try {
     update_user_profile($update_user);
+    move_uploaded_file($photo["tmp_name"], $BASE_DIR . "images/users/" . $user['username'] . '.' . $extension); // this is dangerous
 
     redirect('controller/pages/users/profile.php');
 
