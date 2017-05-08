@@ -88,7 +88,7 @@
                     {foreach $users as $user}
                         <tr id="userid">
                             <td id="usr">{$user['username']}</td>
-                            <td>{$user['roleid']}</td>
+                            <td>{$user['name']}</td>
                             <td>{$user['email']}</td>
 
                             <td>

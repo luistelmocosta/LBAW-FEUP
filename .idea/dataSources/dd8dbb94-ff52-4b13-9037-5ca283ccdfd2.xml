@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-05-08.20:59:09.320</IntrospectionTimestamp>
-      <IntrospectionStateNumber>9975</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-05-09.00:29:51.990</IntrospectionTimestamp>
+      <IntrospectionStateNumber>10730</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -249,10 +249,10 @@
       <ReturnsSet>1</ReturnsSet>
     </routine>
     <routine id="49" parent="3" name="get_users_pag">
-      <ObjectId>29007</ObjectId>
-      <StateNumber>9975</StateNumber>
+      <ObjectId>36036</ObjectId>
+      <StateNumber>10730</StateNumber>
       <ArgumentsDefinition>skip integer, limitnumber integer</ArgumentsDefinition>
-      <ResultsDefinition>TABLE(userid integer, roleid integer, username character varying, email character varying)</ResultsDefinition>
+      <ResultsDefinition>TABLE(userid integer, name character varying, username character varying, email character varying)</ResultsDefinition>
       <LanguageName>plpgsql</LanguageName>
       <RoutineKind>function</RoutineKind>
       <ReturnsSet>1</ReturnsSet>
@@ -1423,7 +1423,7 @@ signup_date</ColNames>
     </argument>
     <argument id="232" parent="49">
       <ArgumentDirection>T</ArgumentDirection>
-      <DataType>table(userid integer, roleid integer, username varchar, email varchar)|0</DataType>
+      <DataType>table(userid integer, name varchar, username varchar, email varchar)|0</DataType>
     </argument>
     <argument id="233" parent="50" name="questionid">
       <Position>1</Position>
