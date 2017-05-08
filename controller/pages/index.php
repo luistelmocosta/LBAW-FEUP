@@ -10,6 +10,8 @@ if($_SESSION['logged_in']) {
     $smarty->display('common/header.tpl');
 }
 
+
+
 $tabs = [
     ['recent', 'Recent Questions'],
     ['unanswered', 'Unanswered Questions'],
@@ -20,6 +22,16 @@ $recent_questions = recent_questions();
 $unanswered_questions = unanswered_questions();
 $top_scored_questions = top_scored_questions();
 $top_scored_users = top_scored_users();
+
+foreach ($top_scored_users as $key => $top_user) {
+    unset($photo);
+    if (file_exists($BASE_DIR.'images/users/'.$top_user['username'].'.png'))
+        $photo = '/images/users/'.$top_user['username'].'.png';
+    if (file_exists($BASE_DIR.'images/users/'.$top_user['username'].'.jpg'))
+        $photo = '/images/users/'.$top_user['username'].'.jpg';
+    if (!$photo) $photo = '/images/person-flat.png';
+    $top_scored_users[$key]['photo'] = $photo;
+}
 
 $smarty->assign('tabs', $tabs);
 $smarty->assign('top_scored_users', $top_scored_users);

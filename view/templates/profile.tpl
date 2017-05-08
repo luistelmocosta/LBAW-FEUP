@@ -1,12 +1,16 @@
 <title>{$user['username']}'s Profile</title>
 <div style="padding-top:30px;"> </div>
+<br class="clearfix">
+<br class="clearfix">
+<br class="clearfix">
+<br class="clearfix">
 <div id="site-body" class="container">
     <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="media">
                     <div align="center">
-                        <img class="thumbnail img-responsive" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="300px" height="300px">
+                        <img class="thumbnail img-responsive" src="{$AVATAR}" width="300px" height="300px">
                     </div>
                     <h2><strong>{$user['fullname']}</strong></h2>
                     <div class="media-body">
