@@ -241,3 +241,27 @@ function getNumQuestions(){
 
     return $stmt->fetchAll();
 }
+
+function getNumAnswers(){
+    global $conn;
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM answers");
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
+function getNumComments(){
+    global $conn;
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM comments");
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
+function getNumUnsolved(){
+    global $conn;
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM questions WHERE questions.solved_date IS null");
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}

@@ -1,17 +1,32 @@
 $(document).ready(function () {
-    siteStatus();
+
+    siteStats();
     usersStats();
+
 });
 
-function siteStatus() {
-    var ctx = document.getElementById("siteStatus");
+function siteStats() {
+    var jsonUrl = "../../../javascript/json/siteStatsData.json";
+
+    var siteData=[];
+
+    $.ajax({
+        url: jsonUrl,
+        dataType: 'json',
+        async: false,
+        success: function(data) {
+            siteData = data;
+        }
+    });
+
+    var ctx = document.getElementById("siteStats");
 
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ["Questions", "Answers", "Comments", "Unanswered"],
+            labels: ["Questions", "Answers", "Comments", "Unsolved"],
             datasets: [{
-                data: [15, 10, 3, 5],
+                data: siteData,
                 backgroundColor: [
                     'rgba(255, 64, 64, 1)',
                     'rgba(64, 64, 255, 1)',
@@ -50,10 +65,23 @@ function siteStatus() {
             responsive: false
         }
     });
-
 }
 
 function usersStats() {
+
+    var jsonUrl = "../../../javascript/json/userStatsData.json";
+
+    var usersData = [];
+
+    $.ajax({
+        url: jsonUrl,
+        dataType: 'json',
+        async: false,
+        success: function(data) {
+            usersData = data;
+        }
+    });
+
     var ctx = document.getElementById("usersStats");
 
     var myChart = new Chart(ctx, {
@@ -61,7 +89,7 @@ function usersStats() {
         data: {
             labels: ["Registered", "Editors", "Admins"],
             datasets: [{
-                data: [15, 10, 3, 5],
+                data: usersData,
                 backgroundColor: [
                     'rgba(255, 64, 64, 1)',
                     'rgba(64, 64, 255, 1)',

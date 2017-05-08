@@ -114,22 +114,22 @@
                         <a href="?upage=1" class="qa-page-next">«« first</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?upage={$upage-1}" class="qa-page-link">« back</a>
+                        <a href="?upage={$upage-1}&qpage={$qpage}" class="qa-page-link">« back</a>
                     </li>
                     <li class="qa-page-links-item">
                         <span class="qa-page-selected">{$upage}</span>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?upage={$upage+1}" class="qa-page-link">{$upage+1}</a>
+                        <a href="?upage={$upage+1}&qpage={$qpage}" class="qa-page-link">{$upage+1}</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?upage={$upage+2}" class="qa-page-link">{$upage+2}</a>
+                        <a href="?upage={$upage+2}&qpage={$qpage}" class="qa-page-link">{$upage+2}</a>
                     </li>
                     <li class="qa-page-links-item" >
-                        <a href="?upage={$upage+1}" class="qa-page-next">next »</a>
+                        <a href="?upage={$upage+1}&qpage={$qpage}" class="qa-page-next">next »</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?upage={$upages}" class="qa-page-link">last »»</a>
+                        <a href="?upage={$upages}&qpage={$qpage}" class="qa-page-link">last »»</a>
                     </li>
                 </ul>
 
@@ -180,25 +180,25 @@
 
                 <ul class="pagination clearfix">
                     <li class="qa-page-links-item">
-                        <a href="?qpage=1" class="qa-page-next">«« first</a>
+                        <a href="?upage={$upage}&qpage=1" class="qa-page-next">«« first</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?qpage={$qpage-1}" class="qa-page-link">« back</a>
+                        <a href="?upage={$upage}&qpage={$qpage-1}" class="qa-page-link">« back</a>
                     </li>
                     <li class="qa-page-links-item">
                         <span class="qa-page-selected">{$qpage}</span>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?qpage={$qpage+1}" class="qa-page-link">{$qpage+1}</a>
+                        <a href="?upage={$upage}&qpage={$qpage+1}" class="qa-page-link">{$qpage+1}</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?qpage={$qpage+2}" class="qa-page-link">{$qpage+2}</a>
+                        <a href="?upage={$upage}&qpage={$qpage+2}" class="qa-page-link">{$qpage+2}</a>
                     </li>
                     <li class="qa-page-links-item" >
-                        <a href="?qpage={$qpage+1}" class="qa-page-next">next »</a>
+                        <a href="?upage={$upage}&qpage={$qpage+1}" class="qa-page-next">next »</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?qpage={$qpages}" class="qa-page-link">last »»</a>
+                        <a href="?upage={$upage}&qpage={$qpages}" class="qa-page-link">last »»</a>
                     </li>
                 </ul>
             </div>
@@ -207,7 +207,7 @@
 
         <div class="panel panel-default">
             <h3 style="padding-left: 10px">Status</h3>
-            <canvas id="siteStatus" width="350" height="300" style="padding-left: 10px; display: inline-block">
+            <canvas id="siteStats" width="350" height="300" style="padding-left: 10px; display: inline-block">
             </canvas>
             <canvas id="usersStats" width="350" height="300" style="padding-left: 10px; display: inline-block">
             </canvas>

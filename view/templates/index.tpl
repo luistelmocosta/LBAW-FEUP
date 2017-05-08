@@ -110,8 +110,7 @@
                     <br>
                     <div class="widget status" >
                         <h3 class="widget-title">Site Status</h3>
-                        <canvas id="siteStatus" width="350" height="300" style="padding-left: 10px">
-
+                        <canvas id="siteStats" width="350" height="300" style="padding-left: 10px">
                         </canvas>
                     </div>
                 </div>

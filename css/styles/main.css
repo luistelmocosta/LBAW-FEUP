@@ -2,6 +2,8 @@ html body {
     background: #eee;
     color: #888;
     font-size: 13px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 *, *:before, *:after {
