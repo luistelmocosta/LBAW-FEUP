@@ -12,7 +12,9 @@
                     <div class="question-head">
                         <div class="big-s-avatar avatar">
                             <a href="">
-                                <img src="http://www.gravatar.com/avatar/86017f9989f66cb2e36be0714634acaa?s=70">
+
+                                <img width="60"
+                                     height="60" class="qa-avatar-image" src="{$photo}">
                             </a>
                         </div>
                         <div class="no-overflow">

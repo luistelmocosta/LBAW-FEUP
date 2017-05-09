@@ -18,8 +18,19 @@ $question['voted'] = publication_is_voted($_GET['question']);
 $question['isMine'] = question_is_mine($question);
 $answers = get_answers_from_questionid($_GET['question']);
 
+
+    unset($photo);
+    if (file_exists($BASE_DIR.'images/users/'.$question['username'].'.png'))
+        $photo = '/images/users/'.$question['username'].'.png';
+    if (file_exists($BASE_DIR.'images/users/'.$question['username'].'.jpg'))
+        $photo = '/images/users/'.$question['username'].'.jpg';
+    if (!$photo) $photo = '/images/person-flat.png';
+
+
+
 $smarty->assign('isMine', $question['isMine']);
 $smarty->assign('tags', $tags);
+$smarty->assign('photo', $photo);
 $smarty->assign('answers', $answers);
 $smarty->assign('question', $question);
 $smarty->display('question.tpl');
