@@ -1,4 +1,4 @@
-<title>Admin's Page</title>
+<title xmlns="http://www.w3.org/1999/html">Admin's Page</title>
 <div style="padding-top:30px;"> </div>
 <div id="site-body" class="container">
     <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
@@ -75,7 +75,7 @@
                     </div>
                 </form>
 
-                <table class="table table-bordered table-responsive table-compact table-collapsing" id="usersPag">
+                <table id="users" class="table table-bordered table-responsive table-compact table-collapsing" id="usersPag">
                     <tbody>
                     <th>Username</th>
                     <th>Role</th>
@@ -92,16 +92,24 @@
                             <td>{$user['email']}</td>
 
                             <td>
-                                <a <span class="fa fa-info" href={profileUrl($user['userid'])}></span></a>
+                                <a <span class="glyphicon glyphicon-info-sign" href={profileUrl($user['userid'])}></span></a>
                             </td>
 
-                            <td>
-                                <a <button class="fa fa-warning" href="#"></button></a>
-                            </td>
+                            <form name="warnUsr" method="post" action="">
+                                <td id="warnUsr">
+                                    <button type="submit" class="btn-default btn-sm ">
+                                        <i class="glyphicon glyphicon-warning-sign"></i>
+                                    </button>
+                                </td>
+                            </form>
 
-                            <td>
-                                <a <button class="fa fa-ban" href="#"></button></a>
-                            </td>
+                            <form name="banUsr" method="post" action="">
+                                <td id="banUsr">
+                                    <button type="submit" class="btn-default btn-sm ">
+                                        <i class="glyphicon glyphicon-ban-circle"></i>
+                                    </button>
+                                </td>
+                            </form>
 
                         </tr>
                     {/foreach}
@@ -111,13 +119,13 @@
 
                 <ul class="pagination clearfix">
                     <li class="qa-page-links-item">
-                        <a href="?upage=1" class="qa-page-next">«« first</a>
+                        <a href="?upage=1" class="qa-page-next">«« 1</a>
                     </li>
                     <li class="qa-page-links-item">
                         <a href="?upage={$upage-1}&qpage={$qpage}" class="qa-page-link">« back</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <span class="qa-page-selected">{$upage}</span>
+                        <a href="#" class="qa-page-selected qa-page-link">{$upage}</a>
                     </li>
                     <li class="qa-page-links-item">
                         <a href="?upage={$upage+1}&qpage={$qpage}" class="qa-page-link">{$upage+1}</a>
@@ -129,7 +137,7 @@
                         <a href="?upage={$upage+1}&qpage={$qpage}" class="qa-page-next">next »</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?upage={$upages}&qpage={$qpage}" class="qa-page-link">last »»</a>
+                        <a href="?upage={$upages}&qpage={$qpage}" class="qa-page-link">{$upages} »»</a>
                     </li>
                 </ul>
 
@@ -153,7 +161,7 @@
                     </div>
                 </form>
 
-                <table class="table table-bordered table-responsive table-compact table-collapsing">
+                <table id="quests" class="table table-bordered table-responsive table-compact table-collapsing">
                     <tbody>
                     <th>Title</th>
                     <th>Author</th>
@@ -162,16 +170,19 @@
                     <th>Delete</th>
 
                     {foreach $questions as $question}
-                        <tr id={$question['publicationid']}>
+                        <tr class="questTable" id={$question['publicationid']}>
                             <td>{$question['title']}</td>
                             <td>{$question['username']}</td>
-
                             <td>
-                                <a <span class="fa fa-info" href={questionUrl($question['publicationid'])}></span></a>
+                                <a <span class="glyphicon glyphicon-info-sign" href={questionUrl($question['publicationid'])}></span></a>
                             </td>
-                            <td>
-                                <a <button class="fa fa-ban"></button></a>
-                            </td>
+                            <form name="delQuest" method="post" action="{$BASE_URL}controller/api/admin/delete_publication.php">
+                                <td id="delQuest">
+                                    <button type="submit" class="btn-default btn-sm ">
+                                        <i class="glyphicon glyphicon-remove-circle"></i>
+                                    </button>
+                                </td>
+                            </form>
                         </tr>
                     {/foreach}
 
@@ -180,13 +191,13 @@
 
                 <ul class="pagination clearfix">
                     <li class="qa-page-links-item">
-                        <a href="?upage={$upage}&qpage=1" class="qa-page-next">«« first</a>
+                        <a href="?upage={$upage}&qpage=1" class="qa-page-next">«« 1</a>
                     </li>
                     <li class="qa-page-links-item">
                         <a href="?upage={$upage}&qpage={$qpage-1}" class="qa-page-link">« back</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <span class="qa-page-selected">{$qpage}</span>
+                        <a href="#" class="qa-page-selected qa-page-link">{$qpage}</a>
                     </li>
                     <li class="qa-page-links-item">
                         <a href="?upage={$upage}&qpage={$qpage+1}" class="qa-page-link">{$qpage+1}</a>
@@ -198,7 +209,7 @@
                         <a href="?upage={$upage}&qpage={$qpage+1}" class="qa-page-next">next »</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="?upage={$upage}&qpage={$qpages}" class="qa-page-link">last »»</a>
+                        <a href="?upage={$upage}&qpage={$qpages}" class="qa-page-link">{$qpages} »»</a>
                     </li>
                 </ul>
             </div>

@@ -1,2 +1,5 @@
 #ignore compiled templates folder
 templates_c
+
+#ignore json files
+json

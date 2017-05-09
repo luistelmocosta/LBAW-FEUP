@@ -12,6 +12,9 @@ $user = userProfile($userid)[0];
 $numUsers = getNumUsers()[0]['count'];
 $numQuest = getNumQuestions()[0]['count'];
 
+
+//PAGINATION
+
 // How many info will be displayed per table
 $limit = 4;
 
@@ -26,7 +29,7 @@ else $upage = 1;
 
 if(isset($_GET['qpage']) && ($_GET['qpage'] > 0 && $_GET['qpage'] < ($qpages + 1)))
     $qpage = $_GET['qpage'];
-else $qpage = 0;
+else $qpage = 1;
 
 // Calculate the offset for the query
 $uoffset = ($upage - 1)  * $limit;
@@ -34,7 +37,10 @@ $qoffset = ($qpage - 1)  * $limit;
 
 // Get data
 $users = getUsersPag($uoffset, $limit);
-$questions = recent_questions($qpage);
+$questions = getQuestionsPag($qoffset, $limit);
+
+
+//STATS
 
 $numAns = getNumAnswers()[0]['count'];
 $numComm = getNumComments()[0]['count'];
@@ -53,6 +59,8 @@ $USArr = [$numUsers, $numEdit, $numAdmins];
 $USdata = json_encode($USArr);
 file_put_contents($BASE_DIR . 'javascript/json/userStatsData.json', $USdata);
 
+
+//SMARTY
 
 $smarty->assign('user', $user);
 $smarty->assign('users', $users);

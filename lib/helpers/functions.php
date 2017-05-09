@@ -64,7 +64,7 @@ function answerUrl($answer_id)
 
 function profileUrl($user_id)
 {
-    return url('controller/pages/users/profile', ['user' => $user_id]);
+    return url('controller/pages/users/profile', ['userid' => $user_id]);
 }
 
 function old($name, $default = '')

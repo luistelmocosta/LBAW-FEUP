@@ -265,3 +265,9 @@ function getNumUnsolved(){
 
     return $stmt->fetchAll();
 }
+
+function delete_question($questionid) {
+    global $conn;
+    $query = $conn->prepare("DELETE FROM questions WHERE questions.publicationid = :questionid");
+    $query->execute([':questionid' => $questionid]);
+}

@@ -12,8 +12,8 @@ if($_SESSION['logged_in']) {
     $smarty->display('common/narrow_header.tpl');
 }
 
-if(isset($_GET['user']))
-    $userid = $_GET['user'];
+if(isset($_GET['userid']))
+    $userid = $_GET['userid'];
 else $userid = auth_user('userid');
 
 $user = userProfile($userid)[0];

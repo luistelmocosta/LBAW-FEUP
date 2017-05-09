@@ -3,7 +3,14 @@ $(document).ready(function () {
     siteStats();
     usersStats();
 
+    $(".questTable button").click(function (e) {
+        e.preventDefault();
+        $.post("../../api/admin/delete_publication.php", { id: $(".questTable").attr('id') }, function() {
+         window.location.reload();
+         });
+    });
 });
+
 
 function siteStats() {
     var jsonUrl = "../../../javascript/json/siteStatsData.json";
