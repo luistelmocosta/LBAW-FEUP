@@ -1,10 +1,22 @@
 <div class="qa-a-item-main">
     <div class="asker-detail clearfix">
-
-        <div class="user-info no-overflow">
-            <h3 class="asker-name"></h3>
-            <p class="asker-point"> <span class="title"></span></p>
+        <div class="asker-avatar avatar"><a href="../user/admin">
+                <img width="40"
+                     height="40" class="qa-avatar-image" src="{$answer['user_photo']}">
+            </a>
         </div>
+        <div class="user-info no-overflow">
+            <h3 class="asker-name">
+                {$answer['username']}
+            </h3>
+            <p class="asker-point">
+                {$answer['answer_user_points']} points
+            </p>
+            <span class="title" style="background: #EEEEEE;">{$answer['role']}</span>
+        </div>
+
+
+
         {include file="question_partials/vote_panel.tpl"}
         <form method="post" action="">
             <div class="qa-a-selection">
@@ -13,6 +25,7 @@
             <input name="qa_click" value="" type="hidden">
         </form>
     </div>
+
     <div class="a-item-inner-wrap">
         <div class="a-item-wrap">
             <div class="qa-a-item-content">
