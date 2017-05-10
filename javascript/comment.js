@@ -2,18 +2,16 @@ $('.comment-form').hide();
 var commentsFetched = false;
 
 $("body").on("click", ".show-textarea", function(){
+
     var answerid = $(this).data('answer');
-    var $commentForm = $(this).closest('.comment-form');
+    var $commentForm = $(this).parent().find('.comment-form').first();
     console.log(answerid);
-    if (commentsFetched) { // check the flag
-        return;
-    }
     $.getJSON("/controller/api/comments/comment.php", {
         answerid : answerid
     }, function (data) {
+        $commentForm.find('article').remove();
         console.log("AID " + answerid);
         console.log("Data" + data);
-        commentsFetched = true;
         $.each(data, function(i, comment) {
             console.log("Comment:" + comment);
             $commentForm.append('<article class="tweet-data">' +
@@ -50,7 +48,7 @@ $("body").on("click", ".show-textarea", function(){
                 '</div> ' +
                 '</div> <!-- END qa-c-item --> ' +
                 '</div> ' +
-                '</div>');
+                '</div></article>');
         });
     });
 
