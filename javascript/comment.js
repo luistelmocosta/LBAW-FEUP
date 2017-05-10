@@ -1,38 +1,22 @@
-$(".textarea, .textarea-ok").hide();
+$('.comment-form').hide();
+var commentsFetched = false;
 
-$("body").on("click", ".showarea", function(){
-    $(this).show();
-});
-
-$("body").on("click", ".textarea-ok, .cancel", function(){
-    $(this).hide();
-});
-
-
-/*function checkForNewComments() {
- $.getJSON("/controller/api/comments/comment.php", function(data) {
- console.log(data);
- });
- }
-
- function initCommentReloader() {
- $('#showarea').on('click', 'a', function() {
- $.getJSON("/controller/api/comments/comment.php", {answerid: answerid}, function(data) {
- $.each(data, function(i, comment) {
- console.log(comment.body);
- });
- });
- });
- }*/
-
-$("#showarea").click(function() {
-
+$("body").on("click", ".show-textarea", function(){
+    var answerid = $(this).data('answer');
+    var $commentForm = $(this).closest('.comment-form');
+    console.log(answerid);
+    if (commentsFetched) { // check the flag
+        return;
+    }
     $.getJSON("/controller/api/comments/comment.php", {
         answerid : answerid
     }, function (data) {
+        console.log("AID " + answerid);
+        console.log("Data" + data);
+        commentsFetched = true;
         $.each(data, function(i, comment) {
-            console.log(comment);
-            $('#textarea').before('<article class="tweet-data">' +
+            console.log("Comment:" + comment);
+            $commentForm.append('<article class="tweet-data">' +
                 '<div class="comment-items">' +
                 '<div class="qa-c-list-item  hentry comment" id="c3574">' +
                 '<div class="asker-avatar">' +
@@ -69,4 +53,11 @@ $("#showarea").click(function() {
                 '</div>');
         });
     });
+
+    $commentForm.show();
+});
+
+$("body").on("click", ".textarea-ok, .textarea-cancel", function(){
+    commentsFetched = false;
+    $('.comment-form').hide();
 });

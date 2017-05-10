@@ -32,7 +32,7 @@
                 <a name="187"></a><div class="entry-content">{$answer['body']}</div>
             </div>
             <span class="qa-a-item-meta">
-                    <a href="../184/how-to-install-this-theme?show=187#a187" class="qa-a-item-what">answered</a>
+                    answered
                     <span class="qa-a-item-when">
                         <span class="qa-a-item-when-data">
                             <span class="published">
@@ -45,12 +45,11 @@
                     </span>
                 </span>
             <div class="post-button clearfix">
-                <button class="btn icon-chat showarea" title="Add a comment on this answer"
-                        type="button" id="showarea" name="showarea" value="Show Textarea"
-                        data-answer={$answer['publicationid']}>
-                    Comment</button>
-                <div id="textarea">
-                    {include file="comment_form.tpl"}
+                <div class="post-button clearfix">
+                    <button class="btn icon-chat show-textarea" title="Add a comment on this answer" type="button" data-answer="{$answer['answerid']}">Comment</button>
+                    <div class="textarea">
+                        {include file="comment_form.tpl"}
+                    </div>
                 </div>
             </div>
 
@@ -60,9 +59,4 @@
     </div>
 
 </div>
-<script>
-    answerid = {$answer['answerid']};
-    console.log(answerid);
-
-</script>
 {HTML::script('comment.js')}

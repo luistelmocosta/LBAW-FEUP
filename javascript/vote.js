@@ -10,7 +10,6 @@ $(document).ready(function () {
             $.get(url + '?id=' + voteId, function (data) {
 
                 data = JSON.parse(data);
-                console.log(data);
                 if(data.rating.get_publication_rating === null)
                     current.html(0);
                 else
