@@ -33,7 +33,7 @@ if ($result == 0) {
 if ($result == 1) {
     if($values == 1) {
         delete_vote($publicationid, $values); //already voted like, pressed like -> remove like
-        $output = 1;
+        $output = 0;
     }
     if($values == -1) { //already voted like, voted unlike -> updates like
         update_vote($publicationid, $values);

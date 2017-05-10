@@ -3,7 +3,7 @@
         <div class="increment up{if $question['voted'] == 1} active{/if}"></div>
         <div class="increment down{if $question['voted'] == -1} active{/if}"></div>
 
-        <div class="count vote-count value" data-url="{url('api/votes/refresh_votes')}">
+        <div class="count vote-count value" data-url="{url('controller/api/votes/refresh_votes')}">
             {$question['upvotes']}
         </div>
     </div>

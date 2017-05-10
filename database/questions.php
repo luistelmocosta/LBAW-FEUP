@@ -39,7 +39,7 @@ function get_categoryID_by_name($category) {
 
 function get_publication_rating($pubid) {
     global $conn;
-    $query=$conn->prepare("SELECT * FROM get_publication_rating(:pubid)");
+    $query=$conn->prepare("SELECT get_publication_rating FROM get_publication_rating(:pubid)");
     $query->execute(array($pubid));
 
 
