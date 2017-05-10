@@ -1154,6 +1154,12 @@ div.tab button.active {
     line-height: 25px;
 }
 
+.qa-c-item-meta {
+    color: #777777;
+    font-size: 12px;
+    text-transform: lowercase;
+}
+
 .qa-q-view-tag-list li {
     display: inline-block;
 }
@@ -1207,6 +1213,10 @@ div.tab button.active {
 
 .a-item-inner-wrap {
     overflow: hidden;
+}
+
+.qa-user-link {
+    color: #2e6da4;
 }
 
 .qa-a-item-main {

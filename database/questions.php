@@ -229,3 +229,13 @@ function mark_question_as_solved($qid) {
     $stmt = $conn->prepare("UPDATE questions SET solved_date= NOW() WHERE publicationid=:qid");
     $stmt->execute(['qid' => $qid]);
 }
+
+function answer_score($aid) {
+    global $conn;
+    $query=$conn->prepare("SELECT * FROM answer_ranking(:aid)");
+    $query->execute(array($aid));
+
+
+    return $query->fetch();
+
+}

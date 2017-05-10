@@ -907,3 +907,19 @@ BEGIN
 END
 $func$  LANGUAGE plpgsql;
 
+CREATE OR REPLACE FUNCTION answer_ranking(aid INT)
+LANGUAGE plpgsql
+AS $$
+DECLARE publicationvotecount INTEGER;
+BEGIN
+    SELECT SUM(votes.values) FROM votes WHERE votes.publicationid = aid
+    INTO publicationvotecount;
+
+    IF publicationvotecount is null THEN
+        publicationvotecount := 0;
+    END IF;
+
+    return publicationvotecount;
+END
+$$;
+

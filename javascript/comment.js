@@ -2,7 +2,6 @@ $(".textarea, .textarea-ok").hide();
 
 $("body").on("click", ".showarea", function(){
     $(this).show();
-    $(this).stopPropagation();
 });
 
 $("body").on("click", ".textarea-ok, .cancel", function(){
@@ -32,13 +31,15 @@ $("#showarea").click(function() {
         answerid : answerid
     }, function (data) {
         $.each(data, function(i, comment) {
-
+            console.log(comment);
             $('#textarea').before('<article class="tweet-data">' +
                 '<div class="comment-items">' +
                 '<div class="qa-c-list-item  hentry comment" id="c3574">' +
                 '<div class="asker-avatar">' +
-                '<a href="../user/lbaw1641">' +
-                '<img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=30"></a>' +
+                '<a>' +
+                '<img width="40" height="40" src="' +
+                comment.user_photo +
+                '"></a>' +
                 '</div>' +
                 '<div class="qa-c-wrap">' +
                 '<div class="post-button">' +
@@ -46,24 +47,19 @@ $("#showarea").click(function() {
                 '<button name="" class="btn icon-answers" title="Reply to this comment" type="submit">reply</button>' +
                 '</div>' +
                 '<span class="qa-c-item-meta">' +
-                '<a href="" class="qa-c-item-what">commented</a>'+
-                '<span class="qa-c-item-when">' +
-                '<span class="qa-c-item-when-data"><span class="published">' +
-                '<span class="value-title" title="2017-04-21T00:27:53+0000">' +
-                '</span> 1 day</span></span><span class="qa-c-item-when-pad"> ago</span> ' +
-                '</span> ' +
-                '<span class="qa-c-item-who"> ' +
-                '<span class="qa-c-item-who-pad">by </span> ' +
-                '<span class="qa-c-item-who-data"><span class="vcard author">' +
-                '<a href="" class="qa-user-link url nickname">' +
+                'commented' +
+                ' 1 day' +
+                ' ago' +
+                ' by ' +
+                '<a style="display: inline" href="" class="qa-user-link url nickname">' +
                 comment.username +
-                '</a></span></span> ' +
+                '</a> ' +
                 '<span class="qa-c-item-who-points"> ' +
                 '<span class="qa-c-item-who-points-pad">(</span><span class="qa-c-item-who-points-data">140</span><span class="qa-c-item-who-points-pad"> points)</span> ' +
                 '</span> ' +
                 '</span> ' +
                 '</span> ' +
-                '<div class="qa-c-item-content"> ' +
+                '<div class="qa-c-item-content" style="color: #2d2727; font-size: 13px"> ' +
                 '<a name="3574"></a><div class="entry-content">' +
                 comment.body +
                 '</div> ' +

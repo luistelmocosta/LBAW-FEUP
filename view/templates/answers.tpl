@@ -17,7 +17,7 @@
 
 
 
-        {include file="question_partials/vote_panel.tpl"}
+        {include file="answers_partials/vote_panel.tpl"}
         <form method="post" action="">
             <div class="qa-a-selection">
             </div>
@@ -46,7 +46,8 @@
                 </span>
             <div class="post-button clearfix">
                 <button class="btn icon-chat showarea" title="Add a comment on this answer"
-                        type="button" id="showarea" name="showarea" value="Show Textarea" data-answer={$answer['publicationid']}>
+                        type="button" id="showarea" name="showarea" value="Show Textarea"
+                        data-answer={$answer['publicationid']}>
                     Comment</button>
                 <div id="textarea">
                     {include file="comment_form.tpl"}
