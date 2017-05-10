@@ -38,8 +38,28 @@ function banUser($adminid, $userid){
     $stmt = $conn->prepare("INSERT INTO modregisters(reason, userid_author, userid_target) VALUES ('Offensive Speech', $adminid, $userid)");
     $stmt->execute();
 
-    $banID = getNumBans()[0]['count'] + 1;
+    $banID = getNumModReg()[0]['count'];
     $stmt2 = $conn->prepare("INSERT INTO bans(banid, end_date) VALUES ($banID, '2018-03-29 01:05:00')");
     $stmt2->execute();
 }
 
+function ban_info($userid){
+
+    global $conn;
+    $query = $conn->prepare("SELECT * FROM modregisters INNER JOIN bans ON modregisters.modregisterid = bans.banid WHERE userid_target = $userid");
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function unBanUser($userid){
+
+    $ban = ban_info($userid);
+
+    $banID = $ban[0]['banid'];
+
+    global $conn;
+
+    $stmt2 = $conn->prepare("DELETE FROM bans WHERE bans.banid = $banID");
+    $stmt2->execute();
+}

@@ -8,12 +8,8 @@ PagePermissions::create('auth')->check();
 $userid = auth_user('userid');
 $user = userProfile($userid)[0];
 
-try {
+$targid = $_POST['uid'];
 
-    banUser($userid, 1);
-    redirect('controller/pages/admin/admin.php');
+banUser($userid, intval($targid));
 
-} catch (PDOException $e) {
-    dd($e->getMessage());
-    $_SESSION['error_messages'][] = "Your input is incorrect";
-}
+echo json_encode($targid);

@@ -75,7 +75,7 @@
                     </div>
                 </form>
 
-                <table id="users" class="table table-bordered table-responsive table-compact table-collapsing" id="usersPag">
+                <table id="users" class="table table-bordered table-responsive table-compact table-collapsing">
                     <tbody>
                     <th>Username</th>
                     <th>Role</th>
@@ -86,8 +86,8 @@
                     <th style="text-align: center">Ban</th>
 
                     {foreach $users as $user}
-                        <tr id="userid">
-                            <td id="usr">{$user['username']}</td>
+                        <tr class="usersTable" id={$user['userid']}>
+                            <td id="usr">{$user['userid']}</td>
                             <td>{$user['name']}</td>
                             <td>{$user['email']}</td>
 
@@ -103,12 +103,14 @@
                                 </td>
                             </form>
 
-                            <form name="banUsr" method="post" action="{$BASE_URL}controller/actions/admin/ban_user.php">
+                            <form name="banUsr" method="post" action="{$BASE_URL}controller/api/admin/ban_user.php">
                                 <td id="banUsr" style="text-align: center">
-                                    <input type="hidden" name="banUsrInp" value="{$user['userid']}">
-                                    <button type="submit" name="banUsrBtn" class="btn-default btn-sm" style="font-size: 15px">
-                                        <i class="glyphicon glyphicon-ban-circle"></i>
-                                    </button>
+
+                                    <label class="switch">
+                                        <input id="ban" type="checkbox">
+                                        <div class="slider round"></div>
+                                    </label>
+
                                 </td>
                             </form>
 

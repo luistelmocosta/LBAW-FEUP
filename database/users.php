@@ -117,3 +117,12 @@ function top_scored_users() {
 
     return $query->fetchAll();
 }
+
+function check_ban($userid){
+
+    global $conn;
+    $query = $conn->prepare("SELECT COUNT(*) FROM modregisters INNER JOIN bans ON modregisters.modregisterid = bans.banid WHERE userid_target = $userid");
+    $query->execute();
+
+    return $query->fetchAll();
+}

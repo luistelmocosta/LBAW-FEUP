@@ -9,6 +9,37 @@ $(document).ready(function () {
             window.location.reload();
         });
     });
+
+    $(".usersTable #ban").click(function (e) {
+        //e.preventDefault();
+        var checkbox = $(this);
+
+        if(checkbox.is(':checked')){
+
+            //BAN
+
+            $.post("../../api/admin/ban_user.php", { uid: $(this).closest('tr').attr('id') }, function() {
+                checkbox.attr("checked", true);
+                console.log(checkbox.closest('tr').attr('id') + " state: " + checkbox.is(':checked'));
+            });
+
+            console.log("BANNED");
+        }
+
+        else {
+            //UNBAN
+
+            $.post("../../api/admin/un_ban_user.php", {uid: $(this).closest('tr').attr('id')}, function () {
+                checkbox.attr("checked", false);
+                console.log(checkbox.closest('tr').attr('id') + " state: " + checkbox.is(':checked'));
+            });
+
+            console.log("UNBANNED");
+        }
+
+    });
+
+
 });
 
 
