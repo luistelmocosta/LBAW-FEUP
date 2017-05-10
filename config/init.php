@@ -65,6 +65,13 @@ $smarty->assign('SUCCESS_MESSAGES',	$_SESSION['success_messages']);
 $smarty->assign('FORM_VALUES',	$_SESSION['form_values']);
 $smarty->assign('USERNAME',	$_SESSION['username']);
 
+if (file_exists($BASE_DIR.'/images/users/'.$_SESSION['username'].'.png'))
+    $photo_profile = '/images/users/'.$_SESSION['username'].'.png';
+if (file_exists($BASE_DIR.'/images/users/'.$_SESSION['username'].'.jpg'))
+    $photo_profile = '/images/users/'.$_SESSION['username'].'.jpg';
+if (!$photo_profile) $photo_profile = '/images/person-flat.png';
+
+$smarty->assign('AVATAR',	$photo_profile);
 $_SESSION['logged_in'] = isset($_SESSION['logged_in']) ? $_SESSION['logged_in'] : false;
 $smarty->assign('LOGGED_IN', $_SESSION['logged_in']);
 
