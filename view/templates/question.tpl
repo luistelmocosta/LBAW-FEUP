@@ -81,13 +81,13 @@
 
                                         <div class="qa-post-meta">
                                             <span class="qa-q-item-meta">
-                                                <a href="" class="qa-q-item-what">asked</a>
+                                                asked
                                                 <span class="qa-q-item-when">
                                                     <span class="qa-q-item-when-data"><span class="published"><span class="value-title" title="2016-06-06T11:13:09+0000"></span>{$question['creation_date']}</span></span>
                                                 </span>
                                                 <span class="qa-q-item-who">
                                                     <span class="qa-q-item-who-pad">by </span>
-                                                    <span class="qa-q-item-who-data"><span class="vcard author"><a href="../user/cusatxpress" class="qa-user-link url nickname">{$question['username']}</a></span></span>
+                                                    <span class="qa-q-item-who-data"><span class="vcard author"><a style="display: inline;" href="" class="qa-user-link url nickname">{$question['username']}</a></span></span>
                                                 </span>
                                             </span>
                                             <div class="question-tags">

@@ -13,6 +13,7 @@ include_once($BASE_DIR . 'database/comments.php');
 
 $answer_comments = get_answer_comments($_GET['answerid']);
 
+
 foreach ($answer_comments as $key => $answer_comment) {
     if (file_exists($BASE_DIR.'/images/users/'.$answer_comments[$key]['username'].'.png'))
         $photo_comment = '/images/users/'.$answer_comments[$key]['username'].'.png';
