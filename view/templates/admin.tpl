@@ -103,9 +103,10 @@
                                 </td>
                             </form>
 
-                            <form name="banUsr" method="post" action="">
+                            <form name="banUsr" method="post" action="{$BASE_URL}controller/actions/admin/ban_user.php">
                                 <td id="banUsr" style="text-align: center">
-                                    <button type="submit" class="btn-default btn-sm" style="font-size: 15px">
+                                    <input type="hidden" name="banUsrInp" value="{$user['userid']}">
+                                    <button type="submit" name="banUsrBtn" class="btn-default btn-sm" style="font-size: 15px">
                                         <i class="glyphicon glyphicon-ban-circle"></i>
                                     </button>
                                 </td>

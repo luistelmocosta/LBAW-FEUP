@@ -8,22 +8,6 @@ function getNumUsers(){
     return $stmt->fetchAll();
 }
 
-function getNumEditors(){
-    global $conn;
-    $stmt = $conn->prepare("SELECT COUNT(*) FROM users WHERE roleid = 3");
-    $stmt->execute();
-
-    return $stmt->fetchAll();
-}
-
-function getNumAdmins(){
-    global $conn;
-    $stmt = $conn->prepare("SELECT COUNT(*) FROM users WHERE roleid = 2");
-    $stmt->execute();
-
-    return $stmt->fetchAll();
-}
-
 function users_pag($page = 0)
 {
     global $conn;

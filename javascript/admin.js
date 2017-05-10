@@ -6,8 +6,8 @@ $(document).ready(function () {
     $(".questTable button").click(function (e) {
         e.preventDefault();
         $.post("../../api/admin/delete_publication.php", { id: $(this).closest('tr').attr('id') }, function() {
-         window.location.reload();
-         });
+            window.location.reload();
+        });
     });
 });
 
