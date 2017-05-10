@@ -81,9 +81,9 @@
                     <th>Role</th>
                     <th>Email</th>
 
-                    <th>Info</th>
-                    <th>Warn</th>
-                    <th>Ban</th>
+                    <th style="text-align: center">Info</th>
+                    <th style="text-align: center">Warn</th>
+                    <th style="text-align: center">Ban</th>
 
                     {foreach $users as $user}
                         <tr id="userid">
@@ -91,21 +91,21 @@
                             <td>{$user['name']}</td>
                             <td>{$user['email']}</td>
 
-                            <td>
+                            <td style="text-align: center">
                                 <a <span class="glyphicon glyphicon-info-sign" href={profileUrl($user['userid'])}></span></a>
                             </td>
 
                             <form name="warnUsr" method="post" action="">
-                                <td id="warnUsr">
-                                    <button type="submit" class="btn-default btn-sm ">
+                                <td id="warnUsr" style="text-align: center">
+                                    <button type="submit" class="btn-default btn-sm" style="font-size: 15px">
                                         <i class="glyphicon glyphicon-warning-sign"></i>
                                     </button>
                                 </td>
                             </form>
 
                             <form name="banUsr" method="post" action="">
-                                <td id="banUsr">
-                                    <button type="submit" class="btn-default btn-sm ">
+                                <td id="banUsr" style="text-align: center">
+                                    <button type="submit" class="btn-default btn-sm" style="font-size: 15px">
                                         <i class="glyphicon glyphicon-ban-circle"></i>
                                     </button>
                                 </td>
@@ -166,19 +166,19 @@
                     <th>Title</th>
                     <th>Author</th>
 
-                    <th>Info</th>
-                    <th>Delete</th>
+                    <th style="text-align: center">Info</th>
+                    <th style="text-align: center">Delete</th>
 
                     {foreach $questions as $question}
                         <tr class="questTable" id={$question['publicationid']}>
                             <td>{$question['title']}</td>
                             <td>{$question['username']}</td>
-                            <td>
+                            <td style="text-align: center">
                                 <a <span class="glyphicon glyphicon-info-sign" href={questionUrl($question['publicationid'])}></span></a>
                             </td>
                             <form name="delQuest" method="post" action="{$BASE_URL}controller/api/admin/delete_publication.php">
-                                <td id="delQuest">
-                                    <button type="submit" class="btn-default btn-sm ">
+                                <td id="delQuest" style="text-align: center">
+                                    <button type="submit" class="btn-default btn-sm" style="font-size: 15px;">
                                         <i class="glyphicon glyphicon-remove-circle"></i>
                                     </button>
                                 </td>
