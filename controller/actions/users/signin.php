@@ -37,13 +37,10 @@ try {
         $_SESSION['user'] = $user;
         $_SESSION['success_messages'][] = 'Login Successful!';
 
-<<<<<<< HEAD
+
         redirect();
     }
-=======
 
-    redirect();
->>>>>>> release
 
 } catch (PDOException $e) {
 

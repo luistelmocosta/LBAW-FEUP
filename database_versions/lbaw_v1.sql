@@ -853,7 +853,6 @@ BEGIN
 END
 $$;
 
-<<<<<<< HEAD
 CREATE OR REPLACE FUNCTION get_users_pag(skip INTEGER, limitNumber INTEGER)
   RETURNS TABLE (
     userid INTEGER,
@@ -874,7 +873,8 @@ BEGIN
   OFFSET skip;
 END
 $func$  LANGUAGE plpgsql;
-=======
+
+
 CREATE OR REPLACE FUNCTION category_questions(skip INTEGER, limitNumber INTEGER, cid INTEGER)
     RETURNS TABLE (
         publicationid INTEGER,
@@ -908,26 +908,6 @@ BEGIN
 END
 $func$  LANGUAGE plpgsql;
 
-CREATE OR REPLACE FUNCTION get_users_pag(skip INTEGER, limitNumber INTEGER)
-    RETURNS TABLE (
-        userid INTEGER,
-        roleid INTEGER,
-        username VARCHAR(25),
-        email VARCHAR(25)
-    )
-AS $func$
-BEGIN
-    RETURN QUERY
-    SELECT users.userid,
-        users.roleid,
-        users.username,
-        users.email
-    FROM users
-    ORDER BY userid ASC
-    LIMIT limitNumber
-    OFFSET skip;
-END
-$func$  LANGUAGE plpgsql;
 
 CREATE OR REPLACE FUNCTION answer_ranking(aid INT)
 LANGUAGE plpgsql
@@ -965,4 +945,4 @@ BEGIN
 END
 $$;
 
->>>>>>> release
+

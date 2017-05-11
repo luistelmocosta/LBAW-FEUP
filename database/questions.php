@@ -234,7 +234,7 @@ function get_questions_w_body(){
     return $rows;
 }
 
-<<<<<<< HEAD
+
 function getNumQuestions(){
     global $conn;
     $stmt = $conn->prepare("SELECT COUNT(*) FROM questions");
@@ -267,11 +267,13 @@ function getNumUnsolved(){
     return $stmt->fetchAll();
 }
 
-function delete_question($questionid) {
+function delete_question($questionid)
+{
     global $conn;
     $query = $conn->prepare("DELETE FROM questions WHERE questions.publicationid = :questionid");
     $query->execute([':questionid' => $questionid]);
-=======
+}
+
 function mark_question_as_solved($qid) {
     global $conn;
     $stmt = $conn->prepare("UPDATE questions SET solved_date= NOW() WHERE publicationid=:qid");
@@ -285,6 +287,4 @@ function answer_score($aid) {
 
 
     return $query->fetch();
-
->>>>>>> release
 }

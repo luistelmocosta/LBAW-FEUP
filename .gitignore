@@ -5,8 +5,5 @@ composer.phar
 controller/api/users/
 controller/pages/comments/
 /vendor/
-<<<<<<< HEAD
 config/init.php
-=======
-config/init.php
->>>>>>> release
+
