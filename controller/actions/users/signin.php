@@ -31,7 +31,7 @@ try {
     if(check_ban($user['userid'])[0]['count'] > 0)
         redirect('controller/pages/about.php');
     else {
-
+      
         $_SESSION['username'] = $username;
         $_SESSION['logged_in'] = true;
         $_SESSION['user'] = $user;

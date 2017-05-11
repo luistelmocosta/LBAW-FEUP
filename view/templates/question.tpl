@@ -1,5 +1,10 @@
 <title>{$question['title']}</title>
+<br class="clearfix">
+<br class="clearfix">
+<br class="clearfix">
+<br class="clearfix">
 <div class="clearfix qa-main">
+    {include file="common/messages.tpl"}
     <div class="home-left-inner">
         <div class="col-md-8">
             <div class="qa-part-q-view">
@@ -7,49 +12,39 @@
                     <div class="question-head">
                         <div class="big-s-avatar avatar">
                             <a href="">
-                                <img src="http://www.gravatar.com/avatar/86017f9989f66cb2e36be0714634acaa?s=70">
+
+                                <img width="60"
+                                     height="60" class="qa-avatar-image" src="{$photo}">
                             </a>
                         </div>
                         <div class="no-overflow">
 
 
                             <div class = "options pull-right " style = "margin-bottom:5px;">
-                                <a href="{editQuestionUrl($question['publicationid'])}" class = "btn edit-question {if !$isMine}hidden{/if}">Edit</a>
                                 <br class="clearfix">
 
                                 {include file="question_partials/vote_panel.tpl"}
 
-
+                                <button class = "btn btn-success question-solved{if $question['solved_date'] || !$isMine} hidden{/if}"
+                                        data-url="{questionSolvedUrl('')}">Mark as solved</button>
 
                                 <script>
 
-                                    $(".increment.up").on('click', function (e) {
-                                        e.stopPropagation();
-                                        console.log("voting up");
-                                        var parent = $(this).parent();
-                                        var voteId = parent.data('id');
-                                        console.log(voteId);
-                                        var url = parent.data('url');
-                                        console.log(url);
-                                        $.get(url + '?id=' + voteId + '&value=1', function (data) {
-                                            data = JSON.parse(data);
-                                            setVotingStatus(parent, data.result);
-                                        });
+                                    $(".question-solved").on('click', function () {
+                                        console.log("Hello");
+                                        var url = $(this).data('url');
+                                        var parent = $(this).closest('.question-info-container');
+                                        var id = parent.data('id');
+                                        var current = $(this);
 
-
-                                    });
-
-                                    $(".increment.down").on('click', function (e) {
-                                        e.stopPropagation();
-                                        console.log("voting down");
-                                        var parent = $(this).parent();
-                                        var voteType = parent.data('type');
-                                        var voteId = parent.data('id');
-                                        var url = parent.data('url');
-
-                                        $.get(url + '?type=' + voteType + '&id=' + voteId + '&value=-1', function (data) {
-                                            data = JSON.parse(data);
-                                            setVotingStatus(parent, data.result);
+                                        $.get(url + id, function (data) {
+                                            data = $.parseJSON(data);
+                                            console.log(data);
+                                            if (data.status) {
+                                                parent.find('.question-solved-status').removeClass('text-danger').addClass('text-success');
+                                                parent.find('.question-solved-status').find('span').html('Solved');
+                                                current.addClass('hidden');
+                                            }
                                         });
                                     });
                                 </script>
@@ -60,13 +55,12 @@
 
 
                             <div class="question-meta">
+                                <a href="{editQuestionUrl($question['publicationid'])}" class = "btn {if !$isMine}hidden{/if}">Edit</a>
                                 {if $question['solved_date']}
-                                    <span class="post-status open">Solved</span>
+                                    <button class="post-status open">Solved</button>
                                 {else}
-                                    <span class="post-status closed">Not Solved</span>
+                                    <button class="question-solved post-status closed">Not Solved</button>
                                 {/if}
-
-
                                 <span class="q-view-a-count">{$question['answers_count']} Answers</span>
                                 <span class="icon-eye-open q-view-v-count">{$question['views_counter']} Views</span>
                                 <a class="cat-in fa fa-folder" href="">{$question['category']}</a>
@@ -87,13 +81,13 @@
 
                                         <div class="qa-post-meta">
                                             <span class="qa-q-item-meta">
-                                                <a href="" class="qa-q-item-what">asked</a>
+                                                asked
                                                 <span class="qa-q-item-when">
                                                     <span class="qa-q-item-when-data"><span class="published"><span class="value-title" title="2016-06-06T11:13:09+0000"></span>{$question['creation_date']}</span></span>
                                                 </span>
                                                 <span class="qa-q-item-who">
                                                     <span class="qa-q-item-who-pad">by </span>
-                                                    <span class="qa-q-item-who-data"><span class="vcard author"><a href="../user/cusatxpress" class="qa-user-link url nickname">{$question['username']}</a></span></span>
+                                                    <span class="qa-q-item-who-data"><span class="vcard author"><a style="display: inline;" href="" class="qa-user-link url nickname">{$question['username']}</a></span></span>
                                                 </span>
                                             </span>
                                             <div class="question-tags">
@@ -209,4 +203,5 @@
     </div>
 </div>
 
+{HTML::script('question.js')}
 {HTML::script('vote.js')}

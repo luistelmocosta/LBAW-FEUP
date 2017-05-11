@@ -37,6 +37,12 @@ try {
     header("Location: $BASE_URL" . 'controller/pages/users/signup.php');
 }
 
+$user = getUserByUsername($username);
+
+$_SESSION['username'] = $username;
+$_SESSION['logged_in'] = true;
+$_SESSION['user'] = $user;
+$_SESSION['user']['photo'] = '/images/person-flat.png';
 $_SESSION['success_messages'][] = 'User registered successfully!';
 header("Location: $BASE_URL" . 'controller/pages/index.php');
 

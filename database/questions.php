@@ -39,7 +39,7 @@ function get_categoryID_by_name($category) {
 
 function get_publication_rating($pubid) {
     global $conn;
-    $query=$conn->prepare("SELECT * FROM get_publication_rating(:pubid)");
+    $query=$conn->prepare("SELECT get_publication_rating FROM get_publication_rating(:pubid)");
     $query->execute(array($pubid));
 
 
@@ -143,10 +143,7 @@ function unanswered_questions($page = 0) {
     //$rows = addQuestionsComputedFields($rows);
 
     return $rows;
-
-
 }
-
 
 function top_scored_questions($page = 0) {
 
@@ -159,7 +156,6 @@ function top_scored_questions($page = 0) {
     //$rows = addQuestionsComputedFields($rows);
 
     return $rows;
-
 }
 
 function get_questions_from_id($publicationid) {
@@ -183,9 +179,7 @@ function get_answers_from_questionid($questionid) {
     $stmt->execute(['questionid' => $questionid]);
     $rows = $stmt->fetchAll();
     return $rows;
-
 }
-
 
 function get_questions_by_user_id($userid, $page = 0) {
 
@@ -270,4 +264,18 @@ function delete_question($questionid) {
     global $conn;
     $query = $conn->prepare("DELETE FROM questions WHERE questions.publicationid = :questionid");
     $query->execute([':questionid' => $questionid]);
+
+function mark_question_as_solved($qid) {
+    global $conn;
+    $stmt = $conn->prepare("UPDATE questions SET solved_date= NOW() WHERE publicationid=:qid");
+    $stmt->execute(['qid' => $qid]);
+}
+
+function answer_score($aid) {
+    global $conn;
+    $query=$conn->prepare("SELECT * FROM answer_ranking(:aid)");
+    $query->execute(array($aid));
+
+
+    return $query->fetch();
 }

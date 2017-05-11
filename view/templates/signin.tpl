@@ -1,5 +1,10 @@
 {include file= 'common/narrow_header.tpl'}
 <title>SignIn</title>
+<br class="clearfix">
+<br class="clearfix">
+<br class="clearfix">
+<br class="clearfix">
+{include file="common/messages.tpl"}
 <body id="site-body" class="container">
 <div class="clearfix qa-main">
     <div class = "container">
@@ -38,8 +43,8 @@
                 </div>
                 <!-- END LOGIN TAB PANEL -->
 
-            <!-- END TAB CONTENT -->
+                <!-- END TAB CONTENT -->
+            </div>
         </div>
     </div>
-</div>
 

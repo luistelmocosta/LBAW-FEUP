@@ -23,31 +23,33 @@ $values = $_GET['value'];
 $result = publication_is_voted($publicationid); //is publication voted by me?
 $output = $values;
 
-// no vote
+
+//If the user did not vote yet, create a new vote
 if ($result == 0) {
     create_vote($publicationid, $values);
 }
-// Already vote up
+//If the user already vote on that publication, wether the vote is 1 or -1, we compare the existent vote (result)
+//and the new vote (output)
 if ($result == 1) {
     if($values == 1) {
-        delete_vote($publicationid, $values);
-        $output = 1;
+        delete_vote($publicationid, $values); //already voted like, pressed like -> remove like
+        $output = 0;
     }
-    if($values == -1) {
+    if($values == -1) { //already voted like, voted unlike -> updates like
         update_vote($publicationid, $values);
     }
 }
-//Already vote up
+
+//Already voted dislike
 if ($result == -1) {
     if($values == -1) {
-        delete_vote($publicationid, $values);
+        delete_vote($publicationid, $values); //votes dislike again-> deletes like
         $output = 0;
     }
     if($values == 1) {
-        update_vote($publicationid, $values);
+        update_vote($publicationid, $values); //changes his unlike vote to like -> updates like
     }
 }
 
-echo json_encode(['result' => $output]);
+echo json_encode(['result' => $output]); //New vote result
 exit();
-

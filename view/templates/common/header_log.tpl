@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    {HTML::script('success_messages.js')}
 
 
     <script>
@@ -64,8 +65,10 @@
                 <ul class="nav navbar-nav navbar-avatar pull-right">
                     <li class="dropdown pull-right" id="menuLogin">
                         <div class="log_menu" style="padding: 7px">
-                            <a id="profile-link" data-toggle="dropdown" href="#" class="avatar">
-                                <img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=30">						</a>
+                            <a id="profile-link" data-toggle="dropdown" href="#" class="avatar" style="padding-top: 10px">
+
+                                <img src="{$AVATAR}">
+                            </a>
                             <ul class="user-nav dropdown-menu">
                                 <li class="user-nav-profile"><a class="fa fa-id-card" href="{$BASE_URL}controller/pages/users/profile.php" title="Profile">Profile</a></li>
                                 <li class="user-nav-account"><a class="fa fa-cog" href="{$BASE_URL}controller/pages/users/edit_profile.php" title="Account">Account</a></li>
@@ -80,7 +83,7 @@
         </div>
 
     </div>
-
 </nav>
-<br class="clearfix">
-<br>
+
+
+
