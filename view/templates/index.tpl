@@ -87,6 +87,7 @@
                     </div>
 
                     <div class="clearfix"</div>
+
                 <div class = "load-more"
                      data-next-page = "1"
                      data-url = "{url('controller/api/questions/load_more_questions')}"
@@ -116,9 +117,13 @@
                 <br>
                 <div class="widget status" >
                     <h3 class="widget-title">Site Status</h3>
-                    <canvas id="siteStats" width="350" height="300" style="padding-left: 10px">
 
+                    
+                    <canvas id="siteStats" width="350" height="300" style="padding-left: 10px">
                     </canvas>
+                    <canvas id="siteStatus" width="350" height="300" style="padding-left: 10px">
+                    </canvas>
+                    
                 </div>
             </div>
         </div>

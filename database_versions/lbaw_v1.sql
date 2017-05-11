@@ -874,7 +874,6 @@ BEGIN
 END
 $func$  LANGUAGE plpgsql;
 
-
 CREATE OR REPLACE FUNCTION category_questions(skip INTEGER, limitNumber INTEGER, cid INTEGER)
     RETURNS TABLE (
         publicationid INTEGER,
@@ -944,5 +943,4 @@ BEGIN
     return questions_count;
 END
 $$;
-
 

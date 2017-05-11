@@ -143,10 +143,7 @@ function unanswered_questions($page = 0) {
     //$rows = addQuestionsComputedFields($rows);
 
     return $rows;
-
-
 }
-
 
 function top_scored_questions($page = 0) {
 
@@ -159,7 +156,6 @@ function top_scored_questions($page = 0) {
     //$rows = addQuestionsComputedFields($rows);
 
     return $rows;
-
 }
 
 function get_questions_from_id($publicationid) {
@@ -183,9 +179,7 @@ function get_answers_from_questionid($questionid) {
     $stmt->execute(['questionid' => $questionid]);
     $rows = $stmt->fetchAll();
     return $rows;
-
 }
-
 
 function get_questions_by_user_id($userid, $page = 0) {
 
@@ -234,7 +228,6 @@ function get_questions_w_body(){
     return $rows;
 }
 
-
 function getNumQuestions(){
     global $conn;
     $stmt = $conn->prepare("SELECT COUNT(*) FROM questions");
@@ -273,6 +266,7 @@ function delete_question($questionid)
     $query = $conn->prepare("DELETE FROM questions WHERE questions.publicationid = :questionid");
     $query->execute([':questionid' => $questionid]);
 }
+
 
 function mark_question_as_solved($qid) {
     global $conn;
