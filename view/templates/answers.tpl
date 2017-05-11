@@ -18,6 +18,34 @@
 
 
         {include file="answers_partials/vote_panel.tpl"}
+
+        <button class = "btn btn-success question-solved{if $answer['solved_date'] || !$isMine} hidden{/if}"
+                data-url="{url('controller/api/questions/mark_as_solved')}" data-answer="{$answer['answerid']}" data-question="{$question['publicationid']}">Accept this answer</button>
+
+        <script>
+
+            $(".question-solved").on('click', function () {
+                console.log("Hello");
+                var url = $(this).data('url');
+                var parent = $(this).closest('.question-info-container');
+                var qid = $(this).data('question');
+                var aid = $(this).data('answer');
+                console.log(qid);
+                console.log(aid);
+                var current = $(this);
+
+                $.get(url + '?question=' + qid + '&answer=' + aid, function (data) {
+                    console.log("Reading...");
+                    data = $.parseJSON(data);
+                    console.log(data);
+                    if (data.status) {
+                        parent.find('.question-solved-status').removeClass('text-danger').addClass('text-success');
+                        parent.find('.question-solved-status').find('span').html('Solved');
+                        current.addClass('hidden');
+                    }
+                });
+            });
+        </script>
         <form method="post" action="">
             <div class="qa-a-selection">
             </div>

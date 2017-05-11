@@ -399,6 +399,18 @@ FOR EACH ROW EXECUTE PROCEDURE trigger_auto_ban_on_warning_limit();
 
 DROP TRIGGER IF EXISTS answer_update_question_timestamp ON public.publications;
 
+--- This function adds a solved_date to question when answer is accepted
+
+CREATE OR REPLACE FUNCTION trigger_solve_question()
+    RETURNS "trigger" AS $func$
+BEGIN
+    UPDATE answers SET solved_date = now() WHERE questionid = new.publicationid;
+END;
+$func$  LANGUAGE plpgsql;
+
+CREATE TRIGGER solve_question AFTER UPDATE ON questions
+    FOR EACH ROW EXECUTE PROCEDURE trigger_solve_question();
+
 CREATE OR REPLACE FUNCTION trigger_update_question_timestamp()
     RETURNS TRIGGER AS $func$
 BEGIN

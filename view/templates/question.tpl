@@ -22,32 +22,7 @@
 
                             <div class = "options pull-right " style = "margin-bottom:5px;">
                                 <br class="clearfix">
-
                                 {include file="question_partials/vote_panel.tpl"}
-
-                                <button class = "btn btn-success question-solved{if $question['solved_date'] || !$isMine} hidden{/if}"
-                                        data-url="{questionSolvedUrl('')}">Mark as solved</button>
-
-                                <script>
-
-                                    $(".question-solved").on('click', function () {
-                                        console.log("Hello");
-                                        var url = $(this).data('url');
-                                        var parent = $(this).closest('.question-info-container');
-                                        var id = parent.data('id');
-                                        var current = $(this);
-
-                                        $.get(url + id, function (data) {
-                                            data = $.parseJSON(data);
-                                            console.log(data);
-                                            if (data.status) {
-                                                parent.find('.question-solved-status').removeClass('text-danger').addClass('text-success');
-                                                parent.find('.question-solved-status').find('span').html('Solved');
-                                                current.addClass('hidden');
-                                            }
-                                        });
-                                    });
-                                </script>
                             </div>
                             <h2 class="question-title">
                                 {$question['title']}

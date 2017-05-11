@@ -15,5 +15,7 @@ if (!isset($_GET['question']) || !is_numeric($_GET['question'])) {
 $questions = get_questions_from_id((int) $_GET['question']);
 
 
-mark_question_as_solved($_GET['question']);
+delete_question_as_solved($_GET['question']);
+mark_question_as_solved($_GET['answer']);
+
 echo json_encode(['status' => true]);

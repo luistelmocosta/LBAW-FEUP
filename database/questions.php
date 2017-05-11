@@ -267,11 +267,16 @@ function delete_question($questionid)
     $query->execute([':questionid' => $questionid]);
 }
 
-
-function mark_question_as_solved($qid) {
+function delete_question_as_solved($aid) {
     global $conn;
-    $stmt = $conn->prepare("UPDATE questions SET solved_date= NOW() WHERE publicationid=:qid");
-    $stmt->execute(['qid' => $qid]);
+    $stmt = $conn->prepare("UPDATE answers SET solved_date = NULL WHERE questionid=:aid");
+    $stmt->execute(['aid' => $aid]);
+}
+
+function mark_question_as_solved($aid) {
+    global $conn;
+    $stmt = $conn->prepare("UPDATE answers SET solved_date= NOW() WHERE publicationid=:aid");
+    $stmt->execute(['aid' => $aid]);
 }
 
 function answer_score($aid) {
