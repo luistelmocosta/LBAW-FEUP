@@ -46,7 +46,7 @@
                 </span>
             <div class="post-button clearfix">
                 <div class="post-button clearfix">
-                    <button class="btn icon-chat show-textarea" title="Add a comment on this answer" type="button" data-answer="{$answer['answerid']}">Comment</button>
+                    <button class="btn icon-chat show-textarea" title="Add a comment on this answer" type="button" data-answer="{$answer['answerid']}">{$answer['total_comments']} Comments</button>
                     <div class="textarea">
                         {include file="comment_form.tpl"}
                     </div>

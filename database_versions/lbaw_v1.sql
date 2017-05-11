@@ -923,3 +923,23 @@ BEGIN
 END
 $$;
 
+CREATE OR REPLACE FUNCTION answer_total_comments(aid INT)
+    returns integer
+LANGUAGE plpgsql
+AS $$
+DECLARE questions_count INTEGER;
+BEGIN
+    SELECT COUNT(*) FROM answers
+        INNER JOIN answercomments
+            ON answers.publicationid = answercomments.answerid
+    WHERE answers.publicationid = aid
+    INTO questions_count;
+
+    IF questions_count is null THEN
+        questions_count := 0;
+    END IF;
+
+    return questions_count;
+END
+$$;
+

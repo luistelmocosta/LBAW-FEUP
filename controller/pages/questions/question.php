@@ -3,6 +3,7 @@ include_once('../../../config/init.php');
 include_once($BASE_DIR . 'database/questions.php');
 include_once($BASE_DIR . 'database/votes.php');
 include_once($BASE_DIR . 'database/users.php');
+include_once($BASE_DIR . 'database/answers.php');
 
 increment_views_counter((int) $_GET['question']);
 
@@ -43,8 +44,13 @@ foreach ($answers as $key => $answer) {
     $answers[$key]['user_photo'] = $photo_answer;
     $answers[$key]['answer_user_points'] = $answer_user[0]['count_votes_rating_received'];
     $answers[$key]['role'] = $answer_user[0]['role'];
+    $answers[$key]['total_comments'] = answer_total_comments($answers[$key]['answerid'])['answer_total_comments'];
+
+
 
 }
+
+
 
 
 

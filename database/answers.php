@@ -8,3 +8,12 @@ function createAnswer($data)
     $stmt->execute(array($data['userid'], $data['questionid'], $data['body']));
     return intval($data['questionid']);
 }
+
+function answer_total_comments($aid) {
+    global $conn;
+    $query=$conn->prepare("SELECT answer_total_comments FROM answer_total_comments(:aid)");
+    $query->execute(array($aid));
+
+
+    return $query->fetch();
+}
