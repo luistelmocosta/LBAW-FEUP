@@ -335,7 +335,7 @@ BEGIN
         INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 1) ON CONFLICT DO NOTHING;
     END IF;
     IF count_vote_rating_received_user(target_user) = 3 THEN
-        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 2) ON CONFLICT DO NOTHING;;
+        INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 2) ON CONFLICT DO NOTHING;
     END IF;
     IF count_vote_rating_received_user(target_user) = 15 THEN
         INSERT INTO userbadges(userid, badgeid) VALUES (target_user, 3) ON CONFLICT DO NOTHING;
@@ -853,6 +853,7 @@ BEGIN
 END
 $$;
 
+<<<<<<< HEAD
 CREATE OR REPLACE FUNCTION get_users_pag(skip INTEGER, limitNumber INTEGER)
   RETURNS TABLE (
     userid INTEGER,
@@ -873,3 +874,95 @@ BEGIN
   OFFSET skip;
 END
 $func$  LANGUAGE plpgsql;
+=======
+CREATE OR REPLACE FUNCTION category_questions(skip INTEGER, limitNumber INTEGER, cid INTEGER)
+    RETURNS TABLE (
+        publicationid INTEGER,
+        title VARCHAR(100),
+        body TEXT,
+        creation_date TIMESTAMP,
+        solved_date TIMESTAMP,
+        username VARCHAR(10),
+        userid INTEGER,
+        answers_count BIGINT,
+        upvotes BIGINT,
+        votes_count BIGINT,
+        views_counter BIGINT)
+AS $func$
+BEGIN
+    RETURN QUERY
+    SELECT questions.publicationid, questions.title, publications.body,
+        publications.creation_date, questions.solved_date, users.username, users.userid,
+        (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
+        (SELECT COUNT (*) FROM votes WHERE votes.values = 1 AND votes.publicationid = 1) AS upvotes,
+        (SELECT SUM(votes.values) FROM votes WHERE votes.publicationid = questions.publicationid),
+        questions.views_counter
+    FROM questions
+        INNER JOIN publications
+            ON questions.publicationid = publications.publicationid
+        LEFT JOIN users ON publications.userid = users.userid
+    WHERE questions.categoryid = cid
+    ORDER BY creation_date DESC
+    LIMIT limitNumber
+    OFFSET skip;
+END
+$func$  LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION get_users_pag(skip INTEGER, limitNumber INTEGER)
+    RETURNS TABLE (
+        userid INTEGER,
+        roleid INTEGER,
+        username VARCHAR(25),
+        email VARCHAR(25)
+    )
+AS $func$
+BEGIN
+    RETURN QUERY
+    SELECT users.userid,
+        users.roleid,
+        users.username,
+        users.email
+    FROM users
+    ORDER BY userid ASC
+    LIMIT limitNumber
+    OFFSET skip;
+END
+$func$  LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION answer_ranking(aid INT)
+LANGUAGE plpgsql
+AS $$
+DECLARE publicationvotecount INTEGER;
+BEGIN
+    SELECT SUM(votes.values) FROM votes WHERE votes.publicationid = aid
+    INTO publicationvotecount;
+
+    IF publicationvotecount is null THEN
+        publicationvotecount := 0;
+    END IF;
+
+    return publicationvotecount;
+END
+$$;
+
+CREATE OR REPLACE FUNCTION answer_total_comments(aid INT)
+    returns integer
+LANGUAGE plpgsql
+AS $$
+DECLARE questions_count INTEGER;
+BEGIN
+    SELECT COUNT(*) FROM answers
+        INNER JOIN answercomments
+            ON answers.publicationid = answercomments.answerid
+    WHERE answers.publicationid = aid
+    INTO questions_count;
+
+    IF questions_count is null THEN
+        questions_count := 0;
+    END IF;
+
+    return questions_count;
+END
+$$;
+
+>>>>>>> release

@@ -1,5 +1,9 @@
 <title>Edit {$user['username']}'s Profile</title>
 <div style="padding-top:30px;"> </div>
+<br class="clearfix">
+<br class="clearfix">
+<br class="clearfix">
+<br class="clearfix">
 <div id="site-body" class="container">
     <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
         <div class="panel panel-default">
@@ -61,7 +65,7 @@
         <div class="panel panel-default">
 
             <div class="qa-part-form-profile">
-                <form name="save" method="post" action= "{$BASE_URL}controller/actions/users/edit_profile.php">
+                <form name="save" method="post" action= "{$BASE_URL}controller/actions/users/edit_profile.php" enctype="multipart/form-data">
                     <table class="qa-form-wide-table">
                         <tbody>
                         <tr>
@@ -93,9 +97,14 @@
                                 Avatar:
                             </td>
                             <td class="qa-form-wide-data">
-                                <input name="avatar" type="radio" value="" checked="" class="qa-form-wide-radio"> <span style="margin:2px 0; display:inline-block;"><img src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="32" height="32" class="qa-avatar-image" alt=""></span> Default
+                                <input name="avatar" type="radio" value="" checked="" class="qa-form-wide-radio">
+                                <span style="margin:2px 0; display:inline-block;">
+                                    <img src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="32" height="32" class="qa-avatar-image" alt="">
+                                </span>
+                                Default
                                 <br>
-                                <input name="avatar" type="radio" value="uploaded" class="qa-form-wide-radio"> <input name="file" type="file">
+                                <input name="avatar" type="radio" value="uploaded" class="qa-form-wide-radio">
+                                <input name="file" type="file">
                             </td>
                         </tr>
                         <tr>

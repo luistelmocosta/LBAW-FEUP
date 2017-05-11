@@ -4,6 +4,8 @@ include_once($BASE_DIR . 'database/questions.php');
 
 PagePermissions::create('auth')->check();
 
+validate_question_form();
+
 $tags = explode(',', $_POST['tags']);
 $tags_strimmed = array_map('trim', $tags);
 
@@ -38,10 +40,28 @@ try {
 
 }
 
-
-if(!$_POST['title'] || !$_POST['editor1']) {
-    $_SESSION['error_messages'][] = 'Title and body are required';
-    $_SESSION['form_values'] = $_POST;
-    back();
+function validate_question_form()
+{
+    if (!$_POST['title'] || !$_POST['editor1']) {
+        $_SESSION['error_messages'][] = 'Title and description are required';
+        $_SESSION['form_values'] = $_POST;
+        back();
+    }
+    if (!$_POST['tags']) {
+        $_SESSION['error_messages'][] = 'You should have atleast one tag!!';
+        $_SESSION['form_values'] = $_POST;
+        back();
+    }
+    $tags = $_POST['tags'];
+    foreach ($tags as $tag) {
+        if (strlen($tag) > 10) {
+            $_SESSION['error_messages'][] = 'Tags are not longer than 10 characters';
+            $_SESSION['form_values'] = $_POST;
+            back();
+        }
+    }
 }
+
+
+
 

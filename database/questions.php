@@ -39,7 +39,7 @@ function get_categoryID_by_name($category) {
 
 function get_publication_rating($pubid) {
     global $conn;
-    $query=$conn->prepare("SELECT * FROM get_publication_rating(:pubid)");
+    $query=$conn->prepare("SELECT get_publication_rating FROM get_publication_rating(:pubid)");
     $query->execute(array($pubid));
 
 
@@ -234,6 +234,7 @@ function get_questions_w_body(){
     return $rows;
 }
 
+<<<<<<< HEAD
 function getNumQuestions(){
     global $conn;
     $stmt = $conn->prepare("SELECT COUNT(*) FROM questions");
@@ -270,4 +271,20 @@ function delete_question($questionid) {
     global $conn;
     $query = $conn->prepare("DELETE FROM questions WHERE questions.publicationid = :questionid");
     $query->execute([':questionid' => $questionid]);
+=======
+function mark_question_as_solved($qid) {
+    global $conn;
+    $stmt = $conn->prepare("UPDATE questions SET solved_date= NOW() WHERE publicationid=:qid");
+    $stmt->execute(['qid' => $qid]);
+}
+
+function answer_score($aid) {
+    global $conn;
+    $query=$conn->prepare("SELECT * FROM answer_ranking(:aid)");
+    $query->execute(array($aid));
+
+
+    return $query->fetch();
+
+>>>>>>> release
 }

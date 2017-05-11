@@ -1,7 +1,10 @@
 <!-- Set your background image for this header on the line below. -->
 <title>AskMe</title>
+
 <header class="intro-header" style="background-image: url('../../images/background.png')">
+    {include file="common/messages.tpl"}
     <div class="container">
+
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
@@ -70,6 +73,7 @@
                             {/foreach}
                         </div>
                     {/if}
+
                     <div id="unanswered_questions">
                         {foreach $unanswered_questions as $question}
                             {include file="unanswered_questions.tpl"}
@@ -81,8 +85,14 @@
                         {/foreach}
 
                     </div>
+
                     <div class="clearfix"</div>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> release
                 <div class = "load-more"
                      data-next-page = "1"
                      data-url = "{url('controller/api/questions/load_more_questions')}"
@@ -91,6 +101,10 @@
                         Load More...
                     </a>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> release
             </div>
         </div>
 
@@ -112,7 +126,11 @@
                 <br>
                 <div class="widget status" >
                     <h3 class="widget-title">Site Status</h3>
+<<<<<<< HEAD
                     <canvas id="siteStats" width="350" height="300" style="padding-left: 10px">
+=======
+                    <canvas id="siteStatus" width="350" height="300" style="padding-left: 10px">
+>>>>>>> release
                     </canvas>
                 </div>
             </div>

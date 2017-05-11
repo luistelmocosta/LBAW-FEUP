@@ -1,5 +1,10 @@
 <title>Create Question</title>
+<br class="clearfix">
+<br class="clearfix">
+<br class="clearfix">
+<br class="clearfix">
 <div id="site-body" class="container">
+    {include file="common/messages.tpl"}
     <div class="clearfix qa-main">
         <div class="col-sm-12 list-c">
             <h1>Create Question</h1>
