@@ -43,6 +43,8 @@ $questions = getQuestionsPag($qoffset, $limit);
 
 //STATS
 
+//Site Stats
+
 $numAns = getNumAnswers()[0]['count'];
 $numComm = getNumComments()[0]['count'];
 $numUnsolv = getNumUnsolved()[0]['count'];
@@ -52,6 +54,8 @@ $SSArr = [$numQuest, $numAns, $numComm, $numUnsolv];
 $SSdata = json_encode($SSArr);
 file_put_contents($BASE_DIR . 'javascript/json/siteStatsData.json', $SSdata);
 
+//User Stats
+
 $numEdit = getNumEditors()[0]['count'];
 $numAdmins = getNumAdmins()[0]['count'];
 
@@ -59,6 +63,17 @@ $USArr = [$numUsers, $numEdit, $numAdmins];
 
 $USdata = json_encode($USArr);
 file_put_contents($BASE_DIR . 'javascript/json/userStatsData.json', $USdata);
+
+//Behaviour Stats
+
+$numModReg = getNumModReg()[0]['count'];
+$numBans = getNumBans()[0]['count'];
+$numWarns = $numModReg - $numBans;
+
+$BSArr = [$numModReg, $numWarns, $numBans];
+
+$BSdata = json_encode($BSArr);
+file_put_contents($BASE_DIR . 'javascript/json/behaviourStatsData.json', $BSdata);
 
 
 //SMARTY

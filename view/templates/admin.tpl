@@ -221,9 +221,11 @@
 
         <div class="panel panel-default">
             <h3 style="padding-left: 10px">Status</h3>
-            <canvas id="siteStats" width="350" height="300" style="padding-left: 10px; display: inline-block">
+            <canvas id="siteStats" width="250" height="300" style="padding-left: 10px; display: inline-block">
             </canvas>
-            <canvas id="usersStats" width="350" height="300" style="padding-left: 10px; display: inline-block">
+            <canvas id="usersStats" width="250" height="300" style="padding-left: 10px; display: inline-block">
+            </canvas>
+            <canvas id="behaviourStats" width="250" height="300" style="padding-left: 10px; display: inline-block">
             </canvas>
         </div>
 
