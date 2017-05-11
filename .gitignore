@@ -1,5 +1,8 @@
 #ignore compiled templates folder
 templates_c
-
-#ignore json files
-json
+.idea
+composer.phar
+controller/api/users/
+controller/pages/comments/
+/vendor/
+config/init.php
