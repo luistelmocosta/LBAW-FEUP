@@ -287,3 +287,12 @@ function answer_score($aid) {
 
     return $query->fetch();
 }
+
+function is_answer_accepted($aid) {
+    global $conn;
+    $query=$conn->prepare("SELECT solved_date FROM answers WHERE answers.publicationid = :aid");
+    $query->execute(array($aid));
+
+
+    return $query->fetch();
+}
