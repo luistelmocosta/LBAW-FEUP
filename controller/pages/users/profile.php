@@ -12,9 +12,15 @@ if($_SESSION['logged_in']) {
     $smarty->display('common/narrow_header.tpl');
 }
 
+<<<<<<< HEAD
+if(isset($_GET['userid']))
+    $userid = $_GET['userid'];
+else $userid = auth_user('userid');
+=======
 
 
 $userid = auth_user('userid');
+>>>>>>> release
 
 $user = userProfile($userid)[0];
 

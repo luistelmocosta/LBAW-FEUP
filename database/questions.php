@@ -122,6 +122,16 @@ function recent_questions($page = 0)
     return $rows;
 }
 
+function getQuestionsPag($skip, $limit)
+{
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM recent_questions(:skip, :limit)");
+    $stmt->execute(['limit' => $limit, 'skip' => $skip]);
+    $rows = $stmt->fetchAll();
+
+    return $rows;
+}
+
 function unanswered_questions($page = 0) {
 
     global $conn;
@@ -224,6 +234,44 @@ function get_questions_w_body(){
     return $rows;
 }
 
+<<<<<<< HEAD
+function getNumQuestions(){
+    global $conn;
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM questions");
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
+function getNumAnswers(){
+    global $conn;
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM answers");
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
+function getNumComments(){
+    global $conn;
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM comments");
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
+function getNumUnsolved(){
+    global $conn;
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM questions WHERE questions.solved_date IS null");
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
+function delete_question($questionid) {
+    global $conn;
+    $query = $conn->prepare("DELETE FROM questions WHERE questions.publicationid = :questionid");
+    $query->execute([':questionid' => $questionid]);
+=======
 function mark_question_as_solved($qid) {
     global $conn;
     $stmt = $conn->prepare("UPDATE questions SET solved_date= NOW() WHERE publicationid=:qid");
@@ -238,4 +286,5 @@ function answer_score($aid) {
 
     return $query->fetch();
 
+>>>>>>> release
 }
