@@ -853,6 +853,27 @@ BEGIN
 END
 $$;
 
+CREATE OR REPLACE FUNCTION get_users_pag(skip INTEGER, limitNumber INTEGER)
+  RETURNS TABLE (
+    userid INTEGER,
+    name VARCHAR(25),
+    username VARCHAR(25),
+    email VARCHAR(25)
+  )
+AS $func$
+BEGIN
+  RETURN QUERY
+  SELECT users.userid,
+    (SELECT DISTINCT userroles.name FROM userroles WHERE userroles.roleid = users.roleid),
+    users.username,
+    users.email
+  FROM users
+  ORDER BY userid ASC
+  LIMIT limitNumber
+  OFFSET skip;
+END
+$func$  LANGUAGE plpgsql;
+
 CREATE OR REPLACE FUNCTION category_questions(skip INTEGER, limitNumber INTEGER, cid INTEGER)
     RETURNS TABLE (
         publicationid INTEGER,
@@ -942,4 +963,3 @@ BEGIN
     return questions_count;
 END
 $$;
-

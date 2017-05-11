@@ -12,12 +12,14 @@
                     <h1>AskMe</h1>
                     <br>
 
-                    <form name="search" method="post" action= "{$BASE_URL}controller/actions/questions/search_results.php">
+                    <form name="search" method="post" action="{$BASE_URL}controller/actions/questions/search_results.php">
                         <div id="custom-search-input">
                             <div class="input-group col-lg-12">
                                 <input type="text" name="psearch" class="form-control input-lg" placeholder="Search for a question..."/>
                                 <span class="input-group-btn">
-                                    <input value="search" title="" type="submit" class="qa-form-wide-button qa-form-wide-button-save">
+                                    <button class="btn btn-info">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
                                 </span>
                             </div>
                         </div>
@@ -87,7 +89,6 @@
                     <div class="clearfix"</div>
 
 
-
                 <div class = "load-more"
                      data-next-page = "1"
                      data-url = "{url('controller/api/questions/load_more_questions')}"
@@ -118,12 +119,17 @@
                 <br>
                 <div class="widget status" >
                     <h3 class="widget-title">Site Status</h3>
-                    <canvas id="siteStatus" width="350" height="300" style="padding-left: 10px">
+                    
+                    <canvas id="siteStats" width="350" height="300" style="padding-left: 10px">
                     </canvas>
+                    <canvas id="siteStatus" width="350" height="300" style="padding-left: 10px">                   
+                    </canvas>
+                    
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 {HTML::script('index.js')}

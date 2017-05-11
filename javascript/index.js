@@ -10,7 +10,7 @@ $(document).ready(function () {
         $(this).data('next-page', parseInt(next_page) + 1);
     });
 
-    siteStatus();
+    siteStats();
 });
 
 function addNewQuestions(objects) {
@@ -35,15 +35,28 @@ function updateTitleAndLink(questionTitle, object) {
     questionTitle.html(object.title);
 }
 
-function siteStatus() {
-    var ctx = document.getElementById("siteStatus");
+function siteStats() {
+    var jsonUrl = "../../../javascript/json/siteStatsData.json";
+
+    var siteData=[];
+
+    $.ajax({
+        url: jsonUrl,
+        dataType: 'json',
+        async: false,
+        success: function(data) {
+            siteData = data;
+        }
+    });
+
+    var ctx = document.getElementById("siteStats");
 
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ["Questions", "Answers", "Comments", "Unanswered"],
+            labels: ["Questions", "Answers", "Comments", "Unsolved"],
             datasets: [{
-                data: [15, 10, 3, 5],
+                data: siteData,
                 backgroundColor: [
                     'rgba(255, 64, 64, 1)',
                     'rgba(64, 64, 255, 1)',
@@ -82,5 +95,4 @@ function siteStatus() {
             responsive: false
         }
     });
-
 }

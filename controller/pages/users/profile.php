@@ -13,14 +13,11 @@ if($_SESSION['logged_in']) {
 }
 
 
-
-$userid = auth_user('userid');
+if(isset($_GET['userid']))
+    $userid = $_GET['userid'];
+else $userid = auth_user('userid');
 
 $user = userProfile($userid)[0];
-
-
-
-
 
 $user_questions = get_questions_by_user_id($userid);
 

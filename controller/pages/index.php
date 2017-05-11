@@ -18,6 +18,16 @@ $tabs = [
     ['top', 'Top Scored Questions']
 ];
 
+$numQuest = getNumQuestions()[0]['count'];
+$numAns = getNumAnswers()[0]['count'];
+$numComm = getNumComments()[0]['count'];
+$numUnsolv = getNumUnsolved()[0]['count'];
+
+$arr = [$numQuest, $numAns, $numComm, $numUnsolv];
+
+$data = json_encode($arr);
+file_put_contents($BASE_DIR . 'javascript/json/siteStatsData.json', $data);
+
 $recent_questions = recent_questions();
 $unanswered_questions = unanswered_questions();
 $top_scored_questions = top_scored_questions();
