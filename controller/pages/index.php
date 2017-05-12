@@ -26,7 +26,13 @@ $numUnsolv = getNumUnsolved()[0]['count'];
 $arr = [$numQuest, $numAns, $numComm, $numUnsolv];
 
 $data = json_encode($arr);
-file_put_contents($BASE_DIR . 'javascript/json/siteStatsData.json', $data);
+
+$jsonDir = $BASE_DIR . 'javascript/json/';
+
+if (!file_exists($jsonDir))
+    mkdir($jsonDir, 0777, true);
+
+file_put_contents($jsonDir . 'siteStatsData.json', $data);
 
 $recent_questions = recent_questions();
 $unanswered_questions = unanswered_questions();

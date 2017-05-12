@@ -16,9 +16,7 @@ $(document).ready(function () {
         var checkbox = $(this);
 
         if(checkbox.is(':checked')){
-
             //BAN
-
             $.post("../../api/admin/ban_user.php", { uid: $(this).closest('tr').attr('id') }, function() {
                 checkbox.attr("checked", true);
             });
@@ -26,7 +24,6 @@ $(document).ready(function () {
 
         else {
             //UNBAN
-
             $.post("../../api/admin/un_ban_user.php", {uid: $(this).closest('tr').attr('id')}, function () {
                 checkbox.attr("checked", false);
             });
@@ -39,6 +36,7 @@ $(document).ready(function () {
 
 
 function siteStats() {
+
     var jsonUrl = "../../../javascript/json/siteStatsData.json";
 
     var siteData=[];

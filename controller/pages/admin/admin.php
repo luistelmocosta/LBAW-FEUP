@@ -43,6 +43,12 @@ $questions = getQuestionsPag($qoffset, $limit);
 
 //STATS
 
+$jsonDir = $BASE_DIR . 'javascript/json/';
+
+if (!file_exists($jsonDir))
+    mkdir($jsonDir, 0777, true);
+
+
 //Site Stats
 
 $numAns = getNumAnswers()[0]['count'];
@@ -52,7 +58,7 @@ $numUnsolv = getNumUnsolved()[0]['count'];
 $SSArr = [$numQuest, $numAns, $numComm, $numUnsolv];
 
 $SSdata = json_encode($SSArr);
-file_put_contents($BASE_DIR . 'javascript/json/siteStatsData.json', $SSdata);
+file_put_contents($jsonDir . 'siteStatsData.json', $SSdata);
 
 //User Stats
 
@@ -62,7 +68,7 @@ $numAdmins = getNumAdmins()[0]['count'];
 $USArr = [$numUsers, $numEdit, $numAdmins];
 
 $USdata = json_encode($USArr);
-file_put_contents($BASE_DIR . 'javascript/json/userStatsData.json', $USdata);
+file_put_contents($jsonDir . 'userStatsData.json', $USdata);
 
 //Behaviour Stats
 
@@ -73,7 +79,7 @@ $numWarns = $numModReg - $numBans;
 $BSArr = [$numModReg, $numWarns, $numBans];
 
 $BSdata = json_encode($BSArr);
-file_put_contents($BASE_DIR . 'javascript/json/behaviourStatsData.json', $BSdata);
+file_put_contents($jsonDir . 'behaviourStatsData.json', $BSdata);
 
 
 //SMARTY
