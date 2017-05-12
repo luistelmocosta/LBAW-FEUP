@@ -1,8 +1,4 @@
 <title>{$question['title']}</title>
-<br class="clearfix">
-<br class="clearfix">
-<br class="clearfix">
-<br class="clearfix">
 <div class="clearfix qa-main">
     {include file="common/messages.tpl"}
     <div class="home-left-inner">
