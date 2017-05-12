@@ -1,5 +1,4 @@
-<title xmlns="http://www.w3.org/1999/html">Admin's Page</title>
-<div style="padding-top:30px;"> </div>
+<title>Admin's Page</title>
 <div id="site-body" class="container">
     <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
         <div class="panel panel-default">
@@ -87,7 +86,7 @@
 
                     {foreach $users as $user}
                         <tr class="usersTable" id={$user['userid']}>
-                            <td id="usr">{$user['userid']}</td>
+                            <td>{$user['username']}</td>
                             <td>{$user['name']}</td>
                             <td>{$user['email']}</td>
 

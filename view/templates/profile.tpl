@@ -1,9 +1,4 @@
 <title>{$user['username']}'s Profile</title>
-<div style="padding-top:30px;"> </div>
-<br class="clearfix">
-<br class="clearfix">
-<br class="clearfix">
-<br class="clearfix">
 <div id="site-body" class="container">
     <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
         <div class="panel panel-default">
@@ -29,7 +24,7 @@
 
                         <td colspan="3" class="qa-form-wide-buttons">
                             <a href="{$BASE_URL}controller/pages/users/edit_profile.php">
-                            <input name="doaccount" value="Edit Profile" title="" type="submit" class="qa-form-wide-button qa-form-wide-button-account">
+                                <input name="doaccount" value="Edit Profile" title="" type="submit" class="qa-form-wide-button qa-form-wide-button-account">
                             </a>
                         </td>
                     </div>

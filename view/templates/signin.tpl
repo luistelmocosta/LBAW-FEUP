@@ -1,9 +1,5 @@
 {include file= 'common/narrow_header.tpl'}
 <title>SignIn</title>
-<br class="clearfix">
-<br class="clearfix">
-<br class="clearfix">
-<br class="clearfix">
 {include file="common/messages.tpl"}
 <body id="site-body" class="container">
 <div class="clearfix qa-main">
