@@ -956,3 +956,39 @@ BEGIN
 END
 $$;
 
+create or replace function mark_as_solved(aid INTEGER, qid INTEGER)
+    returns void language plpgsql as $$
+DECLARE result INTEGER;
+begin
+    UPDATE answers SET solved_date= NOW() WHERE publicationid= aid;
+    UPDATE questions SET solved_date = NOW() WHERE publicationid = qid;
+end $$;
+
+create or replace function delete_solved(aid INTEGER, qid INTEGER)
+    returns void language plpgsql as $$
+DECLARE result INTEGER;
+begin
+    UPDATE answers SET solved_date= NULL WHERE publicationid= aid;
+    UPDATE questions SET solved_date = NULL WHERE publicationid = qid;
+end $$;
+
+CREATE OR REPLACE FUNCTION is_answer_accepted(aid INT)
+    returns INTEGER
+LANGUAGE plpgsql
+AS $$
+DECLARE date_solved TIMESTAMP;
+    DECLARE answer_accepted INTEGER;
+BEGIN
+    SELECT solved_date FROM answers WHERE answers.publicationid = aid
+    INTO date_solved;
+
+    IF date_solved is null THEN
+        answer_accepted := 0;
+    ELSE
+        answer_accepted :=1;
+    END IF;
+
+    return answer_accepted;
+END
+$$;
+
