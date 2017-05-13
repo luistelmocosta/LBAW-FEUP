@@ -267,16 +267,28 @@ function delete_question($questionid)
     $query->execute([':questionid' => $questionid]);
 }
 
-function delete_question_as_solved($aid) {
+function delete_question_as_solved($qid) {
+    global $conn;
+    $stmt = $conn->prepare("UPDATE questions SET solved_date = NULL WHERE questions.publicationid=:qid");
+    $stmt->execute(['qid' => $qid]);
+}
+
+function delete_answer_as_solved($aid, $qid) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM delete_solved(:aid, :qid)");
+    $stmt->execute(['aid' => $aid, 'qid' => $qid]);
+}
+
+function delete_all_answer_as_solved($aid) {
     global $conn;
     $stmt = $conn->prepare("UPDATE answers SET solved_date = NULL WHERE questionid=:aid");
     $stmt->execute(['aid' => $aid]);
 }
 
-function mark_question_as_solved($aid) {
+function mark_question_as_solved($aid, $qid) {
     global $conn;
-    $stmt = $conn->prepare("UPDATE answers SET solved_date= NOW() WHERE publicationid=:aid");
-    $stmt->execute(['aid' => $aid]);
+    $stmt = $conn->prepare("SELECT * FROM mark_as_solved(:aid, :qid)");
+    $stmt->execute(['aid' => $aid, 'qid' => $qid]);
 }
 
 function answer_score($aid) {
@@ -290,8 +302,26 @@ function answer_score($aid) {
 
 function is_answer_accepted($aid) {
     global $conn;
-    $query=$conn->prepare("SELECT solved_date FROM answers WHERE answers.publicationid = :aid");
+    $query=$conn->prepare("SELECT is_answer_accepted FROM is_answer_accepted(:aid)");
     $query->execute(array($aid));
+
+
+    return $query->fetch();
+}
+
+function any_answer_accepted($qid) {
+    global $conn;
+    $query=$conn->prepare("SELECT solved_date FROM answers WHERE answers.questionid = :qid");
+    $query->execute(array($qid));
+
+
+    return $query->fetch();
+}
+
+function is_question_accepted($qid) {
+    global $conn;
+    $query=$conn->prepare("SELECT solved_date FROM questions WHERE questions.publicationid = :qid");
+    $query->execute(array($qid));
 
 
     return $query->fetch();
