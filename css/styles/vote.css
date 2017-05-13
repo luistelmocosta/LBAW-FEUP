@@ -45,6 +45,22 @@
     margin: 1rem;
 }
 
+.accept {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+}
+
 .increment {
     -webkit-box-flex: 1;
     -webkit-flex: 1 0 0;
@@ -126,4 +142,38 @@ blockquote.vote-up-down {
 }
 blockquote.vote-up-down>div {
     display: inline-block;
+}
+
+blockquote.accept-answer {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+blockquote.accept-answer>div {
+    display: inline-block;
+}
+
+.accepted {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 0;
+    -ms-flex: 1 0 0;
+    flex: 1 0 0;
+    text-align: center;
+    opacity: .5;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.accepted.up {
+    background: #4BC35F;
+    height: 50%;
+    margin-bottom: 0.25rem;
+}
+
+.accepted.up.active {
+    opacity: 1;
+}
+
+.accepted:hover {
+    opacity: 1;
 }

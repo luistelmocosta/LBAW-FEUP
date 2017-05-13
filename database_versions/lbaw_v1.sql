@@ -399,6 +399,18 @@ FOR EACH ROW EXECUTE PROCEDURE trigger_auto_ban_on_warning_limit();
 
 DROP TRIGGER IF EXISTS answer_update_question_timestamp ON public.publications;
 
+--- This function adds a solved_date to question when answer is accepted
+
+CREATE OR REPLACE FUNCTION trigger_solve_question()
+    RETURNS "trigger" AS $func$
+BEGIN
+    UPDATE answers SET solved_date = now() WHERE questionid = new.publicationid;
+END;
+$func$  LANGUAGE plpgsql;
+
+CREATE TRIGGER solve_question AFTER UPDATE ON questions
+    FOR EACH ROW EXECUTE PROCEDURE trigger_solve_question();
+
 CREATE OR REPLACE FUNCTION trigger_update_question_timestamp()
     RETURNS TRIGGER AS $func$
 BEGIN
@@ -941,6 +953,42 @@ BEGIN
     END IF;
 
     return questions_count;
+END
+$$;
+
+create or replace function mark_as_solved(aid INTEGER, qid INTEGER)
+    returns void language plpgsql as $$
+DECLARE result INTEGER;
+begin
+    UPDATE answers SET solved_date= NOW() WHERE publicationid= aid;
+    UPDATE questions SET solved_date = NOW() WHERE publicationid = qid;
+end $$;
+
+create or replace function delete_solved(aid INTEGER, qid INTEGER)
+    returns void language plpgsql as $$
+DECLARE result INTEGER;
+begin
+    UPDATE answers SET solved_date= NULL WHERE publicationid= aid;
+    UPDATE questions SET solved_date = NULL WHERE publicationid = qid;
+end $$;
+
+CREATE OR REPLACE FUNCTION is_answer_accepted(aid INT)
+    returns INTEGER
+LANGUAGE plpgsql
+AS $$
+DECLARE date_solved TIMESTAMP;
+    DECLARE answer_accepted INTEGER;
+BEGIN
+    SELECT solved_date FROM answers WHERE answers.publicationid = aid
+    INTO date_solved;
+
+    IF date_solved is null THEN
+        answer_accepted := 0;
+    ELSE
+        answer_accepted :=1;
+    END IF;
+
+    return answer_accepted;
 END
 $$;
 

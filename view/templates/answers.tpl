@@ -18,6 +18,14 @@
 
 
         {include file="answers_partials/vote_panel.tpl"}
+        <blockquote class="accept-answer text-right {if !$isMine} hidden{/if}" >
+            <div class="accept" title="Accept this answer" data-url="{url('controller/api/questions/mark_as_solved')}" data-refresh="{url('controller/api/questions/refresh_accepted_answers')}" data-answer="{$answer['answerid']}" data-question="{$question['publicationid']}">
+                <div class="accepted up" title="Unnacept this answer"></div>
+            </div>
+        </blockquote>
+       <!-- <button class = "btn btn-success question-solved{if $answer['solved_date'] || !$isMine} hidden{/if}"
+                data-url="{url('controller/api/questions/mark_as_solved')}" data-answer="{$answer['answerid']}" data-question="{$question['publicationid']}">Accept this answer</button> -->
+
         <form method="post" action="">
             <div class="qa-a-selection">
             </div>
@@ -60,3 +68,4 @@
 
 </div>
 {HTML::script('comment.js')}
+{HTML::script('accept-answer.js')}
