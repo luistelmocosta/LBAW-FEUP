@@ -18,6 +18,7 @@
 
 
         {include file="answers_partials/vote_panel.tpl"}
+
         <form method="post" action="">
             <div class="qa-a-selection">
             </div>
@@ -45,6 +46,7 @@
                     </span>
                 </span>
             <div class="post-button clearfix">
+                <a href="{editAnswerUrl($answer['answerid'])}" class = "btn {if !$isMine}hidden{/if}">Edit</a>
                 <div class="post-button clearfix">
                     <button class="btn icon-chat show-textarea" title="Add a comment on this answer" type="button" data-answer="{$answer['answerid']}">{$answer['total_comments']} Comments</button>
                     <div class="textarea">

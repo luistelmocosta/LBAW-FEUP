@@ -944,3 +944,20 @@ BEGIN
 END
 $$;
 
+CREATE OR REPLACE FUNCTION answer_details_from_id (pubid INTEGER)
+    RETURNS TABLE (
+        questionid INTEGER,
+        answerid INTEGER,
+        title VARCHAR(100),
+        body TEXT)
+AS $func$
+BEGIN
+    RETURN QUERY
+    SELECT questions.publicationid, answers.publicationid, questions.title, publications.body
+    FROM answers
+        INNER JOIN publications
+            ON answers.publicationid = publications.publicationid
+        INNER JOIN questions ON answers.questionid = questions.publicationid
+    WHERE answers.publicationid = pubid;
+END
+$func$  LANGUAGE plpgsql;

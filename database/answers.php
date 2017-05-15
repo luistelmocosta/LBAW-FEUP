@@ -17,3 +17,26 @@ function answer_total_comments($aid) {
 
     return $query->fetch();
 }
+
+function get_answer_from_id($publicationid) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM question_details_from_id(:publicationid)");
+    $stmt->execute(['publicationid' => $publicationid]);
+    $rows = $stmt->fetchAll();
+    return $rows;
+}
+
+function answer_details_from_id($publicationid) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM answer_details_from_id(:publicationid)");
+    $stmt->execute(['publicationid' => $publicationid]);
+    $rows = $stmt->fetchAll();
+    return $rows;
+
+}
+
+function update_answer($answer) {
+    global $conn;
+    $stmt = $conn->prepare("UPDATE publications SET body = :body WHERE publicationid = :answerid");
+    $stmt->execute($answer);
+}

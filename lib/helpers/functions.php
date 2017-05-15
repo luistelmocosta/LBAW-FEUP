@@ -47,9 +47,9 @@ function editQuestionUrl($questionid)
     return url('controller/pages/questions/edit_question', ['question' => $questionid]);
 }
 
-function editAnswerUrl($answer_id)
+function editAnswerUrl($answerid)
 {
-    return url('pages/answers/edit', ['answer' => $answer_id]);
+    return url('controller/pages/questions/edit_answer', ['answer' => $answerid]);
 }
 
 function questionSolvedUrl($question_id)

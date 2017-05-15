@@ -46,6 +46,9 @@ $("body").on("click", ".show-textarea", function(){
                 comment.body +
                 '</div> ' +
                 '</div> ' +
+                '<a href="{editQuestionUrl(' +
+                comment.publicationid +
+            ' )}" class = "btn {if !$isMine}hidden{/if}">Edit</a>' +
                 '</div> <!-- END qa-c-item --> ' +
                 '</div> ' +
                 '</div></article>');
