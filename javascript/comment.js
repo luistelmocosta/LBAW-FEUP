@@ -4,14 +4,18 @@ var commentsFetched = false;
 $("body").on("click", ".show-textarea", function(){
 
     var answerid = $(this).data('answer');
+    var type = $(this).data('type');
+    var questionid = $(this).data('question');
     var $commentForm = $(this).parent().find('.comment-form').first();
     console.log(answerid);
     $.getJSON("/controller/api/comments/comment.php", {
-        answerid : answerid
+        answerid : answerid,
+        questionid : questionid,
+        type : type,
     }, function (data) {
         $commentForm.find('article').remove();
         console.log("AID " + answerid);
-        console.log("Data" + data);
+        console.log("Data" + data.length);
         $.each(data, function(i, comment) {
             console.log("Comment:" + comment);
             $commentForm.append('<article class="tweet-data">' +

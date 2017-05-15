@@ -18,6 +18,14 @@
 
 
         {include file="answers_partials/vote_panel.tpl"}
+        <blockquote class="accept-answer text-right {if !$isMine} hidden{/if}" >
+            <div class="accept" title="Accept this answer" data-url="{url('controller/api/questions/mark_as_solved')}" data-refresh="{url('controller/api/questions/refresh_accepted_answers')}" data-answer="{$answer['answerid']}" data-question="{$question['publicationid']}">
+                <div class="accepted up" title="Unnacept this answer"></div>
+            </div>
+        </blockquote>
+        <!-- <button class = "btn btn-success question-solved{if $answer['solved_date'] || !$isMine} hidden{/if}"
+                data-url="{url('controller/api/questions/mark_as_solved')}" data-answer="{$answer['answerid']}" data-question="{$question['publicationid']}">Accept this answer</button> -->
+
 
         <form method="post" action="">
             <div class="qa-a-selection">
@@ -48,9 +56,9 @@
             <div class="post-button clearfix">
                 <a href="{editAnswerUrl($answer['answerid'])}" class = "btn {if !$isMine}hidden{/if}">Edit</a>
                 <div class="post-button clearfix">
-                    <button class="btn icon-chat show-textarea" title="Add a comment on this answer" type="button" data-answer="{$answer['answerid']}">{$answer['total_comments']} Comments</button>
+                    <button class="btn icon-chat show-textarea" title="Add a comment on this answer" type="button" data-answer="{$answer['answerid']}" data-question="{$question['publicationid']}" data-type="answer">{$answer['total_comments']} Comments</button>
                     <div class="textarea">
-                        {include file="comment_form.tpl"}
+                        {include file="answers_partials/comment_form.tpl"}
                     </div>
                 </div>
             </div>
@@ -62,3 +70,4 @@
 
 </div>
 {HTML::script('comment.js')}
+{HTML::script('accept-answer.js')}

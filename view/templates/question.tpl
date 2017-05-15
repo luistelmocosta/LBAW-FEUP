@@ -18,32 +18,7 @@
 
                             <div class = "options pull-right " style = "margin-bottom:5px;">
                                 <br class="clearfix">
-
                                 {include file="question_partials/vote_panel.tpl"}
-
-                                <button class = "btn btn-success question-solved{if $question['solved_date'] || !$isMine} hidden{/if}"
-                                        data-url="{questionSolvedUrl('')}">Mark as solved</button>
-
-                                <script>
-
-                                    $(".question-solved").on('click', function () {
-                                        console.log("Hello");
-                                        var url = $(this).data('url');
-                                        var parent = $(this).closest('.question-info-container');
-                                        var id = parent.data('id');
-                                        var current = $(this);
-
-                                        $.get(url + id, function (data) {
-                                            data = $.parseJSON(data);
-                                            console.log(data);
-                                            if (data.status) {
-                                                parent.find('.question-solved-status').removeClass('text-danger').addClass('text-success');
-                                                parent.find('.question-solved-status').find('span').html('Solved');
-                                                current.addClass('hidden');
-                                            }
-                                        });
-                                    });
-                                </script>
                             </div>
                             <h2 class="question-title">
                                 {$question['title']}
@@ -51,7 +26,6 @@
 
 
                             <div class="question-meta">
-                                <a href="{editQuestionUrl($question['publicationid'])}" class = "btn {if !$isMine}hidden{/if}">Edit</a>
                                 {if $question['solved_date']}
                                     <button class="post-status open">Solved</button>
                                 {else}
@@ -93,6 +67,16 @@
                                                         <li><a href="" class="widget-tag">{$tag['name']}</a></li>
                                                     {/foreach}
                                                 </ul>
+                                            </div>
+                                            <div class="post-button clearfix">
+                                                <a href="{editQuestionUrl($question['publicationid'])}" class = "btn {if !$isMine}hidden{/if}">Edit</a>
+
+                                                <div class="post-button clearfix">
+                                                    <button class="btn icon-chat show-textarea" title="Add a comment on this answer" type="button" data-answer="{$answer['answerid']}" data-question="{$question['publicationid']}" data-type="question">{$answer['total_comments']} Comments</button>
+                                                    <div class="textarea">
+                                                        {include file="question_partials/comment_form.tpl"}
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
 
