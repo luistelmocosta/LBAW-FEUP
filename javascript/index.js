@@ -23,10 +23,44 @@ function addNewQuestions(objects) {
         var newObject = newLine.find('.question-info');
 
         updateTitleAndLink(newObject.find('.summary a'), object);
-
+        updateCreationDate(newObject.find('.question-updated-at'), object);
+        updateQuestionAnswers(newObject.find('.question-answers'), object);
+        updateAnswerCount(newObject.find('.answers-count'), object);
+        updateViewsCount(newObject.find('.views-count'), object);
+        updateVotesCount(newObject.find('.votes-count'), object);
+        updateSolvedStatus(newObject.find('.status'), object)
 
         lastItem.after(newLine);
     });
+}
+
+function updateAnswerCount(viewsCount, object) {
+    viewsCount.html(object.answers_count);
+}
+
+function updateSolvedStatus(viewsCount, object) {
+    if(object.solved_date) {
+        viewsCount.attr('class', 'status answered-accepted');
+        console.log(viewsCount);
+    } else {
+        viewsCount.attr('class', 'status answer-selected');
+    }
+}
+
+function updateViewsCount(viewsCount, object) {
+    viewsCount.html(object.views_counter);
+}
+
+function updateVotesCount(viewsCount, object) {
+    viewsCount.html(object.votes_count);
+}
+
+function updateCreationDate(questionSolved, object) {
+    questionSolved.html(object.creation_date);
+}
+
+function updateQuestionAnswers(questionAnswers, object) {
+    questionAnswers.html(object.answers_count);
 }
 
 function updateTitleAndLink(questionTitle, object) {

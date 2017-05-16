@@ -189,10 +189,53 @@ a, a:visited {
     margin-bottom: 4px;
 }
 
-.status.answered-accepted, .status.answered-accepted .mini-counts, .status.answered-accepted .minicounts span {
+.status.answered-accepted, .status.answer-accepted, .mini-counts,.status.answered-accepted .minicounts span {
     color: #efedf4;
     background: green;
 }
+
+.status.answered-accepted.answers-count span {
+    color: #efedf4;
+}
+
+
+.answers-count, .views_count, .votes_count span {
+    color: #efedf4;
+}
+
+.narrow .answers-count {
+    margin-bottom: 2px;
+}
+
+.narrow .answers-count {
+    font-size: 17px;
+    font-weight: 300;
+    color: inherit;
+    margin-bottom: 4px;
+}
+
+.narrow .views-count {
+    margin-bottom: 2px;
+}
+
+.narrow .views-count {
+    font-size: 17px;
+    font-weight: 300;
+    color: #6a737c;
+    margin-bottom: 4px;
+}
+
+.narrow .votes-count {
+    margin-bottom: 2px;
+}
+
+.narrow .votes-count {
+    font-size: 17px;
+    font-weight: 300;
+    color: #6a737c;
+    margin-bottom: 4px;
+}
+
 
 .summary {
     float: left;
