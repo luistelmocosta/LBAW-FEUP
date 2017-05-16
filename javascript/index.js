@@ -5,7 +5,7 @@ $(document).ready(function () {
         console.log(next_page);
         console.log(tab);
         $.get($(this).data('url') + '?tab=' + tab + '&page=' + next_page, function (data) {
-            addNewQuestions($.parseJSON(data));
+            addNewQuestions($.parseJSON(data), tab);
         });
         $(this).data('next-page', parseInt(next_page) + 1);
     });
@@ -13,11 +13,12 @@ $(document).ready(function () {
     siteStats();
 });
 
-function addNewQuestions(objects) {
+function addNewQuestions(objects, tab) {
 
     $.each(objects, function (i, object) {
-        console.log(object);
-        var lastItem = $('div.question-col .question-summary:last');
+        console.log(tab);
+        var lastItem = $(".question-summary:last");
+        console.dir(lastItem);
         var newLine = lastItem.clone(true);
 
         var newObject = newLine.find('.question-info');

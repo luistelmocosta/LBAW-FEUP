@@ -71,31 +71,51 @@
                             {foreach $recent_questions as $question}
                                 {include file="recent_questions.tpl"}
                             {/foreach}
+
+                            <div class = "load-more"
+                                 data-next-page = "1"
+                                 data-url = "{url('controller/api/questions/load_more_questions')}"
+                                 data-tab = "recent_questions">
+                                <a id="loadMore">
+                                    Load More...
+                                </a>
+                            </div>
                         </div>
                     {/if}
 
-                    <div id="unanswered_questions">
+                    <div id="unanswered_questions" class="question-col">
                         {foreach $unanswered_questions as $question}
                             {include file="unanswered_questions.tpl"}
                         {/foreach}
+
+                        <div class = "load-more"
+                             data-next-page = "1"
+                             data-url = "{url('controller/api/questions/load_more_questions')}"
+                             data-tab = "unanswered_questions">
+                            <a id="loadMore">
+                                Load More...
+                            </a>
+                        </div>
                     </div>
-                    <div id="top">
+                    <div id="top" class="question-col">
                         {foreach $top_scored_questions as $question}
                             {include file="top_scored_questions.tpl"}
                         {/foreach}
 
+                        <div class = "load-more"
+                             data-next-page = "1"
+                             data-url = "{url('controller/api/questions/load_more_questions')}"
+                             data-tab = "top_scored_questions">
+                            <a id="loadMore">
+                                Load More...
+                            </a>
+                        </div>
+
                     </div>
 
                     <div class="clearfix"</div>
+            </div>
 
-                <div class = "load-more"
-                     data-next-page = "1"
-                     data-url = "{url('controller/api/questions/load_more_questions')}"
-                     data-tab = "recent_questions">
-                    <a id="loadMore">
-                        Load More...
-                    </a>
-                </div>
             </div>
         </div>
 
