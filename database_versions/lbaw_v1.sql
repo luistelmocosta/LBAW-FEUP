@@ -1011,3 +1011,15 @@ BEGIN
 END
 $$;
 
+create or replace function insert_into_questioncomments(userid INTEGER, questionid INTEGER, body text)
+    returns void language plpgsql as $$
+DECLARE result INTEGER;
+BEGIN
+    insert into publications(body, userid)
+    VALUES (body, userid)
+    returning publications.publicationid AS publicationid INTO result;
+
+    insert into comments(publicationid) VALUES (result);
+
+    insert into questioncomments(commentid, questionid) VALUES (result, questionid);
+END $$;
