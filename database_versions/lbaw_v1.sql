@@ -1023,3 +1023,15 @@ BEGIN
 
     insert into questioncomments(commentid, questionid) VALUES (result, questionid);
 END $$;
+
+CREATE OR REPLACE FUNCTION get_publication_rating (pid INTEGER)
+    RETURNS INTEGER
+LANGUAGE plpgsql
+AS $func$
+DECLARE rating INTEGER;
+BEGIN
+    SELECT SUM(votes.values) AS rating FROM votes WHERE votes.publicationid = pid
+    INTO rating;
+    RETURN rating;
+END
+$func$;
