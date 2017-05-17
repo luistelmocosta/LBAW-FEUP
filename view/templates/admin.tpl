@@ -5,7 +5,7 @@
             <div class="panel-body">
                 <div class="media">
                     <div align="center">
-                        <img class="thumbnail img-responsive" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="300px" height="300px">
+                        <img class="thumbnail img-responsive" src="{$AVATAR}" width="300px" height="300px">
                     </div>
                     <h2><strong>{$user['fullname']}</strong></h2>
                     <div class="media-body">
