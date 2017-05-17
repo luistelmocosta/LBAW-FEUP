@@ -75,8 +75,8 @@ function correctAuth($username, $password)
 
 function getUserByUsername($username) {
     global $conn;
-    $query = $conn->prepare("SELECT userid, username, fullname, email, signup_date 
-FROM users WHERE username = ?");
+    $query = $conn->prepare("SELECT userid, username, fullname, email, signup_date, userroles.name 
+FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE username = ?");
     $query->execute(array($username));
 
     return $query->fetch();

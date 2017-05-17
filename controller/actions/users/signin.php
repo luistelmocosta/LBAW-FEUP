@@ -35,6 +35,7 @@ try {
         $_SESSION['username'] = $username;
         $_SESSION['logged_in'] = true;
         $_SESSION['user'] = $user;
+        $_SESSION['user']['type'] = $user['name'];
         $_SESSION['success_messages'][] = 'Login Successful!';
         redirect();
     }
