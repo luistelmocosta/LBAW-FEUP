@@ -47,15 +47,15 @@ function editQuestionUrl($questionid)
     return url('controller/pages/questions/edit_question', ['question' => $questionid]);
 }
 
-function editAnswerUrl($answer_id)
+function editAnswerUrl($answerid)
 {
-    return url('pages/answers/edit', ['answer' => $answer_id]);
+    return url('controller/pages/questions/edit_answer', ['answer' => $answerid]);
 }
 
-function questionSolvedUrl($question_id)
+function questionSolvedUrl($question_id, $answer_id)
 {
 
-    return url('controller/api/questions/mark_as_solved', ['question' => $question_id]);
+    return url('controller/api/questions/mark_as_solved', ['question' => $question_id], ['answer' => $answer_id]);
 }
 
 function answerUrl($answer_id)
@@ -65,7 +65,7 @@ function answerUrl($answer_id)
 
 function profileUrl($user_id)
 {
-    return url('controller/pages/users/profile', ['user' => $user_id]);
+    return url('controller/pages/users/profile', ['userid' => $user_id]);
 }
 
 function old($name, $default = '')

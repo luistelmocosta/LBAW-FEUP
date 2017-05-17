@@ -65,11 +65,10 @@
                 </li>
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container -->
 
 </nav>
 
-
-
+<div style="padding-top:30px;"> </div>
+<br>
+<br>

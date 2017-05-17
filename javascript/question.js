@@ -1,8 +1,7 @@
 $(document).ready(function () {
 
     $(".question-solved").on('click', function () {
-        console.log("Hello");
-
+        
         $("body").on('click', '.edit-question', function () {
             var url = $(this).data('url');
             var parent = $(this).closest('.question-info-container');

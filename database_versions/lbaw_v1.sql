@@ -18,7 +18,7 @@ CREATE TABLE userroles
 (
     roleid SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
-    CONSTRAINT user_role CHECK(name IN ('Admin', 'Editor', 'Authenticated'))
+    CONSTRAINT user_role CHECK(name IN ('admin', 'mod', 'auth'))
 );
 
 CREATE TABLE locations
@@ -39,7 +39,7 @@ CREATE TABLE users
     signup_date DATE DEFAULT CURRENT_DATE NOT NULL,
     last_login TIMESTAMP,
     locationid INTEGER,
-    roleid INTEGER,
+    roleid INTEGER DEFAULT 1,
     CONSTRAINT valid_date CHECK(last_login > signup_date),
     CONSTRAINT valid_password CHECK(CHAR_LENGTH(password) >= 6 AND CHAR_LENGTH(password) < 256),
     CONSTRAINT valid_username CHECK(CHAR_LENGTH(username) >= 1 AND CHAR_LENGTH(username) < 20),
@@ -399,14 +399,6 @@ FOR EACH ROW EXECUTE PROCEDURE trigger_auto_ban_on_warning_limit();
 
 DROP TRIGGER IF EXISTS answer_update_question_timestamp ON public.publications;
 
-CREATE OR REPLACE FUNCTION trigger_update_question_timestamp()
-    RETURNS TRIGGER AS $func$
-BEGIN
-    new.last_edit_date := now();
-    RETURN NEW;
-END;
-$func$  LANGUAGE plpgsql;
-
 CREATE TRIGGER answer_update_question_timestamp BEFORE INSERT OR UPDATE ON publications
 FOR EACH ROW EXECUTE PROCEDURE trigger_update_question_timestamp();
 
@@ -725,6 +717,8 @@ end $$;
 
 CREATE OR REPLACE FUNCTION get_answer_comments (aid INTEGER)
   RETURNS TABLE (
+    questionid INTEGER,
+    answerid INTEGER,
     publicationid INTEGER,
     body TEXT,
     creation_date TIMESTAMP,
@@ -736,7 +730,8 @@ LANGUAGE plpgsql
 AS $$
 BEGIN
   RETURN QUERY
-  SELECT publications.publicationid, publications.body, publications.creation_date, users.userid, users.username
+  SELECT (SELECT answers.questionid FROM answers WHERE answers.publicationid = aid),
+    answercomments.answerid, publications.publicationid, publications.body, publications.creation_date, users.userid, users.username
   FROM answercomments INNER JOIN publications ON answercomments.commentid = publications.publicationid
     LEFT JOIN users ON publications.userid = users.userid
   WHERE answercomments.answerid = aid;
@@ -747,6 +742,7 @@ $$;
 
 CREATE OR REPLACE FUNCTION get_question_comments (qid INTEGER)
   RETURNS TABLE (
+    questionid INTEGER,
     publicationid INTEGER,
     body TEXT,
     creation_date TIMESTAMP,
@@ -758,7 +754,7 @@ LANGUAGE plpgsql
 AS $$
 BEGIN
   RETURN QUERY
-  SELECT publications.publicationid, publications.body, publications.creation_date, users.userid, users.username
+  SELECT questioncomments.questionid, publications.publicationid, publications.body, publications.creation_date, users.userid, users.username
   FROM questioncomments INNER JOIN publications ON questioncomments.commentid = publications.publicationid
     LEFT JOIN users ON publications.userid = users.userid
   WHERE questioncomments.questionid= qid;
@@ -853,6 +849,27 @@ BEGIN
 END
 $$;
 
+CREATE OR REPLACE FUNCTION get_users_pag(skip INTEGER, limitNumber INTEGER)
+  RETURNS TABLE (
+    userid INTEGER,
+    name VARCHAR(25),
+    username VARCHAR(25),
+    email VARCHAR(25)
+  )
+AS $func$
+BEGIN
+  RETURN QUERY
+  SELECT users.userid,
+    (SELECT DISTINCT userroles.name FROM userroles WHERE userroles.roleid = users.roleid),
+    users.username,
+    users.email
+  FROM users
+  ORDER BY userid ASC
+  LIMIT limitNumber
+  OFFSET skip;
+END
+$func$  LANGUAGE plpgsql;
+
 CREATE OR REPLACE FUNCTION category_questions(skip INTEGER, limitNumber INTEGER, cid INTEGER)
     RETURNS TABLE (
         publicationid INTEGER,
@@ -886,28 +903,9 @@ BEGIN
 END
 $func$  LANGUAGE plpgsql;
 
-CREATE OR REPLACE FUNCTION get_users_pag(skip INTEGER, limitNumber INTEGER)
-    RETURNS TABLE (
-        userid INTEGER,
-        roleid INTEGER,
-        username VARCHAR(25),
-        email VARCHAR(25)
-    )
-AS $func$
-BEGIN
-    RETURN QUERY
-    SELECT users.userid,
-        users.roleid,
-        users.username,
-        users.email
-    FROM users
-    ORDER BY userid ASC
-    LIMIT limitNumber
-    OFFSET skip;
-END
-$func$  LANGUAGE plpgsql;
 
 CREATE OR REPLACE FUNCTION answer_ranking(aid INT)
+RETURNS INTEGER
 LANGUAGE plpgsql
 AS $$
 DECLARE publicationvotecount INTEGER;
@@ -923,3 +921,102 @@ BEGIN
 END
 $$;
 
+CREATE OR REPLACE FUNCTION answer_total_comments(aid INT)
+    returns integer
+LANGUAGE plpgsql
+AS $$
+DECLARE questions_count INTEGER;
+BEGIN
+    SELECT COUNT(*) FROM answers
+        INNER JOIN answercomments
+            ON answers.publicationid = answercomments.answerid
+    WHERE answers.publicationid = aid
+    INTO questions_count;
+
+    IF questions_count is null THEN
+        questions_count := 0;
+    END IF;
+
+    return questions_count;
+END
+$$;
+
+CREATE OR REPLACE FUNCTION answer_details_from_id (pubid INTEGER)
+    RETURNS TABLE (
+        questionid INTEGER,
+        answerid INTEGER,
+        title VARCHAR(100),
+        body TEXT)
+AS $func$
+BEGIN
+    RETURN QUERY
+    SELECT questions.publicationid, answers.publicationid, questions.title, publications.body
+    FROM answers
+        INNER JOIN publications
+            ON answers.publicationid = publications.publicationid
+        INNER JOIN questions ON answers.questionid = questions.publicationid
+    WHERE answers.publicationid = pubid;
+END
+$func$  LANGUAGE plpgsql;
+
+
+create or replace function mark_as_solved(aid INTEGER, qid INTEGER)
+    returns void language plpgsql as $$
+DECLARE result INTEGER;
+begin
+    UPDATE answers SET solved_date= NOW() WHERE publicationid= aid;
+    UPDATE questions SET solved_date = NOW() WHERE publicationid = qid;
+end $$;
+
+create or replace function delete_solved(aid INTEGER, qid INTEGER)
+    returns void language plpgsql as $$
+DECLARE result INTEGER;
+begin
+    UPDATE answers SET solved_date= NULL WHERE publicationid= aid;
+    UPDATE questions SET solved_date = NULL WHERE publicationid = qid;
+end $$;
+
+CREATE OR REPLACE FUNCTION is_answer_accepted(aid INT)
+    returns INTEGER
+LANGUAGE plpgsql
+AS $$
+DECLARE date_solved TIMESTAMP;
+    DECLARE answer_accepted INTEGER;
+BEGIN
+    SELECT solved_date FROM answers WHERE answers.publicationid = aid
+    INTO date_solved;
+
+    IF date_solved is null THEN
+        answer_accepted := 0;
+    ELSE
+        answer_accepted :=1;
+    END IF;
+
+    return answer_accepted;
+END
+$$;
+
+create or replace function insert_into_questioncomments(userid INTEGER, questionid INTEGER, body text)
+    returns void language plpgsql as $$
+DECLARE result INTEGER;
+BEGIN
+    insert into publications(body, userid)
+    VALUES (body, userid)
+    returning publications.publicationid AS publicationid INTO result;
+
+    insert into comments(publicationid) VALUES (result);
+
+    insert into questioncomments(commentid, questionid) VALUES (result, questionid);
+END $$;
+
+CREATE OR REPLACE FUNCTION get_publication_rating (pid INTEGER)
+    RETURNS INTEGER
+LANGUAGE plpgsql
+AS $func$
+DECLARE rating INTEGER;
+BEGIN
+    SELECT SUM(votes.values) AS rating FROM votes WHERE votes.publicationid = pid
+    INTO rating;
+    RETURN rating;
+END
+$func$;

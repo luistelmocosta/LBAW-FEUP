@@ -1,32 +1,65 @@
 $(document).ready(function () {
-    $(".load-more").on('click', function () {
+    $(".loadMore").on('click', function () {
         var tab = $(this).data('tab');
         var next_page = $(this).data('next-page');
         console.log(next_page);
-        console.log(tab);
         $.get($(this).data('url') + '?tab=' + tab + '&page=' + next_page, function (data) {
-            addNewQuestions($.parseJSON(data));
+            addNewQuestions($.parseJSON(data), tab);
         });
         $(this).data('next-page', parseInt(next_page) + 1);
     });
 
-    siteStatus();
+    siteStats();
 });
 
-function addNewQuestions(objects) {
+function addNewQuestions(objects, tab) {
 
     $.each(objects, function (i, object) {
-        console.log(object);
-        var lastItem = $('div.question-col .question-summary:last');
+        console.log(tab);
+        var lastItem = $(".question-col" + "#" + tab + "> .question-summary").last();
         var newLine = lastItem.clone(true);
 
         var newObject = newLine.find('.question-info');
 
         updateTitleAndLink(newObject.find('.summary a'), object);
-
+        updateCreationDate(newObject.find('.question-updated-at'), object);
+        updateQuestionAnswers(newObject.find('.question-answers'), object);
+        updateAnswerCount(newObject.find('.answers-count'), object);
+        updateViewsCount(newObject.find('.views-count'), object);
+        updateVotesCount(newObject.find('.votes-count'), object);
+        updateSolvedStatus(newObject.find('.status'), object);
 
         lastItem.after(newLine);
     });
+}
+
+function updateAnswerCount(viewsCount, object) {
+    viewsCount.html(object.answers_count);
+}
+
+function updateSolvedStatus(viewsCount, object) {
+    if(object.solved_date) {
+        viewsCount.attr('class', 'status answered-accepted');
+        console.log(viewsCount);
+    } else {
+        viewsCount.attr('class', 'status answer-selected');
+    }
+}
+
+function updateViewsCount(viewsCount, object) {
+    viewsCount.html(object.views_counter);
+}
+
+function updateVotesCount(viewsCount, object) {
+    viewsCount.html(object.votes_count);
+}
+
+function updateCreationDate(questionSolved, object) {
+    questionSolved.html(object.creation_date);
+}
+
+function updateQuestionAnswers(questionAnswers, object) {
+    questionAnswers.html(object.answers_count);
 }
 
 function updateTitleAndLink(questionTitle, object) {
@@ -35,15 +68,28 @@ function updateTitleAndLink(questionTitle, object) {
     questionTitle.html(object.title);
 }
 
-function siteStatus() {
-    var ctx = document.getElementById("siteStatus");
+function siteStats() {
+    var jsonUrl = "../../../javascript/json/siteStatsData.json";
+
+    var siteData=[];
+
+    $.ajax({
+        url: jsonUrl,
+        dataType: 'json',
+        async: false,
+        success: function(data) {
+            siteData = data;
+        }
+    });
+
+    var ctx = document.getElementById("siteStats");
 
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ["Questions", "Answers", "Comments", "Unanswered"],
+            labels: ["Questions", "Answers", "Comments", "Unsolved"],
             datasets: [{
-                data: [15, 10, 3, 5],
+                data: siteData,
                 backgroundColor: [
                     'rgba(255, 64, 64, 1)',
                     'rgba(64, 64, 255, 1)',
@@ -82,5 +128,4 @@ function siteStatus() {
             responsive: false
         }
     });
-
 }

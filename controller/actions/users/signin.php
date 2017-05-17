@@ -28,18 +28,22 @@ try {
     }
     $user = getUserByUsername($username);
 
-    $_SESSION['username'] = $username;
-    $_SESSION['logged_in'] = true;
-    $_SESSION['user'] = $user;
-    $_SESSION['success_messages'][] = 'Login Successful!';
+    if(check_ban($user['userid'])[0]['count'] > 0)
+        redirect('controller/pages/about.php');
+    else {
+      
+        $_SESSION['username'] = $username;
+        $_SESSION['logged_in'] = true;
+        $_SESSION['user'] = $user;
+        $_SESSION['user']['type'] = $user['name'];
+        $_SESSION['success_messages'][] = 'Login Successful!';
+        redirect();
+    }
 
-
-
-    redirect();
 
 } catch (PDOException $e) {
 
-    redirect('controllers/pages/users/signin.php');
+    redirect('controller/pages/users/signin.php');
 }
 
 

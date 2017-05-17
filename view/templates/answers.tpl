@@ -18,6 +18,15 @@
 
 
         {include file="answers_partials/vote_panel.tpl"}
+        <blockquote class="accept-answer text-right {if !$isMine} hidden{/if}" >
+            <div class="accept" title="Accept this answer" data-url="{url('controller/api/questions/mark_as_solved')}" data-refresh="{url('controller/api/questions/refresh_accepted_answers')}" data-answer="{$answer['answerid']}" data-question="{$question['publicationid']}">
+                <div class="accepted up" title="Unnacept this answer"></div>
+            </div>
+        </blockquote>
+        <!-- <button class = "btn btn-success question-solved{if $answer['solved_date'] || !$isMine} hidden{/if}"
+                data-url="{url('controller/api/questions/mark_as_solved')}" data-answer="{$answer['answerid']}" data-question="{$question['publicationid']}">Accept this answer</button> -->
+
+
         <form method="post" action="">
             <div class="qa-a-selection">
             </div>
@@ -32,7 +41,7 @@
                 <a name="187"></a><div class="entry-content">{$answer['body']}</div>
             </div>
             <span class="qa-a-item-meta">
-                    <a href="../184/how-to-install-this-theme?show=187#a187" class="qa-a-item-what">answered</a>
+                    answered
                     <span class="qa-a-item-when">
                         <span class="qa-a-item-when-data">
                             <span class="published">
@@ -45,12 +54,12 @@
                     </span>
                 </span>
             <div class="post-button clearfix">
-                <button class="btn icon-chat showarea" title="Add a comment on this answer"
-                        type="button" id="showarea" name="showarea" value="Show Textarea"
-                        data-answer={$answer['publicationid']}>
-                    Comment</button>
-                <div id="textarea">
-                    {include file="comment_form.tpl"}
+                <a href="{editAnswerUrl($answer['answerid'])}" class = "btn {if !$isMine}hidden{/if}">Edit</a>
+                <div class="post-button clearfix">
+                    <button class="btn icon-chat show-textarea" title="Add a comment on this answer" type="button" data-answer="{$answer['answerid']}" data-question="{$question['publicationid']}" data-type="answer">{$answer['total_comments']} Comments</button>
+                    <div class="textarea">
+                        {include file="answers_partials/comment_form.tpl"}
+                    </div>
                 </div>
             </div>
 
@@ -60,9 +69,5 @@
     </div>
 
 </div>
-<script>
-    answerid = {$answer['answerid']};
-    console.log(answerid);
-
-</script>
 {HTML::script('comment.js')}
+{HTML::script('accept-answer.js')}

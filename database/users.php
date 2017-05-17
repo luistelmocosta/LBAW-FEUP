@@ -8,6 +8,18 @@ function getNumUsers(){
     return $stmt->fetchAll();
 }
 
+function users_pag($page = 0)
+{
+    global $conn;
+    $limit = 4;
+    $skip = $limit * $page;
+    $stmt = $conn->prepare("SELECT * FROM get_users_pag(:skip, :limit)");
+    $stmt->execute(['limit' => $limit, 'skip' => $skip]);
+    $rows = $stmt->fetchAll();
+
+    return $rows;
+}
+
 function getUsersPag($skip, $limit) {
     global $conn;
     $stmt = $conn->prepare("SELECT * FROM get_users_pag(:skip, :limit)");
@@ -63,8 +75,8 @@ function correctAuth($username, $password)
 
 function getUserByUsername($username) {
     global $conn;
-    $query = $conn->prepare("SELECT userid, username, fullname, email, signup_date 
-FROM users WHERE username = ?");
+    $query = $conn->prepare("SELECT userid, username, fullname, email, signup_date, userroles.name 
+FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE username = ?");
     $query->execute(array($username));
 
     return $query->fetch();
@@ -101,6 +113,15 @@ function top_scored_users() {
 
     global $conn;
     $query = $conn->prepare("SELECT * FROM top_scored_users()");
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function check_ban($userid){
+
+    global $conn;
+    $query = $conn->prepare("SELECT COUNT(*) FROM modregisters INNER JOIN bans ON modregisters.modregisterid = bans.banid WHERE userid_target = $userid");
     $query->execute();
 
     return $query->fetchAll();

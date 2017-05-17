@@ -1,8 +1,4 @@
 <title>Create Question</title>
-<br class="clearfix">
-<br class="clearfix">
-<br class="clearfix">
-<br class="clearfix">
 <div id="site-body" class="container">
     {include file="common/messages.tpl"}
     <div class="clearfix qa-main">

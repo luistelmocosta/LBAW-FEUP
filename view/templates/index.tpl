@@ -12,12 +12,14 @@
                     <h1>AskMe</h1>
                     <br>
 
-                    <form name="search" method="post" action= "{$BASE_URL}controller/actions/questions/search_results.php">
+                    <form name="search" method="post" action="{$BASE_URL}controller/actions/questions/search_results.php">
                         <div id="custom-search-input">
                             <div class="input-group col-lg-12">
                                 <input type="text" name="psearch" class="form-control input-lg" placeholder="Search for a question..."/>
                                 <span class="input-group-btn">
-                                    <input value="search" title="" type="submit" class="qa-form-wide-button qa-form-wide-button-save">
+                                    <button class="btn btn-info">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
                                 </span>
                             </div>
                         </div>
@@ -69,62 +71,81 @@
                             {foreach $recent_questions as $question}
                                 {include file="recent_questions.tpl"}
                             {/foreach}
+
+                            <div class = "loadMore"
+                                 data-next-page = "1"
+                                 data-url = "{url('controller/api/questions/load_more_questions')}"
+                                 data-tab = "recent_questions">
+                                <a style="color: #f9f9f9">
+                                    Load More...
+                                </a>
+                            </div>
                         </div>
                     {/if}
 
-                    <div id="unanswered_questions">
+                    <div id="unanswered_questions" class="question-col">
                         {foreach $unanswered_questions as $question}
                             {include file="unanswered_questions.tpl"}
                         {/foreach}
+
+                        <div class = "loadMore"
+                             data-next-page = "1"
+                             data-url = "{url('controller/api/questions/load_more_questions')}"
+                             data-tab = "unanswered_questions">
+                            <a style="color: #f9f9f9">
+                                Load More...
+                            </a>
+                        </div>
                     </div>
-                    <div id="top">
+                    <div id="top" class="question-col">
                         {foreach $top_scored_questions as $question}
                             {include file="top_scored_questions.tpl"}
                         {/foreach}
 
+                        <div class = "loadMore"
+                             data-next-page = "1"
+                             data-url = "{url('controller/api/questions/load_more_questions')}"
+                             data-tab = "top">
+                            <a style="color: #f9f9f9">
+                                Load More...
+                            </a>
+                        </div>
+
                     </div>
 
-                    <div class="clearfix"</div>
+                    <div class="clearfix"></div>
 
 
-
-                <div class = "load-more"
-                     data-next-page = "1"
-                     data-url = "{url('controller/api/questions/load_more_questions')}"
-                     data-tab = "recent_questions">
-                    <a id="loadMore">
-                        Load More...
-                    </a>
                 </div>
-
             </div>
+
         </div>
+        <div class="col-md-4 pull-right">
+            <div id="home-right-position">
+                <div class="widget cs_top_contributors">
+                    <h3 class="widget-title">Top Scored Users</h3>
+                    <div class="ra-tags-widget">
 
-    </div>
-    <div class="col-md-4 pull-right">
-        <div id="home-right-position">
-            <div class="widget cs_top_contributors">
-                <h3 class="widget-title">Top Scored Users</h3>
-                <div class="ra-tags-widget">
+                        <ul class="top-users-list clearfix">
+                            {foreach $top_scored_users as $user}
+                                {include file="sidebar_partials/top_scored_users.tpl"}
 
-                    <ul class="top-users-list clearfix">
-                        {foreach $top_scored_users as $user}
-                            {include file="sidebar_partials/top_scored_users.tpl"}
-
-                        {/foreach}
-                    </ul>
-                </div>
-                <br>
-                <br>
-                <div class="widget status" >
-                    <h3 class="widget-title">Site Status</h3>
-                    <canvas id="siteStatus" width="350" height="300" style="padding-left: 10px">
-                    </canvas>
+                            {/foreach}
+                        </ul>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="widget status" >
+                        <h3 class="widget-title">Site Status</h3>
+                        <canvas id="siteStats" width="350" height="300" style="padding-left: 10px">
+                        </canvas>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 {HTML::script('index.js')}
 
