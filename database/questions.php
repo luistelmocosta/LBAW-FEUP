@@ -145,10 +145,10 @@ function unanswered_questions($page = 0) {
     return $rows;
 }
 
-function top_scored_questions($page = 0) {
+function top($page = 0) {
 
     global $conn;
-    $limit = 4;
+    $limit = 7;
     $skip = $limit * $page;
     $stmt = $conn->prepare("SELECT * FROM top_scored_questions(:skip, :limit)");
     $stmt->execute(['limit' => $limit, 'skip' => $skip]);
