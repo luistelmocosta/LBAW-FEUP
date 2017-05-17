@@ -21,7 +21,7 @@
             class="status answer-selected"
         {/if}
                 title="one of the answers was accepted as the correct answer">
-        <div class="answers-count">
+            <div class="answers-count">
                 <span title="{$question['answers_count']} answer">{$question['answers_count']}</span></div>
             <div>answer</div>
         </div>
