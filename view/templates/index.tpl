@@ -72,11 +72,11 @@
                                 {include file="recent_questions.tpl"}
                             {/foreach}
 
-                            <div class = "load-more"
+                            <div class = "loadMore"
                                  data-next-page = "1"
                                  data-url = "{url('controller/api/questions/load_more_questions')}"
                                  data-tab = "recent_questions">
-                                <a id="loadMore">
+                                <a style="color: #f9f9f9">
                                     Load More...
                                 </a>
                             </div>
@@ -88,11 +88,11 @@
                             {include file="unanswered_questions.tpl"}
                         {/foreach}
 
-                        <div class = "load-more"
+                        <div class = "loadMore"
                              data-next-page = "1"
                              data-url = "{url('controller/api/questions/load_more_questions')}"
                              data-tab = "unanswered_questions">
-                            <a id="loadMore">
+                            <a style="color: #f9f9f9">
                                 Load More...
                             </a>
                         </div>
@@ -102,49 +102,50 @@
                             {include file="top_scored_questions.tpl"}
                         {/foreach}
 
-                        <div class = "load-more"
+                        <div class = "loadMore"
                              data-next-page = "1"
                              data-url = "{url('controller/api/questions/load_more_questions')}"
-                             data-tab = "top_scored_questions">
-                            <a id="loadMore">
+                             data-tab = "top">
+                            <a style="color: #f9f9f9">
                                 Load More...
                             </a>
                         </div>
 
                     </div>
 
-                    <div class="clearfix"</div>
-            </div>
+                    <div class="clearfix"></div>
 
-            </div>
-        </div>
 
-    </div>
-    <div class="col-md-4 pull-right">
-        <div id="home-right-position">
-            <div class="widget cs_top_contributors">
-                <h3 class="widget-title">Top Scored Users</h3>
-                <div class="ra-tags-widget">
-
-                    <ul class="top-users-list clearfix">
-                        {foreach $top_scored_users as $user}
-                            {include file="sidebar_partials/top_scored_users.tpl"}
-
-                        {/foreach}
-                    </ul>
                 </div>
-                <br>
-                <br>
-                <div class="widget status" >
-                    <h3 class="widget-title">Site Status</h3>
-                    <canvas id="siteStats" width="350" height="300" style="padding-left: 10px">
-                    </canvas>
+            </div>
+
+        </div>
+        <div class="col-md-4 pull-right">
+            <div id="home-right-position">
+                <div class="widget cs_top_contributors">
+                    <h3 class="widget-title">Top Scored Users</h3>
+                    <div class="ra-tags-widget">
+
+                        <ul class="top-users-list clearfix">
+                            {foreach $top_scored_users as $user}
+                                {include file="sidebar_partials/top_scored_users.tpl"}
+
+                            {/foreach}
+                        </ul>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="widget status" >
+                        <h3 class="widget-title">Site Status</h3>
+                        <canvas id="siteStats" width="350" height="300" style="padding-left: 10px">
+                        </canvas>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-</div>
+
 
 {HTML::script('index.js')}
 

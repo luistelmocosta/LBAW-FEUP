@@ -1,9 +1,8 @@
 $(document).ready(function () {
-    $(".load-more").on('click', function () {
+    $(".loadMore").on('click', function () {
         var tab = $(this).data('tab');
         var next_page = $(this).data('next-page');
         console.log(next_page);
-        console.log(tab);
         $.get($(this).data('url') + '?tab=' + tab + '&page=' + next_page, function (data) {
             addNewQuestions($.parseJSON(data), tab);
         });
@@ -17,8 +16,7 @@ function addNewQuestions(objects, tab) {
 
     $.each(objects, function (i, object) {
         console.log(tab);
-        var lastItem = $(".question-summary:last");
-        console.dir(lastItem);
+        var lastItem = $(".question-col" + "#" + tab + "> .question-summary").last();
         var newLine = lastItem.clone(true);
 
         var newObject = newLine.find('.question-info');
@@ -29,7 +27,7 @@ function addNewQuestions(objects, tab) {
         updateAnswerCount(newObject.find('.answers-count'), object);
         updateViewsCount(newObject.find('.views-count'), object);
         updateVotesCount(newObject.find('.votes-count'), object);
-        updateSolvedStatus(newObject.find('.status'), object)
+        updateSolvedStatus(newObject.find('.status'), object);
 
         lastItem.after(newLine);
     });

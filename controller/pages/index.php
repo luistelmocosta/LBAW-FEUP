@@ -46,7 +46,7 @@ foreach ($unanswered_questions as $key => $unanswered_question) {
     $unanswered_questions[$key]['creation_date'] = time_elapsed_string($unanswered_questions[$key]['creation_date']);
 }
 
-$top_scored_questions = top_scored_questions();
+$top_scored_questions = top();
 
 foreach ($top_scored_questions as $key => $top_scored_question) {
     $top_scored_questions[$key]['creation_date'] = time_elapsed_string($top_scored_questions[$key]['creation_date']);
