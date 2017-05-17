@@ -717,7 +717,8 @@ end $$;
 
 CREATE OR REPLACE FUNCTION get_answer_comments (aid INTEGER)
   RETURNS TABLE (
-    answerid INTEGER
+    questionid INTEGER,
+    answerid INTEGER,
     publicationid INTEGER,
     body TEXT,
     creation_date TIMESTAMP,
@@ -729,7 +730,8 @@ LANGUAGE plpgsql
 AS $$
 BEGIN
   RETURN QUERY
-  SELECT answercomments.answerid, publications.publicationid, publications.body, publications.creation_date, users.userid, users.username
+  SELECT (SELECT answers.questionid FROM answers WHERE answers.publicationid = aid),
+    answercomments.answerid, publications.publicationid, publications.body, publications.creation_date, users.userid, users.username
   FROM answercomments INNER JOIN publications ON answercomments.commentid = publications.publicationid
     LEFT JOIN users ON publications.userid = users.userid
   WHERE answercomments.answerid = aid;
