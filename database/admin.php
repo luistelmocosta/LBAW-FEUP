@@ -87,3 +87,17 @@ function unBanUser($userid){
     $stmt2 = $conn->prepare("DELETE FROM bans WHERE bans.banid = $banID");
     $stmt2->execute();
 }
+
+function checkIfCatExists($cat){
+    global $conn;
+    $query = $conn->prepare("SELECT COUNT(*) FROM categories WHERE categories.name = '$cat'");
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function createCategory($cat){
+    global $conn;
+    $query = $conn->prepare("INSERT INTO categories(name) VALUES('$cat')");
+    $query->execute();
+}

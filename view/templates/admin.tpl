@@ -1,4 +1,5 @@
 <title>Admin's Page</title>
+{include file="common/messages.tpl"}
 <div id="site-body" class="container">
     <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
         <div class="panel panel-default">
@@ -152,8 +153,8 @@
 
                             <form name="promUsr" method="post" action="{$BASE_URL}controller/api/admin/prom_user.php">
                                 <td id="promUsr" style="text-align: center">
-                                    <input class="prom" type="range" step="1" min="1" max="3">
-                                    <label class="promDescr"></label>
+                                    <label id="permLabel"></label>
+                                    <div id="slider-range"></div>
                                 </td>
                             </form>
 
@@ -261,6 +262,22 @@
             </div>
 
         </div>
+
+
+        <div class="panel panel-default">
+            <h3 style="padding-left: 10px">Create new category</h3>
+            <form class = "navbar-form" method = "post" action = "{$BASE_URL}controller/actions/admin/create_category.php">
+                <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control" name="newCat" placeholder="New category" >
+                    <span class="input-group-addon">
+                            <button type="submit">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </span>
+                </div>
+            </form>
+        </div>
+
 
         <div class="panel panel-default">
             <h3 style="padding-left: 10px">Status</h3>

@@ -11,6 +11,7 @@ $(document).ready(function () {
         });
     });
 
+
     //BAN USER
 
     $(".usersTable #ban").click(function (e) {
@@ -42,22 +43,6 @@ $(document).ready(function () {
 
     });
 
-    //User promotion
-    var roleValues =
-        {
-            "1": "Registered",
-            "2": "Editor",
-            "3": "Admin"
-        };
-
-    // on page load, set the text of the label based the value of the range
-    $('.promDescr').text(roleValues[$('.prom').val()]);
-
-    // setup an event handler to set the text when the range value is dragged
-    $('.prom').on('input change', function () {
-        $('.promDescr').text(roleValues[$(this).val()]);
-    });
-
 
     //WARN USER
 
@@ -70,6 +55,40 @@ $(document).ready(function () {
                 $('#warnMsgModal').modal('hide');
             });
         });
+    });
+
+
+    //PROMOTE USER
+
+    $(function() {
+
+        var actPerm;
+
+        $('.usersTable #usrRole').each(function() {
+            console.log($(this).closest("#usrRole").html());
+            var perm = $(this).closest("#usrRole").html();
+            if(perm == "reg")
+                actPerm = 1;
+            else if(perm == "mod")
+                actPerm = 2;
+            else actPerm = 3;
+            $(this).closest(".usersTable #permLabel").text(perm);
+
+        });
+
+        $(".usersTable #slider-range").slider({
+            range: "min",
+            value: actPerm,
+            min: 1,
+            max: 3,
+            slide: function (event, ui) {
+                //console.log(ui.value);
+                $(this).closest("#permLabel").text(actPerm);
+
+
+            }
+        });
+
     });
 
 });
