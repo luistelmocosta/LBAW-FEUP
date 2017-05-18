@@ -1,8 +1,8 @@
 <?php
 
-function getNumEditors(){
+function getNumModerators(){
     global $conn;
-    $stmt = $conn->prepare("SELECT COUNT(*) FROM users WHERE roleid = 3");
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM users WHERE roleid = 2");
     $stmt->execute();
 
     return $stmt->fetchAll();
@@ -10,7 +10,7 @@ function getNumEditors(){
 
 function getNumAdmins(){
     global $conn;
-    $stmt = $conn->prepare("SELECT COUNT(*) FROM users WHERE roleid = 2");
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM users WHERE roleid = 3");
     $stmt->execute();
 
     return $stmt->fetchAll();

@@ -158,7 +158,7 @@ function usersStats() {
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ["Registered", "Editors", "Admins"],
+            labels: ["Registered", "Moderators", "Admins"],
             datasets: [{
                 data: usersData,
                 backgroundColor: [

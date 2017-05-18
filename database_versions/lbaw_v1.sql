@@ -18,7 +18,7 @@ CREATE TABLE userroles
 (
     roleid SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
-    CONSTRAINT user_role CHECK(name IN ('admin', 'mod', 'auth'))
+    CONSTRAINT user_role CHECK(name IN ('reg', 'mod', 'admin'))
 );
 
 CREATE TABLE locations

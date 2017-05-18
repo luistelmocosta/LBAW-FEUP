@@ -63,7 +63,7 @@ file_put_contents($jsonDir . 'siteStatsData.json', $SSdata);
 
 //User Stats
 
-$numEdit = getNumEditors()[0]['count'];
+$numEdit = getNumModerators()[0]['count'];
 $numAdmins = getNumAdmins()[0]['count'];
 
 $USArr = [$numUsers, $numEdit, $numAdmins];

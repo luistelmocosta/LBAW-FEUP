@@ -42,8 +42,8 @@ insert into categories (name) values ('Electronics');
 insert into categories (name) values ('Movies');
 
 
-INSERT INTO userroles(name) VALUES ('auth');
-INSERT INTO userroles(name) VALUES ('editor');
+INSERT INTO userroles(name) VALUES ('reg');
+INSERT INTO userroles(name) VALUES ('mod');
 INSERT INTO userroles(name) VALUES ('admin');
 
 

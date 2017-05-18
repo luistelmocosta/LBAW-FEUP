@@ -104,7 +104,7 @@
                                     <div class="modal-dialog modal-md">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"></button>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                 <h4 class="modal-title">Warning Message</h4>
                                             </div>
                                             <form id="warnUsr" name="wrnUsr" method="post" action="">
@@ -121,7 +121,7 @@
 
                             </td>
 
-                            <form name="banUsr" method="post" action="{$BASE_URL}controller/api/admin/ban_user.php">
+                            <form name="banUsr" method="post" action="">
                                 <td id="banUsr" style="text-align: center">
                                     <label class="switch">
                                         <input id="ban" type="checkbox" data-toggle="modal" data-target="#banMsgModal">
@@ -133,7 +133,7 @@
                                 <div class="modal-dialog modal-md">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"></button>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                                             <h4 class="modal-title">Ban Message</h4>
                                         </div>
                                         <form id="banUsr" name="bnUsr" method="post" action="">
@@ -147,6 +147,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             </td>
 
                             <form name="promUsr" method="post" action="{$BASE_URL}controller/api/admin/prom_user.php">
