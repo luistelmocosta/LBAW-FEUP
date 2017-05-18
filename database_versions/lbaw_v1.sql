@@ -51,7 +51,7 @@ CREATE TABLE users
     FOREIGN KEY ("roleid") REFERENCES userroles ("roleid") ON DELETE SET NULL ON UPDATE CASCADE
 );
 
-CREATE INDEX users_username ON users USING hash(username);
+CREATE INDEX users_question_search_idx ON users USING gin(to_tsvector('english', username));
 CREATE INDEX users_email ON users USING hash(email);
 
 CREATE TABLE modregisters
@@ -115,7 +115,7 @@ CREATE TABLE questions
     FOREIGN KEY ("publicationid") REFERENCES publications ("publicationid") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE INDEX questions_question_search_idx ON questions USING gin(to_tsvector('english', coalesce(title)));
+CREATE INDEX questions_question_search_idx ON questions USING gin(to_tsvector('english', title));
 
 CREATE TABLE comments
 (
@@ -416,23 +416,6 @@ BEGIN
 END;
 
 $$ LANGUAGE plpgsql;
-
----- This is the Full text search function
-
-CREATE OR REPLACE FUNCTION search_questions(psearch text)
-    RETURNS TABLE (questionid INTEGER) AS $func$
-BEGIN
-    return QUERY
-    SELECT DISTINCT (questions.publicationid)
-    FROM questions
-    WHERE to_tsvector(coalesce(questions.title, '')) @@ plainto_tsquery(psearch)
-          OR
-          publicationid IN (
-              SELECT DISTINCT(publications.publicationid) FROM publications WHERE to_tsvector(coalesce(publications.body, '')) @@ plainto_tsquery(psearch)
-          )
-    ;
-END
-$func$  LANGUAGE plpgsql;
 
 --- This function adds does two inserts : - INSERT INTO Questions and Publications //FIXME THIS SOULD BE A TRANSACTION
 
@@ -1063,3 +1046,60 @@ begin
     DELETE FROM questions WHERE questions.publicationid = qid;
     DELETE FROM publications WHERE publications.publicationid = qid;
 end $$;
+
+CREATE OR REPLACE FUNCTION search_publications(psearch text)
+  RETURNS TABLE (pid INTEGER, score_pub REAL) AS $func$
+BEGIN
+  return QUERY
+  SELECT DISTINCT publications.publicationid as pubs, ts_rank_cd(
+      to_tsvector('english', publications.body),
+      plainto_tsquery('english', psearch)
+  ) AS score_pub
+  FROM publications
+  WHERE to_tsvector('english', publications.body) @@ plainto_tsquery('english', psearch) ;
+END
+$func$  LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION search_questions(psearch text)
+  RETURNS TABLE (questionid INTEGER, score_question REAL) AS $func$
+BEGIN
+  return QUERY
+  SELECT DISTINCT questions.publicationid as questions,
+    ts_rank_cd(
+      to_tsvector('english', questions.title),
+      plainto_tsquery('english', psearch)
+  ) AS score_question
+  FROM questions
+  WHERE to_tsvector('english', questions.title) @@ plainto_tsquery('english', psearch)
+        OR questions.publicationid IN (
+    SELECT DISTINCT publications.publicationid as pubs
+    FROM publications
+    WHERE to_tsvector('english', publications.body) @@ plainto_tsquery('english', psearch));
+END
+$func$  LANGUAGE plpgsql;
+
+
+CREATE OR REPLACE FUNCTION search_answers(psearch text)
+  RETURNS TABLE (answerid INTEGER, score_answer REAL) AS $func$
+BEGIN
+  return QUERY
+  SELECT publications.publicationid as answers, ts_rank_cd(to_tsvector('english', publications.body),
+                                                           plainto_tsquery('english', psearch)) AS score_answer
+  FROM publications LEFT OUTER JOIN answers ON publications.publicationid = answers.publicationid
+  WHERE to_tsvector('english', publications.body) @@ plainto_tsquery('english', psearch)
+  AND answers.publicationid IN (SELECT DISTINCT publications.publicationid as pubs FROM publications
+  WHERE to_tsvector('english', publications.body) @@ plainto_tsquery('english', psearch));
+
+END
+$func$  LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION search_users(psearch text)
+  RETURNS TABLE (userid INTEGER, username VARCHAR(50), score_answer REAL) AS $func$
+BEGIN
+  return QUERY
+  SELECT users.userid, users.username as users, ts_rank_cd(to_tsvector('english', users.username),
+                                                           plainto_tsquery('english', psearch)) AS score_user
+  FROM users
+  WHERE to_tsvector('english', users.username) @@ plainto_tsquery('english', psearch);
+END
+$func$  LANGUAGE plpgsql;
