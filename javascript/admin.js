@@ -31,6 +31,22 @@ $(document).ready(function () {
 
     });
 
+    //User promotion
+    var roleValues =
+        {
+            "1": "Registered",
+            "2": "Editor",
+            "3": "Admin"
+        };
+
+    // on page load, set the text of the label based the value of the range
+    $('.promDescr').text(roleValues[$('#prom').val()]);
+
+    // setup an event handler to set the text when the range value is dragged (see event for input) or changed (see event for change)
+    $('.prom').on('input change', function () {
+        $('.promDescr').text(roleValues[$(this).val()]);
+    });
+
 });
 
 

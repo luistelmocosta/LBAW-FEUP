@@ -83,11 +83,12 @@
                     <th style="text-align: center">Info</th>
                     <th style="text-align: center">Warn</th>
                     <th style="text-align: center">Ban</th>
+                    <th style="text-align: center">Promote</th>
 
                     {foreach $users as $user}
                         <tr class="usersTable" id={$user['userid']}>
                             <td>{$user['username']}</td>
-                            <td>{$user['name']}</td>
+                            <td id="usrRole">{$user['name']}</td>
                             <td>{$user['email']}</td>
 
                             <td style="text-align: center">
@@ -104,12 +105,17 @@
 
                             <form name="banUsr" method="post" action="{$BASE_URL}controller/api/admin/ban_user.php">
                                 <td id="banUsr" style="text-align: center">
-
                                     <label class="switch">
                                         <input id="ban" type="checkbox">
                                         <div class="slider round"></div>
                                     </label>
+                                </td>
+                            </form>
 
+                            <form name="promUsr" method="post" action="{$BASE_URL}controller/api/admin/prom_user.php">
+                                <td id="promUsr" style="text-align: center">
+                                    <input class="prom" type="range" step="1" min="1" max="3">
+                                    <label class="promDescr"></label>
                                 </td>
                             </form>
 
