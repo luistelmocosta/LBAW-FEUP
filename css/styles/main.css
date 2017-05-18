@@ -2120,7 +2120,7 @@ table.page-users-list {
     transform: rotateY(180deg);
     box-sizing: border-box;
     padding: 10px;
-    color: white;
+    color: #0f0f0f;
     text-align: center;
 }
 

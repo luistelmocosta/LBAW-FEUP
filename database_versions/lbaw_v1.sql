@@ -768,7 +768,7 @@ BEGIN
             ON publications.userid = users.userid
     GROUP BY users.userid
     ORDER BY total_votes
-    DESC LIMIT 5;
+    DESC;
 END
 $func$  LANGUAGE plpgsql;
 
