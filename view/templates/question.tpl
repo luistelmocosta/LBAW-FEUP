@@ -72,7 +72,12 @@
                                                 <a href="{editQuestionUrl($question['publicationid'])}" class = "btn {if !$isMine}hidden{/if}">Edit</a>
 
                                                 <div class="post-button clearfix">
-                                                    <button class="btn icon-chat show-textarea" title="Add a comment on this answer" type="button" data-answer="{$answer['answerid']}" data-question="{$question['publicationid']}" data-type="question">{$answer['total_comments']} Comments</button>
+                                                    <button class="btn show-textarea"
+                                                            title="Add a comment on this answer"
+                                                            type="button"
+                                                            data-answer="{$answer['answerid']}"
+                                                            data-question="{$question['publicationid']}"
+                                                            data-type="question">{$answer['total_comments']} Comments</button>
                                                     <div class="textarea">
                                                         {include file="question_partials/comment_form.tpl"}
                                                     </div>
@@ -146,7 +151,7 @@
                             {foreach $related_questions as $related_question}
                                 <li><div class="avatar" data-id="4" data-handle="Smith"><a href="" class="qa-avatar-link"><img src="{$related_question['user_photo']}" width="30" height="30" class="qa-avatar-image" alt=""></a></div>
                                     <div class="post-content">
-                                        <a class="title" href="../7/how-to-report-problems-or-bugs-in-this-theme">{$related_question['title']}</a>
+                                        <a class="title" href="{questionUrl($related_question['publicationid'])}">{$related_question['title']}</a>
                                         <div class="meta">
                                             <span>{$related_question['answers_count']} answers</span>
                                             <span class="time fa fa-clock-o">{$related_question['creation_date']}</span>
@@ -165,6 +170,6 @@
 
     </div>
 </div>
-
+{HTML::script('comment.js')}
 {HTML::script('question.js')}
 {HTML::script('vote.js')}

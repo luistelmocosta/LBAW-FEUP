@@ -1020,3 +1020,46 @@ BEGIN
     RETURN rating;
 END
 $func$;
+
+CREATE OR REPLACE FUNCTION related_questions(cid integer, qid integer)
+  returns
+    TABLE
+    (
+      publicationid integer,
+      title character varying,
+      body text,
+      creation_date timestamp without time zone,
+      solved_date timestamp without time zone,
+      username character varying,
+      userid integer,
+      answers_count bigint,
+      upvotes bigint,
+      votes_count BIGINT,
+      views_counter BIGINT)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+  RETURN QUERY
+  SELECT questions.publicationid, questions.title, publications.body,
+    publications.creation_date, questions.solved_date, users.username, users.userid,
+    (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
+    (SELECT COUNT (*) FROM votes WHERE votes.values = 1 AND votes.publicationid = 1) AS upvotes,
+    (SELECT COALESCE(SUM(votes.values), 0) FROM votes WHERE votes.publicationid = questions.publicationid) AS votes_count,
+    questions.views_counter
+  FROM questions
+    INNER JOIN publications
+      ON questions.publicationid = publications.publicationid
+    LEFT JOIN users ON publications.userid = users.userid
+    WHERE questions.categoryid = cid AND questions.publicationid != qid
+  ORDER BY votes_count DESC
+  LIMIT 5;
+END
+$$;
+
+create or replace function delete_question(qid INTEGER)
+    returns void language plpgsql as $$
+DECLARE result INTEGER;
+begin
+    DELETE FROM questions WHERE questions.publicationid = qid;
+    DELETE FROM publications WHERE publications.publicationid = qid;
+end $$;

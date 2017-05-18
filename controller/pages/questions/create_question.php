@@ -11,7 +11,7 @@ if($_SESSION['logged_in']) {
     $smarty->display('common/narrow_header.tpl');
 }
 
-$categories = get_categories();
+$categories = get_all_categories();
 $size = sizeof($categories);
 $categories_select = [];
 foreach ($categories as $category) {

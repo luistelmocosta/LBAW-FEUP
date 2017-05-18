@@ -28,6 +28,13 @@ ORDER BY total DESC; ");
     return $query->fetchAll();
 }
 
+function get_all_categories() {
+    global $conn;
+    $query=$conn->prepare("SELECT categories.name FROM categories ; ");
+    $query->execute();
+    return $query->fetchAll();
+}
+
 function get_categoryID_by_name($category) {
     global $conn;
     $query=$conn->prepare("SELECT categoryid FROM categories WHERE name = ?");
@@ -263,8 +270,8 @@ function getNumUnsolved(){
 function delete_question($questionid)
 {
     global $conn;
-    $query = $conn->prepare("DELETE FROM questions WHERE questions.publicationid = :questionid");
-    $query->execute([':questionid' => $questionid]);
+    $query = $conn->prepare("SELECT * FROM delete_question(:questionid)");
+    $query->execute(['questionid' => $questionid]);
 }
 
 function delete_question_as_solved($qid) {
