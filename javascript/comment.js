@@ -28,19 +28,19 @@ $("body").on("click", ".show-textarea", function(){
                 '"></a>' +
                 '</div>' +
                 '<div class="qa-c-wrap">' +
-                '<div class="post-button">' +
-                '<button name="" onclick="" class="btn icon-flag" title="Flag this comment as spam or inappropriate" type="submit">flag</button>' +
-                '<button name="" class="btn icon-answers" title="Reply to this comment" type="submit">reply</button>' +
-                '</div>' +
                 '<span class="qa-c-item-meta">' +
                 'commented ' +
                 comment.creation_date +
                 ' by ' +
-                '<a style="display: inline" href="" class="qa-user-link url nickname">' +
+                '<a style="display: inline" href="controller/pages/users/profile/' +
+                comment.questionid +
+                '}" class="qa-user-link url nickname">' +
                 comment.username +
                 '</a> ' +
                 '<span class="qa-c-item-who-points"> ' +
-                '<span class="qa-c-item-who-points-pad">(</span><span class="qa-c-item-who-points-data">140</span><span class="qa-c-item-who-points-pad"> points)</span> ' +
+                '<span class="qa-c-item-who-points-pad">(</span><span class="qa-c-item-who-points-data">' +
+                comment.user_ranking +
+                '</span><span class="qa-c-item-who-points-pad"> points)</span> ' +
                 '</span> ' +
                 '</span> ' +
                 '</span> ' +
@@ -52,7 +52,10 @@ $("body").on("click", ".show-textarea", function(){
                 '</div> ' +
                 '<div class="comment-edit-form">' +
                 '<form method="post" action="/controller/actions/comments/edit_comment.php">' +
-                '<button class = "edit-comment btn {if !$isMine}hidden{/if}" type="button">Edit</button>' +
+                (comment.IsMine ?
+                    '<button class = "edit-comment btn" type="button">Edit</button>' +
+                    ''
+                    : '') +
                 '</form>' +
                 '</div> ' +
                 '</div> <!-- END qa-c-item --> ' +

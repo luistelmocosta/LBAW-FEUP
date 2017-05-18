@@ -8,10 +8,16 @@
 
 include_once('../../../config/init.php');
 include_once($BASE_DIR . 'database/comments.php');
+include_once($BASE_DIR . 'database/users.php');
+include_once($BASE_DIR . 'database/questions.php');
 
 PagePermissions::create('auth')->check();
 
 $type = $_GET['type'];
+
+$userid = auth_user('userid');
+$user_profile = userProfile($userid);
+$user = $user_profile[0];
 
 
 if($type == "question") {
@@ -24,8 +30,10 @@ if($type == "question") {
             $photo_comment = '/images/users/'.$question_comments[$key]['username'].'.jpg';
         if (!$photo_comment) $photo_comment = '/images/person-flat.png';
         $question_comments[$key]['user_photo'] = $photo_comment;
-
+        $question_comments[$key]['user_ranking'] = $user['count_votes_rating_received'];
         $question_comments[$key]['creation_date'] = time_elapsed_string($question_comments[$key]['creation_date']);
+        $qis = question_is_mine($question_comments[$key]);
+        $question_comments[$key]['IsMine'] = $qis;
     }
 
     echo json_encode($question_comments);
@@ -40,6 +48,8 @@ if($type == "question") {
             $photo_comment = '/images/users/'.$answer_comments[$key]['username'].'.jpg';
         if (!$photo_comment) $photo_comment = '/images/person-flat.png';
         $answer_comments[$key]['user_photo'] = $photo_comment;
+        $answer_comments[$key]['user_ranking'] = $user['count_votes_rating_received'];
+        $answer_comments[$key]['creation_date'] = time_elapsed_string($answer_comments[$key]['creation_date']);
     }
 
     echo json_encode($answer_comments);

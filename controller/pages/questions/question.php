@@ -54,7 +54,7 @@ foreach ($answers as $key => $answer) {
     $answer_score = answer_score($answers[$key]['answerid']);
     $answers[$key]['voted'] = publication_is_voted($answers[$key]['answerid']);
     $answers[$key]['upvotes'] = $answer_score['answer_ranking'];
-    $answers[$key]['isMine'] = question_is_mine($answers[$key]['answerid']);
+    $answers[$key]['isMine'] = question_is_mine($answers[$key]);
     $answers[$key]['user_photo'] = $photo_answer;
     $answers[$key]['answer_user_points'] = $answer_user[0]['count_votes_rating_received'];
     $answers[$key]['role'] = $answer_user[0]['role'];
@@ -131,10 +131,6 @@ function time_elapsed_string($time_ago) {
         }
     }
 }
-
-
-
-
 
 $smarty->assign('isMine', $question['isMine']);
 $smarty->assign('tags', $tags);
