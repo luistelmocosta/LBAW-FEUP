@@ -32,13 +32,21 @@ function getNumBans(){
     return $stmt->fetchAll();
 }
 
+function getLastModRegID(){
+    global $conn;
+    $stmt = $conn->prepare("SELECT modregisterid FROM modregisters ORDER BY modregisterid DESC LIMIT 1");
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
 function banUser($adminid, $userid){
 
     global $conn;
     $stmt = $conn->prepare("INSERT INTO modregisters(reason, userid_author, userid_target) VALUES ('Offensive Speech', $adminid, $userid)");
     $stmt->execute();
 
-    $banID = getNumModReg()[0]['count'];
+    $banID = getLastModRegID()[0]['modregisterid'];
     $stmt2 = $conn->prepare("INSERT INTO bans(banid, end_date) VALUES ($banID, '2018-03-29 01:05:00')");
     $stmt2->execute();
 }
