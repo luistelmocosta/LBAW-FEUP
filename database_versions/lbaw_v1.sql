@@ -374,26 +374,6 @@ $func$  LANGUAGE plpgsql;
 CREATE TRIGGER own_content_vote_trigger AFTER INSERT OR UPDATE ON votes
 FOR EACH ROW EXECUTE PROCEDURE own_content_vote();
 
----- This function adds a user to the ban table when he exceeds the warning limit (3)
-
-DROP TRIGGER IF EXISTS auto_ban_on_warning_limit ON public.warnings;
-
-
-CREATE OR REPLACE FUNCTION trigger_auto_ban_on_warning_limit()
-    RETURNS "trigger" AS $func$
-BEGIN
-    IF (SELECT COUNT(*)
-        FROM modregisters INNER JOIN users ON modregisters.userid_author = users.userid
-            INNER JOIN warnings ON modregisters.modregisterid = warnings.warningid
-        GROUP BY userid_target) = 3 THEN
-        INSERT INTO bans(banid) VALUES(NEW.warningid);
-    END IF;
-    RETURN NULL;
-END;
-$func$  LANGUAGE plpgsql;
-
-CREATE TRIGGER auto_ban_on_warning_limit AFTER INSERT ON warnings
-FOR EACH ROW EXECUTE PROCEDURE trigger_auto_ban_on_warning_limit();
 
 --- This function updates the column last_edit_date with the current timestamp everytime there is an update on the table
 

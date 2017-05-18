@@ -7,7 +7,6 @@ $userid = auth_user('userid');
 $user = userProfile($userid)[0];
 
 $reason = $_POST['reasonMsg'];
-
 $targid = intval($_POST['uid']);
 
 warnUser($userid, $targid, $reason);

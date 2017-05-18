@@ -11,15 +11,26 @@ $(document).ready(function () {
         });
     });
 
+    //BAN USER
+
     $(".usersTable #ban").click(function (e) {
         //e.preventDefault();
         var checkbox = $(this);
 
         if(checkbox.is(':checked')){
             //BAN
-            $.post("../../api/admin/ban_user.php", { uid: $(this).closest('tr').attr('id') }, function() {
-                checkbox.attr("checked", true);
+
+            $('#banMsgModal').show();
+
+            $("#banMsgModal #subBtn").click(function(e){
+
+                $.post("../../api/admin/ban_user.php", { uid: checkbox.closest('tr').attr('id'), reasonMsg: $('textarea#banMsg').val()}, function() {
+                    $('#banMsgModal').hide();
+                    checkbox.attr("checked", true);
+                });
+
             });
+
         }
 
         else {
@@ -47,17 +58,19 @@ $(document).ready(function () {
         $('.promDescr').text(roleValues[$(this).val()]);
     });
 
+
+    //WARN USER
+
     $('.usersTable #triggerModal').click(function(){
         var targetID = $(this).closest('tr').attr('id');
 
         $('.usersTable #subBtn').click(function(e){
-            $.post("../../api/admin/warn_user.php", { uid: targetID, reasonMsg: $('textarea#reasonMsg').val()}, function() {
+            $.post("../../api/admin/warn_user.php", { uid: targetID, reasonMsg: $('textarea#warnMsg').val()}, function() {
                 $('.modal-body').find('textarea,input').val('');
                 $('#warnMsgModal').modal('hide');
             });
         });
     });
-
 
 });
 

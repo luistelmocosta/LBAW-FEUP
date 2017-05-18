@@ -102,7 +102,6 @@
 
                                 <div class="modal fade" id="warnMsgModal" role="dialog">
                                     <div class="modal-dialog modal-md">
-
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal"></button>
@@ -110,15 +109,13 @@
                                             </div>
                                             <form id="warnUsr" name="wrnUsr" method="post" action="">
                                                 <div class="modal-body">
-                                                    <textarea id="reasonMsg" name="msg"></textarea>
+                                                    <textarea id="warnMsg" name="msg"></textarea>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button id="subBtn" type="submit" class="btn-default btn-xs" data-id={$user['userid']}>Warn</button>
+                                                    <button id="subBtn" type="submit" class="btn-default btn-xs">Warn</button>
                                                 </div>
                                             </form>
-
                                         </div>
-
                                     </div>
                                 </div>
 
@@ -127,11 +124,30 @@
                             <form name="banUsr" method="post" action="{$BASE_URL}controller/api/admin/ban_user.php">
                                 <td id="banUsr" style="text-align: center">
                                     <label class="switch">
-                                        <input id="ban" type="checkbox">
+                                        <input id="ban" type="checkbox" data-toggle="modal" data-target="#banMsgModal">
                                         <div class="slider round"></div>
                                     </label>
-                                </td>
                             </form>
+
+                            <div class="modal fade" id="banMsgModal" role="dialog">
+                                <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"></button>
+                                            <h4 class="modal-title">Ban Message</h4>
+                                        </div>
+                                        <form id="banUsr" name="bnUsr" method="post" action="">
+                                            <div class="modal-body">
+                                                <textarea id="banMsg" name="msg"></textarea>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button id="subBtn" type="submit" class="btn-default btn-xs">Ban</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
 
                             <form name="promUsr" method="post" action="{$BASE_URL}controller/api/admin/prom_user.php">
                                 <td id="promUsr" style="text-align: center">
