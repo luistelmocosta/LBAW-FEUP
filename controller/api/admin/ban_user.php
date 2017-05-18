@@ -6,8 +6,10 @@ include_once($BASE_DIR . 'database/admin.php');
 $userid = auth_user('userid');
 $user = userProfile($userid)[0];
 
-$targid = $_POST['uid'];
+$targid = intval($_POST['uid']);
 
-banUser($userid, intval($targid));
+$reason = "";
+
+banUser($userid, $targid, $reason);
 
 echo json_encode($targid);

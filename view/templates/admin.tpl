@@ -95,13 +95,34 @@
                                 <a <span class="glyphicon glyphicon-info-sign" href={profileUrl($user['userid'])}></span></a>
                             </td>
 
-                            <form name="warnUsr" method="post" action="">
-                                <td id="warnUsr" style="text-align: center">
-                                    <button type="submit" class="btn-default btn-sm" style="font-size: 15px">
-                                        <i class="glyphicon glyphicon-warning-sign"></i>
-                                    </button>
-                                </td>
-                            </form>
+                            <td id="warnUsr" style="text-align: center">
+                                <button id="triggerModal" type="button" class="btn-default btn-sm" data-toggle="modal" data-target="#warnMsgModal" style="font-size: 15px">
+                                    <i class="glyphicon glyphicon-warning-sign"></i>
+                                </button>
+
+                                <div class="modal fade" id="warnMsgModal" role="dialog">
+                                    <div class="modal-dialog modal-md">
+
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"></button>
+                                                <h4 class="modal-title">Warning Message</h4>
+                                            </div>
+                                            <form id="warnUsr" name="wrnUsr" method="post" action="">
+                                                <div class="modal-body">
+                                                    <textarea id="reasonMsg" name="msg"></textarea>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button id="subBtn" type="submit" class="btn-default btn-xs" data-id={$user['userid']}>Warn</button>
+                                                </div>
+                                            </form>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </td>
 
                             <form name="banUsr" method="post" action="{$BASE_URL}controller/api/admin/ban_user.php">
                                 <td id="banUsr" style="text-align: center">

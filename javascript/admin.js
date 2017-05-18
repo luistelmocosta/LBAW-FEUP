@@ -47,6 +47,18 @@ $(document).ready(function () {
         $('.promDescr').text(roleValues[$(this).val()]);
     });
 
+    $('.usersTable #triggerModal').click(function(){
+        var targetID = $(this).closest('tr').attr('id');
+
+        $('.usersTable #subBtn').click(function(e){
+            $.post("../../api/admin/warn_user.php", { uid: targetID, reasonMsg: $('textarea#reasonMsg').val()}, function() {
+                $('.modal-body').find('textarea,input').val('');
+                $('#warnMsgModal').modal('hide');
+            });
+        });
+    });
+
+
 });
 
 

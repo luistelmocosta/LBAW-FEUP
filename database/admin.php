@@ -40,15 +40,31 @@ function getLastModRegID(){
     return $stmt->fetchAll();
 }
 
-function banUser($adminid, $userid){
+function modReg($adminid, $userid, $reason){
+    global $conn;
+    $stmt = $conn->prepare("INSERT INTO modregisters(reason, userid_author, userid_target) VALUES ('$reason', $adminid, $userid)");
+    $stmt->execute();
+}
+
+function banUser($adminid, $userid, $reason){
+
+    modReg($adminid, $userid, $reason);
 
     global $conn;
-    $stmt = $conn->prepare("INSERT INTO modregisters(reason, userid_author, userid_target) VALUES ('Offensive Speech', $adminid, $userid)");
-    $stmt->execute();
-
     $banID = getLastModRegID()[0]['modregisterid'];
     $stmt2 = $conn->prepare("INSERT INTO bans(banid, end_date) VALUES ($banID, '2018-03-29 01:05:00')");
     $stmt2->execute();
+}
+
+function warnUser($adminid, $userid, $reason){
+
+    modReg($adminid, $userid, $reason);
+
+    global $conn;
+    $warnID = getLastModRegID()[0]['modregisterid'];
+    $stmt2 = $conn->prepare("INSERT INTO warnings(warningid) VALUES($warnID)");
+    $stmt2->execute();
+
 }
 
 function ban_info($userid){
