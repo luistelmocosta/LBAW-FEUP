@@ -72,7 +72,7 @@
                                                 <a href="{editQuestionUrl($question['publicationid'])}" class = "btn {if !$isMine}hidden{/if}">Edit</a>
 
                                                 <div class="post-button clearfix">
-                                                    <button class="btn icon-chat show-textarea"
+                                                    <button class="btn show-textarea"
                                                             title="Add a comment on this answer"
                                                             type="button"
                                                             data-answer="{$answer['answerid']}"
@@ -170,6 +170,6 @@
 
     </div>
 </div>
-
+{HTML::script('comment.js')}
 {HTML::script('question.js')}
 {HTML::script('vote.js')}

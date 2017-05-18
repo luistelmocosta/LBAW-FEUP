@@ -2,12 +2,12 @@ $('.comment-form').hide();
 var commentsFetched = false;
 
 $("body").on("click", ".show-textarea", function(){
-
+    console.log("teste");
     var answerid = $(this).data('answer');
     var type = $(this).data('type');
     var questionid = $(this).data('question');
     var $commentForm = $(this).parent().find('.comment-form').first();
-    console.log(answerid);
+    console.log("teste");
     $.getJSON("/controller/api/comments/comment.php", {
         answerid : answerid,
         questionid : questionid,
@@ -80,45 +80,37 @@ $("body").on("click", ".textarea-ok, .textarea-cancel", function(){
 
 });
 
-$("body").on("click", ".edit-comment", function(){
-    console.log("Hello");
-    var parent = $("body").find('article').last();
-    var body = parent.find('.entry-content').text();
-    var id = parent.find('.commentid').val();
-    var questionid = parent.find('.questionid').val();
+$("body").on("click", ".edit-comment", function(e){
+    e.stopPropagation();
+    var parent = $(this).parent();
+    var content = parent.parent().parent().find('.entry-content');
+    var info = content.parent().parent().parent().parent().parent();
+    var body = content.text();
+    var id = info.find('.commentid').val();
+    var questionid = info.find('.questionid').val();
+
     console.log(body);
     console.log(id);
     console.log(questionid);
-    var parent_parent = $("body").find('article').parent().last();
-    parent.remove();
-    console.log(parent);
-    var button = $(this),
-        commentField = $('<div class="comment-form">' +
-            '<form method="post" action="/controller/actions/comments/edit_comment.php">' +
-            '<textarea name="comment" rows="4" cols="40" class="qa-form-tall-text">' +
-            body +
-            '</textarea>' +
-            '<input type="hidden" name="commentid" value="' +
-            id +
-            '" />' +
-            '<input type="hidden" name="questionid" value="' +
-            questionid +
-            '" />' +
-            '<button type="submit" class="textarea-ok">Edit Comment</button>' +
-            '</form>' +
-            '</div>'); // create a textarea element
+    console.log(info);
+    var editableText = $('<div class="comment-form">' +
+        '<form method="post" action="/controller/actions/comments/edit_comment.php">' +
+        '<textarea name="comment" rows="4" cols="40" class="qa-form-tall-text">' +
+        body +
+        '</textarea>' +
+        '<input type="hidden" name="commentid" value="' +
+        id +
+        '" />' +
+        '<input type="hidden" name="questionid" value="' +
+        questionid +
+        '" />' +
+        '<button type="submit" class="textarea-ok">Edit Comment</button>' +
+        '</form>' +
+        '</div>');
+    console.log("Hello");
+    parent.replaceWith(editableText);
 
-    commentField
-    // set the textarea's value to be the saved content, or a default if there is no saved content
-        .val(button.data('textContent') || 'This is my comment field\'s text')
-        // set up a keypress handler on the textarea
-        .keypress(function(e) {
-            if (e.which === 13) { // if it's the enter button
-                e.preventDefault(); // ignore the line break
-                button.data('textContent', this.value); // save the content to the button
-                $(this).remove(); // remove the textarea
-            }
-        }).appendTo(parent_parent); // add the textarea to the document
+
 
 
 });

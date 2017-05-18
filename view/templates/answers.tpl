@@ -73,5 +73,4 @@
     </div>
 
 </div>
-{HTML::script('comment.js')}
 {HTML::script('accept-answer.js')}
