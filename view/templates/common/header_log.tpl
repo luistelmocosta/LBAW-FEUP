@@ -72,7 +72,7 @@
                             <ul class="user-nav dropdown-menu">
                                 <li class="user-nav-profile"><a class="fa fa-id-card" href="{$BASE_URL}controller/pages/users/profile.php" title="Profile">Profile</a></li>
                                 <li class="user-nav-account"><a class="fa fa-cog" href="{$BASE_URL}controller/pages/users/edit_profile.php" title="Account">Account</a></li>
-                                {if ($ROLEID == 2)}
+                                {if ($PERMISSION == 'admin')}
                                 <li class="user-nav-favorites"><a class="fa fa-user-md" href="{$BASE_URL}controller/pages/admin/admin.php" title="Admin Panel">Admin CP</a></li>
                                 {/if}
                                 <li><a class="fa fa-power-off" href="{$BASE_URL}controller/actions/users/logout.php"> Logout </a></li>

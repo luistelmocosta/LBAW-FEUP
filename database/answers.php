@@ -40,3 +40,9 @@ function update_answer($answer) {
     $stmt = $conn->prepare("UPDATE publications SET body = :body WHERE publicationid = :answerid");
     $stmt->execute($answer);
 }
+
+function update_comment($comment) {
+    global $conn;
+    $stmt = $conn->prepare("UPDATE publications SET body = :body WHERE publicationid = :commentid");
+    $stmt->execute($comment);
+}

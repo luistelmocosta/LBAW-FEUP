@@ -9,6 +9,8 @@
 include_once('../../../config/init.php');
 include_once($BASE_DIR . 'database/comments.php');
 
+PagePermissions::create('auth')->check();
+
 $type = $_GET['type'];
 
 
