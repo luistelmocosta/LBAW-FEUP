@@ -326,3 +326,23 @@ function is_question_accepted($qid) {
 
     return $query->fetch();
 }
+
+function related_questions($category, $questionid) {
+
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM related_questions(:category, :questionid)");
+    $stmt->execute(['category' => $category, 'questionid' => $questionid]);
+    $rows = $stmt->fetchAll();
+    //$rows = addQuestionsComputedFields($rows);
+
+    return $rows;
+}
+
+function get_question_categoryid($qid) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT categories.categoryid FROM questions INNER JOIN categories ON questions.categoryid = categories.categoryid WHERE questions.publicationid = :qid");
+    $stmt->execute(array($qid));
+
+
+    return $stmt->fetch();
+}

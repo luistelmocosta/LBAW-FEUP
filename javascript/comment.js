@@ -33,9 +33,8 @@ $("body").on("click", ".show-textarea", function(){
                 '<button name="" class="btn icon-answers" title="Reply to this comment" type="submit">reply</button>' +
                 '</div>' +
                 '<span class="qa-c-item-meta">' +
-                'commented' +
-                ' 1 day' +
-                ' ago' +
+                'commented ' +
+                comment.creation_date +
                 ' by ' +
                 '<a style="display: inline" href="" class="qa-user-link url nickname">' +
                 comment.username +
