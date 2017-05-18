@@ -5,7 +5,9 @@ include_once($BASE_DIR . 'database/admin.php');
 include_once($BASE_DIR . 'database/users.php');
 include_once($BASE_DIR . 'database/questions.php');
 
-if($_SESSION['permission'] != 'admin')
+$permission = $_SESSION['permission'];
+
+if($permission != 'admin' && $permission != 'mod')
     redirect();
 
 $userid = auth_user('userid');
@@ -95,7 +97,10 @@ $smarty->assign('upages', $upages);
 $smarty->assign('qpage', $upage);
 $smarty->assign('qpage', $upage);
 
-
 $smarty->display('common/header_log.tpl');
-$smarty->display('admin.tpl');
+
+if($permission == 'admin')
+    $smarty->display('admin.tpl');
+else $smarty->display('mod.tpl');
+
 $smarty->display('common/footer.tpl');

@@ -73,6 +73,9 @@
                                 {if ($PERMISSION == 'admin')}
                                 <li class="user-nav-favorites"><a class="fa fa-user-md" href="{$BASE_URL}controller/pages/admin/admin.php" title="Admin Panel">Admin CP</a></li>
                                 {/if}
+                                {if ($PERMISSION == 'mod')}
+                                    <li class="user-nav-favorites"><a class="fa fa-user-md" href="{$BASE_URL}controller/pages/admin/admin.php" title="Mod Panel">Mod CP</a></li>
+                                {/if}
                                 <li><a class="fa fa-power-off" href="{$BASE_URL}controller/actions/users/logout.php"> Logout </a></li>
                             </ul>
                         </div>
