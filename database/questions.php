@@ -19,10 +19,10 @@ function update_question($question) {
 
 function get_categories() {
     global $conn;
-    $query=$conn->prepare("SELECT categories.name, COUNT(*) as total FROM questions 
-INNER JOIN categories 
+    $query=$conn->prepare("SELECT categories.categoryid, categories.name, COUNT(questions.categoryid) as total FROM questions 
+RIGHT OUTER JOIN categories 
 ON questions.categoryid = categories.categoryid 
-GROUP BY name 
+GROUP BY name, categories.categoryid 
 ORDER BY total DESC; ");
     $query->execute();
     return $query->fetchAll();
@@ -352,4 +352,17 @@ function get_question_categoryid($qid) {
 
 
     return $stmt->fetch();
+}
+
+function category_questions($cid, $page = 0) {
+
+    global $conn;
+    $limit = 4;
+    $skip = $limit * $page;
+    $stmt = $conn->prepare("SELECT * FROM category_questions(:skip, :limit, :cid);");
+    $stmt->execute(['limit' => $limit, 'skip' => $skip, 'cid' => $cid]);
+    $rows = $stmt->fetchAll();
+    //$rows = addQuestionsComputedFields($rows);
+
+    return $rows;
 }
