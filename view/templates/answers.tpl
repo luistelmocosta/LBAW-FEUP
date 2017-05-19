@@ -56,7 +56,11 @@
             <div class="post-button clearfix">
                 <a href="{editAnswerUrl($answer['answerid'])}" class = "btn {if !$isMine}hidden{/if}">Edit</a>
                 <div class="post-button clearfix">
-                    <button class="btn icon-chat show-textarea" title="Add a comment on this answer" type="button" data-answer="{$answer['answerid']}" data-question="{$question['publicationid']}" data-type="answer">{$answer['total_comments']} Comments</button>
+                    <button class="btn icon-chat show-textarea"
+                            title="Add a comment on this answer"
+                            type="button" data-answer="{$answer['answerid']}"
+                            data-question="{$question['publicationid']}"
+                            data-type="answer">{$answer['total_comments']} Comments</button>
                     <div class="textarea">
                         {include file="answers_partials/comment_form.tpl"}
                     </div>
@@ -69,5 +73,4 @@
     </div>
 
 </div>
-{HTML::script('comment.js')}
 {HTML::script('accept-answer.js')}

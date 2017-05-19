@@ -21,9 +21,20 @@ $question['isMine'] = question_is_mine($question);
 $answers = get_answers_from_questionid($_GET['question']);
 $user = userProfile($question['userid']);
 $question['creation_date'] = time_elapsed_string($question['creation_date']);
+$category = get_question_categoryid($_GET['question']);
+$categoryid = (int)$category['categoryid'];
+$related_questions = related_questions($categoryid, $_GET['question']);
 
+foreach ($related_questions as $key => $related_question) {
+    if (file_exists($BASE_DIR.'/images/users/'.$related_questions[$key]['username'].'.png'))
+        $photo_related_question = '/images/users/'.$related_questions[$key]['username'].'.png';
+    if (file_exists($BASE_DIR.'/images/users/'.$related_questions[$key]['username'].'.jpg'))
+        $photo_related_question = '/images/users/'.$related_questions[$key]['username'].'.jpg';
+    if (!$photo_related_question) $photo_related_question = '/images/person-flat.png';
 
-
+    $related_questions[$key]['creation_date'] = time_elapsed_string($related_questions[$key]['creation_date']);
+    $related_questions[$key]['user_photo'] = $photo_related_question;
+}
 
 unset($photo);
 if (file_exists($BASE_DIR.'images/users/'.$question['username'].'.png'))
@@ -43,7 +54,7 @@ foreach ($answers as $key => $answer) {
     $answer_score = answer_score($answers[$key]['answerid']);
     $answers[$key]['voted'] = publication_is_voted($answers[$key]['answerid']);
     $answers[$key]['upvotes'] = $answer_score['answer_ranking'];
-    $answers[$key]['isMine'] = question_is_mine($answers[$key]['answerid']);
+    $answers[$key]['isMine'] = question_is_mine($answers[$key]);
     $answers[$key]['user_photo'] = $photo_answer;
     $answers[$key]['answer_user_points'] = $answer_user[0]['count_votes_rating_received'];
     $answers[$key]['role'] = $answer_user[0]['role'];
@@ -121,14 +132,12 @@ function time_elapsed_string($time_ago) {
     }
 }
 
-
-
-
-
 $smarty->assign('isMine', $question['isMine']);
 $smarty->assign('tags', $tags);
 $smarty->assign('photo', $photo);
 $smarty->assign('answers', $answers);
 $smarty->assign('question', $question);
+$smarty->assign('related_questions', $related_questions);
+$smarty->assign('category', $categoryid);
 $smarty->display('question.tpl');
 $smarty->display('common/footer.tpl');
