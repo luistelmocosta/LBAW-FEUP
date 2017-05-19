@@ -63,6 +63,11 @@ function answerUrl($answer_id)
     return url('pages/questions/details', ['answer' => $answer_id]);
 }
 
+function categoryQuestionsUrl($category_id)
+{
+    return url('controller/pages/questions/category_questions', ['category' => $category_id]);
+}
+
 function profileUrl($user_id)
 {
     return url('controller/pages/users/profile', ['userid' => $user_id]);

@@ -11,7 +11,7 @@
                             <ul>
                                 <div class="list-group-item" style = "margin-bottom:15px;">
                                     {foreach $chunk_categories as $category }
-                                        <li class="list-group-item"><a href="#">{$category['name']}</a>
+                                        <li class="list-group-item"><a href="{categoryQuestionsUrl($category['categoryid'])}">{$category['name']}</a>
                                             <span class="qa-tag-link">{$category['total']}</span></li>
                                     {/foreach}
                                 </div>

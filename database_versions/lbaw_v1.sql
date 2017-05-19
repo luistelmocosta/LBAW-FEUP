@@ -856,6 +856,7 @@ $func$  LANGUAGE plpgsql;
 CREATE OR REPLACE FUNCTION category_questions(skip INTEGER, limitNumber INTEGER, cid INTEGER)
     RETURNS TABLE (
         publicationid INTEGER,
+        name VARCHAR,
         title VARCHAR(100),
         body TEXT,
         creation_date TIMESTAMP,
@@ -869,7 +870,7 @@ CREATE OR REPLACE FUNCTION category_questions(skip INTEGER, limitNumber INTEGER,
 AS $func$
 BEGIN
     RETURN QUERY
-    SELECT questions.publicationid, questions.title, publications.body,
+    SELECT questions.publicationid, categories.name, questions.title, publications.body,
         publications.creation_date, questions.solved_date, users.username, users.userid,
         (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
         (SELECT COUNT (*) FROM votes WHERE votes.values = 1 AND votes.publicationid = 1) AS upvotes,
@@ -878,6 +879,7 @@ BEGIN
     FROM questions
         INNER JOIN publications
             ON questions.publicationid = publications.publicationid
+        INNER JOIN categories ON questions.categoryid = categories.categoryid
         LEFT JOIN users ON publications.userid = users.userid
     WHERE questions.categoryid = cid
     ORDER BY creation_date DESC
