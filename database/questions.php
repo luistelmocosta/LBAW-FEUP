@@ -53,6 +53,17 @@ function get_publication_rating($pubid) {
     return $query->fetch();
 }
 
+function get_all_tags() {
+
+    global $conn;
+
+    $query=$conn->prepare("SELECT tags.tagid, tags.name FROM tags ");
+    $query->execute();
+
+    return $query->fetchAll();
+
+}
+
 function get_tags_from_question($questionid) {
     global $conn;
 
@@ -70,7 +81,7 @@ function update_tags($questionid, $tags) {
     global $conn;
 
     //Check if question already exists. If Yes, delete it from the array -> //EDIT PROPOSES
-    $questiontags = get_tags_from_question($questionid);
+    $questiontags = get_all_tags();
     $existant_tags = [];
 
     foreach ($questiontags as $tag_idx => $tag) {
@@ -78,6 +89,8 @@ function update_tags($questionid, $tags) {
             $key = array_search($tag['name'], $tags);
             unset($tags[$key]);
             $existant_tags[] = $tag['tagid'];
+            associate_only_tag($tag['tagid'], $questionid);
+
         }
         $questiontags[$tag_idx] = $tag['tagid'];
     }
@@ -105,6 +118,13 @@ function associate_tag($tag, $questionid)
 {
     global $conn;
     $tagid = insert_tag($tag);
+    $stmt = $conn->prepare("INSERT INTO questiontags (questionid, tagid) VALUES(:question, :tag)");
+    $stmt->execute(['question' => $questionid, 'tag' => $tagid]);
+}
+
+function associate_only_tag($tagid, $questionid)
+{
+    global $conn;
     $stmt = $conn->prepare("INSERT INTO questiontags (questionid, tagid) VALUES(:question, :tag)");
     $stmt->execute(['question' => $questionid, 'tag' => $tagid]);
 }
@@ -220,6 +240,15 @@ function question_voted_by_me($question)
 function search_questions($pstext){
     global $conn;
     $stmt = $conn->prepare("SELECT * FROM questions WHERE questions.publicationid = (SELECT questionid FROM search_questions(:pstext) WHERE questions.publicationid = questionid)");
+    $stmt->execute(['pstext' => $pstext]);
+    $rows = $stmt->fetchAll();
+
+    return $rows;
+}
+
+function search_tags($pstext){
+    global $conn;
+    $stmt = $conn->prepare("SELECT tid FROM search_tags(:pstext);");
     $stmt->execute(['pstext' => $pstext]);
     $rows = $stmt->fetchAll();
 
