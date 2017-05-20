@@ -19,11 +19,18 @@ function update_question($question) {
 
 function get_categories() {
     global $conn;
-    $query=$conn->prepare("SELECT categories.name, COUNT(*) as total FROM questions 
-INNER JOIN categories 
+    $query=$conn->prepare("SELECT categories.categoryid, categories.name, COUNT(questions.categoryid) as total FROM questions 
+RIGHT OUTER JOIN categories 
 ON questions.categoryid = categories.categoryid 
-GROUP BY name 
+GROUP BY name, categories.categoryid 
 ORDER BY total DESC; ");
+    $query->execute();
+    return $query->fetchAll();
+}
+
+function get_all_categories() {
+    global $conn;
+    $query=$conn->prepare("SELECT categories.name FROM categories ; ");
     $query->execute();
     return $query->fetchAll();
 }
@@ -263,8 +270,8 @@ function getNumUnsolved(){
 function delete_question($questionid)
 {
     global $conn;
-    $query = $conn->prepare("DELETE FROM questions WHERE questions.publicationid = :questionid");
-    $query->execute([':questionid' => $questionid]);
+    $query = $conn->prepare("SELECT * FROM delete_question(:questionid)");
+    $query->execute(['questionid' => $questionid]);
 }
 
 function delete_question_as_solved($qid) {
@@ -325,4 +332,37 @@ function is_question_accepted($qid) {
 
 
     return $query->fetch();
+}
+
+function related_questions($category, $questionid) {
+
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM related_questions(:category, :questionid)");
+    $stmt->execute(['category' => $category, 'questionid' => $questionid]);
+    $rows = $stmt->fetchAll();
+    //$rows = addQuestionsComputedFields($rows);
+
+    return $rows;
+}
+
+function get_question_categoryid($qid) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT categories.categoryid FROM questions INNER JOIN categories ON questions.categoryid = categories.categoryid WHERE questions.publicationid = :qid");
+    $stmt->execute(array($qid));
+
+
+    return $stmt->fetch();
+}
+
+function category_questions($cid, $page = 0) {
+
+    global $conn;
+    $limit = 4;
+    $skip = $limit * $page;
+    $stmt = $conn->prepare("SELECT * FROM category_questions(:skip, :limit, :cid);");
+    $stmt->execute(['limit' => $limit, 'skip' => $skip, 'cid' => $cid]);
+    $rows = $stmt->fetchAll();
+    //$rows = addQuestionsComputedFields($rows);
+
+    return $rows;
 }

@@ -72,7 +72,12 @@
                                                 <a href="{editQuestionUrl($question['publicationid'])}" class = "btn {if !$isMine}hidden{/if}">Edit</a>
 
                                                 <div class="post-button clearfix">
-                                                    <button class="btn icon-chat show-textarea" title="Add a comment on this answer" type="button" data-answer="{$answer['answerid']}" data-question="{$question['publicationid']}" data-type="question">{$answer['total_comments']} Comments</button>
+                                                    <button class="btn show-textarea"
+                                                            title="Add a comment on this answer"
+                                                            type="button"
+                                                            data-answer="{$answer['answerid']}"
+                                                            data-question="{$question['publicationid']}"
+                                                            data-type="question">{$answer['total_comments']} Comments</button>
                                                     <div class="textarea">
                                                         {include file="question_partials/comment_form.tpl"}
                                                     </div>
@@ -143,36 +148,19 @@
                     <h3 class="widget-title">Related questions</h3>
                     <div class="ra-rq-widget">
                         <ul>
-                            <li><div class="avatar" data-id="4" data-handle="Smith"><a href="../user/Smith" class="qa-avatar-link"><img src="../images/users.jpg" width="30" height="30" class="qa-avatar-image" alt=""></a></div>
-                                <div class="post-content">
-                                    <a class="title" href="../7/how-to-report-problems-or-bugs-in-this-theme">How to report problems or bugs in this theme?</a>
-                                    <div class="meta">
-                                        <span>1 answers</span>
-                                        <span class="time fa fa-clock-o">Dec 26, 2014</span>
-                                        <span class="vote-count fa fa-thumbs-o-up">1 votes</span>
+                            {foreach $related_questions as $related_question}
+                                <li><div class="avatar" data-id="4" data-handle="Smith"><a href="" class="qa-avatar-link"><img src="{$related_question['user_photo']}" width="30" height="30" class="qa-avatar-image" alt=""></a></div>
+                                    <div class="post-content">
+                                        <a class="title" href="{questionUrl($related_question['publicationid'])}">{$related_question['title']}</a>
+                                        <div class="meta">
+                                            <span>{$related_question['answers_count']} answers</span>
+                                            <span class="time fa fa-clock-o">{$related_question['creation_date']}</span>
+                                            <span class="vote-count fa fa-thumbs-o-up">{$related_question['votes_count']} votes</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li><div class="avatar" data-id="30" data-handle="Multi"><a href="../user/Multi" class="qa-avatar-link"><img src="../images/users.jpg" width="30" height="30" class="qa-avatar-image" alt=""></a></div>
-                                <div class="post-content">
-                                    <a class="title" href="../136/how-can-i-support-the-developer">How can I support the developer?</a>
-                                    <div class="meta">
-                                        <span>1 answers</span>
-                                        <span class="time fa fa-clock-o">Apr 12, 2015</span>
-                                        <span class="vote-count fa fa-thumbs-o-up">1 votes</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li><div class="avatar" data-id="7" data-handle="Inspector"><a href="../user/Inspector" class="qa-avatar-link"><img src="../images/users.jpg" width="30" height="30" class="qa-avatar-image" alt=""></a></div>
-                                <div class="post-content">
-                                    <a class="title" href="../101/will-this-theme-be-updated-for-q2a-1-7">Will this theme be updated for Q2A 1.7?</a>
-                                    <div class="meta">
-                                        <span>1 answers</span>
-                                        <span class="time fa fa-clock-o">Feb 12, 2015</span>
-                                        <span class="vote-count fa fa-thumbs-o-up">0 votes</span>
-                                    </div>
-                                </div>
-                            </li>
+                                </li>
+                            {/foreach}
+
                         </ul>
                     </div>
                 </div>
@@ -182,6 +170,6 @@
 
     </div>
 </div>
-
+{HTML::script('comment.js')}
 {HTML::script('question.js')}
 {HTML::script('vote.js')}

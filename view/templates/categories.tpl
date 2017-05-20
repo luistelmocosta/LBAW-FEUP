@@ -6,40 +6,18 @@
             </h1>
             <div class="qa-part-ranking">
                 <div class="row qa-top-tags">
-                    <div class="col-lg-4">
-                        <ul>
-
-                            <div class="list-group-item" style = "margin-bottom:15px;">
-                                {foreach array_chunk($categories, 4) as $chunk_categories}
-                                    {foreach  $chunk_categories as $category }
-                                        <div class = "col-sm-3 categories-col">
-                                        <li class="list-group-item"><a href="#">{$category['name']}</a>
+                    {foreach array_chunk($categories, 4) as $chunk_categories}
+                        <div class="col-lg-4">
+                            <ul>
+                                <div class="list-group-item" style = "margin-bottom:15px;">
+                                    {foreach $chunk_categories as $category }
+                                        <li class="list-group-item"><a href="{categoryQuestionsUrl($category['categoryid'])}">{$category['name']}</a>
                                             <span class="qa-tag-link">{$category['total']}</span></li>
                                     {/foreach}
-                                    </div>
-                                {/foreach}
-
-                                <div class="col-lg-4">
-                                    <ul>
-                                        <li class="list-group-item"><a href="#">cleanstrap</a><span class="qa-tag-link">24</span></li>
-                                        <li class="list-group-item"><a href="#">cleanstrap theme</a><span class="qa-tag-link">14</span></li>
-                                        <li class="list-group-item"><a href="#">question2answer theme</a><span class="qa-tag-link">10</span></li>
-                                        <li class="list-group-item"><a href="#">q2a theme</a><span class="qa-tag-link">9</span></li>
-                                        <li class="list-group-item"><a href="#">cleanstrap options</a><span class="qa-tag-link">5</span></li>
-                                        <li class="list-group-item"><a href="#">cleanstrap widgets</a><span class="qa-tag-link">4</span></li>
-                                        <li class="list-group-item"><a href="#">development</a><span class="qa-tag-link">3</span></li>
-                                        <li class="list-group-item"><a href="#">widgets</a><span class="qa-tag-link">3</span></li>
-                                        <li class="list-group-item"><a href="#">install</a><span class="qa-tag-link">2</span></li>
-                                        <li class="list-group-item"><a href="#" "="">votes</a><span class="qa-tag-link">2</span></li>
-                                    </ul>
                                 </div>
-
-
-                                <div class = "clearfix"></div>
-                            </div>
-
-                        </ul>
-                    </div>
+                            </ul>
+                        </div>
+                    {/foreach}
                 </div>
             </div>
         </div>
