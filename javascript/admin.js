@@ -62,30 +62,17 @@ $(document).ready(function () {
 
     $(function() {
 
-        var actPerm;
-
-        $('.usersTable #usrRole').each(function() {
-            console.log($(this).closest("#usrRole").html());
-            var perm = $(this).closest("#usrRole").html();
-            if(perm == "reg")
-                actPerm = 1;
-            else if(perm == "mod")
-                actPerm = 2;
-            else actPerm = 3;
-            $(this).closest(".usersTable #permLabel").text(perm);
-
-        });
-
         $(".usersTable #slider-range").slider({
             range: "min",
-            value: actPerm,
             min: 1,
             max: 3,
+            create: function () {
+                $(this).slider( "option", "value", $(this).closest('.usersTable').find('#permLabel').html());
+            },
             slide: function (event, ui) {
-                //console.log(ui.value);
-                $(this).closest("#permLabel").text(actPerm);
-
-
+                var targID = $(this).closest(".usersTable").attr("id");
+                console.log(ui.value + " id " + targID);
+                $(this).closest(".usersTable").find("#permLabel").text(ui.value);
             }
         });
 

@@ -17,8 +17,8 @@ CREATE TABLE categories
 CREATE TABLE userroles
 (
     roleid SERIAL PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
-    CONSTRAINT user_role CHECK(name IN ('reg', 'mod', 'admin'))
+    rolename VARCHAR(50) NOT NULL,
+    CONSTRAINT user_role CHECK(rolename IN ('reg', 'mod', 'admin'))
 );
 
 CREATE TABLE locations
@@ -305,7 +305,7 @@ BEGIN
     RETURN QUERY
     SELECT users.fullname, users.username, users.email, users.about,
         (SELECT locations.name FROM locations WHERE users.locationid = locations.locationid),
-        (SELECT name FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE userid = puser_id),
+        (SELECT rolename FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE userid = puser_id),
         users.signup_date,
         count_vote_rating_received_user(puser_id),
         (SELECT COUNT(*) FROM questions
@@ -813,23 +813,25 @@ END
 $$;
 
 CREATE OR REPLACE FUNCTION get_users_pag(skip INTEGER, limitNumber INTEGER)
-  RETURNS TABLE (
-    userid INTEGER,
-    name VARCHAR(25),
-    username VARCHAR(25),
-    email VARCHAR(25)
-  )
+    RETURNS TABLE (
+        userid INTEGER,
+        roleid INTEGER,
+        rolename VARCHAR(25),
+        username VARCHAR(25),
+        email VARCHAR(25)
+    )
 AS $func$
 BEGIN
-  RETURN QUERY
-  SELECT users.userid,
-    (SELECT DISTINCT userroles.name FROM userroles WHERE userroles.roleid = users.roleid),
-    users.username,
-    users.email
-  FROM users
-  ORDER BY userid ASC
-  LIMIT limitNumber
-  OFFSET skip;
+    RETURN QUERY
+    SELECT users.userid,
+        (SELECT userroles.roleid FROM userroles WHERE userroles.roleid = users.roleid),
+        (SELECT userroles.rolename FROM userroles WHERE userroles.roleid = users.roleid),
+        users.username,
+        users.email
+    FROM users
+    ORDER BY userid ASC
+    LIMIT limitNumber
+    OFFSET skip;
 END
 $func$  LANGUAGE plpgsql;
 

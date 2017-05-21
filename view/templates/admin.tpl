@@ -89,7 +89,7 @@
                     {foreach $users as $user}
                         <tr class="usersTable" id={$user['userid']}>
                             <td>{$user['username']}</td>
-                            <td id="usrRole">{$user['name']}</td>
+                            <td id="usrRole">{$user['rolename']}</td>
                             <td>{$user['email']}</td>
 
                             <td style="text-align: center">
@@ -153,7 +153,7 @@
 
                             <form name="promUsr" method="post" action="{$BASE_URL}controller/api/admin/prom_user.php">
                                 <td id="promUsr" style="text-align: center">
-                                    <label id="permLabel"></label>
+                                    <label id="permLabel" for="perm">{$user['roleid']}</label>
                                     <div id="slider-range"></div>
                                 </td>
                             </form>

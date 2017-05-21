@@ -31,7 +31,7 @@ try {
         $_SESSION['logged_in'] = true;
         $_SESSION['user'] = $user;
         $_SESSION['success_messages'][] = 'Login Successful!';
-        $_SESSION['permission'] = auth_user('name');
+        $_SESSION['permission'] = auth_user('rolename');
 
         redirect();
     }

@@ -42,9 +42,9 @@ insert into categories (name) values ('Electronics');
 insert into categories (name) values ('Movies');
 
 
-INSERT INTO userroles(name) VALUES ('reg');
-INSERT INTO userroles(name) VALUES ('mod');
-INSERT INTO userroles(name) VALUES ('admin');
+INSERT INTO userroles(rolename) VALUES ('reg');
+INSERT INTO userroles(rolename) VALUES ('mod');
+INSERT INTO userroles(rolename) VALUES ('admin');
 
 
 INSERT INTO locations(name) VALUES ('Porto');
