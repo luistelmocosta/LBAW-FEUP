@@ -161,7 +161,7 @@ CREATE TABLE answercomments
 CREATE TABLE tags
 (
     tagid SERIAL PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL UNIQUE,
     CONSTRAINT valid_tag CHECK(CHAR_LENGTH(name) >= 3 AND CHAR_LENGTH(name) <= 30)
 );
 
@@ -1077,6 +1077,7 @@ BEGIN
     SELECT DISTINCT publications.publicationid as pubs
     FROM publications
     WHERE to_tsvector('english', publications.body) @@ plainto_tsquery('english', psearch));
+    )
 END
 $func$  LANGUAGE plpgsql;
 

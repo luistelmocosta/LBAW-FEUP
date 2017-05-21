@@ -53,24 +53,11 @@ function get_publication_rating($pubid) {
     return $query->fetch();
 }
 
-function get_tags_from_question($questionid) {
-    global $conn;
-
-    $query=$conn->prepare("SELECT tags.tagid, tags.name FROM tags 
-INNER JOIN questiontags 
-ON tags.tagid = questiontags.tagid
-WHERE questiontags.questionid = :question
-");
-    $query->execute(['question' => $questionid]);
-
-    return $query->fetchAll();
-}
-
 function update_tags($questionid, $tags) {
     global $conn;
 
     //Check if question already exists. If Yes, delete it from the array -> //EDIT PROPOSES
-    $questiontags = get_tags_from_question($questionid);
+    $questiontags = get_all_tags($questionid);
     $existant_tags = [];
 
     foreach ($questiontags as $tag_idx => $tag) {
@@ -91,6 +78,19 @@ function update_tags($questionid, $tags) {
     foreach ($tags_to_delete as $tagid) {
         delete_tag_from_question($tagid, $questionid);
     }
+}
+
+function get_tags_from_question($questionid) {
+    global $conn;
+
+    $query=$conn->prepare("SELECT tags.tagid, tags.name FROM tags 
+INNER JOIN questiontags 
+ON tags.tagid = questiontags.tagid
+WHERE questiontags.questionid = :question
+");
+    $query->execute(['question' => $questionid]);
+
+    return $query->fetchAll();
 }
 
 function insert_tag($tag)
@@ -220,6 +220,24 @@ function question_voted_by_me($question)
 function search_questions($pstext){
     global $conn;
     $stmt = $conn->prepare("SELECT * FROM questions WHERE questions.publicationid = (SELECT questionid FROM search_questions(:pstext) WHERE questions.publicationid = questionid)");
+    $stmt->execute(['pstext' => $pstext]);
+    $rows = $stmt->fetchAll();
+
+    return $rows;
+}
+
+function search_answers($pstext){
+    global $conn;
+    $stmt = $conn->prepare("SELECT answerid FROM search_answers(:pstext)");
+    $stmt->execute(['pstext' => $pstext]);
+    $rows = $stmt->fetchAll();
+
+    return $rows;
+}
+
+function search_tags($pstext){
+    global $conn;
+    $stmt = $conn->prepare("SELECT tid FROM search_tags(:pstext)");
     $stmt->execute(['pstext' => $pstext]);
     $rows = $stmt->fetchAll();
 
@@ -361,6 +379,19 @@ function category_questions($cid, $page = 0) {
     $skip = $limit * $page;
     $stmt = $conn->prepare("SELECT * FROM category_questions(:skip, :limit, :cid);");
     $stmt->execute(['limit' => $limit, 'skip' => $skip, 'cid' => $cid]);
+    $rows = $stmt->fetchAll();
+    //$rows = addQuestionsComputedFields($rows);
+
+    return $rows;
+}
+
+function get_questions_from_tagid($tid, $page = 0) {
+
+    global $conn;
+    $limit = 4;
+    $skip = $limit * $page;
+    $stmt = $conn->prepare("SELECT * FROM get_questions_from_tagid(:skip, :limit, :tid)");
+    $stmt->execute(['limit' => $limit, 'skip' => $skip, 'tid' => $tid]);
     $rows = $stmt->fetchAll();
     //$rows = addQuestionsComputedFields($rows);
 
