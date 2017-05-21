@@ -57,7 +57,7 @@ function update_tags($questionid, $tags) {
     global $conn;
 
     //Check if question already exists. If Yes, delete it from the array -> //EDIT PROPOSES
-    $questiontags = get_all_tags($questionid);
+    $questiontags = get_all_tags();
     $existant_tags = [];
 
     foreach ($questiontags as $tag_idx => $tag) {
@@ -65,6 +65,8 @@ function update_tags($questionid, $tags) {
             $key = array_search($tag['name'], $tags);
             unset($tags[$key]);
             $existant_tags[] = $tag['tagid'];
+            associate_only_tag($tag['tagid'], $questionid);
+
         }
         $questiontags[$tag_idx] = $tag['tagid'];
     }
