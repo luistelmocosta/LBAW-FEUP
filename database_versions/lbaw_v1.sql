@@ -926,21 +926,29 @@ BEGIN
 END
 $$;
 
-CREATE OR REPLACE FUNCTION answer_details_from_id (pubid INTEGER)
-    RETURNS TABLE (
-        questionid INTEGER,
-        answerid INTEGER,
-        title VARCHAR(100),
-        body TEXT)
+CREATE OR REPLACE FUNCTION answer_details_from_id (aid INTEGER)
+  RETURNS TABLE (
+    publicationid INTEGER,
+    body TEXT,
+    questionid INTEGER,
+    title VARCHAR(100),
+    creation_date TIMESTAMP,
+    solved_date TIMESTAMP,
+    username VARCHAR(10),
+    userid INTEGER,
+    votes_count BIGINT)
 AS $func$
 BEGIN
-    RETURN QUERY
-    SELECT questions.publicationid, answers.publicationid, questions.title, publications.body
-    FROM answers
-        INNER JOIN publications
-            ON answers.publicationid = publications.publicationid
-        INNER JOIN questions ON answers.questionid = questions.publicationid
-    WHERE answers.publicationid = pubid;
+  RETURN QUERY
+  SELECT answers.publicationid, publications.body, questions.publicationid, questions.title,
+    publications.creation_date, answers.solved_date, users.username,users.userid,
+    (SELECT COALESCE(SUM(votes.values), 0) FROM votes WHERE votes.publicationid = answers.publicationid) AS votes_count
+  FROM answers
+    INNER JOIN publications
+      ON answers.publicationid = publications.publicationid
+    INNER JOIN questions ON answers.questionid = questions.publicationid
+    LEFT JOIN users ON publications.userid = users.userid
+  WHERE answers.publicationid = aid;
 END
 $func$  LANGUAGE plpgsql;
 
@@ -1157,5 +1165,41 @@ BEGIN
   ) AS score_pub
   FROM tags
   WHERE to_tsvector('english', tags.name) @@ plainto_tsquery('english', psearch) ;
+END
+$func$  LANGUAGE plpgsql;
+
+
+-----------
+
+CREATE OR REPLACE FUNCTION get_questions_from_tagid(skip INTEGER, limitNumber INTEGER, tid INTEGER)
+  RETURNS TABLE (
+    publicationid INTEGER,
+    title VARCHAR(100),
+    body TEXT,
+    creation_date TIMESTAMP,
+    solved_date TIMESTAMP,
+    username VARCHAR(10),
+    userid INTEGER,
+    answers_count BIGINT,
+    upvotes BIGINT,
+    votes_count BIGINT,
+    views_counter BIGINT)
+AS $func$
+BEGIN
+  RETURN QUERY
+  SELECT questions.publicationid, questions.title, publications.body,
+    publications.creation_date, questions.solved_date, users.username, users.userid,
+    (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
+    (SELECT COUNT (*) FROM votes WHERE votes.values = 1 AND votes.publicationid = 1) AS upvotes,
+    (SELECT SUM(votes.values) FROM votes WHERE votes.publicationid = questions.publicationid),
+    questions.views_counter
+  FROM questions
+    INNER JOIN publications
+      ON questions.publicationid = publications.publicationid
+    INNER JOIN questiontags ON questions.publicationid = questiontags.questionid
+    LEFT JOIN users ON publications.userid = users.userid
+  WHERE questiontags.tagid = tid
+  LIMIT limitNumber
+  OFFSET skip;
 END
 $func$  LANGUAGE plpgsql;

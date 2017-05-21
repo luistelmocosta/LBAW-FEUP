@@ -2,7 +2,7 @@
 <div id="site-body" class="container">
     <div class="clearfix qa-main">
         {if sizeof($search_questions) > 0}
-            <div class="col-sm-8 list-c">
+            <div class="col-md-12 list-c">
                 <h1 class="page-title">
                     Question results for "<b>{$pstext}</b>"
                 </h1>
@@ -18,19 +18,28 @@
 
                         <div class="question-summary narrow">
 
-                            <div class="col-md-12">
+                            <div class="question-info col-md-12">
 
-                                <div class="votes">
-                                    <div class="votes-count">
-                <span title="{$question['votes_count']} votes">
-                    {if $question['votes_count']}
-                        {$question['votes_count']}
+                                <div class="votes" style="float: right">
+                                    <div class="votes-count"><span title="votes">
+                    {if $res['votes_count']}
+                        {$res['votes_count']}
                     {else}
                         0
                     {/if}
-                    </span>
-                                    </div>
+                    </span></div>
                                     <div>votes</div>
+                                </div>
+
+                                <div {if $res['solved_date']}
+                                    class="status answered-accepted"
+                                {else}
+                                    class="status answer-selected"
+                                {/if}
+                                        title="one of the answers was accepted as the correct answer" style="float: right">
+                                    <div class="answers-count">
+                                        <span title="{$res['answers_count']} answer">{$res['answers_count']}</span></div>
+                                    <div>answer</div>
                                 </div>
 
                                 <div class="views" style="float: right">
@@ -65,12 +74,14 @@
                     {/foreach}
 
                     <br class="clearfix">
+                    <br class="clearfix">
+                    <br class="clearfix">
 
                     {if sizeof($search_answers) > 0}
                         <div class="col-sm list-c">
-                            <h1 class="page-title">
+                            <h4 class="page-title" style="color: #5e5e5e">
                                 Answers results for "<b>{$pstext}</b>"
-                            </h1>
+                            </h4>
                         </div>
                     {/if}
 
@@ -118,6 +129,12 @@
                         </div>
 
                     {/foreach}
+
+                    <br class="clearfix">
+                    <br class="clearfix">
+                    <br class="clearfix">
+
+
                     {if sizeof($search_tags[0]) > 0}
                         <h1 class="page-title">
                             Tags results for "<b>{$pstext}</b>"
@@ -149,7 +166,7 @@
                                 {else}
                                     class="status answer-selected"
                                 {/if}
-                                        title="one of the answers was accepted as the correct answer">
+                                        title="one of the answers was accepted as the correct answer" style="float: right">
                                     <div class="answers-count">
                                         <span title="{$res['answers_count']} answer">{$res['answers_count']}</span></div>
                                     <div>answer</div>
