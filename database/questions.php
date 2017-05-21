@@ -82,6 +82,17 @@ function update_tags($questionid, $tags) {
     }
 }
 
+function get_all_tags() {
+
+    global $conn;
+
+    $query=$conn->prepare("SELECT tags.tagid, tags.name FROM tags ");
+    $query->execute();
+
+    return $query->fetchAll();
+
+}
+
 function get_tags_from_question($questionid) {
     global $conn;
 
