@@ -82,6 +82,35 @@ function update_tags($questionid, $tags) {
     }
 }
 
+function update_tags_edit($questionid, $tags) {
+    global $conn;
+
+    //Check if question already exists. If Yes, delete it from the array -> //EDIT PROPOSES
+    $questiontags = get_all_tags();
+    $existant_tags = [];
+
+    foreach ($questiontags as $tag_idx => $tag) {
+        if(in_array($tag['name'], $tags)){
+            $key = array_search($tag['name'], $tags);
+            unset($tags[$key]);
+            $existant_tags[] = $tag['tagid'];
+            update_question_tag($tag['tagid'], $questionid);
+
+        }
+        $questiontags[$tag_idx] = $tag['tagid'];
+    }
+
+    foreach ($tags as $tag) {
+        associate_tag($tag, $questionid);
+    }
+
+    $tags_to_delete = array_diff($questiontags, $existant_tags);
+
+    foreach ($tags_to_delete as $tagid) {
+        delete_tag_from_question($tagid, $questionid);
+    }
+}
+
 function get_all_tags() {
 
     global $conn;
@@ -121,6 +150,15 @@ function associate_tag($tag, $questionid)
     $stmt = $conn->prepare("INSERT INTO questiontags (questionid, tagid) VALUES(:question, :tag)");
     $stmt->execute(['question' => $questionid, 'tag' => $tagid]);
 }
+
+function associate_only_tag($tagid, $questionid)
+{
+    global $conn;
+    $stmt = $conn->prepare("INSERT INTO questiontags (questionid, tagid) VALUES(:question, :tag)");
+    $stmt->execute(['question' => $questionid, 'tag' => $tagid]);
+}
+
+
 
 function delete_tag_from_question($tagid, $questionid) {
     global $conn;
@@ -184,6 +222,13 @@ function get_questions_from_id($publicationid) {
     $stmt->execute(['publicationid' => $publicationid]);
     $rows = $stmt->fetchAll();
     return $rows;
+}
+
+function update_question_tag($tagid, $questionid)
+{
+    global $conn;
+    $stmt = $conn->prepare("INSERT INTO questiontags (questionid, tagid) VALUES(:questionid, :tagid) ON CONFLICT DO NOTHING");
+    $stmt->execute(['questionid' => $questionid, 'tagid' => $tagid]);
 }
 
 function increment_views_counter($questionid) {
