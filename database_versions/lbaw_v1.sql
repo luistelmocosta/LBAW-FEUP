@@ -669,11 +669,11 @@ END
 $func$;
 
 CREATE OR REPLACE FUNCTION update_user_profile(uid integer, full_name varchar, e_mail varchar, location varchar, about_user text)
-  returns void language plpgsql as $$
+    returns void language plpgsql as $$
 begin
-  UPDATE users
-  SET fullname = full_name, email = e_mail, about = about_user
-  WHERE users.userid = uid;
+    UPDATE users
+    SET fullname = full_name, email = e_mail, about = about_user, locationid = (SELECT locationid FROM locations WHERE locations.name = location)
+    WHERE userid = uid;
 end $$;
 
 ---- This function returns the comments of a given answer

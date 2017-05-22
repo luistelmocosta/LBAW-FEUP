@@ -74,7 +74,7 @@
                     </div>
                 </form>
 
-                <table id="users" class="table table-bordered table-responsive table-compact table-collapsing">
+                <table id="users" class="table table-bordered table-responsive">
                     <tbody>
                     <th>Username</th>
                     <th>Role</th>
@@ -166,7 +166,7 @@
                     </div>
                 </form>
 
-                <table id="quests" class="table table-bordered table-responsive table-compact table-collapsing">
+                <table id="quests" class="table table-bordered table-responsive">
                     <tbody>
                     <th>Title</th>
                     <th>Author</th>

@@ -89,6 +89,22 @@ FROM users WHERE username = ?");
     return $query->fetchAll();
 }
 
+function check_location($locationname){
+    global $conn;
+    $query = $conn->prepare("SELECT locationid FROM locations WHERE locations.name = '$locationname'");
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function create_location($locationname){
+    global $conn;
+    $query = $conn->prepare("INSERT INTO locations(name) VALUES ('$locationname')");
+    $query->execute();
+
+    return true;
+}
+
 function userProfile($userid) {
 
     global $conn;

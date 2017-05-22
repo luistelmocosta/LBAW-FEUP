@@ -75,7 +75,7 @@
                     </div>
                 </form>
 
-                <table id="users" class="table table-bordered table-responsive table-compact table-collapsing">
+                <table id="users" class="table table-bordered table-responsive">
                     <tbody>
                     <th>Username</th>
                     <th>Role</th>
@@ -126,7 +126,7 @@
                                 <td id="banUsr" style="text-align: center">
                                     <label class="switch">
                                         {if $user['bancount'] > 0}
-                                        <input id="ban" type="checkbox" checked="checked">
+                                            <input id="ban" type="checkbox" checked="checked">
                                         {else}
                                             <input id="ban" type="checkbox" data-toggle="modal" data-target="#banMsgModal">
                                         {/if}
@@ -213,7 +213,7 @@
                     </div>
                 </form>
 
-                <table id="quests" class="table table-bordered table-responsive table-compact table-collapsing">
+                <table id="quests" class="table table-bordered table-responsive">
                     <tbody>
                     <th>Title</th>
                     <th>Author</th>
