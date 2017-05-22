@@ -126,7 +126,7 @@
                                 <td id="banUsr" style="text-align: center">
                                     <label class="switch">
                                         {if $user['bancount'] > 0}
-                                        <input id="ban" type="checkbox" checked="checked" data-toggle="modal" data-target="#banMsgModal">
+                                        <input id="ban" type="checkbox" checked="checked">
                                         {else}
                                             <input id="ban" type="checkbox" data-toggle="modal" data-target="#banMsgModal">
                                         {/if}
@@ -144,6 +144,7 @@
                                         <form id="banUsr" name="bnUsr" method="post" action="">
                                             <div class="modal-body">
                                                 <textarea id="banMsg" name="msg"></textarea>
+                                                Until Date: <input type="text" placeholder="Number of days" id="banSpan">
                                             </div>
                                             <div class="modal-footer">
                                                 <button id="subBtn" type="submit" class="btn-default btn-xs">Ban</button>
@@ -285,11 +286,11 @@
 
         <div class="panel panel-default">
             <h3 style="padding-left: 10px">Status</h3>
-            <canvas id="siteStats" width="250" height="300" style="padding-left: 10px; display: inline-block">
+            <canvas id="siteStats" width="250" height="250" style="padding-left: 10px; padding-right: 10px; display: inline-block">
             </canvas>
-            <canvas id="usersStats" width="250" height="300" style="padding-left: 10px; display: inline-block">
+            <canvas id="usersStats" width="250" height="250" style="padding-left: 10px; padding-right: 10px; display: inline-block">
             </canvas>
-            <canvas id="behaviourStats" width="250" height="300" style="padding-left: 10px; display: inline-block">
+            <canvas id="behaviourStats" width="250" height="250" style="padding-left: 10px; padding-right: 10px; display: inline-block">
             </canvas>
         </div>
 

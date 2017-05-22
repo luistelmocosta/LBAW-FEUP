@@ -46,13 +46,13 @@ function modReg($adminid, $userid, $reason){
     $stmt->execute();
 }
 
-function banUser($adminid, $userid, $reason){
+function banUser($adminid, $userid, $reason, $end_date){
 
     modReg($adminid, $userid, $reason);
 
     global $conn;
     $banID = getLastModRegID()[0]['modregisterid'];
-    $stmt2 = $conn->prepare("INSERT INTO bans(banid, end_date) VALUES ($banID, '2018-03-29 01:05:00')");
+    $stmt2 = $conn->prepare("INSERT INTO bans(banid, end_date) VALUES ($banID, '$end_date')");
     $stmt2->execute();
 }
 

@@ -4,6 +4,9 @@ $(document).ready(function () {
     usersStats();
     behaviourStats();
 
+
+    //DEL QUEST
+
     $(".questTable button").click(function (e) {
         e.preventDefault();
         $.post("../../api/admin/delete_publication.php", { id: $(this).closest('tr').attr('id') }, function() {
@@ -15,23 +18,26 @@ $(document).ready(function () {
     //BAN USER
 
     $(".usersTable #ban").click(function (e) {
-        //e.preventDefault();
+        e.preventDefault();
         var checkbox = $(this);
 
         if(checkbox.is(':checked')){
             //BAN
-            $('#banMsgModal').show();
-
             $("#banMsgModal #subBtn").click(function(e){
 
-                $.post("../../api/admin/ban_user.php", { uid: checkbox.closest('tr').attr('id'), reasonMsg: $('textarea#banMsg').val()}, function() {
-                    $('#banMsgModal').hide();
+                var reasonMsg = $('textarea#banMsg').val();
+                var banSpan = $('input#banSpan').val();
+
+                $.post("../../api/admin/ban_user.php", {
+                    uid: checkbox.closest('tr').attr('id'),
+                    reasonMsg: reasonMsg,
+                    banSpan: banSpan
+                }, function () {
                     checkbox.attr("checked", true);
                 });
 
             });
         }
-
         else {
             //UNBAN
             $.post("../../api/admin/un_ban_user.php", {uid: $(this).closest('tr').attr('id')}, function () {
@@ -50,7 +56,6 @@ $(document).ready(function () {
         $('.usersTable #subBtn').click(function(e){
             $.post("../../api/admin/warn_user.php", { uid: targetID, reasonMsg: $('textarea#warnMsg').val()}, function() {
                 $('.modal-body').find('textarea,input').val('');
-                $('#warnMsgModal').modal('hide');
             });
         });
     });
@@ -72,10 +77,9 @@ $(document).ready(function () {
                 var perm = ui.value;
 
                 $.post("../../api/admin/changeUserPerm.php", { uid: targID, perm: perm}, function() {
-
+                    window.location.reload();
                 });
 
-                $(this).closest(".usersTable").find("#permLabel").text(ui.value);
             }
         });
 
@@ -104,7 +108,7 @@ function siteStats() {
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ["Questions", "Answers", "Comments", "Unsolved"],
+            labels: ["Quest", "Ans", "Comm", "Uns"],
             datasets: [{
                 data: siteData,
                 backgroundColor: [
