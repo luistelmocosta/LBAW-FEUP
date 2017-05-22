@@ -5,7 +5,10 @@ include_once($BASE_DIR . 'database/admin.php');
 include_once($BASE_DIR . 'database/users.php');
 include_once($BASE_DIR . 'database/questions.php');
 
-PagePermissions::create('admin')->check();
+$permission = $_SESSION['permission'];
+
+if($permission != 'admin' && $permission != 'mod')
+    redirect();
 
 $userid = auth_user('userid');
 $user = userProfile($userid)[0];
@@ -62,7 +65,7 @@ file_put_contents($jsonDir . 'siteStatsData.json', $SSdata);
 
 //User Stats
 
-$numEdit = getNumEditors()[0]['count'];
+$numEdit = getNumModerators()[0]['count'];
 $numAdmins = getNumAdmins()[0]['count'];
 
 $USArr = [$numUsers, $numEdit, $numAdmins];
@@ -94,7 +97,10 @@ $smarty->assign('upages', $upages);
 $smarty->assign('qpage', $upage);
 $smarty->assign('qpage', $upage);
 
-
 $smarty->display('common/header_log.tpl');
-$smarty->display('admin.tpl');
+
+if($permission == 'admin')
+    $smarty->display('admin.tpl');
+else $smarty->display('mod.tpl');
+
 $smarty->display('common/footer.tpl');
