@@ -110,7 +110,16 @@ function update_user_profile($update_user) {
 function top_scored_users() {
 
     global $conn;
-    $query = $conn->prepare("SELECT * FROM top_scored_users()");
+    $query = $conn->prepare("SELECT * FROM top_scored_users() LIMIT 5");
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function top_scored_users_page() {
+
+    global $conn;
+    $query = $conn->prepare("SELECT * FROM top_scored_users() LIMIT 18");
     $query->execute();
 
     return $query->fetchAll();
