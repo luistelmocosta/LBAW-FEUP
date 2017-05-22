@@ -125,7 +125,11 @@
                             <form name="banUsr" method="post" action="">
                                 <td id="banUsr" style="text-align: center">
                                     <label class="switch">
-                                        <input id="ban" type="checkbox" data-toggle="modal" data-target="#banMsgModal">
+                                        {if $user['bancount'] > 0}
+                                        <input id="ban" type="checkbox" checked="checked" data-toggle="modal" data-target="#banMsgModal">
+                                        {else}
+                                            <input id="ban" type="checkbox" data-toggle="modal" data-target="#banMsgModal">
+                                        {/if}
                                         <div class="slider round"></div>
                                     </label>
                             </form>

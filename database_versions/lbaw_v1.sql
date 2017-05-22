@@ -818,7 +818,8 @@ CREATE OR REPLACE FUNCTION get_users_pag(skip INTEGER, limitNumber INTEGER)
         roleid INTEGER,
         rolename VARCHAR(25),
         username VARCHAR(25),
-        email VARCHAR(25)
+        email VARCHAR(25),
+        bancount BIGINT
     )
 AS $func$
 BEGIN
@@ -827,7 +828,8 @@ BEGIN
         (SELECT userroles.roleid FROM userroles WHERE userroles.roleid = users.roleid),
         (SELECT userroles.rolename FROM userroles WHERE userroles.roleid = users.roleid),
         users.username,
-        users.email
+        users.email,
+        (SELECT COUNT(*) AS bancount FROM modregisters INNER JOIN bans ON modregisters.modregisterid = bans.banid WHERE userid_target = users.userid)
     FROM users
     ORDER BY userid ASC
     LIMIT limitNumber

@@ -20,7 +20,6 @@ $(document).ready(function () {
 
         if(checkbox.is(':checked')){
             //BAN
-
             $('#banMsgModal').show();
 
             $("#banMsgModal #subBtn").click(function(e){
@@ -31,7 +30,6 @@ $(document).ready(function () {
                 });
 
             });
-
         }
 
         else {
