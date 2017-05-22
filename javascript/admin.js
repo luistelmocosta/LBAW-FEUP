@@ -71,7 +71,12 @@ $(document).ready(function () {
             },
             slide: function (event, ui) {
                 var targID = $(this).closest(".usersTable").attr("id");
-                console.log(ui.value + " id " + targID);
+                var perm = ui.value;
+
+                $.post("../../api/admin/changeUserPerm.php", { uid: targID, perm: perm}, function() {
+
+                });
+
                 $(this).closest(".usersTable").find("#permLabel").text(ui.value);
             }
         });

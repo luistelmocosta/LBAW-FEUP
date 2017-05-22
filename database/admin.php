@@ -101,3 +101,9 @@ function createCategory($cat){
     $query = $conn->prepare("INSERT INTO categories(name) VALUES('$cat')");
     $query->execute();
 }
+
+function changePermissions($userid, $perm){
+    global $conn;
+    $query = $conn->prepare("UPDATE users SET roleid=$perm WHERE userid = $userid");
+    $query->execute();
+}
