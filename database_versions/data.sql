@@ -14,9 +14,9 @@ INSERT INTO categories(name) VALUES ('Others');
 INSERT INTO categories(name) VALUES ('Travel');
 INSERT INTO categories(name) VALUES ('Health');
 
-INSERT INTO userroles(name) VALUES ('Authenticated');
-INSERT INTO userroles(name) VALUES ('Admin');
-INSERT INTO userroles(name) VALUES ('Editor');
+INSERT INTO userroles(rolename) VALUES ('Authenticated');
+INSERT INTO userroles(rolename) VALUES ('Admin');
+INSERT INTO userroles(rolename) VALUES ('Editor');
 
 INSERT INTO locations(name) VALUES ('Porto');
 INSERT INTO locations(name) VALUES ('Viseu');
