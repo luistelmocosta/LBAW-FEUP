@@ -17,8 +17,8 @@ CREATE TABLE categories
 CREATE TABLE userroles
 (
     roleid SERIAL PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
-    CONSTRAINT user_role CHECK(name IN ('admin', 'mod', 'auth'))
+    rolename VARCHAR(50) NOT NULL,
+    CONSTRAINT user_role CHECK(rolename IN ('reg', 'mod', 'admin'))
 );
 
 CREATE TABLE locations
@@ -161,7 +161,7 @@ CREATE TABLE answercomments
 CREATE TABLE tags
 (
     tagid SERIAL PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL UNIQUE,
     CONSTRAINT valid_tag CHECK(CHAR_LENGTH(name) >= 3 AND CHAR_LENGTH(name) <= 30)
 );
 
@@ -305,7 +305,7 @@ BEGIN
     RETURN QUERY
     SELECT users.fullname, users.username, users.email, users.about,
         (SELECT locations.name FROM locations WHERE users.locationid = locations.locationid),
-        (SELECT name FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE userid = puser_id),
+        (SELECT rolename FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE userid = puser_id),
         users.signup_date,
         count_vote_rating_received_user(puser_id),
         (SELECT COUNT(*) FROM questions
@@ -374,26 +374,6 @@ $func$  LANGUAGE plpgsql;
 CREATE TRIGGER own_content_vote_trigger AFTER INSERT OR UPDATE ON votes
 FOR EACH ROW EXECUTE PROCEDURE own_content_vote();
 
----- This function adds a user to the ban table when he exceeds the warning limit (3)
-
-DROP TRIGGER IF EXISTS auto_ban_on_warning_limit ON public.warnings;
-
-
-CREATE OR REPLACE FUNCTION trigger_auto_ban_on_warning_limit()
-    RETURNS "trigger" AS $func$
-BEGIN
-    IF (SELECT COUNT(*)
-        FROM modregisters INNER JOIN users ON modregisters.userid_author = users.userid
-            INNER JOIN warnings ON modregisters.modregisterid = warnings.warningid
-        GROUP BY userid_target) = 3 THEN
-        INSERT INTO bans(banid) VALUES(NEW.warningid);
-    END IF;
-    RETURN NULL;
-END;
-$func$  LANGUAGE plpgsql;
-
-CREATE TRIGGER auto_ban_on_warning_limit AFTER INSERT ON warnings
-FOR EACH ROW EXECUTE PROCEDURE trigger_auto_ban_on_warning_limit();
 
 --- This function updates the column last_edit_date with the current timestamp everytime there is an update on the table
 
@@ -689,11 +669,11 @@ END
 $func$;
 
 CREATE OR REPLACE FUNCTION update_user_profile(uid integer, full_name varchar, e_mail varchar, location varchar, about_user text)
-  returns void language plpgsql as $$
+    returns void language plpgsql as $$
 begin
-  UPDATE users
-  SET fullname = full_name, email = e_mail, about = about_user
-  WHERE users.userid = uid;
+    UPDATE users
+    SET fullname = full_name, email = e_mail, about = about_user, locationid = (SELECT locationid FROM locations WHERE locations.name = location)
+    WHERE userid = uid;
 end $$;
 
 ---- This function returns the comments of a given answer
@@ -833,23 +813,27 @@ END
 $$;
 
 CREATE OR REPLACE FUNCTION get_users_pag(skip INTEGER, limitNumber INTEGER)
-  RETURNS TABLE (
-    userid INTEGER,
-    name VARCHAR(25),
-    username VARCHAR(25),
-    email VARCHAR(25)
-  )
+    RETURNS TABLE (
+        userid INTEGER,
+        roleid INTEGER,
+        rolename VARCHAR(25),
+        username VARCHAR(25),
+        email VARCHAR(25),
+        bancount BIGINT
+    )
 AS $func$
 BEGIN
-  RETURN QUERY
-  SELECT users.userid,
-    (SELECT DISTINCT userroles.name FROM userroles WHERE userroles.roleid = users.roleid),
-    users.username,
-    users.email
-  FROM users
-  ORDER BY userid ASC
-  LIMIT limitNumber
-  OFFSET skip;
+    RETURN QUERY
+    SELECT users.userid,
+        (SELECT userroles.roleid FROM userroles WHERE userroles.roleid = users.roleid),
+        (SELECT userroles.rolename FROM userroles WHERE userroles.roleid = users.roleid),
+        users.username,
+        users.email,
+        (SELECT COUNT(*) AS bancount FROM modregisters INNER JOIN bans ON modregisters.modregisterid = bans.banid WHERE userid_target = users.userid)
+    FROM users
+    ORDER BY userid ASC
+    LIMIT limitNumber
+    OFFSET skip;
 END
 $func$  LANGUAGE plpgsql;
 
@@ -926,21 +910,29 @@ BEGIN
 END
 $$;
 
-CREATE OR REPLACE FUNCTION answer_details_from_id (pubid INTEGER)
-    RETURNS TABLE (
-        questionid INTEGER,
-        answerid INTEGER,
-        title VARCHAR(100),
-        body TEXT)
+CREATE OR REPLACE FUNCTION answer_details_from_id (aid INTEGER)
+  RETURNS TABLE (
+    publicationid INTEGER,
+    body TEXT,
+    questionid INTEGER,
+    title VARCHAR(100),
+    creation_date TIMESTAMP,
+    solved_date TIMESTAMP,
+    username VARCHAR(10),
+    userid INTEGER,
+    votes_count BIGINT)
 AS $func$
 BEGIN
-    RETURN QUERY
-    SELECT questions.publicationid, answers.publicationid, questions.title, publications.body
-    FROM answers
-        INNER JOIN publications
-            ON answers.publicationid = publications.publicationid
-        INNER JOIN questions ON answers.questionid = questions.publicationid
-    WHERE answers.publicationid = pubid;
+  RETURN QUERY
+  SELECT answers.publicationid, publications.body, questions.publicationid, questions.title,
+    publications.creation_date, answers.solved_date, users.username,users.userid,
+    (SELECT COALESCE(SUM(votes.values), 0) FROM votes WHERE votes.publicationid = answers.publicationid) AS votes_count
+  FROM answers
+    INNER JOIN publications
+      ON answers.publicationid = publications.publicationid
+    INNER JOIN questions ON answers.questionid = questions.publicationid
+    LEFT JOIN users ON publications.userid = users.userid
+  WHERE answers.publicationid = aid;
 END
 $func$  LANGUAGE plpgsql;
 
@@ -1077,6 +1069,7 @@ BEGIN
     SELECT DISTINCT publications.publicationid as pubs
     FROM publications
     WHERE to_tsvector('english', publications.body) @@ plainto_tsquery('english', psearch));
+    )
 END
 $func$  LANGUAGE plpgsql;
 
@@ -1156,5 +1149,41 @@ BEGIN
   ) AS score_pub
   FROM tags
   WHERE to_tsvector('english', tags.name) @@ plainto_tsquery('english', psearch) ;
+END
+$func$  LANGUAGE plpgsql;
+
+
+-----------
+
+CREATE OR REPLACE FUNCTION get_questions_from_tagid(skip INTEGER, limitNumber INTEGER, tid INTEGER)
+  RETURNS TABLE (
+    publicationid INTEGER,
+    title VARCHAR(100),
+    body TEXT,
+    creation_date TIMESTAMP,
+    solved_date TIMESTAMP,
+    username VARCHAR(10),
+    userid INTEGER,
+    answers_count BIGINT,
+    upvotes BIGINT,
+    votes_count BIGINT,
+    views_counter BIGINT)
+AS $func$
+BEGIN
+  RETURN QUERY
+  SELECT questions.publicationid, questions.title, publications.body,
+    publications.creation_date, questions.solved_date, users.username, users.userid,
+    (SELECT COUNT(*) FROM question_answers(questions.publicationid)) AS answers_count,
+    (SELECT COUNT (*) FROM votes WHERE votes.values = 1 AND votes.publicationid = 1) AS upvotes,
+    (SELECT SUM(votes.values) FROM votes WHERE votes.publicationid = questions.publicationid),
+    questions.views_counter
+  FROM questions
+    INNER JOIN publications
+      ON questions.publicationid = publications.publicationid
+    INNER JOIN questiontags ON questions.publicationid = questiontags.questionid
+    LEFT JOIN users ON publications.userid = users.userid
+  WHERE questiontags.tagid = tid
+  LIMIT limitNumber
+  OFFSET skip;
 END
 $func$  LANGUAGE plpgsql;

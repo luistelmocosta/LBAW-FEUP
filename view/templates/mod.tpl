@@ -1,5 +1,4 @@
-<title>Admin's Page</title>
-{include file="common/messages.tpl"}
+<title>Moderator's Page</title>
 <div id="site-body" class="container">
     <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
         <div class="panel panel-default">
@@ -83,8 +82,6 @@
 
                     <th style="text-align: center">Info</th>
                     <th style="text-align: center">Warn</th>
-                    <th style="text-align: center">Ban</th>
-                    <th style="text-align: center">Promote</th>
 
                     {foreach $users as $user}
                         <tr class="usersTable" id={$user['userid']}>
@@ -119,50 +116,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-                            </td>
-
-                            <form name="banUsr" method="post" action="">
-                                <td id="banUsr" style="text-align: center">
-                                    <label class="switch">
-                                        {if $user['bancount'] > 0}
-                                            <input id="ban" type="checkbox" checked="checked">
-                                        {else}
-                                            <input id="ban" type="checkbox" data-toggle="modal" data-target="#banMsgModal">
-                                        {/if}
-                                        <div class="slider round"></div>
-                                    </label>
-                            </form>
-
-                            <div class="modal fade" id="banMsgModal" role="dialog">
-                                <div class="modal-dialog modal-md">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Ban Message</h4>
-                                        </div>
-                                        <form id="banUsr" name="bnUsr" method="post" action="">
-                                            <div class="modal-body">
-                                                <textarea id="banMsg" name="msg"></textarea>
-                                                Until Date: <input type="text" placeholder="Number of days" id="banSpan">
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button id="subBtn" type="submit" class="btn-default btn-xs">Ban</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                            </td>
-
-                            <form name="promUsr" method="post" action="{$BASE_URL}controller/api/admin/prom_user.php">
-                                <td id="promUsr" style="text-align: center">
-                                    <label id="permLabel" for="perm">{$user['roleid']}</label>
-                                    <div id="slider-range"></div>
-                                </td>
-                            </form>
-
                         </tr>
                     {/foreach}
 
@@ -268,29 +221,13 @@
 
         </div>
 
-
-        <div class="panel panel-default">
-            <h3 style="padding-left: 10px">Create new category</h3>
-            <form class = "navbar-form" method = "post" action = "{$BASE_URL}controller/actions/admin/create_category.php">
-                <div class="input-group stylish-input-group">
-                    <input type="text" class="form-control" name="newCat" placeholder="New category" >
-                    <span class="input-group-addon">
-                            <button type="submit">
-                                <span class="glyphicon glyphicon-plus"></span>
-                            </button>
-                        </span>
-                </div>
-            </form>
-        </div>
-
-
         <div class="panel panel-default">
             <h3 style="padding-left: 10px">Status</h3>
-            <canvas id="siteStats" width="250" height="250" style="padding-left: 10px; padding-right: 10px; display: inline-block">
+            <canvas id="siteStats" width="250" height="300" style="padding-left: 10px; display: inline-block">
             </canvas>
-            <canvas id="usersStats" width="250" height="250" style="padding-left: 10px; padding-right: 10px; display: inline-block">
+            <canvas id="usersStats" width="250" height="300" style="padding-left: 10px; display: inline-block">
             </canvas>
-            <canvas id="behaviourStats" width="250" height="250" style="padding-left: 10px; padding-right: 10px; display: inline-block">
+            <canvas id="behaviourStats" width="250" height="300" style="padding-left: 10px; display: inline-block">
             </canvas>
         </div>
 

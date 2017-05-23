@@ -50,8 +50,6 @@ function registerUser($username, $email, $password) {
  * @return bool
  */
 function correctAuth($username, $password)
-
-
 {
     global $conn;
     $stmt = $conn->prepare("SELECT * 
@@ -72,10 +70,10 @@ function correctAuth($username, $password)
     }
 }
 
-
 function getUserByUsername($username) {
     global $conn;
-    $query = $conn->prepare("SELECT userid, username, fullname, email, signup_date, userroles.name 
+
+    $query = $conn->prepare("SELECT userid, username, fullname, email, signup_date, userroles.rolename 
 FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE username = ?");
     $query->execute(array($username));
 
@@ -89,6 +87,22 @@ FROM users WHERE username = ?");
     $query->execute(array($username));
 
     return $query->fetchAll();
+}
+
+function check_location($locationname){
+    global $conn;
+    $query = $conn->prepare("SELECT locationid FROM locations WHERE locations.name = '$locationname'");
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function create_location($locationname){
+    global $conn;
+    $query = $conn->prepare("INSERT INTO locations(name) VALUES ('$locationname')");
+    $query->execute();
+
+    return true;
 }
 
 function userProfile($userid) {

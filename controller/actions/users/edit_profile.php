@@ -35,6 +35,9 @@ $update_user = [
     'about' => $about
 ];
 
+if(check_location($location) == null)
+    create_location($location);
+
 try {
     update_user_profile($update_user);
     move_uploaded_file($photo["tmp_name"], $BASE_DIR . "images/users/" . $user['username'] . '.' . $extension); // this is dangerous

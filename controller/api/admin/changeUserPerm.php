@@ -6,10 +6,10 @@ include_once($BASE_DIR . 'database/admin.php');
 $userid = auth_user('userid');
 $user = userProfile($userid)[0];
 
-$reason = $_POST['reasonMsg'];
 $targid = intval($_POST['uid']);
-$banSpan = $_POST['banSpan'];
+$perm = intval($_POST['perm']);
 
-$enddate = date('d-m-Y h:i:s a', strtotime("+" . $banSpan . " days"));
+if($perm < 1 || $perm > 3)
+    return;
 
-banUser($userid, $targid, $reason, $enddate);
+changePermissions($targid, $perm);

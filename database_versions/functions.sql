@@ -92,7 +92,7 @@ CREATE OR REPLACE FUNCTION user_profile(puser_id int)
 BEGIN
     RETURN QUERY
     SELECT users.username, users.email,
-        (SELECT name FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE userid = puser_id),
+        (SELECT rolename FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE userid = puser_id),
         users.signup_date,
         count_vote_rating_received_user(puser_id),
         (SELECT COUNT(*) FROM publications INNER JOIN questions ON questions.publicationid = publications.publicationid
