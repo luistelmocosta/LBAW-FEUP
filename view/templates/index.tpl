@@ -12,7 +12,7 @@
                     <h1>AskMe</h1>
                     <br>
 
-                    <form name="search" method="post" action="{$BASE_URL}controller/actions/questions/search_results.php">
+                    <form name="search" method="post" action="{$BASE_URL}controller/pages/questions/search_results.php">
                         <div id="custom-search-input">
                             <div class="input-group col-lg-12">
                                 <input type="text" name="psearch" class="form-control input-lg" placeholder="Search for a question..."/>
