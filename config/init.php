@@ -64,6 +64,7 @@ $smarty->assign('FIELD_ERRORS',	$_SESSION['field_errors']);
 $smarty->assign('SUCCESS_MESSAGES',	$_SESSION['success_messages']);
 $smarty->assign('FORM_VALUES',	$_SESSION['form_values']);
 $smarty->assign('USERNAME',	$_SESSION['username']);
+$smarty->assign('PERMISSION',   $_SESSION['permission']);
 
 if (file_exists($BASE_DIR.'/images/users/'.$_SESSION['username'].'.png'))
     $photo_profile = '/images/users/'.$_SESSION['username'].'.png';
