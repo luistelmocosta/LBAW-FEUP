@@ -21,11 +21,14 @@ else $userid = auth_user('userid');
 $user = userProfile($userid)[0];
 
 $user_questions = get_questions_by_user_id($userid);
-$user_mod_regs = get_mod_reg_by_user_id($userid);
+$user_mod_regs_bans =  get_mod_reg_ban_by_user_id($userid);
+$user_mod_regs_warns = get_mod_reg_warn_by_user_id($userid);
 
 $smarty->assign('user', $user);
 $smarty->assign('user_questions', $user_questions);
-$smarty->assign('user_mod_regs', $user_mod_regs);
+$smarty->assign('user_mod_regs_bans', $user_mod_regs_bans);
+$smarty->assign('user_mod_regs_warns', $user_mod_regs_warns);
+
 $smarty->assign('photo', $photo);
 $smarty->assign('permission', $permission);
 $smarty->display('profile.tpl');
