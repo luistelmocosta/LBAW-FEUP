@@ -16,7 +16,10 @@ if($_SESSION['logged_in']) {
 
 if(isset($_GET['userid']))
     $userid = $_GET['userid'];
-else $userid = auth_user('userid');
+else {
+    $userid = auth_user('userid');
+    $own = true;
+}
 
 $user = userProfile($userid)[0];
 
@@ -31,5 +34,7 @@ $smarty->assign('user_mod_regs_warns', $user_mod_regs_warns);
 
 $smarty->assign('photo', $photo);
 $smarty->assign('permission', $permission);
+$smarty->assign('own', $own);
+
 $smarty->display('profile.tpl');
 $smarty->display('common/footer.tpl');
