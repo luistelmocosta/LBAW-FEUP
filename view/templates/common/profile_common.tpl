@@ -1,4 +1,3 @@
-<title>{$user['username']}'s Profile</title>
 <div id="site-body" class="container">
     <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
         <div class="panel panel-default">
@@ -21,14 +20,6 @@
                         <hr>
                         <h3><strong>Created at</strong></h3>
                         <p>{$user['created_at']}</p>
-
-                        {if $own}
-                            <td colspan="3" class="qa-form-wide-buttons">
-                                <a href="{$BASE_URL}controller/pages/users/edit_profile.php">
-                                    <input name="doaccount" value="Edit Profile" title="" type="submit" class="qa-form-wide-button qa-form-wide-button-account">
-                                </a>
-                            </td>
-                        {/if}
 
                     </div>
                 </div>
@@ -65,41 +56,3 @@
                 </div>
             </div>
         </div>
-
-        {if $permission == "admin" || $permission == "mod"}
-            <div class="panel panel-default">
-                <div class="user-qac-list">
-                    <div id="user-content-position">
-                        <div class="widget cs_user_posts">
-                            <h3 style="padding-left: 10px" class="widget-title user-post-title">{$user['username']}'s Bans Registers</h3>
-                            <div class="ra-ua-widget">
-                                {foreach $user_mod_regs_bans as $mod_reg}
-                                    {include file="user_profile_mod_regs.tpl"}
-                                {/foreach}
-                            </div>
-                            <h3 style="padding-left: 10px" class="widget-title user-post-title">{$user['username']}'s Warnings Registers</h3>
-                            <div class="ra-ua-widget">
-                                {foreach $user_mod_regs_warns as $mod_reg}
-                                    {include file="user_profile_mod_regs.tpl"}
-                                {/foreach}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {/if}
-
-        <div class="panel panel-default">
-            <div class="user-qac-list">
-                <div id="user-content-position">
-                    <div class="widget cs_user_posts">												<h3 style="padding-left: 10px" class="widget-title user-post-title">{$user['username']}'s Questions<a class="see-all" href="#">Show all</a></h3>
-                        <div class="ra-ua-widget">
-                            {foreach $user_questions as $question}
-                                {include file="user_profile_questions.tpl"}
-                            {/foreach}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>

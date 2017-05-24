@@ -299,6 +299,7 @@ CREATE OR REPLACE FUNCTION user_profile(puser_id int)
         count_votes_rating_received INT,
         count_questions BIGINT,
         count_answers BIGINT,
+        count_comments BIGINT,
         count_votes_made BIGINT
     ) AS $func$
 BEGIN
@@ -315,6 +316,10 @@ BEGIN
         (SELECT COUNT(*) FROM answers
             INNER JOIN publications
                 ON answers.publicationid = publications.publicationid
+        WHERE publications.userid = puser_id),
+        (SELECT COUNT(*) FROM comments
+            INNER JOIN publications
+                ON commentz.publicationid = publications.publicationid
         WHERE publications.userid = puser_id),
         (SELECT COUNT(*) FROM votes WHERE votes.userid = puser_id)
     FROM users
