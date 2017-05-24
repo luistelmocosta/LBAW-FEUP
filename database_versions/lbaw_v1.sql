@@ -319,7 +319,7 @@ BEGIN
         WHERE publications.userid = puser_id),
         (SELECT COUNT(*) FROM comments
             INNER JOIN publications
-                ON commentz.publicationid = publications.publicationid
+                ON comments.publicationid = publications.publicationid
         WHERE publications.userid = puser_id),
         (SELECT COUNT(*) FROM votes WHERE votes.userid = puser_id)
     FROM users
@@ -732,6 +732,7 @@ $$;
 
 CREATE OR REPLACE FUNCTION top_scored_users()
     RETURNS TABLE (
+        uid INTEGER,
         username character varying(50),
     --badge character varying(50),
         count_votes_rating_received INT,
@@ -741,7 +742,7 @@ CREATE OR REPLACE FUNCTION top_scored_users()
     ) AS $func$
 BEGIN
     RETURN QUERY
-    SELECT users.username,
+    SELECT users.userid, users.username,
         count_vote_rating_received_user(users.userid) as total_votes,
         user_total_questions(users.userid) as total_questions,
         user_total_answers(users.userid) as total_answers,
