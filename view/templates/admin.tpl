@@ -158,7 +158,7 @@
 
                             <form name="promUsr" method="post" action="{$BASE_URL}controller/api/admin/prom_user.php">
                                 <td id="promUsr" style="text-align: center">
-                                    <label id="permLabel" for="perm">{$user['roleid']}</label>
+                                    <label id="permLabel" for="perm">{$user['rolename']}</label>
                                     <div id="slider-range"></div>
                                 </td>
                             </form>

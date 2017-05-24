@@ -31,7 +31,6 @@ $(document).ready(function () {
         if(checkbox.is(':checked')){
             //BAN
             $("#banMsgModal #subBtn").click(function(e){
-                console.log("ban span " + banSpan.val());
                 var reasonMsg = $('textarea#banMsg').val();
                 $.post("../../api/admin/ban_user.php", {
                     uid: checkbox.closest('tr').attr('id'),
@@ -75,7 +74,15 @@ $(document).ready(function () {
             min: 1,
             max: 3,
             create: function () {
-                $(this).slider( "option", "value", $(this).closest('.usersTable').find('#permLabel').html());
+                var val;
+                if($(this).closest('.usersTable').find('#permLabel').html() == "admin")
+                    val = 3;
+                else if($(this).closest('.usersTable').find('#permLabel').html() == "mod")
+                    val = 2;
+                else if($(this).closest('.usersTable').find('#permLabel').html() == "reg")
+                    val = 1;
+
+                $(this).slider( "option", "value", val);
             },
             slide: function (event, ui) {
                 var targID = $(this).closest(".usersTable").attr("id");
