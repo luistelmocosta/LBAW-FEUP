@@ -62,6 +62,23 @@
                 </div>
             </div>
         </div>
+        {if $permission == "admin" || $permission == "mod"}
+            <div class="panel panel-default">
+                <div class="user-qac-list">
+                    <div id="user-content-position">
+                        <div class="widget cs_user_posts">
+                            <h3 style="padding-left: 10px" class="widget-title user-post-title">{$user['username']}'s Moderation Registers<a class="see-all" href="#">Show all</a></h3>
+                            <div class="ra-ua-widget">
+                                {foreach $user_mod_regs as $mod_reg}
+                                    {include file="user_profile_mod_regs.tpl"}
+                                {/foreach}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {/if}
+
         <div class="panel panel-default">
             <div class="user-qac-list">
                 <div id="user-content-position">

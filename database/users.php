@@ -149,3 +149,11 @@ function check_ban($userid){
 
     return $query->fetchAll();
 }
+
+function get_mod_reg_by_user_id($userid){
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM modregisters WHERE modregisters.userid_target = $userid");
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}

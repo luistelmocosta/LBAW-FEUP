@@ -1069,7 +1069,6 @@ BEGIN
     SELECT DISTINCT publications.publicationid as pubs
     FROM publications
     WHERE to_tsvector('english', publications.body) @@ plainto_tsquery('english', psearch));
-    )
 END
 $func$  LANGUAGE plpgsql;
 
