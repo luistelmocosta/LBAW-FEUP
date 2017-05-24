@@ -122,7 +122,7 @@
 
             <div class="qa-part-form-password">
                 <h2>Change Password</h2>
-                <form method="post" action="./account">
+                <form method="post" action="{$BASE_URL}controller/actions/users/change_pwd.php">
                     <table class="qa-form-wide-table">
                         <tbody><tr>
                             <td class="qa-form-wide-label">

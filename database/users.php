@@ -89,6 +89,15 @@ FROM users WHERE username = ?");
     return $query->fetchAll();
 }
 
+function getUserNameByUserID($userID){
+    global $conn;
+    $query = $conn->prepare("SELECT username
+FROM users WHERE userid = ?");
+    $query->execute(array($userID));
+
+    return $query->fetchAll();
+}
+
 function check_location($locationname){
     global $conn;
     $query = $conn->prepare("SELECT locationid FROM locations WHERE locations.name = '$locationname'");
@@ -164,4 +173,14 @@ function get_mod_reg_warn_by_user_id($userid){
     $stmt->execute();
 
     return $stmt->fetchAll();
+}
+
+function changeUserPwd($username, $password) {
+    global $conn;
+
+    $query = $conn->prepare("UPDATE users SET password = ? WHERE users.username = '$username'");
+
+    $password = password_hash($password, PASSWORD_BCRYPT);
+    $query->execute(array($password));
+
 }
