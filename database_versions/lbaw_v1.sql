@@ -80,7 +80,7 @@ CREATE TABLE warnings
 CREATE TABLE bans
 (
     banid SERIAL PRIMARY KEY,
-    end_date TIMESTAMP,
+    end_date DATE,
     CONSTRAINT "FK_Ban_ModRegister"
     FOREIGN KEY ("banid") REFERENCES modregisters ("modregisterid") ON DELETE CASCADE ON UPDATE CASCADE
 );

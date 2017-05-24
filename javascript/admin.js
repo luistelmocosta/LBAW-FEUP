@@ -21,17 +21,22 @@ $(document).ready(function () {
         e.preventDefault();
         var checkbox = $(this);
 
+        var dateToday = new Date();
+        var banSpan = $("#banSpan").datepicker({
+            defaultDate: "+1w",
+            minDate: dateToday,
+            dateFormat: 'yy-mm-dd'
+        });
+
         if(checkbox.is(':checked')){
             //BAN
             $("#banMsgModal #subBtn").click(function(e){
-
+                console.log("ban span " + banSpan.val());
                 var reasonMsg = $('textarea#banMsg').val();
-                var banSpan = $('input#banSpan').val();
-
                 $.post("../../api/admin/ban_user.php", {
                     uid: checkbox.closest('tr').attr('id'),
                     reasonMsg: reasonMsg,
-                    banSpan: banSpan
+                    banSpan: banSpan.val()
                 }, function () {
                     checkbox.attr("checked", true);
                 });

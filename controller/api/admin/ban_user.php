@@ -10,6 +10,12 @@ $reason = $_POST['reasonMsg'];
 $targid = intval($_POST['uid']);
 $banSpan = $_POST['banSpan'];
 
-$enddate = date('d-m-Y h:i:s a', strtotime("+" . $banSpan . " days"));
+if(!$banSpan) {
+    $_SESSION['error_messages'] = "Invalid date";
+}
+
+//$enddate = date('d-m-Y h:i:s a', strtotime("+" . $banSpan . " days"));
+$enddate = date('Y-m-d', strtotime($banSpan));
+
 
 banUser($userid, $targid, $reason, $enddate);
