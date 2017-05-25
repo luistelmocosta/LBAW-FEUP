@@ -149,3 +149,13 @@ function check_ban($userid){
 
     return $query->fetchAll();
 }
+
+function search_users($pstext) {
+
+        global $conn;
+        $stmt = $conn->prepare("SELECT userid FROM search_users(:pstext)");
+        $stmt->execute(['pstext' => $pstext]);
+        $rows = $stmt->fetchAll();
+
+        return $rows;
+}
