@@ -299,6 +299,7 @@ CREATE OR REPLACE FUNCTION user_profile(puser_id int)
         count_votes_rating_received INT,
         count_questions BIGINT,
         count_answers BIGINT,
+        count_comments BIGINT,
         count_votes_made BIGINT
     ) AS $func$
 BEGIN
@@ -315,6 +316,10 @@ BEGIN
         (SELECT COUNT(*) FROM answers
             INNER JOIN publications
                 ON answers.publicationid = publications.publicationid
+        WHERE publications.userid = puser_id),
+        (SELECT COUNT(*) FROM comments
+            INNER JOIN publications
+                ON comments.publicationid = publications.publicationid
         WHERE publications.userid = puser_id),
         (SELECT COUNT(*) FROM votes WHERE votes.userid = puser_id)
     FROM users
@@ -727,6 +732,7 @@ $$;
 
 CREATE OR REPLACE FUNCTION top_scored_users()
     RETURNS TABLE (
+        userid INTEGER,
         username character varying(50),
     --badge character varying(50),
         count_votes_rating_received INT,
@@ -736,7 +742,7 @@ CREATE OR REPLACE FUNCTION top_scored_users()
     ) AS $func$
 BEGIN
     RETURN QUERY
-    SELECT users.username,
+    SELECT users.userid, users.username,
         count_vote_rating_received_user(users.userid) as total_votes,
         user_total_questions(users.userid) as total_questions,
         user_total_answers(users.userid) as total_answers,
@@ -1069,7 +1075,6 @@ BEGIN
     SELECT DISTINCT publications.publicationid as pubs
     FROM publications
     WHERE to_tsvector('english', publications.body) @@ plainto_tsquery('english', psearch));
-    )
 END
 $func$  LANGUAGE plpgsql;
 

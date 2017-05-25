@@ -94,8 +94,8 @@ $smarty->assign('questions', $questions);
 $smarty->assign('upage', $upage);
 $smarty->assign('upages', $upages);
 
-$smarty->assign('qpage', $upage);
-$smarty->assign('qpage', $upage);
+$smarty->assign('qpage', $qpage);
+$smarty->assign('qpages', $qpages);
 
 $smarty->display('common/header_log.tpl');
 

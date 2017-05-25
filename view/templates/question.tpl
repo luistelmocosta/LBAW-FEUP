@@ -33,7 +33,7 @@
                                 {/if}
                                 <span class="q-view-a-count">{$question['answers_count']} Answers</span>
                                 <span class="icon-eye-open q-view-v-count">{$question['views_counter']} Views</span>
-                                <a class="cat-in fa fa-folder" href="">{$question['category']}</a>
+                                <a class="cat-in fa fa-folder" href={categoryQuestionsUrl($category)}>{$question['category']}</a>
                             </div>
                         </div>
 
@@ -57,7 +57,7 @@
                                                 </span>
                                                 <span class="qa-q-item-who">
                                                     <span class="qa-q-item-who-pad">by </span>
-                                                    <span class="qa-q-item-who-data"><span class="vcard author"><a style="display: inline;" href="" class="qa-user-link url nickname">{$question['username']}</a></span></span>
+                                                    <span class="qa-q-item-who-data"><span class="vcard author"><a style="display: inline;" href={profileUrl($question['userid'])} class="qa-user-link">{$question['username']}</a></span></span>
                                                 </span>
                                             </span>
                                             <div class="question-tags">
@@ -79,7 +79,7 @@
                                                             data-question="{$question['publicationid']}"
                                                             data-type="question">{$answer['total_comments']} Comments</button>
                                                     <div class="textarea">
-                                                        {include file="question_partials/comment_form.tpl"}
+                                                        {include file="common/comment_form.tpl"}
                                                     </div>
                                                 </div>
                                             </div>
@@ -87,7 +87,7 @@
 
                                         <h3 class="answers-label">{$question['answers_count']} Answers</h3>
 
-                                        <div class="qa-a-list-item hentry answer">
+                                        <div class="qa-a-list-item entry answer">
                                             {foreach $answers as $answer}
                                                 {include file="answers.tpl"}
                                             {/foreach}
