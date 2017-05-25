@@ -126,10 +126,7 @@
 
                                                 </form>
                                             </div>
-
-
                                         </div>
-
                                     </div>
                                 </div>
                                 </form>
@@ -149,7 +146,7 @@
                     <div class="ra-rq-widget">
                         <ul>
                             {foreach $related_questions as $related_question}
-                                <li><div class="avatar" data-id="4" data-handle="Smith"><a href="" class="qa-avatar-link"><img src="{$related_question['user_photo']}" width="30" height="30" class="qa-avatar-image" alt=""></a></div>
+                                <li><div class="avatar" data-id="4" data-handle="Smith"><a class="qa-avatar-link"><img src="{$related_question['user_photo']}" width="30" height="30" class="qa-avatar-image" alt=""></a></div>
                                     <div class="post-content">
                                         <a class="title" href="{questionUrl($related_question['publicationid'])}">{$related_question['title']}</a>
                                         <div class="meta">
