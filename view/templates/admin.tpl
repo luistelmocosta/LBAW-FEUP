@@ -1,63 +1,6 @@
 <title>Admin's Page</title>
 {include file="common/messages.tpl"}
-<div id="site-body" class="container">
-    <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <div class="media">
-                    <div align="center">
-                        <img class="thumbnail img-responsive" src="{$AVATAR}" width="300px" height="300px">
-                    </div>
-                    <h2><strong>{$user['fullname']}</strong></h2>
-                    <div class="media-body">
-                        <hr>
-                        <h3><strong>About</strong></h3>
-                        <p>{$user['about']}</p>
-                        <hr>
-                        <h3><strong>Email</strong></h3>
-                        <p>{$user['email']}</p>
-                        <hr>
-                        <h3><strong>Location</strong></h3>
-                        <p>{$user['location']}</p>
-                        <hr>
-                        <h3><strong>Created at</strong></h3>
-                        <p>{$user['created_at']}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                    <span>
-                        <h1 class="panel-title pull-left" style="font-size:30px;"> {$user['username']} <small>{$user['role']}</small> <i class="fa fa-check text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="John Doe is sharing with you"></i></h1>
-                    </span>
-                <br><br>
-                <div class="user-activity-count clearfix">
-                    <div class="points">
-                        {$user['count_votes_rating_received']}
-                        <span>points</span>
-                    </div>
-                    <div class="counts">
-                        <div class="q-counts">
-                            <span>{$user['count_questions']}</span>
-                            Questions
-                        </div>
-                        <div class="a-counts">
-                            <span>{$user['count_answers']}</span>
-                            Answers
-                        </div>
-                        <div class="c-counts">
-                            <span>0</span>
-                            Comments
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+{include file="common/profile_common.tpl"}
 
         <div class="panel panel-default">
 
@@ -74,6 +17,7 @@
                     </span>
                     </div>
                 </form>
+                <button class="see-all">See All</button>
 
                 <table id="users" class="table table-bordered table-responsive">
                     <tbody>
@@ -81,10 +25,10 @@
                     <th>Role</th>
                     <th>Email</th>
 
-                    <th style="text-align: center">Info</th>
-                    <th style="text-align: center">Warn</th>
-                    <th style="text-align: center">Ban</th>
-                    <th style="text-align: center">Promote</th>
+                    <th class="info-tab" style="text-align: center">Info</th>
+                    <th class="warn-tab " style="text-align: center">Warn</th>
+                    <th class="bab-tab" style="text-align: center">Ban</th>
+                    <th class="promote-tab" style="text-align: center">Promote</th>
 
                     {foreach $users as $user}
                         <tr class="usersTable" id={$user['userid']}>
@@ -158,7 +102,7 @@
 
                             <form name="promUsr" method="post" action="{$BASE_URL}controller/api/admin/prom_user.php">
                                 <td id="promUsr" style="text-align: center">
-                                    <label id="permLabel" for="perm">{$user['roleid']}</label>
+                                    <label id="permLabel" for="perm">{$user['rolename']}</label>
                                     <div id="slider-range"></div>
                                 </td>
                             </form>
@@ -169,7 +113,7 @@
                     </tbody>
                 </table>
 
-                <ul class="pagination clearfix">
+                <ul class="pagination clearfix" id="pagination-users">
                     <li class="qa-page-links-item">
                         <a href="?upage=1" class="qa-page-next">«« 1</a>
                     </li>

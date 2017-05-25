@@ -299,13 +299,17 @@ CREATE OR REPLACE FUNCTION user_profile(puser_id int)
         count_votes_rating_received INT,
         count_questions BIGINT,
         count_answers BIGINT,
-        count_votes_made BIGINT
+        count_comments BIGINT,
+        count_votes_made BIGINT,
+        roleid INTEGER,
+        rolename VARCHAR(25),
+        bancount BIGINT
     ) AS $func$
 BEGIN
     RETURN QUERY
     SELECT users.fullname, users.username, users.email, users.about,
         (SELECT locations.name FROM locations WHERE users.locationid = locations.locationid),
-        (SELECT rolename FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE userid = puser_id),
+        (SELECT userroles.rolename FROM userroles INNER JOIN users ON userroles.roleid = users.roleid WHERE users.userid = puser_id),
         users.signup_date,
         count_vote_rating_received_user(puser_id),
         (SELECT COUNT(*) FROM questions
@@ -316,8 +320,14 @@ BEGIN
             INNER JOIN publications
                 ON answers.publicationid = publications.publicationid
         WHERE publications.userid = puser_id),
-        (SELECT COUNT(*) FROM votes WHERE votes.userid = puser_id)
-    FROM users
+        (SELECT COUNT(*) FROM comments
+            INNER JOIN publications
+                ON comments.publicationid = publications.publicationid
+        WHERE publications.userid = puser_id),
+        (SELECT COUNT(*) FROM votes WHERE votes.userid = puser_id),
+        users.roleid, userroles.rolename,
+        (SELECT COUNT(*) AS bancount FROM modregisters INNER JOIN bans ON modregisters.modregisterid = bans.banid WHERE userid_target = puser_id)
+    FROM users INNER JOIN userroles ON users.roleid = userroles.roleid
     WHERE users.userid = puser_id;
 END
 $func$  LANGUAGE plpgsql;
@@ -727,6 +737,7 @@ $$;
 
 CREATE OR REPLACE FUNCTION top_scored_users()
     RETURNS TABLE (
+        userid INTEGER,
         username character varying(50),
     --badge character varying(50),
         count_votes_rating_received INT,
@@ -736,7 +747,7 @@ CREATE OR REPLACE FUNCTION top_scored_users()
     ) AS $func$
 BEGIN
     RETURN QUERY
-    SELECT users.username,
+    SELECT users.userid, users.username,
         count_vote_rating_received_user(users.userid) as total_votes,
         user_total_questions(users.userid) as total_questions,
         user_total_answers(users.userid) as total_answers,
@@ -1069,7 +1080,6 @@ BEGIN
     SELECT DISTINCT publications.publicationid as pubs
     FROM publications
     WHERE to_tsvector('english', publications.body) @@ plainto_tsquery('english', psearch));
-    )
 END
 $func$  LANGUAGE plpgsql;
 

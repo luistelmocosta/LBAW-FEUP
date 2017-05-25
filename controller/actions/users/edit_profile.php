@@ -9,8 +9,6 @@ $user = userProfile($userid)[0];
 $photo = $_FILES['file'];
 $extension = end(explode(".", $photo["name"]));
 
-
-
 if(!$_POST['fullname'])
     $fullname = $user['fullname'];
 else $fullname = $_POST['fullname'];

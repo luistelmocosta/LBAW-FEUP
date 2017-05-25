@@ -6,10 +6,9 @@
     </div>
     <div class="top-user-data">
         <span class="points">{$user['count_votes_rating_received']} points</span>
-        <a href="#" class="name">{$user['username']}</a>
+        <a href={profileUrl($user['userid'])} class="name">{$user['username']}</a>
         <p class="counts">
-                                        <span>{$user['count_questions']} questions
-                                        </span>
+            <span>{$user['count_questions']} questions</span>
             <span>{$user['count_answers']} answers</span>
             <span>{$user['count_comments']} comments</span>
         </p>

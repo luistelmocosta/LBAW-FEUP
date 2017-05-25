@@ -1,3 +1,5 @@
+$('.see-all').hide();
+
 $(document).ready(function () {
 
     siteStats();
@@ -31,7 +33,6 @@ $(document).ready(function () {
         if(checkbox.is(':checked')){
             //BAN
             $("#banMsgModal #subBtn").click(function(e){
-                console.log("ban span " + banSpan.val());
                 var reasonMsg = $('textarea#banMsg').val();
                 $.post("../../api/admin/ban_user.php", {
                     uid: checkbox.closest('tr').attr('id'),
@@ -75,7 +76,15 @@ $(document).ready(function () {
             min: 1,
             max: 3,
             create: function () {
-                $(this).slider( "option", "value", $(this).closest('.usersTable').find('#permLabel').html());
+                var val;
+                if($(this).closest('.usersTable').find('#permLabel').html() == "admin")
+                    val = 3;
+                else if($(this).closest('.usersTable').find('#permLabel').html() == "mod")
+                    val = 2;
+                else if($(this).closest('.usersTable').find('#permLabel').html() == "reg")
+                    val = 1;
+
+                $(this).slider( "option", "value", val);
             },
             slide: function (event, ui) {
                 var targID = $(this).closest(".usersTable").attr("id");
@@ -90,31 +99,50 @@ $(document).ready(function () {
 
     });
 
-    $('#search-users').click(function() {
-        var search = $('#search-user').val();
-        var usersTable = $('#users');
-        console.log("Hello search users");
-        console.log(search);
-        $.getJSON("/controller/api/admin/search_user.php", {
-            search : search
-        }, function(data) {
-            usersTable.remove();
-            console.log("Remove");
-            $.each(data, function(i, user) {
-                $(this).append('<tr class="usersTable" id=' +
-                    user.userid +
-                    '> ' +
-                    '<td> ' +
-                    user.username + '</td> ' +
+
+});
+
+
+$('#search-users').on('click' ,function(e)
+{
+    e.preventDefault();
+    var search = $('#search-user').val();
+    var usersTable = $('#users');
+    var pagination = $('#pagination-users');
+    var selector = $(this).parent().parent().parent().parent();
+    console.log("Hello search users");
+    console.log(search);
+    $.getJSON("/controller/api/admin/search_user.php", {
+        search : search
+    }, function(data) {
+        usersTable.remove();
+        pagination.remove();
+        $('.see-all').show();
+        console.log("Remove");
+        $.each(data, function(i, user) {
+            selector.append('<table id="users" class="table table-bordered table-responsive">' +
+                '<tbody> ' +
+                '<th>Username</th> ' +
+                '<th>Role</th> ' +
+                '<th>Email</th> ' +
+                '<th class="info-tab" style="text-align: center">Info</th> ' +
+                '<th class="warn-tab " style="text-align: center">Warn</th> ' +
+                '<th class="bab-tab" style="text-align: center">Ban</th> ' +
+                '<th class="promote-tab" style="text-align: center">Promote</th>' +
+                '<tr class="usersTable" id=' +
+                user.userid +
+                '> ' +
+                '<td> ' +
+                user.username + '</td> ' +
                 '<td id="usrRole">' +
-                    user.rolename +
+                user.rolename +
                 '</td> ' +
                 '<td>' +
-                    user.email +
+                user.email +
                 '</td> ' +
                 '<td style="text-align: center"> ' +
                 '<a <span class="glyphicon glyphicon-info-sign" href={profileUrl(' +
-                    user.userid +
+                user.userid +
                 ')}></span></a>' +
                 '</td>' +
                 '<td id="warnUsr" style="text-align: center"> ' +
@@ -143,11 +171,11 @@ $(document).ready(function () {
                 '<form name="banUsr" method="post" action=""> ' +
                 '<td id="banUsr" style="text-align: center"> ' +
                 '<label class="switch">' +
-                '{if $user['bancount'] > 0} ' +
-                '<input id="ban" type="checkbox" checked="checked">' +
-                '{else} ' +
-                '<input id="ban" type="checkbox" data-toggle="modal" data-target="#banMsgModal">' +
-                '{/if} ' +
+                (user.bancount > 0 ?
+                    '<input id="ban" type="checkbox" checked="checked">' +
+                    ''
+                    :
+                    '<input id="ban" type="checkbox" data-toggle="modal" data-target="#banMsgModal">') +
                 '<div class="slider round"></div> ' +
                 '</label> ' +
                 '</form> ' +
@@ -172,19 +200,23 @@ $(document).ready(function () {
                 '</div> ' +
                 '</div> ' +
                 '</td> ' +
-                '<form name="promUsr" method="post" action="{$BASE_URL}controller/api/admin/prom_user.php"> ' +
+                '<form name="promUsr" method="post" action="/controller/api/admin/prom_user.php"> ' +
                 '<td id="promUsr" style="text-align: center"> ' +
-                '<label id="permLabel" for="perm">{$user['roleid']}</label> ' +
-                '<div id="slider-range"></div> ' +
+                '<label id="permLabel" for="perm">' +
+                user.rolename + '</label><div id="slider-range"></div> ' +
                 '</td> ' +
                 '</form> ' +
-                '</tr>'
-                );
-            });
+                '</tr>' +
+                '</tbody> ' +
+                '</table>'
+            );
         });
     });
-
 });
+
+
+
+
 
 
 function siteStats() {

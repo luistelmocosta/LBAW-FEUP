@@ -7,7 +7,8 @@
         </div>
         <div class="user-info no-overflow">
             <h3 class="asker-name">
-                {$answer['username']}
+                <a href={profileUrl($answer['userid'])}>{$answer['username']}</a>
+
             </h3>
             <p class="asker-point">
                 {$answer['answer_user_points']} points
@@ -50,7 +51,8 @@
                     </span>
                     <span class="qa-a-item-who">
                         <span class="qa-a-item-who-pad">by</span>
-                        <span class="qa-a-item-who-data">{$answer['username']}</span>
+                        <span class="qa-q-item-who-data">
+                        <span class="qa-a-item-who-data"><span class="vcard author"><a style="display: inline;" href={profileUrl($answer['userid'])} class="qa-user-link">{$answer['username']}</a></span></span>
                     </span>
                 </span>
             <div class="post-button clearfix">

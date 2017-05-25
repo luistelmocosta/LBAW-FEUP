@@ -54,7 +54,6 @@
     <div class="clearfix qa-main">
         <div class="home-left-inner">
 
-
             <div class="col-md-8">
 
                 <div id="tabs" class="tab-content">
@@ -110,12 +109,8 @@
                                 Load More...
                             </a>
                         </div>
-
                     </div>
-
                     <div class="clearfix"></div>
-
-
                 </div>
             </div>
 
@@ -129,7 +124,6 @@
                         <ul class="top-users-list clearfix">
                             {foreach $top_scored_users as $user}
                                 {include file="sidebar_partials/top_scored_users.tpl"}
-
                             {/foreach}
                         </ul>
                     </div>

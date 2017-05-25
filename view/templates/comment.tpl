@@ -1,7 +1,7 @@
 <div class="qa-a-item-c-list" id="c3565_list">
     <div class="comment-count icon-comments">1<span>Comments</span></div>
     <div class="comment-items">
-        <div class="qa-c-list-item  hentry comment" id="c3574">
+        <div class="qa-c-list-item  entry comment" id="c3574">
             <div class="asker-avatar">
                 <a href="../user/lbaw1641"><img src="http://www.gravatar.com/avatar/8b21c0ba9bf921fa9aecfbfa62e26e08?s=30"></a>
             </div>

@@ -4,8 +4,14 @@ include_once('../../../config/init.php');
 include_once($BASE_DIR . 'database/users.php');
 include_once($BASE_DIR . 'database/admin.php');
 
-$search = $_GET['search'];
+$userid = $_GET['search'];
+$search = search_users($userid);
+$search_results = [];
 
-$search_results = search_users($search);
+foreach ($search as $key => $result) {
+    $search_results = userProfile($result['userid']);
+}
 
-echo json_encode($search_results[0]);
+
+
+echo json_encode($search_results);
