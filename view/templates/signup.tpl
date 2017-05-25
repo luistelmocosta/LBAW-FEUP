@@ -7,7 +7,7 @@
 
         <!-- REGISTER TAB PANEL -->
         <div role = "tabpanel" class = "tab-pane container-white id = "register">
-            <form class = "form-horizontal" action = "../../actions/users/signup.php" method = "post" enctype = "multipart/form-data">
+            <form class = "form-horizontal" action = "{$BASE_URL}controller/actions/users/signup.php" method = "post" enctype = "multipart/form-data">
 
                 <div class = "form-group">
                     <label for = "username" class = "col-sm-3 control-label">Username</label>

@@ -10,7 +10,7 @@
             <div class = "tab-content">
                 <!-- LOGIN TAB PANEL -->
                 <div id = "login" role = "tabpanel" class = "tab-pane container-white active">
-                    <form class = "form-horizontal" action = "../../actions/users/signin.php" method = "POST">
+                    <form class = "form-horizontal" action = "{$BASE_URL}controller/actions/users/signin.php" method = "POST">
                         <div class = "form-group">
                             <label for = "username" class = "col-sm-3 control-label">Username</label>
                             <div class = "col-sm-8">
@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                             <div class = "col-sm-5 text-right">
-                                <a href = "/../../controller/pages/users/signup.php" class = "small"> New User? Click here!</a>
+                                <a href = "{$BASE_DIR}signup.php" class = "small"> New User? Click here!</a>
                             </div>
                         </div>
                     </form>

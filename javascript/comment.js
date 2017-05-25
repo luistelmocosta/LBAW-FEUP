@@ -22,7 +22,9 @@ $("body").on("click", ".show-textarea", function(){
                 '<div class="comment-items">' +
                 '<div class="qa-c-list-item  hentry comment" id="c3574">' +
                 '<div class="asker-avatar">' +
-                '<a>' +
+                '<a href="../../../controller/pages/users/profile.php?userid=' +
+                comment.userid +
+                '">' +
                 '<img width="40" height="40" src="' +
                 comment.user_photo +
                 '"></a>' +

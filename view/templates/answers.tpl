@@ -1,6 +1,6 @@
 <div class="qa-a-item-main">
     <div class="asker-detail clearfix">
-        <div class="asker-avatar avatar"><a href="../user/admin">
+        <div class="asker-avatar avatar"><a href={profileUrl($answer['userid'])}>
                 <img width="40"
                      height="40" class="qa-avatar-image" src="{$answer['user_photo']}">
             </a>
