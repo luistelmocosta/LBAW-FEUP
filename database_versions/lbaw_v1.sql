@@ -732,7 +732,7 @@ $$;
 
 CREATE OR REPLACE FUNCTION top_scored_users()
     RETURNS TABLE (
-        uid INTEGER,
+        userid INTEGER,
         username character varying(50),
     --badge character varying(50),
         count_votes_rating_received INT,

@@ -21,6 +21,13 @@
                         <h3><strong>Created at</strong></h3>
                         <p>{$user['created_at']}</p>
 
+                        {if $own}
+                            <td colspan="3" class="qa-form-wide-buttons">
+                                <a href="{$BASE_URL}controller/pages/users/edit_profile.php">
+                                    <input name="doaccount" value="Edit Profile" title="" type="submit" class="qa-form-wide-button qa-form-wide-button-account">
+                                </a>
+                            </td>
+                        {/if}
                     </div>
                 </div>
             </div>
@@ -48,10 +55,12 @@
                             <span>{$user['count_answers']}</span>
                             Answers
                         </div>
+
                         <div class="c-counts">
                             <span>{$user['count_comments']}</span>
                             Comments
                         </div>
+
                     </div>
                 </div>
             </div>
