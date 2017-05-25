@@ -32,9 +32,9 @@ $("body").on("click", ".show-textarea", function(){
                 'commented ' +
                 comment.creation_date +
                 ' by ' +
-                '<a style="display: inline" href="controller/pages/users/profile/' +
-                comment.questionid +
-                '}" class="qa-user-link url nickname">' +
+                '<a style="display: inline" href="../../../controller/pages/users/profile.php?userid=' +
+                comment.userid +
+                '" class="qa-user-link url nickname">' +
                 comment.username +
                 '</a> ' +
                 '<span class="qa-c-item-who-points"> ' +
