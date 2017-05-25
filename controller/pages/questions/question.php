@@ -8,6 +8,8 @@ include_once($BASE_DIR . 'database/answers.php');
 increment_views_counter((int) $_GET['question']);
 
 if($_SESSION['logged_in']) {
+    $avatar = $_SESSION['user']['avatar'];
+    $smarty->assign('avatar', $avatar);
     $smarty->display('common/header_log.tpl');
 } else {
     $smarty->display('common/narrow_header.tpl');
@@ -26,11 +28,11 @@ $categoryid = (int)$category['categoryid'];
 $related_questions = related_questions($categoryid, $_GET['question']);
 
 foreach ($related_questions as $key => $related_question) {
-    if (file_exists($BASE_DIR.'/images/users/'.$related_questions[$key]['username'].'.png'))
+    if (file_exists($BASE_DIR.'images/users/'.$related_questions[$key]['username'].'.png'))
         $photo_related_question = '/images/users/'.$related_questions[$key]['username'].'.png';
-    if (file_exists($BASE_DIR.'/images/users/'.$related_questions[$key]['username'].'.jpg'))
-        $photo_related_question = '/images/users/'.$related_questions[$key]['username'].'.jpg';
-    if (!$photo_related_question) $photo_related_question = '/images/person-flat.png';
+    if (file_exists($BASE_DIR.'images/users/'.$related_questions[$key]['username'].'.jpg'))
+        $photo_related_question = $BASE_URL.'images/users/'.$related_questions[$key]['username'].'.jpg';
+    if (!$photo_related_question) $photo_related_question = $BASE_URL.'images/person-flat.png';
 
     $related_questions[$key]['creation_date'] = time_elapsed_string($related_questions[$key]['creation_date']);
     $related_questions[$key]['user_photo'] = $photo_related_question;
@@ -38,18 +40,18 @@ foreach ($related_questions as $key => $related_question) {
 
 unset($photo);
 if (file_exists($BASE_DIR.'images/users/'.$question['username'].'.png'))
-    $photo = '/images/users/'.$question['username'].'.png';
+    $photo = $BASE_URL.'images/users/'.$question['username'].'.png';
 if (file_exists($BASE_DIR.'images/users/'.$question['username'].'.jpg'))
-    $photo = '/images/users/'.$question['username'].'.jpg';
-if (!$photo) $photo = '/images/person-flat.png';
+    $photo = $BASE_URL.'images/users/'.$question['username'].'.jpg';
+if (!$photo) $photo = $BASE_URL.'images/person-flat.png';
 
 foreach ($answers as $key => $answer) {
     $answers_comment = [];
-    if (file_exists($BASE_DIR.'/images/users/'.$answers[$key]['username'].'.png'))
-        $photo_answer = '/images/users/'.$answers[$key]['username'].'.png';
-    if (file_exists($BASE_DIR.'/images/users/'.$answers[$key]['username'].'.jpg'))
-        $photo_answer = '/images/users/'.$answers[$key]['username'].'.jpg';
-    if (!$photo_answer) $photo_answer = '/images/person-flat.png';
+    if (file_exists($BASE_DIR.'images/users/'.$answers[$key]['username'].'.png'))
+        $photo_answer = $BASE_URL.'images/users/'.$answers[$key]['username'].'.png';
+    if (file_exists($BASE_DIR.'images/users/'.$answers[$key]['username'].'.jpg'))
+        $photo_answer = $BASE_URL.'images/users/'.$answers[$key]['username'].'.jpg';
+    if (!$photo_answer) $photo_answer = $BASE_URL.'images/person-flat.png';
     $answer_user = userProfile($answers[$key]['userid']);
     $answer_score = answer_score($answers[$key]['answerid']);
     $answers[$key]['voted'] = publication_is_voted($answers[$key]['answerid']);

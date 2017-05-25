@@ -4,14 +4,6 @@ include_once('../../config/init.php');
 include_once($BASE_DIR . 'database/questions.php');
 include_once($BASE_DIR . 'database/users.php');
 
-if($_SESSION['logged_in']) {
-    $smarty->display('common/header_log.tpl');
-} else {
-    $smarty->display('common/header.tpl');
-}
-
-
-
 $tabs = [
     ['recent', 'Recent Questions'],
     ['unanswered', 'Unanswered Questions'],
@@ -57,10 +49,10 @@ $top_scored_users = top_scored_users();
 foreach ($top_scored_users as $key => $top_user) {
     unset($photo);
     if (file_exists($BASE_DIR.'images/users/'.$top_user['username'].'.png'))
-        $photo = '/images/users/'.$top_user['username'].'.png';
+        $photo = $BASE_URL.'images/users/'.$top_user['username'].'.png';
     if (file_exists($BASE_DIR.'images/users/'.$top_user['username'].'.jpg'))
-        $photo = '/images/users/'.$top_user['username'].'.jpg';
-    if (!$photo) $photo = '/images/person-flat.png';
+        $photo = $BASE_URL.'images/users/'.$top_user['username'].'.jpg';
+    if (!$photo) $photo = $BASE_URL.'images/person-flat.png';
     $top_scored_users[$key]['photo'] = $photo;
 }
 
@@ -131,10 +123,20 @@ function time_elapsed_string($time_ago) {
     }
 }
 
+if($_SESSION['logged_in']) {
+    $avatar = $_SESSION['user']['avatar'];
+    $smarty->assign('avatar', $avatar);
+    $smarty->display('common/header_log.tpl');
+} else {
+    $smarty->display('common/narrow_header.tpl');
+}
+
 $smarty->assign('tabs', $tabs);
 $smarty->assign('top_scored_users', $top_scored_users);
 $smarty->assign('recent_questions', $recent_questions);
 $smarty->assign('unanswered_questions', $unanswered_questions);
 $smarty->assign('top_scored_questions', $top_scored_questions);
+$smarty->assign('avatar', $avatar);
+
 $smarty->display('index.tpl');
 $smarty->display('common/footer.tpl');

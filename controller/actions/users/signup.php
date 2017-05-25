@@ -30,7 +30,8 @@ if(strcmp($password, $verify_password) != 0) {
 }
 
 try {
-    registerUser($username, $email, $password);
+    $default_avatar = $BASE_URL.'images/person-flat.png';
+    registerUser($username, $email, $password, $default_avatar);
 } catch (PDOException $e) {
 
     $_SESSION['form_values'] = $_POST;
@@ -42,7 +43,6 @@ $user = getUserByUsername($username);
 $_SESSION['username'] = $username;
 $_SESSION['logged_in'] = true;
 $_SESSION['user'] = $user;
-$_SESSION['user']['photo'] = '/images/person-flat.png';
 $_SESSION['success_messages'][] = 'User registered successfully!';
 header("Location: $BASE_URL" . 'controller/pages/index.php');
 
