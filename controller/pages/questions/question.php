@@ -28,31 +28,18 @@ $categoryid = (int)$category['categoryid'];
 $related_questions = related_questions($categoryid, $_GET['question']);
 
 foreach ($related_questions as $key => $related_question) {
-    if (file_exists($BASE_DIR.'images/users/'.$related_questions[$key]['username'].'.png'))
-        $photo_related_question = '/images/users/'.$related_questions[$key]['username'].'.png';
-    if (file_exists($BASE_DIR.'images/users/'.$related_questions[$key]['username'].'.jpg'))
-        $photo_related_question = $BASE_URL.'images/users/'.$related_questions[$key]['username'].'.jpg';
-    if (!$photo_related_question) $photo_related_question = $BASE_URL.'images/person-flat.png';
-
+    $photo_related_question = getUserAvatarByID($related_questions[$key]['userid'])[0]['avatar'];
     $related_questions[$key]['creation_date'] = time_elapsed_string($related_questions[$key]['creation_date']);
     $related_questions[$key]['user_photo'] = $photo_related_question;
 }
 
 unset($photo);
-if (file_exists($BASE_DIR.'images/users/'.$question['username'].'.png'))
-    $photo = $BASE_URL.'images/users/'.$question['username'].'.png';
-if (file_exists($BASE_DIR.'images/users/'.$question['username'].'.jpg'))
-    $photo = $BASE_URL.'images/users/'.$question['username'].'.jpg';
-if (!$photo) $photo = $BASE_URL.'images/person-flat.png';
+$photo = getUserAvatarByID($question['userid'])[0]['avatar'];
 
 foreach ($answers as $key => $answer) {
     $answers_comment = [];
-    if (file_exists($BASE_DIR.'images/users/'.$answers[$key]['username'].'.png'))
-        $photo_answer = $BASE_URL.'images/users/'.$answers[$key]['username'].'.png';
-    if (file_exists($BASE_DIR.'images/users/'.$answers[$key]['username'].'.jpg'))
-        $photo_answer = $BASE_URL.'images/users/'.$answers[$key]['username'].'.jpg';
-    if (!$photo_answer) $photo_answer = $BASE_URL.'images/person-flat.png';
     $answer_user = userProfile($answers[$key]['userid']);
+    $photo_answer = getUserAvatarByID($answers[$key]['userid'])[0]['avatar'];
     $answer_score = answer_score($answers[$key]['answerid']);
     $answers[$key]['voted'] = publication_is_voted($answers[$key]['answerid']);
     $answers[$key]['upvotes'] = $answer_score['answer_ranking'];
@@ -62,11 +49,7 @@ foreach ($answers as $key => $answer) {
     $answers[$key]['role'] = $answer_user[0]['role'];
     $answers[$key]['total_comments'] = answer_total_comments($answers[$key]['answerid'])['answer_total_comments'];
     $answers[$key]['creation_date'] = time_elapsed_string($answers[$key]['creation_date']);
-
-
 }
-
-
 
 function time_elapsed_string($time_ago) {
     $time_ago = strtotime($time_ago);

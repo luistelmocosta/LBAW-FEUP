@@ -128,7 +128,7 @@ if($_SESSION['logged_in']) {
     $smarty->assign('avatar', $avatar);
     $smarty->display('common/header_log.tpl');
 } else {
-    $smarty->display('common/narrow_header.tpl');
+    $smarty->display('common/header.tpl');
 }
 
 $smarty->assign('tabs', $tabs);
