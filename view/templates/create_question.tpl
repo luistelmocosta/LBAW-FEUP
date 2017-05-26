@@ -53,7 +53,7 @@
                         </tr>
                         <tr>
                             <td class="qa-form-tall-label">
-                                Tags - use comma (,) as a separator
+                                Tags - use comma (,) as a separator (max size: 10 characters)
                             </td>
                         </tr>
                         <tr>

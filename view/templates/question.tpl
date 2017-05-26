@@ -79,7 +79,7 @@
                                                             data-question="{$question['publicationid']}"
                                                             data-type="question">{$answer['total_comments']} Comments</button>
                                                     <div class="textarea">
-                                                        {include file="common/comment_form.tpl"}
+                                                        {include file="question_partials/comment_form.tpl"}
                                                     </div>
                                                 </div>
                                             </div>

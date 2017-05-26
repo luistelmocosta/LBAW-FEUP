@@ -9,14 +9,15 @@
                 <form class = "navbar-form navbar-left" role = "search" method = "post" action = "" style="display: inline">
 
                     <div class="input-group stylish-input-group">
-                        <input type="text" class="form-control"  placeholder="Search" >
+                        <input type="text" class="form-control"  id="search-user" placeholder="Search" >
                         <span class="input-group-addon">
-                        <button type="submit">
+                        <button id="search-users" type="submit">
                             <span class="glyphicon glyphicon-search"></span>
                         </button>
                     </span>
                     </div>
                 </form>
+                <button class="see-all">See All</button>
 
                 <table id="users" class="table table-bordered table-responsive">
                     <tbody>
@@ -24,10 +25,10 @@
                     <th>Role</th>
                     <th>Email</th>
 
-                    <th style="text-align: center">Info</th>
-                    <th style="text-align: center">Warn</th>
-                    <th style="text-align: center">Ban</th>
-                    <th style="text-align: center">Promote</th>
+                    <th class="info-tab" style="text-align: center">Info</th>
+                    <th class="warn-tab " style="text-align: center">Warn</th>
+                    <th class="bab-tab" style="text-align: center">Ban</th>
+                    <th class="promote-tab" style="text-align: center">Promote</th>
 
                     {foreach $users as $user}
                         <tr class="usersTable" id={$user['userid']}>
@@ -112,7 +113,7 @@
                     </tbody>
                 </table>
 
-                <ul class="pagination clearfix">
+                <ul class="pagination clearfix" id="pagination-users">
                     <li class="qa-page-links-item">
                         <a href="?upage=1" class="qa-page-next">«« 1</a>
                     </li>
@@ -149,7 +150,7 @@
                     <div class="input-group stylish-input-group">
                         <input type="text" class="form-control"  placeholder="Search" >
                         <span class="input-group-addon">
-                            <button type="submit">
+                            <button id="search-questions" type="submit">
                                 <span class="glyphicon glyphicon-search"></span>
                             </button>
                         </span>

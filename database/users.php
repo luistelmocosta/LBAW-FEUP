@@ -159,6 +159,18 @@ function check_ban($userid){
     return $query->fetchAll();
 }
 
+
+function search_users($pstext)
+{
+
+    global $conn;
+    $stmt = $conn->prepare("SELECT userid FROM search_users(:pstext)");
+    $stmt->execute(['pstext' => $pstext]);
+    $rows = $stmt->fetchAll();
+
+    return $rows;
+
+}
 function get_mod_reg_ban_by_user_id($userid){
     global $conn;
     $stmt = $conn->prepare("SELECT * FROM modregisters INNER JOIN bans ON modregisters.modregisterid = bans.banid WHERE modregisters.userid_target = $userid");

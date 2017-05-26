@@ -1,3 +1,5 @@
+$('.see-all').hide();
+
 $(document).ready(function () {
 
     siteStats();
@@ -97,7 +99,124 @@ $(document).ready(function () {
 
     });
 
+
 });
+
+
+$('#search-users').on('click' ,function(e)
+{
+    e.preventDefault();
+    var search = $('#search-user').val();
+    var usersTable = $('#users');
+    var pagination = $('#pagination-users');
+    var selector = $(this).parent().parent().parent().parent();
+    console.log("Hello search users");
+    console.log(search);
+    $.getJSON("/controller/api/admin/search_user.php", {
+        search : search
+    }, function(data) {
+        usersTable.remove();
+        pagination.remove();
+        $('.see-all').show();
+        console.log("Remove");
+        $.each(data, function(i, user) {
+            selector.append('<table id="users" class="table table-bordered table-responsive">' +
+                '<tbody> ' +
+                '<th>Username</th> ' +
+                '<th>Role</th> ' +
+                '<th>Email</th> ' +
+                '<th class="info-tab" style="text-align: center">Info</th> ' +
+                '<th class="warn-tab " style="text-align: center">Warn</th> ' +
+                '<th class="bab-tab" style="text-align: center">Ban</th> ' +
+                '<th class="promote-tab" style="text-align: center">Promote</th>' +
+                '<tr class="usersTable" id=' +
+                user.userid +
+                '> ' +
+                '<td> ' +
+                user.username + '</td> ' +
+                '<td id="usrRole">' +
+                user.rolename +
+                '</td> ' +
+                '<td>' +
+                user.email +
+                '</td> ' +
+                '<td style="text-align: center"> ' +
+                '<a <span class="glyphicon glyphicon-info-sign" href={profileUrl(' +
+                user.userid +
+                ')}></span></a>' +
+                '</td>' +
+                '<td id="warnUsr" style="text-align: center"> ' +
+                '<button id="triggerModal" type="button" class="btn-default btn-sm" data-toggle="modal" data-target="#warnMsgModal" style="font-size: 15px"> ' +
+                '<i class="glyphicon glyphicon-warning-sign"></i> ' +
+                '</button> ' +
+                '<div class="modal fade" id="warnMsgModal" role="dialog"> ' +
+                '<div class="modal-dialog modal-md"> ' +
+                '<div class="modal-content"> ' +
+                '<div class="modal-header"> ' +
+                '<button type="button" class="close" data-dismiss="modal">&times;</button>' +
+                '<h4 class="modal-title">Warning Message</h4>' +
+                '</div> ' +
+                '<form id="warnUsr" name="wrnUsr" method="post" action=""> ' +
+                '<div class="modal-body"> ' +
+                '<textarea id="warnMsg" name="msg"></textarea> ' +
+                '</div> ' +
+                '<div class="modal-footer"> ' +
+                '<button id="subBtn" type="submit" class="btn-default btn-xs">Warn</button> ' +
+                '</div> ' +
+                '</form> ' +
+                '</div> ' +
+                '</div> ' +
+                '</div> ' +
+                '</td> ' +
+                '<form name="banUsr" method="post" action=""> ' +
+                '<td id="banUsr" style="text-align: center"> ' +
+                '<label class="switch">' +
+                (user.bancount > 0 ?
+                    '<input id="ban" type="checkbox" checked="checked">' +
+                    ''
+                    :
+                    '<input id="ban" type="checkbox" data-toggle="modal" data-target="#banMsgModal">') +
+                '<div class="slider round"></div> ' +
+                '</label> ' +
+                '</form> ' +
+                '<div class="modal fade" id="banMsgModal" role="dialog"> ' +
+                '<div class="modal-dialog modal-md"> ' +
+                '<div class="modal-content"> ' +
+                '<div class="modal-header"> ' +
+                '<button type="button" class="close" data-dismiss="modal">&times;</button> ' +
+                '<h4 class="modal-title">Ban Message</h4> ' +
+                '</div> ' +
+                '<form id="banUsr" name="bnUsr" method="post" action=""> ' +
+                '<div class="modal-body"> ' +
+                '<textarea id="banMsg" name="msg"></textarea>' +
+                'Until Date: ' +
+                '<input type="text" placeholder="Number of days" id="banSpan"> ' +
+                '</div> ' +
+                '<div class="modal-footer"> ' +
+                '<button id="subBtn" type="submit" class="btn-default btn-xs">Ban</button> ' +
+                '</div> ' +
+                '</form> ' +
+                '</div> ' +
+                '</div> ' +
+                '</div> ' +
+                '</td> ' +
+                '<form name="promUsr" method="post" action="/controller/api/admin/prom_user.php"> ' +
+                '<td id="promUsr" style="text-align: center"> ' +
+                '<label id="permLabel" for="perm">' +
+                user.rolename + '</label><div id="slider-range"></div> ' +
+                '</td> ' +
+                '</form> ' +
+                '</tr>' +
+                '</tbody> ' +
+                '</table>'
+            );
+        });
+    });
+});
+
+
+
+
 
 
 function siteStats() {
