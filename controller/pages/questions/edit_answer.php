@@ -7,12 +7,12 @@ include_once($BASE_DIR . 'database/answers.php');
 PagePermissions::create('auth')->check();
 
 if($_SESSION['logged_in']) {
+    $avatar = $_SESSION['user']['avatar'];
+    $smarty->assign('avatar', $avatar);
     $smarty->display('common/header_log.tpl');
 } else {
     $smarty->display('common/narrow_header.tpl');
 }
-
-
 
 $answer = answer_details_from_id($_GET['answer']);
 

@@ -40,6 +40,7 @@ CREATE TABLE users
     last_login TIMESTAMP,
     locationid INTEGER,
     roleid INTEGER DEFAULT 1,
+    avatar VARCHAR(256),
     CONSTRAINT valid_date CHECK(last_login > signup_date),
     CONSTRAINT valid_password CHECK(CHAR_LENGTH(password) >= 6 AND CHAR_LENGTH(password) < 256),
     CONSTRAINT valid_username CHECK(CHAR_LENGTH(username) >= 1 AND CHAR_LENGTH(username) < 20),
@@ -296,6 +297,7 @@ CREATE OR REPLACE FUNCTION user_profile(puser_id int)
         role character varying(10),
     --badge character varying(50),
         created_at date,
+        avatar character varying(256),
         count_votes_rating_received INT,
         count_questions BIGINT,
         count_answers BIGINT,
@@ -311,6 +313,7 @@ BEGIN
         (SELECT locations.name FROM locations WHERE users.locationid = locations.locationid),
         (SELECT userroles.rolename FROM userroles INNER JOIN users ON userroles.roleid = users.roleid WHERE users.userid = puser_id),
         users.signup_date,
+        users.avatar,
         count_vote_rating_received_user(puser_id),
         (SELECT COUNT(*) FROM questions
             INNER JOIN publications
@@ -678,11 +681,11 @@ BEGIN
 END
 $func$;
 
-CREATE OR REPLACE FUNCTION update_user_profile(uid integer, full_name varchar, e_mail varchar, location varchar, about_user text)
+CREATE OR REPLACE FUNCTION update_user_profile(uid integer, full_name varchar, e_mail varchar, location varchar, about_user text, avatar varchar)
     returns void language plpgsql as $$
 begin
     UPDATE users
-    SET fullname = full_name, email = e_mail, about = about_user, locationid = (SELECT locationid FROM locations WHERE locations.name = location)
+    SET fullname = full_name, email = e_mail, about = about_user, locationid = (SELECT locationid FROM locations WHERE locations.name = location), users.avatar = avatar
     WHERE userid = uid;
 end $$;
 
@@ -739,6 +742,7 @@ CREATE OR REPLACE FUNCTION top_scored_users()
     RETURNS TABLE (
         userid INTEGER,
         username character varying(50),
+        avatar character varying(256),
     --badge character varying(50),
         count_votes_rating_received INT,
         count_questions INT,
@@ -747,7 +751,7 @@ CREATE OR REPLACE FUNCTION top_scored_users()
     ) AS $func$
 BEGIN
     RETURN QUERY
-    SELECT users.userid, users.username,
+    SELECT users.userid, users.username, users.avatar,
         count_vote_rating_received_user(users.userid) as total_votes,
         user_total_questions(users.userid) as total_questions,
         user_total_answers(users.userid) as total_answers,

@@ -66,7 +66,7 @@
                     <li class="dropdown pull-right" id="menuLogin">
                         <div class="log_menu" style="padding: 7px">
                             <a id="profile-link" data-toggle="dropdown" href="#" class="avatar" style="padding-top: 10px">
-                                <img src="{$AVATAR}">
+                                <img src="{$avatar}">
                             </a>
                             <ul class="user-nav dropdown-menu">
                                 <li class="user-nav-profile"><a class="fa fa-id-card" href="{$BASE_URL}controller/pages/users/profile.php" title="Profile">Profile</a></li>

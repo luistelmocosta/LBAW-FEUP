@@ -6,8 +6,6 @@ PagePermissions::create('auth')->check();
 
 $userid = auth_user('userid');
 $user = userProfile($userid)[0];
-$photo = $_FILES['file'];
-$extension = end(explode(".", $photo["name"]));
 
 if(!$_POST['fullname'])
     $fullname = $user['fullname'];
@@ -25,12 +23,22 @@ if(!$_POST['about'])
     $about = $user['about'];
 else $about = $_POST['about'];
 
+if(!$_FILES['file'])
+    $avatar = $user['avatar'];
+else {
+    $photo = $_FILES['file'];
+    $extension = end(explode(".", $photo["name"]));
+    $avatar = $BASE_URL . "images/users/" . $user['username'] . '.' . $extension;
+    move_uploaded_file($photo["tmp_name"], $BASE_DIR . "images/users/" . $user['username'] . '.' . $extension); // this is dangerous
+}
+
 $update_user = [
     'userid' => $userid,
     'fullname' => $fullname,
     'email' => $email,
     'location' => $location,
-    'about' => $about
+    'about' => $about,
+    'avatar' => $avatar
 ];
 
 if(check_location($location) == null)
@@ -38,7 +46,6 @@ if(check_location($location) == null)
 
 try {
     update_user_profile($update_user);
-    move_uploaded_file($photo["tmp_name"], $BASE_DIR . "images/users/" . $user['username'] . '.' . $extension); // this is dangerous
 
     redirect('controller/pages/users/profile.php');
 

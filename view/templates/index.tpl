@@ -1,7 +1,7 @@
 <!-- Set your background image for this header on the line below. -->
 <title>AskMe</title>
 
-<header class="intro-header" style="background-image: url('../../images/background.png')">
+<header class="intro-header" style="background-image: url('{$BASE_URL}images/background.png')">
     {include file="common/messages.tpl"}
     <div class="container">
 
