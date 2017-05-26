@@ -47,15 +47,9 @@ foreach ($top_scored_questions as $key => $top_scored_question) {
 $top_scored_users = top_scored_users();
 
 foreach ($top_scored_users as $key => $top_user) {
-    unset($photo);
-    if (file_exists($BASE_DIR.'images/users/'.$top_user['username'].'.png'))
-        $photo = $BASE_URL.'images/users/'.$top_user['username'].'.png';
-    if (file_exists($BASE_DIR.'images/users/'.$top_user['username'].'.jpg'))
-        $photo = $BASE_URL.'images/users/'.$top_user['username'].'.jpg';
-    if (!$photo) $photo = $BASE_URL.'images/person-flat.png';
+    $photo = $top_scored_users[$key]['avatar'];
     $top_scored_users[$key]['photo'] = $photo;
 }
-
 
 function time_elapsed_string($time_ago) {
     $time_ago = strtotime($time_ago);

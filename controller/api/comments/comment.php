@@ -24,11 +24,7 @@ if($type == "question") {
     $question_comments = get_question_comments($_GET['questionid']);
 
     foreach ($question_comments as $key => $question_comment) {
-        if (file_exists($BASE_DIR.'images/users/'.$question_comments[$key]['username'].'.png'))
-            $photo_comment = $BASE_URL.'images/users/'.$question_comments[$key]['username'].'.png';
-        if (file_exists($BASE_DIR.'images/users/'.$question_comments[$key]['username'].'.jpg'))
-            $photo_comment = $BASE_URL.'images/users/'.$question_comments[$key]['username'].'.jpg';
-        if (!$photo_comment) $photo_comment = $BASE_URL.'images/person-flat.png';
+        $photo_comment = getUserAvatarByID($question_comments[$key]['userid'])[0]['avatar'];
         $question_comments[$key]['user_photo'] = $photo_comment;
         $question_comments[$key]['user_ranking'] = $user['count_votes_rating_received'];
         $question_comments[$key]['creation_date'] = time_elapsed_string($question_comments[$key]['creation_date']);
@@ -42,19 +38,13 @@ if($type == "question") {
     $answer_comments = get_answer_comments($_GET['answerid']);
 
     foreach ($answer_comments as $key => $answer_comment) {
-        if (file_exists($BASE_DIR.'images/users/'.$answer_comments[$key]['username'].'.png'))
-            $photo_comment = $BASE_URL.'images/users/'.$answer_comments[$key]['username'].'.png';
-        if (file_exists($BASE_DIR.'images/users/'.$answer_comments[$key]['username'].'.jpg'))
-            $photo_comment = $BASE_URL.'images/users/'.$answer_comments[$key]['username'].'.jpg';
-        if (!$photo_comment) $photo_comment = $BASE_URL.'images/person-flat.png';
+        $photo_comment = getUserAvatarByID($answer_comments[$key]['userid'])[0]['avatar'];
         $answer_comments[$key]['user_photo'] = $photo_comment;
         $answer_comments[$key]['user_ranking'] = $user['count_votes_rating_received'];
         $answer_comments[$key]['creation_date'] = time_elapsed_string($answer_comments[$key]['creation_date']);
     }
 
     echo json_encode($answer_comments);
-
-
 
 }
 
@@ -123,4 +113,3 @@ function time_elapsed_string($time_ago) {
         }
     }
 }
-
