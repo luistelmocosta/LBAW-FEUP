@@ -2,22 +2,17 @@ $('.comment-form').hide();
 var commentsFetched = false;
 
 $("body").on("click", ".show-textarea", function(){
-    console.log("teste");
     var answerid = $(this).data('answer');
     var type = $(this).data('type');
     var questionid = $(this).data('question');
     var $commentForm = $(this).parent().find('.comment-form').first();
-    console.log("teste");
-    $.getJSON("/controller/api/comments/comment.php", {
+    $.getJSON("../../api/comments/comment.php", {
         answerid : answerid,
         questionid : questionid,
         type : type
     }, function (data) {
         $commentForm.find('article').remove();
-        console.log("AID " + answerid);
-        console.log("Data" + data.length);
         $.each(data, function(i, comment) {
-            console.log("Comment:" + comment);
             $commentForm.append('<article class="tweet-data">' +
                 '<div class="comment-items">' +
                 '<div class="qa-c-list-item  hentry comment" id="c3574">' +
@@ -91,10 +86,6 @@ $("body").on("click", ".edit-comment", function(e){
     var id = info.find('.commentid').val();
     var questionid = info.find('.questionid').val();
 
-    console.log(body);
-    console.log(id);
-    console.log(questionid);
-    console.log(info);
     var editableText = $('<div class="comment-form">' +
         '<form method="post" action="/controller/actions/comments/edit_comment.php">' +
         '<textarea name="comment" rows="4" cols="40" class="qa-form-tall-text">' +
@@ -109,11 +100,7 @@ $("body").on("click", ".edit-comment", function(e){
         '<button type="submit" class="textarea-ok">Edit Comment</button>' +
         '</form>' +
         '</div>');
-    console.log("Hello");
     parent.replaceWith(editableText);
-
-
-
 
 });
 

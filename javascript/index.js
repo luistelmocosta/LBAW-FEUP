@@ -69,7 +69,7 @@ function updateTitleAndLink(questionTitle, object) {
 }
 
 function siteStats() {
-    var jsonUrl = "../../../javascript/json/siteStatsData.json";
+    var jsonUrl = "../../javascript/json/siteStatsData.json";
 
     var siteData=[];
 
