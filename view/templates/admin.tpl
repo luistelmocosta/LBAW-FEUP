@@ -5,19 +5,23 @@
 <div class="panel panel-default">
 
     <div class="about-me widget">
-        <h3 style="padding-left: 10px">Search For Users</h3>
-        <form class = "navbar-form navbar-left" role = "search" method = "post" action = "" style="display: inline">
+        
+        <div class="col-sm-12">
+            <h3 style="padding-left: 10px">Search For Users</h3>
+            <form class = "navbar-form navbar-left" role = "search" method = "post" action = "" style="display: inline">
 
-            <div class="input-group stylish-input-group">
-                <input type="text" class="form-control"  id="search-user" placeholder="Search" >
-                <span class="input-group-addon">
-                        <button id="search-users" type="submit">
-                            <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                    </span>
-            </div>
-        </form>
+                <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control"  id="search-user" placeholder="Search" >
+                    <span class="input-group-addon">
+                            <button id="search-users" type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                </div>
+            </form>
+        </div>
 
+        <div class="table-responsive col-md-12">
         <table id="users" class="table table-bordered table-responsive">
             <tbody>
             <th>Username</th>
@@ -40,8 +44,8 @@
                     </td>
 
                     <td id="warnUsr" style="text-align: center">
-                        <button id="triggerModal" type="button" class="btn-default btn-sm" data-toggle="modal" data-target="#warnMsgModal" style="font-size: 15px">
-                            <i class="glyphicon glyphicon-warning-sign"></i>
+                        <button id="triggerModal" type="button" class="btn-default btn-xs" data-toggle="modal" data-target="#warnMsgModal" style="font-size: 15px">
+                            <span class="glyphicon glyphicon-warning-sign"></span>
                         </button>
 
                         <div class="modal fade" id="warnMsgModal" role="dialog">
@@ -111,6 +115,7 @@
 
             </tbody>
         </table>
+        </div>
 
         <ul class="pagination clearfix" id="pagination-users">
             <li class="qa-page-links-item">
@@ -143,19 +148,22 @@
 
     <div class="about-me widget">
 
-        <h3 style="padding-left: 10px">Search For Questions</h3>
-        <form class = "navbar-form navbar-left" role = "search" method = "post" action = "" style="display: inline">
+        <div class="col-sm-12">
+            <h3 style="padding-left: 10px">Search For Questions</h3>
+            <form class = "navbar-form navbar-left" role = "search" method = "post" action = "" style="display: inline">
 
-            <div class="input-group stylish-input-group">
-                <input type="text" class="form-control"  id="search-question" placeholder="Search" >
-                <span class="input-group-addon">
-                            <button id="search-questions" type="submit">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </span>
-            </div>
-        </form>
+                <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control"  id="search-question" placeholder="Search" >
+                    <span class="input-group-addon">
+                                <button id="search-questions" type="submit">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>
+                </div>
+            </form>
+        </div>
 
+        <div class="table-responsive col-md-12">
         <table id="quests" class="table table-bordered table-responsive">
             <tbody>
             <th>Title</th>
@@ -173,7 +181,7 @@
                     </td>
                     <form name="delQuest" method="post" action="{$BASE_URL}controller/api/admin/delete_publication.php">
                         <td id="delQuest" style="text-align: center">
-                            <button type="submit" class="btn-default btn-sm" style="font-size: 15px;">
+                            <button type="submit" class="btn-default btn-xs" style="font-size: 15px;">
                                 <i class="glyphicon glyphicon-remove-circle"></i>
                             </button>
                         </td>
@@ -183,6 +191,7 @@
 
             </tbody>
         </table>
+        </div>
 
         <ul class="pagination clearfix" id="pagination-quests">
             <li class="qa-page-links-item">

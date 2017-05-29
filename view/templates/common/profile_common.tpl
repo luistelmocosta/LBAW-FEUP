@@ -41,9 +41,7 @@
                         <h1 class="panel-title pull-left" style="font-size:30px;"> {$user['username']}
                             <small>{$user['role']}</small></h1>
                         {foreach $badges as $key => $badge}
-                            {$badge['badge_picture']}
-                            {$badge['name']}
-                            <i class="fa fa-check text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="John Doe is sharing with you"></i>
+                            <img src="{$badge['badge_picture']}" width="50px" height="50px" title="{$badge['description']}">
                         {/foreach}
                     </span>
                 <br><br>
@@ -63,7 +61,11 @@
                         </div>
 
                         <div class="c-counts">
-                            <span>{$user['count_comments']}</span>
+                            <span>{if $user['count_comments']}
+                        {$question['votes_count']}
+                    {else}
+                        0
+                    {/if}</span>
                             Comments
                         </div>
 

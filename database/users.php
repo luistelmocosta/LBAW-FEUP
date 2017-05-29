@@ -218,7 +218,7 @@ function getUserAvatarByID($userid){
 function userBadges($userid) {
 
     global $conn;
-    $query = $conn->prepare("SELECT badges.name FROM badges INNER JOIN userbadges ON badges.badgeid = userbadges.badgeid WHERE userbadges.userid = :userid");
+    $query = $conn->prepare("SELECT badges.name, badges.description FROM badges INNER JOIN userbadges ON badges.badgeid = userbadges.badgeid WHERE userbadges.userid = :userid");
     $query->execute(['userid' => $userid]);
 
     return $query->fetchAll();

@@ -28,7 +28,8 @@
 <div class="panel panel-default">
     <div class="user-qac-list">
         <div id="user-content-position">
-            <div class="widget cs_user_posts">												<h3 style="padding-left: 10px" class="widget-title user-post-title">{$user['username']}'s Questions<a class="see-all" href="#">Show all</a></h3>
+            <div class="widget cs_user_posts">
+                <h3 style="padding-left: 10px" class="widget-title user-post-title">{$user['username']}'s Questions</h3>
                 <div class="ra-ua-widget">
                     {foreach $user_questions as $question}
                         {include file="user_profile_questions.tpl"}
