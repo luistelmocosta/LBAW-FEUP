@@ -138,7 +138,7 @@
             </div>
         </div>
 
-        <div class="col-md-4 pull-right">
+        <div class="col-md-4">
             <div id="home-right-position">
 
                 <div class="widget cs_related_questions">
