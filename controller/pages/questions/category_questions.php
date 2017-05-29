@@ -10,7 +10,7 @@ if($_SESSION['logged_in']) {
 } else {
     $smarty->display('common/narrow_header.tpl');
 }
-
+$top_categories = get_top_categories();
 $categoryid = $_GET['category'];
 $questions = category_questions($categoryid);
 $category = $questions[0]['name'];
@@ -88,5 +88,6 @@ function time_elapsed_string($time_ago) {
 
 $smarty->assign('category_questions', $questions);
 $smarty->assign('category', $category);
+$smarty->assign('top_categories', $top_categories);
 $smarty->display('categories/category_questions.tpl');
 $smarty->display('common/footer.tpl');

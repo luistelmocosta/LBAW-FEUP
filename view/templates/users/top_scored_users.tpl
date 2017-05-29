@@ -2,9 +2,9 @@
 <div id="site-body" class="container">
     <div class="clearfix qa-main">
 
-        <h1 class="page-title">
-            Top scored users
-        </h1>
+        <h1 align="center">Top Scored Users</h1>
+        <br class="clearfix">
+        <br class="clearfix">
         <div class="qa-part-ranking">
             <div class="page-users-list clearfix">
                 {foreach $top_scored_users as $user}

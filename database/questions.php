@@ -17,6 +17,18 @@ function update_question($question) {
     return true;
 }
 
+function get_top_categories() {
+    global $conn;
+    $query=$conn->prepare("SELECT categories.categoryid, categories.name, COUNT(questions.categoryid) as total FROM questions 
+RIGHT OUTER JOIN categories 
+ON questions.categoryid = categories.categoryid 
+GROUP BY name, categories.categoryid 
+ORDER BY total DESC
+LIMIT 5; ");
+    $query->execute();
+    return $query->fetchAll();
+}
+
 function get_categories() {
     global $conn;
     $query=$conn->prepare("SELECT categories.categoryid, categories.name, COUNT(questions.categoryid) as total FROM questions 

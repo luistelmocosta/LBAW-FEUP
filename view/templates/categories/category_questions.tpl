@@ -75,12 +75,12 @@
         <div class="col-md-4 pull-right">
             <div id="home-right-position">
                 <div class="widget cs_top_contributors">
-                    <h3 class="widget-title">Top Scored Users</h3>
+                    <h3 class="widget-title">Top Categories</h3>
                     <div class="ra-tags-widget">
 
                         <ul class="top-users-list clearfix">
-                            {foreach $top_scored_users as $user}
-                                {include file="common/sidebar_partials/top_scored_users.tpl"}
+                            {foreach $top_categories as $key => $top_category}
+                                {include file="categories/top_categories.tpl"}
                             {/foreach}
                         </ul>
                     </div>
