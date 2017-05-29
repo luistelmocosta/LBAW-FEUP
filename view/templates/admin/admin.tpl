@@ -21,8 +21,6 @@
             </form>
         </div>
 
-        <button class="see-all">See All</button>
-
         <div class="table-responsive col-md-12">
         <table id="users" class="table table-bordered table-responsive">
             <tbody>
@@ -32,7 +30,7 @@
 
             <th class="info-tab" style="text-align: center">Info</th>
             <th class="warn-tab " style="text-align: center">Warn</th>
-            <th class="bab-tab" style="text-align: center">Ban</th>
+            <th class="ban-tab" style="text-align: center">Ban</th>
             <th class="promote-tab" style="text-align: center">Promote</th>
 
             {foreach $users as $user}

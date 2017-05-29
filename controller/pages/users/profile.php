@@ -40,7 +40,6 @@ foreach ($badges as $key => $badge) {
         $badges[$key]['badge_picture'] = $badge_picture;
     if (file_exists($BASE_DIR.'/images/users/'.$badge['name'].'.jpg'))
         $badge_picture = '/images/users/'.$badge['name'].'.jpg';
-
 }
 
 

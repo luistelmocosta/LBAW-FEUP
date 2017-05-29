@@ -289,6 +289,7 @@ $$;
 
 CREATE OR REPLACE FUNCTION user_profile(puser_id int)
     RETURNS TABLE (
+        userid integer,
         fullname character varying(200),
         username character varying(50),
         email character varying(70),
@@ -309,7 +310,7 @@ CREATE OR REPLACE FUNCTION user_profile(puser_id int)
     ) AS $func$
 BEGIN
     RETURN QUERY
-    SELECT users.fullname, users.username, users.email, users.about,
+    SELECT users.userid, users.fullname, users.username, users.email, users.about,
         (SELECT locations.name FROM locations WHERE users.locationid = locations.locationid),
         (SELECT userroles.rolename FROM userroles INNER JOIN users ON userroles.roleid = users.roleid WHERE users.userid = puser_id),
         users.signup_date,
