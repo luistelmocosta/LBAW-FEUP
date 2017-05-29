@@ -62,8 +62,8 @@
                     <a href="{$BASE_URL}controller/pages/users/top_scored_users.php">Top Users</a>
                 </li>
 
-                <ul class="nav navbar-nav navbar-avatar pull-right">
-                    <li class="dropdown pull-right" id="menuLogin">
+                <ul class="nav navbar-nav navbar-avatar">
+                    <li class="dropdown" id="menuLogin">
                         <div class="log_menu" style="padding: 7px">
                             <a id="profile-link" data-toggle="dropdown" href="#" class="avatar" style="padding-top: 10px">
                                 <img src="{$avatar}">

@@ -124,7 +124,9 @@ $('#search-users').on('click' ,function(e) {
         usersTable.remove();
         pagination.remove();
         $.each(data, function(i, user) {
-            selector.append('<table id="users" class="table table-bordered table-responsive">' +
+            selector.append('<div class="col-sm-12"></div>'+
+                '<div class="table-responsive col-md-12">' +
+                '<table id="users" class="table table-bordered table-responsive">' +
                 '<tbody> ' +
                 '<th>Username</th> ' +
                 '<th>Role</th> ' +
@@ -150,7 +152,7 @@ $('#search-users').on('click' ,function(e) {
                 '"></span></a>' +
                 '</td>' +
                 '<td id="warnUsr" style="text-align: center"> ' +
-                '<button id="triggerModal" type="button" class="btn-default btn-sm" data-toggle="modal" data-target="#warnMsgModal" style="font-size: 15px"> ' +
+                '<button id="triggerModal" type="button" class="btn-default btn-xs" data-toggle="modal" data-target="#warnMsgModal" style="font-size: 15px"> ' +
                 '<i class="glyphicon glyphicon-warning-sign"></i> ' +
                 '</button> ' +
                 '<div class="modal fade" id="warnMsgModal" role="dialog"> ' +
@@ -212,7 +214,8 @@ $('#search-users').on('click' ,function(e) {
                 '</form> ' +
                 '</tr>' +
                 '</tbody> ' +
-                '</table>'
+                '</table>'+
+                '</div>'
             );
 
             $(".usersTable #ban").click(function (e) {
@@ -322,7 +325,9 @@ $('#search-questions').on('click' ,function(e)
 
             $.each(data, function(i, question) {
 
-                selector.append('<table id="quests" class="table table-bordered table-responsive">' +
+                selector.append('<div class="col-sm-12"></div>'+
+                    '<div class="table-responsive col-md-12">' +
+                    '<table id="quests" class="table table-bordered table-responsive">' +
                     '<tbody>' +
                     '<th>Title</th>'  +
                     '<th>Author</th>' +
@@ -344,14 +349,15 @@ $('#search-questions').on('click' ,function(e)
                     '</td>' +
                     '<form name="delQuest" method="post" action="/controller/api/admin/delete_publication.php">' +
                     '<td id="delQuest" style="text-align: center">' +
-                    '<button type="submit" class="btn-default btn-sm" style="font-size: 15px;">' +
+                    '<button type="submit" class="btn-default btn-xs" style="font-size: 15px;">' +
                     '<i class="glyphicon glyphicon-remove-circle"></i>' +
                     '</button>' +
                     '</td>' +
                     '</form>' +
                     '</tr> ' +
                     '</tbody> ' +
-                    '</table>'
+                    '</table>'+
+                    '</div>'
                 );
             });
 
