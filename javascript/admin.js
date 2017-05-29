@@ -1,5 +1,3 @@
-$('.see-all').hide();
-
 $(document).ready(function () {
 
     siteStats();
@@ -99,26 +97,32 @@ $(document).ready(function () {
 
     });
 
-
 });
 
+/*
 
-$('#search-users').on('click' ,function(e)
-{
+ SEARCH USERS
+
+ */
+
+$('#search-users').on('click' ,function(e) {
     e.preventDefault();
     var search = $('#search-user').val();
     var usersTable = $('#users');
     var pagination = $('#pagination-users');
     var selector = $(this).parent().parent().parent().parent();
-    console.log("Hello search users");
-    console.log(search);
+    console.log("Searched user: " + search);
     $.getJSON("/controller/api/admin/search_user.php", {
         search : search
     }, function(data) {
+        if (data.length === 0) {
+            selector.append(
+                '<br class="clearfix"></div>' +
+                '<br class="clearfix"></div>'
+            );
+        }
         usersTable.remove();
         pagination.remove();
-        $('.see-all').show();
-        console.log("Remove");
         $.each(data, function(i, user) {
             selector.append('<table id="users" class="table table-bordered table-responsive">' +
                 '<tbody> ' +
@@ -127,7 +131,7 @@ $('#search-users').on('click' ,function(e)
                 '<th>Email</th> ' +
                 '<th class="info-tab" style="text-align: center">Info</th> ' +
                 '<th class="warn-tab " style="text-align: center">Warn</th> ' +
-                '<th class="bab-tab" style="text-align: center">Ban</th> ' +
+                '<th class="ban-tab" style="text-align: center">Ban</th> ' +
                 '<th class="promote-tab" style="text-align: center">Promote</th>' +
                 '<tr class="usersTable" id=' +
                 user.userid +
@@ -141,9 +145,9 @@ $('#search-users').on('click' ,function(e)
                 user.email +
                 '</td> ' +
                 '<td style="text-align: center"> ' +
-                '<a <span class="glyphicon glyphicon-info-sign" href={profileUrl(' +
+                '<a <span class="glyphicon glyphicon-info-sign" href="../users/profile.php?userid=' +
                 user.userid +
-                ')}></span></a>' +
+                '"></span></a>' +
                 '</td>' +
                 '<td id="warnUsr" style="text-align: center"> ' +
                 '<button id="triggerModal" type="button" class="btn-default btn-sm" data-toggle="modal" data-target="#warnMsgModal" style="font-size: 15px"> ' +
@@ -210,9 +214,91 @@ $('#search-users').on('click' ,function(e)
                 '</tbody> ' +
                 '</table>'
             );
+
+            $(".usersTable #ban").click(function (e) {
+                e.preventDefault();
+                var checkbox = $(this);
+
+                var dateToday = new Date();
+                var banSpan = $("#banSpan").datepicker({
+                    defaultDate: "+1w",
+                    minDate: dateToday,
+                    dateFormat: 'yy-mm-dd'
+                });
+
+                if(checkbox.is(':checked')){
+                    //BAN
+                    $("#banMsgModal #subBtn").click(function(e){
+                        var reasonMsg = $('textarea#banMsg').val();
+                        $.post("../../api/admin/ban_user.php", {
+                            uid: checkbox.closest('tr').attr('id'),
+                            reasonMsg: reasonMsg,
+                            banSpan: banSpan.val()
+                        }, function () {
+                            checkbox.attr("checked", true);
+                        });
+
+                    });
+                }
+                else {
+                    //UNBAN
+                    $.post("../../api/admin/un_ban_user.php", {uid: $(this).closest('tr').attr('id')}, function () {
+                        checkbox.attr("checked", false);
+                    });
+                }
+
+            });
+
+
+            //WARN USER
+
+            $('.usersTable #triggerModal').click(function(){
+                var targetID = $(this).closest('tr').attr('id');
+
+                $('.usersTable #subBtn').click(function(e){
+                    $.post("../../api/admin/warn_user.php", { uid: targetID, reasonMsg: $('textarea#warnMsg').val()}, function() {
+                        $('.modal-body').find('textarea,input').val('');
+                    });
+                });
+            });
+
+
+            //PROMOTE USER
+
+            $(".usersTable #slider-range").slider({
+                range: "min",
+                min: 1,
+                max: 3,
+                create: function () {
+                    var val;
+                    if($(this).closest('.usersTable').find('#permLabel').html() == "admin")
+                        val = 3;
+                    else if($(this).closest('.usersTable').find('#permLabel').html() == "mod")
+                        val = 2;
+                    else if($(this).closest('.usersTable').find('#permLabel').html() == "reg")
+                        val = 1;
+
+                    $(this).slider( "option", "value", val);
+                },
+                slide: function (event, ui) {
+                    var targID = $(this).closest(".usersTable").attr("id");
+                    var perm = ui.value;
+
+                    $.post("../../api/admin/changeUserPerm.php", { uid: targID, perm: perm}, function() {
+                        window.location.reload();
+                    });
+
+                }
+            });
         });
     });
 });
+
+/*
+
+ SEARCH QUESTIONS
+
+ */
 
 $('#search-questions').on('click' ,function(e)
 {
@@ -221,23 +307,17 @@ $('#search-questions').on('click' ,function(e)
     var usersTable = $('#quests');
     var pagination = $('#pagination-quests');
     var selector = $(this).parent().parent().parent().parent();
-    var selector_temp = $(this).parent().parent().parent();
-    console.log("Hello search users");
-    console.log(search);
+    console.log("Searched question: " + search);
     $.getJSON("/controller/api/admin/search_question.php", {
         search : search
     }, function(data) {
         usersTable.remove();
         pagination.remove();
-        $('.see-all').show();
-        console.log("Remove");
-        console.log(data);
         if (data.length === 0) {
-            selector.append('<div><a">' +
-            "There are no results for that search!" +
-        '</a>' +
+            selector.append(
+                '<br class="clearfix"></div>' +
                 '<br class="clearfix"></div>'
-        );
+            );
         } else {
 
             $.each(data, function(i, question) {
@@ -258,9 +338,9 @@ $('#search-questions').on('click' ,function(e)
                     question.username +
                     '</td>' +
                     '<td style="text-align: center">' +
-                    '<a <span class="glyphicon glyphicon-info-sign" href={questionUrl(' +
+                    '<a <span class="glyphicon glyphicon-info-sign" href="../questions/question.php?question=' +
                     question.publicationid +
-                    ')}></span></a>' +
+                    '"></span></a>' +
                     '</td>' +
                     '<form name="delQuest" method="post" action="/controller/api/admin/delete_publication.php">' +
                     '<td id="delQuest" style="text-align: center">' +
@@ -277,15 +357,21 @@ $('#search-questions').on('click' ,function(e)
 
         }
 
-
+        $(".questTable button").click(function (e) {
+            e.preventDefault();
+            $.post("../../api/admin/delete_publication.php", { id: $(this).closest('tr').attr('id') }, function() {
+                window.location.reload();
+            });
+        });
 
     });
 });
 
+/*
 
+ SITE STAT CHARTS
 
-
-
+ */
 
 function siteStats() {
 

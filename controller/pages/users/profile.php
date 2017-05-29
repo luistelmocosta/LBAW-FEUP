@@ -39,7 +39,6 @@ foreach ($badges as $key => $badge) {
         $badge_picture = '/images/badges/'.$badge['name'].'.png';
     if (file_exists($BASE_DIR.'/images/users/'.$badge['name'].'.jpg'))
         $badge_picture = '/images/users/'.$badge['name'].'.jpg';
-
 }
 
 
