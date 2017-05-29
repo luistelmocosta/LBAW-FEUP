@@ -25,7 +25,7 @@
             <h3>Luis Costa</h3>
         </div>
         <div class="col-lg-5 col-sm-6 text-center">
-            <img src="{$BASE_URL}images/benfica.png">
+            <img src="{$BASE_URL}images/person-flat.png">
             <h3>Luis Pina</h3>
         </div>
         <div class="col-lg-5 col-sm-6 text-center">
