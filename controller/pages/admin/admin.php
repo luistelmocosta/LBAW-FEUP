@@ -13,6 +13,9 @@ if($permission != 'admin' && $permission != 'mod')
 $userid = auth_user('userid');
 $user = userProfile($userid)[0];
 
+$avatar = $user['avatar'];
+$avatarprof = $avatar;
+
 $numUsers = getNumUsers()[0]['count'];
 $numQuest = getNumQuestions()[0]['count'];
 
@@ -96,6 +99,9 @@ $smarty->assign('upages', $upages);
 
 $smarty->assign('qpage', $qpage);
 $smarty->assign('qpages', $qpages);
+$smarty->assign('avatar', $avatar);
+$smarty->assign('avatarprof', $avatarprof);
+
 
 $smarty->display('common/header_log.tpl');
 

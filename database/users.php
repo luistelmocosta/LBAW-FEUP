@@ -34,13 +34,13 @@ function getUsersPag($skip, $limit) {
  * @param $email
  * @param $password
  */
-function registerUser($username, $email, $password) {
+function registerUser($username, $email, $password, $avatar) {
     global $conn;
 
-    $query = $conn->prepare("INSERT INTO users(username, email, password) VALUES (?, ?, ?)");
+    $query = $conn->prepare("INSERT INTO users(username, email, password, avatar) VALUES (?, ?, ?, ?)");
 
     $password = password_hash($password, PASSWORD_BCRYPT);
-    $query->execute(array($username, $email, $password));
+    $query->execute(array($username, $email, $password, $avatar));
 
 }
 
@@ -73,7 +73,7 @@ function correctAuth($username, $password)
 function getUserByUsername($username) {
     global $conn;
 
-    $query = $conn->prepare("SELECT userid, username, fullname, email, signup_date, userroles.rolename 
+    $query = $conn->prepare("SELECT userid, username, fullname, email, signup_date, avatar, userroles.rolename 
 FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE username = ?");
     $query->execute(array($username));
 
@@ -126,7 +126,7 @@ function userProfile($userid) {
 function update_user_profile($update_user) {
 
     global $conn;
-    $query = $conn->prepare("SELECT * FROM update_user_profile(:userid, :fullname, :email, :location, :about)");
+    $query = $conn->prepare("SELECT * FROM update_user_profile(:userid, :fullname, :email, :location, :about, :avatar)");
     $query->execute($update_user);
 
     return true;
@@ -195,4 +195,12 @@ function changeUserPwd($username, $password) {
     $password = password_hash($password, PASSWORD_BCRYPT);
     $query->execute(array($password));
 
+}
+
+function getUserAvatarByID($userid){
+    global $conn;
+    $query = $conn->prepare("SELECT avatar FROM users WHERE users.userid = $userid");
+    $query->execute();
+
+    return $query->fetchAll();
 }
