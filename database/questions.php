@@ -227,8 +227,17 @@ function get_questions_from_id($publicationid) {
 function update_question_tag($tagid, $questionid)
 {
     global $conn;
-    $stmt = $conn->prepare("INSERT INTO questiontags (questionid, tagid) VALUES(:questionid, :tagid) ON CONFLICT DO NOTHING");
+    $stmt = $conn->prepare("BEGIN;");
+    $stmt->execute();
+    $stmt = $conn->prepare("LOCK TABLE questiontags IN SHARE ROW EXCLUSIVE MODE;");
+    $stmt->execute();
+    $stmt = $conn->prepare("INSERT INTO questiontags (questionid, tagid)
+        SELECT :questionid,:tagid WHERE NOT exists(
+            SELECT questionid,tagid from questiontags where questionid=:questionid and tagid=:tagid
+        )");
     $stmt->execute(['questionid' => $questionid, 'tagid' => $tagid]);
+    $stmt = $conn->prepare("COMMIT;");
+    $stmt->execute();
 }
 
 function increment_views_counter($questionid) {
