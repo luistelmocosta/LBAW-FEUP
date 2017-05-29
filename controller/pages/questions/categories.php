@@ -16,5 +16,5 @@ $size = sizeof($categories);
 
 
 $smarty->assign('categories', $categories);
-$smarty->display('categories.tpl');
+$smarty->display('categories/categories.tpl');
 $smarty->display('common/footer.tpl');

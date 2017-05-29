@@ -127,5 +127,5 @@ $smarty->assign('permission', $permission);
 $smarty->assign('own', $own);
 $smarty->assign('badges', $badges);
 
-$smarty->display('profile.tpl');
+$smarty->display('users/profile.tpl');
 $smarty->display('common/footer.tpl');

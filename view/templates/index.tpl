@@ -71,7 +71,7 @@
                             {/if}
                             {if !empty($recent_questions)}
                                 {foreach $recent_questions as $question}
-                                    {include file="recent_questions.tpl"}
+                                    {include file="questions/recent_questions.tpl"}
                                 {/foreach}
 
                                 <div class = "loadMore"
@@ -87,7 +87,7 @@
 
                         <div id="unanswered_questions" class="tab-pane question-col">
                             {foreach $unanswered_questions as $question}
-                                {include file="unanswered_questions.tpl"}
+                                {include file="questions/unanswered_questions.tpl"}
                             {/foreach}
 
                             <div class = "loadMore"
@@ -102,7 +102,7 @@
 
                         <div id="top" class="tab-pane question-col">
                             {foreach $top_scored_questions as $question}
-                                {include file="top_scored_questions.tpl"}
+                                {include file="questions/top_scored_questions.tpl"}
                             {/foreach}
 
                             <div class = "loadMore"
@@ -124,7 +124,7 @@
 
                             <ul class="top-users-list">
                                 {foreach $top_scored_users as $user}
-                                    {include file="sidebar_partials/top_scored_users.tpl"}
+                                    {include file="common/sidebar_partials/top_scored_users.tpl"}
                                 {/foreach}
                             </ul>
                         </div>

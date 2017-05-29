@@ -18,7 +18,7 @@
 
                             <div class = "options pull-right " style = "margin-bottom:5px;">
                                 <br class="clearfix">
-                                {include file="question_partials/vote_panel.tpl"}
+                                {include file="questions/question_partials/vote_panel.tpl"}
                             </div>
                             <h2 class="question-title">
                                 {$question['title']}
@@ -79,7 +79,7 @@
                                                             data-question="{$question['publicationid']}"
                                                             data-type="question">{$answer['total_comments']} Comments</button>
                                                     <div class="textarea">
-                                                        {include file="question_partials/comment_form.tpl"}
+                                                        {include file="questions/question_partials/comment_form.tpl"}
                                                     </div>
                                                 </div>
                                             </div>
@@ -89,7 +89,7 @@
 
                                         <div class="qa-a-list-item entry answer">
                                             {foreach $answers as $answer}
-                                                {include file="answers.tpl"}
+                                                {include file="answers/answers.tpl"}
                                             {/foreach}
                                             <!-- END qa-a-item-main -->
                                         </div>

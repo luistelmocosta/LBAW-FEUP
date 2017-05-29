@@ -124,5 +124,5 @@ $smarty->assign('answers', $answers);
 $smarty->assign('question', $question);
 $smarty->assign('related_questions', $related_questions);
 $smarty->assign('category', $categoryid);
-$smarty->display('question.tpl');
+$smarty->display('questions/question.tpl');
 $smarty->display('common/footer.tpl');

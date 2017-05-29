@@ -80,7 +80,7 @@
 
                         <ul class="top-users-list clearfix">
                             {foreach $top_scored_users as $user}
-                                {include file="sidebar_partials/top_scored_users.tpl"}
+                                {include file="common/sidebar_partials/top_scored_users.tpl"}
                             {/foreach}
                         </ul>
                     </div>

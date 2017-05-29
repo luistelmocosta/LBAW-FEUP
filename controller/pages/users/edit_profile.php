@@ -16,5 +16,5 @@ $smarty->assign('avatar', $avatar);
 $smarty->assign('avatarprof', $avatarprof);
 
 $smarty->display('common/header_log.tpl');
-$smarty->display('edit_profile.tpl');
+$smarty->display('users/edit_profile.tpl');
 $smarty->display('common/footer.tpl');

@@ -15,11 +15,11 @@
                     <li><a href="#tabs-3">Top Scored Questions</a></li>
                 </ul>
                 <div id="tabs-1">
-                    {include file="recent_questions.tpl"}
+                    {include file="questions/recent_questions.tpl"}
 
                 </div>
                 <div id="tabs-2">
-                    {include file="unanswered_questions.tpl"}
+                    {include file="questions/unanswered_questions.tpl"}
                 </div>
                 <div id="tabs-3">
                     {include file="top_scored_questions.tpl"}
@@ -31,13 +31,13 @@
                         <span class="qa-page-selected">1</span>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="./questions?start=20" class="qa-page-link">2</a>
+                        <a href="?start=20" class="qa-page-link">2</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="./questions?start=40" class="qa-page-link">3</a>
+                        <a href="?start=40" class="qa-page-link">3</a>
                     </li>
                     <li class="qa-page-links-item">
-                        <a href="./questions?start=20" class="qa-page-next">next »</a>
+                        <a href="?start=20" class="qa-page-next">next »</a>
                     </li>
                 </ul>
 

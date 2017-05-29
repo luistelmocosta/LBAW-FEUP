@@ -153,5 +153,5 @@ $smarty->assign('search_questions', $search_questions_result);
 $smarty->assign('search_answers', $search_answers_tmp);
 $smarty->assign('search_tags', $search_result_tags);
 
-$smarty->display('search_results.tpl');
+$smarty->display('questions/search_results.tpl');
 $smarty->display('common/footer.tpl');

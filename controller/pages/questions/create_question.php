@@ -21,5 +21,5 @@ foreach ($categories as $category) {
 }
 
 $smarty->assign('categories', $categories_select);
-$smarty->display('create_question.tpl');
+$smarty->display('questions/create_question.tpl');
 $smarty->display('common/footer.tpl');

@@ -35,5 +35,5 @@ $tags_comma = implode(',', $tags_parsed);
 $smarty->assign('categories', $categories_select);
 $smarty->assign('tags', $tags_comma);
 $smarty->assign('question', $question);
-$smarty->display('edit_question.tpl');
+$smarty->display('questions/edit_question.tpl');
 

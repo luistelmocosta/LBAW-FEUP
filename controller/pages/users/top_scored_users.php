@@ -22,5 +22,5 @@ foreach ($top_scored_users as $key => $top_user) {
 }
 
 $smarty->assign('top_scored_users', $top_scored_users);
-$smarty->display('top_scored_users.tpl');
+$smarty->display('users/top_scored_users.tpl');
 $smarty->display('common/footer.tpl');

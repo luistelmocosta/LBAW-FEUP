@@ -22,5 +22,5 @@ $answer_info = $answer[0];
 
 
 $smarty->assign('answer', $answer_info);
-$smarty->display('answers_partials/edit_answer.tpl');
+$smarty->display('answers/answers_partials/edit_answer.tpl');
 

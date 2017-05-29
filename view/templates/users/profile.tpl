@@ -10,13 +10,13 @@
                     <h3 style="padding-left: 10px" class="widget-title user-post-title">{$user['username']}'s Bans Registers</h3>
                     <div class="ra-ua-widget">
                         {foreach $user_mod_regs_bans as $mod_reg}
-                            {include file="user_profile_mod_regs.tpl"}
+                            {include file="users/user_profile_mod_regs.tpl"}
                         {/foreach}
                     </div>
                     <h3 style="padding-left: 10px" class="widget-title user-post-title">{$user['username']}'s Warnings Registers</h3>
                     <div class="ra-ua-widget">
                         {foreach $user_mod_regs_warns as $mod_reg}
-                            {include file="user_profile_mod_regs.tpl"}
+                            {include file="users/user_profile_mod_regs.tpl"}
                         {/foreach}
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                 <h3 style="padding-left: 10px" class="widget-title user-post-title">{$user['username']}'s Questions</h3>
                 <div class="ra-ua-widget">
                     {foreach $user_questions as $question}
-                        {include file="user_profile_questions.tpl"}
+                        {include file="users/user_profile_questions.tpl"}
                     {/foreach}
                 </div>
             </div>

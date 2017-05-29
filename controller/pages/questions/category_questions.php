@@ -88,5 +88,5 @@ function time_elapsed_string($time_ago) {
 
 $smarty->assign('category_questions', $questions);
 $smarty->assign('category', $category);
-$smarty->display('category_questions.tpl');
+$smarty->display('categories/category_questions.tpl');
 $smarty->display('common/footer.tpl');

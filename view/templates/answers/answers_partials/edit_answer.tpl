@@ -13,7 +13,7 @@
                                 Question Title
                             </td>
                         </tr>
-                        <input type = "hidden" name = "answerid" value = "{$answer['answerid']}">
+                        <input type = "hidden" name = "answerid" value = "{$answer['publicationid']}">
                         <input type = "hidden" name = "questionid" value = "{$answer['questionid']}">
                         <tr>
                             <td class="qa-form-tall-data">

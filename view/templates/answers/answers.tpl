@@ -10,15 +10,15 @@
                 <a href={profileUrl($answer['userid'])}>{$answer['username']}</a>
 
             </h3>
-            <p class="asker-point">
+            <span class="title" style="background: #EEEEEE; display: inline;">{$answer['role']}</span>
+            <p style="display: inline" class="asker-point">
                 {$answer['answer_user_points']} points
             </p>
-            <span class="title" style="background: #EEEEEE;">{$answer['role']}</span>
         </div>
 
 
 
-        {include file="answers_partials/vote_panel.tpl"}
+        {include file="answers/answers_partials/vote_panel.tpl"}
         <blockquote class="accept-answer text-right {if !$isMine} hidden{/if}" >
             <div class="accept" title="Accept this answer"
                  data-url="{url('controller/api/questions/mark_as_solved')}"
@@ -68,7 +68,7 @@
                             data-question="{$question['publicationid']}"
                             data-type="answer">{$answer['total_comments']} Comments</button>
                     <div class="textarea">
-                        {include file="answers_partials/comment_form.tpl"}
+                        {include file="answers/answers_partials/comment_form.tpl"}
                     </div>
                 </div>
             </div>

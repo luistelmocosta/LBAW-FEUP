@@ -2,4 +2,4 @@
 
 include_once('../../../config/init.php');
 
-$smarty->display('signin.tpl');
+$smarty->display('users/signin.tpl');

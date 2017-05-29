@@ -106,7 +106,7 @@ $smarty->assign('avatarprof', $avatarprof);
 $smarty->display('common/header_log.tpl');
 
 if($permission == 'admin')
-    $smarty->display('admin.tpl');
+    $smarty->display('admin/admin.tpl');
 else $smarty->display('mod.tpl');
 
 $smarty->display('common/footer.tpl');
