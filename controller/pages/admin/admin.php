@@ -13,6 +13,9 @@ if($permission != 'admin' && $permission != 'mod')
 $userid = auth_user('userid');
 $user = userProfile($userid)[0];
 
+$avatar = $user['avatar'];
+$avatarprof = $avatar;
+
 $numUsers = getNumUsers()[0]['count'];
 $numQuest = getNumQuestions()[0]['count'];
 
@@ -84,6 +87,16 @@ $BSArr = [$numModReg, $numWarns, $numBans];
 $BSdata = json_encode($BSArr);
 file_put_contents($jsonDir . 'behaviourStatsData.json', $BSdata);
 
+$badges = userBadges($userid);
+
+foreach ($badges as $key => $badge) {
+
+    if (file_exists($BASE_DIR.'/images/badges/'.$badge['name'].'.png'))
+        $badge_picture = '/images/badges/'.$badge['name'].'.png';
+    if (file_exists($BASE_DIR.'/images/users/'.$badge['name'].'.jpg'))
+        $badge_picture = '/images/users/'.$badge['name'].'.jpg';
+}
+
 
 //SMARTY
 
@@ -94,13 +107,16 @@ $smarty->assign('questions', $questions);
 $smarty->assign('upage', $upage);
 $smarty->assign('upages', $upages);
 
-$smarty->assign('qpage', $upage);
-$smarty->assign('qpage', $upage);
+$smarty->assign('qpage', $qpage);
+$smarty->assign('qpages', $qpages);
+$smarty->assign('avatar', $avatar);
+$smarty->assign('avatarprof', $avatarprof);
+$smarty->assign('badges', $badges);
 
 $smarty->display('common/header_log.tpl');
 
 if($permission == 'admin')
-    $smarty->display('admin.tpl');
+    $smarty->display('admin/admin.tpl');
 else $smarty->display('mod.tpl');
 
 $smarty->display('common/footer.tpl');

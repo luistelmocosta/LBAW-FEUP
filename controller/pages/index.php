@@ -4,14 +4,6 @@ include_once('../../config/init.php');
 include_once($BASE_DIR . 'database/questions.php');
 include_once($BASE_DIR . 'database/users.php');
 
-if($_SESSION['logged_in']) {
-    $smarty->display('common/header_log.tpl');
-} else {
-    $smarty->display('common/header.tpl');
-}
-
-
-
 $tabs = [
     ['recent', 'Recent Questions'],
     ['unanswered', 'Unanswered Questions'],
@@ -38,32 +30,29 @@ $recent_questions = recent_questions();
 
 foreach ($recent_questions as $key => $recent_question) {
     $recent_questions[$key]['creation_date'] = time_elapsed_string($recent_questions[$key]['creation_date']);
+    $recent_questions[$key]['tags'] = get_tags_from_question($recent_questions[$key]['publicationid']);
 }
 
 $unanswered_questions = unanswered_questions();
 
 foreach ($unanswered_questions as $key => $unanswered_question) {
     $unanswered_questions[$key]['creation_date'] = time_elapsed_string($unanswered_questions[$key]['creation_date']);
+    $unanswered_questions[$key]['tags'] = get_tags_from_question($unanswered_questions[$key]['publicationid']);
 }
 
 $top_scored_questions = top();
 
 foreach ($top_scored_questions as $key => $top_scored_question) {
     $top_scored_questions[$key]['creation_date'] = time_elapsed_string($top_scored_questions[$key]['creation_date']);
+    $top_scored_questions[$key]['tags'] = get_tags_from_question($top_scored_questions[$key]['publicationid']);
 }
 
 $top_scored_users = top_scored_users();
 
 foreach ($top_scored_users as $key => $top_user) {
-    unset($photo);
-    if (file_exists($BASE_DIR.'images/users/'.$top_user['username'].'.png'))
-        $photo = '/images/users/'.$top_user['username'].'.png';
-    if (file_exists($BASE_DIR.'images/users/'.$top_user['username'].'.jpg'))
-        $photo = '/images/users/'.$top_user['username'].'.jpg';
-    if (!$photo) $photo = '/images/person-flat.png';
+    $photo = $top_scored_users[$key]['avatar'];
     $top_scored_users[$key]['photo'] = $photo;
 }
-
 
 function time_elapsed_string($time_ago) {
     $time_ago = strtotime($time_ago);
@@ -131,10 +120,20 @@ function time_elapsed_string($time_ago) {
     }
 }
 
+if($_SESSION['logged_in']) {
+    $avatar = $_SESSION['user']['avatar'];
+    $smarty->assign('avatar', $avatar);
+    $smarty->display('common/header_log.tpl');
+} else {
+    $smarty->display('common/header.tpl');
+}
+
 $smarty->assign('tabs', $tabs);
 $smarty->assign('top_scored_users', $top_scored_users);
 $smarty->assign('recent_questions', $recent_questions);
 $smarty->assign('unanswered_questions', $unanswered_questions);
 $smarty->assign('top_scored_questions', $top_scored_questions);
+$smarty->assign('avatar', $avatar);
+
 $smarty->display('index.tpl');
 $smarty->display('common/footer.tpl');

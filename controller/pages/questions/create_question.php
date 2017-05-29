@@ -6,6 +6,8 @@ include_once($BASE_DIR . 'database/questions.php');
 PagePermissions::create('auth')->check();
 
 if($_SESSION['logged_in']) {
+    $avatar = $_SESSION['user']['avatar'];
+    $smarty->assign('avatar', $avatar);
     $smarty->display('common/header_log.tpl');
 } else {
     $smarty->display('common/narrow_header.tpl');
@@ -19,5 +21,5 @@ foreach ($categories as $category) {
 }
 
 $smarty->assign('categories', $categories_select);
-$smarty->display('create_question.tpl');
+$smarty->display('questions/create_question.tpl');
 $smarty->display('common/footer.tpl');

@@ -4,6 +4,8 @@ include_once($BASE_DIR . 'database/questions.php');
 include_once($BASE_DIR . 'database/answers.php');
 
 if($_SESSION['logged_in']) {
+    $avatar = $_SESSION['user']['avatar'];
+    $smarty->assign('avatar', $avatar);
     $smarty->display('common/header_log.tpl');
 } else {
     $smarty->display('common/narrow_header.tpl');
@@ -151,5 +153,5 @@ $smarty->assign('search_questions', $search_questions_result);
 $smarty->assign('search_answers', $search_answers_tmp);
 $smarty->assign('search_tags', $search_result_tags);
 
-$smarty->display('search_results.tpl');
+$smarty->display('questions/search_results.tpl');
 $smarty->display('common/footer.tpl');

@@ -54,6 +54,9 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li>
+                    <a href="{$BASE_URL}controller/pages/users/signup.php">Join</a>
+                </li>
+                <li>
                     <a href="{$BASE_URL}controller/pages/questions/categories.php">Categories</a>
                 </li>
 

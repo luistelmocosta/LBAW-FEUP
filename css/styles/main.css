@@ -2409,7 +2409,7 @@ table.page-users-list {
 
 .top-users-list .top-user-data .points {
     border-radius: 2px;
-    color: #FFFFFF;
+    color: #999999;
     float: right;
     font-size: 11px;
     line-height: 16px;

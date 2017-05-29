@@ -17,6 +17,18 @@ function update_question($question) {
     return true;
 }
 
+function get_top_categories() {
+    global $conn;
+    $query=$conn->prepare("SELECT categories.categoryid, categories.name, COUNT(questions.categoryid) as total FROM questions 
+RIGHT OUTER JOIN categories 
+ON questions.categoryid = categories.categoryid 
+GROUP BY name, categories.categoryid 
+ORDER BY total DESC
+LIMIT 5; ");
+    $query->execute();
+    return $query->fetchAll();
+}
+
 function get_categories() {
     global $conn;
     $query=$conn->prepare("SELECT categories.categoryid, categories.name, COUNT(questions.categoryid) as total FROM questions 
@@ -195,7 +207,7 @@ function unanswered_questions($page = 0) {
     global $conn;
     $limit = 4;
     $skip = $limit * $page;
-    $stmt = $conn->prepare("SELECT * FROM unanswered_questions(:skip, :limit) WHERE answers_count = 0");
+    $stmt = $conn->prepare("SELECT * FROM unanswered_questions(:skip, :limit)");
     $stmt->execute(['limit' => $limit, 'skip' => $skip]);
     $rows = $stmt->fetchAll();
     //$rows = addQuestionsComputedFields($rows);
@@ -227,8 +239,17 @@ function get_questions_from_id($publicationid) {
 function update_question_tag($tagid, $questionid)
 {
     global $conn;
-    $stmt = $conn->prepare("INSERT INTO questiontags (questionid, tagid) VALUES(:questionid, :tagid) ON CONFLICT DO NOTHING");
+    $stmt = $conn->prepare("BEGIN;");
+    $stmt->execute();
+    $stmt = $conn->prepare("LOCK TABLE questiontags IN SHARE ROW EXCLUSIVE MODE;");
+    $stmt->execute();
+    $stmt = $conn->prepare("INSERT INTO questiontags (questionid, tagid)
+        SELECT :questionid,:tagid WHERE NOT exists(
+            SELECT questionid,tagid from questiontags where questionid=:questionid and tagid=:tagid
+        )");
     $stmt->execute(['questionid' => $questionid, 'tagid' => $tagid]);
+    $stmt = $conn->prepare("COMMIT;");
+    $stmt->execute();
 }
 
 function increment_views_counter($questionid) {

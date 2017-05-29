@@ -34,13 +34,13 @@ function getUsersPag($skip, $limit) {
  * @param $email
  * @param $password
  */
-function registerUser($username, $email, $password) {
+function registerUser($username, $email, $password, $avatar) {
     global $conn;
 
-    $query = $conn->prepare("INSERT INTO users(username, email, password) VALUES (?, ?, ?)");
+    $query = $conn->prepare("INSERT INTO users(username, email, password, avatar) VALUES (?, ?, ?, ?)");
 
     $password = password_hash($password, PASSWORD_BCRYPT);
-    $query->execute(array($username, $email, $password));
+    $query->execute(array($username, $email, $password, $avatar));
 
 }
 
@@ -73,9 +73,19 @@ function correctAuth($username, $password)
 function getUserByUsername($username) {
     global $conn;
 
-    $query = $conn->prepare("SELECT userid, username, fullname, email, signup_date, userroles.rolename 
+    $query = $conn->prepare("SELECT userid, username, fullname, email, signup_date, avatar, userroles.rolename 
 FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE username = ?");
     $query->execute(array($username));
+
+    return $query->fetch();
+}
+
+function getUserByEmail($email) {
+    global $conn;
+
+    $query = $conn->prepare("SELECT userid, username, fullname, email, signup_date, avatar, userroles.rolename 
+FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE email = ?");
+    $query->execute(array($email));
 
     return $query->fetch();
 }
@@ -85,6 +95,15 @@ function getUserIDByUsername($username) {
     $query = $conn->prepare("SELECT userid 
 FROM users WHERE username = ?");
     $query->execute(array($username));
+
+    return $query->fetchAll();
+}
+
+function getUserNameByUserID($userID){
+    global $conn;
+    $query = $conn->prepare("SELECT username
+FROM users WHERE userid = ?");
+    $query->execute(array($userID));
 
     return $query->fetchAll();
 }
@@ -117,7 +136,7 @@ function userProfile($userid) {
 function update_user_profile($update_user) {
 
     global $conn;
-    $query = $conn->prepare("SELECT * FROM update_user_profile(:userid, :fullname, :email, :location, :about)");
+    $query = $conn->prepare("SELECT * FROM update_user_profile(:userid, :fullname, :email, :location, :about, :avatar)");
     $query->execute($update_user);
 
     return true;
@@ -146,6 +165,61 @@ function check_ban($userid){
     global $conn;
     $query = $conn->prepare("SELECT COUNT(*) FROM modregisters INNER JOIN bans ON modregisters.modregisterid = bans.banid WHERE userid_target = $userid");
     $query->execute();
+
+    return $query->fetchAll();
+}
+
+
+function search_users($pstext)
+{
+
+    global $conn;
+    $stmt = $conn->prepare("SELECT userid FROM search_users(:pstext)");
+    $stmt->execute(['pstext' => $pstext]);
+    $rows = $stmt->fetchAll();
+
+    return $rows;
+
+}
+function get_mod_reg_ban_by_user_id($userid){
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM modregisters INNER JOIN bans ON modregisters.modregisterid = bans.banid WHERE modregisters.userid_target = $userid");
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
+function get_mod_reg_warn_by_user_id($userid){
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM modregisters INNER JOIN warnings ON modregisters.modregisterid = warnings.warningid WHERE modregisters.userid_target = $userid");
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
+function changeUserPwd($username, $password) {
+    global $conn;
+
+    $query = $conn->prepare("UPDATE users SET password = ? WHERE users.username = '$username'");
+
+    $password = password_hash($password, PASSWORD_BCRYPT);
+    $query->execute(array($password));
+
+}
+
+function getUserAvatarByID($userid){
+    global $conn;
+    $query = $conn->prepare("SELECT avatar FROM users WHERE users.userid = $userid");
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function userBadges($userid) {
+
+    global $conn;
+    $query = $conn->prepare("SELECT badges.name, badges.description FROM badges INNER JOIN userbadges ON badges.badgeid = userbadges.badgeid WHERE userbadges.userid = :userid");
+    $query->execute(['userid' => $userid]);
 
     return $query->fetchAll();
 }

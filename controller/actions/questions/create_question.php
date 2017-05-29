@@ -9,6 +9,10 @@ validate_question_form();
 $tags = explode(',', $_POST['tags']);
 $tags_strimmed = array_map('trim', $tags);
 
+foreach($tags_strimmed as $key => $tag) {
+    $tags_strimmed[$key] = strtolower($tags_strimmed[$key]);
+}
+
 
 $category = get_categoryID_by_name($_POST['category']);
 
@@ -52,9 +56,15 @@ function validate_question_form()
         $_SESSION['form_values'] = $_POST;
         back();
     }
-    $tags = $_POST['tags'];
-    foreach ($tags as $tag) {
-        if (strlen($tag) > 10) {
+    $tags = explode(',', $_POST['tags']);
+    $tags_strimmed = array_map('trim', $tags);
+
+    foreach($tags_strimmed as $key => $tag) {
+        $tags_strimmed[$key] = strtolower($tags_strimmed[$key]);
+    }
+
+    foreach ($tags_strimmed as $key => $tag) {
+        if (strlen($tags[$key]) > 9) {
             $_SESSION['error_messages'][] = 'Tags are not longer than 10 characters';
             $_SESSION['form_values'] = $_POST;
             back();

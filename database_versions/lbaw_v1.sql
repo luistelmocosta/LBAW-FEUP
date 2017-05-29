@@ -30,7 +30,7 @@ CREATE TABLE locations
 CREATE TABLE users
 (
     userid SERIAL PRIMARY KEY,
-    username VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL UNIQUE,
     email VARCHAR(70) NOT NULL,
     password VARCHAR(256) NOT NULL,
     fullname VARCHAR(200),
@@ -40,6 +40,7 @@ CREATE TABLE users
     last_login TIMESTAMP,
     locationid INTEGER,
     roleid INTEGER DEFAULT 1,
+    avatar VARCHAR(256),
     CONSTRAINT valid_date CHECK(last_login > signup_date),
     CONSTRAINT valid_password CHECK(CHAR_LENGTH(password) >= 6 AND CHAR_LENGTH(password) < 256),
     CONSTRAINT valid_username CHECK(CHAR_LENGTH(username) >= 1 AND CHAR_LENGTH(username) < 20),
@@ -80,7 +81,7 @@ CREATE TABLE warnings
 CREATE TABLE bans
 (
     banid SERIAL PRIMARY KEY,
-    end_date TIMESTAMP,
+    end_date DATE,
     CONSTRAINT "FK_Ban_ModRegister"
     FOREIGN KEY ("banid") REFERENCES modregisters ("modregisterid") ON DELETE CASCADE ON UPDATE CASCADE
 );
@@ -288,6 +289,7 @@ $$;
 
 CREATE OR REPLACE FUNCTION user_profile(puser_id int)
     RETURNS TABLE (
+        userid integer,
         fullname character varying(200),
         username character varying(50),
         email character varying(70),
@@ -296,17 +298,23 @@ CREATE OR REPLACE FUNCTION user_profile(puser_id int)
         role character varying(10),
     --badge character varying(50),
         created_at date,
+        avatar character varying(256),
         count_votes_rating_received INT,
         count_questions BIGINT,
         count_answers BIGINT,
-        count_votes_made BIGINT
+        count_comments BIGINT,
+        count_votes_made BIGINT,
+        roleid INTEGER,
+        rolename VARCHAR(25),
+        bancount BIGINT
     ) AS $func$
 BEGIN
     RETURN QUERY
-    SELECT users.fullname, users.username, users.email, users.about,
+    SELECT users.userid, users.fullname, users.username, users.email, users.about,
         (SELECT locations.name FROM locations WHERE users.locationid = locations.locationid),
-        (SELECT rolename FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE userid = puser_id),
+        (SELECT userroles.rolename FROM userroles INNER JOIN users ON userroles.roleid = users.roleid WHERE users.userid = puser_id),
         users.signup_date,
+        users.avatar,
         count_vote_rating_received_user(puser_id),
         (SELECT COUNT(*) FROM questions
             INNER JOIN publications
@@ -316,8 +324,14 @@ BEGIN
             INNER JOIN publications
                 ON answers.publicationid = publications.publicationid
         WHERE publications.userid = puser_id),
-        (SELECT COUNT(*) FROM votes WHERE votes.userid = puser_id)
-    FROM users
+        (SELECT COUNT(*) FROM comments
+            INNER JOIN publications
+                ON comments.publicationid = publications.publicationid
+        WHERE publications.userid = puser_id),
+        (SELECT COUNT(*) FROM votes WHERE votes.userid = puser_id),
+        users.roleid, userroles.rolename,
+        (SELECT COUNT(*) AS bancount FROM modregisters INNER JOIN bans ON modregisters.modregisterid = bans.banid WHERE userid_target = puser_id)
+    FROM users INNER JOIN userroles ON users.roleid = userroles.roleid
     WHERE users.userid = puser_id;
 END
 $func$  LANGUAGE plpgsql;
@@ -562,6 +576,7 @@ BEGIN
         INNER JOIN publications
             ON questions.publicationid = publications.publicationid
         LEFT JOIN users ON publications.userid = users.userid
+        WHERE (SELECT COUNT(*) FROM question_answers(questions.publicationid)) = 0
     LIMIT limitNumber
     OFFSET skip;
 END
@@ -668,11 +683,11 @@ BEGIN
 END
 $func$;
 
-CREATE OR REPLACE FUNCTION update_user_profile(uid integer, full_name varchar, e_mail varchar, location varchar, about_user text)
+CREATE OR REPLACE FUNCTION update_user_profile(uid integer, full_name varchar, e_mail varchar, location varchar, about_user text, image varchar)
     returns void language plpgsql as $$
 begin
     UPDATE users
-    SET fullname = full_name, email = e_mail, about = about_user, locationid = (SELECT locationid FROM locations WHERE locations.name = location)
+    SET fullname = full_name, email = e_mail, about = about_user, locationid = (SELECT locationid FROM locations WHERE locations.name = location), avatar = image
     WHERE userid = uid;
 end $$;
 
@@ -727,7 +742,9 @@ $$;
 
 CREATE OR REPLACE FUNCTION top_scored_users()
     RETURNS TABLE (
+        userid INTEGER,
         username character varying(50),
+        avatar character varying(256),
     --badge character varying(50),
         count_votes_rating_received INT,
         count_questions INT,
@@ -736,7 +753,7 @@ CREATE OR REPLACE FUNCTION top_scored_users()
     ) AS $func$
 BEGIN
     RETURN QUERY
-    SELECT users.username,
+    SELECT users.userid, users.username, users.avatar,
         count_vote_rating_received_user(users.userid) as total_votes,
         user_total_questions(users.userid) as total_questions,
         user_total_answers(users.userid) as total_answers,
@@ -1069,7 +1086,6 @@ BEGIN
     SELECT DISTINCT publications.publicationid as pubs
     FROM publications
     WHERE to_tsvector('english', publications.body) @@ plainto_tsquery('english', psearch));
-    )
 END
 $func$  LANGUAGE plpgsql;
 
