@@ -41,19 +41,18 @@
             </h3>
         </div>
 
+        <div class = "statistics" style="padding-top: 10px">
+        <span>
 
-        <div class = "statistics col-sm-12 text-right" style="padding-top: 8px">
-            <span>
-                <i class = "glyphicon glyphicon-time"></i>
-                <span class="question-updated-at">{$question['creation_date']}</span>
-            </span>
-            <span>
-                <i class = "glyphicon glyphicon-comment"></i>
-                <span class="question-answers">{$question['answers_count']}</span>
-            </span>
+        <i class = "glyphicon glyphicon-time"></i>
+            <span class="question-updated-at">{$question['creation_date']}</span>
+            <p style="display: inline;">by </p>
+            <a style="display: inline" href="{profileUrl($question['userid'])}">{$question['username']}</a>
+        </span>
         </div>
     </div>
 </div>
+<br class="clearfix">
 
 
 
