@@ -25,7 +25,7 @@
                                 <span id="category_0_sub">
                                     <select name="category" id="category_1" onchange="" class="qa-form-tall-select">
                                         {foreach old('categories', $categories) as $category }
-                                            <option value="{$category}" selected>{$category}</option>
+                                            <option value="" selected>{$category}</option>
                                         {/foreach}
                                     </select>
                                 </span>
