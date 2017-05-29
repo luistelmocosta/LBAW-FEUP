@@ -112,7 +112,7 @@ $('#search-users').on('click' ,function(e) {
     var pagination = $('#pagination-users');
     var selector = $(this).parent().parent().parent().parent();
     console.log("Searched user: " + search);
-    $.getJSON("/controller/api/admin/search_user.php", {
+    $.getJSON("../../api/admin/search_user.php", {
         search : search
     }, function(data) {
         if (data.length === 0) {
@@ -308,7 +308,7 @@ $('#search-questions').on('click' ,function(e)
     var pagination = $('#pagination-quests');
     var selector = $(this).parent().parent().parent().parent();
     console.log("Searched question: " + search);
-    $.getJSON("/controller/api/admin/search_question.php", {
+    $.getJSON("../../api/admin/search_question.php", {
         search : search
     }, function(data) {
         usersTable.remove();
