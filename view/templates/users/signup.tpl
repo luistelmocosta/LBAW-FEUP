@@ -9,8 +9,8 @@
     <div class = "container">
 
         <!-- REGISTER TAB PANEL -->
-        <div role = "tabpanel" class = "tab-pane container-white id = "register">
-            <form class = "form-horizontal" action = "{$BASE_URL}controller/actions/users/signup.php" method = "post" enctype = "multipart/form-data">
+        <div role = "tabpanel" class = "tab-pane container-white"  id = "register">
+            <form class = "form-horizontal" action = "{$BASE_URL}controller/actions/users/signup.php" name="signupform" method = "post" enctype = "multipart/form-data" onsubmit="return validateForm()">
 
                 <div class = "form-group">
                     <label for = "username" class = "col-sm-3 control-label">Username</label>
@@ -50,3 +50,5 @@
         <!-- END REGISTER TAB PANEL -->
     </div>
 </div>
+
+{HTML::script('form-validation.js')}

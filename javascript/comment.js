@@ -105,3 +105,12 @@ $("body").on("click", ".edit-comment", function(e){
 });
 
 
+function validateForm() {
+    var x = document.forms["commentform"]["comment"].value;
+    if (x.length < 10) {
+        alert("Comments must have atleast 10 characters!");
+        return false;
+    }
+}
+
+
