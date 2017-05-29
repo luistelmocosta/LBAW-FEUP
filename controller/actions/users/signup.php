@@ -15,10 +15,29 @@ if(!$_POST['username'] || !$_POST['password']) {
 }
 
 
+
+
 $username = strip_tags($_POST['username']);
 $email = strip_tags($_POST['email']);
 $password = $_POST['password'];
 $verify_password = $_POST['verify_password'];
+
+$already_exists_username = getUserByUsername($username);
+$already_exists_email = getUserByEmail($email);
+
+if($already_exists_username) {
+    $_SESSION['error_messages'][] = 'Username already in use';
+    header("Location: $BASE_URL" . 'controller/pages/users/signup.php');
+    exit;
+
+}
+
+if($already_exists_email) {
+    $_SESSION['error_messages'][] = 'An account with that email already exists!';
+    header("Location: $BASE_URL" . 'controller/pages/users/signup.php');
+    exit;
+
+}
 
 /**
  * Verifies if the password and verify_password matches
@@ -27,6 +46,7 @@ $verify_password = $_POST['verify_password'];
 if(strcmp($password, $verify_password) != 0) {
     $_SESSION['error_messages'][] = 'Password do not match';
     header("Location: $BASE_URL" . 'controller/pages/users/signup.php');
+    exit;
 }
 
 try {

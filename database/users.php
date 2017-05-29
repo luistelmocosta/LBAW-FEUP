@@ -80,6 +80,16 @@ FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE usernam
     return $query->fetch();
 }
 
+function getUserByEmail($email) {
+    global $conn;
+
+    $query = $conn->prepare("SELECT userid, username, fullname, email, signup_date, avatar, userroles.rolename 
+FROM users INNER JOIN userroles ON users.roleid = userroles.roleid WHERE email = ?");
+    $query->execute(array($email));
+
+    return $query->fetch();
+}
+
 function getUserIDByUsername($username) {
     global $conn;
     $query = $conn->prepare("SELECT userid 

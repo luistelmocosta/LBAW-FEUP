@@ -30,7 +30,7 @@ CREATE TABLE locations
 CREATE TABLE users
 (
     userid SERIAL PRIMARY KEY,
-    username VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL UNIQUE,
     email VARCHAR(70) NOT NULL,
     password VARCHAR(256) NOT NULL,
     fullname VARCHAR(200),
