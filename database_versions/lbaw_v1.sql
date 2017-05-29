@@ -572,6 +572,7 @@ BEGIN
         INNER JOIN publications
             ON questions.publicationid = publications.publicationid
         LEFT JOIN users ON publications.userid = users.userid
+        WHERE (SELECT COUNT(*) FROM question_answers(questions.publicationid)) = 0
     LIMIT limitNumber
     OFFSET skip;
 END

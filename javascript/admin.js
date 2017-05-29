@@ -214,6 +214,74 @@ $('#search-users').on('click' ,function(e)
     });
 });
 
+$('#search-questions').on('click' ,function(e)
+{
+    e.preventDefault();
+    var search = $('#search-question').val();
+    var usersTable = $('#quests');
+    var pagination = $('#pagination-quests');
+    var selector = $(this).parent().parent().parent().parent();
+    var selector_temp = $(this).parent().parent().parent();
+    console.log("Hello search users");
+    console.log(search);
+    $.getJSON("/controller/api/admin/search_question.php", {
+        search : search
+    }, function(data) {
+        usersTable.remove();
+        pagination.remove();
+        $('.see-all').show();
+        console.log("Remove");
+        console.log(data);
+        if (data.length === 0) {
+            selector.append('<div><a">' +
+            "There are no results for that search!" +
+        '</a>' +
+                '<br class="clearfix"></div>'
+        );
+        } else {
+
+            $.each(data, function(i, question) {
+
+                selector.append('<table id="quests" class="table table-bordered table-responsive">' +
+                    '<tbody>' +
+                    '<th>Title</th>'  +
+                    '<th>Author</th>' +
+                    '<th style="text-align: center">Info</th>' +
+                    '<th style="text-align: center">Delete</th>' +
+                    '<tr class="questTable" id=' +
+                    question.publicationid +
+                    '>' +
+                    '<td>' +
+                    question.title +
+                    '</td>' +
+                    '<td>' +
+                    question.username +
+                    '</td>' +
+                    '<td style="text-align: center">' +
+                    '<a <span class="glyphicon glyphicon-info-sign" href={questionUrl(' +
+                    question.publicationid +
+                    ')}></span></a>' +
+                    '</td>' +
+                    '<form name="delQuest" method="post" action="/controller/api/admin/delete_publication.php">' +
+                    '<td id="delQuest" style="text-align: center">' +
+                    '<button type="submit" class="btn-default btn-sm" style="font-size: 15px;">' +
+                    '<i class="glyphicon glyphicon-remove-circle"></i>' +
+                    '</button>' +
+                    '</td>' +
+                    '</form>' +
+                    '</tr> ' +
+                    '</tbody> ' +
+                    '</table>'
+                );
+            });
+
+        }
+
+
+
+    });
+});
+
 
 
 

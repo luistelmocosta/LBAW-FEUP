@@ -4,6 +4,7 @@ $(document).ready(function () {
         var next_page = $(this).data('next-page');
         console.log(next_page);
         $.get($(this).data('url') + '?tab=' + tab + '&page=' + next_page, function (data) {
+            console.log(data);
             addNewQuestions($.parseJSON(data), tab);
         });
         $(this).data('next-page', parseInt(next_page) + 1);
