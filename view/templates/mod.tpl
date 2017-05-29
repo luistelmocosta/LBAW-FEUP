@@ -5,6 +5,8 @@
         <div class="panel panel-default">
 
             <div class="about-me widget">
+                
+                <div class="col-sm-12">
                 <h3 style="padding-left: 10px">Search For Users</h3>
                 <form class = "navbar-form navbar-left" role = "search" method = "post" action = "" style="display: inline">
 
@@ -17,7 +19,9 @@
                     </span>
                     </div>
                 </form>
+                </div>
 
+                <div class="table-responsive col-md-12">
                 <table id="users" class="table table-bordered table-responsive">
                     <tbody>
                     <th>Username</th>
@@ -38,7 +42,7 @@
                             </td>
 
                             <td id="warnUsr" style="text-align: center">
-                                <button id="triggerModal" type="button" class="btn-default btn-sm" data-toggle="modal" data-target="#warnMsgModal" style="font-size: 15px">
+                                <button id="triggerModal" type="button" class="btn-default btn-xs" data-toggle="modal" data-target="#warnMsgModal" style="font-size: 15px">
                                     <i class="glyphicon glyphicon-warning-sign"></i>
                                 </button>
 
@@ -65,6 +69,7 @@
 
                     </tbody>
                 </table>
+                </div>
 
                 <ul class="pagination clearfix">
                     <li class="qa-page-links-item">
@@ -97,6 +102,7 @@
 
             <div class="about-me widget">
 
+                <div class="col-sm-12">
                 <h3 style="padding-left: 10px">Search For Questions</h3>
                 <form class = "navbar-form navbar-left" role = "search" method = "post" action = "" style="display: inline">
 
@@ -109,7 +115,9 @@
                         </span>
                     </div>
                 </form>
+                </div>
 
+                <div class="table-responsive col-md-12">
                 <table id="quests" class="table table-bordered table-responsive">
                     <tbody>
                     <th>Title</th>
@@ -127,7 +135,7 @@
                             </td>
                             <form name="delQuest" method="post" action="{$BASE_URL}controller/api/admin/delete_publication.php">
                                 <td id="delQuest" style="text-align: center">
-                                    <button type="submit" class="btn-default btn-sm" style="font-size: 15px;">
+                                    <button type="submit" class="btn-default btn-xs" style="font-size: 15px;">
                                         <i class="glyphicon glyphicon-remove-circle"></i>
                                     </button>
                                 </td>
@@ -137,6 +145,7 @@
 
                     </tbody>
                 </table>
+                </div>
 
                 <ul class="pagination clearfix">
                     <li class="qa-page-links-item">
