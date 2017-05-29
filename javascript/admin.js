@@ -345,7 +345,7 @@ function siteStats() {
             legend: {
                 display: false
             },
-            responsive: true
+            responsive: false
         }
     });
 }
