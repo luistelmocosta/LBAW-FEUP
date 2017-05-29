@@ -48,8 +48,8 @@ $("body").on("click", ".show-textarea", function(){
                 '</div> ' +
                 '</div> ' +
                 '<div class="comment-edit-form">' +
-                '<form method="post" action="/controller/actions/comments/edit_comment.php">' +
-                (comment.IsMine ?
+                '<form method="post" action="../../../controller/actions/comments/edit_comment.php">' +
+                (comment.isMine ?
                     '<button class = "edit-comment btn" type="button">Edit</button>' +
                     ''
                     : '') +
