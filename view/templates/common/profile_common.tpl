@@ -1,4 +1,4 @@
-<div id="site-body" class="container">
+<div class="site-body container">
     <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
         <div class="panel panel-default">
             <div class="panel-body">
