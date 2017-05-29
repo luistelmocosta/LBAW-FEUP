@@ -20,6 +20,7 @@ else {
 $avatar = $_SESSION['user']['avatar'];
 
 $user = userProfile($userid)[0];
+$badges = userBadges($userid);
 $avatarprof = $user['avatar'];
 
 if($_SESSION['logged_in']) {
@@ -32,6 +33,18 @@ if($_SESSION['logged_in']) {
     $smarty->display('common/narrow_header.tpl');
 }
 
+foreach ($badges as $key => $badge) {
+
+    if (file_exists($BASE_DIR.'/images/badges/'.$badge['name'].'.png'))
+        $badge_picture = '/images/badges/'.$badge['name'].'.png';
+    if (file_exists($BASE_DIR.'/images/users/'.$badge['name'].'.jpg'))
+        $badge_picture = '/images/users/'.$badge['name'].'.jpg';
+
+}
+
+
+//if (!$photo_profile) $photo_profile = '/images/person-flat.png';
+
 $user_questions = get_questions_by_user_id($userid);
 $user_mod_regs_bans =  get_mod_reg_ban_by_user_id($userid);
 $user_mod_regs_warns = get_mod_reg_warn_by_user_id($userid);
@@ -43,6 +56,7 @@ $smarty->assign('user_mod_regs_warns', $user_mod_regs_warns);
 
 $smarty->assign('permission', $permission);
 $smarty->assign('own', $own);
+$smarty->assign('badges', $badges);
 
 $smarty->display('profile.tpl');
 $smarty->display('common/footer.tpl');

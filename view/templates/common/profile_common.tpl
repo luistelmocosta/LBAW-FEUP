@@ -38,7 +38,13 @@
         <div class="panel panel-default">
             <div class="panel-body">
                     <span>
-                        <h1 class="panel-title pull-left" style="font-size:30px;"> {$user['username']} <small>{$user['role']}</small> <i class="fa fa-check text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="John Doe is sharing with you"></i></h1>
+                        <h1 class="panel-title pull-left" style="font-size:30px;"> {$user['username']}
+                            <small>{$user['role']}</small></h1>
+                        {foreach $badges as $key => $badge}
+                            {$badge['badge_picture']}
+                            {$badge['name']}
+                            <i class="fa fa-check text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="John Doe is sharing with you"></i>
+                        {/foreach}
                     </span>
                 <br><br>
                 <div class="user-activity-count clearfix">

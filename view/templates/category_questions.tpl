@@ -1,60 +1,94 @@
 <title>Search results for "{$pstext}"</title>
 <div id="site-body" class="container">
     <div class="clearfix qa-main">
-        <div class="col-sm-8 list-c">
-            <h1 class="page-title">
-                Category questions for "<b>{$category}</b>"
-            </h1>
-        </div>
-        <br>
-        <br>
-        <br>
+        <div class="home-left-inner">
+            <div class="col-md-8">
+                <h1 class="page-title">
+                    Category questions for "<b>{$category}</b>"
+                </h1>
+                <br>
+                <br>
+                <br>
 
-        {foreach $category_questions as $res}
+                {foreach $category_questions as $question}
 
-            <div class="question-summary narrow">
+                    <div class="question-summary narrow">
 
-                <div class="col-md-12">
+                        <div class="question-info col-md-12">
 
-                    <div class="votes" style="float: right">
-                        <div class="mini-counts"><span title="votes">
-                    {if $res['votes_count']}
-                        {$res['votes_count']}
+                            <div class="votes">
+                                <div class="votes-count">
+                <span title="{$question['votes_count']} votes">
+                    {if $question['votes_count']}
+                        {$question['votes_count']}
                     {else}
                         0
                     {/if}
-                    </span></div>
-                        <div>votes</div>
+                    </span>
+                                </div>
+                                <div>votes</div>
+                            </div>
+
+                            <div {if $question['solved_date']}
+                                class="status answered-accepted"
+                            {else}
+                                class="status answer-selected"
+                            {/if}
+                                    title="one of the answers was accepted as the correct answer">
+                                <div class="answers-count">
+                                    <span title="{$question['answers_count']} answer">{$question['answers_count']}</span></div>
+                                <div>answer</div>
+                            </div>
+                            <div class="views">
+                                <div class="views-count">
+                                    <span title="{$question['views_counter']} views">{$question['views_counter']}</span></div>
+                                <div>views</div>
+                            </div>
+
+                            <div class="summary question-title">
+                                <h3>
+                                    <a href="{questionUrl($question['publicationid'])}"
+                                       data-base-question-url = "{questionUrl('')}"
+                                       style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
+                                        {$question['title']}
+                                    </a>
+                                </h3>
+                            </div>
+
+
+                            <div class = "statistics col-sm-12 text-right" style="padding-top: 8px">
+                            <span>
+                                <i class = "glyphicon glyphicon-time"></i>
+                                <span class="question-updated-at">{$question['creation_date']}</span>
+                            </span>
+                                <span>
+                                <i class = "glyphicon glyphicon-comment"></i>
+                                <span class="question-answers">{$question['answers_count']}</span>
+                            </span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="views" style="float: right">
-                        <div class="mini-counts"><span title="views">{$res['views_counter']}</span></div>
-                        <div>views</div>
-                    </div>
-
-                    <div class="summary">
-                        <h3>
-                            <a href={questionUrl($res['publicationid'])} class="question-hyperlink" style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
-                                {$res['title']}
-                            </a>
-                        </h3>
-                    </div>
-
-                    <div class = "statistics col-md-12 text-right" style="padding-top: 8px; padding-right: 50px">
-                        <span>
-                            <i class = "glyphicon glyphicon-time"></i>
-                            <span class="question-updated-at">10 min ago</span>
-                        </span>
-                        <span>
-                            <i class = "glyphicon glyphicon-comment"></i>
-                            <span class="question-answers">1</span>
-                        </span>
-                    </div>
-                </div>
-
+                {/foreach}
             </div>
+        </div>
 
-        {/foreach}
+        <div class="col-md-4 pull-right">
+            <div id="home-right-position">
+                <div class="widget cs_top_contributors">
+                    <h3 class="widget-title">Top Scored Users</h3>
+                    <div class="ra-tags-widget">
 
+                        <ul class="top-users-list clearfix">
+                            {foreach $top_scored_users as $user}
+                                {include file="sidebar_partials/top_scored_users.tpl"}
+                            {/foreach}
+                        </ul>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
