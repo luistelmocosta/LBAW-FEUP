@@ -25,7 +25,7 @@
 
                             </div>
                             <div class="card-bottom">
-                                <a class="user-name" href="./user/admin">{$user['username']}</a>
+                                <a class="user-name" href="{profileUrl($user['userid'])}">{$user['username']}</a>
                                 <span class="score">{$user['count_votes_rating_received']} points </span>
                             </div>
                         </div>

@@ -2,15 +2,18 @@
 <div id="site-body" class="container">
     {include file="common/messages.tpl"}
     <div class="clearfix qa-main">
+        <h1 align="center">Create Question</h1>
         <div class="col-sm-12 list-c">
-            <h1>Create Question</h1>
+
             <br>
             <div class="qa-part-form">
                 <form name="ask" method="post" action= "{$BASE_URL}controller/actions/questions/create_question.php">
                     <table class="qa-form-tall-table">
                         <tbody><tr>
                             <td class="qa-form-tall-label">
-                                Title
+                                <h1 class="page-title">
+                                    Title
+                                </h1>
                             </td>
                         </tr>
                         <tr>
@@ -18,10 +21,12 @@
                                 <input name="title" id="title" autocomplete="off" onchange="" type="text" value="" class="qa-form-tall-text">
                             </td>
                         </tr>
-
+                        <br class="clearfix">
                         <tr>
                             <td class="qa-form-tall-label">
-                                Category
+                                <h1 class="page-title">
+                                    Category
+                                </h1>
                                 <span id="category_0_sub">
                                     <select name="category" id="category_1" onchange="" class="qa-form-tall-select">
                                         {foreach old('categories', $categories) as $category }
@@ -39,7 +44,9 @@
                         </tr>
                         <tr>
                             <td class="qa-form-tall-label">
-                                Description:
+                                <h1 class="page-title">
+                                    Description
+                                </h1>
                             </td>
                         </tr>
                         <tr>
@@ -53,7 +60,9 @@
                         </tr>
                         <tr>
                             <td class="qa-form-tall-label">
-                                Tags - use comma (,) as a separator (max size: 10 characters)
+                                <h1 class="page-title">
+                                    Tags - use comma (,) as a separator (max size: 10 characters)
+                                </h1>
                             </td>
                         </tr>
                         <tr>
@@ -65,8 +74,8 @@
 
                         </tbody>
                         <tbody><tr>
-                            <td colspan="1" class="qa-form-tall-buttons">
-                                <input onclick="qa_show_waiting_after(this, false);" value="Ask Question" title="" type="submit" class="qa-form-tall-button qa-form-tall-button-ask">
+                            <td align="center" colspan="1" class="qa-form-tall-buttons">
+                                <input value="Ask Question" title="" type="submit" class="btn">
                             </td>
                         </tr>
                         </tbody>

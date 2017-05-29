@@ -3,10 +3,14 @@
 {include file="common/messages.tpl"}
 <body id="site-body" class="container">
 <div class="clearfix qa-main">
+    <h1 align="center" style="padding-left: 25px">Enter your credentials</h1>
+    <br class="clearfix">
+    <br class="clearfix">
+    <br class="clearfix">
     <div class = "container">
         <div class = "col-sm-8 col-sm-offset-2">
             <!-- TAB CONTENT -->
-            <h1>Enter your credentials</h1>
+
             <div class = "tab-content">
                 <!-- LOGIN TAB PANEL -->
                 <div id = "login" role = "tabpanel" class = "tab-pane container-white active">

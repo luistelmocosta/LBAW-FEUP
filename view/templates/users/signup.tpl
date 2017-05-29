@@ -3,7 +3,9 @@
 <body id="site-body" class="container">
 {include file="common/messages.tpl"}
 <div class="clearfix qa-main">
-    <h1>Create a new account</h1>
+    <h1 align="center">Create a new account</h1>
+    <br class="clearfix">
+    <br class="clearfix">
     <div class = "container">
 
         <!-- REGISTER TAB PANEL -->

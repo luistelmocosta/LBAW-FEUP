@@ -1,6 +1,6 @@
 <li class="top-user clearfix">
     <div class="avatar" data-id="1" data-handle="admin">
-        <a href={profileUrl($user['userid'])} class="qa-avatar-link">
+        <a href="{profileUrl($user['userid'])}" class="qa-avatar-link">
             <img src="{$user['avatar']}" width="30"
                  height="30" class="qa-avatar-image"></a>
     </div>
