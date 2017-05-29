@@ -29,8 +29,8 @@
                                 </h1>
                                 <span id="category_0_sub">
                                     <select name="category" id="category_1" onchange="" class="qa-form-tall-select">
-                                        {foreach old('categories', $categories) as $category }
-                                            <option value="" selected>{$category}</option>
+                                        {foreach $categories as $category }
+                                            <option value="{$category}" selected>{$category}</option>
                                         {/foreach}
                                     </select>
                                 </span>
@@ -73,7 +73,8 @@
                         </tr>
 
                         </tbody>
-                        <tbody><tr>
+                        <tbody>
+                        <tr>
                             <td align="center" colspan="1" class="qa-form-tall-buttons">
                                 <input value="Ask Question" title="" type="submit" class="btn">
                             </td>

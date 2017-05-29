@@ -38,6 +38,13 @@
                    style="font-size: 15px; line-height: 1.4; margin-bottom: .5em;">
                     {$question['title']}
                 </a>
+                <div class="question-tags">
+                    <ul class="tags-tag-list">
+                        {foreach $question['tags'] as $key => $tag}
+                            <li><a class="widget-tag">{$tag['name']}</a></li>
+                        {/foreach}
+                    </ul>
+                </div>
             </h3>
         </div>
 

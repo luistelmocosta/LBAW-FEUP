@@ -30,18 +30,21 @@ $recent_questions = recent_questions();
 
 foreach ($recent_questions as $key => $recent_question) {
     $recent_questions[$key]['creation_date'] = time_elapsed_string($recent_questions[$key]['creation_date']);
+    $recent_questions[$key]['tags'] = get_tags_from_question($recent_questions[$key]['publicationid']);
 }
 
 $unanswered_questions = unanswered_questions();
 
 foreach ($unanswered_questions as $key => $unanswered_question) {
     $unanswered_questions[$key]['creation_date'] = time_elapsed_string($unanswered_questions[$key]['creation_date']);
+    $unanswered_questions[$key]['tags'] = get_tags_from_question($unanswered_questions[$key]['publicationid']);
 }
 
 $top_scored_questions = top();
 
 foreach ($top_scored_questions as $key => $top_scored_question) {
     $top_scored_questions[$key]['creation_date'] = time_elapsed_string($top_scored_questions[$key]['creation_date']);
+    $top_scored_questions[$key]['tags'] = get_tags_from_question($top_scored_questions[$key]['publicationid']);
 }
 
 $top_scored_users = top_scored_users();
