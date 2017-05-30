@@ -13,6 +13,7 @@ $("body").on("click", ".show-textarea", function(){
     }, function (data) {
         $commentForm.find('article').remove();
         $.each(data, function(i, comment) {
+            console.log(comment.isMine);
             $commentForm.append('<article class="tweet-data">' +
                 '<div class="comment-items">' +
                 '<div class="qa-c-list-item  hentry comment" id="c3574">' +
