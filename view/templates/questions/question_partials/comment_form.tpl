@@ -1,5 +1,5 @@
 <div class="comment-form">
-    <form method="post" name="commentform" action="{$BASE_URL}controller/actions/comments/create_comment_question.php" onsubmit="return validateForm()">
+    <form method="post" name="questioncommentform" action="{$BASE_URL}controller/actions/comments/create_comment_question.php" onsubmit="return validateQuestionForm()">
         <textarea name="comment" rows="4" cols="40" class="qa-form-tall-text"></textarea>
         <input type="hidden" name="answerid" value="{$answer['answerid']}" />
         <input type="hidden" name="questionid" value="{$question['publicationid']}" />

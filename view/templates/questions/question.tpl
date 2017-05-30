@@ -173,3 +173,4 @@
 {HTML::script('comment.js')}
 {HTML::script('question.js')}
 {HTML::script('vote.js')}
+{HTML::script('form-validation.js')}
