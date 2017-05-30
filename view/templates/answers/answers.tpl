@@ -60,7 +60,7 @@
                     </span>
                 </span>
             <div class="post-button clearfix">
-                <a href="{editAnswerUrl($answer['answerid'])}" class = "btn {if !$isMine}hidden{/if}">Edit</a>
+                <a href="{editAnswerUrl($answer['answerid'])}" class = "btn {if !$answer['isMine']}hidden{/if}">Edit</a>
                 <div class="post-button clearfix">
                     <button class="btn icon-chat show-textarea"
                             title="Add a comment on this answer"

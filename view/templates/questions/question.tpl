@@ -40,17 +40,15 @@
                         <div class="qa-q-view-main">
                             <div class="q-cont-right">
                                 <div class="qa-q-view-wrap">
-                                    <div class="qa-q-view-inner">
-                                        <div class="clearfix">
-                                            <div class="qa-q-view-content">
-                                                <div class="entry-content">{$question['body']}</div>
-                                            </div>
+                                    <div class="clearfix">
+                                        <div class="qa-q-view-content">
+                                            <div class="entry-content">{$question['body']}</div>
                                         </div>
+                                    </div>
 
 
 
-                                        <div class="qa-post-meta">
-                                            <span class="qa-q-item-meta">
+                                    <span class="qa-q-item-meta">
                                                 asked
                                                 <span class="qa-q-item-when">
                                                     <span class="qa-q-item-when-data"><span class="published"><span class="value-title" title="2016-06-06T11:13:09+0000"></span>{$question['creation_date']}</span></span>
@@ -60,113 +58,119 @@
                                                     <span class="qa-q-item-who-data"><span class="vcard author"><a style="display: inline;" href={profileUrl($question['userid'])} class="qa-user-link">{$question['username']}</a></span></span>
                                                 </span>
                                             </span>
-                                            <div class="question-tags">
-                                                <h3 class="tags-label">Tags</h3>
-                                                <ul class="tags-tag-list">
-                                                    {foreach $tags as $tag}
-                                                        <li><a href="" class="widget-tag">{$tag['name']}</a></li>
-                                                    {/foreach}
-                                                </ul>
-                                            </div>
-                                            <div class="post-button clearfix">
-                                                <a href="{editQuestionUrl($question['publicationid'])}" class = "btn {if !$isMine}hidden{/if}">Edit</a>
 
-                                                <div class="post-button clearfix">
-                                                    <button class="btn show-textarea"
-                                                            title="Add a comment on this answer"
-                                                            type="button"
-                                                            data-answer="{$answer['answerid']}"
-                                                            data-question="{$question['publicationid']}"
-                                                            data-type="question">{$answer['total_comments']} Comments</button>
-                                                    <div class="textarea">
-                                                        {include file="questions/question_partials/comment_form.tpl"}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <h3 class="answers-label">{$question['answers_count']} Answers</h3>
-
-                                        <div class="qa-a-list-item entry answer">
-                                            {foreach $answers as $answer}
-                                                {include file="answers/answers.tpl"}
+                                    <div class="question-tags">
+                                        <h3 class="tags-label">Tags</h3>
+                                        <ul class="tags-tag-list">
+                                            {foreach $tags as $tag}
+                                                <li><a href="" class="widget-tag">{$tag['name']}</a></li>
                                             {/foreach}
-                                            <!-- END qa-a-item-main -->
+                                        </ul>
+                                    </div>
+
+                                    <div class="post-button clearfix">
+
+                                        <div class="post-button clearfix" style="padding-bottom: 20px">
+                                            <button
+                                                    class="btn icon-chat show-textarea"
+                                                    title="Add a comment on this answer"
+                                                    type="button"
+                                                    data-answer="{$answer['answerid']}"
+                                                    data-question="{$question['publicationid']}"
+                                                    data-type="question">{$question['comments_count']} Comments</button>
+                                            <a style="display: inline; margin-top: 0;" href="{editQuestionUrl($question['publicationid'])}" class = "btn {if !$isMine}hidden{/if}">Edit</a>
+                                            <div class="textarea">
+                                                {include file="questions/question_partials/comment_form.tpl"}
+                                            </div>
                                         </div>
 
-                                        <div class="answer-form">
-                                            Your answer:
+                                    </div>
 
 
-                                            <div class="qa-part-form">
-                                                <form name="ask" method="post" action="{$BASE_URL}controller/actions/answers/create_answer.php">
-                                                    <table class="qa-form-tall-table">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td class="qa-form-tall-data">
-                                                                <textarea name="editor1"></textarea>
-                                                                <script>
-                                                                    CKEDITOR.replace( 'editor1' );
-                                                                </script>
 
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                        <tbody><tr>
-                                                            <td colspan="1" class="qa-form-tall-buttons">
-                                                                <input onclick="qa_show_waiting_after(this, false);" value="Answer" title="" type="submit" class="qa-form-tall-button qa-form-tall-button-answer">
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
+                                    <h3 class="answers-label">{$question['answers_count']} Answers</h3>
 
-                                                    <div class = "form-group ">
-                                                        <input type="hidden" name = "questionid" value="{$question['publicationid']}">
-                                                    </div>
+                                    <div class="qa-a-list-item entry answer">
+                                        {foreach $answers as $answer}
+                                            {include file="answers/answers.tpl"}
+                                        {/foreach}
+                                        <!-- END qa-a-item-main -->
+                                    </div>
 
-                                                </form>
-                                            </div>
+                                    <div class="answer-form">
+                                        Your answer:
+
+
+                                        <div class="qa-part-form">
+                                            <form name="ask" method="post" action="{$BASE_URL}controller/actions/answers/create_answer.php">
+                                                <table class="qa-form-tall-table">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td class="qa-form-tall-data">
+                                                            <textarea name="editor1"></textarea>
+                                                            <script>
+                                                                CKEDITOR.replace( 'editor1' );
+                                                            </script>
+
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                    <tbody><tr>
+                                                        <td colspan="1" class="qa-form-tall-buttons">
+                                                            <input onclick="qa_show_waiting_after(this, false);" value="Answer" title="" type="submit" class="qa-form-tall-button qa-form-tall-button-answer">
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+
+                                                <div class = "form-group ">
+                                                    <input type="hidden" name = "questionid" value="{$question['publicationid']}">
+                                                </div>
+
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
-                                </form>
+                            </div>
+                            </form>
 
-                            </div> <!-- END qa-q-view-main -->
-                        </div>
+                        </div> <!-- END qa-q-view-main -->
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="col-md-4">
-            <div id="home-right-position">
+    <div class="col-md-4">
+        <div id="home-right-position">
 
-                <div class="widget cs_related_questions">
-                    <h3 class="widget-title">Related questions</h3>
-                    <div class="ra-rq-widget">
-                        <ul>
-                            {foreach $related_questions as $related_question}
-                                <li><div class="avatar" data-id="4" data-handle="Smith"><a class="qa-avatar-link"><img src="{$related_question['user_photo']}" width="30" height="30" class="qa-avatar-image" alt=""></a></div>
-                                    <div class="post-content">
-                                        <a class="title" href="{questionUrl($related_question['publicationid'])}">{$related_question['title']}</a>
-                                        <div class="meta">
-                                            <span>{$related_question['answers_count']} answers</span>
-                                            <span class="time fa fa-clock-o">{$related_question['creation_date']}</span>
-                                            <span class="vote-count fa fa-thumbs-o-up">{$related_question['votes_count']} votes</span>
-                                        </div>
+            <div class="widget cs_related_questions">
+                <h3 class="widget-title">Related questions</h3>
+                <div class="ra-rq-widget">
+                    <ul>
+                        {foreach $related_questions as $related_question}
+                            <li><div class="avatar" data-id="4" data-handle="Smith"><a class="qa-avatar-link"><img src="{$related_question['user_photo']}" width="30" height="30" class="qa-avatar-image" alt=""></a></div>
+                                <div class="post-content">
+                                    <a class="title" href="{questionUrl($related_question['publicationid'])}">{$related_question['title']}</a>
+                                    <div class="meta">
+                                        <span>{$related_question['answers_count']} answers</span>
+                                        <span class="time fa fa-clock-o">{$related_question['creation_date']}</span>
+                                        <span class="vote-count fa fa-thumbs-o-up">{$related_question['votes_count']} votes</span>
                                     </div>
-                                </li>
-                            {/foreach}
+                                </div>
+                            </li>
+                        {/foreach}
 
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
             </div>
-
         </div>
 
     </div>
+
+</div>
 </div>
 {HTML::script('comment.js')}
 {HTML::script('question.js')}
 {HTML::script('vote.js')}
+{HTML::script('form-validation.js')}

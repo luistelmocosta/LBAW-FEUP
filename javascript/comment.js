@@ -13,6 +13,7 @@ $("body").on("click", ".show-textarea", function(){
     }, function (data) {
         $commentForm.find('article').remove();
         $.each(data, function(i, comment) {
+            console.log(comment.isMine);
             $commentForm.append('<article class="tweet-data">' +
                 '<div class="comment-items">' +
                 '<div class="qa-c-list-item  hentry comment" id="c3574">' +
@@ -48,7 +49,7 @@ $("body").on("click", ".show-textarea", function(){
                 '</div> ' +
                 '</div> ' +
                 '<div class="comment-edit-form">' +
-                '<form method="post" action="/controller/actions/comments/edit_comment.php">' +
+                '<form method="post" action="../../../controller/actions/comments/edit_comment.php">' +
                 (comment.IsMine ?
                     '<button class = "edit-comment btn" type="button">Edit</button>' +
                     ''
